@@ -158,6 +158,7 @@
         <li><a href="/api/Cake.Gulp.dll">Cake<wbr>.Gulp<wbr>.dll</a></li>
         <li><a href="/api/Cake.HipChat.dll">Cake<wbr>.HipChat<wbr>.dll</a></li>
         <li><a href="/api/Cake.HockeyApp.dll">Cake<wbr>.HockeyApp<wbr>.dll</a></li>
+        <li><a href="/api/Cake.Http.dll">Cake<wbr>.Http<wbr>.dll</a></li>
         <li><a href="/api/Cake.Json.dll">Cake<wbr>.Json<wbr>.dll</a></li>
         <li><a href="/api/Cake.Kudu.dll">Cake<wbr>.Kudu<wbr>.dll</a></li>
         <li><a href="/api/Cake.MsDeploy.dll">Cake<wbr>.MsDeploy<wbr>.dll</a></li>
@@ -248,7 +249,17 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases">SonarCakeAliases</a></td>
-									<td></td>
+									<td>
+            <p>
+            Contains functionality for running a Sonar analysis on a c# project using the MSBuild SonarQube Runner.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.Sonar"
+#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></td>

@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -172,7 +173,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Settings for the CLI Reporter
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -260,35 +265,45 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings/8D6AECCF">NoAssertions</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                This turns off the request-wise output as they happen.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings/D8B07D74">NoConsole</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                This turns off the output of console.log (and other console calls) from collection's scripts.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings/0D19568C">NoSummary</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                The statistical summary table is not shown.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings/6F5AD020">SeparateFailures</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                This prevents the run failures from being separately printed.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings/7EAD0E59">Silent</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                The CLI reporter is internally disabled and you see no output to terminal.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -311,7 +326,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings/D2A74CD6">RenderOptions<wbr>(<wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+                Outputs the reporter-specific settings to include in the invocation
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -354,7 +371,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettingsExtensions/3A9885DE">Disable<wbr>Separate<wbr>Failures<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings">CLIReporterSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Prevents the run failures from being separately printed.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/CLIReporterSettingsExtensions">C<wbr>L<wbr>I<wbr>Reporter<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -362,7 +381,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettingsExtensions/5858FDD4">DisableSummary<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings">CLIReporterSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Disables the statistical summary table from being shown.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/CLIReporterSettingsExtensions">C<wbr>L<wbr>I<wbr>Reporter<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -370,7 +391,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettingsExtensions/DC18FA9F">RunSilently<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman.Reporters/CLIReporterSettings">CLIReporterSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Disables the CLI reporter internally and no output is sent to the console
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/CLIReporterSettingsExtensions">C<wbr>L<wbr>I<wbr>Reporter<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>

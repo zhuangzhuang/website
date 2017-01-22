@@ -172,6 +172,7 @@
     <li><a href="/dsl/gitter">Gitter</a></li>        
     <li><a href="/dsl/hipchat">HipChat</a></li>        
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
+    <li><a href="/dsl/http">Http</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
     <li><a href="/dsl/kudu">Kudu</a></li>        
     <li><a href="/dsl/msdeploy">MsDeploy</a></li>        
@@ -231,11 +232,8 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
-            strong name or not. If one has turned off strong name verification, you can still verify by using the
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </div>
 
 

@@ -177,6 +177,7 @@
     <li><a href="/dsl/gitter">Gitter</a></li>        
     <li><a href="/dsl/hipchat">HipChat</a></li>        
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
+    <li><a href="/dsl/http">Http</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
     <li><a href="/dsl/kudu">Kudu</a></li>        
     <li><a href="/dsl/msdeploy">MsDeploy</a></li>        
@@ -226,12 +227,24 @@
 	<h1>File Operations</h1>
 </section>
 <section class="content">
-    
+            <div class="alert alert-info" role="alert">
+            <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
+
+                        For more information about this project, please visit 
+                        <a href="https://github.com/MihaMarkic/Cake.Putty" class="alert-link">https://github.com/MihaMarkic/Cake.Putty</a>.
+                            </div>
+
 
             <h1 id="Summary">Summary</h1>
         <div>
-    Contains functionality related to file operations.
-    </div>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </div>
 
 
         <h1 id="General">General</h1>  
@@ -252,6 +265,8 @@
 <a href="/api/Cake.Putty/PuttyAliases/5231F9AE">Plink<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Invokes Plink without settings
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></i></small>
@@ -262,6 +277,8 @@
 <a href="/api/Cake.Putty/PuttyAliases/C1939035">Plink<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>PlinkSettings)<wbr></a>                            </td>
                             <td>
                                 
+            Invokes Plink using given <span name="settings" class="paramref">settings</span>.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></i></small>
@@ -272,6 +289,8 @@
 <a href="/api/Cake.Putty/PuttyAliases/EC71C012">Pscp<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Invokes Pscp with a single from argument.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></i></small>
@@ -282,6 +301,8 @@
 <a href="/api/Cake.Putty/PuttyAliases/6E7EF8CA">Pscp<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>PscpSettings)<wbr></a>                            </td>
                             <td>
                                 
+            Invokes Pscp with a single from argument and <span name="settings" class="paramref">settings</span>.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></i></small>
@@ -292,6 +313,8 @@
 <a href="/api/Cake.Putty/PuttyAliases/2691A53B">Pscp<wbr>(ICakeContext, <wbr>string[], <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Invokes Pscp with array of from arguments without settings..
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></i></small>
@@ -302,6 +325,8 @@
 <a href="/api/Cake.Putty/PuttyAliases/3C4FA882">Pscp<wbr>(ICakeContext, <wbr>string[], <wbr>string, <wbr>PscpSettings)<wbr></a>                            </td>
                             <td>
                                 
+            Invokes Pscp with array of from arguments.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></i></small>
