@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <hr class="infobar-hidden">
@@ -163,7 +164,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by <code class="cs"><a href="/api/Cake.Gem.Push/GemPushRunner">GemPushRunner</a></code>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -246,7 +251,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemSettings/1FCC5C93">Backtrace</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to show stack backtrace on errors.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemSettings">GemSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -254,7 +261,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemSettings/6D622A8A">ConfigFilePath</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value for the configuration file to use instead of default
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemSettings">GemSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -262,7 +271,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemSettings/CAD6C2D6">Debug</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to turn on Ruby debugging.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemSettings">GemSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -270,28 +281,36 @@ class Type type-node
 								<td><a href="/api/Cake.Gem.Push/GemPushSettings/687C51B6">Host</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the address of the (gemcutter-compatible) host which the gem should be pushed to.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Push/GemPushSettings/4ED91E9A">HttpProxy</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Http Proxy which should be used for remote operations.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Push/GemPushSettings/A09A4720">Key</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the name of the API Key in the credentials file which should be used for pushing the gem.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemSettings/C925F2EC">Quiet</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to silence commands.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemSettings">GemSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -299,7 +318,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemSettings/0117CA75">Verbose</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to use verbose level of output.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemSettings">GemSettings</a></em></small></div>
 								</td>
 							</tr>

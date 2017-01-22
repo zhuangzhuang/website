@@ -4,7 +4,7 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-01-22T19:05:10Z</updated>
+	<updated>2017-01-22T19:12:10Z</updated>
 	<entry>
 		<author>
 			<name>daveaglick</name>
@@ -12,7 +12,7 @@
 		<link href="http://cakebuild.net/blog/2017/01/new-static-site" />
 		<id>http://cakebuild.net/blog/2017/01/new-static-site</id>
 		<title>New Static Cake Website</title>
-		<updated>2017-01-13T00:00:00Z</updated>
+		<updated>2017-01-22T00:00:00Z</updated>
 		<summary>&lt;p&gt;Hi! My name is Dave Glick and I run the &lt;a href="http://wyam.io"&gt;Wyam static site engine&lt;/a&gt; project. I'm also a big Cake fanboy, and over the last couple months I've been privileged to work with the rest of the Cake team on transitioning the Cake website from a dynamic ASP.NET website to a static one built by &lt;a href="http://wyam.io"&gt;Wyam&lt;/a&gt;. This effort was more than mere window dressing; the new site goes beyond the old one in some interesting ways:&lt;/p&gt;</summary>
 	</entry>
 	<entry>
