@@ -139,14 +139,14 @@
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
-			<li class="header">Interface Types</li>
-				<li class="selected"><a href="/api/Cake.Core.Diagnostics/ICakeLog">ICakeLog</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogAction">LogAction</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogActionEntry">LogActionEntry</a></li>
+			<li class="header">Interface Types</li>
+				<li class="selected"><a href="/api/Cake.Core.Diagnostics/ICakeLog">ICakeLog</a></li>
 
 
                     </ul>
@@ -185,8 +185,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>								
 											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
+											<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -196,10 +196,10 @@
 							graph TD
 	Type["ICakeLog"]
 class Type type-node
-	Type-.-&gt;Implementing0["NullLog"]
-	click Implementing0 "/api/Cake.Core.Diagnostics/NullLog"
-	Type-.-&gt;Implementing1["FakeLog"]
-	click Implementing1 "/api/Cake.Testing/FakeLog"
+	Type-.-&gt;Implementing0["FakeLog"]
+	click Implementing0 "/api/Cake.Testing/FakeLog"
+	Type-.-&gt;Implementing1["NullLog"]
+	click Implementing1 "/api/Cake.Core.Diagnostics/NullLog"
 
 						</div>
 					</div>
@@ -538,6 +538,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

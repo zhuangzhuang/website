@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -165,7 +166,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Represents a Swagger (Open API) specification to gather metadata from
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -230,7 +235,9 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Sources/GenerationSource/D9D8BC78">Environment</a></td>
 								<td>ICakeEnvironment</td>
 								<td>
-									<div></div>
+									<div>
+                The Cake environment
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Sources/GenerationSource">GenerationSource</a></em></small></div>
 								</td>
 							</tr>
@@ -238,7 +245,9 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Sources/GenerationSource/F1682B1A">FileSystem</a></td>
 								<td>IFileSystem</td>
 								<td>
-									<div></div>
+									<div>
+                The file system
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Sources/GenerationSource">GenerationSource</a></em></small></div>
 								</td>
 							</tr>
@@ -246,7 +255,9 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Sources/GenerationSource/C2238BA0">Source</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+                Source file for API metadata.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Sources/GenerationSource">GenerationSource</a></em></small></div>
 								</td>
 							</tr>
@@ -270,21 +281,27 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Sources/SwaggerSource/6A88669D">ToCSharpClient<wbr>(FilePath, <wbr>string, <wbr>Action<wbr>&lt;<wbr>C<wbr>Sharp<wbr>Generator<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Sources/SwaggerSource">SwaggerSource</a></td>
 								<td>
-									<div></div>
+									<div>
+                Generates a C# API client at the given path with the specified settings
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.NSwag.Sources/SwaggerSource/2ED0CE7B">ToTypeScriptClient<wbr>(FilePath, <wbr>Action<wbr>&lt;<wbr>Type<wbr>Script<wbr>Generator<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Sources/SwaggerSource">SwaggerSource</a></td>
 								<td>
-									<div></div>
+									<div>
+                Generates a TypeScript API client at the given path with the specified settings
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.NSwag.Sources/SwaggerSource/0FE5753C">ToWebApiController<wbr>(FilePath, <wbr>string, <wbr>Action<wbr>&lt;<wbr>C<wbr>Sharp<wbr>Generator<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Sources/SwaggerSource">SwaggerSource</a></td>
 								<td>
-									<div></div>
+									<div>
+                Generates a Web API controller class at the given path with the specified settings
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -325,6 +342,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

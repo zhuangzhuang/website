@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -167,7 +168,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            The FluentMigrator Runner used to execute FluentMigrator
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -250,28 +255,36 @@ class Type type-node
 								<td><a href="/api/Cake.FluentMigrator/FluentMigratorRunner/BEAEF4C2">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(<wbr>Fluent<wbr>Migrator<wbr>Settings)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets alternative file paths which the tool may exist in
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.FluentMigrator/FluentMigratorRunner/8EA8FEEB">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the possible names of the tool executable.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.FluentMigrator/FluentMigratorRunner/11C72BB5">GetToolName<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Get FluentMigrator tool name.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.FluentMigrator/FluentMigratorRunner/831C386B">Run<wbr>(<wbr>Fluent<wbr>Migrator<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Executes FluentMigrator using the provided settings.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -312,6 +325,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

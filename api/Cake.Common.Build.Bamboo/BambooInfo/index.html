@@ -183,12 +183,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo">BambooPlanInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -200,18 +200,18 @@
 	Base0["object"]--&gt;Type
 	Type["BambooInfo"]
 class Type type-node
-	Type--&gt;Derived0["BambooCommitInfo"]
-	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
-	Type--&gt;Derived1["BambooCustomBuildInfo"]
-	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Type--&gt;Derived0["BambooPlanInfo"]
+	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
+	Type--&gt;Derived1["BambooCommitInfo"]
+	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
 	Type--&gt;Derived2["BambooBuildInfo"]
 	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
-	Type--&gt;Derived3["BambooRepositoryInfo"]
-	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
-	Type--&gt;Derived4["BambooPlanInfo"]
-	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
-	Type--&gt;Derived5["BambooEnvironmentInfo"]
-	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
+	Type--&gt;Derived3["BambooCustomBuildInfo"]
+	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Type--&gt;Derived4["BambooEnvironmentInfo"]
+	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
+	Type--&gt;Derived5["BambooRepositoryInfo"]
+	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
 
 						</div>
 					</div>
@@ -327,6 +327,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

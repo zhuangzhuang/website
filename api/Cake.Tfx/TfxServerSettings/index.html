@@ -200,8 +200,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings">Tfx<wbr>Extension<wbr>Share<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings">Tfx<wbr>Extension<wbr>Install<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -216,10 +216,10 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["TfxServerSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxExtensionPublishSettings"]
-	click Derived0 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
-	Type--&gt;Derived1["TfxExtensionShareSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings"
+	Type--&gt;Derived0["TfxExtensionShareSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings"
+	Type--&gt;Derived1["TfxExtensionPublishSettings"]
+	click Derived1 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
 	Type--&gt;Derived2["TfxExtensionInstallSettings"]
 	click Derived2 "/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings"
 
@@ -412,6 +412,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

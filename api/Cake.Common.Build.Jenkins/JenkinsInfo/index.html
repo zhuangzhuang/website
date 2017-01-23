@@ -183,11 +183,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -199,16 +199,16 @@
 	Base0["object"]--&gt;Type
 	Type["JenkinsInfo"]
 class Type type-node
-	Type--&gt;Derived0["JenkinsEnvironmentInfo"]
-	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived0["JenkinsRepositoryInfo"]
+	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
 	Type--&gt;Derived1["JenkinsBuildInfo"]
 	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
-	Type--&gt;Derived2["JenkinsJobInfo"]
-	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
-	Type--&gt;Derived3["JenkinsRepositoryInfo"]
-	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
-	Type--&gt;Derived4["JenkinsNodeInfo"]
-	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived2["JenkinsEnvironmentInfo"]
+	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived3["JenkinsNodeInfo"]
+	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived4["JenkinsJobInfo"]
+	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
 
 						</div>
 					</div>
@@ -324,6 +324,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

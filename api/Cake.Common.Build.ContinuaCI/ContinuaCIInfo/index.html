@@ -185,11 +185,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo">Continua<wbr>C<wbr>I<wbr>Configuration<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo">Continua<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo">Continua<wbr>C<wbr>I<wbr>Changeset<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo">ContinuaCIBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo">Continua<wbr>C<wbr>I<wbr>Project<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo">ContinuaCIBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo">Continua<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo">Continua<wbr>C<wbr>I<wbr>Configuration<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo">Continua<wbr>C<wbr>I<wbr>Changeset<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -201,16 +201,16 @@
 	Base0["object"]--&gt;Type
 	Type["ContinuaCIInfo"]
 class Type type-node
-	Type--&gt;Derived0["ContinuaCIConfigurationInfo"]
-	click Derived0 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo"
-	Type--&gt;Derived1["ContinuaCIEnvironmentInfo"]
-	click Derived1 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo"
-	Type--&gt;Derived2["ContinuaCIChangesetInfo"]
-	click Derived2 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo"
-	Type--&gt;Derived3["ContinuaCIBuildInfo"]
-	click Derived3 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo"
-	Type--&gt;Derived4["ContinuaCIProjectInfo"]
-	click Derived4 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo"
+	Type--&gt;Derived0["ContinuaCIProjectInfo"]
+	click Derived0 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo"
+	Type--&gt;Derived1["ContinuaCIBuildInfo"]
+	click Derived1 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo"
+	Type--&gt;Derived2["ContinuaCIEnvironmentInfo"]
+	click Derived2 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo"
+	Type--&gt;Derived3["ContinuaCIConfigurationInfo"]
+	click Derived3 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo"
+	Type--&gt;Derived4["ContinuaCIChangesetInfo"]
+	click Derived4 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo"
 
 						</div>
 					</div>
@@ -371,6 +371,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

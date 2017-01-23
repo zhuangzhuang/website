@@ -78,7 +78,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -177,7 +179,13 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Drops database. Before dropping the DB, database is set to be offline, then online again.
+            This is to be sure that there are no live connections, otherwise the script will fail.
+            Also if the database does not exist - it will not do anything.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -197,6 +205,18 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void DropDatabase(this ICakeContext context, string connectionString, string databaseName)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">    #addin "nuget:?package=Cake.SqlServer"
+
+    Task("Drop-Database")
+         .Does(() =&gt;
+         {
+            var connectionString = @"Server=(LocalDb)\v12.0";
+            var dbName = "CakeTest";
+            DropDatabase(connectionString, dbName);
+        });</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -232,17 +252,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>connectionString</td>
 						<td>string</td>
-						<td></td>
+						<td>The connection string. For this operation, it is recommended to connect to the master database (default). If there are changing parameters, <code class="cs">System.Data.SqlClient.SqlConnectionStringBuilder</code> is recommended to escape input.</td>
 					</tr>
 					<tr>
 						<td>databaseName</td>
 						<td>string</td>
-						<td></td>
+						<td>Database name to be dropped</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -299,6 +319,17 @@
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

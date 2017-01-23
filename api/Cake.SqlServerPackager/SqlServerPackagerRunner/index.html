@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -170,7 +171,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            SQL server scripts packager.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -226,7 +231,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlServerPackager/SqlServerPackagerRunner/9FFA47D2">Sql<wbr>Server<wbr>Packager<wbr>Runner<wbr>(<wbr>Sql<wbr>Server<wbr>Packager<wbr>Settings, <wbr>ICakeLog)<wbr></a></td>
-									<td></td>
+									<td>
+            Create an instance of SqlServerPackagerRunner class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -249,7 +256,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServerPackager/SqlServerPackagerRunner/2164473B">_settings</a></td>
 								<td></td>
 								<td>
-									<div></div>
+									<div>
+            Packager settings.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -273,14 +282,18 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServerPackager/SqlServerPackagerRunner/850BF7EE">CreateSqlScript<wbr>(List<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Merge SQL scripts into one file.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServerPackager/SqlServerPackagerRunner/3DF7041E">Package<wbr>()<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Package SQL scripts into one file.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -321,6 +334,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
