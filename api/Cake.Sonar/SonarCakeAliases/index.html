@@ -78,7 +78,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -165,7 +167,19 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>
+            Contains functionality for running a Sonar analysis on a c# project using the MSBuild SonarQube Runner.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.Sonar"
+#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"</code></pre>
+            <p></p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -204,6 +218,26 @@ class Type type-node
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static class SonarCakeAliases</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Analysis is done in three phases. 
+            In the first phase, init, msbuild targets are added for collecting information.
+            In the second phase, you build your projects and optionally a create a test- and coverage-report.
+            In the third phasesonar will analyse the collectived files and process the passed reports.
+            
+            You can wrap the init and analysis phase around your existing tasks using dependencies with <code class="cs">Cake.Sonar.SonarCakeAliases.SonarBegin(Cake.Core.ICakeContext,Cake.Sonar.SonarBeginSettings)</code> and <code class="cs">Cake.Sonar.SonarCakeAliases.SonarEnd(Cake.Core.ICakeContext)</code>:
+            
+            <pre><code class="cs">Task("Sonar")
+  .IsDependentOn("Sonar-Init") // should call SonarBegin()
+  .IsDependentOn("Build")
+  .IsDependentOn("Run-Unit-Test")
+  .IsDependentOn("Sonar-Analyse"); // should call SonarEnd()</code></pre>
+            
+            Or you can use a dedicated task that executed msbuild itself <code class="cs">Cake.Sonar.SonarCakeAliases.Sonar(Cake.Core.ICakeContext,System.Action{Cake.Core.ICakeContext},Cake.Sonar.SonarBeginSettings)</code>.
+            
+            Tip: local testing of analysis can be done using sonarqube running in a docker container: 
+            <pre><code class="cs">docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -256,7 +290,9 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases/D66E127A">SonarBegin<wbr>(ICakeContext, <wbr>SonarBeginSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Initialise msbuild for sonar analysis.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -264,7 +300,9 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases/EDFA88F6">SonarEnd<wbr>(ICakeContext)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run the actual sonar analysis (no credentials given).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -272,7 +310,10 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases/3294EAAF">SonarEnd<wbr>(ICakeContext, <wbr>SonarEndSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run the actual sonar analysis and push them to sonar. 
+            This call should follow after a SonarBegin and MSBuild.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
