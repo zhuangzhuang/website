@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <hr class="infobar-hidden">
@@ -177,7 +178,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Settings for Plink build.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -260,154 +265,202 @@ class Type type-node
 								<td><a href="/api/Cake.Putty/PlinkSettings/F5152015">AgentForwarding</a></td>
 								<td>bool?</td>
 								<td>
-									<div></div>
+									<div>
+            Enable / disable agent forwarding.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/6C2C992E">Batch</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Disable all interactive prompts.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/4E474846">Compression</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Enable compression.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/F966CBB1">ConfigurationString</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            configuration-string (e.g. 19200,8,n,1,X)
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/7D956A89">Dont<wbr>Start<wbr>Shell<wbr>Command</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Don't start a shell/command (SSH-2 only).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/476C05DA">Dynamic<wbr>Port<wbr>Forwarding</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            [listen-IP:]listen-port
+            Dynamic SOCKS-based port forwarding.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/E9411476">EnablePageant</a></td>
 								<td>bool?</td>
 								<td>
-									<div></div>
+									<div>
+            Enables or disabled use of Pageant.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/0511C868">Hostkey</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Manually specify a host key (may be repeated).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/B63B3AFD">IpVersion</a></td>
 								<td>IpVersion?</td>
 								<td>
-									<div></div>
+									<div>
+            Force use of IPv4 or IPv6.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/298D5659">Key<wbr>File<wbr>For<wbr>User<wbr>Authentication</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Private key file for user authentication.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/3D923BA5">Load<wbr>Settings<wbr>From<wbr>Saved<wbr>Session</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Load settings from saved session.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/F7DE1208">LocalPortForwarding</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            [listen-IP:]listen-port:host:port
+            Forward local port to remote address.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/BB4F3251">Password</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Login with specified password.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/6C0D4C07">Port</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Connect to specified port.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/22B530AC">Protocol</a></td>
 								<td>PlinkProtocol?</td>
 								<td>
-									<div></div>
+									<div>
+            Force use of a particular protocol.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/A2FF6F08">PtyAllocation</a></td>
 								<td>bool?</td>
 								<td>
-									<div></div>
+									<div>
+            Enable / disable pty allocation.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/A28183E3">RemoteCommandsFile</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Remote command is an SSH subsystem (SSH-2 only).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/C4ED4DEB">RemotePortForwarding</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            [listen-IP:]listen-port:host:port
+            Forward remote port to local address.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/AFBDBB5B">SshVersion</a></td>
 								<td>SshVersion?</td>
 								<td>
-									<div></div>
+									<div>
+            Force use of particular SSH protocol version.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/80FC1110">Tunnel</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            host:port
+            Open tunnel in place of session(SSH-2 only).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/E9864EC9">User</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Connect with specified username.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PlinkSettings/AA50202A">X11Forwarding</a></td>
 								<td>bool?</td>
 								<td>
-									<div></div>
+									<div>
+            Enable / disable X11 forwarding.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
