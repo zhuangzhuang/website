@@ -199,8 +199,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -212,10 +212,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TfxSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxServerSettings"]
-	click Derived0 "/api/Cake.Tfx/TfxServerSettings"
-	Type--&gt;Derived1["TfxExtensionCreateSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived0["TfxExtensionCreateSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived1["TfxServerSettings"]
+	click Derived1 "/api/Cake.Tfx/TfxServerSettings"
 
 						</div>
 					</div>
@@ -347,6 +347,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

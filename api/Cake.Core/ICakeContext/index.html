@@ -218,13 +218,13 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -234,20 +234,20 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["ITeardownContext"]
-	click Implementing0 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing1["TaskSetupContext"]
-	click Implementing1 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing2["CakeContext"]
-	click Implementing2 "/api/Cake.Core/CakeContext"
+	Type-.-&gt;Implementing0["TaskTeardownContext"]
+	click Implementing0 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing1["CakeContext"]
+	click Implementing1 "/api/Cake.Core/CakeContext"
+	Type-.-&gt;Implementing2["ITaskTeardownContext"]
+	click Implementing2 "/api/Cake.Core/ITaskTeardownContext"
 	Type-.-&gt;Implementing3["ITaskSetupContext"]
 	click Implementing3 "/api/Cake.Core/ITaskSetupContext"
-	Type-.-&gt;Implementing4["TeardownContext"]
-	click Implementing4 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing5["ITaskTeardownContext"]
-	click Implementing5 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing6["TaskTeardownContext"]
-	click Implementing6 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing4["ITeardownContext"]
+	click Implementing4 "/api/Cake.Core/ITeardownContext"
+	Type-.-&gt;Implementing5["TeardownContext"]
+	click Implementing5 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing6["TaskSetupContext"]
+	click Implementing6 "/api/Cake.Core/TaskSetupContext"
 
 						</div>
 					</div>
@@ -3705,6 +3705,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

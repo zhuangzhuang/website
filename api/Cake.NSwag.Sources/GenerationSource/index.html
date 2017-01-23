@@ -193,9 +193,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.NSwag.Sources/AssemblySource">AssemblySource</a></li>								
 											<li><a href="/api/Cake.NSwag.Sources/JsonSchemaSource">JsonSchemaSource</a></li>								
 											<li><a href="/api/Cake.NSwag.Sources/SwaggerSource">SwaggerSource</a></li>								
+											<li><a href="/api/Cake.NSwag.Sources/AssemblySource">AssemblySource</a></li>								
 									</ul>
 								</dd>			
 							
@@ -207,12 +207,12 @@
 	Base0["object"]--&gt;Type
 	Type["GenerationSource"]
 class Type type-node
-	Type--&gt;Derived0["AssemblySource"]
-	click Derived0 "/api/Cake.NSwag.Sources/AssemblySource"
-	Type--&gt;Derived1["JsonSchemaSource"]
-	click Derived1 "/api/Cake.NSwag.Sources/JsonSchemaSource"
-	Type--&gt;Derived2["SwaggerSource"]
-	click Derived2 "/api/Cake.NSwag.Sources/SwaggerSource"
+	Type--&gt;Derived0["JsonSchemaSource"]
+	click Derived0 "/api/Cake.NSwag.Sources/JsonSchemaSource"
+	Type--&gt;Derived1["SwaggerSource"]
+	click Derived1 "/api/Cake.NSwag.Sources/SwaggerSource"
+	Type--&gt;Derived2["AssemblySource"]
+	click Derived2 "/api/Cake.NSwag.Sources/AssemblySource"
 
 						</div>
 					</div>
@@ -328,6 +328,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

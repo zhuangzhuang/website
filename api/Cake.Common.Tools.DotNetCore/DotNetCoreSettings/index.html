@@ -182,12 +182,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePackSettings">Dot<wbr>Net<wbr>Core<wbr>Pack<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuildSettings">Dot<wbr>Net<wbr>Core<wbr>Build<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings">Dot<wbr>Net<wbr>Core<wbr>Publish<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings">Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings">Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings">Dot<wbr>Net<wbr>Core<wbr>Publish<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuildSettings">Dot<wbr>Net<wbr>Core<wbr>Build<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecuteSettings">Dot<wbr>Net<wbr>Core<wbr>Execute<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePackSettings">Dot<wbr>Net<wbr>Core<wbr>Pack<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings">Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunSettings">Dot<wbr>Net<wbr>Core<wbr>Run<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -202,18 +202,18 @@
 	Base1["object"]--&gt;Base0
 	Type["DotNetCoreSettings"]
 class Type type-node
-	Type--&gt;Derived0["DotNetCorePackSettings"]
-	click Derived0 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePackSettings"
-	Type--&gt;Derived1["DotNetCoreBuildSettings"]
-	click Derived1 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuildSettings"
-	Type--&gt;Derived2["DotNetCorePublishSettings"]
-	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings"
-	Type--&gt;Derived3["DotNetCoreRestoreSettings"]
-	click Derived3 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings"
-	Type--&gt;Derived4["DotNetCoreTestSettings"]
-	click Derived4 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings"
-	Type--&gt;Derived5["DotNetCoreExecuteSettings"]
-	click Derived5 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecuteSettings"
+	Type--&gt;Derived0["DotNetCoreTestSettings"]
+	click Derived0 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings"
+	Type--&gt;Derived1["DotNetCorePublishSettings"]
+	click Derived1 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings"
+	Type--&gt;Derived2["DotNetCoreBuildSettings"]
+	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuildSettings"
+	Type--&gt;Derived3["DotNetCoreExecuteSettings"]
+	click Derived3 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecuteSettings"
+	Type--&gt;Derived4["DotNetCorePackSettings"]
+	click Derived4 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePackSettings"
+	Type--&gt;Derived5["DotNetCoreRestoreSettings"]
+	click Derived5 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings"
 	Type--&gt;Derived6["DotNetCoreRunSettings"]
 	click Derived6 "/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunSettings"
 
@@ -345,6 +345,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

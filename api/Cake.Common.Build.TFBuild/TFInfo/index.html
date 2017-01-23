@@ -184,9 +184,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo">T<wbr>F<wbr>Build<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo">TFBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo">T<wbr>F<wbr>Build<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
 									</ul>
@@ -202,12 +202,12 @@
 class Type type-node
 	Type--&gt;Derived0["TFBuildDefinitionInfo"]
 	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
-	Type--&gt;Derived1["TFBuildInfo"]
-	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
-	Type--&gt;Derived2["TFBuildAgentInfo"]
-	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
-	Type--&gt;Derived3["TFBuildEnvironmentInfo"]
-	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Type--&gt;Derived1["TFBuildEnvironmentInfo"]
+	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Type--&gt;Derived2["TFBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
+	Type--&gt;Derived3["TFBuildAgentInfo"]
+	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
 	Type--&gt;Derived4["TFBuildTeamProjectInfo"]
 	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
 	Type--&gt;Derived5["TFBuildRepositoryInfo"]
@@ -345,6 +345,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

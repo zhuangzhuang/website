@@ -834,13 +834,14 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Curl/CurlDownloadRunner">CurlDownloadRunner</a></td>
-									<td>
-            The curl runner to download files from remote URLs.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Curl/CurlDownloadSettings">CurlDownloadSettings</a></td>
-									<td></td>
+									<td>
+            Contains the settings used by curl when downloading
+            one or more files from remote URLs.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Curl/CurlSettings">CurlSettings</a></td>
@@ -890,6 +891,17 @@
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){

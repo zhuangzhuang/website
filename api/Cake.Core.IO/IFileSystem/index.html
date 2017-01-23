@@ -203,8 +203,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO/FileSystem">FileSystem</a></li>								
 											<li><a href="/api/Cake.Testing/FakeFileSystem">FakeFileSystem</a></li>								
+											<li><a href="/api/Cake.Core.IO/FileSystem">FileSystem</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -214,10 +214,10 @@
 							graph TD
 	Type["IFileSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["FileSystem"]
-	click Implementing0 "/api/Cake.Core.IO/FileSystem"
-	Type-.-&gt;Implementing1["FakeFileSystem"]
-	click Implementing1 "/api/Cake.Testing/FakeFileSystem"
+	Type-.-&gt;Implementing0["FakeFileSystem"]
+	click Implementing0 "/api/Cake.Testing/FakeFileSystem"
+	Type-.-&gt;Implementing1["FileSystem"]
+	click Implementing1 "/api/Cake.Core.IO/FileSystem"
 
 						</div>
 					</div>
@@ -339,6 +339,17 @@ class Type type-node
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
