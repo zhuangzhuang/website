@@ -262,14 +262,18 @@ class Type type-node
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/296B42FC">Arch</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Build each target for the given architecture; this will override architectures defined in the project
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/641A5C53">ArchivePath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies the directory where any created archives will be placed, or the archive that should be exported
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -285,126 +289,163 @@ class Type type-node
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/E2CD0F25">Clean</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether project should be cleaned.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/D16A9A4E">Configuration</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Use the build configuration NAME for building each target
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/C7283E3B">DerivedDataPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies the directory where build products and other derived data will go
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/EA6BBE1B">Destination</a></td>
 								<td>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Use the destination described by key value pairs
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/252CF0A3">DestinationTimeout</a></td>
 								<td>int?</td>
 								<td>
-									<div></div>
+									<div>
+            The timeout in seconds to wait for while searching for the destination device
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/644E2861">DryRun</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Do everything except actually running the commands
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/8AD53A7A">ExportArchive</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies that an archive should be exported
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/76282912">ExportFormat</a></td>
 								<td>XCodeBuildSettings<wbr>.ExportFormatType?</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies the format that the archive should be exported as (e.g. ipa, pkg, app)
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/373D2367">Export<wbr>Installer<wbr>Identity</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            specifies the installer signing identity that should be used during export; this may be inferable from the ExportSigningIdentity
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/6C02A020">ExportLanguage</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies optional ISO 639-1 target languages included in a localization export 
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/F5763526">ExportLocalizations</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Exports completed and outstanding project localizations
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/499A8C99">ExportPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies the destination for the product exported from an archive
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/894CEAF4">Export<wbr>Provisioning<wbr>Profile</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies the provisioning profile that should be used when re-signing the exported archive; if possible, implies a signing identity
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/74ED054E">Export<wbr>Signing<wbr>Identity</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies the codesigning identity that should be used to re-sign the exported archive
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/F36F6AC9">Export<wbr>With<wbr>Original<wbr>Signing<wbr>Identity</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies that the signing identity used to create the archive should be used to sign the exported product
+            original signing identity.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/A624C3AC">Jobs</a></td>
 								<td>int?</td>
 								<td>
-									<div></div>
+									<div>
+            Specify the maximum number of concurrent build operations
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/CB64829E">LocalizationPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies a path to XLIFF localization files
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/9F858D4A">ParallelizeTargets</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Build independent targets in parallel
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -429,21 +470,27 @@ class Type type-node
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/4B4033FE">Scheme</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Builds the given Scheme NAME
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/EE6F68F9">Sdk</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The SDK to use as the base SDK when building the project
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/62D8A7EE">Skip<wbr>Unavailable<wbr>Actions</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Specifies that scheme actions that cannot be performed should be skipped instead of causing a failure
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -459,7 +506,9 @@ class Type type-node
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/04D93B07">Toolchain</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Use the given toolchain
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -485,14 +534,18 @@ class Type type-node
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/87F1CABD">Workspace</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Builds the given Workspace
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.XCode/XCodeBuildSettings/32FF2329">XcConfig</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Apply the build settings defined in the file as overrides
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
