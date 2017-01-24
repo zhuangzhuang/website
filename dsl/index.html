@@ -465,7 +465,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -577,10 +577,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -627,7 +627,12 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    </p>
     </td>
                 </tr>
                 <tr>
@@ -725,14 +730,12 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
-                    <td>
-            Contains functionality for workign with Azure Storage
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -801,10 +804,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/database">Database</a></td>
-                    <td>
-            Cake AddIn that packages multiple SQL Scripts into one file to speed up deployment and minimize the probability of errors.
-            <pre><code class="cs">#addin Cake.SqlServerPackager</code></pre>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
@@ -819,7 +819,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
-                    <td></td>
+                    <td>
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docker">Docker</a></td>
@@ -1154,14 +1156,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/semver">SemVer</a></td>
-                    <td>
-            <p>Contains functionality related to the <a href="https://github.com/wallymathieu/SemVer.FromAssembly">SemVer.FromAssembly</a>.</p>
-            <p>
-            In order to use the commands for this addin, the SemVer.FromAssembly utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
-            reference the addin from NuGet.org:
-            <pre><code class="cs">#addin Cake.SemVer.FromAssembly</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
@@ -1225,7 +1220,14 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/twitter">Twitter</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains functionality related to <a href="https://dev.twitter.com/rest/public">Twitter REST API</a>.</p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Twitter</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/vagrant">Vagrant</a></td>
@@ -1247,14 +1249,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/vsce">Vsce</a></td>
-                    <td>
-            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.VsCode</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/watch">Watch</a></td>
