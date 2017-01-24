@@ -165,8 +165,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Contains settings used by <code class="cs">Cake.Paket.Addin.Restore.PaketRestorer</code>.
-            See <a href="https://fsprojects.github.io/Paket/paket-restore.html">Paket Restore</a> for more details.
+            Contains settings used by <code class="cs">Cake.Paket.Addin.Restore.PaketRestorer</code>. See <a href="https://fsprojects.github.io/Paket/paket-restore.html">Paket Restore</a> for more details.
             </div>
 
 		<div class="panel panel-default">
@@ -249,7 +248,7 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Gets or sets a value indicating whether to causes the restore to fail if any of the checks fail.
+            Gets or sets a value indicating whether to cause the restore to fail if any of the checks fail.
             </div>
 								</td>
 							</tr>
@@ -276,7 +275,8 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Gets or sets a value indicating whether to skips the test if paket.dependencies and paket.lock are in sync.
+            Gets or sets a value indicating whether to skip the test if paket.dependencies and
+            paket.lock are in sync.
             </div>
 								</td>
 							</tr>
@@ -285,7 +285,8 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Gets or sets a value indicating whether to restore packages that are referenced in paket.references files, instead of all packages in paket.dependencies.
+            Gets or sets a value indicating whether to restore packages that are referenced in the
+            paket.references files, as opposed to all the packages in paket.dependencies.
             </div>
 								</td>
 							</tr>
@@ -312,7 +313,8 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Gets or sets a value indicating whether to touch project files referencing packages which are being restored, to help incremental build tools detecting the change.
+            Gets or sets a value indicating whether to touch project files referencing packages which
+            are being restored, to help incremental build tools detecting the change.
             </div>
 								</td>
 							</tr>

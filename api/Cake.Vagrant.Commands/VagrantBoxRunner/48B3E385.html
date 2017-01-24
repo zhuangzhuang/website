@@ -78,7 +78,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -174,7 +176,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                This command repackages the given box and puts it in the current directory so you can redistribute it.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -195,6 +201,10 @@
 	<pre><code>public void Repackage(string name, string provider, string version)</code></pre>
 
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>
+                This command is useful for reclaiming a *.box file from an installed Vagrant box.
+            </div>
 
 
 
@@ -212,17 +222,17 @@
 					<tbody><tr>
 						<td>name</td>
 						<td>string</td>
-						<td></td>
+						<td>Name of the machine to repackage</td>
 					</tr>
 					<tr>
 						<td>provider</td>
 						<td>string</td>
-						<td></td>
+						<td>Name of the provider (from <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantBoxRunner/8304EE45">List()</a></code>)</td>
 					</tr>
 					<tr>
 						<td>version</td>
 						<td>string</td>
-						<td></td>
+						<td>Version to repackage (from <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantBoxRunner/8304EE45">List()</a></code>)</td>
 					</tr>
 			</tbody></table>
 		</div>

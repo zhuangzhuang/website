@@ -78,7 +78,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -175,7 +177,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                The version of the box you want to add.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<dl class="dl-horizontal">	
@@ -196,6 +202,8 @@
 	<pre><code>public string Version { get; set; }</code></pre>
 
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>By default, the latest version will be added</div>
 
 
 
@@ -211,7 +219,10 @@
 				</thead>
 				<tbody><tr>
 					<td>string</td>
-					<td></td>
+					<td>
+                Can be an exact version number such as "1.2.3" or it can be a set of version constraints like "&gt;= 1.0, &lt;
+                2.0"
+            </td>
 				</tr>
 			</tbody></table>
 		</div>

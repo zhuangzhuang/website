@@ -233,29 +233,31 @@
             In order to use the commands for this addin, you will need to include the following in your
             build.cake file:
             </p><pre><code class="cs">#addin paket:?package=Cake.Paket</code></pre>
+            <p></p>
+            <p>
             This assumes your using the <a href="https://www.nuget.org/packages/Cake.Paket.Module/">Cake.Paket.Module</a>. If you'd
             rather use NuGet then include:
-            <pre><code class="cs">#addin nuget:?package=Cake.Paket
+            </p><pre><code class="cs">#addin nuget:?package=Cake.Paket
 #tool nuget:?package=Paket</code></pre>
             <p></p>
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Paket.Addin.Pack/PaketPackSettings">PaketPackSettings</a></td>
-									<td></td>
+									<td>
+            Contains settings used by <code class="cs"><a href="/">PaketPacker</a></code>. See <a href="https://fsprojects.github.io/Paket/paket-pack.html">Paket Pack</a> for more details.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Paket.Addin.Push/PaketPushSettings">PaketPushSettings</a></td>
 									<td>
-            Contains settings used by <code class="cs"><a href="/">PaketPusher</a></code>.
-            See <a href="https://fsprojects.github.io/Paket/paket-push.html">Paket Push</a> for more details.
+            Contains settings used by <code class="cs">Cake.Paket.Addin.Push.PaketPusher</code>. See <a href="https://fsprojects.github.io/Paket/paket-push.html">Paket Push</a> for more details.
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Paket.Addin.Restore/PaketRestoreSettings">PaketRestoreSettings</a></td>
 									<td>
-            Contains settings used by <code class="cs">Cake.Paket.Addin.Restore.PaketRestorer</code>.
-            See <a href="https://fsprojects.github.io/Paket/paket-restore.html">Paket Restore</a> for more details.
+            Contains settings used by <code class="cs">Cake.Paket.Addin.Restore.PaketRestorer</code>. See <a href="https://fsprojects.github.io/Paket/paket-restore.html">Paket Restore</a> for more details.
             </td>
 							</tr>
 					</tbody></table>
