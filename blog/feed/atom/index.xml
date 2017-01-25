@@ -4,7 +4,7 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-01-25T09:02:28Z</updated>
+	<updated>2017-01-25T09:10:01Z</updated>
 	<entry>
 		<author>
 			<name>Larz White</name>
@@ -12,7 +12,7 @@
 		<link href="http://cakebuild.net/blog/2017/01/cake-paket" />
 		<id>http://cakebuild.net/blog/2017/01/cake-paket</id>
 		<title>Cake.Paket - An Addin and Module to Add Support for Paket in Cake</title>
-		<updated>2017-01-23T00:00:00Z</updated>
+		<updated>2017-01-25T00:00:00Z</updated>
 		<summary>&lt;p&gt;Most .NET developers are comfortable using &lt;a href="https://www.nuget.org/"&gt;NuGet&lt;/a&gt; to manage their dependencies. This is probably why Cake has such great support for it. Unfortunately, &lt;a href="https://fsprojects.github.io/Paket/"&gt;Paket&lt;/a&gt; which is a popular alternative has very little support. Luckily, with the help of &lt;a href="https://github.com/larzw/Cake.Paket"&gt;Cake.Paket&lt;/a&gt; you can make Paket a first class citizen in your Cake scripts!&lt;/p&gt;</summary>
 	</entry>
 	<entry>

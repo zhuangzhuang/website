@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -168,7 +169,15 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
+            strong name or not. If one has turned off strong name verification, you can still verify by using the
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -248,7 +257,9 @@ class Type type-node
 								<td><a href="/api/Cake.StrongNameTool/StrongNameReSignToolAliases/111F4CE2">StrongNameReSign<wbr>(ICakeContext, <wbr>FilePath, <wbr>Strong<wbr>Name<wbr>Tool<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Uses sn.exe to resign the specified assembly.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -256,7 +267,9 @@ class Type type-node
 								<td><a href="/api/Cake.StrongNameTool/StrongNameReSignToolAliases/23BE9062">StrongNameReSign<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Strong<wbr>Name<wbr>Tool<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Uses sn.exe to resign the specified assemblies.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -264,7 +277,9 @@ class Type type-node
 								<td><a href="/api/Cake.StrongNameTool/StrongNameReSignToolAliases/4C756F18">StrongNameReSign<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>Strong<wbr>Name<wbr>Tool<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Uses sn.exe to resign the specified assemblies.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -272,7 +287,9 @@ class Type type-node
 								<td><a href="/api/Cake.StrongNameTool/StrongNameReSignToolAliases/86BAB87F">StrongNameReSign<wbr>(ICakeContext, <wbr>string, <wbr>Strong<wbr>Name<wbr>Tool<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Uses sn.exe to resign the specified assembly.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
