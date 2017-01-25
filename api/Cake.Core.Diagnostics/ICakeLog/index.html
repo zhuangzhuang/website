@@ -136,12 +136,12 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Diagnostics">Cake<wbr>.Core<wbr>.Diagnostics</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
-				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
+				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogAction">LogAction</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogActionEntry">LogActionEntry</a></li>
@@ -185,8 +185,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 											<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>								
+											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -196,10 +196,10 @@
 							graph TD
 	Type["ICakeLog"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeLog"]
-	click Implementing0 "/api/Cake.Testing/FakeLog"
-	Type-.-&gt;Implementing1["NullLog"]
-	click Implementing1 "/api/Cake.Core.Diagnostics/NullLog"
+	Type-.-&gt;Implementing0["NullLog"]
+	click Implementing0 "/api/Cake.Core.Diagnostics/NullLog"
+	Type-.-&gt;Implementing1["FakeLog"]
+	click Implementing1 "/api/Cake.Testing/FakeLog"
 
 						</div>
 					</div>
