@@ -5,8 +5,16 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Tue, 24 Jan 2017 15:59:47 GMT</pubDate>
-		<lastBuildDate>Tue, 24 Jan 2017 15:59:47 GMT</lastBuildDate>
+		<pubDate>Wed, 25 Jan 2017 09:49:37 GMT</pubDate>
+		<lastBuildDate>Wed, 25 Jan 2017 09:49:37 GMT</lastBuildDate>
+		<item>
+			<title>Cake.Paket - An Addin and Module to Add Support for Paket in Cake</title>
+			<link>http://cakebuild.net/blog/2017/01/cake-paket</link>
+			<description>&lt;p&gt;Most .NET developers are comfortable using &lt;a href="https://www.nuget.org/"&gt;NuGet&lt;/a&gt; to manage their dependencies. This is probably why Cake has such great support for it. Unfortunately, &lt;a href="https://fsprojects.github.io/Paket/"&gt;Paket&lt;/a&gt; which is a popular alternative has very little support. Luckily, with the help of &lt;a href="https://github.com/larzw/Cake.Paket"&gt;Cake.Paket&lt;/a&gt; you can make Paket a first class citizen in your Cake scripts!&lt;/p&gt;</description>
+			<author>Larz White</author>
+			<guid>http://cakebuild.net/blog/2017/01/cake-paket</guid>
+			<pubDate>Wed, 25 Jan 2017 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title>New Static Cake Website</title>
 			<link>http://cakebuild.net/blog/2017/01/new-static-site</link>
@@ -218,14 +226,6 @@ will be published soon.&lt;/p&gt;
 			<author>gep13</author>
 			<guid>http://cakebuild.net/blog/2016/06/cake-v0.13.0-released</guid>
 			<pubDate>Tue, 07 Jun 2016 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title>How to debug a Cake file</title>
-			<link>http://cakebuild.net/blog/2016/05/debug-cake-file</link>
-			<description>&lt;p&gt;As you might have noticed, as part of the v0.12.0 release of Cake, thanks to a &lt;a href="https://github.com/cake-build/cake/pull/858"&gt;community contribution&lt;/a&gt; from &lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;, Cake now has debug support for Cake files.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>http://cakebuild.net/blog/2016/05/debug-cake-file</guid>
-			<pubDate>Thu, 26 May 2016 00:00:00 GMT</pubDate>
 		</item>
 	</channel>
 </rss>

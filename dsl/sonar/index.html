@@ -253,6 +253,9 @@
 <a href="/api/Cake.Sonar/SonarCakeAliases/3164E7FB">Sonar<wbr>(ICakeContext, <wbr>Action<wbr>&lt;ICakeContext&gt;<wbr>, <wbr>SonarBeginSettings)<wbr></a>                            </td>
                             <td>
                                 
+            Run a self-contained analysis for the specified action. 
+            The action should run msbuild.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></i></small>
@@ -275,6 +278,9 @@
 <a href="/api/Cake.Sonar/SonarCakeAliases/3294EAAF">SonarEnd<wbr>(ICakeContext, <wbr>SonarEndSettings)<wbr></a>                            </td>
                             <td>
                                 
+            Run the actual sonar analysis and push them to sonar. 
+            This call should follow after a SonarBegin and MSBuild.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></i></small>
