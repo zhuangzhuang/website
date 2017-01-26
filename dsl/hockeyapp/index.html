@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Deployment">Deployment</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Deployment">Deployment</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -229,7 +230,11 @@
                             </div>
 
 
-    
+            <h1 id="Summary">Summary</h1>
+        <div>
+            Contains functionality related to <a href="http://hockeyapp.net">HockeyApp</a>
+            </div>
+
 
         <h1 id="Deployment">Deployment</h1>  
         <div class="box">
@@ -240,6 +245,9 @@
 <a href="/api/Cake.HockeyApp/HockeyAppAliases/45C40F46">UploadToHockeyApp<wbr>(ICakeContext, <wbr>FilePath, <wbr>Hockey<wbr>App<wbr>Upload<wbr>Settings, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Uploads the specified package to HockeyApp. Currently it is required to specify the AppId and the
+            Version property of <code class="cs"><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings">HockeyAppUploadSettings</a></code>
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.HockeyApp.dll">Cake<wbr>.HockeyApp<wbr>.dll</a></i></small>

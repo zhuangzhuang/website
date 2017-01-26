@@ -78,7 +78,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -168,7 +170,12 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Uploads the specified package to HockeyApp. Currently it is required to specify the AppId and the
+            Version property of <code class="cs"><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings">HockeyAppUploadSettings</a></code>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -188,6 +195,18 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void UploadToHockeyApp(this ICakeContext context, FilePath file, HockeyAppUploadSettings settings, FilePath symbolFile = null)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">UploadToHockeyApp( pathToYourPackageFile, new HockeyAppUploadSettings 
+{
+    AppId = appIdFromHockeyApp,
+    Version = "1.0.160901.1",
+    ShortVersion = "1.0-beta2",
+    Notes = "Uploaded via continuous integration."
+});</code></pre>
+            Do not checkin the HockeyApp API Token into your source control. 
+            Either use HockeyAppUploadSettings.ApiToken or the HOCKEYAPP_API_TOKEN environment variable.
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -227,7 +246,7 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The app package.</td>
 					</tr>
 					<tr>
 						<td>file</td>
@@ -237,7 +256,7 @@
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings">Hockey<wbr>App<wbr>Upload<wbr>Settings</a></td>
-						<td></td>
+						<td>The upload settings</td>
 					</tr>
 					<tr>
 						<td>symbolFile</td>
