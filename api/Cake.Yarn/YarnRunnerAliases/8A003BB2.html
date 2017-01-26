@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -196,49 +197,39 @@
 	<div>
             <p>Run 'yarn install'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Yarn-FromPath")
-    .Does(() =-->
+            <pre><code class="cs">Task("Yarn-FromPath")
+    .Does(() =&gt;
 {
     Yarn.FromPath("./dir-with-packagejson").Install();
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'yarn install'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Yarn-Install")
-    .Does(() =-->
+            <pre><code class="cs">Task("Yarn-Install")
+    .Does(() =&gt;
 {
     Yarn.Install();
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'yarn add gulp'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Yarn-Add-Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Yarn-Add-Gulp")
+    .Does(() =&gt;
 {
     Yarn.Add(settings =&gt; settings.Package("gulp"));
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'yarn global add gulp'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Yarn-Add-Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Yarn-Add-Gulp")
+    .Does(() =&gt;
 {
     Yarn.Add(settings =&gt; settings.Package("gulp").Globally());
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'yarn run hello'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Yarn-Run")
-    .Does(() =-->
+            <pre><code class="cs">Task("Yarn-Run")
+    .Does(() =&gt;
 {
     Yarn.RunScript("hello");
-});
-]]&gt;</code></pre>
+});</code></pre>
             </div>
 
 

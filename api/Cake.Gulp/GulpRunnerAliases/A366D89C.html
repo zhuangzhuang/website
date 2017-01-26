@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -196,52 +197,42 @@
 	<div>
             <p>Run 'gulp' from your local gulp installation</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Gulp")
+    .Does(() =&gt;
 {
     Gulp.Local.Execute();
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'gulp' from your global gulp installation</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Gulp")
+    .Does(() =&gt;
 {
     Gulp.Global.Execute();
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'gulp --gulpfile gulpbuild.js'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Gulp")
+    .Does(() =&gt;
 {
     Gulp.Local.Execute(settings =&gt; settings.WithGulpFile("gulpbuild.js"));
     
     Gulp.Global.Execute(settings =&gt; settings.WithGulpFile("gulpbuild.js"));
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'gulp ci'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Gulp")
+    .Does(() =&gt;
 {
     Gulp.Local.Execute(settings =&gt; settings.WithArguments("ci"));
     Gulp.Global.Execute(settings =&gt; settings.WithArguments("ci"));
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'gulp ci --dist=./artifacts/dist'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Gulp")
+    .Does(() =&gt;
 {
     Gulp.Local.Execute(settings =&gt; settings.WithArguments("ci --dist=./artifacts/dist"));
-});
-]]&gt;</code></pre>
+});</code></pre>
             </div>
 
 

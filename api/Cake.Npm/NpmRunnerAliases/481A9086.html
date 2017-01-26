@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -196,18 +197,15 @@
 	<div>
             <p>Run 'npm install'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-FromPath")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-FromPath")
+    .Does(() =&gt;
 {
     Npm.FromPath("./dir-with-packagejson").Install();
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm' with logging level</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-LogLevel")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-LogLevel")
+    .Does(() =&gt;
 {
     Npm.WithLogLevel(NpmLogLevel.Silent).Install(settings =&gt; settings.Package("package"));
     Npm.WithLogLevel(NpmLogLevel.Warn).Install(settings =&gt; settings.Package("package"));
@@ -216,71 +214,56 @@ Task("Npm-LogLevel")
     Npm.WithLogLevel(NpmLogLevel.Silly)
         .Install(settings =&gt; settings.Package("package1"))
         .Install(settings =&gt; settings.Package("package2"));
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm install'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-Install")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-Install")
+    .Does(() =&gt;
 {
     Npm.Install();
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm install gulp'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-Install-Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-Install-Gulp")
+    .Does(() =&gt;
 {
     Npm.Install(settings =&gt; settings.Package("package"));
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm install gulp -g'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-Install-Gulp")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-Install-Gulp")
+    .Does(() =&gt;
 {
     Npm.Install(settings =&gt; settings.Package("package").Globally());
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm install --production'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-Install-Production")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-Install-Production")
+    .Does(() =&gt;
 {
     Npm.Install(settings =&gt; settings.ForProduction());
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm install --force'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-Install-Force")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-Install-Force")
+    .Does(() =&gt;
 {
     Npm.Install(settings =&gt; settings.Force());
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm run hello'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-RunScript")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-RunScript")
+    .Does(() =&gt;
 {
     Npm.RunScript("hello");
-});
-]]&gt;</code></pre>
+});</code></pre>
             <p>Run 'npm pack'</p>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("Npm-RunScript")
-    .Does(() =-->
+            <pre><code class="cs">Task("Npm-RunScript")
+    .Does(() =&gt;
 {
     Npm.Pack();
-});
-]]&gt;</code></pre>
+});</code></pre>
             </div>
 
 

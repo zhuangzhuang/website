@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -819,13 +820,7 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings">SonarBeginSettings</a></td>
-									<td>
-            Required prior to Sonar 6.1:
-             - Name
-             - Version
-            Required from Sonar 6.1
-             - Key
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Sonar/SonarCake">SonarCake</a></td>
@@ -833,7 +828,17 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases">SonarCakeAliases</a></td>
-									<td></td>
+									<td>
+            <p>
+            Contains functionality for running a Sonar analysis on a c# project using the MSBuild SonarQube Runner.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.Sonar"
+#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></td>
