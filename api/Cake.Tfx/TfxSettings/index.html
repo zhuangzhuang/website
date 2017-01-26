@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -199,8 +200,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -212,10 +213,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TfxSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxServerSettings"]
-	click Derived0 "/api/Cake.Tfx/TfxServerSettings"
-	Type--&gt;Derived1["TfxExtensionCreateSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived0["TfxExtensionCreateSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived1["TfxServerSettings"]
+	click Derived1 "/api/Cake.Tfx/TfxServerSettings"
 
 						</div>
 					</div>

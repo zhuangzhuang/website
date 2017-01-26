@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -188,20 +189,20 @@ public static string XmlTransform(this ICakeContext context, string xsl, string 
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-     <pre><code class="cs"><para>This example code will convert specific part of xml to plaintext using XmlTransform alias.</para><!--[CDATA[string xsl = @"<xsl:stylesheet version=""1.0"" xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""-->
-   <xsl:output method="" text""="" omit-xml-declaration="" yes""="" indent="" no""="">
-   <xsl:strip-space elements="" *""="">
-   <xsl:template match="" pastery="" cake""=""><xsl:value-of select="" @price""=""></xsl:value-of></xsl:template>
- ";
+     <pre><code class="cs"><para>This example code will convert specific part of xml to plaintext using XmlTransform alias.</para>
+ string xsl = @"&lt;xsl:stylesheet version=""1.0"" xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""&gt;
+   &lt;xsl:output method=""text"" omit-xml-declaration=""yes"" indent=""no""/&gt;
+   &lt;xsl:strip-space elements=""*""/&gt;
+   &lt;xsl:template match=""pastery/cake""&gt;&lt;xsl:value-of select=""@price""/&gt;&lt;/xsl:template&gt;
+ &lt;/xsl:stylesheet&gt;";
 
- string xml = @"<!--?xml version=""1.0"" encoding=""UTF-8""?-->
- <pastery>
-     <cake price="" 1.62""="">
- </cake></pastery>";
+ string xml = @"&lt;?xml version=""1.0"" encoding=""UTF-8""?&gt;
+ &lt;pastery&gt;
+     &lt;cake price=""1.62"" /&gt;
+ &lt;/pastery&gt;";
 
  var text = XmlTransform(xsl, xml, new XmlTransformationSettings {
-     ConformanceLevel = System.Xml.ConformanceLevel.Fragment, Encoding = Encoding.ASCII });
- ]]&gt;</xsl:strip-space></xsl:output></code></pre>
+     ConformanceLevel = System.Xml.ConformanceLevel.Fragment, Encoding = Encoding.ASCII });</code></pre>
      </div>
 
 

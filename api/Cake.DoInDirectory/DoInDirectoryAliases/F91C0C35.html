@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -170,7 +171,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Changes the current working directory before an <code class="cs">System.Action</code> and returns to the previous one in the end
+            Changes the current working directory before an <code class="cs"><a href="/">Action</a></code> and returns to the previous one in the end
             </div>
 
 		<div class="panel panel-default">
@@ -195,19 +196,15 @@
 	<h1 id="Examples">Examples</h1>
 	<div>
             <p>Use the #addin preprocessor directive</p>
-            <pre><code class="cs"><!--[CDATA[
-#addin nuget:?package=Cake.DoInDirectory
-]]--></code></pre>
+            <pre><code class="cs">#addin nuget:?package=Cake.DoInDirectory</code></pre>
             <p>Cake task:</p>
-            <pre><code class="cs"><!--[CDATA[
-Task("SomeTask").Does(() =-->
+            <pre><code class="cs">Task("SomeTask").Does(() =&gt;
 {
     DoInDirectory("./SomeDir", () =&gt;
     {
         // Do awesome stuff
     });
-});
-]]&gt;</code></pre>
+});</code></pre>
             </div>
 
 

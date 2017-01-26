@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -78,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -177,7 +180,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Builds markdown and API documentation using DocFx, with the specified settings.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -197,6 +204,13 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void DocFx(this ICakeContext context, FilePath configFile, DocFxSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">DocFx("./docs/docfx.json", new DocFxSettings()
+{
+    OutputPath = "./artifacts/docs"
+});</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -236,17 +250,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>configFile</td>
 						<td>FilePath</td>
-						<td></td>
+						<td>The path to the docfx.json config file.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></td>
-						<td></td>
+						<td>The DocFx settings.</td>
 					</tr>
 			</tbody></table>
 		</div>

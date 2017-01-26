@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -187,12 +188,11 @@ public static string XmlPeek(this ICakeContext context, FilePath filePath, strin
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-    <pre><code class="cs"><para>XML document:</para><!--[CDATA[
-<?xml version="1.0" encoding="UTF-8"?-->
-<pastery xmlns="http://cakebuild.net/pastery">
+    <pre><code class="cs"><para>XML document:</para>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pastery xmlns = "http://cakebuild.net/pastery" &gt;
     &lt; cake price="1.62" /&gt;
-</pastery>
-]]&gt;</code></pre>
+&lt;/pastery&gt;</code></pre>
     <p>XmlPeek usage:</p>
     <pre><code class="cs">string version = XmlPeek("./pastery.xml", "/pastery:pastery/pastery:cake/@price",
     new XmlPeekSettings {

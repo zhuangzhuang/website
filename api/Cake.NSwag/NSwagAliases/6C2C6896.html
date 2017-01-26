@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -195,15 +196,13 @@
 	<h1 id="Examples">Examples</h1>
 	<div>
                 <p> Generate a Swagger spec from a generic .NET assembly</p>
-                <pre><code class="cs"><!--[CDATA[ NSwag.FromAssembly("./assembly.dll").ToSwaggerSpecification("./typespec.json"); ]]--></code></pre>
+                <pre><code class="cs">NSwag.FromAssembly("./assembly.dll").ToSwaggerSpecification("./typespec.json");</code></pre>
                 <p>Generate a Swagger spec from an ASP.NET Web API assembly</p>
-                <pre><code class="cs"><!--[CDATA[
-            NSwag.FromWebApiAssembly("./web.assembly.dll").ToSwaggerSpecification("./swagger.json");
-            ]]--></code></pre>
+                <pre><code class="cs">NSwag.FromWebApiAssembly("./web.assembly.dll").ToSwaggerSpecification("./swagger.json");</code></pre>
                 <p>Generate a Typescript client from a JSON Schema file</p>
-                <pre><code class="cs"><!--[CDATA[NSwag.FromJsonSchema("./schema.json").ToTypeScriptClient("./client.ts");]]--></code></pre>
+                <pre><code class="cs">NSwag.FromJsonSchema("./schema.json").ToTypeScriptClient("./client.ts");</code></pre>
                 <p>Generate a C# client from a Swagger specification</p>
-                <pre><code class="cs"><!--[CDATA[NSwag.FromSwaggerSpecification("./swagger.json").ToCSharpClient("./client.cs", "Swagger.Client");]]--></code></pre>
+                <pre><code class="cs">NSwag.FromSwaggerSpecification("./swagger.json").ToCSharpClient("./client.cs", "Swagger.Client");</code></pre>
             </div>
 
 

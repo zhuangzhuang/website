@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -188,25 +189,24 @@ public static string XmlTransform(this ICakeContext context, string xsl, string 
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-     <pre><code class="cs"><para>This example code will convert xml to a new xml strucure using XmlTransform alias.</para><!--[CDATA[
- string xsl = @"<xsl:stylesheet version=""1.0"" xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""-->
-   <xsl:output method="" xml""="" omit-xml-declaration="" yes""="">
-   <xsl:template match="" ""="">
-     <xsl:for-each select="" pastery="" cake""="">
-         <price><xsl:value-of select="" @price""=""></xsl:value-of></price>
-       </xsl:for-each>
-   </xsl:template>
- ";
+     <pre><code class="cs"><para>This example code will convert xml to a new xml strucure using XmlTransform alias.</para>
+ string xsl = @"&lt;xsl:stylesheet version=""1.0"" xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""&gt;
+   &lt;xsl:output method=""xml"" omit-xml-declaration=""yes"" /&gt;
+   &lt;xsl:template match=""/""&gt;
+     &lt;xsl:for-each select=""pastery/cake"" &gt;
+         &lt;price&gt;&lt;xsl:value-of select=""@price""/&gt;&lt;/price&gt;
+       &lt;/xsl:for-each&gt;
+   &lt;/xsl:template&gt;
+ &lt;/xsl:stylesheet&gt;";
 
- string xml = @"<!--?xml version=""1.0"" encoding=""UTF-8""?-->
- <pastery>
-     <cake price="" 1.62""="">
- </cake></pastery>";
+ string xml = @"&lt;?xml version=""1.0"" encoding=""UTF-8""?&gt;
+ &lt;pastery&gt;
+     &lt;cake price=""1.62"" /&gt;
+ &lt;/pastery&gt;";
 
- var priceTag = XmlTransform(xsl, xml);
- ]]&gt;</xsl:output></code></pre>
+ var priceTag = XmlTransform(xsl, xml);</code></pre>
      <p>Result:</p>
-     <pre><code class="cs"><!--[CDATA[<price-->1.62]]&gt;</code></pre>
+     <pre><code class="cs">&lt;price&gt;1.62&lt;/price&gt;</code></pre>
      </div>
 
 

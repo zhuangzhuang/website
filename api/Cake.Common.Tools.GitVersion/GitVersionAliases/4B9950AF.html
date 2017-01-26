@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -188,20 +189,17 @@ public static GitVersion GitVersion(this ICakeContext context, GitVersionSetting
 	<div>
     <p>Update the assembly info files for the project.</p>
     <p>Cake task:</p>
-    <pre><code class="cs"><!--[CDATA[
-Task("UpdateAssemblyInfo")
-    .Does(() =-->
+    <pre><code class="cs">Task("UpdateAssemblyInfo")
+    .Does(() =&gt;
 {
     GitVersion(new GitVersionSettings {
         UpdateAssemblyInfo = true
     });
-});
-]]&gt;</code></pre>
+});</code></pre>
     <p>Get the git version info for the project using a dynamic repository.</p>
     <p>Cake task:</p>
-    <pre><code class="cs"><!--[CDATA[
-Task("GetVersionInfo")
-    .Does(() =-->
+    <pre><code class="cs">Task("GetVersionInfo")
+    .Does(() =&gt;
 {
     var result = GitVersion(new GitVersionSettings {
         UserName = "MyUser",
@@ -211,8 +209,7 @@ Task("GetVersionInfo")
         Commit = EnviromentVariable("MY_COMMIT")
     });
     // Use result for building nuget packages, setting build server version, etc...
-});
-]]&gt;</code></pre>
+});</code></pre>
     </div>
 
 

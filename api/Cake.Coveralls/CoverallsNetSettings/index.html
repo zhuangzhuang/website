@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -78,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <hr class="infobar-hidden">
@@ -168,7 +170,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by <code class="cs"><a href="/api/Cake.Coveralls/CoverallsNetRunner">CoverallsNetRunner</a></code>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -248,91 +254,117 @@ class Type type-node
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/B00181FB">BaseFilePath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Base File path, which when UseRelativePaths is set, this path is used instead of the current working directory.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/0248B539">CommitAuthor</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the git commit author for coverage report.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/D58B9C3F">CommitBranch</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the git commit branch for coverage report.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/67684343">CommitEmail</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the git commit email for coverage report.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/B59049A1">CommitId</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the git commit hash for coverage report.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/410188CD">CommitMessage</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the git commit message for coverage report.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/F99BDA85">JobId</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Job Id to provide to coveralls.io.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/DEF5B865">OutputFilePath</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Output File path.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/D8B4635E">RepoToken</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Repo Token to use when publishing to Coveralls.io
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/9FEFBA3D">RepoTokenVariable</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Repo Token Variable which is the Environment Variable name where the coverall.io token is available.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/EFFC1AD8">ServiceName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the service name for the coverage report.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/91DDFADF">Treat<wbr>Upload<wbr>Errors<wbr>As<wbr>Warnings</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to exit successfully if an upload error is encountered.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetSettings/D32C94A3">UseRelativePaths</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to attempt to strip the current working directory from the beginning of the source file path.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" class="static"><head>
+<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -36,11 +36,12 @@
             <header class="main-header">   
                      
                 <a href="/" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="/assets/img/logo.png"></span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><img src="/assets/img/logo.png"></span>
-                </a>   
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
@@ -189,38 +190,42 @@ public static void XmlTransform(this ICakeContext context, FilePath xslPath, Fil
 	<h1 id="Examples">Examples</h1>
 	<div>
     <pre><code class="cs"><para>This example code will convert the Cake nuspec into html using the XmlTransform alias,
-specifying that result should be indented and using Unicode encoding.</para><para>XML stylesheet:</para><!--[CDATA[
-<?xml version="1.0" ?-->
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd" exclude-result-prefixes="p">
-  <xsl:output method="xml" indent="yes" omit-xml-declaration="yes">
-  <xsl:template match="/">
-    
-      
-        <title>
+specifying that result should be indented and using Unicode encoding.</para><para>XML stylesheet:</para>
+&lt;?xml version="1.0" ?&gt;
+&lt;xsl:stylesheet
+  version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:p="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd"
+  exclude-result-prefixes="p"
+  &gt;
+  &lt;xsl:output method="xml" indent="yes" omit-xml-declaration="yes" /&gt;
+  &lt;xsl:template match="/"&gt;
+    &lt;html lang="en" class="static"&gt;
+      &lt;head&gt;
+        &lt;title&gt;
           &lt;xsl:for-each select="package/p:metadata"&gt;
               &lt;xsl:value-of select="p:id"/&gt;
           &lt;/xsl:for-each&gt;
-        </title>
-      
-      
-          <xsl:for-each select="package/p:metadata">
-            <h1>
-              <xsl:value-of select="p:id">
-            </xsl:value-of></h1>
-            <h2>Description</h2>
-            <i><xsl:value-of select="p:description"></xsl:value-of></i>
-          </xsl:for-each>
-        <h3>Files</h3>
-        <ul>
-          <xsl:for-each select="package/files/file">
-            <li><xsl:value-of select="@src"></xsl:value-of></li>
-          </xsl:for-each>
-        </ul>
-      
-    
-  </xsl:template>
-</xsl:output></xsl:stylesheet>
-]]&gt;</code></pre>
+        &lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+          &lt;xsl:for-each select="package/p:metadata"&gt;
+            &lt;h1&gt;
+              &lt;xsl:value-of select="p:id"/&gt;
+            &lt;/h1&gt;
+            &lt;h2&gt;Description&lt;/h2&gt;
+            &lt;i&gt;&lt;xsl:value-of select="p:description"/&gt;&lt;/i&gt;
+          &lt;/xsl:for-each&gt;
+        &lt;h3&gt;Files&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;xsl:for-each select="package/files/file" &gt;
+            &lt;li&gt;&lt;xsl:value-of select="@src"/&gt;&lt;/li&gt;
+          &lt;/xsl:for-each&gt;
+        &lt;/ul&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
     <p>XmlTransform usage:</p>
     <pre><code class="cs">XmlTransform("./nuspec.xsl", "./nuspec/Cake.nuspec", "./Cake.htm",
     new XmlTransformationSettings { Indent = true, Encoding = Encoding.Unicode});</code></pre>
