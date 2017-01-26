@@ -78,7 +78,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -182,7 +183,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Fluent extension methods for the <code class="cs"><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettings">VagrantSnapshotRestoreSettings</a></code> class
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -245,7 +250,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettingsExtensions/ACE31809">Delete<wbr>(<wbr>Vagrant<wbr>Snapshot<wbr>Restore<wbr>Settings, <wbr>bool)<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettings">Vagrant<wbr>Snapshot<wbr>Restore<wbr>Settings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Forces deletion of the snapshot after restoring
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -253,7 +260,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettingsExtensions/B5D805C3">DoNotDelete<wbr>(<wbr>Vagrant<wbr>Snapshot<wbr>Restore<wbr>Settings)<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettings">Vagrant<wbr>Snapshot<wbr>Restore<wbr>Settings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -261,7 +270,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettingsExtensions/4830BDA1">RunProvisioners<wbr>(<wbr>Vagrant<wbr>Snapshot<wbr>Restore<wbr>Settings, <wbr>bool)<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSnapshotRestoreSettings">Vagrant<wbr>Snapshot<wbr>Restore<wbr>Settings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Force the provisioners to run (or prevent them from doing so).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
