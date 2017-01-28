@@ -191,18 +191,35 @@
 		<h1>Tool Resolution</h1>
 	</section>
 	<section class="content">
-		<p>The philosophy behind Cake is to reduce the number of dependencies for Cake
+		<html><head></head><body><p>The philosophy behind Cake is to reduce the number of dependencies for Cake
 as well as to not store executable in the source code repository. Instead a
 set of conventions are used to locate executables on disc.</p>
 <ol>
-<li>Use explicitly set tool path.</li>
+<li>Use explicitly set tool path on <a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a> <a href="/api/Cake.Core.Tooling/ToolSettings/F6956DA8">ToolPath</a> property.</li>
+<li>Via <a href="/api/Cake.Core.Tooling/IToolLocator/">IToolLocator</a> registered path (see example below).</li>
 <li>Try to find the tool by searching <code>./tools/**/mytool.exe</code>.</li>
 <li>Look through all paths in the <code>PATH</code> environment variable and look for <code>mytool.exe</code>.</li>
 <li>Ask the tool wrapper for additional, alternative paths.</li>
 </ol>
-<p>By inheriting from the <a href="/api/Cake.Core.Tooling/Tool_1">Tool<T></a> class
-when implementing tools, you will get the conventions &quot;for free&quot;.</p>
-
+<p>By inheriting from the <a href="/api/Cake.Core.Tooling/Tool_1">Tool<t></t></a> class
+when implementing tools, you will get the conventions "for free".</p>
+<p>You can override and register tool paths using the <a href="/api/Cake.Core.Tooling/IToolLocator/">IToolLocator</a> <a href="http://cakebuild.net/api/Cake.Core/ICakeContext/8C889AB4">Tools</a> property on the <a href="http://cakebuild.net/api/Cake.Core/ICakeContext/">ICakeContext</a>:</p>
+<pre><code class="language-csharp">Setup(context =&gt; {
+    context.Tools.RegisterFile("C:/ProgramData/chocolatey/bin/NuGet.exe");
+});
+</code></pre>
+<p>If you want to use the tool resolution from your Cake script for generic tasks, i.e. starting a process, that's certainly possible using the <a href="http://cakebuild.net/api/Cake.Core.Tooling/IToolLocator/D57090B2">Resolve(string) </a> method:</p>
+<pre><code class="language-csharp">Task("NuGet-Help-Install")
+    .Does(()=&gt; {
+    <a href="/api/Cake.Core.IO/FilePath">FilePath</a> nugetPath = Context.Tools.Resolve("nuget.exe");
+    StartProcess(nugetPath, new <a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a> {
+        Arguments = new ProcessArgumentBuilder()
+            .Append("help")
+            .Append("install")
+        });
+});
+</code></pre>
+</body></html>
 	</section>
                 
             </div>           

@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Remarks">Remarks</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -177,11 +175,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-                This takes a snapshot and pushes it onto the snapshot stack.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -202,14 +196,6 @@
 	<pre><code>public void Push()</code></pre>
 
 
-	<h1 id="Remarks">Remarks</h1>
-	<div>
-                <p>This is a shorthand for <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner/01CD0088">Save(string)</a></code> where you do not need to specify a name.</p>
-                <p>
-                    Warning: If you are using <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner/23A9ADDF">Push()</a></code> and <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner/CCF785AA">Pop(Action&lt;VagrantSnapshotRestoreSettings&gt;)</a></code>, avoid using <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner/01CD0088">Save(string)</a></code> and
-                    <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner/6EADAAE2">Restore(string, Action&lt;VagrantSnapshotRestoreSettings&gt;)</a></code> which are unsafe to mix.
-                </p>
-            </div>
 
 
 
