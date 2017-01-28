@@ -466,7 +466,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -494,8 +494,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -666,7 +666,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XSL transformation.
+    Contains functionality related to XML XPath queries.
     </td>
                 </tr>
                 <tr>
@@ -731,9 +731,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
-                    <td>
-            Contains functionality for workign with Azure Storage
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
@@ -830,7 +828,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
-                    <td></td>
+                    <td>
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docker">Docker</a></td>
@@ -952,7 +952,12 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Contains functionality related to emails
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Email</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1023,7 +1028,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
@@ -1089,8 +1094,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/orchard">Orchard</a></td>
@@ -1167,7 +1172,12 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1211,9 +1221,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/swagger">Swagger</a></td>
-                    <td>
-                Alias to access the code generation functionality from the NSwag toolchain
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
@@ -1250,14 +1258,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/vsce">Vsce</a></td>
-                    <td>
-            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.VsCode</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/watch">Watch</a></td>
@@ -1273,14 +1274,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/wyam">Wyam</a></td>
-                    <td>
-            <p>Contains functionality related to <a href="https://github.com/Wyamio/Wyam">Wyam</a>.</p>
-            <p>
-            In order to use the commands for this alias, include the following in your build.cake file to download and install from NuGet.org, or specify the ToolPath within the WyamSettings class:
-            <pre><code class="cs">#addin "nuget:?package=Cake.Wyam"
-#tool "nuget:?package=Wyam"</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/xamarin">Xamarin</a></td>
@@ -1290,7 +1284,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/xcode">XCode</a></td>
-                    <td></td>
+                    <td>
+            XCode aliases.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/xdt">XDT</a></td>
@@ -1304,7 +1300,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/yarn">Yarn</a></td>
-                    <td></td>
+                    <td>
+            Provides a wrapper around Yarn functionality within a Cake build script
+            </td>
                 </tr>
         </table>
     </div>
