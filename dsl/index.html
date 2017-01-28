@@ -488,8 +488,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -622,7 +622,12 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    </p>
     </td>
                 </tr>
                 <tr>
@@ -655,7 +660,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -725,12 +730,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -941,7 +941,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of SendGridProvider API post
             </td>
                 </tr>
                 <tr>
@@ -1006,7 +1006,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Contains GitterProvider Chat functionality.
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1072,8 +1072,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/orchard">Orchard</a></td>
@@ -1150,12 +1150,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
-            </p>
+            Contains functionality related to SendGrid API
             </td>
                 </tr>
                 <tr>
@@ -1199,7 +1194,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/swagger">Swagger</a></td>
-                    <td></td>
+                    <td>
+                Alias to access the code generation functionality from the NSwag toolchain
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
@@ -1252,7 +1249,14 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/wyam">Wyam</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains functionality related to <a href="https://github.com/Wyamio/Wyam">Wyam</a>.</p>
+            <p>
+            In order to use the commands for this alias, include the following in your build.cake file to download and install from NuGet.org, or specify the ToolPath within the WyamSettings class:
+            <pre><code class="cs">#addin "nuget:?package=Cake.Wyam"
+#tool "nuget:?package=Wyam"</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/xamarin">Xamarin</a></td>
