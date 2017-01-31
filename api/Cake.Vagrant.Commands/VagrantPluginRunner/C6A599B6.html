@@ -79,7 +79,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -175,7 +178,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                This installs a plugin with the given name or file path.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -195,7 +202,16 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public void Install(string name, Action&lt;VagrantPluginInstallSettings&gt; configure = null)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+                <pre><code class="cs">Vagrant.Plugin.Install("plugin", 
+    s =&gt; s.CleanFirst()
+            .FromSource("http://source")
+            .SetEntryPoint("main.sh"));</code></pre>
+            </div>
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>If the name is not a path to a file, then the plugin is installed from remote repositories, usually RubyGems.</div>
 
 
 
@@ -213,12 +229,12 @@
 					<tbody><tr>
 						<td>name</td>
 						<td>string</td>
-						<td></td>
+						<td>Name or path of the plugin to install</td>
 					</tr>
 					<tr>
 						<td>configure</td>
 						<td>Action<wbr>&lt;<wbr>Vagrant<wbr>Plugin<wbr>Install<wbr>Settings&gt;<wbr></td>
-						<td></td>
+						<td>Optional settings to control the installation process</td>
 					</tr>
 			</tbody></table>
 		</div>

@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -175,7 +177,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                This updates the plugins that are installed within Vagrant.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -196,6 +202,12 @@
 	<pre><code>public void Update(string name = null)</code></pre>
 
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>
+                If you specified version constraints when installing the plugin, this command will respect those constraints.
+                If you want to change a version constraint, re-install the plugin using
+                <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner/C6A599B6">Install(string, Action&lt;VagrantPluginInstallSettings&gt;)</a></code>
+            </div>
 
 
 
@@ -213,7 +225,7 @@
 					<tbody><tr>
 						<td>name</td>
 						<td>string</td>
-						<td></td>
+						<td>If a name is specified, only that single plugin will be updated</td>
 					</tr>
 			</tbody></table>
 		</div>

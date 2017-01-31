@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -168,7 +169,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Wrapper around the <code class="cs">vagrant plugin</code> subcommands
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -227,7 +232,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner/58A70CC5">VagrantPluginRunner<wbr>(ICakeLog, <wbr>Action<wbr>&lt;<wbr>Vagrant<wbr>Settings, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr>, <wbr>VagrantSettings)<wbr></a></td>
-									<td></td>
+									<td>
+                Creates a new instance of the <code class="cs"><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></code> class
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -251,7 +258,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner/5DE9580D">Log</a></td>
 								<td>ICakeLog</td>
 								<td>
-									<div></div>
+									<div>
+                Logging output
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner">VagrantCommandRunner</a></em></small></div>
 								</td>
 							</tr>
@@ -259,7 +268,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner/053F65FB">Runner</a></td>
 								<td>Action<wbr>&lt;<wbr>Vagrant<wbr>Settings, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+                Action to trigger invocation of the CLI
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner">VagrantCommandRunner</a></em></small></div>
 								</td>
 							</tr>
@@ -267,7 +278,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner/263AFB15">Settings</a></td>
 								<td><a href="/api/Cake.Vagrant/VagrantSettings">VagrantSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Settings for invocation of the Vagrant CLI
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner">VagrantCommandRunner</a></em></small></div>
 								</td>
 							</tr>
@@ -291,28 +304,37 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner/99E10614">Install<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>Action<wbr>&lt;<wbr>Vagrant<wbr>Plugin<wbr>Install<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+                This installs multiple plugins at the same time with the given names or paths
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner/C6A599B6">Install<wbr>(string, <wbr>Action<wbr>&lt;<wbr>Vagrant<wbr>Plugin<wbr>Install<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+                This installs a plugin with the given name or file path.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner/649032AC">Uninstall<wbr>(string[])<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+                This uninstalls the plugin with the given name. If multiple plugins are given, multiple plugins will be
+                uninstalled.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner/EC7EF589">Update<wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+                This updates the plugins that are installed within Vagrant.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
