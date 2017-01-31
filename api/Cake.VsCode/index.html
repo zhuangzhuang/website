@@ -136,7 +136,8 @@
 				<li class="treeview active">
 				<a href="/api/Cake">Cake</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
+						<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
+			<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
 			<li><a href="/api/Cake.AndroidSdkManager">Cake<wbr>.AndroidSdkManager</a></li>
 
 				<li class="treeview">
@@ -841,18 +842,13 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsCode/VsceAliases">VsceAliases</a></td>
-									<td>
-            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#addin Cake.VsCode</code></pre>
-            <p></p>
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VscePackager">VscePackager</a></td>
-									<td></td>
+									<td>
+            The Vsce Packager used to package VsCode Extensions
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VscePackageSettings">VscePackageSettings</a></td>
