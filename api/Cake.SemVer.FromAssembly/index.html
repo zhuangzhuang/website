@@ -136,7 +136,9 @@
 				<li class="treeview active">
 				<a href="/api/Cake">Cake</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
+						<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
+			<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
+			<li><a href="/api/Cake.AndroidSdkManager">Cake<wbr>.AndroidSdkManager</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.AppleSimulator">Cake<wbr>.AppleSimulator</a> <a href="#" class="expand"></a>
@@ -820,7 +822,14 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SemVer.FromAssembly/SemVerAliases">SemVerAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://github.com/wallymathieu/SemVer.FromAssembly">SemVer.FromAssembly</a>.</p>
+            <p>
+            In order to use the commands for this addin, the SemVer.FromAssembly utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.SemVer.FromAssembly</code></pre>
+            <p></p>
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

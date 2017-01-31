@@ -135,7 +135,9 @@
 				<li class="treeview active">
 				<a href="/api/Cake">Cake</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
+						<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
+			<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
+			<li><a href="/api/Cake.AndroidSdkManager">Cake<wbr>.AndroidSdkManager</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.AppleSimulator">Cake<wbr>.AppleSimulator</a> <a href="#" class="expand"></a>
@@ -819,7 +821,10 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.GitPackager/GitPackagerExtensions">Git<wbr>Packager<wbr>Extensions</a></td>
-									<td></td>
+									<td>
+            Cake AddIn which copies files based on Git log.
+            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.GitPackager/GitPackagerRunner">GitPackagerRunner</a></td>
