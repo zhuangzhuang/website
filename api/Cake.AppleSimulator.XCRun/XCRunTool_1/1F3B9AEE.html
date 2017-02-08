@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - PscpTool&lt;TSettings&gt;.PscpTool(IFileSystem, ICakeEnvironment, IProcessRunner, IGlobber) Constructor</title>
+        <title>Cake - API - XCRunTool&lt;TSettings&gt;.RunAndRedirectStandardOutput(TSettings, ProcessArgumentBuilder) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -134,18 +133,22 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></li>
+		<li><a href="/api/Cake.AppleSimulator.dll">Cake<wbr>.AppleSimulator<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Putty">Cake<wbr>.Putty</a></li>
+		<li><a href="/api/Cake.AppleSimulator.XCRun">Cake<wbr>.AppleSimulator<wbr>.XCRun</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Putty/PscpTool_1">PscpTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+		<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1">XCRunTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li class="selected"><a href="/api/Cake.Putty/PscpTool_1/384C8F2D">PscpTool<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IGlobber)<wbr></a></li>
+				<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/6F1FD9C4">XCRunTool<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>TSettings)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Putty/PscpTool_1/8D1B714C">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></li>
-				<li><a href="/api/Cake.Putty/PscpTool_1/DCC59B56">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Putty/PscpTool_1/BBD2EF3A">GetToolName<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/10949443">Create<wbr>Argument<wbr>Builder<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/CE16285D">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/C028944F">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/8B322FA0">GetToolName<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/1F3B9AEE">Run<wbr>And<wbr>Redirect<wbr>Standard<wbr>Output<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1/875EE49B">Settings</a></li>
 
 
                     </ul>
@@ -159,41 +162,37 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Putty/PscpTool_1">PscpTool<wbr>&lt;TSettings&gt;<wbr></a>.</h3>
-	<h1>PscpTool<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IGlobber)<wbr> <small>Constructor</small></h1>
+			<h3><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1">XCRunTool<wbr>&lt;TSettings&gt;<wbr></a>.</h3>
+	<h1>Run<wbr>And<wbr>Redirect<wbr>Standard<wbr>Output<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/MihaMarkic/Cake.Putty" class="alert-link">https://github.com/MihaMarkic/Cake.Putty</a>.
+                        <a href="https://github.com/ghuntley/Cake.AppleSimulator" class="alert-link">https://github.com/ghuntley/Cake.AppleSimulator</a>.
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Putty/PscpTool_1">PscpTool&lt;TSettings&gt;</a></code> class.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Putty.dll">Cake<wbr>.Putty<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.AppleSimulator.dll">Cake<wbr>.AppleSimulator<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Putty">Cake<wbr>.Putty</a></dd>
+						<dd><a href="/api/Cake.AppleSimulator.XCRun">Cake<wbr>.AppleSimulator<wbr>.XCRun</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Putty/PscpTool_1">PscpTool<wbr>&lt;TSettings&gt;<wbr></a></dd>		
+						<dd><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1">XCRunTool<wbr>&lt;TSettings&gt;<wbr></a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>protected PscpTool(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IGlobber globber)</code></pre>
+	<pre><code>protected string RunAndRedirectStandardOutput(TSettings settings, ProcessArgumentBuilder arguments)</code></pre>
 
 
 
@@ -211,24 +210,14 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>fileSystem</td>
-						<td>IFileSystem</td>
-						<td>The file system.</td>
+						<td>settings</td>
+						<td><a href="/api/Cake.AppleSimulator.XCRun/XCRunTool_1#typeparam-TSettings">TSettings</a></td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>environment</td>
-						<td>ICakeEnvironment</td>
-						<td>The environment.</td>
-					</tr>
-					<tr>
-						<td>processRunner</td>
-						<td>IProcessRunner</td>
-						<td>The process runner.</td>
-					</tr>
-					<tr>
-						<td>globber</td>
-						<td>IGlobber</td>
-						<td>The globber.</td>
+						<td>arguments</td>
+						<td>Process<wbr>Argument<wbr>Builder</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -245,7 +234,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>string</td>
 					<td></td>
 				</tr>
 			</tbody></table>

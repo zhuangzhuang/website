@@ -17,7 +17,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet" />
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -340,8 +340,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -462,7 +468,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -490,8 +496,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -699,7 +705,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB commands
              </td>
                 </tr>
                 <tr>
@@ -739,7 +745,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Contains functionality related to CakeMail API
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -948,7 +954,12 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Class that lets you override default API settings
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Email</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -967,8 +978,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1014,12 +1031,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            The result of GitterProvider Chat API post
             </td>
                 </tr>
                 <tr>
@@ -1085,8 +1097,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/orchard">Orchard</a></td>
@@ -1168,17 +1180,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/sonar">Sonar</a></td>
-                    <td>
-            <p>
-            Contains functionality for running a Sonar analysis on a c# project using the MSBuild SonarQube Runner.
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.Sonar"
-#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
@@ -1216,18 +1218,18 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
-                    <td>
-            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
-            <p>
-            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
-            reference the addin from NuGet.org:
-            <pre><code class="cs">#addin Cake.Tfx</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/twitter">Twitter</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains functionality related to <a href="https://dev.twitter.com/rest/public">Twitter REST API</a>.</p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Twitter</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/vagrant">Vagrant</a></td>
@@ -1265,14 +1267,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/wyam">Wyam</a></td>
-                    <td>
-            <p>Contains functionality related to <a href="https://github.com/Wyamio/Wyam">Wyam</a>.</p>
-            <p>
-            In order to use the commands for this alias, include the following in your build.cake file to download and install from NuGet.org, or specify the ToolPath within the WyamSettings class:
-            <pre><code class="cs">#addin "nuget:?package=Cake.Wyam"
-#tool "nuget:?package=Wyam"</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/xamarin">Xamarin</a></td>

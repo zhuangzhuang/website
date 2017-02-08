@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -233,16 +232,7 @@
                             </div>
 
 
-            <h1 id="Summary">Summary</h1>
-        <div>
-            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
-            <p>
-            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
-            reference the addin from NuGet.org:
-            </p><pre><code class="cs">#addin Cake.Tfx</code></pre>
-            <p></p>
-            </div>
-
+    
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -253,8 +243,6 @@
 <a href="/api/Cake.Tfx/TfxAliases/8855EC96">TfxExtensionCreate<wbr>(ICakeContext, <wbr>Tfx<wbr>Extension<wbr>Create<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-            Creates an extension using the Tfx CLI using the specified settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></i></small>
@@ -265,8 +253,6 @@
 <a href="/api/Cake.Tfx/TfxAliases/DF7CCCDF">TfxExtensionInstall<wbr>(ICakeContext, <wbr>FilePath, <wbr>ICollection<wbr>&lt;string&gt;<wbr>, <wbr>Tfx<wbr>Extension<wbr>Install<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-            Installs an extension using the Tfx CLI using the specified settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></i></small>
@@ -277,8 +263,6 @@
 <a href="/api/Cake.Tfx/TfxAliases/D835F890">TfxExtensionPublish<wbr>(ICakeContext, <wbr>FilePath, <wbr>Tfx<wbr>Extension<wbr>Publish<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-            Publishes an extension using the Tfx CLI using the specified settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></i></small>
@@ -289,8 +273,6 @@
 <a href="/api/Cake.Tfx/TfxAliases/6F69F986">TfxExtensionPublish<wbr>(ICakeContext, <wbr>Tfx<wbr>Extension<wbr>Publish<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-            Publishes an extension using the Tfx CLI using the specified settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></i></small>
@@ -301,8 +283,6 @@
 <a href="/api/Cake.Tfx/TfxAliases/BB57A47C">TfxExtensionShare<wbr>(ICakeContext, <wbr>FilePath, <wbr>ICollection<wbr>&lt;string&gt;<wbr>, <wbr>Tfx<wbr>Extension<wbr>Share<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-            Shares an extension using the Tfx CLI using the specified settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></i></small>

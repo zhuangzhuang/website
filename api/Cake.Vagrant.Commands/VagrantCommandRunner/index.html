@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -194,10 +194,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantBoxRunner">VagrantBoxRunner</a></li>								
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantDockerRunner">VagrantDockerRunner</a></li>								
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></li>								
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -209,14 +209,14 @@
 	Base0["object"]--&gt;Type
 	Type["VagrantCommandRunner"]
 class Type type-node
-	Type--&gt;Derived0["VagrantSnapshotRunner"]
-	click Derived0 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
-	Type--&gt;Derived1["VagrantBoxRunner"]
-	click Derived1 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
+	Type--&gt;Derived0["VagrantBoxRunner"]
+	click Derived0 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
+	Type--&gt;Derived1["VagrantDockerRunner"]
+	click Derived1 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
 	Type--&gt;Derived2["VagrantPluginRunner"]
 	click Derived2 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
-	Type--&gt;Derived3["VagrantDockerRunner"]
-	click Derived3 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
+	Type--&gt;Derived3["VagrantSnapshotRunner"]
+	click Derived3 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
 
 						</div>
 					</div>

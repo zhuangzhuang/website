@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -230,13 +230,18 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Twitter/TwitterAliases">TwitterAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to <a href="https://dev.twitter.com/rest/public">Twitter REST API</a>.</p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Twitter</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Twitter/TwitterProvider">TwitterProvider</a></td>
-									<td>
-            Contains functionality related to Twitter API
-            </td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>

@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -200,8 +200,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
+											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -213,10 +213,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TfxSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxExtensionCreateSettings"]
-	click Derived0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
-	Type--&gt;Derived1["TfxServerSettings"]
-	click Derived1 "/api/Cake.Tfx/TfxServerSettings"
+	Type--&gt;Derived0["TfxServerSettings"]
+	click Derived0 "/api/Cake.Tfx/TfxServerSettings"
+	Type--&gt;Derived1["TfxExtensionCreateSettings"]
+	click Derived1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
 
 						</div>
 					</div>
