@@ -185,6 +185,7 @@
     <li><a href="/dsl/http">Http</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
     <li><a href="/dsl/kudu">Kudu</a></li>        
+    <li><a href="/dsl/microsoft-teams">Microsoft Teams</a></li>        
     <li><a href="/dsl/msdeploy">MsDeploy</a></li>        
     <li><a href="/dsl/node">Node</a></li>        
     <li><a href="/dsl/npm">Npm</a></li>        
@@ -287,8 +288,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -468,7 +469,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -710,7 +711,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -785,8 +786,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -794,7 +795,17 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/coveralls">Coveralls</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#tool coveralls.net</code></pre>
+            <pre><code class="cs">#tool coveralls.io</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/curl">Curl</a></td>
@@ -832,7 +843,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
-                    <td></td>
+                    <td>
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docker">Docker</a></td>
@@ -954,7 +967,12 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            The result of SendGridProvider API post
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Email</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1026,7 +1044,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            The result of GitterProvider Chat API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1064,6 +1082,12 @@
                     <td><a href="/dsl/kudu">Kudu</a></td>
                     <td>
             Contains aliases related to Kudu web site environment and deployment
+            </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/microsoft-teams">Microsoft Teams</a></td>
+                    <td>
+            Contains functionality related to Microsoft Teams.
             </td>
                 </tr>
                 <tr>
@@ -1170,7 +1194,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1217,9 +1241,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/swagger">Swagger</a></td>
-                    <td>
-                Alias to access the code generation functionality from the NSwag toolchain
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
@@ -1249,14 +1271,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/vsce">Vsce</a></td>
-                    <td>
-            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.VsCode</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/watch">Watch</a></td>

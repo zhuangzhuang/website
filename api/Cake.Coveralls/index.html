@@ -462,6 +462,11 @@
 						<li><a href="/api/Cake.Kudu.Helpers">Cake<wbr>.Kudu<wbr>.Helpers</a></li>
 			<li><a href="/api/Cake.Kudu.KuduSync">Cake<wbr>.Kudu<wbr>.KuduSync</a></li>
 			<li><a href="/api/Cake.Kudu.Provider">Cake<wbr>.Kudu<wbr>.Provider</a></li>
+</ul></li>
+				<li class="treeview">
+				<a href="/api/Cake.MicrosoftTeams">Cake<wbr>.MicrosoftTeams</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.MicrosoftTeams.LitJson">Cake<wbr>.MicrosoftTeams<wbr>.LitJson</a></li>
 </ul></li>			<li><a href="/api/Cake.Modules">Cake<wbr>.Modules</a></li>
 
 				<li class="treeview">
@@ -822,13 +827,21 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsAliases">CoverallsAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#tool coveralls.net</code></pre>
+            <pre><code class="cs">#tool coveralls.io</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsIoRunner">CoverallsIoRunner</a></td>
-									<td>
-            The Coveralls.io runner.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsIoSettings">CoverallsIoSettings</a></td>
