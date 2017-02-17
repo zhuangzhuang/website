@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -247,7 +247,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettings/6861DB2B">DisableStrictSSL</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                Disables SSL verification checks and allows self-signed SSL certificates.
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -261,7 +263,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettings/35B2C308">ExitOnFirstFailure</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                Specify whether or not to stop a collection run on encountering the first error.
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -303,28 +307,36 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettings/871099D2">IgnoreRedirects</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+                Prevents newman from automatically following 3XX redirect responses.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettings/4C1C5DD1">Reporters</a></td>
 								<td>Dictionary<wbr>&lt;string, <wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+                Reporters (and any reporter-specific options) for test results
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettings/7F4DF297">RequestDelay</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+                Specify the extent of delay between requests (in milliseconds).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettings/1FD8865E">RequestTimeout</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+                The time (in milliseconds) to wait for requests to return a response.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -370,7 +382,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/35C1F1E0">DisableStrictSSL<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Disables SSL verification checks and allows self-signed SSL certificates.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -378,7 +392,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/4186A337">ExitOnFirstFailure<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify whether or not to stop a collection run on encountering the first error.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -386,7 +402,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/B17A5BE2">ExportCollectionTo<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file where Newman will output the final collection file before completing a run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -394,7 +412,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/3D556B82">ExportEnvironmentTo<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file where Newman will output the final environment variables file before completing a run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -402,7 +422,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/8751FC71">ExportGlobalsTo<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file where Newman will output the final global variables file before completing a run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -410,7 +432,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/33DE5455">IgnoreRedirects<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Prevents newman from automatically following 3XX redirect responses.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -418,7 +442,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/D80219AA">Insecure<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Disables SSL verification checks and allows self-signed SSL certificates.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -426,7 +452,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/92A2F632">RunOnlyFolder<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Run requests within only the specified folder in a collection.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -434,7 +462,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/740868B5">SetRequestDelay<wbr>(int)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the extent of delay between requests (in milliseconds).
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -442,7 +472,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/89A5B20D">SetRequestTimeout<wbr>(int)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the time to wait for request responses.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -450,7 +482,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/08DDB957">UseCLIReporter<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the CLI reporter to this run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -458,7 +492,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/8179FD00">UseCLIReporter<wbr>(Action<wbr>&lt;<wbr>C<wbr>L<wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the CLI reporter to this run, using the specifid settings.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -466,7 +502,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/1D5BEBEA">UseHtmlReporter<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the HTML reporter to this run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -474,7 +512,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/D6E8DDB1">UseHtmlReporter<wbr>(Action<wbr>&lt;<wbr>Html<wbr>Reporter<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the HTML reporter to this run, using the specified settings.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -482,7 +522,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/36982C47">UseJsonReporter<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the JSON reporter to this run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -490,7 +532,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/2892596F">UseJsonReporter<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the JSON reporter to this run, exporting results to the specified file.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -498,7 +542,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/0E3E7C5C">UseJUnitReporter<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the JUnit/XML reporter to this run.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -506,7 +552,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions/027ABFC8">UseJUnitReporter<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the JUnit/XML reporter to this run, exporting results to the specified file.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -514,7 +562,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/8B5CAB64">WithEnvironment<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file path for an environmentsfiel to use for the current execution.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -522,7 +572,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/A31693C7">WithGlobals<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file path for global variables for the current execution.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>

@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -219,8 +219,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
 											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
+											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -230,10 +230,10 @@
 							graph TD
 	Type["ICakeEnvironment"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeEnvironment"]
-	click Implementing0 "/api/Cake.Core/CakeEnvironment"
-	Type-.-&gt;Implementing1["FakeEnvironment"]
-	click Implementing1 "/api/Cake.Testing/FakeEnvironment"
+	Type-.-&gt;Implementing0["FakeEnvironment"]
+	click Implementing0 "/api/Cake.Testing/FakeEnvironment"
+	Type-.-&gt;Implementing1["CakeEnvironment"]
+	click Implementing1 "/api/Cake.Core/CakeEnvironment"
 
 						</div>
 					</div>

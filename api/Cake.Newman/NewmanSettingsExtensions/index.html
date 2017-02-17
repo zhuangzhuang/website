@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -164,7 +165,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Extension methods for the <code class="cs"><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></code> class.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -227,7 +232,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/35C1F1E0">DisableStrictSSL<wbr>(NewmanSettings)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Disables SSL verification checks and allows self-signed SSL certificates.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -235,7 +242,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/4186A337">ExitOnFirstFailure<wbr>(NewmanSettings)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify whether or not to stop a collection run on encountering the first error.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -243,7 +252,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/B17A5BE2">ExportCollectionTo<wbr>(NewmanSettings, <wbr>FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file where Newman will output the final collection file before completing a run.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -251,7 +262,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/3D556B82">ExportEnvironmentTo<wbr>(NewmanSettings, <wbr>FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file where Newman will output the final environment variables file before completing a run.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -259,7 +272,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/8751FC71">ExportGlobalsTo<wbr>(NewmanSettings, <wbr>FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file where Newman will output the final global variables file before completing a run.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -267,7 +282,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/33DE5455">IgnoreRedirects<wbr>(NewmanSettings)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Prevents newman from automatically following 3XX redirect responses.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -275,7 +292,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/D80219AA">Insecure<wbr>(NewmanSettings)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Disables SSL verification checks and allows self-signed SSL certificates.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -283,7 +302,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/92A2F632">RunOnlyFolder<wbr>(NewmanSettings, <wbr>string)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Run requests within only the specified folder in a collection.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -291,7 +312,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/740868B5">SetRequestDelay<wbr>(NewmanSettings, <wbr>int)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the extent of delay between requests (in milliseconds).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -299,7 +322,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/89A5B20D">SetRequestTimeout<wbr>(NewmanSettings, <wbr>int)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the time to wait for request responses.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -307,7 +332,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/8B5CAB64">WithEnvironment<wbr>(NewmanSettings, <wbr>FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file path for an environmentsfiel to use for the current execution.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -315,7 +342,9 @@ class Type type-node
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/A31693C7">WithGlobals<wbr>(NewmanSettings, <wbr>FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Specify the file path for global variables for the current execution.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

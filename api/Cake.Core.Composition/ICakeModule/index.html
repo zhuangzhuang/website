@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -135,12 +135,12 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Composition">Cake<wbr>.Core<wbr>.Composition</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Cake.Core.Composition/ContainerRegistrarExtensions">Container<wbr>Registrar<wbr>Extensions</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.Composition/ICakeContainerRegistrar">I<wbr>Cake<wbr>Container<wbr>Registrar</a></li>
 				<li class="selected"><a href="/api/Cake.Core.Composition/ICakeModule">ICakeModule</a></li>
 				<li><a href="/api/Cake.Core.Composition/ICakeRegistrationBuilder">I<wbr>Cake<wbr>Registration<wbr>Builder</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Core.Composition/ContainerRegistrarExtensions">Container<wbr>Registrar<wbr>Extensions</a></li>
 
 
                     </ul>
@@ -180,9 +180,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Modules/CommonModule">CommonModule</a></li>								
-											<li><a href="/api/Cake.Core.Modules/CoreModule">CoreModule</a></li>								
 											<li><a href="/api/Cake.NuGet/NuGetModule">NuGetModule</a></li>								
+											<li><a href="/api/Cake.Core.Modules/CoreModule">CoreModule</a></li>								
+											<li><a href="/api/Cake.Common.Modules/CommonModule">CommonModule</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -192,12 +192,12 @@
 							graph TD
 	Type["ICakeModule"]
 class Type type-node
-	Type-.-&gt;Implementing0["CommonModule"]
-	click Implementing0 "/api/Cake.Common.Modules/CommonModule"
+	Type-.-&gt;Implementing0["NuGetModule"]
+	click Implementing0 "/api/Cake.NuGet/NuGetModule"
 	Type-.-&gt;Implementing1["CoreModule"]
 	click Implementing1 "/api/Cake.Core.Modules/CoreModule"
-	Type-.-&gt;Implementing2["NuGetModule"]
-	click Implementing2 "/api/Cake.NuGet/NuGetModule"
+	Type-.-&gt;Implementing2["CommonModule"]
+	click Implementing2 "/api/Cake.Common.Modules/CommonModule"
 
 						</div>
 					</div>

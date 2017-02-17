@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/override.css" rel="stylesheet">
-        <script src="/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
         <script src="/assets/js/highlight.pack.js"></script>   
@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -171,11 +169,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Uploads a file to Azure Blob Storage.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -195,18 +189,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void UploadFileToBlob(this ICakeContext context, AzureStorageSettings settings, FilePath fileToUpload)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">Task("PackageNoSettings")
- .Does(() =&gt; {
-  var settings = new AzureStorageSettings();
-  settings.AccountName = "AccountName";
-  settings.Key = "API KEY";
-  settings.ContainerName = "ContainerName";
-  settings.BlobName = "BlobName";
-  UploadFileToBlob(settings, GetFile("./path/to/file/to/upload"));
-});</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -242,17 +224,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.AzureStorage/AzureStorageSettings">AzureStorageSettings</a></td>
-						<td>Azure Storage Settings.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>fileToUpload</td>
 						<td>FilePath</td>
-						<td>File to upload to Azure storage.</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
