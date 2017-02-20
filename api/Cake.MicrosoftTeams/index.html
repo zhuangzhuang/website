@@ -833,9 +833,7 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageCard">Microsoft<wbr>Teams<wbr>Message<wbr>Card</a></td>
-									<td>
-            Message structure used by <code class="cs"><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsAliases">MicrosoftTeamsAliases</a></code>.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageFacts">Microsoft<wbr>Teams<wbr>Message<wbr>Facts</a></td>
@@ -845,7 +843,11 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessagePotentialAction">Microsoft<wbr>Teams<wbr>Message<wbr>Potential<wbr>Action</a></td>
-									<td></td>
+									<td>
+            Actions can be presented to the user by including a Schema.org JSON-LD object in the potentialAction array. 
+            We currently support schema.org/ViewAction, which creates a hyperlinked action button at the bottom of the connector card. 
+            The text shown on the action button is set by the Action's name parameter, and the destination of the hyperlink is the first link in the target array.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection">Microsoft<wbr>Teams<wbr>Message<wbr>Section</a></td>

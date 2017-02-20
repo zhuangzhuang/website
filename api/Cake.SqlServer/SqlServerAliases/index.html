@@ -257,6 +257,16 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.SqlServer/SqlServerAliases/59AB85D0">CreateBacpacFile<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Creates a bacpac file for easy database backuping. 
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/698DA7E9">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -346,6 +356,19 @@ class Type type-node
 									<div>
              Opens a new <code class="cs">System.Data.SqlClient.SqlConnection</code> with the given connection string.
              </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlServer/SqlServerAliases/7E110950">RestoreBacpac<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Restores a bacpac file into a database.
+            <p>
+            NB: there must be no database with the name you provide. Otherwise exception will be thrown.
+            </p>
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
