@@ -341,8 +341,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -705,7 +711,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Package Manager commands
+             Cake build aliases for Android ADB commands
              </td>
                 </tr>
                 <tr>
@@ -745,7 +751,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Contains functionality related to CakeMail API
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -798,19 +809,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/curl">Curl</a></td>
-                    <td>
-            <p>
-            Contains aliases related to <a href="https://curl.haxx.se">curl</a>.
-            </p>
-            <p>
-            In order to use the commands for this add-in, a version of curl will need
-            to be installed on the machine where the Cake script is being executed.
-            While curl is usually included in most Unix-based operating systems, you
-            will likely have to install it yourself on Windows.
-            The Windows version of curl is also part of <a href="https://www.cygwin.com">Cygwin</a>.
-            </p>
-            <pre><code class="cs">#addin Cake.Curl</code></pre>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/database">Database</a></td>
@@ -832,9 +831,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
-                    <td>
-            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docker">Docker</a></td>
@@ -956,7 +953,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -975,8 +972,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1022,12 +1025,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1177,7 +1175,12 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1196,17 +1199,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
-                    <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
-            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/squirrel">Squirrel</a></td>
@@ -1221,9 +1214,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/swagger">Swagger</a></td>
-                    <td>
-                Alias to access the code generation functionality from the NSwag toolchain
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
@@ -1276,7 +1267,14 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/wyam">Wyam</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains functionality related to <a href="https://github.com/Wyamio/Wyam">Wyam</a>.</p>
+            <p>
+            In order to use the commands for this alias, include the following in your build.cake file to download and install from NuGet.org, or specify the ToolPath within the WyamSettings class:
+            <pre><code class="cs">#addin "nuget:?package=Cake.Wyam"
+#tool "nuget:?package=Wyam"</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/xamarin">Xamarin</a></td>
