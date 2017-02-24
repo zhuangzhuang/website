@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SquirrelRunner.SquirrelRunner(IFileSystem, ICakeEnvironment, IGlobber, IProcessRunner) Constructor</title>
+        <title>Cake - API - GitAliases.GitIsValidRepository(ICakeContext, DirectoryPath) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,7 +79,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -133,19 +136,51 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Squirrel.dll">Cake<wbr>.Squirrel<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
+		<li><a href="/api/Cake.Git">Cake<wbr>.Git</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Squirrel/SquirrelRunner">SquirrelRunner</a></li>
+		<li><a href="/api/Cake.Git/GitAliases">GitAliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li class="selected"><a href="/api/Cake.Squirrel/SquirrelRunner/32B45D39">SquirrelRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IGlobber, <wbr>IProcessRunner)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Squirrel/SquirrelRunner/2EC58CE6">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Squirrel/SquirrelRunner/11AA4A98">GetToolName<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Squirrel/SquirrelRunner/934E611A">Run<wbr>(FilePath, <wbr>SquirrelSettings)<wbr></a></li>
-				<li><a href="/api/Cake.Squirrel/SquirrelRunner/41CED22D">Run<wbr>(FilePath, <wbr>SquirrelSettings, <wbr>ProcessSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/644F7DB5">GitAdd<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>FilePath[])<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/6FB86901">GitAddAll<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/7387DA05">GitBranchCurrent<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/AC6DA527">GitCheckout<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>FilePath[])<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/288F60A6">GitCheckout<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>FilePath[])<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/EA8909A2">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/7C88F92C">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath, <wbr>GitCloneSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/EA745DF7">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/2ACDDC0F">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>GitCloneSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/B2287677">GitCommit<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/574949E8">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/6036705B">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitDescribeStrategy)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/915EEC31">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>GitDescribeStrategy)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/D5568940">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/6D2E6120">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/CAD727C5">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/374CC460">GitFindRootFromPath<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/8F86A2DE">Git<wbr>Has<wbr>Uncommited<wbr>Changes<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/C5552E3F">GitInit<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Git/GitAliases/91F00FBE">GitIsValidRepository<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/469FCAAF">GitLog<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/9F14EF4E">GitLog<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/F7011232">GitLogLookup<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/4AE932FF">GitLogTip<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/CC1AE32F">GitPull<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/B469C7E0">GitPull<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/CB59141D">GitPush<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/EF0B0C37">GitPush<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/CDB85B38">GitPush<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/D653967D">GitPushRef<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/FB8D8875">GitPushRef<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/E1A15CFA">GitRemove<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>FilePath[])<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/3CC3F07D">GitReset<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitResetMode, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/FAD060EA">GitReset<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitResetMode)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/7C26C21C">GitTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/8E668149">GitTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -159,40 +194,69 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Squirrel/SquirrelRunner">SquirrelRunner</a>.</h3>
-	<h1>SquirrelRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IGlobber, <wbr>IProcessRunner)<wbr> <small>Constructor</small></h1>
+			<h3><a href="/api/Cake.Git/GitAliases">GitAliases</a>.</h3>
+	<h1>GitIsValidRepository<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/phillipsj/Cake.Squirrel" class="alert-link">https://github.com/phillipsj/Cake.Squirrel</a>.
+                        <a href="https://github.com/WCOMAB/Cake_Git" class="alert-link">https://github.com/WCOMAB/Cake_Git</a>.
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Checks if a specific directory is a valid Git repository.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Squirrel.dll">Cake<wbr>.Squirrel<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></dd>
+						<dd><a href="/api/Cake.Git">Cake<wbr>.Git</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Squirrel/SquirrelRunner">SquirrelRunner</a></dd>		
+						<dd><a href="/api/Cake.Git/GitAliases">GitAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public SquirrelRunner(IFileSystem fileSystem, ICakeEnvironment environment, IGlobber globber, IProcessRunner processRunner)</code></pre>
+	<pre><code>public static bool GitIsValidRepository(this ICakeContext context, DirectoryPath path)</code></pre>
+
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">var result = GitIsValidRepository("c:/temp/cake");</code></pre>
+            </div>
 
 
-
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	<h1 id="Parameters">Parameters</h1>
@@ -207,24 +271,14 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>fileSystem</td>
-						<td>IFileSystem</td>
-						<td></td>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>environment</td>
-						<td>ICakeEnvironment</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>globber</td>
-						<td>IGlobber</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>processRunner</td>
-						<td>IProcessRunner</td>
-						<td></td>
+						<td>path</td>
+						<td>DirectoryPath</td>
+						<td>Path to the repository to check.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -241,8 +295,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>bool</td>
+					<td>True if the path is part of a valid Git Repository.</td>
 				</tr>
 			</tbody></table>
 		</div>

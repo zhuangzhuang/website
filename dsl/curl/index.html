@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#General">General</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -233,7 +234,21 @@
                             </div>
 
 
-    
+            <h1 id="Summary">Summary</h1>
+        <div>
+            <p>
+            Contains aliases related to <a href="https://curl.haxx.se">curl</a>.
+            </p>
+            <p>
+            In order to use the commands for this add-in, a version of curl will need
+            to be installed on the machine where the Cake script is being executed.
+            While curl is usually included in most Unix-based operating systems, you
+            will likely have to install it yourself on Windows.
+            The Windows version of curl is also part of <a href="https://www.cygwin.com">Cygwin</a>.
+            </p>
+            <pre><code class="cs">#addin Cake.Curl</code></pre>
+            </div>
+
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -244,6 +259,8 @@
 <a href="/api/Cake.Curl/CurlAliases/CE5FF6CD">CurlDownloadFile<wbr>(ICakeContext, <wbr>Uri)<wbr></a>                            </td>
                             <td>
                                 
+            Downloads the file from the specified remote URL to the working directory.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Curl.dll">Cake<wbr>.Curl<wbr>.dll</a></i></small>
@@ -254,6 +271,8 @@
 <a href="/api/Cake.Curl/CurlAliases/E75F8401">CurlDownloadFile<wbr>(ICakeContext, <wbr>Uri, <wbr>Curl<wbr>Download<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
+            Downloads the file from the specified remote URL.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Curl.dll">Cake<wbr>.Curl<wbr>.dll</a></i></small>

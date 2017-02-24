@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Properties">Properties</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -167,11 +166,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-                Base class for Vagrant subcommands
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -194,10 +189,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></li>								
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantDockerRunner">VagrantDockerRunner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantBoxRunner">VagrantBoxRunner</a></li>								
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -209,14 +204,14 @@
 	Base0["object"]--&gt;Type
 	Type["VagrantCommandRunner"]
 class Type type-node
-	Type--&gt;Derived0["VagrantDockerRunner"]
-	click Derived0 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
-	Type--&gt;Derived1["VagrantBoxRunner"]
-	click Derived1 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
-	Type--&gt;Derived2["VagrantSnapshotRunner"]
-	click Derived2 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
-	Type--&gt;Derived3["VagrantPluginRunner"]
-	click Derived3 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
+	Type--&gt;Derived0["VagrantPluginRunner"]
+	click Derived0 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
+	Type--&gt;Derived1["VagrantSnapshotRunner"]
+	click Derived1 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
+	Type--&gt;Derived2["VagrantDockerRunner"]
+	click Derived2 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
+	Type--&gt;Derived3["VagrantBoxRunner"]
+	click Derived3 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
 
 						</div>
 					</div>
@@ -250,27 +245,21 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner/5DE9580D">Log</a></td>
 								<td>ICakeLog</td>
 								<td>
-									<div>
-                Logging output
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner/053F65FB">Runner</a></td>
 								<td>Action<wbr>&lt;<wbr>Vagrant<wbr>Settings, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
 								<td>
-									<div>
-                Action to trigger invocation of the CLI
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Commands/VagrantCommandRunner/263AFB15">Settings</a></td>
 								<td><a href="/api/Cake.Vagrant/VagrantSettings">VagrantSettings</a></td>
 								<td>
-									<div>
-                Settings for invocation of the Vagrant CLI
-            </div>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
