@@ -280,7 +280,10 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases/3164E7FB">Sonar<wbr>(ICakeContext, <wbr>Action<wbr>&lt;ICakeContext&gt;<wbr>, <wbr>SonarBeginSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run a self-contained analysis for the specified action. 
+            The action should run msbuild.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -298,7 +301,9 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases/EDFA88F6">SonarEnd<wbr>(ICakeContext)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run the actual sonar analysis (no credentials given).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -306,7 +311,10 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarCakeAliases/3294EAAF">SonarEnd<wbr>(ICakeContext, <wbr>SonarEndSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run the actual sonar analysis and push them to sonar. 
+            This call should follow after a SonarBegin and MSBuild.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
