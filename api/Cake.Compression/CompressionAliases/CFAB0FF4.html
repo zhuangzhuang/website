@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -195,11 +193,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Create a BZip2 Tar archive of the specified files.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -219,11 +213,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void BZip2Compress(this ICakeContext context, DirectoryPath rootPath, FilePath outputPath, IEnumerable&lt;FilePath&gt; filePaths, int level)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">var files = GetFiles("./**/Cake.*.dll");
-BZip2Compress("./", "cakeassemblies.tar.bz2", files, 6);</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -259,27 +248,27 @@ BZip2Compress("./", "cakeassemblies.tar.bz2", files, 6);</code></pre>
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>rootPath</td>
 						<td>DirectoryPath</td>
-						<td>The root path.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>outputPath</td>
 						<td>FilePath</td>
-						<td>The output path.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>filePaths</td>
 						<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
-						<td>The file paths.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>level</td>
 						<td>int</td>
-						<td>The compression level (1-9).</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>

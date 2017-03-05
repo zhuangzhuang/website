@@ -156,6 +156,7 @@
     <li><a href="/dsl/apppacakager">AppPacakager</a></li>        
     <li><a href="/dsl/appveyor">AppVeyor</a></li>        
     <li><a href="/dsl/autorest">AutoRest</a></li>        
+    <li><a href="/dsl/aws">AWS</a></li>        
     <li><a href="/dsl/azurestorage">AzureStorage</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
@@ -200,18 +201,22 @@
     <li><a href="/dsl/semantic-versioning">Semantic Versioning</a></li>        
     <li><a href="/dsl/semver">SemVer</a></li>        
     <li><a href="/dsl/sendgrid">SendGrid</a></li>        
+    <li><a href="/dsl/services">Services</a></li>        
     <li><a href="/dsl/sonar">Sonar</a></li>        
     <li><a href="/dsl/sqlserver">SqlServer</a></li>        
+    <li><a href="/dsl/sqltools">SqlTools</a></li>        
     <li><a href="/dsl/squirrel">Squirrel</a></li>        
     <li><a href="/dsl/strong-naming">Strong Naming</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
     <li><a href="/dsl/tfx">Tfx</a></li>        
+    <li><a href="/dsl/topshelf">Topshelf</a></li>        
     <li><a href="/dsl/twitter">Twitter</a></li>        
     <li><a href="/dsl/vagrant">Vagrant</a></li>        
     <li><a href="/dsl/version-reader">Version Reader</a></li>        
     <li><a href="/dsl/vs-.proj-file-helpers">VS .proj file helpers</a></li>        
     <li><a href="/dsl/vsce">Vsce</a></li>        
     <li><a href="/dsl/watch">Watch</a></li>        
+    <li><a href="/dsl/webdeploy">WebDeploy</a></li>        
     <li><a href="/dsl/webpack">Webpack</a></li>        
     <li><a href="/dsl/wyam">Wyam</a></li>        
     <li><a href="/dsl/xamarin">Xamarin</a></li>        
@@ -342,8 +347,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -464,7 +475,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -492,8 +503,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -706,7 +717,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -740,18 +751,19 @@
             </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/aws">AWS</a></td>
+                    <td>
+            Contains Cake aliases for configuring Amazon Cloud Front distributions
+            </td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -790,7 +802,17 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/coveralls">Coveralls</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#tool coveralls.net</code></pre>
+            <pre><code class="cs">#tool coveralls.io</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/curl">Curl</a></td>
@@ -952,7 +974,12 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            The result of SendGridProvider API post
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Email</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -971,8 +998,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1018,7 +1051,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of GitterProvider Chat API post
             </td>
                 </tr>
                 <tr>
@@ -1096,8 +1129,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/orchard">Orchard</a></td>
@@ -1174,26 +1207,36 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
+            </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/services">Services</a></td>
+                    <td>
+            Windows service aliases.
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sonar">Sonar</a></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
             <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
-            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            Contains functionality for running a Sonar analysis on a c# project using the MSBuild SonarQube Runner.
             </p>
             <p>
             In order to use the commands for this addin, include the following in your build.cake file to download and
             reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <pre><code class="cs">#addin "nuget:?package=Cake.Sonar"
+#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"</code></pre>
             </p>
             </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/sqlserver">SqlServer</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/sqltools">SqlTools</a></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/squirrel">Squirrel</a></td>
@@ -1201,7 +1244,13 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
-                    <td></td>
+                    <td>
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
+            strong name or not. If one has turned off strong name verification, you can still verify by using the
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/swagger">Swagger</a></td>
@@ -1210,6 +1259,12 @@
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/topshelf">Topshelf</a></td>
+                    <td>
+            Topshelf aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/twitter">Twitter</a></td>
@@ -1247,7 +1302,13 @@
                 <tr>
                     <td><a href="/dsl/watch">Watch</a></td>
                     <td>
-            Contains functionality for watching file changes.
+             Contains functionality for watching file changes.
+             </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/webdeploy">WebDeploy</a></td>
+                    <td>
+            Contains Cake aliases for WebDeploy
             </td>
                 </tr>
                 <tr>

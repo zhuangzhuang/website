@@ -172,8 +172,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Watch files that is specified by settings.
-            </div>
+             Watch files that is specified by settings.
+             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -196,14 +196,14 @@
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-            <pre><code class="cs">var settings = new WatchSettings { Recursive = true, Path = "src", Pattern = "*.html" };
+             <pre><code class="cs">var settings = new WatchSettings { Recursive = true, Path = "src", Pattern = "*.html" };
 Watch(settings , (changes) =&gt; {
     var list = changes.ToList();
     list.ForEach(change =&gt; {
        Console.WriteLine(change.FullName);
     });
 })</code></pre>
-            </div>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>

@@ -140,6 +140,7 @@
 		<li><a href="/api/Cake.MsDeploy.Parameters">Cake<wbr>.MsDeploy<wbr>.Parameters</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.MsDeploy.Parameters/BaseParameter">BaseParameter</a></li>
 				<li><a href="/api/Cake.MsDeploy.Parameters/DeclareParameter">DeclareParameter</a></li>
 				<li class="selected"><a href="/api/Cake.MsDeploy.Parameters/SetParameter">SetParameter</a></li>
 			<li class="header">Interface Types</li>
@@ -199,6 +200,7 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>object</li>								
+											<li><a href="/api/Cake.MsDeploy.Parameters/BaseParameter">BaseParameter</a></li>								
 									</ul>
 								</dd>				
 							
@@ -208,7 +210,9 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["BaseParameter"]--&gt;Type
+	click Base0 "/api/Cake.MsDeploy.Parameters/BaseParameter"
+	Base1["object"]--&gt;Base0
 	Interface0["IParameter"]-.-&gt;Type
 	click Interface0 "/api/Cake.MsDeploy.Parameters/IParameter"
 	Interface1["IMsDeployArgument"]-.-&gt;Type
@@ -223,7 +227,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class SetParameter : IParameter, IMsDeployArgument</code></pre>
+	<pre><code>public class SetParameter : BaseParameter, IParameter, IMsDeployArgument</code></pre>
 
 
 
@@ -339,6 +343,14 @@ class Type type-node
 									<div>
             Converts the object into its MSDeploy command line equivalent and Appends it to the stringbuilder
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.MsDeploy.Parameters/BaseParameter/6425B72A">Append<wbr>Common<wbr>Parameters<wbr>(StringBuilder, <wbr>string, <wbr>ParameterKind?, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Cake.MsDeploy.Parameters/BaseParameter">BaseParameter</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

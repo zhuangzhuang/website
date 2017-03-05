@@ -161,7 +161,16 @@
 </ul></li>			<li><a href="/api/Cake.AppVeyor">Cake<wbr>.AppVeyor</a></li>
 			<li><a href="/api/Cake.Arguments">Cake<wbr>.Arguments</a></li>
 			<li><a href="/api/Cake.AutoRest">Cake<wbr>.AutoRest</a></li>
-			<li><a href="/api/Cake.AzureStorage">Cake<wbr>.AzureStorage</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.AWS">Cake<wbr>.AWS</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.AWS.CloudFront">Cake<wbr>.AWS<wbr>.CloudFront</a></li>
+			<li><a href="/api/Cake.AWS.CodeDeploy">Cake<wbr>.AWS<wbr>.CodeDeploy</a></li>
+			<li><a href="/api/Cake.AWS.ElasticLoadBalancing">Cake<wbr>.AWS<wbr>.<wbr>Elastic<wbr>Load<wbr>Balancing</a></li>
+			<li><a href="/api/Cake.AWS.Route53">Cake<wbr>.AWS<wbr>.Route53</a></li>
+			<li><a href="/api/Cake.AWS.S3">Cake<wbr>.AWS<wbr>.S3</a></li>
+</ul></li>			<li><a href="/api/Cake.AzureStorage">Cake<wbr>.AzureStorage</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.CakeMail">Cake<wbr>.CakeMail</a> <a href="#" class="expand"></a>
@@ -546,13 +555,15 @@
 				<a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.SendGrid.Email">Cake<wbr>.SendGrid<wbr>.Email</a></li>
-</ul></li>
+</ul></li>			<li><a href="/api/Cake.Services">Cake<wbr>.Services</a></li>
+
 				<li class="treeview">
 				<a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Sonar.Attributes">Cake<wbr>.Sonar<wbr>.Attributes</a></li>
 </ul></li>			<li><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></li>
 			<li><a href="/api/Cake.SqlServerPackager">Cake<wbr>.SqlServerPackager</a></li>
+			<li><a href="/api/Cake.SqlTools">Cake<wbr>.SqlTools</a></li>
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
 			<li class=" selected"><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
 
@@ -574,7 +585,8 @@
 			<li><a href="/api/Cake.Tfx.Extension.Install">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Tfx.Extension.Publish">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Tfx.Extension.Share">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Share</a></li>
-</ul></li></ul></li>			<li><a href="/api/Cake.Twitter">Cake<wbr>.Twitter</a></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a></li>
+			<li><a href="/api/Cake.Twitter">Cake<wbr>.Twitter</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Vagrant">Cake<wbr>.Vagrant</a> <a href="#" class="expand"></a>
@@ -584,6 +596,7 @@
 </ul></li>			<li><a href="/api/Cake.VersionReader">Cake<wbr>.VersionReader</a></li>
 			<li><a href="/api/Cake.VsCode">Cake<wbr>.VsCode</a></li>
 			<li><a href="/api/Cake.Watch">Cake<wbr>.Watch</a></li>
+			<li><a href="/api/Cake.WebDeploy">Cake<wbr>.WebDeploy</a></li>
 			<li><a href="/api/Cake.Webpack">Cake<wbr>.Webpack</a></li>
 			<li><a href="/api/Cake.WinSCP">Cake<wbr>.WinSCP</a></li>
 			<li><a href="/api/Cake.Wyam">Cake<wbr>.Wyam</a></li>
@@ -848,7 +861,13 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameReSignToolAliases">Strong<wbr>Name<wbr>Re<wbr>Sign<wbr>Tool<wbr>Aliases</a></td>
-									<td></td>
+									<td>
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
+            strong name or not. If one has turned off strong name verification, you can still verify by using the
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameResolver">StrongNameResolver</a></td>
@@ -856,15 +875,22 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameToolRunner">StrongNameToolRunner</a></td>
-									<td></td>
+									<td>
+            Strong name tool runner.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameToolSettings">Strong<wbr>Name<wbr>Tool<wbr>Settings</a></td>
-									<td></td>
+									<td>
+            Contains the settings used by sn.exe
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameVerifyToolAliases">Strong<wbr>Name<wbr>Verify<wbr>Tool<wbr>Aliases</a></td>
-									<td></td>
+									<td>
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
