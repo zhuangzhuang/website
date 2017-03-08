@@ -260,7 +260,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/59AB85D0">CreateBacpacFile<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates a bacpac file for easy database backuping. 
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -331,7 +333,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/0C0D9E92">ExecuteSqlFile<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Reads SQL commands from a file and executes them.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -339,9 +343,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/362AE44A">ExecuteSqlFile<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>
-            Reads SQL commands from a file and executes them.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -349,7 +351,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/E3BF74B0">OpenSqlConnection<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
 								<td>SqlConnection</td>
 								<td>
-									<div></div>
+									<div>
+             Opens a new <code class="cs">System.Data.SqlClient.SqlConnection</code> with the given connection string.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -357,7 +361,12 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/7E110950">RestoreBacpac<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Restores a bacpac file into a database.
+            <p>
+            NB: there must be no database with the name you provide. Otherwise exception will be thrown.
+            </p>
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -365,7 +374,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/7E011849">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Restores a database from a backup file.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -373,7 +384,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/2267E853">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>Restore<wbr>Sql<wbr>Backup<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Restores a database from a backup file.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -381,7 +394,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/AE3CED99">SetSqlCommandTimeout<wbr>(ICakeContext, <wbr>int)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Sets the CommandTimeout property for all SqlCommands used internally
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
