@@ -151,6 +151,9 @@
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -162,9 +165,6 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -203,10 +203,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
+											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
 											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
-											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
+											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -216,14 +216,14 @@
 							graph TD
 	Type["IFileSystemInfo"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeDirectory"]
-	click Implementing0 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing0["FakeFile"]
+	click Implementing0 "/api/Cake.Testing/FakeFile"
 	Type-.-&gt;Implementing1["IFile"]
 	click Implementing1 "/api/Cake.Core.IO/IFile"
 	Type-.-&gt;Implementing2["IDirectory"]
 	click Implementing2 "/api/Cake.Core.IO/IDirectory"
-	Type-.-&gt;Implementing3["FakeFile"]
-	click Implementing3 "/api/Cake.Testing/FakeFile"
+	Type-.-&gt;Implementing3["FakeDirectory"]
+	click Implementing3 "/api/Cake.Testing/FakeDirectory"
 
 						</div>
 					</div>

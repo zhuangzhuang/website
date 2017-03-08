@@ -187,8 +187,8 @@
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo">BambooPlanInfo</a></li>								
 									</ul>
 								</dd>			
@@ -207,10 +207,10 @@ class Type type-node
 	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
 	Type--&gt;Derived2["BambooRepositoryInfo"]
 	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
-	Type--&gt;Derived3["BambooEnvironmentInfo"]
-	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
-	Type--&gt;Derived4["BambooCustomBuildInfo"]
-	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Type--&gt;Derived3["BambooCustomBuildInfo"]
+	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Type--&gt;Derived4["BambooEnvironmentInfo"]
+	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
 	Type--&gt;Derived5["BambooPlanInfo"]
 	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
 
