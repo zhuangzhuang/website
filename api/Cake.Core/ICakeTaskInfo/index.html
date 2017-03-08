@@ -158,10 +158,14 @@
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessRunnerExtensions">Process<wbr>Runner<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessSettingsExtensions">Process<wbr>Settings<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Core/SetupEventArgs">SetupEventArgs</a></li>
 				<li><a href="/api/Cake.Core/StringExtensions">StringExtensions</a></li>
 				<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/TaskSetupEventArgs">TaskSetupEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/TaskTeardownEventArgs">Task<wbr>Teardown<wbr>Event<wbr>Args</a></li>
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
+				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
@@ -218,8 +222,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeTask">CakeTask</a></li>								
 											<li><a href="/api/Cake.Core/ActionTask">ActionTask</a></li>								
+											<li><a href="/api/Cake.Core/CakeTask">CakeTask</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -229,10 +233,10 @@
 							graph TD
 	Type["ICakeTaskInfo"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeTask"]
-	click Implementing0 "/api/Cake.Core/CakeTask"
-	Type-.-&gt;Implementing1["ActionTask"]
-	click Implementing1 "/api/Cake.Core/ActionTask"
+	Type-.-&gt;Implementing0["ActionTask"]
+	click Implementing0 "/api/Cake.Core/ActionTask"
+	Type-.-&gt;Implementing1["CakeTask"]
+	click Implementing1 "/api/Cake.Core/CakeTask"
 
 						</div>
 					</div>

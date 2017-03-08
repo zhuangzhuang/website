@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#General">General</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -97,16 +98,15 @@
     <li><a href="/dsl/chocolatey">Chocolatey</a></li>        
     <li><a href="/dsl/compression">Compression</a></li>        
     <li><a href="/dsl/directory-operations">Directory Operations</a></li>        
-    <li><a href="/dsl/dnu">DNU</a></li>        
     <li><a href="/dsl/dotcover">DotCover</a></li>        
     <li><a href="/dsl/dotnetbuild">DotNetBuild</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
     <li><a href="/dsl/file-operations">File Operations</a></li>        
     <li><a href="/dsl/fixie">Fixie</a></li>        
+    <li><a href="/dsl/gitlink">GitLink</a></li>        
     <li><a href="/dsl/gitreleasemanager">GitReleaseManager</a></li>        
     <li><a href="/dsl/gitreleasenotes">GitReleaseNotes</a></li>        
-    <li><a href="/dsl/gittools">GitTools</a></li>        
     <li><a href="/dsl/gitversion">GitVersion</a></li>        
     <li><a href="/dsl/globbing">Globbing</a></li>        
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
@@ -239,7 +239,19 @@
                             </div>
 
 
-    
+            <h1 id="Summary">Summary</h1>
+        <div>
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
+            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
+            </div>
+
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -250,6 +262,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/59AB85D0">CreateBacpacFile<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Creates a bacpac file for easy database backuping. 
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -260,6 +274,9 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/698DA7E9">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Creates an empty database. If database with this name already exists, throws a SqlException.
+            <code class="cs">Cake.SqlServer.SqlServerAliases.CreateDatabaseIfNotExists(Cake.Core.ICakeContext,System.String,System.String)</code> if you would like to check if database already exists.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -270,6 +287,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/ECCAEFC0">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Creates an empty database if another database with the same does not already exist.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -280,6 +299,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/241A5A8D">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+             First drops, then recreates the database
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -290,6 +311,10 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/AC2ED47F">DropDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Drops database. Before dropping the DB, database is set to be offline, then online again.
+            This is to be sure that there are no live connections, otherwise the script will fail.
+            Also if the database does not exist - it will not do anything.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -300,6 +325,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/E1E3A471">ExecuteSqlCommand<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Execute any SQL command.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -310,6 +337,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/9358AEA2">ExecuteSqlCommand<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Execute any SQL command.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -320,6 +349,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/0C0D9E92">ExecuteSqlFile<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+             Reads SQL commands from a file and executes them.
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -330,6 +361,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/362AE44A">ExecuteSqlFile<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Reads SQL commands from a file and executes them.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -340,6 +373,9 @@
 <a href="/api/Cake.SqlServer/LocalDbAliases/3C3D723C">Local<wbr>Db<wbr>Create<wbr>Instance<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Creates a server instance and starts the server. 
+            The version number defaults to the version of the SqlLocalDB utility
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -350,6 +386,8 @@
 <a href="/api/Cake.SqlServer/LocalDbAliases/D6289559">Local<wbr>Db<wbr>Create<wbr>Instance<wbr>(ICakeContext, <wbr>string, <wbr>LocalDbVersion)<wbr></a>                            </td>
                             <td>
                                 
+            Creates a server instance and starts the server. 
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -360,6 +398,8 @@
 <a href="/api/Cake.SqlServer/LocalDbAliases/EF6BD6DA">Local<wbr>Db<wbr>Delete<wbr>Instance<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Deletes the LocalDB instance
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -370,6 +410,8 @@
 <a href="/api/Cake.SqlServer/LocalDbAliases/2CD426ED">LocalDbStartInstance<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Starts the LocalDB instance. Instance must exist before you can start it.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -380,6 +422,8 @@
 <a href="/api/Cake.SqlServer/LocalDbAliases/7A09F945">LocalDbStopInstance<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Stops the LocalDB instance.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -390,6 +434,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/E3BF74B0">OpenSqlConnection<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+             Opens a new <code class="cs">System.Data.SqlClient.SqlConnection</code> with the given connection string.
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -400,6 +446,11 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/7E110950">RestoreBacpac<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Restores a bacpac file into a database.
+            <p>
+            NB: there must be no database with the name you provide. Otherwise exception will be thrown.
+            </p>
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -410,6 +461,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/7E011849">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Restores a database from a backup file.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -420,6 +473,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/2267E853">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>Restore<wbr>Sql<wbr>Backup<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
+            Restores a database from a backup file.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
@@ -430,6 +485,8 @@
 <a href="/api/Cake.SqlServer/SqlServerAliases/AE3CED99">SetSqlCommandTimeout<wbr>(ICakeContext, <wbr>int)<wbr></a>                            </td>
                             <td>
                                 
+             Sets the CommandTimeout property for all SqlCommands used internally
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>

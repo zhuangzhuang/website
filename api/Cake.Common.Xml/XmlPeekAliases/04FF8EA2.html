@@ -197,6 +197,11 @@ public static string XmlPeek(this ICakeContext context, FilePath filePath, strin
     <pre><code class="cs">string version = XmlPeek("./pastery.xml", "/pastery:pastery/pastery:cake/@price",
     new XmlPeekSettings {
         Namespaces = new Dictionary&lt;string, string&gt; {{ "pastery", "http://cakebuild.net/pastery" }}
+    });
+string unknown = XmlPeek("./pastery.xml", "/pastery:pastery/pastery:cake/@recipe",
+    new XmlPeekSettings {
+        Namespaces = new Dictionary&lt;string, string&gt; {{ "pastery", "http://cakebuild.net/pastery" }},
+        SuppressWarnings = true
     });</code></pre>
     </div>
 

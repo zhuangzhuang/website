@@ -176,6 +176,7 @@
 									<ul class="list-unstyled">										
 											<li>object</li>								
 											<li><a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></li>								
 									</ul>
 								</dd>				
 							
@@ -185,9 +186,11 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["ToolSettings"]--&gt;Type
-	click Base0 "/api/Cake.Core.Tooling/ToolSettings"
-	Base1["object"]--&gt;Base0
+	Base0["ChocolateySettings"]--&gt;Type
+	click Base0 "/api/Cake.Common.Tools.Chocolatey/ChocolateySettings"
+	Base1["ToolSettings"]--&gt;Base0
+	click Base1 "/api/Cake.Core.Tooling/ToolSettings"
+	Base2["object"]--&gt;Base1
 	Type["ChocolateyInstallSettings"]
 class Type type-node
 
@@ -198,7 +201,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public sealed class ChocolateyInstallSettings : ToolSettings</code></pre>
+	<pre><code>public sealed class ChocolateyInstallSettings : ChocolateySettings</code></pre>
 
 
 
@@ -220,12 +223,13 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/32042EA8">AcceptLicense</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/ED223DCF">AcceptLicense</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to accept license for package.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -238,12 +242,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/A325B6D4">AllowUnofficial</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/9D1E1B00">AllowUnofficial</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to run in allow unofficial mode.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -259,21 +264,23 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/0D1A89D8">CacheLocation</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/D23C9ABF">CacheLocation</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the location of the download cache.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/4CEE2975">Debug</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/05E37339">Debug</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to run in debug mode.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -287,21 +294,23 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/3B113625">ExecutionTimeout</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/ABA183E4">ExecutionTimeout</a></td>
 								<td>int</td>
 								<td>
 									<div>
     Gets or sets the execution timeout value.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/C32AE48E">Force</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/8A27BEC2">Force</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to run in forced mode.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -350,48 +359,53 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/238468A9">LimitOutput</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/54809FA4">LimitOutput</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to run in limited output mode.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/F34FC9EB">Noop</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/D258D4D8">Noop</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to run in noop mode.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/FF0A0CCA">NotSilent</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/7E36F61B">NotSilent</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether or not to install silently.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/6EE914E2">OverrideArguments</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/9ACFDA12">OverrideArguments</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to override the passed arguments.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/7619D1E1">PackageParameters</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/823F1F11">PackageParameters</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the parameters to pass to the package.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -414,30 +428,33 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/E205F68B">SideBySide</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/684C9811">SideBySide</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to allow side by side installation.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/524B16C2">SkipPowerShell</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/31971DD4">SkipPowerShell</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to skip the PowerShell installation of package.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/2AC84B68">Source</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/136B0767">Source</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets a package sources to use for this command.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -470,22 +487,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/B9331130">Verbose</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/12F71B6F">Verbose</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to run in verbose mode.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings/24FB9CAD">Version</a></td>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings/8F3F96F2">Version</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the version of the package to install.
     If none specified, the latest will be used.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
