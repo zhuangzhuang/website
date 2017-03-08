@@ -137,6 +137,20 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
+				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
+				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
+				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
+				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
+				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
+				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
+				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
+				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core/ActionTask">ActionTask</a></li>
 				<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>
@@ -160,28 +174,18 @@
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessRunnerExtensions">Process<wbr>Runner<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessSettingsExtensions">Process<wbr>Settings<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Core/SetupEventArgs">SetupEventArgs</a></li>
 				<li><a href="/api/Cake.Core/StringExtensions">StringExtensions</a></li>
 				<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/TaskSetupEventArgs">TaskSetupEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/TaskTeardownEventArgs">Task<wbr>Teardown<wbr>Event<wbr>Args</a></li>
 				<li class="selected"><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
+				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
 				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
-				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
-				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
-				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
-				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
-				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
-				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
-				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
-				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
-				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
-				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 
 
                     </ul>
@@ -705,6 +709,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/CA0EDDF7">ChocolateyNew<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Generate package specification files for a new package using the default settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/9FCA6B0E">ChocolateyNew<wbr>(string, <wbr>Chocolatey<wbr>New<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Generate package specification files for a new package using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/0BBB2CFE">ChocolateyPack<wbr>(<wbr>Chocolatey<wbr>Pack<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -720,6 +744,16 @@ class Type type-node
 								<td>
 									<div>
      Creates a Chocolatey package using the specified Nuspec file.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/CD11D0BB">ChocolateyPack<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Chocolatey<wbr>Pack<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Creates Chocolatey packages using the specified Nuspec files.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
 								</td>
@@ -745,6 +779,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/4190BA6B">ChocolateyPush<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Chocolatey<wbr>Push<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Pushes Chocolatey packages to a Chocolatey server and publishes them.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/AE8CB05D">Chocolatey<wbr>Remove<wbr>Source<wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -760,6 +804,46 @@ class Type type-node
 								<td>
 									<div>
     Removes Chocolatey package source using the specified name, source &amp; settings from global user config
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/AB635CDE">ChocolateyUninstall<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls a Chocolatey package.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/5B29EEDF">ChocolateyUninstall<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>Chocolatey<wbr>Uninstall<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls Chocolatey packages using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/F0D9E777">ChocolateyUninstall<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls a Chocolatey package.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/8CC40847">ChocolateyUninstall<wbr>(string, <wbr>Chocolatey<wbr>Uninstall<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls a Chocolatey package using the specified settings.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
 								</td>
@@ -981,6 +1065,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/2AA3BE6E">Debug<wbr>(object)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes a debug message to the log using the specified value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/2C053E68">Debug<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes a debug message to the log using the specified string value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/5DCD705B">Debug<wbr>(string, <wbr>object[])<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1071,86 +1175,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/F571B64D">DNUBuild<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Build all projects.
-    </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/C5D4706C">DNUBuild<wbr>(string, <wbr>DNUBuildSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-     Build all projects.
-     </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/003038D7">DNUPack<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Pack all projects.
-    </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/21758C13">DNUPack<wbr>(string, <wbr>DNUPackSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-     Pack all projects.
-     </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/80DEF1F1">DNURestore<wbr>()<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Restore all NuGet Packages.
-    </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/732EA9D0">DNURestore<wbr>(DNURestoreSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-     Restore all NuGet Packages with the settings.
-     </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/3DCA644B">DNURestore<wbr>(FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Restore all NuGet Packages in the specified path.
-    </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DNU/DNUAliases/20EE4333">DNURestore<wbr>(FilePath, <wbr>DNURestoreSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-     Restore all NuGet Packages in the specified path with settings.
-     </div>
-										<div><small><em>From <a href="/api/Cake.Common.Tools.DNU/DNUAliases">DNUAliases</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotCover/DotCoverAliases/A2379085">DotCoverAnalyse<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>, <wbr>FilePath, <wbr>Dot<wbr>Cover<wbr>Analyse<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1167,6 +1191,28 @@ class Type type-node
 								<td>
 									<div>
     Runs <a href="https://www.jetbrains.com/dotcover/help/dotCover__Console_Runner_Commands.html#cover">DotCover Cover</a>
+    for the specified action and settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotCover/DotCoverAliases">DotCoverAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotCover/DotCoverAliases/7C13F4F8">DotCoverMerge<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>FilePath)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs <a href="https://www.jetbrains.com/dotcover/help/dotCover__Console_Runner_Commands.html#merge">DotCover Merge</a>
+    for the specified action and settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotCover/DotCoverAliases">DotCoverAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotCover/DotCoverAliases/55689EFE">DotCoverMerge<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>FilePath, <wbr>Dot<wbr>Cover<wbr>Merge<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs <a href="https://www.jetbrains.com/dotcover/help/dotCover__Console_Runner_Commands.html#merge">DotCover Merge</a>
     for the specified action and settings.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.DotCover/DotCoverAliases">DotCoverAliases</a></em></small></div>
@@ -1590,6 +1636,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/3BBA2226">Error<wbr>(object)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes an error message to the log using the specified value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/3D1CA220">Error<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes an error message to the log using the specified string value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/17EA9509">Error<wbr>(string, <wbr>object[])<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1880,7 +1946,7 @@ class Type type-node
 								<td><a href="/api/Cake.Common.Tools.GitVersion/GitVersion">GitVersion</a></td>
 								<td>
 									<div>
-    Retrives the GitVersion output.
+    Retrieves the GitVersion output.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.GitVersion/GitVersionAliases">GitVersionAliases</a></em></small></div>
 								</td>
@@ -1890,7 +1956,7 @@ class Type type-node
 								<td><a href="/api/Cake.Common.Tools.GitVersion/GitVersion">GitVersion</a></td>
 								<td>
 									<div>
-    Retrives the GitVersion output.
+    Retrieves the GitVersion output.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.GitVersion/GitVersionAliases">GitVersionAliases</a></em></small></div>
 								</td>
@@ -1973,6 +2039,26 @@ class Type type-node
 									<div>
     Writes an informational message to the log using the specified log message action.
     Evaluation message only if verbosity same or more verbose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/C43E77EE">Information<wbr>(object)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes an informational message to the log using the specified value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/C298F7E8">Information<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes an informational message to the log using the specified string value.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
 								</td>
@@ -2241,6 +2327,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/278882B5">NuGetAdd<wbr>(string, <wbr>NuGetAddSettings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds a NuGet package using package id and source.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/22664610">NuGetAdd<wbr>(string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds a NuGet package using package id and source.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/45A5D0C0">NuGetAddSource<wbr>(string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2276,6 +2382,26 @@ class Type type-node
 								<td>
 									<div>
     Checks whether or not a NuGet package source exists in the global user configuration, using the specified source and settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/44FD4AFB">NuGetInit<wbr>(string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds all packages from source to destination.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/11FD6BD2">NuGetInit<wbr>(string, <wbr>string, <wbr>NuGetInitSettings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds all packages from source to destination using specified settings.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
 								</td>
@@ -3251,6 +3377,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/DE6A4FD8">Verbose<wbr>(object)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes a verbose message to the log using the specified value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/D8CCCFDE">Verbose<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes a verbose message to the log using the specified string value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/AAE9310D">Verbose<wbr>(string, <wbr>object[])<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -3312,6 +3458,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/18A33642">Warning<wbr>(object)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes an warning message to the log using the specified value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/1E05B644">Warning<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Writes an warning message to the log using the specified string value.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/07AE26B4">Warning<wbr>(string, <wbr>object[])<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -3362,7 +3528,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.WiX/WiXAliases/A851127B">WiXHeat<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>FilePath, <wbr>WiXHarvestType)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.WiX/WiXAliases/AF4E4C0F">WiXHeat<wbr>(FilePath, <wbr>FilePath, <wbr>WiXHarvestType)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -3372,7 +3538,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.WiX/WiXAliases/B7A5C1B0">WiXHeat<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>FilePath, <wbr>WiXHarvestType, <wbr>HeatSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.WiX/WiXAliases/EC9393EB">WiXHeat<wbr>(FilePath, <wbr>FilePath, <wbr>WiXHarvestType, <wbr>HeatSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>

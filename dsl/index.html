@@ -105,16 +105,15 @@
     <li><a href="/dsl/chocolatey">Chocolatey</a></li>        
     <li><a href="/dsl/compression">Compression</a></li>        
     <li><a href="/dsl/directory-operations">Directory Operations</a></li>        
-    <li><a href="/dsl/dnu">DNU</a></li>        
     <li><a href="/dsl/dotcover">DotCover</a></li>        
     <li><a href="/dsl/dotnetbuild">DotNetBuild</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
     <li><a href="/dsl/file-operations">File Operations</a></li>        
     <li><a href="/dsl/fixie">Fixie</a></li>        
+    <li><a href="/dsl/gitlink">GitLink</a></li>        
     <li><a href="/dsl/gitreleasemanager">GitReleaseManager</a></li>        
     <li><a href="/dsl/gitreleasenotes">GitReleaseNotes</a></li>        
-    <li><a href="/dsl/gittools">GitTools</a></li>        
     <li><a href="/dsl/gitversion">GitVersion</a></li>        
     <li><a href="/dsl/globbing">Globbing</a></li>        
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
@@ -294,20 +293,13 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
     Contains extension methods for working with directories.
-    </td>
-                </tr>
-                <tr>
-                    <td><a href="/dsl/dnu">DNU</a></td>
-                    <td>
-    Contains functionality for working with the DNU Utility.
-    <p>These aliases have been marked as Obsolete.  Use the <code class="cs"><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></code> instead.</p>
     </td>
                 </tr>
                 <tr>
@@ -362,6 +354,17 @@
     </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/gitlink">GitLink</a></td>
+                    <td>
+    <p>Contains functionality related to <a href="https://github.com/gittools/gitlink">GitLink</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.GitLink/GitLinkSettings">GitLinkSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=gitlink"</code></pre>
+    </p>
+    </td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/gitreleasemanager">GitReleaseManager</a></td>
                     <td>
     <p>Contains functionality related to <a href="https://github.com/gittools/gitreleasemanager">GitReleaseManager</a>.</p>
@@ -380,17 +383,6 @@
     In order to use the commands for this alias, include the following in your build.cake file to download and
     install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesSettings">GitReleaseNotesSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=GitReleaseNotes"</code></pre>
-    </p>
-    </td>
-                </tr>
-                <tr>
-                    <td><a href="/dsl/gittools">GitTools</a></td>
-                    <td>
-    <p>Contains functionality related to <a href="https://github.com/gittools/gitlink">GitLink</a>.</p>
-    <p>
-    In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.GitLink/GitLinkSettings">GitLinkSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=gitlink"</code></pre>
     </p>
     </td>
                 </tr>
@@ -669,7 +661,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -711,7 +703,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -747,19 +739,17 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-             Contains Cake aliases for configuring Amazon Simple Storage Service
+            Contains Cake aliases for configuring Amazon Elastic Load Balancers
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
-                    <td>
-            Contains functionality for workign with Azure Storage
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            The result of CakeMailProvider API post
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -789,8 +779,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -846,9 +836,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
-                    <td>
-            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docker">Docker</a></td>
@@ -961,7 +949,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1027,7 +1015,12 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Gitter</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1183,7 +1176,12 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1237,13 +1235,18 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/swagger">Swagger</a></td>
-                    <td>
-                Alias to access the code generation functionality from the NSwag toolchain
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/tfx">Tfx</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
+            <p>
+            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            <pre><code class="cs">#addin Cake.Tfx</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/topshelf">Topshelf</a></td>

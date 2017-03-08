@@ -80,9 +80,9 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#InterfaceTypes">Interface Types</a></p>
 <p><a href="#ClassTypes">Class Types</a></p>
 <p><a href="#EnumTypes">Enum Types</a></p>
-<p><a href="#InterfaceTypes">Interface Types</a></p>
 <p><a href="#Namespaces">Namespaces</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -231,8 +231,12 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Common.Build.Jenkins.Data">Cake<wbr>.Common<wbr>.Build<wbr>.Jenkins<wbr>.Data</a></li>
 </ul></li>			<li><a href="/api/Cake.Common.Build.MyGet">Cake<wbr>.Common<wbr>.Build<wbr>.MyGet</a></li>
-			<li><a href="/api/Cake.Common.Build.TeamCity">Cake<wbr>.Common<wbr>.Build<wbr>.TeamCity</a></li>
 
+				<li class="treeview">
+				<a href="/api/Cake.Common.Build.TeamCity">Cake<wbr>.Common<wbr>.Build<wbr>.TeamCity</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Common.Build.TeamCity.Data">Cake<wbr>.Common<wbr>.Build<wbr>.TeamCity<wbr>.Data</a></li>
+</ul></li>
 				<li class="treeview">
 				<a href="/api/Cake.Common.Build.TFBuild">Cake<wbr>.Common<wbr>.Build<wbr>.TFBuild</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -277,24 +281,20 @@
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Config">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Config</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Features">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Features</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Install">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Install</a></li>
+			<li><a href="/api/Cake.Common.Tools.Chocolatey.New">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.New</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Pack">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Pack</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Pin">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Pin</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Push">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Push</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Sources">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Sources</a></li>
+			<li><a href="/api/Cake.Common.Tools.Chocolatey.Uninstall">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Uninstall</a></li>
 			<li><a href="/api/Cake.Common.Tools.Chocolatey.Upgrade">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey<wbr>.Upgrade</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.Common.Tools.DNU">Cake<wbr>.Common<wbr>.Tools<wbr>.DNU</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Common.Tools.DNU.Build">Cake<wbr>.Common<wbr>.Tools<wbr>.DNU<wbr>.Build</a></li>
-			<li><a href="/api/Cake.Common.Tools.DNU.Pack">Cake<wbr>.Common<wbr>.Tools<wbr>.DNU<wbr>.Pack</a></li>
-			<li><a href="/api/Cake.Common.Tools.DNU.Restore">Cake<wbr>.Common<wbr>.Tools<wbr>.DNU<wbr>.Restore</a></li>
 </ul></li>
 				<li class="treeview">
 				<a href="/api/Cake.Common.Tools.DotCover">Cake<wbr>.Common<wbr>.Tools<wbr>.DotCover</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Common.Tools.DotCover.Analyse">Cake<wbr>.Common<wbr>.Tools<wbr>.DotCover<wbr>.Analyse</a></li>
 			<li><a href="/api/Cake.Common.Tools.DotCover.Cover">Cake<wbr>.Common<wbr>.Tools<wbr>.DotCover<wbr>.Cover</a></li>
+			<li><a href="/api/Cake.Common.Tools.DotCover.Merge">Cake<wbr>.Common<wbr>.Tools<wbr>.DotCover<wbr>.Merge</a></li>
 			<li><a href="/api/Cake.Common.Tools.DotCover.Report">Cake<wbr>.Common<wbr>.Tools<wbr>.DotCover<wbr>.Report</a></li>
 </ul></li>
 				<li class="treeview">
@@ -332,7 +332,9 @@
 				<li class="treeview">
 				<a href="/api/Cake.Common.Tools.NuGet">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Common.Tools.NuGet.Install">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Install</a></li>
+						<li><a href="/api/Cake.Common.Tools.NuGet.Add">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Add</a></li>
+			<li><a href="/api/Cake.Common.Tools.NuGet.Init">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Init</a></li>
+			<li><a href="/api/Cake.Common.Tools.NuGet.Install">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Common.Tools.NuGet.Pack">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Pack</a></li>
 			<li><a href="/api/Cake.Common.Tools.NuGet.Push">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Push</a></li>
 			<li><a href="/api/Cake.Common.Tools.NuGet.Restore">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet<wbr>.Restore</a></li>
@@ -404,8 +406,12 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Core.Scripting.Analysis">Cake<wbr>.Core<wbr>.Scripting<wbr>.Analysis</a></li>
 			<li><a href="/api/Cake.Core.Scripting.CodeGen">Cake<wbr>.Core<wbr>.Scripting<wbr>.CodeGen</a></li>
-			<li><a href="/api/Cake.Core.Scripting.Processors">Cake<wbr>.Core<wbr>.Scripting<wbr>.Processors</a></li>
-</ul></li>			<li><a href="/api/Cake.Core.Text">Cake<wbr>.Core<wbr>.Text</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.Core.Scripting.Processors">Cake<wbr>.Core<wbr>.Scripting<wbr>.Processors</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Core.Scripting.Processors.Loading">Cake<wbr>.Core<wbr>.Scripting<wbr>.Processors<wbr>.Loading</a></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.Core.Text">Cake<wbr>.Core<wbr>.Text</a></li>
 			<li><a href="/api/Cake.Core.Tooling">Cake<wbr>.Core<wbr>.Tooling</a></li>
 			<li><a href="/api/Cake.Core.Utilities">Cake<wbr>.Core<wbr>.Utilities</a></li>
 </ul></li>			<li><a href="/api/Cake.Coveralls">Cake<wbr>.Coveralls</a></li>
@@ -837,6 +843,98 @@
     </div>
 
 
+			<h1 id="InterfaceTypes">Interface Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Interface</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></td>
+									<td>
+    Represents arguments passed to script.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></td>
+									<td>
+    Represents a context for scripts and script aliases.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></td>
+									<td>
+    Represents the Cake engine.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></td>
+									<td>
+    Represents the environment Cake operates in.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></td>
+									<td>
+    Represents the platform that Cake is running on.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></td>
+									<td>
+    Represents a report printer.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></td>
+									<td>
+    Represents the runtime that Cake is running in.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></td>
+									<td>
+    Provides descriptive properties about a cake task
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/IConsole">IConsole</a></td>
+									<td>
+    Represents console output.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></td>
+									<td>
+    Represents a task execution strategy.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></td>
+									<td>
+    Acts as a context providing info about a <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code> before its invocation.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></td>
+									<td>
+    Acts as a context providing info about a <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code> following its invocation.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></td>
+									<td>
+    Acts as a context providing info about the overall build following its completion
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -980,6 +1078,12 @@
     </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/SetupEventArgs">SetupEventArgs</a></td>
+									<td>
+    Event data for the <code class="cs"><a href="/api/Cake.Core/ICakeEngine/E39228A8">Setup</a></code> event.
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/StringExtensions">StringExtensions</a></td>
 									<td>
     Contains extension methods for <code class="cs"><a href="/">string</a></code>.
@@ -992,15 +1096,33 @@
     </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/TaskSetupEventArgs">TaskSetupEventArgs</a></td>
+									<td>
+    Event data for the <code class="cs"><a href="/api/Cake.Core/ICakeEngine/94883559">TaskSetup</a></code> event.
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></td>
 									<td>
     Acts as a context providing info about a <code class="cs"><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></code> following its invocation.
     </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/TaskTeardownEventArgs">Task<wbr>Teardown<wbr>Event<wbr>Args</a></td>
+									<td>
+    Event data for the <code class="cs"><a href="/api/Cake.Core/ICakeEngine/9DB6C81D">TaskTeardown</a></code> event.
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></td>
 									<td>
     Acts as a context providing info about the overall build following its completion
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></td>
+									<td>
+    Event data for the <code class="cs"><a href="/api/Cake.Core/ICakeEngine/BB5E5D9F">Teardown</a></code> event.
     </td>
 							</tr>
 							<tr>
@@ -1033,98 +1155,6 @@
 								<td><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></td>
 									<td>
     Represents a platform family.
-    </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-			<h1 id="InterfaceTypes">Interface Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Interface</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></td>
-									<td>
-    Represents arguments passed to script.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></td>
-									<td>
-    Represents a context for scripts and script aliases.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></td>
-									<td>
-    Represents the Cake engine.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></td>
-									<td>
-    Represents the environment Cake operates in.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></td>
-									<td>
-    Represents the platform that Cake is running on.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></td>
-									<td>
-    Represents a report printer.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></td>
-									<td>
-    Represents the runtime that Cake is running in.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></td>
-									<td>
-    Provides descriptive properties about a cake task
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/IConsole">IConsole</a></td>
-									<td>
-    Represents console output.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></td>
-									<td>
-    Represents a task execution strategy.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></td>
-									<td>
-    Acts as a context providing info about a <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code> before its invocation.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></td>
-									<td>
-    Acts as a context providing info about a <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code> following its invocation.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></td>
-									<td>
-    Acts as a context providing info about the overall build following its completion
     </td>
 							</tr>
 					</tbody></table>

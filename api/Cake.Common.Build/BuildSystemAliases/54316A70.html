@@ -195,11 +195,13 @@
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakePropertyAlias(Cache = true)]
+[CakeNamespaceImport("Cake.Common.Build.Bamboo")]
+[CakeNamespaceImport("Cake.Common.Build.Bamboo.Data")]
 public static IBambooProvider Bamboo(this ICakeContext context)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-    <pre><code class="cs">var isBambooBuild = Bamboo.IsRunningBamboo;</code></pre>
+    <pre><code class="cs">var isBambooBuild = Bamboo.IsRunningOnBamboo;</code></pre>
     </div>
 
 
@@ -217,6 +219,22 @@ public static IBambooProvider Bamboo(this ICakeContext context)</code></pre>
 						<td><a href="/api/Cake.Core.Annotations/CakePropertyAliasAttribute">Cake<wbr>Property<wbr>Alias<wbr>Attribute</a></td>
 						<td>
     An attribute used to mark script property aliases.
+    </td>
+					</tr>
+					<tr>
+						<td><a href="/api/Cake.Core.Annotations/CakeNamespaceImportAttribute">Cake<wbr>Namespace<wbr>Import<wbr>Attribute</a></td>
+						<td>
+    An attribute used to hint Cake about additional namespaces that need
+    to be imported for an alias to work. This attribute can mark an
+    extension method, the extension method class, or the assembly to provide a global set of imports
+    </td>
+					</tr>
+					<tr>
+						<td><a href="/api/Cake.Core.Annotations/CakeNamespaceImportAttribute">Cake<wbr>Namespace<wbr>Import<wbr>Attribute</a></td>
+						<td>
+    An attribute used to hint Cake about additional namespaces that need
+    to be imported for an alias to work. This attribute can mark an
+    extension method, the extension method class, or the assembly to provide a global set of imports
     </td>
 					</tr>
 			</tbody></table>

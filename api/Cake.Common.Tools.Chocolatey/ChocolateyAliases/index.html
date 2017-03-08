@@ -136,12 +136,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.Chocolatey">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li class="selected"><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></li>
-				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1">ChocolateyTool<wbr>&lt;TSettings&gt;<wbr></a></li>
-				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyToolResolver">Chocolatey<wbr>Tool<wbr>Resolver</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Common.Tools.Chocolatey/IChocolateyToolResolver">I<wbr>Chocolatey<wbr>Tool<wbr>Resolver</a></li>
+			<li class="header">Class Types</li>
+				<li class="selected"><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></li>
+				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></li>
+				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1">ChocolateyTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyToolResolver">Chocolatey<wbr>Tool<wbr>Resolver</a></li>
 
 
                     </ul>
@@ -407,6 +408,26 @@ public static class ChocolateyAliases</code></pre>
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/CA0EDDF7">ChocolateyNew<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Generate package specification files for a new package using the default settings.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/9FCA6B0E">ChocolateyNew<wbr>(ICakeContext, <wbr>string, <wbr>Chocolatey<wbr>New<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Generate package specification files for a new package using the specified settings.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/0BBB2CFE">ChocolateyPack<wbr>(ICakeContext, <wbr>Chocolatey<wbr>Pack<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -422,6 +443,16 @@ public static class ChocolateyAliases</code></pre>
 								<td>
 									<div>
      Creates a Chocolatey package using the specified Nuspec file.
+     </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/CD11D0BB">ChocolateyPack<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Chocolatey<wbr>Pack<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Creates Chocolatey packages using the specified Nuspec files.
      </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -447,6 +478,16 @@ public static class ChocolateyAliases</code></pre>
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/4190BA6B">ChocolateyPush<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Chocolatey<wbr>Push<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Pushes Chocolatey packages to a Chocolatey server and publishes them.
+     </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/AE8CB05D">Chocolatey<wbr>Remove<wbr>Source<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -462,6 +503,46 @@ public static class ChocolateyAliases</code></pre>
 								<td>
 									<div>
     Removes Chocolatey package source using the specified name, source &amp; settings from global user config
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/AB635CDE">ChocolateyUninstall<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls a Chocolatey package.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/5B29EEDF">ChocolateyUninstall<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>Chocolatey<wbr>Uninstall<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls Chocolatey packages using the specified settings.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/F0D9E777">ChocolateyUninstall<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls a Chocolatey package.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/8CC40847">ChocolateyUninstall<wbr>(ICakeContext, <wbr>string, <wbr>Chocolatey<wbr>Uninstall<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Uninstalls a Chocolatey package using the specified settings.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>

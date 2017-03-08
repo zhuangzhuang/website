@@ -196,7 +196,7 @@ public static void Sign(this ICakeContext context, FilePath assembly, SignToolSi
     .Does(() =&gt;
 {
     var file = new FilePath("Core.dll");
-    Sign(files, new SignToolSignSettings {
+    Sign(file, new SignToolSignSettings {
             TimeStampUri = new Uri("http://timestamp.digicert.com"),
             CertPath = "digitalcertificate.pfx",
             Password = "TopSecret"

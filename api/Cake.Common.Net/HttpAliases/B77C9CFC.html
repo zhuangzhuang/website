@@ -198,7 +198,8 @@ public static void DownloadFile(this ICakeContext context, Uri address, FilePath
 	<h1 id="Examples">Examples</h1>
 	<div>
     <pre><code class="cs">var address = new Uri("http://www.example.org/index.html");
-DownloadFile(address, "./outputdir", new DownloadFileSettings()
+var outputPath = File("./index.html");
+DownloadFile(address, outputPath, new DownloadFileSettings()
 {
     Username = "bob",
     Password = "builder"

@@ -4,7 +4,31 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-03-07T08:48:23Z</updated>
+	<updated>2017-03-08T05:16:39Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/03/cake-v0.18.0-released" />
+		<id>http://cakebuild.net/blog/2017/03/cake-v0.18.0-released</id>
+		<title>Cake v0.18.0 released</title>
+		<updated>2017-03-07T00:00:00Z</updated>
+		<summary>&lt;p&gt;Version 0.18.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there's a couple of breaking changes.&lt;/p&gt;
+&lt;p&gt;The minor breaking changes involve the old obsoleted DNU alias have been removed and WiXHeat had an incorrect signature which have been corrected.&lt;/p&gt;
+&lt;p&gt;The bigger breaking change is that with this release addins must target at least Cake.Core version 0.16.2 or later, addins targeting older versions will abort script execution.
+Many addins have already been updated and the many of those who have not yet upgraded, have pull requests ready for them. If any of the addins you use should be affected by this, please raise an issue in that addins repository. We've tried to reach out to all authors, but with hundreds of addins we've surely missed one or two.
+We do recommend you pin your builds to the version of Cake you using, that way you reduce the risk of builds failing because breaking changes. Instead you can do a controlled upgrade and take your time to sort any issues.&lt;/p&gt;
+&lt;p&gt;Amongst the more notable new features is MSBuild / Visual Studio 2017 support and support for loading scripts from NuGet.&lt;/p&gt;
+&lt;p&gt;We're also pleased to announce that from this release and forward all official Cake binaries will be signed with a .NET Foundation certificate, this isn't strong naming, so it won't affect addins in any way, just ensure the authenticity of the binaries.
+&lt;img src="https://cloud.githubusercontent.com/assets/1647294/23683657/8172ad14-039a-11e7-9d95-a4701bfd7f61.png" class="img-fluid" alt="image"&gt;&lt;/p&gt;
+&lt;p&gt;Worth noting in a near future release we will update to and unify around latest stable version Roslyn scripting - this means Mono scripting engine will be removed, we will still run on Mono, but we will require a newer version of Mono than we do today. This will bring a lot of benefit for Cake as we will be able to support the latest C# features and reduce the maintenance burden and error process of maintaining multiple scripting engines.&lt;/p&gt;
+&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
+&lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>Larz White</name>
@@ -249,20 +273,5 @@ will be published soon.&lt;/p&gt;
 &lt;p&gt;Today we’re really excited and happy to share that Cake is joining the .NET foundation!&lt;/p&gt;
 &lt;p&gt;So what does this mean for Cake? It’ll still be maintained and governed by the same team as now, but with the support and guidance of the .NET foundation, ensuring the longevity of the project.&lt;/p&gt;
 &lt;p&gt;Read more about Cake joining on the .NET foundation &lt;a href="http://www.dotnetfoundation.org/blog/cake-welcome"&gt;blog&lt;/a&gt;.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/06/cake-v0.13.0-released" />
-		<id>http://cakebuild.net/blog/2016/06/cake-v0.13.0-released</id>
-		<title>Cake v0.13.0 released</title>
-		<updated>2016-06-07T00:00:00Z</updated>
-		<summary>&lt;p&gt;Version 0.13.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;In addition to squashing a number of bugs within this release, we are happy to announce a few new features including supporting the uploading of Test Results to AppVeyor in bulk, and also a set of aliases to support VSTest.&lt;/p&gt;
-&lt;p&gt;Once again, we have been very lucky to accept a number of contributions for our amazing community members in order to help Cake moving forward.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
 	</entry>
 </feed>
