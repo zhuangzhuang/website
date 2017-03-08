@@ -184,11 +184,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -200,16 +200,16 @@
 	Base0["object"]--&gt;Type
 	Type["JenkinsInfo"]
 class Type type-node
-	Type--&gt;Derived0["JenkinsEnvironmentInfo"]
-	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
-	Type--&gt;Derived1["JenkinsJobInfo"]
-	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
-	Type--&gt;Derived2["JenkinsNodeInfo"]
-	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived0["JenkinsNodeInfo"]
+	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived1["JenkinsRepositoryInfo"]
+	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
+	Type--&gt;Derived2["JenkinsEnvironmentInfo"]
+	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
 	Type--&gt;Derived3["JenkinsBuildInfo"]
 	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
-	Type--&gt;Derived4["JenkinsRepositoryInfo"]
-	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
+	Type--&gt;Derived4["JenkinsJobInfo"]
+	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
 
 						</div>
 					</div>

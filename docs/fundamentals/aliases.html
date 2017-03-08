@@ -81,7 +81,6 @@
                     	
         <div><p><a href="https://github.com/cake-build/website/blob/develop/input/docs/fundamentals/aliases.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"><h6>On This Page</h6><p><a href="#creating-an-alias">Creating an alias</a></p>
-<p><a href="#using-the-alias">Using the alias</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -238,7 +237,24 @@ public static class MyCakeExtension
     }
 }
 </int></code></pre>
-<h1 id="using-the-alias">Using the alias</h1>
+<p>=======</p>
+<h4 id="importing-namespaces">Importing Namespaces</h4>
+<p>Your script alias may need to import one or more namespaces into your Cake script.  Cake supports the automatic import of namespaces with attributes.</p>
+<p>The <a href="/api/Cake.Core.Annotations/CakeNamespaceImportAttribute">CakeNamespaceImportAttribute</a> can be applied at the method, class, or assembly level, or any combination thereof.</p>
+<pre><code class="language-csharp">// Imports the Cake.Common.IO.Paths namespace into the Cake script for this method only
+[CakeNamespaceImport("Cake.Common.IO.Paths")]
+public static <a href="/api/Cake.Common.IO.Paths/ConvertableDirectoryPath">ConvertableDirectoryPath</a> Directory(this <a href="/api/Cake.Core/ICakeContext">ICakeContext</a> context, string path)
+{...}
+</code></pre>
+<pre><code class="language-csharp">// Imports the Cake.Common.IO.Paths namespace into the Cake script for any alias method used in the class.
+[CakeNamespaceImport("Cake.Common.IO.Paths")]
+public static class <a href="/api/Cake.Common.IO/DirectoryAliases">DirectoryAliases</a>
+{...}
+</code></pre>
+<pre><code class="language-csharp">// Imports the Cake.Common.IO.Paths namespace into the Cake script for any alias method used in the assembly.
+[assembly: CakeNamespaceImport("Cake.Common.IO.Paths")]
+</code></pre>
+<h3 id="using-the-alias">Using the alias</h3>
 <p>Compile the assembly and add a reference to it in the build script via the <code>#r</code> directive.</p>
 <pre><code class="language-csharp">#r "tools/MyCakeExtension.dll"
 </code></pre>

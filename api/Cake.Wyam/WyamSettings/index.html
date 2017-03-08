@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <hr class="infobar-hidden">
@@ -166,7 +167,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by <code class="cs"><a href="/api/Cake.Wyam/WyamRunner">WyamRunner</a></code>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -246,203 +251,261 @@ class Type type-node
 								<td><a href="/api/Cake.Wyam/WyamSettings/6D5473EC">Assemblies</a></td>
 								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Adds references to multiple assemblies by name, file name, or globbing patterns.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/9405BA84">Attach</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Pauses execution while waiting for a debugger to attach.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/49975C5A">ConfigurationFile</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating the configuration file that should be used while running Wyam.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/6C75101B">GlobalMetadata</a></td>
 								<td>IDictionary<wbr>&lt;string, <wbr>object&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the global metadata.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/35B18553">InitialMetadata</a></td>
 								<td>IDictionary<wbr>&lt;string, <wbr>object&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the initial document metadata.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/940478E7">InputPaths</a></td>
 								<td>IEnumerable<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating the input paths that should be used while running Wyam.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/DD9C69D4">LogFilePath</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the path to the Wyam log file.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/25716494">NoCache</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to turn off the caching mechanism on all modules if <code class="cs">true</code>.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/8BB79324">NoClean</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to prevent cleaning of the output path on each execution if <code class="cs">true</code>.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/28D09226">NuGetPackages</a></td>
 								<td>IEnumerable<wbr>&lt;<wbr>Nu<wbr>Get<wbr>Settings&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Adds NuGet packages (downloading and installing them if needed).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/02F6BF48">NuGetSources</a></td>
 								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Specifies additional package sources to use.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/ADB9F4D3">OutputPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating the output path that should be used while running Wyam.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/71D06748">OutputScript</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to output the script at end of execution.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/7E3662AB">PackagesPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the packages path to use.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/A2B802D4">Preview</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to enable previewing of the generated content in built in web server.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/F95C8572">Preview<wbr>Force<wbr>Extensions</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to enable forcing of using file extensions.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/9BF8047C">PreviewPort</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating the port number to use for previewing.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/0C5C6129">PreviewRoot</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            The path to the root of the preview server, if not the output folder.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/CCC267FF">Preview<wbr>Virtual<wbr>Directory</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating the virtual directory to use for the preview server.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/22C8FB80">Recipe</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the recipe.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/DA001797">RootPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the The folder (or config file) to use as the root.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/3AD529FB">Settings</a></td>
 								<td>IDictionary<wbr>&lt;string, <wbr>object&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets metadata settings.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/F6E9D3E1">Theme</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the theme.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/C75884E3">UpdatePackages</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to enable updating of packages.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/A9C86ED9">UseGlobalSources</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Toggles the use of the global NuGet sources.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/15207259">UseLocalPackages</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to use a local NuGet packages folder.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/CC8C164F">Verbose</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to run in verbose mode.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/F4B8B521">VerifyConfig</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Compile the configuration but do not execute.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/D844AD26">Watch</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to enable watching of input folder for changes to files.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
