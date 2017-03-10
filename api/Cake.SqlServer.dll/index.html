@@ -138,6 +138,7 @@
         <li><a href="/api/Cake.AppleSimulator.dll">Cake<wbr>.AppleSimulator<wbr>.dll</a></li>
         <li><a href="/api/Cake.AppPackager.dll">Cake<wbr>.AppPackager<wbr>.dll</a></li>
         <li><a href="/api/Cake.AppVeyor.dll">Cake<wbr>.AppVeyor<wbr>.dll</a></li>
+        <li><a href="/api/Cake.AssemblyInfoReflector.dll">Cake<wbr>.<wbr>Assembly<wbr>Info<wbr>Reflector<wbr>.dll</a></li>
         <li><a href="/api/Cake.AutoRest.dll">Cake<wbr>.AutoRest<wbr>.dll</a></li>
         <li><a href="/api/Cake.AWS.CloudFront.dll">Cake<wbr>.AWS<wbr>.CloudFront<wbr>.dll</a></li>
         <li><a href="/api/Cake.AWS.CodeDeploy.dll">Cake<wbr>.AWS<wbr>.CodeDeploy<wbr>.dll</a></li>
@@ -252,7 +253,17 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></td>
-									<td></td>
+									<td>
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
+            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -270,7 +281,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlServer/LocalDbVersion">LocalDbVersion</a></td>
-									<td></td>
+									<td>
+            Version of LocalDB
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

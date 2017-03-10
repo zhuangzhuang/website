@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -171,11 +169,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Send an email through CakeMail
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -195,41 +189,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public CakeMailResult SendEmail(string senderName, string senderAddress, string recipientAddress, string subject, string htmlContent, string textContent, CakeMailSettings settings)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">var apiKey = "... your api key ...";
-var userName = "... your username ...";
-var password = "... your password ...";
-try
-{
-    var result = CakeMail.SendEmail(
-        senderName: "Bob Smith",
-        senderAddress: "bob@example.com",
-        recipientAddress: "jane@example.com",
-        subject: "This is a test",
-        htmlContent: "This is a test",
-        textContent: "This is a test",
-        settings: new CakeMailEmailSettings
-        {
-        ApiKey = apiKey,
-        UserName = userName,
-        Password = password
-        }
-    );
-    if (result.Ok)
-    {
-        Information("Email succcessfully sent");
-    }
-    else
-    {
-        Error("Failed to send email: {0}", result.Error);
-    }
-}
-catch(Exception ex)
-{
-    Error("{0}", ex);
-}</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -265,37 +224,37 @@ catch(Exception ex)
 					<tbody><tr>
 						<td>senderName</td>
 						<td>string</td>
-						<td>The name of the person sending the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>senderAddress</td>
 						<td>string</td>
-						<td>The email addresses of the person sending the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>recipientAddress</td>
 						<td>string</td>
-						<td>The email addresses of the person who will recieve the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>subject</td>
 						<td>string</td>
-						<td>The subject line of the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>htmlContent</td>
 						<td>string</td>
-						<td>The HTML content</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>textContent</td>
 						<td>string</td>
-						<td>The text content</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.CakeMail.Email/CakeMailSettings">CakeMailSettings</a></td>
-						<td>The settings to be used when sending the email</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -313,7 +272,7 @@ catch(Exception ex)
 				</thead>
 				<tbody><tr>
 					<td><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></td>
-					<td>An instance of <code class="cs"><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></code> indicating success/failure</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
