@@ -83,6 +83,7 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -184,11 +185,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -200,16 +201,16 @@
 	Base0["object"]--&gt;Type
 	Type["JenkinsInfo"]
 class Type type-node
-	Type--&gt;Derived0["JenkinsBuildInfo"]
-	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
-	Type--&gt;Derived1["JenkinsJobInfo"]
-	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
-	Type--&gt;Derived2["JenkinsRepositoryInfo"]
-	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
-	Type--&gt;Derived3["JenkinsNodeInfo"]
-	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
-	Type--&gt;Derived4["JenkinsEnvironmentInfo"]
-	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived0["JenkinsNodeInfo"]
+	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived1["JenkinsEnvironmentInfo"]
+	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived2["JenkinsJobInfo"]
+	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
+	Type--&gt;Derived3["JenkinsRepositoryInfo"]
+	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
+	Type--&gt;Derived4["JenkinsBuildInfo"]
+	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
 
 						</div>
 					</div>
@@ -292,6 +293,47 @@ class Type type-node
 			</div>
 		
 
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Get a basic string representation of specified object.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>

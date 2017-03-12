@@ -174,8 +174,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-                Deserializes a plist from file
-            </div>
+                 Deserializes a plist from file
+             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -194,19 +194,19 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static dynamic DeserializePlist(this ICakeContext context, FilePath file)</code></pre>
+	<pre><code>public static dynamic DeserializePlist(this ICakeContext context, FilePath path)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-            <pre><code class="cs">var plist = File("./src/Demo/Info.plist");
-dynamic data = DeserializePlist(plist);
+             <pre><code class="cs"> var plist = File("./src/Demo/Info.plist");
+ dynamic data = DeserializePlist(plist);
 
-data["CFBundleShortVersionString"] = version.AssemblySemVer;
-data["CFBundleVersion"] = version.FullSemVer;
+ data["CFBundleShortVersionString"] = version.AssemblySemVer;
+ data["CFBundleVersion"] = version.FullSemVer;
 
-SerializePlist(plist, data);</code></pre>
-            Deserialize the plist and simply access properties via indexer. But, it is important to declare data as dynamic.
-            </div>
+ SerializePlist(plist, data);</code></pre>
+             Deserialize the plist and simply access properties via indexer. But, it is important to declare data as dynamic.
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -245,7 +245,7 @@ SerializePlist(plist, data);</code></pre>
 						<td></td>
 					</tr>
 					<tr>
-						<td>file</td>
+						<td>path</td>
 						<td>FilePath</td>
 						<td>xml plist file</td>
 					</tr>
