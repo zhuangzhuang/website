@@ -83,6 +83,7 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -184,12 +185,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo">BambooPlanInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -201,18 +202,18 @@
 	Base0["object"]--&gt;Type
 	Type["BambooInfo"]
 class Type type-node
-	Type--&gt;Derived0["BambooCommitInfo"]
-	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
-	Type--&gt;Derived1["BambooBuildInfo"]
-	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
-	Type--&gt;Derived2["BambooRepositoryInfo"]
-	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
+	Type--&gt;Derived0["BambooPlanInfo"]
+	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
+	Type--&gt;Derived1["BambooEnvironmentInfo"]
+	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
+	Type--&gt;Derived2["BambooBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
 	Type--&gt;Derived3["BambooCustomBuildInfo"]
 	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
-	Type--&gt;Derived4["BambooEnvironmentInfo"]
-	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
-	Type--&gt;Derived5["BambooPlanInfo"]
-	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
+	Type--&gt;Derived4["BambooCommitInfo"]
+	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
+	Type--&gt;Derived5["BambooRepositoryInfo"]
+	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
 
 						</div>
 					</div>
@@ -295,6 +296,47 @@ class Type type-node
 			</div>
 		
 
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;BambooInfo&gt;<wbr><wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Get a basic string representation of specified object.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>

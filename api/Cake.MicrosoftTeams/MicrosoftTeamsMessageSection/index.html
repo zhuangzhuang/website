@@ -79,10 +79,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -169,20 +169,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            A section is a canvas to show richer content than what can be represented in the just the title and text of the card. 
-            A section can contain text and images, or the activity and facts fields can be used to highlight key events and details.
-            These sections are passed via the sections array in the payload, and will be rendered in the order of array position.
-            The content in a section is displayed in the following order(top to bottom): 
-                * title
-                * text
-                * activityTitle, activitySubtitle, activityText
-                * facts
-                * images
-                * actions
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -262,72 +249,56 @@ class Type type-node
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/8D3F0BA3">activityImage</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            An image representing the action. Often this is an avatar of the "actor" of the activity.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/280C802C">activitySubtitle</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            A subtitle describing the event or action. Often this will be a summary of the action.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/1DBF8B0B">activityText</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            A full description of the action.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/B943004D">activityTitle</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Title of the event or action. Often this will be the name of the "actor".
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/371298A6">facts</a></td>
 								<td>ICollection<wbr>&lt;<wbr>Microsoft<wbr>Teams<wbr>Message<wbr>Facts&gt;<wbr></td>
 								<td>
-									<div>
-            A collection of facts, displayed as key-value pairs.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/6ACC246B">markdown</a></td>
 								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
-									<div>
-            Set this to false to disable markdown parsing on this section's content. Markdown parsing is enabled by default.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/A2DC007F">text</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Optional text that will appear before the activity.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageSection/C766AA16">title</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Title of the section.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -336,6 +307,47 @@ class Type type-node
 		
 
 
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Microsoft<wbr>Teams<wbr>Message<wbr>Section&gt;<wbr><wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Get a basic string representation of specified object.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Microsoft<wbr>Teams<wbr>Message<wbr>Section&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Microsoft<wbr>Teams<wbr>Message<wbr>Section&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>

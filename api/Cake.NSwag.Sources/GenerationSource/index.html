@@ -83,6 +83,7 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -194,9 +195,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.NSwag.Sources/AssemblySource">AssemblySource</a></li>								
 											<li><a href="/api/Cake.NSwag.Sources/SwaggerSource">SwaggerSource</a></li>								
 											<li><a href="/api/Cake.NSwag.Sources/JsonSchemaSource">JsonSchemaSource</a></li>								
-											<li><a href="/api/Cake.NSwag.Sources/AssemblySource">AssemblySource</a></li>								
 									</ul>
 								</dd>			
 							
@@ -208,12 +209,12 @@
 	Base0["object"]--&gt;Type
 	Type["GenerationSource"]
 class Type type-node
-	Type--&gt;Derived0["SwaggerSource"]
-	click Derived0 "/api/Cake.NSwag.Sources/SwaggerSource"
-	Type--&gt;Derived1["JsonSchemaSource"]
-	click Derived1 "/api/Cake.NSwag.Sources/JsonSchemaSource"
-	Type--&gt;Derived2["AssemblySource"]
-	click Derived2 "/api/Cake.NSwag.Sources/AssemblySource"
+	Type--&gt;Derived0["AssemblySource"]
+	click Derived0 "/api/Cake.NSwag.Sources/AssemblySource"
+	Type--&gt;Derived1["SwaggerSource"]
+	click Derived1 "/api/Cake.NSwag.Sources/SwaggerSource"
+	Type--&gt;Derived2["JsonSchemaSource"]
+	click Derived2 "/api/Cake.NSwag.Sources/JsonSchemaSource"
 
 						</div>
 					</div>
@@ -296,6 +297,47 @@ class Type type-node
 		
 
 
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Generation<wbr>Source&gt;<wbr><wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Get a basic string representation of specified object.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Generation<wbr>Source&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Generation<wbr>Source&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>
