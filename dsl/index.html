@@ -206,6 +206,7 @@
     <li><a href="/dsl/sqlserver">SqlServer</a></li>        
     <li><a href="/dsl/sqltools">SqlTools</a></li>        
     <li><a href="/dsl/squirrel">Squirrel</a></li>        
+    <li><a href="/dsl/storyteller">Storyteller</a></li>        
     <li><a href="/dsl/strong-naming">Strong Naming</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
     <li><a href="/dsl/tfx">Tfx</a></li>        
@@ -630,12 +631,7 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
-    <p>
-    In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
-    </p>
+    Contains functionality related to text transformation.
     </td>
                 </tr>
                 <tr>
@@ -710,7 +706,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Package Manager commands
+             Cake build aliases for Android ADB Activity Manager commands
              </td>
                 </tr>
                 <tr>
@@ -745,24 +741,24 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/autorest">AutoRest</a></td>
-                    <td></td>
+                    <td>
+            Provides a wrapper around AutoRest functinoality for use in Cake scripts
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Elastic Load Balancers
+            Contains Cake aliases for configuring Amazon Cloud Front distributions
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
-                    <td>
-            Contains functionality for workign with Azure Storage
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            The result of CakeMailProvider API post
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -1036,12 +1032,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
@@ -1197,7 +1188,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of SendGridProvider API post
             </td>
                 </tr>
                 <tr>
@@ -1241,6 +1232,12 @@
                 <tr>
                     <td><a href="/dsl/squirrel">Squirrel</a></td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/storyteller">Storyteller</a></td>
+                    <td>
+            Alias for Cake Storyteller
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
@@ -1354,7 +1351,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/yarn">Yarn</a></td>
-                    <td></td>
+                    <td>
+            Provides a wrapper around Yarn functionality within a Cake build script
+            </td>
                 </tr>
         </table>
     </div>

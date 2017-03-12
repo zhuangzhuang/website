@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - CMakeRunner.CMakeRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IGlobber) Constructor</title>
+        <title>Cake - API - CMakeRunner.CMakeRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IToolLocator) Constructor</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -141,7 +141,7 @@
 		<li><a href="/api/Cake.CMake/CMakeRunner">CMakeRunner</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li class="selected"><a href="/api/Cake.CMake/CMakeRunner/5CAB52F1">CMakeRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IGlobber)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.CMake/CMakeRunner/BCA1883F">CMakeRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.CMake/CMakeRunner/A53AF168">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(CMakeSettings)<wbr></a></li>
 				<li><a href="/api/Cake.CMake/CMakeRunner/D6691E76">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
@@ -161,7 +161,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.CMake/CMakeRunner">CMakeRunner</a>.</h3>
-	<h1>CMakeRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IGlobber)<wbr> <small>Constructor</small></h1>
+	<h1>CMakeRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr> <small>Constructor</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -194,7 +194,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public CMakeRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IGlobber globber)</code></pre>
+	<pre><code>public CMakeRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)</code></pre>
 
 
 
@@ -227,9 +227,9 @@
 						<td>The process runner.</td>
 					</tr>
 					<tr>
-						<td>globber</td>
-						<td>IGlobber</td>
-						<td>The globber.</td>
+						<td>tools</td>
+						<td>IToolLocator</td>
+						<td>The tool locator.</td>
 					</tr>
 			</tbody></table>
 		</div>

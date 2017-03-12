@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <hr class="infobar-hidden">
@@ -167,11 +166,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Contains the common settings used by all commands in Gem.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -194,8 +189,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Gem.Push/GemPushSettings">GemPushSettings</a></li>								
 											<li><a href="/api/Cake.Gem.Build/GemBuildSettings">GemBuildSettings</a></li>								
+											<li><a href="/api/Cake.Gem.Push/GemPushSettings">GemPushSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -207,10 +202,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["GemSettings"]
 class Type type-node
-	Type--&gt;Derived0["GemPushSettings"]
-	click Derived0 "/api/Cake.Gem.Push/GemPushSettings"
-	Type--&gt;Derived1["GemBuildSettings"]
-	click Derived1 "/api/Cake.Gem.Build/GemBuildSettings"
+	Type--&gt;Derived0["GemBuildSettings"]
+	click Derived0 "/api/Cake.Gem.Build/GemBuildSettings"
+	Type--&gt;Derived1["GemPushSettings"]
+	click Derived1 "/api/Cake.Gem.Push/GemPushSettings"
 
 						</div>
 					</div>
