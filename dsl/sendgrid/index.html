@@ -188,6 +188,7 @@
     <li><a href="/dsl/node">Node</a></li>        
     <li><a href="/dsl/npm">Npm</a></li>        
     <li><a href="/dsl/nuget">NuGet</a></li>        
+    <li><a href="/dsl/octodeploy">OctoDeploy</a></li>        
     <li><a href="/dsl/orchard">Orchard</a></li>        
     <li><a href="/dsl/paket">Paket</a></li>        
     <li><a href="/dsl/plist">plist</a></li>        
@@ -246,7 +247,12 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality related to SendGrid API
+            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.SendGrid</code></pre>
+            <p></p>
             </div>
 
 
@@ -259,6 +265,8 @@
 <a href="/api/Cake.SendGrid/SendGridAliases/3951E035">SendGrid</a>                            </td>
                             <td>
                                 
+            Gets a <code class="cs"><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a></code> instance that can be used for communicating with SendGridProvider API.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></i></small>
