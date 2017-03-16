@@ -517,7 +517,8 @@
 				<a href="/api/Cake.NuGet">Cake<wbr>.NuGet</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.NuGet.V2">Cake<wbr>.NuGet<wbr>.V2</a></li>
-</ul></li>			<li><a href="/api/Cake.Orchard">Cake<wbr>.Orchard</a></li>
+</ul></li>			<li><a href="/api/Cake.OctoDeploy">Cake<wbr>.OctoDeploy</a></li>
+			<li><a href="/api/Cake.Orchard">Cake<wbr>.Orchard</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Paket">Cake<wbr>.Paket</a> <a href="#" class="expand"></a>
@@ -606,6 +607,7 @@
 			<li><a href="/api/Cake.Vagrant.Settings">Cake<wbr>.Vagrant<wbr>.Settings</a></li>
 </ul></li>			<li><a href="/api/Cake.VersionReader">Cake<wbr>.VersionReader</a></li>
 			<li><a href="/api/Cake.VsCode">Cake<wbr>.VsCode</a></li>
+			<li><a href="/api/Cake.VsMetrics">Cake<wbr>.VsMetrics</a></li>
 			<li><a href="/api/Cake.Watch">Cake<wbr>.Watch</a></li>
 			<li><a href="/api/Cake.WebDeploy">Cake<wbr>.WebDeploy</a></li>
 			<li><a href="/api/Cake.Webpack">Cake<wbr>.Webpack</a></li>
@@ -880,15 +882,21 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></td>
-									<td></td>
+									<td>
+            Contains the common server settings used by some commands in Tfx.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></td>
-									<td></td>
+									<td>
+            Contains the common settings used by all commands in Tfx.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxTool_1">TfxTool<wbr>&lt;TSettings&gt;<wbr></a></td>
-									<td></td>
+									<td>
+            Base class for all Tfx related tools.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -906,11 +914,15 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></td>
-									<td></td>
+									<td>
+            The authentication type to use for Tfx commands
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></td>
-									<td></td>
+									<td>
+            The output type for the Tfx commands
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
