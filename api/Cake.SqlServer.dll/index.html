@@ -203,6 +203,7 @@
         <li><a href="/api/Cake.Vagrant.dll">Cake<wbr>.Vagrant<wbr>.dll</a></li>
         <li><a href="/api/Cake.VersionReader.dll">Cake<wbr>.VersionReader<wbr>.dll</a></li>
         <li><a href="/api/Cake.VsCode.dll">Cake<wbr>.VsCode<wbr>.dll</a></li>
+        <li><a href="/api/Cake.VsMetrics.dll">Cake<wbr>.VsMetrics<wbr>.dll</a></li>
         <li><a href="/api/Cake.Watch.dll">Cake<wbr>.Watch<wbr>.dll</a></li>
         <li><a href="/api/Cake.WebDeploy.dll">Cake<wbr>.WebDeploy<wbr>.dll</a></li>
         <li><a href="/api/Cake.Webpack.dll">Cake<wbr>.Webpack<wbr>.dll</a></li>
@@ -250,21 +251,13 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/RestoreSqlBackupSettings">Restore<wbr>Sql<wbr>Backup<wbr>Settings</a></td>
-									<td></td>
+									<td>
+            Settings for restoring database from a backup file
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></td>
-									<td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
-            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            <p></p>
-            </td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>
