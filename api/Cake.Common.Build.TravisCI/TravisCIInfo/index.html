@@ -137,12 +137,12 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Build.TravisCI">Cake<wbr>.Common<wbr>.Build<wbr>.TravisCI</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Common.Build.TravisCI/ITravisCIProvider">ITravisCIProvider</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Build.TravisCI/TravisCIDisposableExtensions">Travis<wbr>C<wbr>I<wbr>Disposable<wbr>Extensions</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Build.TravisCI/TravisCIInfo">TravisCIInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.TravisCI/TravisCIProvider">TravisCIProvider</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Common.Build.TravisCI/ITravisCIProvider">ITravisCIProvider</a></li>
 
 
                     </ul>
@@ -186,10 +186,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIBuildInfo">TravisCIBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIRepositoryInfo">Travis<wbr>C<wbr>I<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIJobInfo">TravisCIJobInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIEnvironmentInfo">Travis<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIRepositoryInfo">Travis<wbr>C<wbr>I<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIBuildInfo">TravisCIBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.TravisCI.Data/TravisCIJobInfo">TravisCIJobInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -201,14 +201,14 @@
 	Base0["object"]--&gt;Type
 	Type["TravisCIInfo"]
 class Type type-node
-	Type--&gt;Derived0["TravisCIBuildInfo"]
-	click Derived0 "/api/Cake.Common.Build.TravisCI.Data/TravisCIBuildInfo"
+	Type--&gt;Derived0["TravisCIEnvironmentInfo"]
+	click Derived0 "/api/Cake.Common.Build.TravisCI.Data/TravisCIEnvironmentInfo"
 	Type--&gt;Derived1["TravisCIRepositoryInfo"]
 	click Derived1 "/api/Cake.Common.Build.TravisCI.Data/TravisCIRepositoryInfo"
-	Type--&gt;Derived2["TravisCIJobInfo"]
-	click Derived2 "/api/Cake.Common.Build.TravisCI.Data/TravisCIJobInfo"
-	Type--&gt;Derived3["TravisCIEnvironmentInfo"]
-	click Derived3 "/api/Cake.Common.Build.TravisCI.Data/TravisCIEnvironmentInfo"
+	Type--&gt;Derived2["TravisCIBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.TravisCI.Data/TravisCIBuildInfo"
+	Type--&gt;Derived3["TravisCIJobInfo"]
+	click Derived3 "/api/Cake.Common.Build.TravisCI.Data/TravisCIJobInfo"
 
 						</div>
 					</div>
@@ -307,8 +307,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -316,7 +316,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;TravisCIInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -324,7 +326,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;TravisCIInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

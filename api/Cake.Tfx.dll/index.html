@@ -188,7 +188,6 @@
         <li><a href="/api/Cake.Raygun.dll">Cake<wbr>.Raygun<wbr>.dll</a></li>
         <li><a href="/api/Cake.ReSharperReports.dll">Cake<wbr>.ReSharperReports<wbr>.dll</a></li>
         <li><a href="/api/Cake.SemVer.dll">Cake<wbr>.SemVer<wbr>.dll</a></li>
-        <li><a href="/api/Cake.SemVer.FromAssembly.dll">Cake<wbr>.SemVer<wbr>.FromAssembly<wbr>.dll</a></li>
         <li><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></li>
         <li><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></li>
         <li><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></li>
@@ -198,6 +197,7 @@
         <li><a href="/api/Cake.Squirrel.dll">Cake<wbr>.Squirrel<wbr>.dll</a></li>
         <li><a href="/api/Cake.Storyteller.dll">Cake<wbr>.Storyteller<wbr>.dll</a></li>
         <li><a href="/api/cake.strongnametool.dll">cake<wbr>.strongnametool<wbr>.dll</a></li>
+        <li><a href="/api/Cake.SynVer.dll">Cake<wbr>.SynVer<wbr>.dll</a></li>
         <li class="selected"><a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></li>
         <li><a href="/api/Cake.Topshelf.dll">Cake<wbr>.Topshelf<wbr>.dll</a></li>
         <li><a href="/api/Cake.Twitter.dll">Cake<wbr>.Twitter<wbr>.dll</a></li>
@@ -248,11 +248,20 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
+            <p>
+            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Tfx</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></td>
-									<td></td>
+									<td>
+            The top level argument builder for the Tfx CLI Tool
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateRunner">Tfx<wbr>Extension<wbr>Create<wbr>Runner</a></td>
@@ -336,7 +345,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></td>
-									<td></td>
+									<td>
+            The authentication type to use for Tfx commands
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></td>

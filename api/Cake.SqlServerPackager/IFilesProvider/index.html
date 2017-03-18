@@ -193,8 +193,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
 											<li><a href="/api/Cake.SqlServerPackager/DiskFilesProvider">DiskFilesProvider</a></li>								
+											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -204,10 +204,10 @@
 							graph TD
 	Type["IFilesProvider"]
 class Type type-node
-	Type-.-&gt;Implementing0["GitFilesProvider"]
-	click Implementing0 "/api/Cake.SqlServerPackager/GitFilesProvider"
-	Type-.-&gt;Implementing1["DiskFilesProvider"]
-	click Implementing1 "/api/Cake.SqlServerPackager/DiskFilesProvider"
+	Type-.-&gt;Implementing0["DiskFilesProvider"]
+	click Implementing0 "/api/Cake.SqlServerPackager/DiskFilesProvider"
+	Type-.-&gt;Implementing1["GitFilesProvider"]
+	click Implementing1 "/api/Cake.SqlServerPackager/GitFilesProvider"
 
 						</div>
 					</div>
@@ -268,8 +268,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -277,7 +277,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Files<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -285,7 +287,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Files<wbr>Provider&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

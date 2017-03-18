@@ -238,16 +238,16 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeStopSettings">Docker<wbr>Compose<wbr>Stop<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeDownSettings">Docker<wbr>Compose<wbr>Down<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeStopSettings">Docker<wbr>Compose<wbr>Stop<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeDownSettings">Docker<wbr>Compose<wbr>Down<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -261,26 +261,26 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["DockerComposeSettings"]
 class Type type-node
-	Type--&gt;Derived0["DockerComposeKillSettings"]
-	click Derived0 "/api/Cake.Docker/DockerComposeKillSettings"
+	Type--&gt;Derived0["DockerComposeBuildSettings"]
+	click Derived0 "/api/Cake.Docker/DockerComposeBuildSettings"
 	Type--&gt;Derived1["DockerComposeRunSettings"]
 	click Derived1 "/api/Cake.Docker/DockerComposeRunSettings"
-	Type--&gt;Derived2["DockerComposeUpSettings"]
-	click Derived2 "/api/Cake.Docker/DockerComposeUpSettings"
-	Type--&gt;Derived3["DockerComposeStopSettings"]
-	click Derived3 "/api/Cake.Docker/DockerComposeStopSettings"
-	Type--&gt;Derived4["DockerComposeRestartSettings"]
-	click Derived4 "/api/Cake.Docker/DockerComposeRestartSettings"
-	Type--&gt;Derived5["DockerComposeDownSettings"]
-	click Derived5 "/api/Cake.Docker/DockerComposeDownSettings"
-	Type--&gt;Derived6["DockerComposePullSettings"]
-	click Derived6 "/api/Cake.Docker/DockerComposePullSettings"
+	Type--&gt;Derived2["DockerComposeStopSettings"]
+	click Derived2 "/api/Cake.Docker/DockerComposeStopSettings"
+	Type--&gt;Derived3["DockerComposeUpSettings"]
+	click Derived3 "/api/Cake.Docker/DockerComposeUpSettings"
+	Type--&gt;Derived4["DockerComposePullSettings"]
+	click Derived4 "/api/Cake.Docker/DockerComposePullSettings"
+	Type--&gt;Derived5["DockerComposeCreateSettings"]
+	click Derived5 "/api/Cake.Docker/DockerComposeCreateSettings"
+	Type--&gt;Derived6["DockerComposeRestartSettings"]
+	click Derived6 "/api/Cake.Docker/DockerComposeRestartSettings"
 	Type--&gt;Derived7["DockerComposeRmSettings"]
 	click Derived7 "/api/Cake.Docker/DockerComposeRmSettings"
-	Type--&gt;Derived8["DockerComposeCreateSettings"]
-	click Derived8 "/api/Cake.Docker/DockerComposeCreateSettings"
-	Type--&gt;Derived9["DockerComposeBuildSettings"]
-	click Derived9 "/api/Cake.Docker/DockerComposeBuildSettings"
+	Type--&gt;Derived8["DockerComposeKillSettings"]
+	click Derived8 "/api/Cake.Docker/DockerComposeKillSettings"
+	Type--&gt;Derived9["DockerComposeDownSettings"]
+	click Derived9 "/api/Cake.Docker/DockerComposeDownSettings"
 
 						</div>
 					</div>
@@ -451,8 +451,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -460,7 +460,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -468,7 +470,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

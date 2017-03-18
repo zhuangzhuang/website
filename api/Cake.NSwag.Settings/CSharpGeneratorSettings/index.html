@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -170,7 +171,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Settings to further control the C# generation process
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -235,16 +240,16 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettings/5F42707A">BaseClass</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+                Gets or sets the base class to use for the generated client
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings/E796DDE3">ClientSettings</a></td>
 								<td>Client<wbr>Generator<wbr>Base<wbr>Settings</td>
 								<td>
-									<div>
-            Container for operation-specific settings used when generating client libraries.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -252,9 +257,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings/A209ADB2">ControllerSettings</a></td>
 								<td>Controller<wbr>Generator<wbr>Base<wbr>Settings</td>
 								<td>
-									<div>
-            Container for operation-specific settings used when generating controller code.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -271,9 +274,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings/A5DFE50A">JsonSettings</a></td>
 								<td>Json<wbr>Schema<wbr>Generator<wbr>Settings</td>
 								<td>
-									<div>
-            Container for operation-specific settings used when generating JSON schemas, including Swagger specifications.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -281,7 +282,9 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettings/325B7932">Namespaces</a></td>
 								<td>List<wbr>&lt;string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+                Gets or sets a collection of additional namespace usages
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -304,9 +307,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings/7D5688E2">WithSettings<wbr>(<wbr>Client<wbr>Generator<wbr>Base<wbr>Settings)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></td>
 								<td>
-									<div>
-            Specifies operation-specific settings for generating client code.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -314,9 +315,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings/2C38C8B2">WithSettings<wbr>(<wbr>Controller<wbr>Generator<wbr>Base<wbr>Settings)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></td>
 								<td>
-									<div>
-            Specificies operation-specific settings for generating controller code
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -324,9 +323,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings/4620EADF">WithSettings<wbr>(<wbr>Json<wbr>Schema<wbr>Generator<wbr>Settings)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></td>
 								<td>
-									<div>
-            Specifies operation-specific settings for generating JSON schemas, including Swagger specifications.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.NSwag.Settings/GeneratorSettings">GeneratorSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -361,8 +358,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -370,9 +367,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettingsExtensions/EECB2B56">EnableInterfaces<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettings">C<wbr>Sharp<wbr>Generator<wbr>Settings</a></td>
 								<td>
-									<div>
-                Enables generating interfaces when generating the client
-            </div>
+									<div></div>
 										<div><small><em>From <a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettingsExtensions">C<wbr>Sharp<wbr>Generator<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -380,9 +375,7 @@ class Type type-node
 								<td><a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettingsExtensions/4E19EAFF">SetBaseClass<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettings">C<wbr>Sharp<wbr>Generator<wbr>Settings</a></td>
 								<td>
-									<div>
-                Sets the base class for the generated code
-            </div>
+									<div></div>
 										<div><small><em>From <a href="/api/Cake.NSwag.Settings/CSharpGeneratorSettingsExtensions">C<wbr>Sharp<wbr>Generator<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -390,7 +383,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>C<wbr>Sharp<wbr>Generator<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -398,7 +393,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>C<wbr>Sharp<wbr>Generator<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

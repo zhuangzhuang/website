@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SemVerAliases Class</title>
+        <title>Cake - API - FileExtensions.Move(ICakeContext, IEnumerable&lt;FilePath&gt;, DirectoryPath) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -82,7 +82,8 @@
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Methods">Methods</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -134,14 +135,21 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.SemVer.FromAssembly.dll">Cake<wbr>.SemVer<wbr>.FromAssembly<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></li>
+		<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li class="selected"><a href="/api/Cake.SemVer.FromAssembly/SemVerAliases">SemVerAliases</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.SemVer.FromAssembly/Magnitude">Magnitude</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/A863E047">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/13C4CCD8">GetFiles<wbr>(ICakeContext, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/62452D12">GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/F1111715">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/844C5069">GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/DEC63D67">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/4357238F">Move<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Incubator/FileExtensions/AAC7621F">Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
 
 
                     </ul>
@@ -155,64 +163,41 @@
 
 
 <section class="content-header">
-	<h1>SemVerAliases <small>Class</small></h1>
+			<h3><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a>.</h3>
+	<h1>Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/wallymathieu/Cake.SemVer.FromAssembly" class="alert-link">https://github.com/wallymathieu/Cake.SemVer.FromAssembly</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Incubator" class="alert-link">https://github.com/cake-contrib/Cake.Incubator</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            <p>Contains functionality related to the <a href="https://github.com/wallymathieu/SemVer.FromAssembly">SemVer.FromAssembly</a>.</p>
-            <p>
-            In order to use the commands for this addin, the SemVer.FromAssembly utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
-            reference the addin from NuGet.org:
-            </p><pre><code class="cs">#addin Cake.SemVer.FromAssembly</code></pre>
-            <p></p>
+            Obsolete: Use Cake.Common.IO.MoveFiles instead
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-								<dt>Assembly</dt>
-								<dd><a href="/api/Cake.SemVer.FromAssembly.dll">Cake<wbr>.SemVer<wbr>.FromAssembly<wbr>.dll</a></dd>
-
-								<dt>Namespace</dt>
-								<dd><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
-	Type["SemVerAliases"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class SemVerAliases</code></pre>
+	<pre><code>public static void Move(this ICakeContext context, IEnumerable&lt;FilePath&gt; source, DirectoryPath destination)</code></pre>
 
 
 
@@ -227,11 +212,11 @@ class Type type-node
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td>ComVisibleAttribute</td>
+						<td>ObsoleteAttribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -239,46 +224,53 @@ class Type type-node
 	</div>	
 
 
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>source</td>
+						<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>destination</td>
+						<td>DirectoryPath</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.SemVer.FromAssembly/SemVerAliases/51F2666B">SemVerMagnitude<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
-								<td><a href="/api/Cake.SemVer.FromAssembly/Magnitude">Magnitude</a></td>
-								<td>
-									<div>
-            Get the magnitude by running SemVer.FromAssembly.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.SemVer.FromAssembly/SemVerAliases/151BEE4E">SemVerMagnitude<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
-								<td><a href="/api/Cake.SemVer.FromAssembly/Magnitude">Magnitude</a></td>
-								<td>
-									<div>
-            Get the magnitude by running SemVer.FromAssembly.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	

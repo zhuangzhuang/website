@@ -223,8 +223,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a></li>								
 											<li><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></li>								
+											<li><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -234,10 +234,10 @@
 							graph TD
 	Type["ICakeRuntime"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeRuntime"]
-	click Implementing0 "/api/Cake.Testing/FakeRuntime"
-	Type-.-&gt;Implementing1["CakeRuntime"]
-	click Implementing1 "/api/Cake.Core/CakeRuntime"
+	Type-.-&gt;Implementing0["CakeRuntime"]
+	click Implementing0 "/api/Cake.Core/CakeRuntime"
+	Type-.-&gt;Implementing1["FakeRuntime"]
+	click Implementing1 "/api/Cake.Testing/FakeRuntime"
 
 						</div>
 					</div>
@@ -316,8 +316,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -325,7 +325,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;ICakeRuntime&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -333,7 +335,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;ICakeRuntime&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

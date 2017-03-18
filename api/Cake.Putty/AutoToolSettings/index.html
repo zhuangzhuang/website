@@ -206,8 +206,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Putty/PscpSettings">PscpSettings</a></li>								
 											<li><a href="/api/Cake.Putty/PlinkSettings">PlinkSettings</a></li>								
+											<li><a href="/api/Cake.Putty/PscpSettings">PscpSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -219,10 +219,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["AutoToolSettings"]
 class Type type-node
-	Type--&gt;Derived0["PscpSettings"]
-	click Derived0 "/api/Cake.Putty/PscpSettings"
-	Type--&gt;Derived1["PlinkSettings"]
-	click Derived1 "/api/Cake.Putty/PlinkSettings"
+	Type--&gt;Derived0["PlinkSettings"]
+	click Derived0 "/api/Cake.Putty/PlinkSettings"
+	Type--&gt;Derived1["PscpSettings"]
+	click Derived1 "/api/Cake.Putty/PscpSettings"
 
 						</div>
 					</div>
@@ -277,8 +277,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -286,7 +286,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -294,7 +296,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

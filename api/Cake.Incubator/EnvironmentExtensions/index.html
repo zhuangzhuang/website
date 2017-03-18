@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -148,6 +147,7 @@
 				<li><a href="/api/Cake.Incubator/DotNetCoreTestExtensions">Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></li>
 				<li class="selected"><a href="/api/Cake.Incubator/EnvironmentExtensions">Environment<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></li>
@@ -185,11 +185,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Contains functionality related to the environment.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -270,7 +266,7 @@ class Type type-node
 								<td>T</td>
 								<td>
 									<div>
-            Retrieves the value of the environment variable or throws if the argument is missing
+            Retrieves the value of the environment variable or throws a <code class="cs"><a href="/api/Cake.Core/CakeException">CakeException</a></code> if the argument is missing
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -280,7 +276,7 @@ class Type type-node
 								<td>T</td>
 								<td>
 									<div>
-            Retrieves the value of the environment variable or throws if the argument is missing
+            Retrieves the value of the environment variable or returns the default value specified if missing
             </div>
 											<div><small><em>static</em></small></div>
 								</td>

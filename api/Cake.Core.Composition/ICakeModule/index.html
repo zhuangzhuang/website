@@ -181,9 +181,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Modules/CommonModule">CommonModule</a></li>								
 											<li><a href="/api/Cake.Core.Modules/CoreModule">CoreModule</a></li>								
 											<li><a href="/api/Cake.NuGet/NuGetModule">NuGetModule</a></li>								
+											<li><a href="/api/Cake.Common.Modules/CommonModule">CommonModule</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -193,12 +193,12 @@
 							graph TD
 	Type["ICakeModule"]
 class Type type-node
-	Type-.-&gt;Implementing0["CommonModule"]
-	click Implementing0 "/api/Cake.Common.Modules/CommonModule"
-	Type-.-&gt;Implementing1["CoreModule"]
-	click Implementing1 "/api/Cake.Core.Modules/CoreModule"
-	Type-.-&gt;Implementing2["NuGetModule"]
-	click Implementing2 "/api/Cake.NuGet/NuGetModule"
+	Type-.-&gt;Implementing0["CoreModule"]
+	click Implementing0 "/api/Cake.Core.Modules/CoreModule"
+	Type-.-&gt;Implementing1["NuGetModule"]
+	click Implementing1 "/api/Cake.NuGet/NuGetModule"
+	Type-.-&gt;Implementing2["CommonModule"]
+	click Implementing2 "/api/Cake.Common.Modules/CommonModule"
 
 						</div>
 					</div>
@@ -259,8 +259,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -268,7 +268,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;ICakeModule&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -276,7 +278,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;ICakeModule&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

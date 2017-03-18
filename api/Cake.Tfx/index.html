@@ -556,12 +556,8 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Scripting.Roslyn.Nightly">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Nightly</a></li>
 			<li><a href="/api/Cake.Scripting.Roslyn.Stable">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Stable</a></li>
-</ul></li></ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></li>
-</ul></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a></li>
+
 				<li class="treeview">
 				<a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -578,6 +574,7 @@
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
+			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -874,11 +871,20 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
+            <p>
+            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Tfx</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></td>
-									<td></td>
+									<td>
+            The top level argument builder for the Tfx CLI Tool
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></td>
@@ -914,7 +920,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></td>
-									<td></td>
+									<td>
+            The authentication type to use for Tfx commands
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></td>

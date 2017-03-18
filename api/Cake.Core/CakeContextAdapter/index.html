@@ -230,8 +230,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -245,10 +245,10 @@
 class Type type-node
 	Type--&gt;Derived0["TaskSetupContext"]
 	click Derived0 "/api/Cake.Core/TaskSetupContext"
-	Type--&gt;Derived1["TeardownContext"]
-	click Derived1 "/api/Cake.Core/TeardownContext"
-	Type--&gt;Derived2["TaskTeardownContext"]
-	click Derived2 "/api/Cake.Core/TaskTeardownContext"
+	Type--&gt;Derived1["TaskTeardownContext"]
+	click Derived1 "/api/Cake.Core/TaskTeardownContext"
+	Type--&gt;Derived2["TeardownContext"]
+	click Derived2 "/api/Cake.Core/TeardownContext"
 
 						</div>
 					</div>
@@ -392,8 +392,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -401,7 +401,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -409,7 +411,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

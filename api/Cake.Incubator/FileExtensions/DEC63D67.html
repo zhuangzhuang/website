@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - FilePathExtensions.Move(ICakeContext, IEnumerable&lt;FilePath&gt;, DirectoryPath) Method</title>
+        <title>Cake - API - FileExtensions.GetSolutionAssemblies(ICakeContext, FilePath, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -138,20 +140,17 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></li>
+		<li><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/33C9824F">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/217F7FE6">GetFiles<wbr>(ICakeContext, <wbr>string[])<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/84050F3A">GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/F5D1FB00">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/D901BD5F">GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/86D43598">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/17D03ADE">HasFileName<wbr>(FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/2C2CBEB8">IsProject<wbr>(FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/5587AA41">IsSolution<wbr>(FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/2DD7E4F1">Move<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Incubator/FilePathExtensions/490287BD">Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/A863E047">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/13C4CCD8">GetFiles<wbr>(ICakeContext, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/62452D12">GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/F1111715">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/844C5069">GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Incubator/FileExtensions/DEC63D67">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/4357238F">Move<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions/AAC7621F">Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
 
 
                     </ul>
@@ -165,8 +164,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a>.</h3>
-	<h1>Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a>.</h3>
+	<h1>Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -177,7 +176,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Gets the output assembly paths for a solution file, for a specific build configuration
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -188,15 +191,23 @@
 						<dd><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></dd>		
+						<dd><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void Move(this ICakeContext context, IEnumerable&lt;FilePath&gt; source, DirectoryPath destination)</code></pre>
+	<pre><code>public static IEnumerable&lt;FilePath&gt; GetSolutionAssemblies(this ICakeContext context, FilePath target, string configuration)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            The Solution's <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code> and the build configuration will return the 
+            output files (dll or exe) for the projects and return as an <code class="cs">System.Collections.Generic.IEnumerable`1</code>
+            The alias expects a valid `.sln` file.
+            <pre><code class="cs">// Solution project's output dll/exe's for the 'Release' configuration
+IEnumerable&lt;FilePath&gt; filePaths = GetOutputAssemblies(new FilePath("test.sln"), "Release");</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -211,6 +222,10 @@
 				</thead>
 					<tbody><tr>
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -232,17 +247,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>the cake context</td>
 					</tr>
 					<tr>
-						<td>source</td>
-						<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
-						<td></td>
+						<td>target</td>
+						<td>FilePath</td>
+						<td>the solution file</td>
 					</tr>
 					<tr>
-						<td>destination</td>
-						<td>DirectoryPath</td>
-						<td></td>
+						<td>configuration</td>
+						<td>string</td>
+						<td>the build configuration</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -259,8 +274,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+					<td>the list of output assembly paths</td>
 				</tr>
 			</tbody></table>
 		</div>

@@ -553,12 +553,8 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Scripting.Roslyn.Nightly">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Nightly</a></li>
 			<li><a href="/api/Cake.Scripting.Roslyn.Stable">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Stable</a></li>
-</ul></li></ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></li>
-</ul></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a></li>
+
 				<li class="treeview">
 				<a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -575,6 +571,7 @@
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
+			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -851,25 +848,19 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsAliases">VsMetricsAliases</a></td>
-									<td>
-            <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
-            <p>
-            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-            </p><pre><code class="cs">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});</code></pre>
-            In addition, you will need to include the following:
-            <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
-            <p></p>
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsRunner">VsMetricsRunner</a></td>
-									<td></td>
+									<td>
+            The VsMetrics runner.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsSettings">VsMetricsSettings</a></td>
-									<td></td>
+									<td>
+            Contains settings used by <code class="cs"><a href="/api/Cake.VsMetrics/VsMetricsRunner">VsMetricsRunner</a></code>.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

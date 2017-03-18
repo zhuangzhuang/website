@@ -186,7 +186,6 @@
         <li><a href="/api/Cake.Raygun.dll">Cake<wbr>.Raygun<wbr>.dll</a></li>
         <li><a href="/api/Cake.ReSharperReports.dll">Cake<wbr>.ReSharperReports<wbr>.dll</a></li>
         <li><a href="/api/Cake.SemVer.dll">Cake<wbr>.SemVer<wbr>.dll</a></li>
-        <li><a href="/api/Cake.SemVer.FromAssembly.dll">Cake<wbr>.SemVer<wbr>.FromAssembly<wbr>.dll</a></li>
         <li><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></li>
         <li><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></li>
         <li><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></li>
@@ -196,6 +195,7 @@
         <li><a href="/api/Cake.Squirrel.dll">Cake<wbr>.Squirrel<wbr>.dll</a></li>
         <li><a href="/api/Cake.Storyteller.dll">Cake<wbr>.Storyteller<wbr>.dll</a></li>
         <li><a href="/api/cake.strongnametool.dll">cake<wbr>.strongnametool<wbr>.dll</a></li>
+        <li><a href="/api/Cake.SynVer.dll">Cake<wbr>.SynVer<wbr>.dll</a></li>
         <li><a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></li>
         <li><a href="/api/Cake.Topshelf.dll">Cake<wbr>.Topshelf<wbr>.dll</a></li>
         <li><a href="/api/Cake.Twitter.dll">Cake<wbr>.Twitter<wbr>.dll</a></li>
@@ -246,21 +246,30 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.CakeMail/CakeMailAliases">CakeMailAliases</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.CakeMail/CakeMailProvider">CakeMailProvider</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></td>
 									<td>
-            The result of CakeMailProvider API post
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            <p></p>
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.CakeMail.Email/CakeMailSettings">CakeMailSettings</a></td>
+								<td><a href="/api/Cake.CakeMail/CakeMailProvider">CakeMailProvider</a></td>
+									<td>
+            Contains functionality related to CakeMail API
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></td>
 									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.CakeMail.Email/CakeMailSettings">CakeMailSettings</a></td>
+									<td>
+            Class that lets you override default API settings
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

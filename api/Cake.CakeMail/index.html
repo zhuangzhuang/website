@@ -554,12 +554,8 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Scripting.Roslyn.Nightly">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Nightly</a></li>
 			<li><a href="/api/Cake.Scripting.Roslyn.Stable">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Stable</a></li>
-</ul></li></ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></li>
-</ul></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a></li>
+
 				<li class="treeview">
 				<a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -576,6 +572,7 @@
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
+			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -852,17 +849,24 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.CakeMail/CakeMailAliases">CakeMailAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.CakeMail/CakeMailProvider">CakeMailProvider</a></td>
-									<td></td>
+									<td>
+            Contains functionality related to CakeMail API
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></td>
-									<td>
-            The result of CakeMailProvider API post
-            </td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>

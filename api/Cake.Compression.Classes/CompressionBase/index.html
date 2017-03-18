@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -168,7 +169,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Provides a <code class="cs"><a href="/api/Cake.Compression.Classes/CompressionBase">CompressionBase</a></code> class.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -191,9 +196,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Compression.Classes/BZip2">BZip2</a></li>								
 											<li><a href="/api/Cake.Compression.Classes/GZip">GZip</a></li>								
 											<li><a href="/api/Cake.Compression.Classes/Zip">Zip</a></li>								
+											<li><a href="/api/Cake.Compression.Classes/BZip2">BZip2</a></li>								
 									</ul>
 								</dd>			
 							
@@ -205,12 +210,12 @@
 	Base0["object"]--&gt;Type
 	Type["CompressionBase"]
 class Type type-node
-	Type--&gt;Derived0["BZip2"]
-	click Derived0 "/api/Cake.Compression.Classes/BZip2"
-	Type--&gt;Derived1["GZip"]
-	click Derived1 "/api/Cake.Compression.Classes/GZip"
-	Type--&gt;Derived2["Zip"]
-	click Derived2 "/api/Cake.Compression.Classes/Zip"
+	Type--&gt;Derived0["GZip"]
+	click Derived0 "/api/Cake.Compression.Classes/GZip"
+	Type--&gt;Derived1["Zip"]
+	click Derived1 "/api/Cake.Compression.Classes/Zip"
+	Type--&gt;Derived2["BZip2"]
+	click Derived2 "/api/Cake.Compression.Classes/BZip2"
 
 						</div>
 					</div>
@@ -238,7 +243,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Compression.Classes/CompressionBase/22E025CD">CompressionBase<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>ICakeLog)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Compression.Classes/CompressionBase">CompressionBase</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -306,7 +313,9 @@ class Type type-node
 								<td><a href="/api/Cake.Compression.Classes/CompressionBase/EF31DD78">Compress<wbr>(DirectoryPath, <wbr>FilePath, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>int)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create a archive of the specified files.
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -320,7 +329,9 @@ class Type type-node
 								<td><a href="/api/Cake.Compression.Classes/CompressionBase/993E652A">Uncompress<wbr>(FilePath, <wbr>DirectoryPath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Uncompress the specified archive.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -344,8 +355,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -353,7 +364,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Compression<wbr>Base&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -361,7 +374,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Compression<wbr>Base&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
