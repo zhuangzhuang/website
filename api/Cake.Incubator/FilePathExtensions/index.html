@@ -79,8 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -147,6 +147,7 @@
 				<li><a href="/api/Cake.Incubator/DotNetCoreTestExtensions">Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/EnvironmentExtensions">Environment<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></li>
 				<li class="selected"><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></li>
@@ -184,7 +185,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains extension methods for working with <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code>'s
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -225,23 +230,6 @@ class Type type-node
 
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
 
@@ -261,66 +249,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/33C9824F">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
-								<td>
-									<div>
-            Filters FilePathCollection by filenames, in the order specified
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/217F7FE6">GetFiles<wbr>(ICakeContext, <wbr>string[])<wbr></a></td>
-								<td>FilePathCollection</td>
-								<td>
-									<div>
-            Gets FliePaths using glob patterns
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/84050F3A">GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IFile&gt;<wbr></td>
-								<td>
-									<div>
-            Returns files in the same directory that have the same name but different extensions
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/F5D1FB00">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the output assembly paths for solution or project files for a specific build configuration
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/D901BD5F">GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></td>
-								<td>FilePath</td>
-								<td>
-									<div>
-            Gets the output assembly path for a project file
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/86D43598">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the output assembly paths for a solution file for a specific build configuration
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Incubator/FilePathExtensions/17D03ADE">HasFileName<wbr>(FilePath, <wbr>string)<wbr></a></td>
 								<td>bool</td>
 								<td>
@@ -347,24 +275,6 @@ class Type type-node
 									<div>
             Checks if the FilePath is a solution file
             </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/2DD7E4F1">Move<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Moves a file
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/FilePathExtensions/490287BD">Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

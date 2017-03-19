@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
 <p><a href="#EnumTypes">Enum Types</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -555,12 +554,8 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Scripting.Roslyn.Nightly">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Nightly</a></li>
 			<li><a href="/api/Cake.Scripting.Roslyn.Stable">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Stable</a></li>
-</ul></li></ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></li>
-</ul></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a></li>
+
 				<li class="treeview">
 				<a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -577,6 +572,7 @@
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
+			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -839,11 +835,7 @@
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            for importing namespace into cake script
-            </div>
-
+	
 
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
@@ -857,7 +849,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></td>
-									<td></td>
+									<td>
+            Contains extensions for guard clauses
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectFile">CustomProjectFile</a></td>
@@ -865,10 +859,7 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParser">CustomProjectParser</a></td>
-									<td>
-            The MSBuild project file parser.
-            customised from original: https://github.com/cake-build/cake/blob/main/src/Cake.Common/Solution/Project/ProjectParser.cs
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult">Custom<wbr>Project<wbr>Parser<wbr>Result</a></td>
@@ -892,13 +883,17 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/EnvironmentExtensions">Environment<wbr>Extensions</a></td>
-									<td>
-            Contains functionality related to the environment.
-            </td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></td>
-									<td></td>
+									<td>
+            Contains extension methods for working with <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code>'s
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></td>
@@ -959,7 +954,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Incubator/ProjectType">ProjectType</a></td>
-									<td></td>
+									<td>
+            Visual Studio project types
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

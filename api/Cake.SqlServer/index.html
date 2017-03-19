@@ -554,12 +554,8 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Scripting.Roslyn.Nightly">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Nightly</a></li>
 			<li><a href="/api/Cake.Scripting.Roslyn.Stable">Cake<wbr>.Scripting<wbr>.Roslyn<wbr>.Stable</a></li>
-</ul></li></ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.SemVer.FromAssembly">Cake<wbr>.SemVer<wbr>.FromAssembly</a></li>
-</ul></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a></li>
+
 				<li class="treeview">
 				<a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -576,6 +572,7 @@
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
+			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -856,13 +853,21 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/RestoreSqlBackupSettings">Restore<wbr>Sql<wbr>Backup<wbr>Settings</a></td>
-									<td>
-            Settings for restoring database from a backup file
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></td>
-									<td></td>
+									<td>
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
+            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

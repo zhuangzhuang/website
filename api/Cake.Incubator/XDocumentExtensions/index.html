@@ -146,6 +146,7 @@
 				<li><a href="/api/Cake.Incubator/DotNetCoreTestExtensions">Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/EnvironmentExtensions">Environment<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></li>
 				<li><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></li>
@@ -243,18 +244,12 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/XDocumentExtensions/F5E45A7C">Distinct<wbr>&lt;TSource, <wbr>TKey&gt;<wbr><wbr>(IEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TKey&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;TSource&gt;<wbr></td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Incubator/XDocumentExtensions/C7BB1BE4">GetOutputPath<wbr>(XDocument, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the first output path value for a specific config from an xml document
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -262,7 +257,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/XDocumentExtensions/D8180309">GetPlatformTarget<wbr>(XDocument, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the first platform target value for a specific config from an xml document
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -270,7 +267,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/XDocumentExtensions/9476F269">GetTargetFramework<wbr>(XDocument)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the first targetframework value from an xml document
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -278,7 +277,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/XDocumentExtensions/EC7A6558">IsDotNetSdk<wbr>(XDocument)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Checks if an xml document for the dot net sdk attribute
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -142,6 +143,7 @@
 		<li><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Incubator/EnumerableExtensions/4F0C32C4">Distinct<wbr>&lt;TSource, <wbr>TKey&gt;<wbr><wbr>(IEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TKey&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Incubator/EnumerableExtensions/EFDEDF72">Each<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;T&gt;<wbr>, <wbr>Action<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Incubator/EnumerableExtensions/DAAC3AB2">IsNullOrEmpty<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Incubator/EnumerableExtensions/570E9DB5">IsNullOrEmpty<wbr>&lt;T&gt;<wbr><wbr>(IList<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
@@ -195,6 +197,13 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static bool IsNullOrEmpty&lt;T&gt;(this T[] source)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Replace
+            <pre><code class="cs">collection == null || collection.Length == 0</code></pre>
+            with
+            <pre><code class="cs">collection.IsNullOrEmpty()</code></pre>
+            </div>
 
 
 

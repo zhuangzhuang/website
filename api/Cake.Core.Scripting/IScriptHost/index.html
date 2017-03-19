@@ -137,14 +137,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Scripting">Cake<wbr>.Core<wbr>.Scripting</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptAliasFinder">IScriptAliasFinder</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptConventions">IScriptConventions</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptEngine">IScriptEngine</a></li>
-				<li class="selected"><a href="/api/Cake.Core.Scripting/IScriptHost">IScriptHost</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptProcessor">IScriptProcessor</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptRunner">IScriptRunner</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptSession">IScriptSession</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Scripting/Script">Script</a></li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptAlias">ScriptAlias</a></li>
@@ -155,6 +147,14 @@
 				<li><a href="/api/Cake.Core.Scripting/ScriptRunner">ScriptRunner</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptAliasType">ScriptAliasType</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptAliasFinder">IScriptAliasFinder</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptConventions">IScriptConventions</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptEngine">IScriptEngine</a></li>
+				<li class="selected"><a href="/api/Cake.Core.Scripting/IScriptHost">IScriptHost</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptProcessor">IScriptProcessor</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptRunner">IScriptRunner</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptSession">IScriptSession</a></li>
 
 
                     </ul>
@@ -193,11 +193,11 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
+											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
 											<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting.Mono.CodeGen/CakeBuildScriptImplBase">Cake<wbr>Build<wbr>Script<wbr>Impl<wbr>Base</a></li>								
+											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -207,16 +207,16 @@
 							graph TD
 	Type["IScriptHost"]
 class Type type-node
-	Type-.-&gt;Implementing0["DryRunScriptHost"]
-	click Implementing0 "/api/Cake.Scripting/DryRunScriptHost"
-	Type-.-&gt;Implementing1["BuildScriptHost"]
-	click Implementing1 "/api/Cake.Scripting/BuildScriptHost"
-	Type-.-&gt;Implementing2["DescriptionScriptHost"]
-	click Implementing2 "/api/Cake.Scripting/DescriptionScriptHost"
-	Type-.-&gt;Implementing3["ScriptHost"]
-	click Implementing3 "/api/Cake.Core.Scripting/ScriptHost"
-	Type-.-&gt;Implementing4["CakeBuildScriptImplBase"]
-	click Implementing4 "/api/Cake.Scripting.Mono.CodeGen/CakeBuildScriptImplBase"
+	Type-.-&gt;Implementing0["DescriptionScriptHost"]
+	click Implementing0 "/api/Cake.Scripting/DescriptionScriptHost"
+	Type-.-&gt;Implementing1["DryRunScriptHost"]
+	click Implementing1 "/api/Cake.Scripting/DryRunScriptHost"
+	Type-.-&gt;Implementing2["ScriptHost"]
+	click Implementing2 "/api/Cake.Core.Scripting/ScriptHost"
+	Type-.-&gt;Implementing3["CakeBuildScriptImplBase"]
+	click Implementing3 "/api/Cake.Scripting.Mono.CodeGen/CakeBuildScriptImplBase"
+	Type-.-&gt;Implementing4["BuildScriptHost"]
+	click Implementing4 "/api/Cake.Scripting/BuildScriptHost"
 
 						</div>
 					</div>
@@ -399,8 +399,8 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -408,7 +408,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;IScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -416,7 +418,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;IScriptHost&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
-									<div></div>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
 								</td>
 							</tr>

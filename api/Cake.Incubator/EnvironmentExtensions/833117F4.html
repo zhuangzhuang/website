@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
@@ -172,7 +173,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Retrieves the value of the environment variable or throws if the argument is missing
+            Retrieves the value of the environment variable or throws a <code class="cs"><a href="/api/Cake.Core/CakeException">CakeException</a></code> if the argument is missing
             </div>
 
 		<div class="panel panel-default">
@@ -194,6 +195,11 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static T EnvironmentVariable&lt;T&gt;(this ICakeContext context, string variable)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Returns the build number integer
+            <pre><code class="cs">var buildNumber = EnvironmentVariable&lt;int&gt;("BUILD_NUMBER");</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -230,7 +236,7 @@
 				</thead>
 					<tbody><tr id="typeparam-T">
 						<td>T</td>
-						<td></td>
+						<td>The type of the environment variable</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -255,7 +261,7 @@
 					<tr>
 						<td>variable</td>
 						<td>string</td>
-						<td>The environment variable.</td>
+						<td>The environment variable name.</td>
 					</tr>
 			</tbody></table>
 		</div>

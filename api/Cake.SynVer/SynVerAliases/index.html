@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - FilePathExtensions.GetMatchingFiles(ICakeContext, IEnumerable&lt;FilePath&gt;) Method</title>
+        <title>Cake - API - SynVerAliases Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -82,8 +82,7 @@
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -135,24 +134,14 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></li>
+		<li><a href="/api/Cake.SynVer.dll">Cake<wbr>.SynVer<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
-		<li class="header">Type</li>
-		<li><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></li>
+		<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/33C9824F">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/217F7FE6">GetFiles<wbr>(ICakeContext, <wbr>string[])<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Incubator/FilePathExtensions/84050F3A">GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/F5D1FB00">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/D901BD5F">GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/86D43598">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/17D03ADE">HasFileName<wbr>(FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/2C2CBEB8">IsProject<wbr>(FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/5587AA41">IsSolution<wbr>(FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/2DD7E4F1">Move<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FilePathExtensions/490287BD">Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
+			<li class="header">Class Types</li>
+				<li class="selected"><a href="/api/Cake.SynVer/SynVerAliases">SynVerAliases</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.SynVer/Magnitude">Magnitude</a></li>
 
 
                     </ul>
@@ -166,41 +155,64 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a>.</h3>
-	<h1>GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr> <small>Method</small></h1>
+	<h1>SynVerAliases <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Incubator" class="alert-link">https://github.com/cake-contrib/Cake.Incubator</a>.
+                        <a href="https://github.com/fsprojects/Cake.SynVer" class="alert-link">https://github.com/fsprojects/Cake.SynVer</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Returns files in the same directory that have the same name but different extensions
+            <p>Contains functionality related to the <a href="https://github.com/fsprojects/SyntacticVersioning">SyntacticVersioning</a>.</p>
+            <p>
+            In order to use the commands for this addin you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.SynVer</code></pre>
+            <p></p>
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
-				<dl class="dl-horizontal">	
-						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></dd>
-						
-						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Incubator/FilePathExtensions">FilePathExtensions</a></dd>		
-					
-				</dl>
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Cake.SynVer.dll">Cake<wbr>.SynVer<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></dd>
+											
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>object</li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Base0["object"]--&gt;Type
+	Type["SynVerAliases"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static IEnumerable&lt;IFile&gt; GetMatchingFiles(this ICakeContext context, IEnumerable&lt;FilePath&gt; files)</code></pre>
+	<pre><code>public static class SynVerAliases</code></pre>
 
 
 
@@ -215,7 +227,11 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>ComVisibleAttribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -223,48 +239,46 @@
 	</div>	
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td>the cake context</td>
-					</tr>
-					<tr>
-						<td>files</td>
-						<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
-						<td>the files to return matches for</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
-	<h1 id="ReturnValue">Return Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;IFile&gt;<wbr></td>
-					<td>a list of matching files</td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
+
+
+
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.SynVer/SynVerAliases/384A620D">SemVerMagnitude<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
+								<td><a href="/api/Cake.SynVer/Magnitude">Magnitude</a></td>
+								<td>
+									<div>
+            Get the magnitude by running SynVer.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SynVer/SynVerAliases/463184D1">SemVerMagnitude<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
+								<td><a href="/api/Cake.SynVer/Magnitude">Magnitude</a></td>
+								<td>
+									<div>
+            Get the magnitude by running SynVer.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 	

@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -170,8 +171,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Get a basic string representation of specified object.
-            </div>
+             Get a basic string representation of specified object.
+             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -192,6 +193,30 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static string Dump&lt;T&gt;(this T obj)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+             Generates a string representation of objects public properties and values.
+             <pre><code class="cs"> var person = new Person { Name = "Bob", Age = 24, Food = new[] { "Lasagne", "Pizza"} };
+ var data = person.Dump();
+
+ // output:
+ "Name: Bob\r\nAge: 24\r\nFood: Lasagne, Pizza";</code></pre>
+             
+             Useful in for logging objects, e.g.
+             <pre><code class="cs"> var gitVersionResults = GitVersion(new GitVersionSettings());
+ Information("GitResults -&gt; {0}", gitVersionResults.Dump());
+
+ // output:
+ GitResults -&gt; Major: 0
+ Minor: 1
+ Patch: 0
+ PreReleaseTag: dev-19.1
+ PreReleaseTagWithDash: -dev-19.1
+ PreReleaseLabel: dev-19
+ PreReleaseNumber: 1
+ BuildMetaData: 26
+ ..snip..</code></pre>
+             </div>
 
 
 
@@ -245,7 +270,7 @@
 				</thead>
 				<tbody><tr>
 					<td>string</td>
-					<td>String representation of object in format in format "Prop: PropValue\r\nArrayProp: ArrayVal1, ArrayVal2"</td>
+					<td>String representation of object in format in format `Prop: PropValue\r\nArrayProp: ArrayVal1, ArrayVal2`</td>
 				</tr>
 			</tbody></table>
 		</div>
