@@ -131,6 +131,7 @@
                     <ul class="sidebar-menu">
                         
 	<li class="header">Assemblies</li>   
+        <li><a href="/api/Cake.ActiveDirectory.dll">Cake<wbr>.ActiveDirectory<wbr>.dll</a></li>
         <li><a href="/api/Cake.Android.Adb.dll">Cake<wbr>.Android<wbr>.Adb<wbr>.dll</a></li>
         <li><a href="/api/Cake.Android.SdkManager.dll">Cake<wbr>.Android<wbr>.SdkManager<wbr>.dll</a></li>
         <li><a href="/api/Cake.AndroidAppManifest.dll">Cake<wbr>.AndroidAppManifest<wbr>.dll</a></li>
@@ -246,7 +247,14 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Email/EmailAliases">EmailAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Email</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Email/EmailProvider">EmailProvider</a></td>
@@ -256,15 +264,11 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Email/EmailResult">EmailResult</a></td>
-									<td>
-            The result of SendGridProvider API post
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Email/EmailSettings">EmailSettings</a></td>
-									<td>
-            Class that lets you override default API settings
-            </td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>

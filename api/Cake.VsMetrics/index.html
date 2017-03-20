@@ -135,7 +135,12 @@
 				<li class="treeview active">
 				<a href="/api/Cake">Cake</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
+			
+				<li class="treeview">
+				<a href="/api/Cake.ActiveDirectory">Cake<wbr>.ActiveDirectory</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.ActiveDirectory.Users">Cake<wbr>.ActiveDirectory<wbr>.Users</a></li>
+</ul></li>			<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
 			<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
 			<li><a href="/api/Cake.AndroidSdkManager">Cake<wbr>.AndroidSdkManager</a></li>
 
@@ -848,13 +853,21 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsAliases">VsMetricsAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
+            <p>
+            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
+            </p><pre><code class="cs">Setup(context =&gt; {
+    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
+});</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsRunner">VsMetricsRunner</a></td>
-									<td>
-            The VsMetrics runner.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsSettings">VsMetricsSettings</a></td>

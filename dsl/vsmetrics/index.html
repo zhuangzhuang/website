@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#General">General</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -140,6 +141,7 @@
     <li><a href="/dsl/xunit-v2">xUnit v2</a></li>        
 
 <li class="header">Addins</li>
+    <li><a href="/dsl/activedirectory">ActiveDirectory</a></li>        
     <li><a href="/dsl/android">Android</a></li>        
     <li><a href="/dsl/android-sdk-manager">Android SDK Manager</a></li>        
     <li><a href="/dsl/androidappmanifest">AndroidAppManifest</a></li>        
@@ -248,7 +250,19 @@
                             </div>
 
 
-    
+            <h1 id="Summary">Summary</h1>
+        <div>
+            <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
+            <p>
+            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
+            </p><pre><code class="cs">Setup(context =&gt; {
+    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
+});</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
+            <p></p>
+            </div>
+
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -259,6 +273,8 @@
 <a href="/api/Cake.VsMetrics/VsMetricsAliases/5ADE0658">VsMetrics<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Runs metrics.exe against the specified collection of input FilePath, and outputs to specified output FilePath
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.VsMetrics.dll">Cake<wbr>.VsMetrics<wbr>.dll</a></i></small>
@@ -269,6 +285,8 @@
 <a href="/api/Cake.VsMetrics/VsMetricsAliases/9F23E538">VsMetrics<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>FilePath, <wbr>VsMetricsSettings)<wbr></a>                            </td>
                             <td>
                                 
+             Runs metrics.exe against the specified collection of input FilePath, and outputs to specified output FilePath with the specified VsMetricsSettings
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.VsMetrics.dll">Cake<wbr>.VsMetrics<wbr>.dll</a></i></small>
