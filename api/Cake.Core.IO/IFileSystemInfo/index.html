@@ -152,9 +152,6 @@
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -166,6 +163,9 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -206,8 +206,8 @@
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
 											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
-											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
+											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -221,10 +221,10 @@ class Type type-node
 	click Implementing0 "/api/Cake.Core.IO/IDirectory"
 	Type-.-&gt;Implementing1["FakeFile"]
 	click Implementing1 "/api/Cake.Testing/FakeFile"
-	Type-.-&gt;Implementing2["IFile"]
-	click Implementing2 "/api/Cake.Core.IO/IFile"
-	Type-.-&gt;Implementing3["FakeDirectory"]
-	click Implementing3 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing2["FakeDirectory"]
+	click Implementing2 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing3["IFile"]
+	click Implementing3 "/api/Cake.Core.IO/IFile"
 
 						</div>
 					</div>

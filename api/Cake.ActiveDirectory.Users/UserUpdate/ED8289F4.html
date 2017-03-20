@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - TopshelfSettingsExtensions.SetDisplayname(TopshelfSettings, string) Method</title>
+        <title>Cake - API - UserUpdate.UpdateUser(string, string, UserSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -134,27 +134,16 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Topshelf.dll">Cake<wbr>.Topshelf<wbr>.dll</a></li>
+		<li><a href="/api/Cake.ActiveDirectory.dll">Cake<wbr>.ActiveDirectory<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a></li>
+		<li><a href="/api/Cake.ActiveDirectory.Users">Cake<wbr>.ActiveDirectory<wbr>.Users</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions">Topshelf<wbr>Settings<wbr>Extensions</a></li>
+		<li><a href="/api/Cake.ActiveDirectory.Users/UserUpdate">UserUpdate</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Cake.ActiveDirectory.Users/UserUpdate/B30149CC">UserUpdate<wbr>(IADOperator)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/CE7C3599">SetAutostart<wbr>(TopshelfSettings, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/C992D1F0">SetDelayed<wbr>(TopshelfSettings, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/05A5BFCF">SetDescription<wbr>(TopshelfSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/0179F2B2">SetDisabled<wbr>(TopshelfSettings, <wbr>bool)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/F51E701E">SetDisplayname<wbr>(TopshelfSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/A773306B">SetInstance<wbr>(TopshelfSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/228546E1">SetServiceName<wbr>(TopshelfSettings, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/C43D7E04">SetServiceName<wbr>(TopshelfSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/C9DB2CCB">UseLocalService<wbr>(TopshelfSettings, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/65451E82">UseLocalSystem<wbr>(TopshelfSettings, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/D0D17D7F">UseNetworkService<wbr>(TopshelfSettings, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/AE909BC0">UsePassword<wbr>(TopshelfSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/F91EC113">UseUsername<wbr>(TopshelfSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions/17F4BC48">WithArguments<wbr>(TopshelfSettings, <wbr>Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.ActiveDirectory.Users/UserUpdate/ED8289F4">UpdateUser<wbr>(string, <wbr>string, <wbr>UserSettings)<wbr></a></li>
 
 
                     </ul>
@@ -168,41 +157,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions">Topshelf<wbr>Settings<wbr>Extensions</a>.</h3>
-	<h1>SetDisplayname<wbr>(TopshelfSettings, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.ActiveDirectory.Users/UserUpdate">UserUpdate</a>.</h3>
+	<h1>UpdateUser<wbr>(string, <wbr>string, <wbr>UserSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/SharpeRAD/Cake.Topshelf" class="alert-link">https://github.com/SharpeRAD/Cake.Topshelf</a>.
+                        <a href="https://github.com/RadioSystems/Cake.ActiveDirectory" class="alert-link">https://github.com/RadioSystems/Cake.ActiveDirectory</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Specifies a friendly name that can be used by user interface programs to identify the service.
+            Updates a user account given the specified properties.
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Topshelf.dll">Cake<wbr>.Topshelf<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.ActiveDirectory.dll">Cake<wbr>.ActiveDirectory<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a></dd>
+						<dd><a href="/api/Cake.ActiveDirectory.Users">Cake<wbr>.ActiveDirectory<wbr>.Users</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Topshelf/TopshelfSettingsExtensions">Topshelf<wbr>Settings<wbr>Extensions</a></dd>		
+						<dd><a href="/api/Cake.ActiveDirectory.Users/UserUpdate">UserUpdate</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static TopshelfSettings SetDisplayname(this TopshelfSettings settings, string name)</code></pre>
+	<pre><code>public void UpdateUser(string attributeName, string attributeValue, UserSettings settings)</code></pre>
 
 
 
@@ -220,14 +209,19 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.Topshelf/TopshelfSettings">TopshelfSettings</a></td>
-						<td>The process settings.</td>
+						<td>attributeName</td>
+						<td>string</td>
+						<td>The name of the attribute to search by.</td>
 					</tr>
 					<tr>
-						<td>name</td>
+						<td>attributeValue</td>
 						<td>string</td>
-						<td>The friendly name of the service</td>
+						<td>The value of the attribute to search using.</td>
+					</tr>
+					<tr>
+						<td>settings</td>
+						<td><a href="/api/Cake.ActiveDirectory.Users/UserSettings">UserSettings</a></td>
+						<td>The user settings.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -244,8 +238,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.Topshelf/TopshelfSettings">TopshelfSettings</a></td>
-					<td>The same <code class="cs"><a href="/api/Cake.Topshelf/TopshelfSettings">TopshelfSettings</a></code> instance so that multiple calls can be chained.</td>
+					<td>void</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

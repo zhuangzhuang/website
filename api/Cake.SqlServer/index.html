@@ -136,7 +136,12 @@
 				<li class="treeview active">
 				<a href="/api/Cake">Cake</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
+			
+				<li class="treeview">
+				<a href="/api/Cake.ActiveDirectory">Cake<wbr>.ActiveDirectory</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.ActiveDirectory.Users">Cake<wbr>.ActiveDirectory<wbr>.Users</a></li>
+</ul></li>			<li><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></li>
 			<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
 			<li><a href="/api/Cake.AndroidSdkManager">Cake<wbr>.AndroidSdkManager</a></li>
 
@@ -853,21 +858,13 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/RestoreSqlBackupSettings">Restore<wbr>Sql<wbr>Backup<wbr>Settings</a></td>
-									<td></td>
+									<td>
+            Settings for restoring database from a backup file
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></td>
-									<td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
-            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            <p></p>
-            </td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>
