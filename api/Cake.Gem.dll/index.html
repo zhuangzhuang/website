@@ -197,8 +197,10 @@
         <li><a href="/api/Cake.Storyteller.dll">Cake<wbr>.Storyteller<wbr>.dll</a></li>
         <li><a href="/api/cake.strongnametool.dll">cake<wbr>.strongnametool<wbr>.dll</a></li>
         <li><a href="/api/Cake.SynVer.dll">Cake<wbr>.SynVer<wbr>.dll</a></li>
+        <li><a href="/api/Cake.Terraform.dll">Cake<wbr>.Terraform<wbr>.dll</a></li>
         <li><a href="/api/Cake.Tfx.dll">Cake<wbr>.Tfx<wbr>.dll</a></li>
         <li><a href="/api/Cake.Topshelf.dll">Cake<wbr>.Topshelf<wbr>.dll</a></li>
+        <li><a href="/api/Cake.Transifex.dll">Cake<wbr>.Transifex<wbr>.dll</a></li>
         <li><a href="/api/Cake.Twitter.dll">Cake<wbr>.Twitter<wbr>.dll</a></li>
         <li><a href="/api/Cake.Vagrant.dll">Cake<wbr>.Vagrant<wbr>.dll</a></li>
         <li><a href="/api/Cake.VersionReader.dll">Cake<wbr>.VersionReader<wbr>.dll</a></li>
@@ -247,13 +249,18 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Gem/GemAliases">GemAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://rubygems.org/pages/download">RubyGems Package Manager</a>.</p>
+            <p>
+            In order to use the commands for this addin, the gem utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Gem</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemArgumentBuilder_1">GemArgumentBuilder<wbr>&lt;T&gt;<wbr></a></td>
-									<td>
-            The top level argument builder for the Gem CLI Tool
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Build/GemBuildRunner">GemBuildRunner</a></td>
@@ -281,9 +288,7 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemSettings">GemSettings</a></td>
-									<td>
-            Contains the common settings used by all commands in Gem.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemTool_1">GemTool<wbr>&lt;TSettings&gt;<wbr></a></td>

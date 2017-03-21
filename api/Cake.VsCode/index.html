@@ -578,6 +578,7 @@
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
 			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
+			<li><a href="/api/Cake.Terraform">Cake<wbr>.Terraform</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -598,6 +599,7 @@
 			<li><a href="/api/Cake.Tfx.Extension.Publish">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Tfx.Extension.Share">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Share</a></li>
 </ul></li></ul></li>			<li><a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a></li>
+			<li><a href="/api/Cake.Transifex">Cake<wbr>.Transifex</a></li>
 			<li><a href="/api/Cake.Twitter">Cake<wbr>.Twitter</a></li>
 
 				<li class="treeview">
@@ -874,7 +876,14 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsCode/VsceAliases">VsceAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.VsCode</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VscePackager">VscePackager</a></td>

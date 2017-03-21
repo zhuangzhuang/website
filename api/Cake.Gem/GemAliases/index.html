@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -166,7 +167,16 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>Contains functionality related to the <a href="https://rubygems.org/pages/download">RubyGems Package Manager</a>.</p>
+            <p>
+            In order to use the commands for this addin, the gem utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Gem</code></pre>
+            <p></p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -246,7 +256,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemAliases/5F6EE0D4">GemBuild<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Builds the gem using the path to the gemspec file.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -254,7 +266,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemAliases/5189C59E">GemBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>GemBuildSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Builds the gem using the path to the gemspec file and any additional settings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -262,7 +276,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemAliases/53E60182">GemPush<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Pushes the gem using the path to the gem file.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -270,7 +286,9 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemAliases/117D3AAB">GemPush<wbr>(ICakeContext, <wbr>FilePath, <wbr>GemPushSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Pushes the gem using the path to the gem file and any additional settings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

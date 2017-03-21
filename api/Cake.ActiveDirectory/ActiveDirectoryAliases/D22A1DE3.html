@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -169,7 +171,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Finds User Principal Name by Property Value.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -189,6 +195,13 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static string FindUserPrincipalNameByProperty(this ICakeContext context, string propertyName, string propertyValue, UserSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">var upn = FindUserPrincipalNameByProperty("proxyAddresses", "jdoe@example.com", new UserSettings { 
+    LoginName = "domainAdmin", 
+    Password = "adminPassword", 
+    DomainName = "Cake.net" });</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -232,22 +245,22 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>propertyName</td>
 						<td>string</td>
-						<td></td>
+						<td>The property name to search against.</td>
 					</tr>
 					<tr>
 						<td>propertyValue</td>
 						<td>string</td>
-						<td></td>
+						<td>The property value to search.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.ActiveDirectory.Users/UserSettings">UserSettings</a></td>
-						<td></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -265,7 +278,7 @@
 				</thead>
 				<tbody><tr>
 					<td>string</td>
-					<td></td>
+					<td>User Principal Name</td>
 				</tr>
 			</tbody></table>
 		</div>

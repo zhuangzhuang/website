@@ -580,6 +580,7 @@
 			<li><a href="/api/Cake.Storyteller">Cake<wbr>.Storyteller</a></li>
 			<li><a href="/api/Cake.StrongNameTool">Cake<wbr>.StrongNameTool</a></li>
 			<li><a href="/api/Cake.SynVer">Cake<wbr>.SynVer</a></li>
+			<li><a href="/api/Cake.Terraform">Cake<wbr>.Terraform</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Testing">Cake<wbr>.Testing</a> <a href="#" class="expand"></a>
@@ -600,6 +601,7 @@
 			<li><a href="/api/Cake.Tfx.Extension.Publish">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Tfx.Extension.Share">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Share</a></li>
 </ul></li></ul></li>			<li><a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a></li>
+			<li><a href="/api/Cake.Transifex">Cake<wbr>.Transifex</a></li>
 			<li><a href="/api/Cake.Twitter">Cake<wbr>.Twitter</a></li>
 
 				<li class="treeview">
@@ -876,7 +878,14 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
+            <p>
+            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Tfx</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></td>
@@ -916,9 +925,7 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></td>
-									<td>
-            The authentication type to use for Tfx commands
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></td>
