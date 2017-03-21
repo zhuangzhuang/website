@@ -136,9 +136,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></li>
@@ -166,6 +163,9 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -204,8 +204,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeFileSystem">FakeFileSystem</a></li>								
 											<li><a href="/api/Cake.Core.IO/FileSystem">FileSystem</a></li>								
+											<li><a href="/api/Cake.Testing/FakeFileSystem">FakeFileSystem</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -215,10 +215,10 @@
 							graph TD
 	Type["IFileSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeFileSystem"]
-	click Implementing0 "/api/Cake.Testing/FakeFileSystem"
-	Type-.-&gt;Implementing1["FileSystem"]
-	click Implementing1 "/api/Cake.Core.IO/FileSystem"
+	Type-.-&gt;Implementing0["FileSystem"]
+	click Implementing0 "/api/Cake.Core.IO/FileSystem"
+	Type-.-&gt;Implementing1["FakeFileSystem"]
+	click Implementing1 "/api/Cake.Testing/FakeFileSystem"
 
 						</div>
 					</div>
