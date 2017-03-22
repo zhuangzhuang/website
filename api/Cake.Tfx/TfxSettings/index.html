@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -201,8 +201,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -214,10 +214,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TfxSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxServerSettings"]
-	click Derived0 "/api/Cake.Tfx/TfxServerSettings"
-	Type--&gt;Derived1["TfxExtensionCreateSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived0["TfxExtensionCreateSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived1["TfxServerSettings"]
+	click Derived1 "/api/Cake.Tfx/TfxServerSettings"
 
 						</div>
 					</div>
@@ -314,6 +314,7 @@ class Type type-node
 				</div>
 			</div>
 		
+
 
 
 			<h1 id="ExtensionMethods">Extension Methods</h1>

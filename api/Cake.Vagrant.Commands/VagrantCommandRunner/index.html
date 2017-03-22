@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -195,10 +195,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantDockerRunner">VagrantDockerRunner</a></li>								
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></li>								
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantBoxRunner">VagrantBoxRunner</a></li>								
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantDockerRunner">VagrantDockerRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -210,14 +210,14 @@
 	Base0["object"]--&gt;Type
 	Type["VagrantCommandRunner"]
 class Type type-node
-	Type--&gt;Derived0["VagrantDockerRunner"]
-	click Derived0 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
+	Type--&gt;Derived0["VagrantPluginRunner"]
+	click Derived0 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
 	Type--&gt;Derived1["VagrantSnapshotRunner"]
 	click Derived1 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
-	Type--&gt;Derived2["VagrantPluginRunner"]
-	click Derived2 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
-	Type--&gt;Derived3["VagrantBoxRunner"]
-	click Derived3 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
+	Type--&gt;Derived2["VagrantBoxRunner"]
+	click Derived2 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
+	Type--&gt;Derived3["VagrantDockerRunner"]
+	click Derived3 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
 
 						</div>
 					</div>
@@ -278,6 +278,7 @@ class Type type-node
 				</div>
 			</div>
 		
+
 
 
 			<h1 id="ExtensionMethods">Extension Methods</h1>

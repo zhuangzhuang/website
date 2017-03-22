@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -107,6 +107,7 @@
                 <li><a href="/docs/tutorials/setting-up-a-new-project">Setting Up A New Project</a></li>
                 <li><a href="/docs/tutorials/powershell-security">Powershell Security</a></li>
                 <li><a href="/docs/tutorials/extending-the-bootstrapper">Extending The Bootstrapper</a></li>
+                <li><a href="/docs/tutorials/pinning-cake-version">Pinning Cake Version</a></li>
 
                     </ul>
                 </li>
@@ -203,18 +204,18 @@ is <a href="http://www.howtogeek.com/70012/what-causes-the-file-downloaded-from-
 otherwise you will run into issues when attempting to execute Cake.</p>
 <h2 id="files-of-interest">Files of interest</h2>
 <p>You need three files for a build (these will be the only files you need to
-commit to your repo to use Cake):</p>
+commit to your repo to use Cake, see how to <a href="/docs/tutorials/pinning-cake-version">pinning cake version</a> for further guidance.):</p>
 <ul class="fa-ul" style="padding-left: 0px; padding-top: 10px;">
     <li style="padding-left: 0px">
         <i class="fa-li fa fa-file-o"></i><b>build.ps1</b>
         <ul style="padding-left: 0px; list-style-type: none;">
             <li style="padding-left: 3px; margin-top: 5px;">
-                This is a bootstrapper powershell script that ensures you have 
-                Cake and required dependencies installed. The bootstrapper 
-                script is also responsible for invoking Cake.  This file is optional, 
+                This is a bootstrapper powershell script that ensures you have
+                Cake and required dependencies installed. The bootstrapper
+                script is also responsible for invoking Cake.  This file is optional,
                 and not a hard requirement.  If you would prefer not to use PowerShell
                 you can invoke Cake directly from the command line, once you have downloaded
-                and extracted it. 
+                and extracted it.
             </li>
         </ul>
     </li>
@@ -222,7 +223,7 @@ commit to your repo to use Cake):</p>
         <i class="fa-li fa fa-file-o"></i><b>build.cake</b>
         <ul style="padding-left: 0px; list-style-type: none;">
             <li style="padding-left: 3px; margin-top: 5px;">
-                This is the actual build script. It doesn't have to be named 
+                This is the actual build script. It doesn't have to be named
                 this but this will be found by default.
             </li>
         </ul>
@@ -231,9 +232,9 @@ commit to your repo to use Cake):</p>
         <i class="fa-li fa fa-file-o"></i><b>tools/packages.config</b>
         <ul style="padding-left: 0px; list-style-type: none;">
             <li style="padding-left: 3px; margin-top: 5px;">
-                This is the package configuration that tells the 
-                bootstrapper script what NuGet packages to install in 
-                the tools folder. An example of this is Cake itself or 
+                This is the package configuration that tells the
+                bootstrapper script what NuGet packages to install in
+                the tools folder. An example of this is Cake itself or
                 additional tools such as unit test runners, ILMerge etc.
             </li>
         </ul>
