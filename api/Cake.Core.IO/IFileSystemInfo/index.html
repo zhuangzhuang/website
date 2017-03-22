@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -204,10 +204,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
-											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
-											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
+											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
+											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
+											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -217,14 +217,14 @@
 							graph TD
 	Type["IFileSystemInfo"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeFile"]
-	click Implementing0 "/api/Cake.Testing/FakeFile"
-	Type-.-&gt;Implementing1["IDirectory"]
-	click Implementing1 "/api/Cake.Core.IO/IDirectory"
+	Type-.-&gt;Implementing0["FakeDirectory"]
+	click Implementing0 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing1["FakeFile"]
+	click Implementing1 "/api/Cake.Testing/FakeFile"
 	Type-.-&gt;Implementing2["IFile"]
 	click Implementing2 "/api/Cake.Core.IO/IFile"
-	Type-.-&gt;Implementing3["FakeDirectory"]
-	click Implementing3 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing3["IDirectory"]
+	click Implementing3 "/api/Cake.Core.IO/IDirectory"
 
 						</div>
 					</div>
@@ -285,6 +285,7 @@ class Type type-node
 				</div>
 			</div>
 		
+
 
 
 			<h1 id="ExtensionMethods">Extension Methods</h1>

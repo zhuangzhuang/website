@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -170,7 +172,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Gets or sets a value controlling whether to run provisioners on reload.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<dl class="dl-horizontal">	
@@ -191,6 +197,8 @@
 	<pre><code>public bool RunProvisioners { get; set; }</code></pre>
 
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>Defaults to false</div>
 
 
 
@@ -206,7 +214,7 @@
 				</thead>
 				<tbody><tr>
 					<td>bool</td>
-					<td></td>
+					<td><code class="cs">true</code> to run provisioners, otherwise they will not be run.</td>
 				</tr>
 			</tbody></table>
 		</div>

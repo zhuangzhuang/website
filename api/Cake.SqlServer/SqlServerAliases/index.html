@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -167,7 +168,19 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
+            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -257,7 +270,10 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/698DA7E9">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an empty database. If database with this name already exists, throws a SqlException.
+            <code class="cs">Cake.SqlServer.SqlServerAliases.CreateDatabaseIfNotExists(Cake.Core.ICakeContext,System.String,System.String)</code> if you would like to check if database already exists.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -285,7 +301,11 @@ class Type type-node
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/AC2ED47F">DropDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Drops database. Before dropping the DB, database is set to be offline, then online again.
+            This is to be sure that there are no live connections, otherwise the script will fail.
+            Also if the database does not exist - it will not do anything.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -386,6 +406,7 @@ class Type type-node
 				</div>
 			</div>
 		
+
 
 
 	

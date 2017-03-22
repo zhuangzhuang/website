@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -170,11 +168,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Sends an email via the SendGrid API, based on the provided settings
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -194,46 +188,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public EmailResult SendEmail(string senderName, string senderAddress, string recipientName, string recipientAddress, string subject, string content, bool sendAsHtml, EmailSettings settings)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            var smtpHost = "... your smtp host ...";
-            var port = 1234;
-            var enableSsl = true;
-            var username = "... your username ...";
-            var password = "... your password ...";
-            try
-            {
-                var result = Email.Send(
-                    senderName: "Bob Smith",
-                    senderAddress: "bob@example.com",
-                    recipientName: "Jane Doe",
-                    recipientAddress: "jane@example.com",
-                    subject: "This is a test",
-                    content: "This is a test",
-                    sendAsHtml: true,
-                    settings: new EmailSettings
-                    {
-                        SmtpHost = smtpHost,
-                        Port = port,
-                        EnableSsl = enableSsl,
-                        Username = username,
-                        Password = password
-                    }
-                );
-                if (result.Ok)
-                {
-                    Information("Email succcessfully sent");
-                }
-                else
-                {
-                    Error("Failed to send email: {0}", result.Error);
-                }
-            }
-            catch(Exception ex)
-            {
-                Error("{0}", ex);
-            }
-            </div>
 
 
 
@@ -252,42 +206,42 @@
 					<tbody><tr>
 						<td>senderName</td>
 						<td>string</td>
-						<td>The name of the person sending the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>senderAddress</td>
 						<td>string</td>
-						<td>The email address of the person sending the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>recipientName</td>
 						<td>string</td>
-						<td>The name of the person who will receive the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>recipientAddress</td>
 						<td>string</td>
-						<td>The email address of the person who will recieve the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>subject</td>
 						<td>string</td>
-						<td>The subject line of the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>content</td>
 						<td>string</td>
-						<td>The body of the email</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>sendAsHtml</td>
 						<td>bool</td>
-						<td>Indicates if the content should be sent as HTML</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Email/EmailSettings">EmailSettings</a></td>
-						<td>The settings to be used when sending the email</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -305,7 +259,7 @@
 				</thead>
 				<tbody><tr>
 					<td><a href="/api/Cake.Email/EmailResult">EmailResult</a></td>
-					<td>An instance of <code class="cs"><a href="/api/Cake.Email/EmailResult">EmailResult</a></code> indicating success/failure</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
