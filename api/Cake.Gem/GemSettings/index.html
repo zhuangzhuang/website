@@ -190,8 +190,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Gem.Push/GemPushSettings">GemPushSettings</a></li>								
 											<li><a href="/api/Cake.Gem.Build/GemBuildSettings">GemBuildSettings</a></li>								
+											<li><a href="/api/Cake.Gem.Push/GemPushSettings">GemPushSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -203,10 +203,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["GemSettings"]
 class Type type-node
-	Type--&gt;Derived0["GemPushSettings"]
-	click Derived0 "/api/Cake.Gem.Push/GemPushSettings"
-	Type--&gt;Derived1["GemBuildSettings"]
-	click Derived1 "/api/Cake.Gem.Build/GemBuildSettings"
+	Type--&gt;Derived0["GemBuildSettings"]
+	click Derived0 "/api/Cake.Gem.Build/GemBuildSettings"
+	Type--&gt;Derived1["GemPushSettings"]
+	click Derived1 "/api/Cake.Gem.Push/GemPushSettings"
 
 						</div>
 					</div>
@@ -294,9 +294,7 @@ class Type type-node
 								<td><a href="/api/Cake.Gem/GemSettings/0117CA75">Verbose</a></td>
 								<td>bool</td>
 								<td>
-									<div>
-            Gets or sets a value indicating whether to use verbose level of output.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>

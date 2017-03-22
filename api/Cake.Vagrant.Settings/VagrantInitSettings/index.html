@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -186,7 +187,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                Additional settings for the <code class="cs">vagrant init</code> command
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -273,28 +278,37 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings/E95CA8F6">Force</a></td>
 								<td>bool?</td>
 								<td>
-									<div></div>
+									<div>
+                Gets or sets a value indicating whether to force initialization, even if an existing Vagrantfile is found
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings/00BABA84">Minimal</a></td>
 								<td>bool?</td>
 								<td>
-									<div></div>
+									<div>
+                This enables the creation of a more minimal Vagrantfile that does not contain the instructional comments the normal
+                Vagrantfile contains
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings/1DC67FA0">OutputFile</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+                Gets or sets the file to output the Vagrantfile to
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings/154D3D51">VersionConstraint</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+                The box version or box version constraint to add to the Vagrantfile
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -317,7 +331,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings/02F79B68">GetToolArguments<wbr>()<wbr></a></td>
 								<td>Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+                Gets the command arguments corresponding to the specified settings
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -340,7 +356,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions/B0D6A255">ConstrainVersion<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings">VagrantInitSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Sets the box version or box version constraint to add to the Vagrantfile
+            </div>
 										<div><small><em>From <a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions">Vagrant<wbr>Init<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -348,7 +366,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions/912CC505">CreateMinimal<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings">VagrantInitSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Enables creation of a more minimal Vagrantfile without instructional comments
+            </div>
 										<div><small><em>From <a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions">Vagrant<wbr>Init<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -366,7 +386,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions/DE736D54">Force<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings">VagrantInitSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Enables overwriting any existing Vagrantfile
+            </div>
 										<div><small><em>From <a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions">Vagrant<wbr>Init<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -374,7 +396,9 @@ class Type type-node
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions/13650EFC">OutputToFile<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantInitSettings">VagrantInitSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+                Sets the <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code> to output the new Vagrantfile to
+            </div>
 										<div><small><em>From <a href="/api/Cake.Vagrant.Settings/VagrantInitSettingsExtensions">Vagrant<wbr>Init<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
