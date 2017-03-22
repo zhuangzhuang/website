@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -182,11 +180,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Creates a bacpac file for easy database backuping. 
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -206,22 +200,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void CreateBacpacFile(this ICakeContext context, string connectionString, string databaseName, FilePath resultingFilePath)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">    #addin "nuget:?package=Cake.SqlServer"
-
-    Task("Create-Bacpac")
-    	.Does(() =&gt;{
-    		var connString = @"data source=(LocalDb)\v12.0";
-    
-    		var dbName = "ForBacpac";
-    
-    		CreateDatabase(connString, dbName);
-    
-    		CreateBacpacFile(connString, dbName, new FilePath(@".\ForBacpac.bacpac"));
-    	});
-    });        </code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -257,22 +235,22 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The Cake context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>connectionString</td>
 						<td>string</td>
-						<td>The connection string. You may want to connect to master database for this operation.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>databaseName</td>
 						<td>string</td>
-						<td>Name of the database you'd like to create a bacpac from</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>resultingFilePath</td>
 						<td>FilePath</td>
-						<td>Full path where you'd like to store resulting bacpac</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
