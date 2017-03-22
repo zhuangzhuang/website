@@ -120,6 +120,7 @@
     <li><a href="/addins/kudu">Kudu</a></li>    
     <li><a href="/addins/localization">Localization</a></li>    
     <li><a href="/addins/metrics">Metrics</a></li>    
+    <li><a href="/addins/microservices">MicroServices</a></li>    
     <li><a href="/addins/misc">Misc</a></li>    
     <li><a href="/addins/mobile">Mobile</a></li>    
     <li><a href="/addins/msbuild">MSBuild</a></li>    
@@ -149,6 +150,9 @@
     <li><a href="/addins/vsts">VSTS</a></li>    
     <li><a href="/addins/windows">Windows</a></li>    
     <li><a href="/addins/xcode">XCode</a></li>    
+    <li><a href="/addins/xcomponent">XComponent</a></li>    
+    <li><a href="/addins/xcstudio">XCStudio</a></li>    
+    <li><a href="/addins/xctools">XCTools</a></li>    
 
 
                     </ul>
@@ -167,54 +171,6 @@
     <p>This page contain third party addins for Cake. If you want to file an issue for any addin listed here, contact the author of the addin.</p>
 <p>If you're an addin author and want your addin listed here, follow the instructions <a href="https://github.com/cake-build/website/blob/develop/README.md#addins">here</a>.</p>
 
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.CloudFront</h3>
-        </div>
-        <div class="panel-body">
-                <p>AWS CloudFront addin for Cake.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>SharpeRAD</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Cake.AWS.CloudFront">Cake.AWS.CloudFront</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/SharpeRAD/Cake.AWS.CloudFront">https://github.com/SharpeRAD/Cake.AWS.CloudFront</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.ElasticLoadBalancing</h3>
-        </div>
-        <div class="panel-body">
-                <p>AWS ElasticLoadBalancing addin for Cake.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>SharpeRAD</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Cake.AWS.ElasticLoadBalancing">Cake.AWS.ElasticLoadBalancing</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/SharpeRAD/Cake.AWS.ElasticLoadBalancing">https://github.com/SharpeRAD/Cake.AWS.ElasticLoadBalancing</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.S3</h3>
-        </div>
-        <div class="panel-body">
-                <p>AWS S3 addin for Cake.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>SharpeRAD</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Cake.AWS.S3">Cake.AWS.S3</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/SharpeRAD/Cake.AWS.S3">https://github.com/SharpeRAD/Cake.AWS.S3</a></dd>
-            </dl>
-        </div>
-    </div>
 <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.CodeDeploy</h3>
@@ -244,6 +200,54 @@
                     <dd><a href="https://www.nuget.org/packages/Cake.AWS.Route53">Cake.AWS.Route53</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/SharpeRAD/Cake.AWS.Route53">https://github.com/SharpeRAD/Cake.AWS.Route53</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.S3</h3>
+        </div>
+        <div class="panel-body">
+                <p>AWS S3 addin for Cake.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>SharpeRAD</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.AWS.S3">Cake.AWS.S3</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/SharpeRAD/Cake.AWS.S3">https://github.com/SharpeRAD/Cake.AWS.S3</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.CloudFront</h3>
+        </div>
+        <div class="panel-body">
+                <p>AWS CloudFront addin for Cake.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>SharpeRAD</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.AWS.CloudFront">Cake.AWS.CloudFront</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/SharpeRAD/Cake.AWS.CloudFront">https://github.com/SharpeRAD/Cake.AWS.CloudFront</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.AWS.ElasticLoadBalancing</h3>
+        </div>
+        <div class="panel-body">
+                <p>AWS ElasticLoadBalancing addin for Cake.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>SharpeRAD</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.AWS.ElasticLoadBalancing">Cake.AWS.ElasticLoadBalancing</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/SharpeRAD/Cake.AWS.ElasticLoadBalancing">https://github.com/SharpeRAD/Cake.AWS.ElasticLoadBalancing</a></dd>
             </dl>
         </div>
     </div>

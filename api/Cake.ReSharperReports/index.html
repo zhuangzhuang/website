@@ -616,7 +616,13 @@
 			<li><a href="/api/Cake.Wyam">Cake<wbr>.Wyam</a></li>
 			<li><a href="/api/Cake.Xamarin">Cake<wbr>.Xamarin</a></li>
 			<li><a href="/api/Cake.XCode">Cake<wbr>.XCode</a></li>
-			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.XComponent.Exception">Cake<wbr>.XComponent<wbr>.Exception</a></li>
+			<li><a href="/api/Cake.XComponent.Utils">Cake<wbr>.XComponent<wbr>.Utils</a></li>
+</ul></li>			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
 			<li><a href="/api/Cake.Yaml">Cake<wbr>.Yaml</a></li>
 			<li><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></li>
 </ul></li>			<li><a href="/api/Costura">Costura</a></li>
@@ -855,17 +861,25 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsAliases">Re<wbr>Sharper<wbr>Reports<wbr>Aliases</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsRunner">Re<wbr>Sharper<wbr>Reports<wbr>Runner</a></td>
 									<td>
-            The ReSharperReports runner.
+            <p>Contains functionality related to the <a href="https://github.com/gep13/ReSharperReports">ReSharperReports</a> tool.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and reference from NuGet.org:
+            </p><pre><code class="cs">#tool ReSharperReports</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.ReSharperReports</code></pre>
+            <p></p>
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsSettings">Re<wbr>Sharper<wbr>Reports<wbr>Settings</a></td>
+								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsRunner">Re<wbr>Sharper<wbr>Reports<wbr>Runner</a></td>
 									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsSettings">Re<wbr>Sharper<wbr>Reports<wbr>Settings</a></td>
+									<td>
+            Contains settings used by <code class="cs"><a href="/api/Cake.ReSharperReports/ReSharperReportsRunner">ReSharperReportsRunner</a></code>.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

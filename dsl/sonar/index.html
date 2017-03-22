@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -152,6 +151,8 @@
     <li><a href="/dsl/autorest">AutoRest</a></li>        
     <li><a href="/dsl/aws">AWS</a></li>        
     <li><a href="/dsl/azurestorage">AzureStorage</a></li>        
+    <li><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></li>        
+    <li><a href="/dsl/cake-extension-for-xctools">Cake Extension for XcTools</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
     <li><a href="/dsl/cocoapods">CocoaPods</a></li>        
@@ -252,19 +253,7 @@
                             </div>
 
 
-            <h1 id="Summary">Summary</h1>
-        <div>
-            <p>
-            Contains functionality for running a Sonar analysis on a c# project using the MSBuild SonarQube Runner.
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#addin "nuget:?package=Cake.Sonar"
-#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"</code></pre>
-            <p></p>
-            </div>
-
+    
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -275,9 +264,6 @@
 <a href="/api/Cake.Sonar/SonarCakeAliases/3164E7FB">Sonar<wbr>(ICakeContext, <wbr>Action<wbr>&lt;ICakeContext&gt;<wbr>, <wbr>SonarBeginSettings)<wbr></a>                            </td>
                             <td>
                                 
-            Run a self-contained analysis for the specified action. 
-            The action should run msbuild.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></i></small>
@@ -288,8 +274,6 @@
 <a href="/api/Cake.Sonar/SonarCakeAliases/D66E127A">SonarBegin<wbr>(ICakeContext, <wbr>SonarBeginSettings)<wbr></a>                            </td>
                             <td>
                                 
-            Initialise msbuild for sonar analysis.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></i></small>
@@ -300,9 +284,6 @@
 <a href="/api/Cake.Sonar/SonarCakeAliases/3294EAAF">SonarEnd<wbr>(ICakeContext, <wbr>SonarEndSettings)<wbr></a>                            </td>
                             <td>
                                 
-            Run the actual sonar analysis and push them to sonar. 
-            This call should follow after a SonarBegin and MSBuild.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></i></small>

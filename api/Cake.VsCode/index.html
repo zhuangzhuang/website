@@ -617,7 +617,13 @@
 			<li><a href="/api/Cake.Wyam">Cake<wbr>.Wyam</a></li>
 			<li><a href="/api/Cake.Xamarin">Cake<wbr>.Xamarin</a></li>
 			<li><a href="/api/Cake.XCode">Cake<wbr>.XCode</a></li>
-			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.XComponent.Exception">Cake<wbr>.XComponent<wbr>.Exception</a></li>
+			<li><a href="/api/Cake.XComponent.Utils">Cake<wbr>.XComponent<wbr>.Utils</a></li>
+</ul></li>			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
 			<li><a href="/api/Cake.Yaml">Cake<wbr>.Yaml</a></li>
 			<li><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></li>
 </ul></li>			<li><a href="/api/Costura">Costura</a></li>
@@ -876,13 +882,18 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsCode/VsceAliases">VsceAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.VsCode</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VscePackager">VscePackager</a></td>
-									<td>
-            The Vsce Packager used to package VsCode Extensions
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VscePackageSettings">VscePackageSettings</a></td>
@@ -898,9 +909,7 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VscePublishSettings">VscePublishSettings</a></td>
-									<td>
-            Contains settings used by <code class="cs"><a href="/api/Cake.VsCode/VscePublisher">VscePublisher</a></code>.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsCode/VsceTool_1">VsceTool<wbr>&lt;TSettings&gt;<wbr></a></td>

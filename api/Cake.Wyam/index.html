@@ -616,7 +616,13 @@
 			<li class=" selected"><a href="/api/Cake.Wyam">Cake<wbr>.Wyam</a></li>
 			<li><a href="/api/Cake.Xamarin">Cake<wbr>.Xamarin</a></li>
 			<li><a href="/api/Cake.XCode">Cake<wbr>.XCode</a></li>
-			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.XComponent.Exception">Cake<wbr>.XComponent<wbr>.Exception</a></li>
+			<li><a href="/api/Cake.XComponent.Utils">Cake<wbr>.XComponent<wbr>.Utils</a></li>
+</ul></li>			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
 			<li><a href="/api/Cake.Yaml">Cake<wbr>.Yaml</a></li>
 			<li><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></li>
 </ul></li>			<li><a href="/api/Costura">Costura</a></li>
@@ -855,13 +861,18 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Wyam/NuGetSettings">NuGetSettings</a></td>
-									<td>
-            Settings for specifying NuGet packages.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamAliases">WyamAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to <a href="https://github.com/Wyamio/Wyam">Wyam</a>.</p>
+            <p>
+            In order to use the commands for this alias, include the following in your build.cake file to download and install from NuGet.org, or specify the ToolPath within the WyamSettings class:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.Wyam"
+#tool "nuget:?package=Wyam"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamRunner">WyamRunner</a></td>
