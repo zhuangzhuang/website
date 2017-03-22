@@ -159,6 +159,8 @@
     <li><a href="/dsl/autorest">AutoRest</a></li>        
     <li><a href="/dsl/aws">AWS</a></li>        
     <li><a href="/dsl/azurestorage">AzureStorage</a></li>        
+    <li><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></li>        
+    <li><a href="/dsl/cake-extension-for-xctools">Cake Extension for XcTools</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
     <li><a href="/dsl/cocoapods">CocoaPods</a></li>        
@@ -352,14 +354,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Aliases for Putty.
-            
-
-            Contains functionality for working with PSCP.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -480,7 +476,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -675,7 +671,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -723,7 +719,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB commands
+             Cake build aliases for Android ADB Activity Manager commands
              </td>
                 </tr>
                 <tr>
@@ -765,11 +761,21 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Cloud Front distributions
+            Contains Cake aliases for configuring Amazon Elastic Load Balancers
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></td>
+                    <td>
+            Cake Extension for XComponent Studio
+            </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/cake-extension-for-xctools">Cake Extension for XcTools</a></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -832,19 +838,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/curl">Curl</a></td>
-                    <td>
-            <p>
-            Contains aliases related to <a href="https://curl.haxx.se">curl</a>.
-            </p>
-            <p>
-            In order to use the commands for this add-in, a version of curl will need
-            to be installed on the machine where the Cake script is being executed.
-            While curl is usually included in most Unix-based operating systems, you
-            will likely have to install it yourself on Windows.
-            The Windows version of curl is also part of <a href="https://www.cygwin.com">Cygwin</a>.
-            </p>
-            <pre><code class="cs">#addin Cake.Curl</code></pre>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/database">Database</a></td>
@@ -996,12 +990,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            The result of SendGridProvider API post
             </td>
                 </tr>
                 <tr>
@@ -1026,14 +1015,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Aliases for Putty.
-            
-
-            Contains functionality for working with PSCP.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1079,12 +1062,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1145,7 +1123,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -1179,9 +1157,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
-                    <td>
-            Simple GitHub release publishing
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/orchard">Orchard</a></td>
@@ -1247,7 +1223,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of SendGridProvider API post
             </td>
                 </tr>
                 <tr>
