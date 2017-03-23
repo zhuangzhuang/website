@@ -4,7 +4,24 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-03-22T23:14:52Z</updated>
+	<updated>2017-03-23T23:46:26Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/03/cake-v0.19.0-released" />
+		<id>http://cakebuild.net/blog/2017/03/cake-v0.19.0-released</id>
+		<title>Cake v0.19.0 released</title>
+		<updated>2017-03-23T00:00:00Z</updated>
+		<summary>&lt;p&gt;Version 0.19.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This release of Cake is a smaller release in preparation for upgrading Cake itself to utilize latest RTM .NET SDK and Visual Studio 2017. The goal for v0.20.0 is also to unify around one scripting engine - Roslyn version 2.0 and depreciating the Mono scripting engine, this will likely result in raising the minimum supported version of .NET and Mono. We will before next release document and communicate exact versions.&lt;/p&gt;
+&lt;p&gt;We strongly recommend you pin the current version of Cake your using to avoid any unplanned interruption in your builds as the result of any potential future breaking changes. The &lt;a href="http://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;Pinning Cake Version&lt;/a&gt; under the tutorials section of our website describes how to achieve this with the default bootstrappers.&lt;/p&gt;
+&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
+&lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -259,19 +276,5 @@ will be published soon.&lt;/p&gt;
 
 &lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>devlead</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/06/cake-joins-dotnetfoundation" />
-		<id>http://cakebuild.net/blog/2016/06/cake-joins-dotnetfoundation</id>
-		<title>Cake joins the .NET foundation</title>
-		<updated>2016-06-09T00:00:00Z</updated>
-		<summary>&lt;p&gt;It’s been an amazing journey since the push of the first public commit of Cake in May 2014, in just two years we’ve seen 72 releases, had more than 60 contributors, over a thousand issues and pull requests proposed. And on top of that a small eco system of more than 50 community provided Cake addins.&lt;/p&gt;
-&lt;p&gt;So firstly a huge thank you to all our contributors and adopters! This wouldn’t have been possible without you! It’s truly amazing to see the increase in contribution and adoption of Cake.&lt;/p&gt;
-&lt;p&gt;Today we’re really excited and happy to share that Cake is joining the .NET foundation!&lt;/p&gt;
-&lt;p&gt;So what does this mean for Cake? It’ll still be maintained and governed by the same team as now, but with the support and guidance of the .NET foundation, ensuring the longevity of the project.&lt;/p&gt;
-&lt;p&gt;Read more about Cake joining on the .NET foundation &lt;a href="http://www.dotnetfoundation.org/blog/cake-welcome"&gt;blog&lt;/a&gt;.&lt;/p&gt;</summary>
 	</entry>
 </feed>

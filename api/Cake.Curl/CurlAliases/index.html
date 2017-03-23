@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -167,7 +168,21 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>
+            Contains aliases related to <a href="https://curl.haxx.se">curl</a>.
+            </p>
+            <p>
+            In order to use the commands for this add-in, a version of curl will need
+            to be installed on the machine where the Cake script is being executed.
+            While curl is usually included in most Unix-based operating systems, you
+            will likely have to install it yourself on Windows.
+            The Windows version of curl is also part of <a href="https://www.cygwin.com">Cygwin</a>.
+            </p>
+            <pre><code class="cs">#addin Cake.Curl</code></pre>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -247,7 +262,9 @@ class Type type-node
 								<td><a href="/api/Cake.Curl/CurlAliases/CE5FF6CD">CurlDownloadFile<wbr>(ICakeContext, <wbr>Uri)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Downloads the file from the specified remote URL to the working directory.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -255,7 +272,9 @@ class Type type-node
 								<td><a href="/api/Cake.Curl/CurlAliases/E75F8401">CurlDownloadFile<wbr>(ICakeContext, <wbr>Uri, <wbr>Curl<wbr>Download<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Downloads the file from the specified remote URL.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

@@ -215,6 +215,8 @@ build script to execute, what build target to run, the amount of logging
 <p><img src="https://raw.githubusercontent.com/cake-build/cake-vso/develop/Images/configurebuildstep.png" class="img-fluid" alt="Add build step"></p>
 <p>For those who are already using Cake making use of the <a href="http://cakebuild.net/docs/tutorials/setting-up-a-new-project">Bootstrapper file</a>, this is not called when using the VSO task.
 To use the bootstrapper file you should add a "PowerShell" or "Shell Script" task instead.</p>
+<h2 id="notes-about-variables">Notes about Variables</h2>
+<p>Environment Variables which are marked secret in VSTS, cannot be resolved using <code>EnvironmentVariable()</code> in a Cake script. Instead they can be passed as arguments to the build script. You can read more about this limitation in the <a href="https://www.visualstudio.com/en-us/docs/build/define/variables#SecretVariables">Visual Studio documentation under the Secret Variables section</a>.</p>
 
 	</section>
                 

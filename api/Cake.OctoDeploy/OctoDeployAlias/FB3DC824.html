@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -175,7 +176,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Publish a release on GitHub
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -230,37 +235,37 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>Cake context</td>
 					</tr>
 					<tr>
 						<td>tag</td>
 						<td>string</td>
-						<td></td>
+						<td>Tag for the release</td>
 					</tr>
 					<tr>
 						<td>releaseTitle</td>
 						<td>string</td>
-						<td></td>
+						<td>Title of the release</td>
 					</tr>
 					<tr>
 						<td>releaseNotesFilePath</td>
 						<td>FilePath</td>
-						<td></td>
+						<td>Path to file containing Release notes</td>
 					</tr>
 					<tr>
 						<td>draftRelease</td>
 						<td>bool</td>
-						<td></td>
+						<td>Should the release be published as a draft</td>
 					</tr>
 					<tr>
 						<td>preRelease</td>
 						<td>bool</td>
-						<td></td>
+						<td>Should the release be published as a pre-release</td>
 					</tr>
 					<tr>
 						<td>octoDeploySettings</td>
 						<td><a href="/api/Cake.OctoDeploy/OctoDeploySettings">OctoDeploySettings</a></td>
-						<td></td>
+						<td>OctoDeploy settings</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -278,7 +283,7 @@
 				</thead>
 				<tbody><tr>
 					<td>int</td>
-					<td></td>
+					<td>Id of the Release</td>
 				</tr>
 			</tbody></table>
 		</div>

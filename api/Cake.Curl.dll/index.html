@@ -250,7 +250,19 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Curl/CurlAliases">CurlAliases</a></td>
-									<td></td>
+									<td>
+            <p>
+            Contains aliases related to <a href="https://curl.haxx.se">curl</a>.
+            </p>
+            <p>
+            In order to use the commands for this add-in, a version of curl will need
+            to be installed on the machine where the Cake script is being executed.
+            While curl is usually included in most Unix-based operating systems, you
+            will likely have to install it yourself on Windows.
+            The Windows version of curl is also part of <a href="https://www.cygwin.com">Cygwin</a>.
+            </p>
+            <pre><code class="cs">#addin Cake.Curl</code></pre>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Curl/CurlDownloadRunner">CurlDownloadRunner</a></td>
@@ -260,10 +272,7 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Curl/CurlDownloadSettings">CurlDownloadSettings</a></td>
-									<td>
-            Contains the settings used by curl when downloading
-            one or more files from remote URLs.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Curl/CurlSettings">CurlSettings</a></td>
