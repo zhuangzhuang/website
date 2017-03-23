@@ -362,6 +362,14 @@
 			<li><a href="/api/Cake.Common.Tools.VSTest">Cake<wbr>.Common<wbr>.Tools<wbr>.VSTest</a></li>
 
 				<li class="treeview">
+				<a href="/api/Cake.Common.Tools.VSWhere">Cake<wbr>.Common<wbr>.Tools<wbr>.VSWhere</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Common.Tools.VSWhere.All">Cake<wbr>.Common<wbr>.Tools<wbr>.VSWhere<wbr>.All</a></li>
+			<li><a href="/api/Cake.Common.Tools.VSWhere.Latest">Cake<wbr>.Common<wbr>.Tools<wbr>.VSWhere<wbr>.Latest</a></li>
+			<li><a href="/api/Cake.Common.Tools.VSWhere.Legacy">Cake<wbr>.Common<wbr>.Tools<wbr>.VSWhere<wbr>.Legacy</a></li>
+			<li><a href="/api/Cake.Common.Tools.VSWhere.Product">Cake<wbr>.Common<wbr>.Tools<wbr>.VSWhere<wbr>.Product</a></li>
+</ul></li>
+				<li class="treeview">
 				<a href="/api/Cake.Common.Tools.WiX">Cake<wbr>.Common<wbr>.Tools<wbr>.WiX</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Common.Tools.WiX.Heat">Cake<wbr>.Common<wbr>.Tools<wbr>.WiX<wbr>.Heat</a></li>
@@ -862,7 +870,17 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsAliases">CoverallsAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#tool coveralls.net</code></pre>
+            <pre><code class="cs">#tool coveralls.io</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsIoRunner">CoverallsIoRunner</a></td>
@@ -872,9 +890,7 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsIoSettings">CoverallsIoSettings</a></td>
-									<td>
-            Contains settings used by <code class="cs"><a href="/api/Cake.Coveralls/CoverallsIoRunner">CoverallsIoRunner</a></code>.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetRunner">CoverallsNetRunner</a></td>
@@ -904,9 +920,7 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Coveralls/CoverallsNetReportType">Coveralls<wbr>Net<wbr>Report<wbr>Type</a></td>
-									<td>
-            The coverage report type for CoverallNetRunner
-            </td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>
