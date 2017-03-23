@@ -256,7 +256,10 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/A3F918FA">Branch</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The name of the current branch. Specifying a branch will cause Sonary to analyse different branches as different Sonar projects.
+            This allows one to use sonar to compare branches on a pull review.
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -270,7 +273,9 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/6E30DC4C">Exclusions</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Use exclusion to analyze everything but the specified files
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -335,7 +340,9 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/309B327A">Silent</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Suppress standard output from the sonar runner.
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -351,14 +358,19 @@ class Type type-node
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/1B7A07E0">Verbose</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Print verbose output during the analysis.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/86B28A7D">Version</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            A version indicator, e.g. a semantic version or git revision hash.
+            Required prior to Sonar 6.1
+            </div>
 								</td>
 							</tr>
 							<tr>
