@@ -4,7 +4,27 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-03-23T23:46:26Z</updated>
+	<updated>2017-03-24T07:55:36Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/03/cake-v0.19.1-released" />
+		<id>http://cakebuild.net/blog/2017/03/cake-v0.19.1-released</id>
+		<title>Cake v0.19.1 released</title>
+		<updated>2017-03-24T00:00:00Z</updated>
+		<summary>&lt;p&gt;Version 0.19.1 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.0, which fixes an issue discovered in the new VSWhere aliases.&lt;/p&gt;
+&lt;p&gt;So what is VSWhere? One issue with Visual Studio 2017 is that it can be installed anywhere, and you can have multiple versions side by side. As a result the registry keys, and standard paths previously used to identify where Visual Studio was installed, no longer apply.&lt;/p&gt;
+&lt;p&gt;This is where VSWhere comes in.  It's a utility that can identify and list current installations of Visual Studio, as well as other developer products.&lt;/p&gt;
+&lt;p&gt;VSWhere is available on &lt;a href="https://www.nuget.org/packages/vswhere/"&gt;NuGet&lt;/a&gt; (and &lt;a href="https://chocolatey.org/packages/vswhere"&gt;Chocolatey&lt;/a&gt;) which means you can fetch it using the tool pre-processor directive like this:&lt;/p&gt;
+
+&lt;p&gt;There are a couple of &lt;a href="http://cakebuild.net/dsl/vswhere/"&gt;VSWhere aliases&lt;/a&gt; available in Cake.  If you just want to use the latest Visual Studio version available - then there's the &lt;a href="http://cakebuild.net/api/Cake.Common.Tools.VSWhere/VSWhereAliases/59EB3043"&gt;VSWhereLatest&lt;/a&gt; alias. A complete example of fetching the VSWhere tool and using it to find path to MSBuild is shown below:&lt;/p&gt;
+
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -255,23 +275,6 @@ will be published soon.&lt;/p&gt;
 		<summary>&lt;p&gt;Version 0.15.0 of Cake has been released.&lt;/p&gt;
 &lt;p&gt;The Cake Team is happy once again to announce the latest version of Cake, 0.15.0.  This release was intended to be a small release to tidy up a few small issues that had been identified in Cake prior to starting work on our port to CoreClr.  However, once again, our amazing community contributors have stepped up with 6 Features, 6 Bugs, and 14 Improvements, being shipped in this release.  Thank you to everyone who has helped with this release!&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/patriksvensson"&gt;Patrik&lt;/a&gt; has been very busy working on the port of Cake to run on the CoreClr (you might have been following his work on the CoreClr Branch), and it is looking like that will be included in the next release of Cake, 0.16.0.  While we are working on this next version, it is unlikely that we will be pulling in any other Pull Requests as we want to ensure that the transition goes as smoothly as possible.  If you have any ideas about new features/improvements that you would like to see in Cake, please reach out to us in the &lt;a href="https://gitter.im/cake-build/cake"&gt;Gitter Room&lt;/a&gt; prior to starting any work.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/07/cake-v0.14.0-released" />
-		<id>http://cakebuild.net/blog/2016/07/cake-v0.14.0-released</id>
-		<title>Cake v0.14.0 released</title>
-		<updated>2016-07-11T00:00:00Z</updated>
-		<summary>&lt;p&gt;Version 0.14.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;We are very happy to announce the first release of Cake as a member of the .NET Foundation.  If you missed this announcement, you can read more about it &lt;a href="http://cakebuild.net/blog/2016/06/cake-joins-dotnetfoundation"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In this release, we made a number of improvements and squashed some bugs which had been reported.  In addition, we saw four new features added to Cake, including support for the Wix Heat command line tool, and also for Octopus Deploy Push command.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Within this release, we also had one breaking change, namely the removal of the obsoleted XmlPoke Aliases.  These had been marked as obsolete in a previous release of Cake, and we have now taken the steps to remove them completely.  Cake does follow the semantic versioning principles, however, since we have not yet reached the 1.0.0 release, this breaking change appears here, in a minor version number change.&lt;/p&gt;
 &lt;p&gt;Contributions were included from:&lt;/p&gt;
 
 &lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;

@@ -146,6 +146,48 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/03/cake-v0.19.1-released">Cake v0.19.1 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Friday, March 24, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/release-notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <html><head></head><body><p>Version 0.19.1 of Cake has been released.</p>
+<p>This is a minor hotfix release for 0.19.0, which fixes an issue discovered in the new VSWhere aliases.</p>
+<p>So what is VSWhere? One issue with Visual Studio 2017 is that it can be installed anywhere, and you can have multiple versions side by side. As a result the registry keys, and standard paths previously used to identify where Visual Studio was installed, no longer apply.</p>
+<p>This is where VSWhere comes in.  It's a utility that can identify and list current installations of Visual Studio, as well as other developer products.</p>
+<p>VSWhere is available on <a href="https://www.nuget.org/packages/vswhere/">NuGet</a> (and <a href="https://chocolatey.org/packages/vswhere">Chocolatey</a>) which means you can fetch it using the tool pre-processor directive like this:</p>
+<pre><code class="language-csharp">#tool nuget:?package=vswhere
+</code></pre>
+<p>There are a couple of <a href="http://cakebuild.net/dsl/vswhere/">VSWhere aliases</a> available in Cake.  If you just want to use the latest Visual Studio version available - then there's the <a href="http://cakebuild.net/api/Cake.Common.Tools.VSWhere/VSWhereAliases/59EB3043">VSWhereLatest</a> alias. A complete example of fetching the VSWhere tool and using it to find path to MSBuild is shown below:</p>
+<pre><code class="language-csharp">#tool nuget:?package=vswhere
+<a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> vsLatest  = VSWhereLatest();
+<a href="/api/Cake.Core.IO/FilePath">FilePath</a> msBuildPathX64 = (vsLatest==null)
+                            ? null
+                            : vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe");
+
+MSBuild("./src/Example.sln", new <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a> {
+    ToolPath = msBuildPathX64
+    });
+
+</code></pre>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=33&amp;state=closed">1 issue</a> closed.</p>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1543"><strong>#1543</strong></a> VSWhere aliases should return Directory Paths and not File Paths</li>
+</ul>
+</body></html>
+            </div>
+        <hr />
         <h2><a href="/blog/2017/03/cake-v0.19.0-released">Cake v0.19.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -161,34 +203,9 @@
 <p>Please let us know if you run into any issues with this latest release.</p>
 <p>Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!</p>
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/devlead">devlead</a></li>
-<li><a href="https://github.com/Redth">Redth</a></li>
-<li><a href="https://github.com/agc93">agc93</a></li>
-<li><a href="https://github.com/thomaslevesque">thomaslevesque</a></li>
-<li><a href="https://github.com/gep13">gep13</a></li>
-<li><a href="https://github.com/phillipsj">phillipsj</a></li>
-</ul>
-<p>Full details of everything that was included in this release can be seen below.</p>
-<!--excerpt-->
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=30&amp;state=closed">4 issues</a> closed.</p>
-<p><strong>Feature</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1517"><strong>#1517</strong></a> Add VSWhere support</li>
-</ul>
-<p><strong>Bug</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1524"><strong>#1524</strong></a> Error: SignTool SIGN: Password is required with Certificate path but not specified.</li>
-</ul>
-<p><strong>Improvement</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1476"><strong>#1476</strong></a> MSBuild on Mac</li>
-</ul>
-<p><strong>Documentation</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1532"><strong>#1532</strong></a> Categorize logging aliases by level</li>
-</ul>
 
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2017/03/cake-v0.19.0-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/03/cake-v0.18.0-released">Cake v0.18.0 released</a></h2>
@@ -242,19 +259,6 @@ We do recommend you pin your builds to the version of Cake you using, that way y
 </dl>            <div>
                 <p>Hi! My name is Dave Glick and I run the <a href="http://wyam.io">Wyam static site engine</a> project. I'm also a big Cake fanboy, and over the last couple months I've been privileged to work with the rest of the Cake team on transitioning the Cake website from a dynamic ASP.NET website to a static one built by <a href="http://wyam.io">Wyam</a>. This effort was more than mere window dressing; the new site goes beyond the old one in some interesting ways:</p>
                 <a href="/blog/2017/01/new-static-site">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2016/12/icing-on-the-cake">Icing on the Cake &#x2013; reviewing the recipe for 2016</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Saturday, December 31, 2016</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/announcement">Announcement</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>As 2016 is just about to be fully baked, the year has been packed with many ingredients, with this post we would like to take the opportunity to reflect on a few of the essences of what's been a truly amazing and eventful Cake year.</p>
-                <a href="/blog/2016/12/icing-on-the-cake">Read more...</a>
             </div>
         <hr />
     <nav>
