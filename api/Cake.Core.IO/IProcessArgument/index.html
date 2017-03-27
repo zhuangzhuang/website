@@ -204,10 +204,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -217,14 +217,14 @@
 							graph TD
 	Type["IProcessArgument"]
 class Type type-node
-	Type-.-&gt;Implementing0["SwitchArgument"]
-	click Implementing0 "/api/Cake.Core.IO.Arguments/SwitchArgument"
-	Type-.-&gt;Implementing1["TextArgument"]
-	click Implementing1 "/api/Cake.Core.IO.Arguments/TextArgument"
-	Type-.-&gt;Implementing2["SecretArgument"]
-	click Implementing2 "/api/Cake.Core.IO.Arguments/SecretArgument"
-	Type-.-&gt;Implementing3["QuotedArgument"]
-	click Implementing3 "/api/Cake.Core.IO.Arguments/QuotedArgument"
+	Type-.-&gt;Implementing0["QuotedArgument"]
+	click Implementing0 "/api/Cake.Core.IO.Arguments/QuotedArgument"
+	Type-.-&gt;Implementing1["SecretArgument"]
+	click Implementing1 "/api/Cake.Core.IO.Arguments/SecretArgument"
+	Type-.-&gt;Implementing2["SwitchArgument"]
+	click Implementing2 "/api/Cake.Core.IO.Arguments/SwitchArgument"
+	Type-.-&gt;Implementing3["TextArgument"]
+	click Implementing3 "/api/Cake.Core.IO.Arguments/TextArgument"
 
 						</div>
 					</div>
@@ -306,7 +306,9 @@ class Type type-node
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Argument&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
