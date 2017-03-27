@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -172,7 +174,17 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            This command pushes all local files that have been added to Transifex to the remote
+            server. All new translations are merged with existing ones and if a language doesn't
+            exist then it gets created. If you want to push the source file as well (either because
+            this is your first time running the client or because you have updated with new entries),
+            set the <code class="cs"><a href="/api/Cake.Transifex/TransifexPushSettings/04EB5E51">UploadSourceFiles</a></code> to <code class="cs">true</code>. By default,
+            this command will push all files which are watched by Transifex but you can filter this
+            per resource or/and language.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -192,6 +204,20 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void TransifexPush(this ICakeContext context, TransifexPushSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <p>Run 'tx push' with additional arguments</p>
+            <p>Cake task:</p>
+            <pre><code class="cs">Task("Transifex-Push")
+    .Does(() =&gt;
+{
+    TransifexPush(options =&gt;
+    {
+        options.UploadSourceFiles = true;
+        options.UploadTranslations = true;
+    });
+};</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -227,12 +253,12 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Transifex/TransifexPushSettings">Transifex<wbr>Push<wbr>Settings</a></td>
-						<td></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>

@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -167,7 +168,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            CocoaPod settings.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -190,8 +195,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.CocoaPods/CocoaPodUpdateSettings">Cocoa<wbr>Pod<wbr>Update<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.CocoaPods/CocoaPodInstallSettings">Cocoa<wbr>Pod<wbr>Install<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.CocoaPods/CocoaPodUpdateSettings">Cocoa<wbr>Pod<wbr>Update<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -203,10 +208,10 @@
 	Base0["object"]--&gt;Type
 	Type["CocoaPodSettings"]
 class Type type-node
-	Type--&gt;Derived0["CocoaPodUpdateSettings"]
-	click Derived0 "/api/Cake.CocoaPods/CocoaPodUpdateSettings"
-	Type--&gt;Derived1["CocoaPodInstallSettings"]
-	click Derived1 "/api/Cake.CocoaPods/CocoaPodInstallSettings"
+	Type--&gt;Derived0["CocoaPodInstallSettings"]
+	click Derived0 "/api/Cake.CocoaPods/CocoaPodInstallSettings"
+	Type--&gt;Derived1["CocoaPodUpdateSettings"]
+	click Derived1 "/api/Cake.CocoaPods/CocoaPodUpdateSettings"
 
 						</div>
 					</div>
@@ -258,7 +263,9 @@ class Type type-node
 								<td><a href="/api/Cake.CocoaPods/CocoaPodSettings/F85BF718">ToolPath</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the path to pod executable.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -287,6 +294,16 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Cocoa<wbr>Pod<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
