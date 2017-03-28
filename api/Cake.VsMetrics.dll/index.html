@@ -150,6 +150,7 @@
         <li><a href="/api/Cake.CMake.dll">Cake<wbr>.CMake<wbr>.dll</a></li>
         <li><a href="/api/Cake.Compression.dll">Cake<wbr>.Compression<wbr>.dll</a></li>
         <li><a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></li>
+        <li><a href="/api/Cake.CsvHelper.dll">Cake<wbr>.CsvHelper<wbr>.dll</a></li>
         <li><a href="/api/Cake.Curl.dll">Cake<wbr>.Curl<wbr>.dll</a></li>
         <li><a href="/api/Cake.DocFx.dll">Cake<wbr>.DocFx<wbr>.dll</a></li>
         <li><a href="/api/Cake.Docker.dll">Cake<wbr>.Docker<wbr>.dll</a></li>
@@ -254,13 +255,21 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsAliases">VsMetricsAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
+            <p>
+            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
+            </p><pre><code class="cs">Setup(context =&gt; {
+    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
+});</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsRunner">VsMetricsRunner</a></td>
-									<td>
-            The VsMetrics runner.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsSettings">VsMetricsSettings</a></td>

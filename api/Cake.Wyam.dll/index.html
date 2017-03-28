@@ -150,6 +150,7 @@
         <li><a href="/api/Cake.CMake.dll">Cake<wbr>.CMake<wbr>.dll</a></li>
         <li><a href="/api/Cake.Compression.dll">Cake<wbr>.Compression<wbr>.dll</a></li>
         <li><a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></li>
+        <li><a href="/api/Cake.CsvHelper.dll">Cake<wbr>.CsvHelper<wbr>.dll</a></li>
         <li><a href="/api/Cake.Curl.dll">Cake<wbr>.Curl<wbr>.dll</a></li>
         <li><a href="/api/Cake.DocFx.dll">Cake<wbr>.DocFx<wbr>.dll</a></li>
         <li><a href="/api/Cake.Docker.dll">Cake<wbr>.Docker<wbr>.dll</a></li>
@@ -254,13 +255,18 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Wyam/NuGetSettings">NuGetSettings</a></td>
-									<td>
-            Settings for specifying NuGet packages.
-            </td>
+									<td></td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamAliases">WyamAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to <a href="https://github.com/Wyamio/Wyam">Wyam</a>.</p>
+            <p>
+            In order to use the commands for this alias, include the following in your build.cake file to download and install from NuGet.org, or specify the ToolPath within the WyamSettings class:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.Wyam"
+#tool "nuget:?package=Wyam"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamRunner">WyamRunner</a></td>

@@ -186,9 +186,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Tools.VSWhere.Product/VSWhereProductSettings">V<wbr>S<wbr>Where<wbr>Product<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings">V<wbr>S<wbr>Where<wbr>Legacy<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings">VSWhereAllSettings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings">V<wbr>S<wbr>Where<wbr>Latest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings">VSWhereAllSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings">V<wbr>S<wbr>Where<wbr>Legacy<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -204,12 +204,12 @@
 class Type type-node
 	Type--&gt;Derived0["VSWhereProductSettings"]
 	click Derived0 "/api/Cake.Common.Tools.VSWhere.Product/VSWhereProductSettings"
-	Type--&gt;Derived1["VSWhereLegacySettings"]
-	click Derived1 "/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings"
+	Type--&gt;Derived1["VSWhereLatestSettings"]
+	click Derived1 "/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings"
 	Type--&gt;Derived2["VSWhereAllSettings"]
 	click Derived2 "/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings"
-	Type--&gt;Derived3["VSWhereLatestSettings"]
-	click Derived3 "/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings"
+	Type--&gt;Derived3["VSWhereLegacySettings"]
+	click Derived3 "/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings"
 
 						</div>
 					</div>
@@ -370,7 +370,9 @@ class Type type-node
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>V<wbr>S<wbr>Where<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
