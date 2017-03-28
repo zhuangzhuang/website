@@ -311,8 +311,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -357,14 +357,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Aliases for Putty.
-            
-
-            Contains functionality for working with PSCP.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -513,8 +507,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -647,12 +641,7 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
-    <p>
-    In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
-    </p>
+    Contains functionality related to text transformation.
     </td>
                 </tr>
                 <tr>
@@ -696,7 +685,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -744,7 +733,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -786,7 +775,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+            Contains Cake aliases for configuring Amazon Elastic Load Balancers
             </td>
                 </tr>
                 <tr>
@@ -806,7 +795,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Class that lets you override default API settings
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -840,8 +834,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -849,21 +843,13 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/coveralls">Coveralls</a></td>
-                    <td>
-            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#tool coveralls.net</code></pre>
-            <pre><code class="cs">#tool coveralls.io</code></pre>
-            In addition, you will need to include the following:
-            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/csvhelper">CsvHelper</a></td>
-                    <td></td>
+                    <td>
+            Contians functionality related to reading and writing CSV files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/curl">Curl</a></td>
@@ -1031,12 +1017,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            Contains functionality related to emails
             </td>
                 </tr>
                 <tr>
@@ -1061,14 +1042,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Aliases for Putty.
-            
-
-            Contains functionality for working with PSCP.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1114,7 +1089,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            The result of GitterProvider Chat API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1204,8 +1179,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1253,8 +1228,8 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to importing code analysis issues from JetBrains Inspect Code
-            to write them to pull requests.
+            Contains functionality related to writing code analysis issues to Team Foundation Server or
+            Visual Studio Team Services pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1263,7 +1238,15 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/resharperreports">ReSharperReports</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains functionality related to the <a href="https://github.com/gep13/ReSharperReports">ReSharperReports</a> tool.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and reference from NuGet.org:
+            <pre><code class="cs">#tool ReSharperReports</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.ReSharperReports</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/semantic-versioning">Semantic Versioning</a></td>
@@ -1274,7 +1257,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Contains functionality related to SendGrid API
+            The result of SendGridProvider API post
             </td>
                 </tr>
                 <tr>
@@ -1366,9 +1349,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/transifex">Transifex</a></td>
-                    <td>
-            Provides a wrapper around transifex client functionality within a Cake build script.
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/twitter">Twitter</a></td>
@@ -1401,21 +1382,18 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/vsce">Vsce</a></td>
-                    <td></td>
+                    <td>
+            <p>Contains aliases related to <a href="https://code.visualstudio.com/docs/tools/vscecli">VSCode Extension Manager</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.VsCode</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/vsmetrics">VsMetrics</a></td>
-                    <td>
-            <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
-            <p>
-            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-            <pre><code class="cs">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});</code></pre>
-            In addition, you will need to include the following:
-            <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/watch">Watch</a></td>

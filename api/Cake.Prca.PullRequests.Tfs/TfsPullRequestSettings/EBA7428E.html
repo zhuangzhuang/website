@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -172,7 +173,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings">TfsPullRequestSettings</a></code> class.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -210,17 +215,21 @@
 					<tbody><tr>
 						<td>repositoryUrl</td>
 						<td>Uri</td>
-						<td></td>
+						<td>Full URL of the Git repository,
+            eg. <pre><code class="cs">http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code></pre>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</td>
 					</tr>
 					<tr>
 						<td>pullRequestId</td>
 						<td>int</td>
-						<td></td>
+						<td>ID of the pull request.</td>
 					</tr>
 					<tr>
 						<td>credentials</td>
 						<td><a href="/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
-						<td></td>
+						<td>Credentials to use to authenticate against Team Foundation Server or
+            Visual Studio Team Services.</td>
 					</tr>
 			</tbody></table>
 		</div>

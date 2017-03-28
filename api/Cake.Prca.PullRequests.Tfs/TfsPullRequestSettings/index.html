@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -168,7 +169,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Settings for <code class="cs"><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></code>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -224,11 +229,15 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings/EBA7428E">Tfs<wbr>Pull<wbr>Request<wbr>Settings<wbr>(Uri, <wbr>int, <wbr>IPrcaCredentials)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings">TfsPullRequestSettings</a></code> class.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings/790BA331">Tfs<wbr>Pull<wbr>Request<wbr>Settings<wbr>(Uri, <wbr>string, <wbr>IPrcaCredentials)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings">TfsPullRequestSettings</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -252,28 +261,37 @@ class Type type-node
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings/F5E7A0CE">Credentials</a></td>
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the credentials used to authenticate against Team Foundation Server or
+            Visual Studio Team Services.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings/1D1974A1">PullRequestId</a></td>
 								<td>int?</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the ID of the pull request.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings/7BC12006">RepositoryUrl</a></td>
 								<td>Uri</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the full URL of the Git repository, eg. <pre><code class="cs">http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code></pre>.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings/D1A74185">SourceBranch</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the branch for which the pull request is made.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
