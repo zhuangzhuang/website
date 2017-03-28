@@ -168,9 +168,6 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li class="selected"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -185,6 +182,9 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -223,13 +223,13 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -239,20 +239,20 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["ITaskTeardownContext"]
-	click Implementing0 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing1["TaskTeardownContext"]
-	click Implementing1 "/api/Cake.Core/TaskTeardownContext"
-	Type-.-&gt;Implementing2["CakeContext"]
-	click Implementing2 "/api/Cake.Core/CakeContext"
+	Type-.-&gt;Implementing0["TeardownContext"]
+	click Implementing0 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing1["TaskSetupContext"]
+	click Implementing1 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing2["TaskTeardownContext"]
+	click Implementing2 "/api/Cake.Core/TaskTeardownContext"
 	Type-.-&gt;Implementing3["ITaskSetupContext"]
 	click Implementing3 "/api/Cake.Core/ITaskSetupContext"
-	Type-.-&gt;Implementing4["TeardownContext"]
-	click Implementing4 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing5["TaskSetupContext"]
-	click Implementing5 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing6["ITeardownContext"]
-	click Implementing6 "/api/Cake.Core/ITeardownContext"
+	Type-.-&gt;Implementing4["ITeardownContext"]
+	click Implementing4 "/api/Cake.Core/ITeardownContext"
+	Type-.-&gt;Implementing5["CakeContext"]
+	click Implementing5 "/api/Cake.Core/CakeContext"
+	Type-.-&gt;Implementing6["ITaskTeardownContext"]
+	click Implementing6 "/api/Cake.Core/ITaskTeardownContext"
 
 						</div>
 					</div>
@@ -2299,9 +2299,7 @@ class Type type-node
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
+									<div></div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>

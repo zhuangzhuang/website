@@ -165,6 +165,7 @@
     <li><a href="/dsl/compression">Compression</a></li>        
     <li><a href="/dsl/configuration">Configuration</a></li>        
     <li><a href="/dsl/coveralls">Coveralls</a></li>        
+    <li><a href="/dsl/csvhelper">CsvHelper</a></li>        
     <li><a href="/dsl/curl">Curl</a></li>        
     <li><a href="/dsl/database">Database</a></li>        
     <li><a href="/dsl/deployment">Deployment</a></li>        
@@ -254,14 +255,14 @@
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Prca.Issues.MsBuild" class="alert-link">https://github.com/cake-contrib/Cake.Prca.Issues.MsBuild</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Prca.Issues.InspectCode" class="alert-link">https://github.com/cake-contrib/Cake.Prca.Issues.InspectCode</a>.
                             </div>
 
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
-            pull requests.
+            Contains functionality related to importing code analysis issues from JetBrains Inspect Code
+            to write them to pull requests.
             </div>
 
 
@@ -411,6 +412,8 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/E9DD7BA2">Prca<wbr>Authentication<wbr>Azure<wbr>Active<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Returns credentials for authentication with an Azure Active Directory.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -421,6 +424,10 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/12EAF902">Prca<wbr>Authentication<wbr>Basic<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Returns credentials for basic authentication.
+            Can only be used for on-premise Team Foundation Server configured for basic authentication.
+            See https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -431,6 +438,9 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/46EEB612">Prca<wbr>Authentication<wbr>Ntlm<wbr>(ICakeContext)<wbr></a>                            </td>
                             <td>
                                 
+            Returns credentials for integrated / NTLM authentication.
+            Can only be used for on-premise Team Foundation Server.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -441,6 +451,9 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/A65DCCF0">Prca<wbr>Authentication<wbr>O<wbr>Auth<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Returns credentials for OAuth authentication.
+            Can only be used with Visual Studio Team Services.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -451,6 +464,9 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/9AE041FC">Prca<wbr>Authentication<wbr>Personal<wbr>Access<wbr>Token<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Returns credentials for authentication with a personal access token.
+            Can be used for Team Foundation Server and Visual Studio Team Services.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -461,6 +477,9 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/65D0757F">TfsPullRequests<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
+             Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+             using the specified settings.
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -471,6 +490,9 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/55B91E41">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int, <wbr>IPrcaCredentials)<wbr></a>                            </td>
                             <td>
                                 
+            Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+            in a specific repository and with a specific ID.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
@@ -481,6 +503,9 @@
 <a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/ECC9B51D">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>IPrcaCredentials)<wbr></a>                            </td>
                             <td>
                                 
+            Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+            in a specific repository and for a specific source branch.
+            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>

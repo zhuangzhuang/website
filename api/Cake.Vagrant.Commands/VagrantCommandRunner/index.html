@@ -195,9 +195,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantPluginRunner">VagrantPluginRunner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantDockerRunner">VagrantDockerRunner</a></li>								
+											<li><a href="/api/Cake.Vagrant.Commands/VagrantSnapshotRunner">Vagrant<wbr>Snapshot<wbr>Runner</a></li>								
 											<li><a href="/api/Cake.Vagrant.Commands/VagrantBoxRunner">VagrantBoxRunner</a></li>								
 									</ul>
 								</dd>			
@@ -210,12 +210,12 @@
 	Base0["object"]--&gt;Type
 	Type["VagrantCommandRunner"]
 class Type type-node
-	Type--&gt;Derived0["VagrantSnapshotRunner"]
-	click Derived0 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
-	Type--&gt;Derived1["VagrantPluginRunner"]
-	click Derived1 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
-	Type--&gt;Derived2["VagrantDockerRunner"]
-	click Derived2 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
+	Type--&gt;Derived0["VagrantPluginRunner"]
+	click Derived0 "/api/Cake.Vagrant.Commands/VagrantPluginRunner"
+	Type--&gt;Derived1["VagrantDockerRunner"]
+	click Derived1 "/api/Cake.Vagrant.Commands/VagrantDockerRunner"
+	Type--&gt;Derived2["VagrantSnapshotRunner"]
+	click Derived2 "/api/Cake.Vagrant.Commands/VagrantSnapshotRunner"
 	Type--&gt;Derived3["VagrantBoxRunner"]
 	click Derived3 "/api/Cake.Vagrant.Commands/VagrantBoxRunner"
 
@@ -306,9 +306,7 @@ class Type type-node
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Vagrant<wbr>Command<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
+									<div></div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>

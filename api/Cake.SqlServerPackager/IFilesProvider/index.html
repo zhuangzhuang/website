@@ -193,8 +193,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
 											<li><a href="/api/Cake.SqlServerPackager/DiskFilesProvider">DiskFilesProvider</a></li>								
+											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -204,10 +204,10 @@
 							graph TD
 	Type["IFilesProvider"]
 class Type type-node
-	Type-.-&gt;Implementing0["GitFilesProvider"]
-	click Implementing0 "/api/Cake.SqlServerPackager/GitFilesProvider"
-	Type-.-&gt;Implementing1["DiskFilesProvider"]
-	click Implementing1 "/api/Cake.SqlServerPackager/DiskFilesProvider"
+	Type-.-&gt;Implementing0["DiskFilesProvider"]
+	click Implementing0 "/api/Cake.SqlServerPackager/DiskFilesProvider"
+	Type-.-&gt;Implementing1["GitFilesProvider"]
+	click Implementing1 "/api/Cake.SqlServerPackager/GitFilesProvider"
 
 						</div>
 					</div>
@@ -278,9 +278,7 @@ class Type type-node
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Files<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
+									<div></div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
