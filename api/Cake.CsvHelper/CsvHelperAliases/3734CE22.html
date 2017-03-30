@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
@@ -144,6 +146,8 @@
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/CF28BD57">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/EAC0E577">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>CsvHelperSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/5AB2801B">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>CsvClassMap)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/56CA396D">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>CsvClassMap, <wbr>CsvHelperSettings)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.CsvHelper/CsvHelperAliases/3734CE22">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/0B4E1C3D">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>CsvHelperSettings)<wbr></a></li>
 				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/2C2A5D9D">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr>, <wbr>CsvHelperSettings)<wbr></a></li>
@@ -173,7 +177,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+             Writes the records to the speficed file using the specified class mapp and settings.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -193,6 +201,10 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void WriteCsv&lt;T&gt;(this ICakeContext context, FilePath csvFile, List&lt;T&gt; records)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">WriteCsv&lt;Person&gt;("./people.csv", new List&lt;Person&gt;());</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -229,7 +241,7 @@
 				</thead>
 					<tbody><tr id="typeparam-T">
 						<td>T</td>
-						<td></td>
+						<td>The type.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -249,17 +261,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>csvFile</td>
 						<td>FilePath</td>
-						<td></td>
+						<td>The CSV to file to write.</td>
 					</tr>
 					<tr>
 						<td>records</td>
 						<td>List<wbr>&lt;T&gt;<wbr></td>
-						<td></td>
+						<td>The list objects you want to write to a csv.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -277,7 +289,7 @@
 				</thead>
 				<tbody><tr>
 					<td>void</td>
-					<td></td>
+					<td>List objects as defined by type.</td>
 				</tr>
 			</tbody></table>
 		</div>
