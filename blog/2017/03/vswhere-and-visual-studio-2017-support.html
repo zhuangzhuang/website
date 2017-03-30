@@ -221,7 +221,7 @@ foreach(var install in allInstalled)
 
 <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> buildToolsInstallation  = VSWhereProducts("Microsoft.VisualStudio.Product.BuildTools").FirstOrDefault();
 
-if(buildToolsInstallation == null)
+if(buildToolsInstallation != null)
 {
     MSBuild("./src/Example.sln", new <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a> {
         ToolPath = buildToolsInstallation.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe")
@@ -235,7 +235,7 @@ if(buildToolsInstallation == null)
 <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> buildToolsInstallation  = VSWhereProducts("Microsoft.VisualStudio.Product.BuildTools",
                                             new <a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings">VSWhereLatestSettings</a> { Requires = "Microsoft.VisualStudio.Workload.ManagedDesktop"}).FirstOrDefault();
 
-if(buildToolsInstallation == null)
+if(buildToolsInstallation != null)
 {
     MSBuild("./src/Example.sln", new <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a> {
         ToolPath = buildToolsInstallation.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe")
