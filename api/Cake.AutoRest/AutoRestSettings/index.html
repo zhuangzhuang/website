@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -172,7 +174,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Settings to control the AutoRest generation process.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -212,6 +218,8 @@ class Type type-node
 	<pre><code>public class AutoRestSettings : ToolSettings</code></pre>
 
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>Supports either standard object syntax or a fluent interface using extension methods.</div>
 
 
 
@@ -228,11 +236,15 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/4E435BB3">AutoRestSettings<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Create a new instances of the <code class="cs"><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></code> class.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/66896729">AutoRestSettings<wbr>(FilePath)<wbr></a></td>
-									<td></td>
+									<td>
+            Create a new instances of the <code class="cs"><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -256,77 +268,99 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/E28A721B">AddCredentials</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            If true, the generated client includes a ServiceClientCredentials property and constructor parameter. Authentication behaviors are implemented by extending the ServiceClientCredentials type
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/690CFA92">ClientName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Name to use for the generated client type. 
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/356B4C58">Generator</a></td>
 								<td><a href="/api/Cake.AutoRest/CodeGenerator">CodeGenerator</a></td>
 								<td>
-									<div></div>
+									<div>
+            The code generator (see <code class="cs"><a href="/api/Cake.AutoRest/CodeGenerator">CodeGenerator</a></code>) language.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/88C95628">GeneratorSettings</a></td>
 								<td><a href="/api/Cake.AutoRest/IGeneratorSettings">IGeneratorSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Any generator-specific settings.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/AA37A25E">HeaderComment</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Text to include as a header comment in generated files.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/31018822">Modeler</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The Modeler to use on the input.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/137B03A1">Namespace</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The namespace to use for generated code
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/A32F6D1E">OutputDirectory</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            The location for generated files.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/662E1EE1">OutputFileName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            If set, will cause generated code to be output to a single file.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/64B4A46C">Payload<wbr>Flatten<wbr>Threshold</a></td>
 								<td>int?</td>
 								<td>
-									<div></div>
+									<div>
+            The maximum number of properties in the request body to be represented as method arguments.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings/B13EB009">Verbose</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            If set, will output verbose diagnostic messages.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -351,7 +385,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/6C81566D">AddCredentials<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Enables the inclusion of a ServiceClientCredentials property and constructor parameter in generated code
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -359,7 +395,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/9340A69F">AddHeaderComment<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the generated code header comment
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -377,7 +415,9 @@ class Type type-node
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Auto<wbr>Rest<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
@@ -385,7 +425,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/71E460A0">OutputToDirectory<wbr>(DirectoryPath)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the output directory for generated code
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -393,7 +435,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/D621B16D">OutputToFile<wbr>(FilePath)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Will cause generated code to be output to the specified single file. Not supported by all code generators.
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -421,7 +465,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/0A393B51">UseClientName<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the client name to use in generated code
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -429,7 +475,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/00B76175">UseFlattenThreshold<wbr>(int)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the property flattening threshold (see <code class="cs"><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></code>)
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -437,7 +485,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/B711B50B">UseNamespace<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the client namespace
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -445,7 +495,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/D52F2CBC">WithGenerator<wbr>(CodeGenerator, <wbr>IGeneratorSettings)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the Generator used by AutoRest
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -453,7 +505,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/017E3288">WithModeler<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the modeler used by AutoRest
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
@@ -461,7 +515,9 @@ class Type type-node
 								<td><a href="/api/Cake.AutoRest/AutoRestSettingsExtensions/6A11E73D">WithVerboseOutput<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.AutoRest/AutoRestSettings">AutoRestSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Enables verbose/diagnostic messages
+            </div>
 										<div><small><em>From <a href="/api/Cake.AutoRest/AutoRestSettingsExtensions">Auto<wbr>Rest<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>

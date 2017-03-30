@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -172,7 +174,13 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            This command pulls all outstanding changes from the remote Transifex server to the local
+            repository. By default, only the files that are watched by Transifex will be updated but
+            if you want to fetch the translations for new languages as well, set the <code class="cs"><a href="/api/Cake.Transifex/TransifexPullSettings/D3785F7C">All</a></code> property to <code class="cs">true</code> in the <span name="settings" class="paramref">settings</span>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -192,6 +200,22 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void TransifexPull(this ICakeContext context, TransifexPullSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <p>Run 'tx pull' with additional options</p>
+            <p>Cake task:</p>
+            <pre><code class="cs">Task("Transifex-Pull")
+    .Does(() =&gt;
+{
+    var settings = new TransifexPullSettings
+    {
+        All = true,
+        MinimumPercentage = 75,
+        Mode = TransifexMode.Reviewed
+    };
+    TransifexPull(settings);
+};</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -227,12 +251,12 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Transifex/TransifexPullSettings">Transifex<wbr>Pull<wbr>Settings</a></td>
-						<td></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>

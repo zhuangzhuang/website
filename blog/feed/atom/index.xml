@@ -4,7 +4,17 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-03-28T07:24:47Z</updated>
+	<updated>2017-03-30T10:51:15Z</updated>
+	<entry>
+		<author>
+			<name>phillipsj</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support" />
+		<id>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</id>
+		<title>VSWhere and Visual Studio 2017 Support</title>
+		<updated>2017-03-27T00:00:00Z</updated>
+		<summary>&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -261,22 +271,6 @@ will be published soon.&lt;/p&gt;
 &lt;p&gt;Following the release of Cake v0.15.0 a couple days ago, a problem was identified with regard to the AppVeyor functionality of uploading artifacts and pushing test results.&lt;/p&gt;
 &lt;p&gt;Fortunately, &lt;a href="https://github.com/Philo"&gt;Philo&lt;/a&gt; identified the issue very quickly and submitted a PR request to correct the problem.&lt;/p&gt;
 &lt;p&gt;As a result, v0.15.1 of Cake is now available.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/07/cake-v0.15.0-released" />
-		<id>http://cakebuild.net/blog/2016/07/cake-v0.15.0-released</id>
-		<title>Cake v0.15.0 released</title>
-		<updated>2016-07-26T00:00:00Z</updated>
-		<summary>&lt;p&gt;Version 0.15.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;The Cake Team is happy once again to announce the latest version of Cake, 0.15.0.  This release was intended to be a small release to tidy up a few small issues that had been identified in Cake prior to starting work on our port to CoreClr.  However, once again, our amazing community contributors have stepped up with 6 Features, 6 Bugs, and 14 Improvements, being shipped in this release.  Thank you to everyone who has helped with this release!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/patriksvensson"&gt;Patrik&lt;/a&gt; has been very busy working on the port of Cake to run on the CoreClr (you might have been following his work on the CoreClr Branch), and it is looking like that will be included in the next release of Cake, 0.16.0.  While we are working on this next version, it is unlikely that we will be pulling in any other Pull Requests as we want to ensure that the transition goes as smoothly as possible.  If you have any ideas about new features/improvements that you would like to see in Cake, please reach out to us in the &lt;a href="https://gitter.im/cake-build/cake"&gt;Gitter Room&lt;/a&gt; prior to starting any work.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
 &lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
 	</entry>

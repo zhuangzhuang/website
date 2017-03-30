@@ -5,8 +5,16 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Tue, 28 Mar 2017 07:24:47 GMT</pubDate>
-		<lastBuildDate>Tue, 28 Mar 2017 07:24:47 GMT</lastBuildDate>
+		<pubDate>Thu, 30 Mar 2017 10:51:15 GMT</pubDate>
+		<lastBuildDate>Thu, 30 Mar 2017 10:51:15 GMT</lastBuildDate>
+		<item>
+			<title>VSWhere and Visual Studio 2017 Support</title>
+			<link>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</link>
+			<description>&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;</description>
+			<author>phillipsj</author>
+			<guid>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</guid>
+			<pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title>Cake v0.19.1 released</title>
 			<link>http://cakebuild.net/blog/2017/03/cake-v0.19.1-released</link>
@@ -227,20 +235,6 @@ will be published soon.&lt;/p&gt;
 			<author>gep13</author>
 			<guid>http://cakebuild.net/blog/2016/07/cake-v0.15.1-released</guid>
 			<pubDate>Thu, 28 Jul 2016 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title>Cake v0.15.0 released</title>
-			<link>http://cakebuild.net/blog/2016/07/cake-v0.15.0-released</link>
-			<description>&lt;p&gt;Version 0.15.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;The Cake Team is happy once again to announce the latest version of Cake, 0.15.0.  This release was intended to be a small release to tidy up a few small issues that had been identified in Cake prior to starting work on our port to CoreClr.  However, once again, our amazing community contributors have stepped up with 6 Features, 6 Bugs, and 14 Improvements, being shipped in this release.  Thank you to everyone who has helped with this release!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/patriksvensson"&gt;Patrik&lt;/a&gt; has been very busy working on the port of Cake to run on the CoreClr (you might have been following his work on the CoreClr Branch), and it is looking like that will be included in the next release of Cake, 0.16.0.  While we are working on this next version, it is unlikely that we will be pulling in any other Pull Requests as we want to ensure that the transition goes as smoothly as possible.  If you have any ideas about new features/improvements that you would like to see in Cake, please reach out to us in the &lt;a href="https://gitter.im/cake-build/cake"&gt;Gitter Room&lt;/a&gt; prior to starting any work.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>http://cakebuild.net/blog/2016/07/cake-v0.15.0-released</guid>
-			<pubDate>Tue, 26 Jul 2016 00:00:00 GMT</pubDate>
 		</item>
 	</channel>
 </rss>
