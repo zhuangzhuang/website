@@ -5,12 +5,14 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Thu, 30 Mar 2017 10:51:15 GMT</pubDate>
-		<lastBuildDate>Thu, 30 Mar 2017 10:51:15 GMT</lastBuildDate>
+		<pubDate>Thu, 30 Mar 2017 12:34:00 GMT</pubDate>
+		<lastBuildDate>Thu, 30 Mar 2017 12:34:00 GMT</lastBuildDate>
 		<item>
 			<title>VSWhere and Visual Studio 2017 Support</title>
 			<link>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</link>
-			<description>&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;</description>
+			<description>&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;
+&lt;p&gt;Shortly after the release of version 0.18.0, Microsoft released a tool called &lt;a href="https://github.com/Microsoft/vswhere"&gt;vshwere&lt;/a&gt; to help locate Visual Studio and other products in the family. This tool was released with Cake version 0.19.1 to allow everyone that moved to Visual Studio 2017 to get their builds up and running.&lt;/p&gt;
+&lt;p&gt;This post is going to walk through the different pieces of functionality supported by the &lt;a href="http://cakebuild.net/dsl/vswhere/"&gt;VSWhere tool&lt;/a&gt;.&lt;/p&gt;</description>
 			<author>phillipsj</author>
 			<guid>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</guid>
 			<pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate>

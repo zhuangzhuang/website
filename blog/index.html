@@ -159,6 +159,7 @@
                 <html><head></head><body><p>Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the <a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/">Microsoft.VisualStudio.Setup.Configuration.Interop</a> package that was created by Microsoft to help locate Visual Studio 2017 installations.</p>
 <p>Shortly after the release of version 0.18.0, Microsoft released a tool called <a href="https://github.com/Microsoft/vswhere">vshwere</a> to help locate Visual Studio and other products in the family. This tool was released with Cake version 0.19.1 to allow everyone that moved to Visual Studio 2017 to get their builds up and running.</p>
 <p>This post is going to walk through the different pieces of functionality supported by the <a href="http://cakebuild.net/dsl/vswhere/">VSWhere tool</a>.</p>
+<!--excerpt-->
 <h2 id="getting-started">Getting Started</h2>
 <p>VSWhere is available on <a href="https://www.nuget.org/packages/vswhere/">NuGet</a> (and <a href="https://chocolatey.org/packages/vswhere">Chocolatey</a>) which means you can fetch it using the tool pre-processor directive like this:</p>
 <pre><code class="language-csharp">#tool nuget:?package=vswhere
@@ -178,7 +179,7 @@ MSBuild("./src/Example.sln", new <a href="/api/Cake.Common.Tools.MSBuild/MSBuild
 
 </code></pre>
 <p>If you are looking for the latest installation that supports a specific, optional component, like the .NET Framework (desktop) workload you would specify that in the <em>Requires</em> property in the settings.</p>
-<div class="alert alert-info">
+<p>To find a comprehensive list of components, please see the Microsoft Documentation <a href="https://docs.microsoft.com/en-us/visualstudio/install/workload-and-component-ids">here</a></p>
 <pre><code class="language-csharp">#tool nuget:?package=vswhere
 
 <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> vsLatest  = VSWhereLatest(new <a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings">VSWhereLatestSettings</a> { Requires = "Microsoft.VisualStudio.Workload.ManagedDesktop"});
@@ -270,7 +271,6 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
 <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> legacyInstallationPath = VSWhereLegacy(new <a href="/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings">VSWhereLegacySettings</a> { Version = "10.0"}).FirstOrDefault();
 
 </code></pre>
-</div>
 </body></html>
             </div>
         <hr />
