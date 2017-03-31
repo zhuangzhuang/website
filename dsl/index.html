@@ -311,8 +311,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -485,7 +485,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -691,7 +691,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XSL transformation.
+    Contains functionality related to XML XPath queries.
     </td>
                 </tr>
                 <tr>
@@ -739,7 +739,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB commands
+             Cake build aliases for Android ADB Activity Manager commands
              </td>
                 </tr>
                 <tr>
@@ -781,7 +781,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Cloud Front distributions
+            Contains Cake aliases for configuring Amazon Elastic Computing instances
             </td>
                 </tr>
                 <tr>
@@ -805,7 +805,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -839,8 +839,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -892,12 +892,8 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            <p>
-            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
-            <p>
-            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
-            </p>    
-            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
+            Cake AddIn to upload files using WinSCP.
+            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
             </td>
                 </tr>
                 <tr>
@@ -1032,7 +1028,12 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Contains functionality related to emails
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Email</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1101,14 +1102,16 @@
                 <tr>
                     <td><a href="/dsl/git">Git</a></td>
                     <td>
-            Cake AddIn which copies files based on Git log.
-            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
+            Class GitAliases.
+            
+
+            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            The result of GitterProvider Chat API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1169,7 +1172,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -1277,7 +1280,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Contains functionality related to SendGrid API
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
