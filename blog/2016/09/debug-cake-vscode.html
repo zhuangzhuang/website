@@ -168,26 +168,29 @@
 <li>Install <a href="https://marketplace.visualstudio.com/items?itemName=cake-build.cake-vscode">Cake Extension</a> for Visual Studio Code</li>
 <li>Set up .NET Core debugger in Visual Studio Code. See <a href="http://aka.ms/vscclrdebugger">http://aka.ms/vscclrdebugger</a> for details</li>
 <li>Open the directory containing your Cake files in Visual Studio Code</li>
-<li>Create file <code>.vscode/launch.json</code> and add the following content (assuming your Cake file is <code>build.cake</code>)
-<br/><pre><code class="json">{
-&quot;version&quot;: &quot;0.2.0&quot;,
-&quot;configurations&quot;: [
-{
-&quot;name&quot;: &quot;.NET Core Launch (console)&quot;,
-&quot;type&quot;: &quot;coreclr&quot;,
-&quot;request&quot;: &quot;launch&quot;,
-&quot;program&quot;: &quot;<span class="math" workspaceRoot>{workspaceRoot}/tools/Cake.CoreCLR/Cake.dll&quot;,
-&quot;args&quot;: [
-&quot;</span>/build.cake&quot;,
-&quot;--debug&quot;,
-&quot;--verbosity=diagnostic&quot;
-],
-&quot;cwd&quot;: &quot;$&quot;,
-&quot;stopAtEntry&quot;: true,
-&quot;externalConsole&quot;: false
+<li>Create file <code>.vscode/launch.json</code> and add the following content (assuming your Cake file is <code>build.cake</code>)</li>
+</ol>
+<pre><code class="language-json">{
+        &quot;version&quot;: &quot;0.2.0&quot;,
+        &quot;configurations&quot;: [
+            {
+                &quot;name&quot;: &quot;.NET Core Launch (console)&quot;,
+                &quot;type&quot;: &quot;coreclr&quot;,
+                &quot;request&quot;: &quot;launch&quot;,
+                &quot;program&quot;: &quot;${workspaceRoot}/tools/Cake.CoreCLR/Cake.dll&quot;,
+                &quot;args&quot;: [
+                    &quot;${workspaceRoot}/build.cake&quot;,
+                    &quot;--debug&quot;,
+                    &quot;--verbosity=diagnostic&quot;
+                ],
+                &quot;cwd&quot;: &quot;${workspaceRoot}&quot;,
+                &quot;stopAtEntry&quot;: true,
+                &quot;externalConsole&quot;: false
+            }
+        ]
 }
-]
-}</code></pre></li>
+</code></pre>
+<ol>
 <li>Open your Cake file and add a breakpoint by hitting <code>F9</code></li>
 <li>Hit <code>F5</code> to start debugging
 <br/><img src="/assets/img/debugging-cake-file-vscode/debugging.png" class="img-fluid" alt="Debugging" /></li>
@@ -195,13 +198,16 @@
 <h3 id="alternative-approach">Alternative Approach</h3>
 <p>Another way to enable debugging of a Cake script is to start Cake from the commandline and then attach the debugger from within Visual Studio Code. This can be done using the following steps:</p>
 <ol>
-<li>Add the following <code>configuration</code> to the <code>.vscode/launch.json</code> file that you created in the previous steps
-<br/><pre><code class="json">{
-&quot;name&quot;: &quot;.NET Core Attach&quot;,
-&quot;type&quot;: &quot;coreclr&quot;,
-&quot;request&quot;: &quot;attach&quot;,
-&quot;processId&quot;: &quot;$&quot;
-}</code></pre></li>
+<li>Add the following <code>configuration</code> to the <code>.vscode/launch.json</code> file that you created in the previous steps</li>
+</ol>
+<pre><code class="language-json">{
+        &quot;name&quot;: &quot;.NET Core Attach&quot;,
+        &quot;type&quot;: &quot;coreclr&quot;,
+        &quot;request&quot;: &quot;attach&quot;,
+        &quot;processId&quot;: &quot;${command.pickProcess}&quot;
+}
+</code></pre>
+<ol>
 <li>Open your Cake file and add a breakpoint by hitting <code>F9</code></li>
 <li>Select the <code>configuration</code> you added in the previous step
 <br/><img src="/assets/img/debugging-cake-file-vscode/select_config.png" class="img-fluid" alt="Select config" /></li>
