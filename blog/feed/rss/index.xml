@@ -5,8 +5,20 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Fri, 31 Mar 2017 22:03:12 GMT</pubDate>
-		<lastBuildDate>Fri, 31 Mar 2017 22:03:12 GMT</lastBuildDate>
+		<pubDate>Sat, 01 Apr 2017 17:17:12 GMT</pubDate>
+		<lastBuildDate>Sat, 01 Apr 2017 17:17:12 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.19.2 released</title>
+			<link>http://cakebuild.net/blog/2017/04/cake-v0.19.2-released</link>
+			<description>&lt;p&gt;Version 0.19.2 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.1, which fixes an issue discovered with MSBuild logger paths not being correctly quoted, causing issues logging to paths containing spaces.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>http://cakebuild.net/blog/2017/04/cake-v0.19.2-released</guid>
+			<pubDate>Sat, 01 Apr 2017 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title>VSWhere and Visual Studio 2017 Support</title>
 			<link>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</link>
@@ -224,19 +236,6 @@ will be published soon.&lt;/p&gt;
 			<author>gep13</author>
 			<guid>http://cakebuild.net/blog/2016/07/cake-v0.15.2-released</guid>
 			<pubDate>Sat, 30 Jul 2016 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title>Cake v0.15.1 released</title>
-			<link>http://cakebuild.net/blog/2016/07/cake-v0.15.1-released</link>
-			<description>&lt;p&gt;Version 0.15.1 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;Following the release of Cake v0.15.0 a couple days ago, a problem was identified with regard to the AppVeyor functionality of uploading artifacts and pushing test results.&lt;/p&gt;
-&lt;p&gt;Fortunately, &lt;a href="https://github.com/Philo"&gt;Philo&lt;/a&gt; identified the issue very quickly and submitted a PR request to correct the problem.&lt;/p&gt;
-&lt;p&gt;As a result, v0.15.1 of Cake is now available.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>http://cakebuild.net/blog/2016/07/cake-v0.15.1-released</guid>
-			<pubDate>Thu, 28 Jul 2016 00:00:00 GMT</pubDate>
 		</item>
 	</channel>
 </rss>
