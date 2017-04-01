@@ -4,7 +4,21 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-03-31T22:47:21Z</updated>
+	<updated>2017-04-01T17:29:58Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/04/cake-v0.19.2-released" />
+		<id>http://cakebuild.net/blog/2017/04/cake-v0.19.2-released</id>
+		<title>Cake v0.19.2 released</title>
+		<updated>2017-04-01T00:00:00Z</updated>
+		<summary>&lt;p&gt;Version 0.19.2 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.1, which fixes an issue discovered with MSBuild logger paths not being correctly quoted, causing issues logging to paths containing spaces.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>phillipsj</name>
@@ -258,21 +272,6 @@ will be published soon.&lt;/p&gt;
 		<summary>&lt;p&gt;Version 0.15.2 of Cake has been released.&lt;/p&gt;
 &lt;p&gt;Hot on the heels of the 0.15.1 release, we have just finished another bug fix release.  This time, it was to correct two issues that were identified with the WiX aliases within Cake.&lt;/p&gt;
 &lt;p&gt;Both of these issues were identified and corrected by community members, and we would like to thank &lt;a href="https://github.com/galpin"&gt;galpin&lt;/a&gt; and &lt;a href="https://github.com/RLittlesII"&gt;RLittlesII&lt;/a&gt; for their help.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/07/cake-v0.15.1-released" />
-		<id>http://cakebuild.net/blog/2016/07/cake-v0.15.1-released</id>
-		<title>Cake v0.15.1 released</title>
-		<updated>2016-07-28T00:00:00Z</updated>
-		<summary>&lt;p&gt;Version 0.15.1 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;Following the release of Cake v0.15.0 a couple days ago, a problem was identified with regard to the AppVeyor functionality of uploading artifacts and pushing test results.&lt;/p&gt;
-&lt;p&gt;Fortunately, &lt;a href="https://github.com/Philo"&gt;Philo&lt;/a&gt; identified the issue very quickly and submitted a PR request to correct the problem.&lt;/p&gt;
-&lt;p&gt;As a result, v0.15.1 of Cake is now available.&lt;/p&gt;
 &lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
 	</entry>
