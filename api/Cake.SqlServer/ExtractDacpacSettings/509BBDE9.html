@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SqlServerAliases.RestoreBacpac(ICakeContext, string, string, FilePath) Method</title>
+        <title>Cake - API - ExtractDacpacSettings.Tables Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,10 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -140,23 +137,18 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></li>
+		<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings">Extract<wbr>Dacpac<wbr>Settings</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings/00882F64">Extract<wbr>Dacpac<wbr>Settings<wbr>(string, <wbr>string)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/59AB85D0">CreateBacpacFile<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/698DA7E9">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/ECCAEFC0">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/241A5A8D">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/AC2ED47F">DropDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/9358AEA2">ExecuteSqlCommand<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/E1E3A471">ExecuteSqlCommand<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/362AE44A">ExecuteSqlFile<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/0C0D9E92">ExecuteSqlFile<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/E3BF74B0">OpenSqlConnection<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.SqlServer/SqlServerAliases/7E110950">RestoreBacpac<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/2267E853">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>Restore<wbr>Sql<wbr>Backup<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/7E011849">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.SqlServer/SqlServerAliases/AE3CED99">SetSqlCommandTimeout<wbr>(ICakeContext, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings/69B72720">WithTable<wbr>(string, <wbr>string)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings/9BC41E01">Description</a></li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings/77C1F821">Name</a></li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings/4B32651B">OutputFile</a></li>
+				<li class="selected"><a href="/api/Cake.SqlServer/ExtractDacpacSettings/509BBDE9">Tables</a></li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings/F0687398">Version</a></li>
 
 
                     </ul>
@@ -170,8 +162,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a>.</h3>
-	<h1>RestoreBacpac<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.SqlServer/ExtractDacpacSettings">Extract<wbr>Dacpac<wbr>Settings</a>.</h3>
+	<h1>Tables <small>Property</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -184,14 +176,17 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Restores a bacpac file into a database.
             <p>
-            NB: there must be no database with the name you provide. Otherwise exception will be thrown.
+            Optional enumerable used to retrieve enumerator over set of tables for which reference data should be stored.
+            For each <code class="cs">System.Tuple</code> in the enumeration the first item specifies the schema of the table, and the second specifies the base identifier of the table.
+            </p>
+            <p>
+            If the value for this parameter is a null reference, no reference data will be stored.
             </p>
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
 						<dd><a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></dd>
@@ -200,88 +195,20 @@
 						<dd><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></dd>		
+						<dd><a href="/api/Cake.SqlServer/ExtractDacpacSettings">Extract<wbr>Dacpac<wbr>Settings</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void RestoreBacpac(this ICakeContext context, string connectionString, string databaseName, FilePath bacpacFilePath)</code></pre>
-
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">    #addin "nuget:?package=Cake.SqlServer"
-
-    Task("Create-Bacpac")
-    	.Does(() =&gt;{
-    		var connString = @"data source=(LocalDb)\v12.0";
-    
-    		var dbName = "FromBacpac";
-    
-    		var file = new FilePath(@".\src\Tests\Nsaga.bacpac");
-    
-    		RestoreBacpac(connString, dbName, file);
-    	});
-    });        </code></pre>
-            </div>
+	<pre><code>public IEnumerable&lt;Tuple&lt;string, string&gt;&gt; Tables { get; }</code></pre>
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td>The Cake context.</td>
-					</tr>
-					<tr>
-						<td>connectionString</td>
-						<td>string</td>
-						<td>The connection string. You may want to connect to master database for this operation.</td>
-					</tr>
-					<tr>
-						<td>databaseName</td>
-						<td>string</td>
-						<td>Name of a new database you are creating </td>
-					</tr>
-					<tr>
-						<td>bacpacFilePath</td>
-						<td>FilePath</td>
-						<td>Full path to the bacpac file</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -292,7 +219,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>IEnumerable<wbr>&lt;Tuple<wbr>&lt;string, <wbr>string&gt;<wbr>&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
