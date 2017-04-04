@@ -255,8 +255,33 @@
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.SqlServer/BackupAliases">BackupAliases</a></td>
+									<td>
+            Contains functionality to restore SQL Server backup files *.bak
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlServer/DacAliases">DacAliases</a></td>
+									<td>
+            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
+            create and restore DACPAC files
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlServer/ExtractDacpacSettings">Extract<wbr>Dacpac<wbr>Settings</a></td>
+									<td>
+            Settings for extract dacpac from database
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.SqlServer/LocalDbAliases">LocalDbAliases</a></td>
 									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlServer/PublishDacpacSettings">Publish<wbr>Dacpac<wbr>Settings</a></td>
+									<td>
+            Settings for extract dacpac from database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlServer/RestoreSqlBackupSettings">Restore<wbr>Sql<wbr>Backup<wbr>Settings</a></td>
@@ -268,8 +293,8 @@
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></td>
 									<td>
             <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
-            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
             </p>
             <p>
             In order to use the commands for this addin, include the following in your build.cake file to download and

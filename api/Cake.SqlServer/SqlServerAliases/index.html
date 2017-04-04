@@ -139,7 +139,11 @@
 		<li><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.SqlServer/BackupAliases">BackupAliases</a></li>
+				<li><a href="/api/Cake.SqlServer/DacAliases">DacAliases</a></li>
+				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings">Extract<wbr>Dacpac<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlServer/LocalDbAliases">LocalDbAliases</a></li>
+				<li><a href="/api/Cake.SqlServer/PublishDacpacSettings">Publish<wbr>Dacpac<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlServer/RestoreSqlBackupSettings">Restore<wbr>Sql<wbr>Backup<wbr>Settings</a></li>
 				<li class="selected"><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></li>
 			<li class="header">Enum Types</li>
@@ -171,8 +175,8 @@
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
             <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc. 
-            Also provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances.
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
             </p>
             <p>
             In order to use the commands for this addin, include the following in your build.cake file to download and
@@ -257,16 +261,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.SqlServer/SqlServerAliases/59AB85D0">CreateBacpacFile<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Creates a bacpac file for easy database backuping. 
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/698DA7E9">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -356,39 +350,6 @@ class Type type-node
 									<div>
              Opens a new <code class="cs">System.Data.SqlClient.SqlConnection</code> with the given connection string.
              </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.SqlServer/SqlServerAliases/7E110950">RestoreBacpac<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Restores a bacpac file into a database.
-            <p>
-            NB: there must be no database with the name you provide. Otherwise exception will be thrown.
-            </p>
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.SqlServer/SqlServerAliases/7E011849">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Restores a database from a backup file.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.SqlServer/SqlServerAliases/2267E853">RestoreSqlBackup<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>Restore<wbr>Sql<wbr>Backup<wbr>Settings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Restores a database from a backup file.
-            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

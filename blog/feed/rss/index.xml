@@ -5,8 +5,20 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Sat, 01 Apr 2017 17:17:12 GMT</pubDate>
-		<lastBuildDate>Sat, 01 Apr 2017 17:17:12 GMT</lastBuildDate>
+		<pubDate>Tue, 04 Apr 2017 19:46:45 GMT</pubDate>
+		<lastBuildDate>Tue, 04 Apr 2017 19:46:45 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.19.3 released</title>
+			<link>http://cakebuild.net/blog/2017/04/cake-v0.19.3-released</link>
+			<description>&lt;p&gt;Version 0.19.3 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.2, which fixes so SignTool path is resolved by default also with the Windows 10 SDK.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>http://cakebuild.net/blog/2017/04/cake-v0.19.3-released</guid>
+			<pubDate>Tue, 04 Apr 2017 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title>Cake v0.19.2 released</title>
 			<link>http://cakebuild.net/blog/2017/04/cake-v0.19.2-released</link>
@@ -224,18 +236,6 @@ will be published soon.&lt;/p&gt;
 			<author>gep13</author>
 			<guid>http://cakebuild.net/blog/2016/08/how-does-cake-use-myget</guid>
 			<pubDate>Thu, 25 Aug 2016 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title>Cake v0.15.2 released</title>
-			<link>http://cakebuild.net/blog/2016/07/cake-v0.15.2-released</link>
-			<description>&lt;p&gt;Version 0.15.2 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;Hot on the heels of the 0.15.1 release, we have just finished another bug fix release.  This time, it was to correct two issues that were identified with the WiX aliases within Cake.&lt;/p&gt;
-&lt;p&gt;Both of these issues were identified and corrected by community members, and we would like to thank &lt;a href="https://github.com/galpin"&gt;galpin&lt;/a&gt; and &lt;a href="https://github.com/RLittlesII"&gt;RLittlesII&lt;/a&gt; for their help.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>http://cakebuild.net/blog/2016/07/cake-v0.15.2-released</guid>
-			<pubDate>Sat, 30 Jul 2016 00:00:00 GMT</pubDate>
 		</item>
 	</channel>
 </rss>
