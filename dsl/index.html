@@ -358,8 +358,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -480,7 +486,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -508,8 +514,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -734,7 +740,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -780,7 +786,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+             Contains Cake aliases for configuring Amazon Simple Storage Service
             </td>
                 </tr>
                 <tr>
@@ -804,7 +810,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            The result of CakeMailProvider API post
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -821,7 +832,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/collection-helpers">Collection Helpers</a></td>
-                    <td></td>
+                    <td>
+            Several extension methods when using IEnumerable.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/communication">Communication</a></td>
@@ -891,13 +904,19 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            Cake AddIn to upload files using WinSCP.
-            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
+            <p>
+            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
+            <p>
+            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
+            </p>    
+            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-helpers">Directory Helpers</a></td>
-                    <td></td>
+                    <td>
+            Several extension methods when operating on a Directory.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
@@ -1027,7 +1046,12 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Contains functionality related to emails
+            <p>Contains aliases related to emails.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Email</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1052,8 +1076,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1090,10 +1120,8 @@
                 <tr>
                     <td><a href="/dsl/git">Git</a></td>
                     <td>
-            Class GitAliases.
-            
-
-            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
+            Cake AddIn which copies files based on Git log.
+            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
             </td>
                 </tr>
                 <tr>
@@ -1165,7 +1193,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -1194,8 +1222,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1274,7 +1302,12 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Class that lets you override default API settings
+            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1300,8 +1333,15 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
-            create and restore DACPAC files
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
