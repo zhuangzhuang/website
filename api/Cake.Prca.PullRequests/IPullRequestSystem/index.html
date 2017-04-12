@@ -194,8 +194,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
 											<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
+											<li><a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -205,10 +205,10 @@
 							graph TD
 	Type["IPullRequestSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["TfsPullRequestSystem"]
-	click Implementing0 "/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
-	Type-.-&gt;Implementing1["PullRequestSystem"]
-	click Implementing1 "/api/Cake.Prca.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing0["PullRequestSystem"]
+	click Implementing0 "/api/Cake.Prca.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing1["TfsPullRequestSystem"]
+	click Implementing1 "/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
 
 						</div>
 					</div>
@@ -254,6 +254,24 @@ class Type type-node
 								<td>
 									<div>
             Returns a list of all files modified in a pull request.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca.PullRequests/IPullRequestSystem/49A45764">Get<wbr>Preferred<wbr>Comment<wbr>Format<wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Prca/PrcaCommentFormat">PrcaCommentFormat</a></td>
+								<td>
+									<div>
+            Returns the preferred format for pull request comments.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca.PullRequests/IPullRequestSystem/EEA2D2FD">Initialize<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Initializes the code analysis provider.
             </div>
 								</td>
 							</tr>

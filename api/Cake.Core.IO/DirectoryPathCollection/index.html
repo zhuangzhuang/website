@@ -139,17 +139,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
-				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
-				<li><a href="/api/Cake.Core.IO/IFileSystem">IFileSystem</a></li>
-				<li><a href="/api/Cake.Core.IO/IFileSystemInfo">IFileSystemInfo</a></li>
-				<li><a href="/api/Cake.Core.IO/IGlobber">IGlobber</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcess">IProcess</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
-				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
-				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></li>
 				<li class="selected"><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></li>
@@ -169,6 +158,17 @@
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
 				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
+				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
+				<li><a href="/api/Cake.Core.IO/IFileSystem">IFileSystem</a></li>
+				<li><a href="/api/Cake.Core.IO/IFileSystemInfo">IFileSystemInfo</a></li>
+				<li><a href="/api/Cake.Core.IO/IGlobber">IGlobber</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcess">IProcess</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
+				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
+				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
 
 
                     </ul>
@@ -416,7 +416,9 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/EnumerableExtensions/4F0C32C4">Distinct<wbr>&lt;DirectoryPath, <wbr>TKey&gt;<wbr><wbr>(Func<wbr>&lt;DirectoryPath, <wbr>TKey&gt;<wbr>)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;TSource&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Select a distinct instance of an object from a collection of objects.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
 								</td>
 							</tr>
@@ -456,6 +458,26 @@ class Type type-node
 								<td>
 									<div>
             Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/AD385772">NotNullOrEmpty<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null or empty.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/74EF2F54">Not<wbr>Null<wbr>Or<wbr>Empty<wbr>Or<wbr>Empty<wbr>Element<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null, empty or contains an empty element.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
