@@ -206,6 +206,7 @@
     <li><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></li>        
     <li><a href="/dsl/raygun">Raygun</a></li>        
     <li><a href="/dsl/resharperreports">ReSharperReports</a></li>        
+    <li><a href="/dsl/resxconverter">ResxConverter</a></li>        
     <li><a href="/dsl/semantic-versioning">Semantic Versioning</a></li>        
     <li><a href="/dsl/sendgrid">SendGrid</a></li>        
     <li><a href="/dsl/services">Services</a></li>        
@@ -261,15 +262,7 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            <p></p>
+            Contains functionality to restore SQL Server backup files *.bak
             </div>
 
 
