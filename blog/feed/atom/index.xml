@@ -4,7 +4,22 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-04-19T17:17:41Z</updated>
+	<updated>2017-04-19T18:04:35Z</updated>
+	<entry>
+		<author>
+			<name>agc93</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released" />
+		<id>http://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released</id>
+		<title>Cake for Visual Studio Team Services v0.3.0 released</title>
+		<updated>2017-04-19T00:00:00Z</updated>
+		<summary>&lt;p&gt;Version 0.3.0 of Cake for Visual Studio Team Services and Team Foundation Server has been released.&lt;/p&gt;
+&lt;p&gt;This release includes support for customising the location where &lt;code&gt;NuGet.exe&lt;/code&gt;, as well as Cake and other tools, is retrieved from.&lt;/p&gt;
+&lt;p&gt;The updated extension will now be live for VSTS users while TFS users may need to update the extension using the &lt;em&gt;Manage Extensions&lt;/em&gt; page on your TFS server.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -15,21 +30,6 @@
 		<updated>2017-04-19T00:00:00Z</updated>
 		<summary>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
 &lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>agc93</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2017/04/cake-v0.3.0-vso-released" />
-		<id>http://cakebuild.net/blog/2017/04/cake-v0.3.0-vso-released</id>
-		<title>Cake for Visual Studio Team Services v0.3.0 released</title>
-		<updated>2017-04-19T00:00:00Z</updated>
-		<summary>&lt;p&gt;Version 0.3.0 of Cake for Visual Studio Team Services and Team Foundation Server has been released.&lt;/p&gt;
-&lt;p&gt;This release includes support for customising the location where &lt;code&gt;NuGet.exe&lt;/code&gt;, as well as Cake and other tools, is retrieved from.&lt;/p&gt;
-&lt;p&gt;The updated extension will now be live for VSTS users while TFS users may need to update the extension using the &lt;em&gt;Manage Extensions&lt;/em&gt; page on your TFS server.&lt;/p&gt;
 &lt;p&gt;Contributions were included from:&lt;/p&gt;
 
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
