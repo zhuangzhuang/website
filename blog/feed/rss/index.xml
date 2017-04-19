@@ -5,8 +5,8 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Wed, 19 Apr 2017 16:11:31 GMT</pubDate>
-		<lastBuildDate>Wed, 19 Apr 2017 16:11:31 GMT</lastBuildDate>
+		<pubDate>Wed, 19 Apr 2017 16:55:59 GMT</pubDate>
+		<lastBuildDate>Wed, 19 Apr 2017 16:55:59 GMT</lastBuildDate>
 		<item>
 			<title>Cake v0.19.4 released</title>
 			<link>http://cakebuild.net/blog/2017/04/cake-v0.19.4-released</link>
@@ -17,6 +17,19 @@
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
 			<author>devlead</author>
 			<guid>http://cakebuild.net/blog/2017/04/cake-v0.19.4-released</guid>
+			<pubDate>Wed, 19 Apr 2017 00:00:00 GMT</pubDate>
+		</item>
+		<item>
+			<title>Cake for Visual Studio Team Services v0.3.0 released</title>
+			<link>http://cakebuild.net/blog/2017/04/cake-vso-v0.3.0-released</link>
+			<description>&lt;p&gt;Version 0.3.0 of Cake for Visual Studio Team Services and Team Foundation Server has been released.&lt;/p&gt;
+&lt;p&gt;This release includes support for customising the location where &lt;code&gt;NuGet.exe&lt;/code&gt;, as well as Cake and other tools, is retrieved from.&lt;/p&gt;
+&lt;p&gt;The updated extension will now be live for VSTS users while TFS users may need to update the extension using the &lt;em&gt;Manage Extensions&lt;/em&gt; page on your TFS server.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>agc93</author>
+			<guid>http://cakebuild.net/blog/2017/04/cake-vso-v0.3.0-released</guid>
 			<pubDate>Wed, 19 Apr 2017 00:00:00 GMT</pubDate>
 		</item>
 		<item>
@@ -227,15 +240,6 @@ will be published soon.&lt;/p&gt;
 			<author>patriksvensson</author>
 			<guid>http://cakebuild.net/blog/2016/09/cake-v0.16.0-released</guid>
 			<pubDate>Sat, 17 Sep 2016 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title>Cake Contribution Organization</title>
-			<link>http://cakebuild.net/blog/2016/08/cake-contribution-organization</link>
-			<description>&lt;p&gt;As some of you may know, we recently opened an issue on GitHub to discuss the problem of &lt;a href="https://github.com/cake-build/cake/issues/1136"&gt;Cake addins becoming stale&lt;/a&gt;.  This blog post aims to recap the discussion that was had within that issue, as well as the plan going forward.&lt;/p&gt;
-&lt;p&gt;The first thing that I want to re-iterate is that the Cake Team are not attempting to throttle or take over the development of Cake addins/modules in anyway.  We love the fact that there is a thriving Community behind Cake, and we want to encourage that.  However, we do have a responsibility to the wider Cake Community and we want to ensure that any addins and modules that are created, can continue to be maintained, should the original developer no longer be in a position to maintain it.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>http://cakebuild.net/blog/2016/08/cake-contribution-organization</guid>
-			<pubDate>Wed, 31 Aug 2016 00:00:00 GMT</pubDate>
 		</item>
 	</channel>
 </rss>
