@@ -217,6 +217,7 @@
     <li><a href="/dsl/semantic-versioning">Semantic Versioning</a></li>        
     <li><a href="/dsl/sendgrid">SendGrid</a></li>        
     <li><a href="/dsl/services">Services</a></li>        
+    <li><a href="/dsl/signing">Signing</a></li>        
     <li><a href="/dsl/sonar">Sonar</a></li>        
     <li><a href="/dsl/sqlserver">SqlServer</a></li>        
     <li><a href="/dsl/sqltools">SqlTools</a></li>        
@@ -349,13 +350,19 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -477,8 +484,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-            Class to handle parsing of Visual Studio Project Files.
-            </td>
+    Contains functionality related to MSBuild project files.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mstest">MSTest</a></td>
@@ -618,12 +625,11 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
-    <p>
-    In order to use the commands for this alias, SignTool will need to be installed on the machine where
-    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
-    </p>
-    </td>
+            Contains functionality for working with VsixSignTool.
+            
+
+            Aliases for VsixSignTool.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/specflow">SpecFlow</a></td>
@@ -782,7 +788,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+            Contains Cake aliases for configuring Amazon Elastic Load Balancers
             </td>
                 </tr>
                 <tr>
@@ -806,7 +812,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -901,8 +907,12 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            Cake AddIn to upload files using WinSCP.
-            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
+            <p>
+            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
+            <p>
+            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
+            </p>    
+            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
             </td>
                 </tr>
                 <tr>
@@ -1040,8 +1050,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1059,7 +1069,13 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -1097,14 +1113,16 @@
                 <tr>
                     <td><a href="/dsl/git">Git</a></td>
                     <td>
-            Cake AddIn which copies files based on Git log.
-            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
+            Class GitAliases.
+            
+
+            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            The result of GitterProvider Chat API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1165,8 +1183,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-            Class to handle parsing of Visual Studio Project Files.
-            </td>
+    Contains functionality related to MSBuild project files.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msdeploy">MsDeploy</a></td>
@@ -1245,7 +1263,8 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to writing code analysis issues to pull requests.
+            Contains functionality related to importing code analysis issues from JetBrains Inspect Code
+            to write them to pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1294,6 +1313,15 @@
             </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/signing">Signing</a></td>
+                    <td>
+            Contains functionality for working with VsixSignTool.
+            
+
+            Aliases for VsixSignTool.
+            </td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/sonar">Sonar</a></td>
                     <td>
             <p>
@@ -1310,8 +1338,15 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
-            create and restore DACPAC files
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
