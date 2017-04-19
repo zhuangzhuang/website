@@ -5,8 +5,20 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Sat, 15 Apr 2017 13:33:24 GMT</pubDate>
-		<lastBuildDate>Sat, 15 Apr 2017 13:33:24 GMT</lastBuildDate>
+		<pubDate>Wed, 19 Apr 2017 06:56:30 GMT</pubDate>
+		<lastBuildDate>Wed, 19 Apr 2017 06:56:30 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.19.4 released</title>
+			<link>http://cakebuild.net/blog/2017/04/cake-v0.19.4-released</link>
+			<description>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>http://cakebuild.net/blog/2017/04/cake-v0.19.4-released</guid>
+			<pubDate>Wed, 19 Apr 2017 00:00:00 GMT</pubDate>
+		</item>
 		<item>
 			<title>Cake v0.19.3 released</title>
 			<link>http://cakebuild.net/blog/2017/04/cake-v0.19.3-released</link>
@@ -224,18 +236,6 @@ will be published soon.&lt;/p&gt;
 			<author>gep13</author>
 			<guid>http://cakebuild.net/blog/2016/08/cake-contribution-organization</guid>
 			<pubDate>Wed, 31 Aug 2016 00:00:00 GMT</pubDate>
-		</item>
-		<item>
-			<title>How does Cake use MyGet?</title>
-			<link>http://cakebuild.net/blog/2016/08/how-does-cake-use-myget</link>
-			<description>&lt;p&gt;This the first in a series of blog posts which will attempt to explain how Cake uses a number of different online services in order to develop, build, and deploy Cake.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.myget.org"&gt;MyGet&lt;/a&gt; is a hosted package server that allows hosting of the following package types:&lt;/p&gt;
-
-&lt;p&gt;In addition MyGet also offers a build service to allow for the execution of build scripts.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>http://cakebuild.net/blog/2016/08/how-does-cake-use-myget</guid>
-			<pubDate>Thu, 25 Aug 2016 00:00:00 GMT</pubDate>
 		</item>
 	</channel>
 </rss>
