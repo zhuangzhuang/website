@@ -4,7 +4,21 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-04-14T21:39:46Z</updated>
+	<updated>2017-04-19T06:29:50Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/04/cake-v0.19.4-released" />
+		<id>http://cakebuild.net/blog/2017/04/cake-v0.19.4-released</id>
+		<title>Cake v0.19.4 released</title>
+		<updated>2017-04-19T00:00:00Z</updated>
+		<summary>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -260,19 +274,5 @@ will be published soon.&lt;/p&gt;
 		<updated>2016-08-31T00:00:00Z</updated>
 		<summary>&lt;p&gt;As some of you may know, we recently opened an issue on GitHub to discuss the problem of &lt;a href="https://github.com/cake-build/cake/issues/1136"&gt;Cake addins becoming stale&lt;/a&gt;.  This blog post aims to recap the discussion that was had within that issue, as well as the plan going forward.&lt;/p&gt;
 &lt;p&gt;The first thing that I want to re-iterate is that the Cake Team are not attempting to throttle or take over the development of Cake addins/modules in anyway.  We love the fact that there is a thriving Community behind Cake, and we want to encourage that.  However, we do have a responsibility to the wider Cake Community and we want to ensure that any addins and modules that are created, can continue to be maintained, should the original developer no longer be in a position to maintain it.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/08/how-does-cake-use-myget" />
-		<id>http://cakebuild.net/blog/2016/08/how-does-cake-use-myget</id>
-		<title>How does Cake use MyGet?</title>
-		<updated>2016-08-25T00:00:00Z</updated>
-		<summary>&lt;p&gt;This the first in a series of blog posts which will attempt to explain how Cake uses a number of different online services in order to develop, build, and deploy Cake.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.myget.org"&gt;MyGet&lt;/a&gt; is a hosted package server that allows hosting of the following package types:&lt;/p&gt;
-
-&lt;p&gt;In addition MyGet also offers a build service to allow for the execution of build scripts.&lt;/p&gt;</summary>
 	</entry>
 </feed>
