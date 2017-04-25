@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SendGridProvider.SendEmail(string, string, IEnumerable&lt;MailAddress&gt;, string, string, string, SendGridSettings) Method</title>
+        <title>Cake - API - SendGridProvider.SendEmail(string, string, IEnumerable&lt;MailAddress&gt;, string, string, string, IEnumerable&lt;AttachmentBase&gt;, SendGridSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -145,9 +145,11 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.SendGrid/SendGridProvider/5BB8D0F2">SendGridProvider<wbr>(ICakeContext)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/012E0D73">SendEmail<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>SendGridSettings)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/15D092B2">SendEmail<wbr>(string, <wbr>string, <wbr>MailAddress, <wbr>string, <wbr>string, <wbr>string, <wbr>SendGridSettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.SendGrid/SendGridProvider/53DA277C">SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>SendGridSettings)<wbr></a></li>
+				<li><a href="/api/Cake.SendGrid/SendGridProvider/3B3AE79E">Create<wbr>Attachment<wbr>From<wbr>Local<wbr>File<wbr>(string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SendGrid/SendGridProvider/376E59AF">Create<wbr>Attachment<wbr>From<wbr>Stream<wbr>(Stream, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SendGrid/SendGridProvider/B91C8B9C">SendEmail<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
+				<li><a href="/api/Cake.SendGrid/SendGridProvider/9918684F">SendEmail<wbr>(string, <wbr>string, <wbr>MailAddress, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.SendGrid/SendGridProvider/2977145A">SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
 
 
                     </ul>
@@ -162,7 +164,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a>.</h3>
-	<h1>SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>SendGridSettings)<wbr> <small>Method</small></h1>
+	<h1>SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -195,11 +197,17 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public SendGridResult SendEmail(string senderName, string senderAddress, IEnumerable&lt;MailAddress&gt; recipients, string subject, string htmlContent, string textContent, SendGridSettings settings)</code></pre>
+	<pre><code>public SendGridResult SendEmail(string senderName, string senderAddress, IEnumerable&lt;MailAddress&gt; recipients, string subject, string htmlContent, string textContent, IEnumerable&lt;AttachmentBase&gt; attachments, SendGridSettings settings)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
             <pre><code class="cs">var apiKey = "... your api key ...";
+var attachments = new[]
+{
+    SendGrid.CreateAttachmentFromLocalFile("C:\\temp\\MyFile.txt"),
+    SendGrid.CreateAttachmentFromLocalFile("C:\\temp\\MySpreadsheet.xls"),
+    SendGrid.CreateAttachmentFromLocalFile("C:\\temp\\MyFile.pdf"),
+};
 try
 {
     var result = SendGrid.SendEmail(
@@ -212,12 +220,8 @@ try
         subject: "This is a test",
         htmlContent: "This is a test",
         textContent: "This is a test",
-        settings: new CakeMailEmailSettings
-        {
-        ApiKey = apiKey,
-        UserName = userName,
-        Password = password
-        }
+        attachments: attachments,
+        settings: new SendGridEmailSettings { ApiKey = apiKey }
     );
     if (result.Ok)
     {
@@ -294,6 +298,11 @@ catch(Exception ex)
 						<td>textContent</td>
 						<td>string</td>
 						<td>The text content</td>
+					</tr>
+					<tr>
+						<td>attachments</td>
+						<td>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr></td>
+						<td>Attachments to send with the email</td>
 					</tr>
 					<tr>
 						<td>settings</td>
