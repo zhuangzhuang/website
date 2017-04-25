@@ -79,7 +79,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -179,7 +182,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+             Run "npm install" on NodeJS embedded as a resource in the proxy. This can be useful if your proxy exceeds the 15MB limit imposed by Apigee.
+             </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -199,7 +206,29 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static NodePackagedModuleMetadata[] InstallNodePackagedModules(this ICakeContext ctx, string orgName, string proxyName, string revisionNumber, InstallNodePackagedModulesSettings settings = null)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+             <p>Cake task:</p>
+             <pre><code class="cs"> var orgName = "myorg";
+ var apigeeCredentials = new Credentials
+ {
+    Username = "me@me.com",
+    Password = "mypassword"
+ };
 
+ InstallNodePackagedModules(
+                    orgName,
+                    "myapi",
+                    "123",
+                    new InstallNodePackagedModulesSettings { Credentials = apigeeCredentials
+ });</code></pre>
+             </div>
+
+	<h1 id="Remarks">Remarks</h1>
+	<div>
+             This runs the following API with the command "install":
+             https://docs.apigee.com/management/apis/post/organizations/%7Borg_name%7D/apis/%7Bapi_name%7D/revisions/%7Brevision_num%7D/npm-0
+             </div>
 
 	<h1 id="Attributes">Attributes</h1>
 	<div class="box">
@@ -234,27 +263,27 @@
 					<tbody><tr>
 						<td>ctx</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>orgName</td>
 						<td>string</td>
-						<td></td>
+						<td>Your org name as shown in Apigee.</td>
 					</tr>
 					<tr>
 						<td>proxyName</td>
 						<td>string</td>
-						<td></td>
+						<td>Name of the proxy.</td>
 					</tr>
 					<tr>
 						<td>revisionNumber</td>
 						<td>string</td>
-						<td></td>
+						<td>The revision to deploy.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Apigee/InstallNodePackagedModulesSettings">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings</a></td>
-						<td></td>
+						<td>The settings such as the authentication credentials.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -272,7 +301,7 @@
 				</thead>
 				<tbody><tr>
 					<td>Node<wbr>Packaged<wbr>Module<wbr>Metadata[]</td>
-					<td></td>
+					<td>The list of installed modules.</td>
 				</tr>
 			</tbody></table>
 		</div>

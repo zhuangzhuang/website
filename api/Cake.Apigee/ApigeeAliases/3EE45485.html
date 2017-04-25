@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -179,7 +181,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+             Create an organisation or environment scoped key value map (KVM) in Apigee. 
+             </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -199,6 +205,30 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void CreateKeyValueMap(this ICakeContext ctx, string orgName, KeyValueMap keyValueMap, CreateKeyValueMapSettings settings = null)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+             <p>Cake task:</p>
+             <pre><code class="cs"> var orgName = "myorg";
+ var apigeeCredentials = new Credentials
+ {
+    Username = "me@me.com",
+    Password = "mypassword"
+ };
+
+ CreateKeyValueMap(
+                 orgName,
+                 "myapi",
+                 new KeyValueMap
+                 {
+                     Name = "myMap",
+                     Encrypted = false,
+                     Entry = new[]
+                     {
+                         new KeyValueMapEntry { Name = "myKey", Value = "myValue" }
+                     }
+                  },
+                  new CreateKeyValueMapSettings { Credentials = apigeeCredentials, Environment = "dev" });</code></pre>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -234,22 +264,22 @@
 					<tbody><tr>
 						<td>ctx</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>orgName</td>
 						<td>string</td>
-						<td></td>
+						<td>Your org name as shown in Apigee.</td>
 					</tr>
 					<tr>
 						<td>keyValueMap</td>
 						<td><a href="/api/Cake.Apigee/KeyValueMap">KeyValueMap</a></td>
-						<td></td>
+						<td>The values to set in the key value map.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Apigee/CreateKeyValueMapSettings">Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></td>
-						<td></td>
+						<td>Settings such as credentials and an environment name if environment scoped.</td>
 					</tr>
 			</tbody></table>
 		</div>

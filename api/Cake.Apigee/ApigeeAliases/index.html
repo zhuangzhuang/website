@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -181,7 +182,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains functionality for proxy import and deployments within Apigee.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -284,7 +289,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/3EE45485">CreateKeyValueMap<wbr>(ICakeContext, <wbr>string, <wbr>KeyValueMap, <wbr>Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Create an organisation or environment scoped key value map (KVM) in Apigee. 
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -292,7 +299,10 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/3F5C2D59">Delete<wbr>All<wbr>Undeployed<wbr>Api<wbr>Proxy<wbr>Revisions<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Delete<wbr>All<wbr>Undeployed<wbr>Api<wbr>Proxy<wbr>Revisions<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Delete all undeployed proxy revisions. This attempts to delete ALL proxy revisions but Apigee won't let
+             already deployed revisions be removed.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -300,7 +310,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/DC41B54A">Delete<wbr>Api<wbr>Proxy<wbr>Revision<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>Delete<wbr>Api<wbr>Proxy<wbr>Revision<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Delete a particular revision of a proxy.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -308,7 +320,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/A48B9CFE">DeleteKeyValueMap<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Delete a key value map (KVM).
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -316,7 +330,11 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/D3F243A1">DeployProxy<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>ImportProxyResult, <wbr>DeployProxySettings)<wbr></a></td>
 								<td><a href="/api/Cake.Apigee.Contracts/DeployProxyResult">DeployProxyResult</a></td>
 								<td>
-									<div></div>
+									<div>
+             Deploy a proxy within Apigee to an environment in Apigee using the results of an import. By default, if settings
+             are supplied, they will use override and a 15 second delay to minimize downtime as described in:
+             http://docs.apigee.com/api-services/content/deploy-api-proxies-using-management-api#seamless
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -324,7 +342,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/AC6A532D">DeployProxy<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>DeployProxySettings)<wbr></a></td>
 								<td><a href="/api/Cake.Apigee.Contracts/DeployProxyResult">DeployProxyResult</a></td>
 								<td>
-									<div></div>
+									<div>
+             Deploy a proxy to Apigee using a specific revision number.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -332,7 +352,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/4522D165">GetApiProxy<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>GetApiProxySettings)<wbr></a></td>
 								<td><a href="/api/Cake.Apigee.Contracts/ApiProxy">ApiProxy</a></td>
 								<td>
-									<div></div>
+									<div>
+             Retrieve API proxy metadata such as the list of revisions and when the proxy was created.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -340,7 +362,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/46DE5A38">ImportProxy<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>FilePath, <wbr>ImportProxySettings)<wbr></a></td>
 								<td><a href="/api/Cake.Apigee.Contracts/ImportProxyResult">ImportProxyResult</a></td>
 								<td>
-									<div></div>
+									<div>
+             Import a proxy into Apigee from a zip file. The zip file should contain an apiproxy folder at the top level.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -348,7 +372,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/41D12C72">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>(ICakeContext, <wbr>string, <wbr>ImportProxyResult, <wbr>Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings)<wbr></a></td>
 								<td>Node<wbr>Packaged<wbr>Module<wbr>Metadata[]</td>
 								<td>
-									<div></div>
+									<div>
+             Run "npm install" on NodeJS embedded as a resource in the proxy based on a previous import. This can be useful if your proxy exceeds the 15MB limit imposed by Apigee.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -356,7 +382,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/681BE181">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings)<wbr></a></td>
 								<td>Node<wbr>Packaged<wbr>Module<wbr>Metadata[]</td>
 								<td>
-									<div></div>
+									<div>
+             Run "npm install" on NodeJS embedded as a resource in the proxy. This can be useful if your proxy exceeds the 15MB limit imposed by Apigee.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -364,7 +392,9 @@ class Type type-node
 								<td><a href="/api/Cake.Apigee/ApigeeAliases/177D9BF0">ListKeyValueMaps<wbr>(ICakeContext, <wbr>string, <wbr>List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+             List all of the key value maps at either organisation or environment scope.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
