@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SonarEndSettings.Silent Property</title>
+        <title>Cake - API - SonarRunner.Run(SonarSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,9 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Value">Value</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -137,14 +137,14 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></li>
+		<li><a href="/api/Cake.Sonar/SonarRunner">SonarRunner</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Sonar/SonarEndSettings/28BEB710">SonarEndSettings<wbr>()<wbr></a></li>
-			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Sonar/SonarEndSettings/C8A683DF">Login</a></li>
-				<li><a href="/api/Cake.Sonar/SonarEndSettings/6A6D611C">Password</a></li>
-				<li class="selected"><a href="/api/Cake.Sonar/SonarEndSettings/07A8D1B3">Silent</a></li>
+				<li><a href="/api/Cake.Sonar/SonarRunner/31A09B6A">SonarRunner<wbr>(ICakeLog, <wbr>IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Sonar/SonarRunner/69FD72B6">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Sonar/SonarRunner/C3E88A0F">GetToolName<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Sonar/SonarRunner/A76FB899">Run<wbr>(SonarSettings)<wbr></a></li>
 
 
                     </ul>
@@ -158,8 +158,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a>.</h3>
-	<h1>Silent <small>Property</small></h1>
+			<h3><a href="/api/Cake.Sonar/SonarRunner">SonarRunner</a>.</h3>
+	<h1>Run<wbr>(SonarSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -170,13 +170,9 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Suppress standard output from the sonar runner.
-            </div>
-
+	
 		<div class="panel panel-default">
-  			<div class="panel-body">
+  			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
 						<dd><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></dd>
@@ -185,20 +181,40 @@
 						<dd><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></dd>		
+						<dd><a href="/api/Cake.Sonar/SonarRunner">SonarRunner</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool Silent { get; set; }</code></pre>
+	<pre><code>public void Run(SonarSettings settings)</code></pre>
 
 
 
 
 
-	<h1 id="Value">Value</h1>
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>settings</td>
+						<td><a href="/api/Cake.Sonar/SonarSettings">SonarSettings</a></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -209,7 +225,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>void</td>
 					<td></td>
 				</tr>
 			</tbody></table>

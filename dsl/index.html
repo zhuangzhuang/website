@@ -357,8 +357,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -479,8 +479,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
-    </td>
+            Several extension methods when using ProjectParser.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mstest">MSTest</a></td>
@@ -507,8 +507,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -640,7 +640,12 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    </p>
     </td>
                 </tr>
                 <tr>
@@ -684,7 +689,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XSL transformation.
+    Contains functionality related to XML XPath queries.
     </td>
                 </tr>
                 <tr>
@@ -732,7 +737,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -780,7 +785,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+             Contains Cake aliases for configuring Amazon Simple Storage Service
             </td>
                 </tr>
                 <tr>
@@ -804,7 +809,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Contains functionality related to CakeMail API
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -899,8 +904,12 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            Cake AddIn to upload files using WinSCP.
-            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
+            <p>
+            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
+            <p>
+            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
+            </p>    
+            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
             </td>
                 </tr>
                 <tr>
@@ -1057,8 +1066,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1095,10 +1104,8 @@
                 <tr>
                     <td><a href="/dsl/git">Git</a></td>
                     <td>
-            Class GitAliases.
-            
-
-            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
+            Cake AddIn which copies files based on Git log.
+            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
             </td>
                 </tr>
                 <tr>
@@ -1163,8 +1170,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
-    </td>
+            Several extension methods when using ProjectParser.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msdeploy">MsDeploy</a></td>
@@ -1192,8 +1199,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1243,8 +1250,7 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
-            pull requests.
+            Contains functionality related to writing code analysis issues to pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1285,7 +1291,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1320,15 +1326,7 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
+            Contains functionality to restore SQL Server backup files *.bak
             </td>
                 </tr>
                 <tr>

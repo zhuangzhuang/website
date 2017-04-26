@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SonarCake.End(SonarEndSettings) Method</title>
+        <title>Cake - API - SonarEndSettings.GetArguments(ICakeEnvironment) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -137,14 +137,17 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Sonar/SonarCake">SonarCake</a></li>
+		<li><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Sonar/SonarCake/EAC0FBA4">SonarCake<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/api/Cake.Sonar/SonarEndSettings/28BEB710">SonarEndSettings<wbr>()<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Sonar/SonarCake/D5353C64">AppendArguments<wbr>(object, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></li>
-				<li><a href="/api/Cake.Sonar/SonarCake/CF43BF5A">Begin<wbr>(SonarBeginSettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Sonar/SonarCake/18042801">End<wbr>(SonarEndSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Sonar/SonarSettings/D735B354">AppendArguments<wbr>(object, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ICakeEnvironment)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Sonar/SonarEndSettings/668D6D35">GetArguments<wbr>(ICakeEnvironment)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Sonar/SonarEndSettings/C8A683DF">Login</a></li>
+				<li><a href="/api/Cake.Sonar/SonarEndSettings/6A6D611C">Password</a></li>
+				<li><a href="/api/Cake.Sonar/SonarSettings/65A4D996">Silent</a></li>
 
 
                     </ul>
@@ -158,8 +161,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Sonar/SonarCake">SonarCake</a>.</h3>
-	<h1>End<wbr>(SonarEndSettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a>.</h3>
+	<h1>GetArguments<wbr>(ICakeEnvironment)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -181,14 +184,14 @@
 						<dd><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Sonar/SonarCake">SonarCake</a></dd>		
+						<dd><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void End(SonarEndSettings settings)</code></pre>
+	<pre><code>public override ProcessArgumentBuilder GetArguments(ICakeEnvironment environment)</code></pre>
 
 
 
@@ -206,8 +209,8 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></td>
+						<td>environment</td>
+						<td>ICakeEnvironment</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -225,7 +228,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>Process<wbr>Argument<wbr>Builder</td>
 					<td></td>
 				</tr>
 			</tbody></table>
