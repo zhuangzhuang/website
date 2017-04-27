@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SonarCake.Begin(SonarBeginSettings) Method</title>
+        <title>Cake - API - IEnvironmentWrapper.GetEnvironmentVariable(string, EnvironmentVariableTarget, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -133,18 +134,15 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Path.dll">Cake<wbr>.Path<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></li>
+		<li><a href="/api/Cake.Path">Cake<wbr>.Path</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Sonar/SonarCake">SonarCake</a></li>
+		<li><a href="/api/Cake.Path/IEnvironmentWrapper">IEnvironmentWrapper</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Sonar/SonarCake/EAC0FBA4">SonarCake<wbr>(ICakeContext)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Sonar/SonarCake/D5353C64">AppendArguments<wbr>(object, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Sonar/SonarCake/CF43BF5A">Begin<wbr>(SonarBeginSettings)<wbr></a></li>
-				<li><a href="/api/Cake.Sonar/SonarCake/18042801">End<wbr>(SonarEndSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Path/IEnvironmentWrapper/A7BF3CFF">Get<wbr>Environment<wbr>Variable<wbr>(string, <wbr>Environment<wbr>Variable<wbr>Target, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Path/IEnvironmentWrapper/0E35A5D6">Set<wbr>Environment<wbr>Variable<wbr>(string, <wbr>string, <wbr>Environment<wbr>Variable<wbr>Target)<wbr></a></li>
 
 
                     </ul>
@@ -158,37 +156,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Sonar/SonarCake">SonarCake</a>.</h3>
-	<h1>Begin<wbr>(SonarBeginSettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Path/IEnvironmentWrapper">IEnvironmentWrapper</a>.</h3>
+	<h1>Get<wbr>Environment<wbr>Variable<wbr>(string, <wbr>Environment<wbr>Variable<wbr>Target, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/AgileArchitect/Cake.Sonar" class="alert-link">https://github.com/AgileArchitect/Cake.Sonar</a>.
+                        <a href="https://github.com/CleanKludge/Cake.Path" class="alert-link">https://github.com/CleanKludge/Cake.Path</a>.
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Gets an environment variable.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Path.dll">Cake<wbr>.Path<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></dd>
+						<dd><a href="/api/Cake.Path">Cake<wbr>.Path</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Sonar/SonarCake">SonarCake</a></dd>		
+						<dd><a href="/api/Cake.Path/IEnvironmentWrapper">IEnvironmentWrapper</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void Begin(SonarBeginSettings settings)</code></pre>
+	<pre><code>string GetEnvironmentVariable(string variable, EnvironmentVariableTarget target, string default = "")</code></pre>
 
 
 
@@ -206,9 +208,19 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.Sonar/SonarBeginSettings">SonarBeginSettings</a></td>
-						<td></td>
+						<td>variable</td>
+						<td>string</td>
+						<td>The name of the environment variable to get.</td>
+					</tr>
+					<tr>
+						<td>target</td>
+						<td>Environment<wbr>Variable<wbr>Target</td>
+						<td>The location of the environment variable.</td>
+					</tr>
+					<tr>
+						<td>default</td>
+						<td>string</td>
+						<td>The value to return when the variable is not found.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -225,8 +237,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>string</td>
+					<td>Returns a <code class="cs">string</code> containing the environment variable</td>
 				</tr>
 			</tbody></table>
 		</div>
