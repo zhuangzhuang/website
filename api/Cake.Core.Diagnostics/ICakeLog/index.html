@@ -186,8 +186,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 											<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>								
+											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -197,10 +197,10 @@
 							graph TD
 	Type["ICakeLog"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeLog"]
-	click Implementing0 "/api/Cake.Testing/FakeLog"
-	Type-.-&gt;Implementing1["NullLog"]
-	click Implementing1 "/api/Cake.Core.Diagnostics/NullLog"
+	Type-.-&gt;Implementing0["NullLog"]
+	click Implementing0 "/api/Cake.Core.Diagnostics/NullLog"
+	Type-.-&gt;Implementing1["FakeLog"]
+	click Implementing1 "/api/Cake.Testing/FakeLog"
 
 						</div>
 					</div>
@@ -476,6 +476,16 @@ class Type type-node
     Writes an informational message to the log using the specified verbosity and format information.
     </div>
 										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeLog&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

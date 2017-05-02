@@ -207,8 +207,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider">InspectCodeProvider</a></li>								
 											<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Provider</a></li>								
+											<li><a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider">InspectCodeProvider</a></li>								
 											<li><a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProvider">MarkdownlintProvider</a></li>								
 									</ul>
 								</dd>			
@@ -223,10 +223,10 @@
 	click Interface0 "/api/Cake.Prca.Issues/ICodeAnalysisProvider"
 	Type["CodeAnalysisProvider"]
 class Type type-node
-	Type--&gt;Derived0["InspectCodeProvider"]
-	click Derived0 "/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider"
-	Type--&gt;Derived1["MsBuildCodeAnalysisProvider"]
-	click Derived1 "/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider"
+	Type--&gt;Derived0["MsBuildCodeAnalysisProvider"]
+	click Derived0 "/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider"
+	Type--&gt;Derived1["InspectCodeProvider"]
+	click Derived1 "/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider"
 	Type--&gt;Derived2["MarkdownlintProvider"]
 	click Derived2 "/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProvider"
 
@@ -366,6 +366,16 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Code<wbr>Analysis<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
