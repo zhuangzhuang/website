@@ -99,6 +99,7 @@
         <li><a href="/blog/release-notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/05">May, 2017</a></li>
         <li><a href="/blog/archive/2017/04">April, 2017</a></li>
         <li><a href="/blog/archive/2017/03">March, 2017</a></li>
         <li><a href="/blog/archive/2017/01">January, 2017</a></li>
@@ -148,6 +149,27 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/05/intellisense-and-intro">Intellisense and new Cake team member</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Tuesday, May 2, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/announcement">Announcement</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>            <div>
+                <p>Hi! My name is Martin Björkström and I'm a .NET Developer and father of two from Finland.  I started using Cake in early 2016 and have been making <a href="https://github.com/cake-build/cake/commits?author=mholo65">contributions</a> ever since. So far, the most notable is probably <a href="https://github.com/cake-build/cake/pull/858">debugging support</a>.  As of April, I'm also a member of the Cake Team!</p>
+<p>So, why am I a member of the Cake Team?  Well, it all started with a new year's resolution gone wrong.  I somehow <em>promised</em> that 2017 will be the year when we will get intellisense for <code>*.cake</code> files.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/gep13">&#64;gep13</a> <a href="https://twitter.com/cakebuildnet">&#64;cakebuildnet</a> I hope that 2017 is the year when we will get intellisense through <a href="https://twitter.com/omnisharp">&#64;omnisharp</a> ;)</p>&mdash; Martin Björkström (&#64;mholo65) <a href="https://twitter.com/mholo65/status/815617341568512000">January 1, 2017</a></blockquote>
+<p>With that said, I started looking into <a href="http://www.omnisharp.net/">OmniSharp</a> and after a while I got something working.  The Cake Team was <em>impressed?!</em> and wanted me to continue my work on a more <em>official</em> level.  As a result, they asked me to join the team.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/gep13">&#64;gep13</a> Do you now know what you are looking at? ;) <a href="https://t.co/XTGtTRx85M">pic.twitter.com/XTGtTRx85M</a></p>&mdash; Martin Björkström (&#64;mholo65) <a href="https://twitter.com/mholo65/status/847916254740570119">March 31, 2017</a></blockquote>
+<p>Since then, we´ve continued working on the <code>Cake</code> plugin for <code>OmniSharp</code>.  We've also opened up a dialogue with the OmniSharp team in order to tackle issues along the way.  My last tweet shows where we are today:</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Intellisense, anyone? Here&#39;s a teaser for you!<br><br>//cc <a href="https://twitter.com/cakebuildnet">&#64;cakebuildnet</a> <a href="https://twitter.com/omnisharp">&#64;omnisharp</a> <a href="https://twitter.com/code">&#64;code</a> <a href="https://t.co/n5xAeJgmLy">pic.twitter.com/n5xAeJgmLy</a></p>&mdash; Martin Björkström (&#64;mholo65) <a href="https://twitter.com/mholo65/status/857731193554554881">April 27, 2017</a></blockquote>
+<p>We have it <em>mostly</em> working and I'm pretty confident when saying <em>Intellisense will happen during 2017</em>.  We still have lots of work to do, but both we, and the OmniSharp team, are working hard to make this happen.  At this point I would like to thank the Cake Team for letting me in on this journey.  The OmniSharp team (especially <a href="https://github.com/david-driscoll">David Driscoll</a> and <a href="https://github.com/DustinCampbell">Dustin Campbell</a>) for all the hard work and support.  And lastly, but by no means least, I'd like to thank <a href="https://github.com/RichiCoder1">Richard Simpson</a> for his work on <a href="https://github.com/OmniSharp/omnisharp-roslyn/issues/208">paving the way</a> for OmniSharp plugins.</p>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2017/04/cake-0.3.0-vso-released">Cake for Visual Studio Team Services v0.3.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -161,22 +183,9 @@
 <p>This release includes support for customising the location where <code>NuGet.exe</code>, as well as Cake and other tools, is retrieved from.</p>
 <p>The updated extension will now be live for VSTS users while TFS users may need to update the extension using the <em>Manage Extensions</em> page on your TFS server.</p>
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/frozenskys">frozenskys</a></li>
-</ul>
-<p>Full details of everything that was included in this release can be seen below.</p>
-<!--excerpt-->
-<p>As part of this release we had <a href="https://github.com/cake-build/cake-vso/issues?milestone=3&amp;state=closed">2 issues</a> closed.</p>
-<p><strong>Feature</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake-vso/issues/4"><strong>#4</strong></a> Add option to specify Cake nuget source</li>
-</ul>
-<p><strong>Improvement</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake-vso/issues/31"><strong>#31</strong></a> Add support to override build agent NuGet version</li>
-</ul>
-<img src="/assets/img/cake-vso-update/advanced-options.png" class="img-responsive" alt="new advanced options available for the Cake task">
 
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2017/04/cake-0.3.0-vso-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/04/cake-v0.19.4-released">Cake v0.19.4 released</a></h2>
@@ -228,21 +237,6 @@
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/04/cake-v0.19.2-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/03/vswhere-and-visual-studio-2017-support">VSWhere and Visual Studio 2017 Support</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Monday, March 27, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/how-tos">How To&#x27;s</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/phillipsj">phillipsj</a></dd>
-</dl>            <div>
-                <p>Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the <a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/">Microsoft.VisualStudio.Setup.Configuration.Interop</a> package that was created by Microsoft to help locate Visual Studio 2017 installations.</p>
-<p>Shortly after the release of version 0.18.0, Microsoft released a tool called <a href="https://github.com/Microsoft/vswhere">vswhere</a> to help locate Visual Studio and other products in the family. This tool was released with Cake version 0.19.1 to allow everyone that moved to Visual Studio 2017 to get their builds up and running.</p>
-<p>This post is going to walk through the different pieces of functionality supported by the <a href="http://cakebuild.net/dsl/vswhere/">VSWhere tool</a>.</p>
-                <a href="/blog/2017/03/vswhere-and-visual-studio-2017-support">Read more...</a>
             </div>
         <hr />
     <nav>
