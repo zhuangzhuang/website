@@ -81,7 +81,6 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -147,14 +146,6 @@
 				<li><a href="/api/Cake.DocFx/DocFxAliases/53C280E4">DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/api/Cake.DocFx/DocFxAliases/D6455F9B">DocFx<wbr>(ICakeContext, <wbr>DocFxSettings)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.DocFx/DocFxAliases/202D6576">DocFx<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxSettings)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/9BA023DB">DocFxBuild<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/BA2D3AB6">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/F86D3499">DocFxBuild<wbr>(ICakeContext, <wbr>DocFxBuildSettings)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/196A1BF7">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxBuildSettings)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/8D8B7515">DocFxMetadata<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/3E2761B6">DocFxMetadata<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/3A6A2D8F">DocFxMetadata<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.DocFx/DocFxAliases/67B3CA3C">DocFxMetadata<wbr>(ICakeContext, <wbr>Doc<wbr>Fx<wbr>Metadata<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -182,7 +173,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Builds markdown and API documentation using DocFx, with the specified settings.
+            Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(Cake.Core.ICakeContext,Cake.Core.IO.FilePath,Cake.DocFx.Build.DocFxBuildSettings)</code> instead.
             </div>
 
 		<div class="panel panel-default">
@@ -204,13 +195,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void DocFx(this ICakeContext context, FilePath configFile, DocFxSettings settings)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">DocFx("./docs/docfx.json", new DocFxSettings()
-{
-    OutputPath = "./artifacts/docs"
-});</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -229,6 +213,10 @@
 					</tr>
 					<tr>
 						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>ObsoleteAttribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>

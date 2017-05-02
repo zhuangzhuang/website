@@ -79,10 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#InterfaceTypes">Interface Types</a></p>
-<p><a href="#EnumTypes">Enum Types</a></p>
-<p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+<p><a href="#Namespaces">Namespaces</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -446,7 +444,10 @@
 				<li class="treeview">
 				<a href="/api/Cake.DocFx">Cake<wbr>.DocFx</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.DocFx.Helper">Cake<wbr>.DocFx<wbr>.Helper</a></li>
+						<li><a href="/api/Cake.DocFx.Build">Cake<wbr>.DocFx<wbr>.Build</a></li>
+			<li><a href="/api/Cake.DocFx.Helper">Cake<wbr>.DocFx<wbr>.Helper</a></li>
+			<li><a href="/api/Cake.DocFx.Init">Cake<wbr>.DocFx<wbr>.Init</a></li>
+			<li><a href="/api/Cake.DocFx.Metadata">Cake<wbr>.DocFx<wbr>.Metadata</a></li>
 </ul></li>			<li><a href="/api/Cake.Docker">Cake<wbr>.Docker</a></li>
 			<li><a href="/api/Cake.DoInDirectory">Cake<wbr>.DoInDirectory</a></li>
 			<li><a href="/api/Cake.Email">Cake<wbr>.Email</a></li>
@@ -526,8 +527,14 @@
 				<a href="/api/Cake.Newman">Cake<wbr>.Newman</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Newman.Reporters">Cake<wbr>.Newman<wbr>.Reporters</a></li>
-</ul></li>			<li class=" selected"><a href="/api/Cake.Npm">Cake<wbr>.Npm</a></li>
-
+</ul></li>
+				<li class="treeview active selected">
+				<a href="/api/Cake.Npm">Cake<wbr>.Npm</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></li>
+			<li><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></li>
+			<li><a href="/api/Cake.Npm.RunScript">Cake<wbr>.Npm<wbr>.RunScript</a></li>
+</ul></li>
 				<li class="treeview">
 				<a href="/api/Cake.NSwag">Cake<wbr>.NSwag</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -896,58 +903,8 @@
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            This namespace contain types used for operations using the Npm tool wrapper
-            </div>
+	
 
-
-			<h1 id="InterfaceTypes">Interface Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Interface</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Npm/INpmRunnerCommands">INpmRunnerCommands</a></td>
-									<td>
-            Npm Runner command interface
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Npm/INpmRunnerConfiguration">I<wbr>Npm<wbr>Runner<wbr>Configuration</a></td>
-									<td>
-            Npm Runner configuration
-            </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-			<h1 id="EnumTypes">Enum Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Enum</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></td>
-									<td>
-            Details the npm log levels
-            </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -959,40 +916,54 @@
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Npm/NpmInstallSettings">NpmInstallSettings</a></td>
-									<td>
-            Npm install options
-            </td>
+								<td><a href="/api/Cake.Npm/NpmInstallAliases">NpmInstallAliases</a></td>
+									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Npm/NpmPackSettings">NpmPackSettings</a></td>
-									<td>
-            npm pack options
-            </td>
+								<td><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></td>
+									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Npm/NpmRunner">NpmRunner</a></td>
-									<td>
-            A wrapper around the Node Npm package manager
-            </td>
+								<td><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a></td>
+									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Npm/NpmRunnerAliases">NpmRunnerAliases</a></td>
-									<td>
-            Provides a wrapper around Npm functionality within a Cake build script
-            </td>
+								<td><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a></td>
+									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Npm/NpmRunnerSettings">NpmRunnerSettings</a></td>
-									<td>
-            Npm runner settings
-            </td>
+								<td><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></td>
+									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Npm/NpmRunScriptSettings">NpmRunScriptSettings</a></td>
-									<td>
-            npm run-script options
-            </td>
+								<td><a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+			<h1 id="Namespaces">Namespaces</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Namespace</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm.RunScript">Cake<wbr>.Npm<wbr>.RunScript</a></td>
+									<td></td>
 							</tr>
 					</tbody></table>
 				</div>

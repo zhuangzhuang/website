@@ -4,7 +4,17 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-04-27T07:10:23Z</updated>
+	<updated>2017-05-02T20:40:20Z</updated>
+	<entry>
+		<author>
+			<name>mholo65</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/05/intellisense-and-intro" />
+		<id>http://cakebuild.net/blog/2017/05/intellisense-and-intro</id>
+		<title>Intellisense and new Cake team member</title>
+		<updated>2017-05-02T00:00:00Z</updated>
+		<summary>&lt;p&gt;Hi! My name is Martin Björkström and I'm a .NET Developer and father of two from Finland.  I started using Cake in early 2016 and have been making &lt;a href="https://github.com/cake-build/cake/commits?author=mholo65"&gt;contributions&lt;/a&gt; ever since. So far, the most notable is probably &lt;a href="https://github.com/cake-build/cake/pull/858"&gt;debugging support&lt;/a&gt;.  As of April, I'm also a member of the Cake Team!&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>agc93</name>
@@ -259,24 +269,5 @@ We do recommend you pin your builds to the version of Cake you using, that way y
 		<title>Announcing Cake for Yeoman</title>
 		<updated>2016-09-23T00:00:00Z</updated>
 		<summary>&lt;p&gt;Yeoman users rejoice! You can now bootstrap your project for Cake with &lt;a href="http://yeoman.io"&gt;Yeoman&lt;/a&gt; and the new &lt;code&gt;generator-cake&lt;/code&gt; generator.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>patriksvensson</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/09/cake-v0.16.0-released" />
-		<id>http://cakebuild.net/blog/2016/09/cake-v0.16.0-released</id>
-		<title>Cake v0.16.0 released</title>
-		<updated>2016-09-17T00:00:00Z</updated>
-		<summary>&lt;p&gt;Version 0.16.0 of Cake has been released, and it's a big release!&lt;/p&gt;
-&lt;p&gt;Not only are we supporting the full .NET framework (&lt;em&gt;v4.5&lt;/em&gt;), but from this version
-we will also support running Cake on platforms capable of running .NET Core (&lt;em&gt;netstandard1.6&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;For this to work, you will have to install the &lt;code&gt;Cake.CoreCLR&lt;/code&gt; package instead
-of the normal &lt;code&gt;Cake&lt;/code&gt; package. A blog post describing this more in detail
-will be published soon.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
 	</entry>
 </feed>
