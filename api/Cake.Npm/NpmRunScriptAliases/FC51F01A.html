@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - NpmPackAliases.NpmRunScript(ICakeContext, string, IEnumerable&lt;string&gt;) Method</title>
+        <title>Cake - API - NpmRunScriptAliases.NpmRunScript(ICakeContext, NpmRunScriptSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -138,12 +138,12 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Npm">Cake<wbr>.Npm</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a></li>
+		<li><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Npm/NpmPackAliases/AA2B2B24">NpmRunScript<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Npm/NpmPackAliases/02F4BDB2">NpmRunScript<wbr>(ICakeContext, <wbr>string, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Npm/NpmPackAliases/46CF37A1">NpmRunScript<wbr>(ICakeContext, <wbr>Npm<wbr>Run<wbr>Script<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmRunScriptAliases/733AF6A6">NpmRunScript<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmRunScriptAliases/B4C3D7E7">NpmRunScript<wbr>(ICakeContext, <wbr>string, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Npm/NpmRunScriptAliases/FC51F01A">NpmRunScript<wbr>(ICakeContext, <wbr>Npm<wbr>Run<wbr>Script<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -157,8 +157,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a>.</h3>
-	<h1>NpmRunScript<wbr>(ICakeContext, <wbr>string, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a>.</h3>
+	<h1>NpmRunScript<wbr>(ICakeContext, <wbr>Npm<wbr>Run<wbr>Script<wbr>Settings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -180,14 +180,14 @@
 						<dd><a href="/api/Cake.Npm">Cake<wbr>.Npm</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a></dd>		
+						<dd><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void NpmRunScript(this ICakeContext context, string scriptName, IEnumerable&lt;string&gt; arguments)</code></pre>
+	<pre><code>public static void NpmRunScript(this ICakeContext context, NpmRunScriptSettings settings)</code></pre>
 
 
 
@@ -231,13 +231,8 @@
 						<td></td>
 					</tr>
 					<tr>
-						<td>scriptName</td>
-						<td>string</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>arguments</td>
-						<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+						<td>settings</td>
+						<td><a href="/api/Cake.Npm.RunScript/NpmRunScriptSettings">NpmRunScriptSettings</a></td>
 						<td></td>
 					</tr>
 			</tbody></table>

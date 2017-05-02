@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - NpmRunScriptAliases.NpmPack(ICakeContext, NpmPackSettings) Method</title>
+        <title>Cake - API - NpmRunScriptAliases.NpmRunScript(ICakeContext, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -141,9 +141,9 @@
 		<li><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Npm/NpmRunScriptAliases/2D363301">NpmPack<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Npm/NpmRunScriptAliases/08C1C8FD">NpmPack<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Npm/NpmRunScriptAliases/4807AF24">NpmPack<wbr>(ICakeContext, <wbr>NpmPackSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Npm/NpmRunScriptAliases/733AF6A6">NpmRunScript<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmRunScriptAliases/B4C3D7E7">NpmRunScript<wbr>(ICakeContext, <wbr>string, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmRunScriptAliases/FC51F01A">NpmRunScript<wbr>(ICakeContext, <wbr>Npm<wbr>Run<wbr>Script<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -158,7 +158,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a>.</h3>
-	<h1>NpmPack<wbr>(ICakeContext, <wbr>NpmPackSettings)<wbr> <small>Method</small></h1>
+	<h1>NpmRunScript<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -187,7 +187,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void NpmPack(this ICakeContext context, NpmPackSettings settings)</code></pre>
+	<pre><code>public static void NpmRunScript(this ICakeContext context, string scriptName)</code></pre>
 
 
 
@@ -231,8 +231,8 @@
 						<td></td>
 					</tr>
 					<tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.Npm.Pack/NpmPackSettings">NpmPackSettings</a></td>
+						<td>scriptName</td>
+						<td>string</td>
 						<td></td>
 					</tr>
 			</tbody></table>
