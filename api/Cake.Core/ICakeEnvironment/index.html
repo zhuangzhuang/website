@@ -169,6 +169,9 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -183,9 +186,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -224,8 +224,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
 											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
+											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -235,10 +235,10 @@
 							graph TD
 	Type["ICakeEnvironment"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeEnvironment"]
-	click Implementing0 "/api/Cake.Core/CakeEnvironment"
-	Type-.-&gt;Implementing1["FakeEnvironment"]
-	click Implementing1 "/api/Cake.Testing/FakeEnvironment"
+	Type-.-&gt;Implementing0["FakeEnvironment"]
+	click Implementing0 "/api/Cake.Testing/FakeEnvironment"
+	Type-.-&gt;Implementing1["CakeEnvironment"]
+	click Implementing1 "/api/Cake.Core/CakeEnvironment"
 
 						</div>
 					</div>
@@ -411,16 +411,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Cake<wbr>Environment&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Cake<wbr>Environment&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -428,6 +418,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Cake<wbr>Environment&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
