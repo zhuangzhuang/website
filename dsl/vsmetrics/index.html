@@ -153,10 +153,12 @@
     <li><a href="/dsl/assembly-info">Assembly Info</a></li>        
     <li><a href="/dsl/autorest">AutoRest</a></li>        
     <li><a href="/dsl/aws">AWS</a></li>        
+    <li><a href="/dsl/azure">Azure</a></li>        
     <li><a href="/dsl/azurestorage">AzureStorage</a></li>        
     <li><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></li>        
     <li><a href="/dsl/cake-extension-for-xctools">Cake Extension for XcTools</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
+    <li><a href="/dsl/chutzpah">Chutzpah</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
     <li><a href="/dsl/cocoapods">CocoaPods</a></li>        
     <li><a href="/dsl/code-analysis-reporting">Code Analysis Reporting</a></li>        
@@ -174,7 +176,10 @@
     <li><a href="/dsl/docker">Docker</a></li>        
     <li><a href="/dsl/doindirectory">DoInDirectory</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
+    <li><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></li>        
     <li><a href="/dsl/email">Email</a></li>        
+    <li><a href="/dsl/ember">Ember</a></li>        
+    <li><a href="/dsl/entityframework">EntityFramework</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
     <li><a href="/dsl/figlet">Figlet</a></li>        
     <li><a href="/dsl/file-helpers">File Helpers</a></li>        
@@ -267,12 +272,9 @@
         <div>
             <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
             <p>
-            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-            </p><pre><code class="cs">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});</code></pre>
-            In addition, you will need to include the following:
-            <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
+            In order to use the commands for this addin, you will need to install the metrics power tool (which is currently not included in a Visual Studio installation).
+            Afterwards include the Addin in your cake build script and you are ready to go:
+            </p><pre><code class="cs">#addin Cake.VsMetrics</code></pre>
             <p></p>
             </div>
 

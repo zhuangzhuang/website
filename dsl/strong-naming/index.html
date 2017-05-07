@@ -153,10 +153,12 @@
     <li><a href="/dsl/assembly-info">Assembly Info</a></li>        
     <li><a href="/dsl/autorest">AutoRest</a></li>        
     <li><a href="/dsl/aws">AWS</a></li>        
+    <li><a href="/dsl/azure">Azure</a></li>        
     <li><a href="/dsl/azurestorage">AzureStorage</a></li>        
     <li><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></li>        
     <li><a href="/dsl/cake-extension-for-xctools">Cake Extension for XcTools</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
+    <li><a href="/dsl/chutzpah">Chutzpah</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
     <li><a href="/dsl/cocoapods">CocoaPods</a></li>        
     <li><a href="/dsl/code-analysis-reporting">Code Analysis Reporting</a></li>        
@@ -174,7 +176,10 @@
     <li><a href="/dsl/docker">Docker</a></li>        
     <li><a href="/dsl/doindirectory">DoInDirectory</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
+    <li><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></li>        
     <li><a href="/dsl/email">Email</a></li>        
+    <li><a href="/dsl/ember">Ember</a></li>        
+    <li><a href="/dsl/entityframework">EntityFramework</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
     <li><a href="/dsl/figlet">Figlet</a></li>        
     <li><a href="/dsl/file-helpers">File Helpers</a></li>        
@@ -265,11 +270,8 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
-            strong name or not. If one has turned off strong name verification, you can still verify by using the
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </div>
 
 

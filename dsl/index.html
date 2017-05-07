@@ -160,10 +160,12 @@
     <li><a href="/dsl/assembly-info">Assembly Info</a></li>        
     <li><a href="/dsl/autorest">AutoRest</a></li>        
     <li><a href="/dsl/aws">AWS</a></li>        
+    <li><a href="/dsl/azure">Azure</a></li>        
     <li><a href="/dsl/azurestorage">AzureStorage</a></li>        
     <li><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></li>        
     <li><a href="/dsl/cake-extension-for-xctools">Cake Extension for XcTools</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
+    <li><a href="/dsl/chutzpah">Chutzpah</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
     <li><a href="/dsl/cocoapods">CocoaPods</a></li>        
     <li><a href="/dsl/code-analysis-reporting">Code Analysis Reporting</a></li>        
@@ -181,7 +183,10 @@
     <li><a href="/dsl/docker">Docker</a></li>        
     <li><a href="/dsl/doindirectory">DoInDirectory</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
+    <li><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></li>        
     <li><a href="/dsl/email">Email</a></li>        
+    <li><a href="/dsl/ember">Ember</a></li>        
+    <li><a href="/dsl/entityframework">EntityFramework</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
     <li><a href="/dsl/figlet">Figlet</a></li>        
     <li><a href="/dsl/file-helpers">File Helpers</a></li>        
@@ -317,8 +322,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -357,14 +362,14 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -485,8 +490,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
-    </td>
+            Class to handle parsing of Visual Studio Project Files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mstest">MSTest</a></td>
@@ -513,8 +518,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -646,12 +651,7 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
-    <p>
-    In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
-    </p>
+    Contains functionality related to text transformation.
     </td>
                 </tr>
                 <tr>
@@ -695,7 +695,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XSL transformation.
+    Contains functionality related to XML XPath queries.
     </td>
                 </tr>
                 <tr>
@@ -743,7 +743,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -791,8 +791,12 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+             Contains Cake aliases for configuring Amazon Simple Storage Service
             </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/azure">Azure</a></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azurestorage">AzureStorage</a></td>
@@ -816,6 +820,12 @@
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
             The result of CakeMailProvider API post
+            </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/chutzpah">Chutzpah</a></td>
+                    <td>
+                Contains functionality related to running javascript unit tests using Chutzpah.
             </td>
                 </tr>
                 <tr>
@@ -857,8 +867,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -910,8 +920,12 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            Cake AddIn to upload files using WinSCP.
-            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
+            <p>
+            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
+            <p>
+            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
+            </p>    
+            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
             </td>
                 </tr>
                 <tr>
@@ -923,7 +937,8 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to creating new <a href="http://dotnet.github.io/docfx">DocFx</a>
+            projects.
             </td>
                 </tr>
                 <tr>
@@ -1046,16 +1061,37 @@
     </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></td>
+                    <td></td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
             Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/ember">Ember</a></td>
+                    <td>
+            <p>Contains functionality related to the <a href="https://ember-cli.com/">Ember CLI</a>.</p>
+            <p>
+            In order to use the commands for this addin, the Ember CLI utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            <pre><code class="cs">#addin Cake.Ember</code></pre>
+            </p>
+            </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/entityframework">EntityFramework</a></td>
+                    <td>
+            A set of Cake aliases for Entity Framework (not .NET Core) code-first migrations.
+            </td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1073,8 +1109,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1120,7 +1156,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
@@ -1179,8 +1215,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
-    </td>
+            Class to handle parsing of Visual Studio Project Files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msdeploy">MsDeploy</a></td>
@@ -1206,8 +1242,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1263,8 +1299,8 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to importing code analysis issues from JetBrains Inspect Code
-            to write them to pull requests.
+            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
+            pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1363,11 +1399,8 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
-            strong name or not. If one has turned off strong name verification, you can still verify by using the
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </td>
                 </tr>
                 <tr>
@@ -1459,11 +1492,8 @@
                     <td>
             <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
             <p>
-            In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-            <pre><code class="cs">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});</code></pre>
-            In addition, you will need to include the following:
+            In order to use the commands for this addin, you will need to install the metrics power tool (which is currently not included in a Visual Studio installation).
+            Afterwards include the Addin in your cake build script and you are ready to go:
             <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
             </p>
             </td>
