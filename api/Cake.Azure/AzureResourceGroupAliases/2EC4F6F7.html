@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - AzureResourceGroupAliases.DeleteAzureResouceGroup(ICakeContext, ServiceClientCredentials, string, string) Method</title>
+        <title>Cake - API - AzureResourceGroupAliases.AzureResourceGroupExists(ICakeContext, Credentials, string, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -141,10 +142,10 @@
 		<li><a href="/api/Cake.Azure/AzureResourceGroupAliases">Azure<wbr>Resource<wbr>Group<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/48E35712">Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Azure/AzureResourceGroupAliases/80D6F69A">Delete<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/33B91D63">Deploy<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string, <wbr>JObject, <wbr>JObject)<wbr></a></li>
-				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/E2924594">Ensure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Azure/AzureResourceGroupAliases/2EC4F6F7">Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/8FE58AB0">Delete<wbr>Azure<wbr>Resource<wbr>Group<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/7BDD485B">Deploy<wbr>Azure<wbr>Resource<wbr>Group<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/0D118BB5">Ensure<wbr>Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -159,7 +160,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Azure/AzureResourceGroupAliases">Azure<wbr>Resource<wbr>Group<wbr>Aliases</a>.</h3>
-	<h1>Delete<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -170,7 +171,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Checks whether a resource group with the specified name exists.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -188,7 +193,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void DeleteAzureResouceGroup(this ICakeContext context, ServiceClientCredentials credentials, string subscriptionId, string resourceGroupName)</code></pre>
+	<pre><code>public static bool AzureResourceGroupExists(this ICakeContext context, Credentials credentials, string subscriptionId, string resourceGroupName)</code></pre>
 
 
 
@@ -229,22 +234,22 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>credentials</td>
-						<td>Service<wbr>Client<wbr>Credentials</td>
-						<td></td>
+						<td><a href="/api/Cake.Azure/Credentials">Credentials</a></td>
+						<td>The Azure credentials.</td>
 					</tr>
 					<tr>
 						<td>subscriptionId</td>
 						<td>string</td>
-						<td></td>
+						<td>The subscription ID.</td>
 					</tr>
 					<tr>
 						<td>resourceGroupName</td>
 						<td>string</td>
-						<td></td>
+						<td>The resource group name.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -261,8 +266,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>bool</td>
+					<td><pre><code class="cs">true</code></pre>, if a resource group exists; <pre><code class="cs">false</code></pre>, otherwise.</td>
 				</tr>
 			</tbody></table>
 		</div>

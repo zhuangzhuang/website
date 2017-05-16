@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -168,7 +169,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Authenticates into Azure as a service principal with a password.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -186,7 +191,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static ServiceClientCredentials AzureLogin(this ICakeContext context, string tenantId, string applicationId, string password)</code></pre>
+	<pre><code>public static Credentials AzureLogin(this ICakeContext context, string tenantId, string applicationId, string password)</code></pre>
 
 
 
@@ -227,22 +232,22 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>tenantId</td>
 						<td>string</td>
-						<td></td>
+						<td>The Active Directory tenant ID.</td>
 					</tr>
 					<tr>
 						<td>applicationId</td>
 						<td>string</td>
-						<td></td>
+						<td>The application ID.</td>
 					</tr>
 					<tr>
 						<td>password</td>
 						<td>string</td>
-						<td></td>
+						<td>The service principal password.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -259,8 +264,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>Service<wbr>Client<wbr>Credentials</td>
-					<td></td>
+					<td><a href="/api/Cake.Azure/Credentials">Credentials</a></td>
+					<td>Azure credendials.</td>
 				</tr>
 			</tbody></table>
 		</div>
