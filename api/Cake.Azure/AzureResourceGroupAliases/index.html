@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -140,6 +141,7 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Azure/AzureLoginAliases">AzureLoginAliases</a></li>
 				<li class="selected"><a href="/api/Cake.Azure/AzureResourceGroupAliases">Azure<wbr>Resource<wbr>Group<wbr>Aliases</a></li>
+				<li><a href="/api/Cake.Azure/Credentials">Credentials</a></li>
 
 
                     </ul>
@@ -164,7 +166,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains Cake aliases for running commands managing Azure resource groups.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -241,34 +247,42 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/48E35712">Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/2EC4F6F7">Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Checks whether a resource group with the specified name exists.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/80D6F69A">Delete<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/8FE58AB0">Delete<wbr>Azure<wbr>Resource<wbr>Group<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Delete the specified resource group.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/33B91D63">Deploy<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string, <wbr>JObject, <wbr>JObject)<wbr></a></td>
-								<td>JObject</td>
+								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/7BDD485B">Deploy<wbr>Azure<wbr>Resource<wbr>Group<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Deploys resources to the resource group using the specified ARM template.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/E2924594">Ensure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Azure/AzureResourceGroupAliases/0D118BB5">Ensure<wbr>Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Credentials, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates a resource group if it doesn't exist.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

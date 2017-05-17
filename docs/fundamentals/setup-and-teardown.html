@@ -208,15 +208,15 @@ Teardown(context =&gt;
 <p>Setup will only be called if a call to <code>RunTarget</code> is made and the dependency graph is correct. If Cake doesn't run any tasks, neither <code>Setup</code> or <code>Teardown</code> will be called.</p>
 <h1 id="task">Task</h1>
 <p>You can also use <code>TaskSetup</code> and <code>TaskTeardown</code> if you want to do something before and after each task is run. A use case for this might be when you need to use custom logging for each task executed</p>
-<pre><code class="language-csharp">TaskSetup((context, task) =&gt;
+<pre><code class="language-csharp">TaskSetup(setupContext =&gt;
 {
-    var message = string.Format("Task: {0}", task.Task.Name);
+    var message = string.Format("Task: {0}", setupContext.Task.Name);
     // custom logging
 });
 
-TaskTeardown((context, task) =&gt;
+TaskTeardown(teardownContext =&gt;
 {
-    var message = string.Format("Task: {0}", task.Task.Name);
+    var message = string.Format("Task: {0}", teardownContext.Task.Name);
     // custom logging
 });
 

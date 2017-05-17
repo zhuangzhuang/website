@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - AzureResourceGroupAliases.DeployAzureResouceGroup(ICakeContext, ServiceClientCredentials, string, string, string, JObject, JObject) Method</title>
+        <title>Cake - API - ILogFileFormat Interface</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,10 +79,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -134,17 +134,16 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Azure.dll">Cake<wbr>.Azure<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Prca.Issues.EsLint.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Azure">Cake<wbr>.Azure</a></li>
-		<li class="header">Type</li>
-		<li><a href="/api/Cake.Azure/AzureResourceGroupAliases">Azure<wbr>Resource<wbr>Group<wbr>Aliases</a></li>
+		<li><a href="/api/Cake.Prca.Issues.EsLint">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/48E35712">Azure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/80D6F69A">Delete<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Azure/AzureResourceGroupAliases/33B91D63">Deploy<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string, <wbr>JObject, <wbr>JObject)<wbr></a></li>
-				<li><a href="/api/Cake.Azure/AzureResourceGroupAliases/E2924594">Ensure<wbr>Resource<wbr>Group<wbr>Exists<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases">Es<wbr>Lint<wbr>Provider<wbr>Aliases</a></li>
+				<li><a href="/api/Cake.Prca.Issues.EsLint/EsLintSettings">EsLintSettings</a></li>
+				<li><a href="/api/Cake.Prca.Issues.EsLint/LogFileFormat">LogFileFormat</a></li>
+			<li class="header">Interface Types</li>
+				<li class="selected"><a href="/api/Cake.Prca.Issues.EsLint/ILogFileFormat">ILogFileFormat</a></li>
 
 
                     </ul>
@@ -158,131 +157,161 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Azure/AzureResourceGroupAliases">Azure<wbr>Resource<wbr>Group<wbr>Aliases</a>.</h3>
-	<h1>Deploy<wbr>Azure<wbr>Resouce<wbr>Group<wbr>(ICakeContext, <wbr>Service<wbr>Client<wbr>Credentials, <wbr>string, <wbr>string, <wbr>string, <wbr>JObject, <wbr>JObject)<wbr> <small>Method</small></h1>
+	<h1>ILogFileFormat <small>Interface</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/DixonDs/Cake.Azure" class="alert-link">https://github.com/DixonDs/Cake.Azure</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Prca.Issues.EsLint" class="alert-link">https://github.com/cake-contrib/Cake.Prca.Issues.EsLint</a>.
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Definition of a ESLint log file format.
+            </div>
+
 		<div class="panel panel-default">
-  			<div class="panel-body">	
-				<dl class="dl-horizontal">	
-						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Azure.dll">Cake<wbr>.Azure<wbr>.dll</a></dd>
-						
-						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Azure">Cake<wbr>.Azure</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Azure/AzureResourceGroupAliases">Azure<wbr>Resource<wbr>Group<wbr>Aliases</a></dd>		
-					
-				</dl>
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Cake.Prca.Issues.EsLint.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Cake.Prca.Issues.EsLint">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint</a></dd>
+											
+							
+							
+							
+								<dt>Implementing Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Prca.Issues.EsLint/LogFileFormat">LogFileFormat</a></li>								
+									</ul>
+								</dd>				
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Type["ILogFileFormat"]
+class Type type-node
+	Type-.-&gt;Implementing0["LogFileFormat"]
+	click Implementing0 "/api/Cake.Prca.Issues.EsLint/LogFileFormat"
+
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static JObject DeployAzureResouceGroup(this ICakeContext context, ServiceClientCredentials credentials, string subscriptionId, string resourceGroupName, string deploymentName, JObject template, JObject parameters)</code></pre>
+	<pre><code>public interface ILogFileFormat</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>credentials</td>
-						<td>Service<wbr>Client<wbr>Credentials</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>subscriptionId</td>
-						<td>string</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>resourceGroupName</td>
-						<td>string</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>deploymentName</td>
-						<td>string</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>template</td>
-						<td>JObject</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>parameters</td>
-						<td>JObject</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
-	<h1 id="ReturnValue">Return Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td>JObject</td>
-					<td></td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
+
+
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Prca.Issues.EsLint/ILogFileFormat/6065E2B1">ReadIssues<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings, <wbr>EsLintSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
+								<td>
+									<div>
+            Gets all code analysis issues.
+            </div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>I<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+             Get a basic string representation of specified object.
+             </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>
