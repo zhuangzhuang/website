@@ -143,6 +143,7 @@
 				<li><a href="/api/Cake.Docker/ArgumentsBuilderExtension">Arguments<wbr>Builder<wbr>Extension</a></li>
 				<li><a href="/api/Cake.Docker/AutoPropertyAttribute">Auto<wbr>Property<wbr>Attribute</a></li>
 				<li><a href="/api/Cake.Docker/AutoToolSettings">AutoToolSettings</a></li>
+				<li><a href="/api/Cake.Docker/ContainerStatus">ContainerStatus</a></li>
 				<li><a href="/api/Cake.Docker/DockerAliases">DockerAliases</a></li>
 				<li><a href="/api/Cake.Docker/DockerBridge">DockerBridge</a></li>
 				<li><a href="/api/Cake.Docker/DockerBuildSettings">DockerBuildSettings</a></li>
@@ -184,8 +185,6 @@
 				<li><a href="/api/Cake.Docker/EmptySettings">EmptySettings</a></li>
 				<li><a href="/api/Cake.Docker/GenericDockerComposeRunner_1">Generic<wbr>Docker<wbr>Compose<wbr>Runner<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Docker/GenericDockerRunner_1">GenericDockerRunner<wbr>&lt;TSettings&gt;<wbr></a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Docker/ContainerStatus">ContainerStatus</a></li>
 
 
                     </ul>
@@ -574,7 +573,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerRunSettings/1CE3396B">HealthInterval</a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;TimeSpan&gt;<wbr></td>
 								<td>
 									<div>
             Time between running the check
@@ -592,7 +591,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerRunSettings/54272A79">HealthTimeout</a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;TimeSpan&gt;<wbr></td>
 								<td>
 									<div>
             Maximum time to allow one check to run
@@ -1108,16 +1107,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Docker<wbr>Run<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Docker<wbr>Run<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1125,6 +1114,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Docker<wbr>Run<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

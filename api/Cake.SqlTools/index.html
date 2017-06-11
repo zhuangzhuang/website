@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#ClassTypes">Class Types</a></p>
 <p><a href="#InterfaceTypes">Interface Types</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -195,6 +196,7 @@
 			<li><a href="/api/Cake.CMake">Cake<wbr>.CMake</a></li>
 			<li><a href="/api/Cake.CocoaPods">Cake<wbr>.CocoaPods</a></li>
 			<li><a href="/api/Cake.CodeAnalysisReporting">Cake<wbr>.<wbr>Code<wbr>Analysis<wbr>Reporting</a></li>
+			<li><a href="/api/Cake.Codecov">Cake<wbr>.Codecov</a></li>
 			<li><a href="/api/Cake.Commands">Cake<wbr>.Commands</a></li>
 
 				<li class="treeview">
@@ -557,6 +559,7 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></li>
+			<li><a href="/api/Cake.Npm.Publish">Cake<wbr>.Npm<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Npm.RunScript">Cake<wbr>.Npm<wbr>.RunScript</a></li>
 </ul></li>
 				<li class="treeview">
@@ -983,7 +986,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            This namespace contains sql query aliases and related members.
+            </div>
+
 
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
@@ -997,23 +1004,39 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlTools/BaseSqlQueryRepository">Base<wbr>Sql<wbr>Query<wbr>Repository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a MsSql database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/MySqlQueryRepository">MySqlQueryRepository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a MySql database
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlTools/NpgsqlQueryRepository">Npgsql<wbr>Query<wbr>Repository</a></td>
+									<td>
+            Provides a method to execture sql queries against a PostgresSql database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/SqlQueryAliases">SqlQueryAliases</a></td>
-									<td></td>
+									<td>
+            Contains Cake aliases for executing sql queries
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/SqlQuerySettings">SqlQuerySettings</a></td>
-									<td></td>
+									<td>
+            The settings to use when executing sql queries
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -1031,7 +1054,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlTools/ISqlQueryRepository">ISqlQueryRepository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a database
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

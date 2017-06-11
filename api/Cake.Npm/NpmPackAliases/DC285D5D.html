@@ -143,6 +143,7 @@
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Npm/NpmPackAliases/AE79B32A">NpmPack<wbr>(ICakeContext)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Npm/NpmPackAliases/DC285D5D">NpmPack<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmPackAliases/D82735A7">NpmPack<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Npm<wbr>Pack<wbr>Settings&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Npm/NpmPackAliases/691F876C">NpmPack<wbr>(ICakeContext, <wbr>NpmPackSettings)<wbr></a></li>
 
 
@@ -187,7 +188,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void NpmPack(this ICakeContext context, string source)</code></pre>
+	<pre><code>public static IEnumerable&lt;FilePath&gt; NpmPack(this ICakeContext context, string source)</code></pre>
 
 
 
@@ -250,7 +251,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

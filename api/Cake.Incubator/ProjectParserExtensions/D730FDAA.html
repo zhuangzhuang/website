@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -146,6 +147,8 @@
 				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/24DACD2D">IsLibrary<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result)<wbr></a></li>
 				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/15402E06">IsType<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result, <wbr>ProjectType)<wbr></a></li>
 				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/B44346EE">ParseProject<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/D483A019">ParseProject<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/39D454B0">ParseProject<wbr>(IFile, <wbr>string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -195,6 +198,12 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static FilePath GetAssemblyFilePath(this CustomProjectParserResult projectParserResult)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Returns the absolute project assembly file path, respects build config and platform settings
+            <pre><code class="cs">CustomParseProjectResult project = ParseProject(new FilePath("test.csproj"), "Release");
+project.GetAssemblyFilePath(); // returns '/root/project/bin/release/test.dll'</code></pre>
+            </div>
 
 
 

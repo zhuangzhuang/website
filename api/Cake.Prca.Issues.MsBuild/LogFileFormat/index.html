@@ -142,11 +142,9 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat">LogFileFormat</a></li>
-				<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Provider</a></li>
-				<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Provider<wbr>Aliases</a></li>
-				<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisSettings">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases">MsBuildIssuesAliases</a></li>
+				<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesSettings">Ms<wbr>Build<wbr>Issues<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildRuleDescription">Ms<wbr>Build<wbr>Rule<wbr>Description</a></li>
-				<li><a href="/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat">XmlFileLoggerFormat</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Prca.Issues.MsBuild/ILogFileFormat">ILogFileFormat</a></li>
 
@@ -203,12 +201,6 @@
 									</ul>
 								</dd>				
 							
-								<dt>Derived Types</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat">XmlFileLoggerFormat</a></li>								
-									</ul>
-								</dd>			
 							
 						</dl>
 					</div>		
@@ -220,8 +212,6 @@
 	click Interface0 "/api/Cake.Prca.Issues.MsBuild/ILogFileFormat"
 	Type["LogFileFormat"]
 class Type type-node
-	Type--&gt;Derived0["XmlFileLoggerFormat"]
-	click Derived0 "/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat"
 
 						</div>
 					</div>
@@ -297,7 +287,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat/39BCD115">ReadIssues<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings, <wbr>Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Settings)<wbr></a></td>
+								<td><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat/11247BE8">ReadIssues<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings, <wbr>Ms<wbr>Build<wbr>Issues<wbr>Settings)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
 								<td>
 									<div>
@@ -333,16 +323,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -350,6 +330,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -164,7 +164,7 @@
     <li><a href="/dsl/cmake">CMake</a></li>        
     <li><a href="/dsl/cocoapods">CocoaPods</a></li>        
     <li><a href="/dsl/code-analysis-reporting">Code Analysis Reporting</a></li>        
-    <li><a href="/dsl/collection-helpers">Collection Helpers</a></li>        
+    <li><a href="/dsl/codecov">Codecov</a></li>        
     <li><a href="/dsl/communication">Communication</a></li>        
     <li><a href="/dsl/compression">Compression</a></li>        
     <li><a href="/dsl/configuration">Configuration</a></li>        
@@ -173,7 +173,7 @@
     <li><a href="/dsl/curl">Curl</a></li>        
     <li><a href="/dsl/database">Database</a></li>        
     <li><a href="/dsl/deployment">Deployment</a></li>        
-    <li><a href="/dsl/directory-helpers">Directory Helpers</a></li>        
+    <li><a href="/dsl/directory-operations">Directory Operations</a></li>        
     <li><a href="/dsl/docfx">DocFx</a></li>        
     <li><a href="/dsl/docker">Docker</a></li>        
     <li><a href="/dsl/doindirectory">DoInDirectory</a></li>        
@@ -192,6 +192,7 @@
     <li><a href="/dsl/genymotion">Genymotion</a></li>        
     <li><a href="/dsl/git">Git</a></li>        
     <li><a href="/dsl/gitter">Gitter</a></li>        
+    <li><a href="/dsl/globbing">Globbing</a></li>        
     <li><a href="/dsl/guard">Guard</a></li>        
     <li><a href="/dsl/hipchat">HipChat</a></li>        
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
@@ -267,14 +268,13 @@
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Prca.Issues.Markdownlint" class="alert-link">https://github.com/cake-contrib/Cake.Prca.Issues.Markdownlint</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Prca" class="alert-link">https://github.com/cake-contrib/Cake.Prca</a>.
                             </div>
 
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality related to importing code analysis issues from Markdownlint
-            to write them to pull requests.
+            Contains functionality related to writing code analysis issues to pull requests.
             </div>
 
 
@@ -354,6 +354,19 @@
 <a href="/api/Cake.Prca.Issues.DocFx/DocFxIssuesProviderAliases/A0E9D5F3">Doc<wbr>Fx<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
+            Gets an instance of a provider for warnings reported by DocFx using log file content
+            for a DocFx project in the repository root.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Prca.Issues.DocFx.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.DocFx<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Prca.Issues.DocFx/DocFxIssuesProviderAliases/B5BAF781">Doc<wbr>Fx<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath)<wbr></a>                            </td>
+                            <td>
+                                
             Gets an instance of a provider for warnings reported by DocFx using log file content.
             
 
@@ -366,6 +379,19 @@
 <a href="/api/Cake.Prca.Issues.DocFx/DocFxIssuesProviderAliases/94C2B7A2">Doc<wbr>Fx<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
+            Gets an instance of a provider for warnings reported by DocFx using a log file from disk
+            for a DocFx project in the repository root.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Prca.Issues.DocFx.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.DocFx<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Prca.Issues.DocFx/DocFxIssuesProviderAliases/2D4F7769">Doc<wbr>Fx<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath)<wbr></a>                            </td>
+                            <td>
+                                
             Gets an instance of a provider for warnings reported by DocFx using a log file from disk.
             
 
@@ -375,7 +401,31 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/AD4343E7">EsLint<wbr>(ICakeContext, <wbr>EsLintSettings)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/66FCBDE8">Es<wbr>Lint<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Base<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>)<wbr></a>                            </td>
+                            <td>
+                                
+            Registers a new URL resolver with default priority of 0.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Prca.Issues.EsLint.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/E500D2E0">Es<wbr>Lint<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Base<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>, <wbr>int)<wbr></a>                            </td>
+                            <td>
+                                
+            Registers a new URL resolver with a specific priority.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Prca.Issues.EsLint.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/B6E7F0E9">EsLintIssues<wbr>(ICakeContext, <wbr>Es<wbr>Lint<wbr>Issues<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
              Gets an instance of a provider for code analysis issues reported by ESLint using specified settings.
@@ -387,31 +437,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/D0CBC4B6">Es<wbr>Lint<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Base<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>)<wbr></a>                            </td>
-                            <td>
-                                
-            Registers a new URL resolver with default priority of 0.
-            
-
-                                            <br>
-                                            <small><i>Addin from <a href="/api/Cake.Prca.Issues.EsLint.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint<wbr>.dll</a></i></small>
-                                                                    </td>
-                        </tr>
-                        <tr>
-                            <td>
-<a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/061227A5">Es<wbr>Lint<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Base<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>, <wbr>int)<wbr></a>                            </td>
-                            <td>
-                                
-            Registers a new URL resolver with a specific priority.
-            
-
-                                            <br>
-                                            <small><i>Addin from <a href="/api/Cake.Prca.Issues.EsLint.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.EsLint<wbr>.dll</a></i></small>
-                                                                    </td>
-                        </tr>
-                        <tr>
-                            <td>
-<a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/9626E48D">EsLintFromContent<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/B82FD9B7">Es<wbr>Lint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported by ESLint using log file content.
@@ -423,7 +449,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/A462727A">EsLintFromFilePath<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/E7C05B43">Es<wbr>Lint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported by ESLint using a log file from disk.
@@ -435,10 +461,10 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/5D533442">EsLintJsonFormat</a>                            </td>
+<a href="/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/8352337F">EsLintJsonFormat</a>                            </td>
                             <td>
                                 
-            Gets an instance for the ESLint JSON log format as written by the JSON formatter
+            Gets an instance for the ESLint JSON log format as written by the JSON formatter.
             
 
                                             <br>
@@ -447,7 +473,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/16AEA0DF">InspectCode<wbr>(ICakeContext, <wbr>InspectCodeSettings)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeIssuesAliases/EE92BDE1">InspectCodeIssues<wbr>(ICakeContext, <wbr>Inspect<wbr>Code<wbr>Issues<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
              Gets an instance of a provider for code analysis issues reported by JetBrains Inspect Code using specified settings.
@@ -459,7 +485,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/415EFCD5">Inspect<wbr>Code<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeIssuesAliases/229E6124">Inspect<wbr>Code<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported by JetBrains Inspect Code using log file content.
@@ -471,7 +497,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/E61219D8">Inspect<wbr>Code<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.InspectCode/InspectCodeIssuesAliases/F0358097">Inspect<wbr>Code<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported by JetBrains Inspect Code using a log file from disk.
@@ -483,7 +509,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProviderAliases/BC7B2EEB">Markdownlint<wbr>(ICakeContext, <wbr>Markdownlint<wbr>Settings)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintIssuesAliases/362C1D06">MarkdownlintIssues<wbr>(ICakeContext, <wbr>Markdownlint<wbr>Issues<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
              Gets an instance of a provider for code analysis issues reported by Markdownlint using specified settings.
@@ -495,7 +521,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProviderAliases/2BB5198A">Markdownlint<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintIssuesAliases/A3EF1FE8">Markdownlint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported by Markdownlint using log file content.
@@ -507,7 +533,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProviderAliases/7913AE63">Markdownlint<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.Markdownlint/MarkdownlintIssuesAliases/4BC5295C">Markdownlint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported by Markdownlint using a log file from disk.
@@ -519,7 +545,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/6F6FE38C">Ms<wbr>Build<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Ms<wbr>Build<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/7C1DC9B7">Ms<wbr>Build<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Ms<wbr>Build<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>)<wbr></a>                            </td>
                             <td>
                                 
             Registers a new URL resolver with default priority of 0.
@@ -531,7 +557,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/C908C28E">Ms<wbr>Build<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Ms<wbr>Build<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>, <wbr>int)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/2A735EBB">Ms<wbr>Build<wbr>Add<wbr>Rule<wbr>Url<wbr>Resolver<wbr>(ICakeContext, <wbr>Func<wbr>&lt;<wbr>Ms<wbr>Build<wbr>Rule<wbr>Description, <wbr>Uri&gt;<wbr>, <wbr>int)<wbr></a>                            </td>
                             <td>
                                 
             Registers a new URL resolver with a specific priority.
@@ -543,7 +569,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/50251E62">MsBuildCodeAnalysis<wbr>(ICakeContext, <wbr>Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Settings)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/30A4C3FA">MsBuildIssues<wbr>(ICakeContext, <wbr>Ms<wbr>Build<wbr>Issues<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
              Gets an instance of a provider for code analysis issues reported as MsBuild warnings using specified settings.
@@ -555,7 +581,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/90E58CD7">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/575BD1E7">Ms<wbr>Build<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported as MsBuild warnings using log content.
@@ -567,7 +593,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/72B6358D">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/BC9397D4">Ms<wbr>Build<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for code analysis issues reported as MsBuild warnings using a log file from disk.
@@ -579,13 +605,13 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/19A64D53">Ms<wbr>Build<wbr>Xml<wbr>File<wbr>Logger<wbr>Format</a>                            </td>
+<a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/A9B125B9">Ms<wbr>Build<wbr>Xml<wbr>File<wbr>Logger<wbr>Format</a>                            </td>
                             <td>
                                 
             <p>
-            Gets an instance for the MsBuild log format as written by the </p><pre><code class="cs">XmlFileLogger</code></pre> class
+            Gets an instance for the MsBuild log format as written by the <code class="cs">XmlFileLogger</code> class
             from MSBuild Extension Pack.
-            <p></p>
+            </p>
             <p>
             You can add the logger to the MSBuildSettings like this:
             </p><pre><code class="cs">var settings = new MsBuildSettings()
@@ -714,6 +740,19 @@
             Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
             in a specific repository and for a specific source branch.
             
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/CD1B2334">TfsVotePullRequest<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings, <wbr>TfsPullRequestVote)<wbr></a>                            </td>
+                            <td>
+                                
+             Votes for the Team Foundation Server or Visual Studio Team Services pull request
+             using the specified settings.
+             
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></i></small>
