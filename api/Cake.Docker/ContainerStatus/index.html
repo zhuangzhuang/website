@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ContainerStatus Enum</title>
+        <title>Cake - API - ContainerStatus Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -142,6 +142,7 @@
 				<li><a href="/api/Cake.Docker/ArgumentsBuilderExtension">Arguments<wbr>Builder<wbr>Extension</a></li>
 				<li><a href="/api/Cake.Docker/AutoPropertyAttribute">Auto<wbr>Property<wbr>Attribute</a></li>
 				<li><a href="/api/Cake.Docker/AutoToolSettings">AutoToolSettings</a></li>
+				<li class="selected"><a href="/api/Cake.Docker/ContainerStatus">ContainerStatus</a></li>
 				<li><a href="/api/Cake.Docker/DockerAliases">DockerAliases</a></li>
 				<li><a href="/api/Cake.Docker/DockerBridge">DockerBridge</a></li>
 				<li><a href="/api/Cake.Docker/DockerBuildSettings">DockerBuildSettings</a></li>
@@ -183,8 +184,6 @@
 				<li><a href="/api/Cake.Docker/EmptySettings">EmptySettings</a></li>
 				<li><a href="/api/Cake.Docker/GenericDockerComposeRunner_1">Generic<wbr>Docker<wbr>Compose<wbr>Runner<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Docker/GenericDockerRunner_1">GenericDockerRunner<wbr>&lt;TSettings&gt;<wbr></a></li>
-			<li class="header">Enum Types</li>
-				<li class="selected"><a href="/api/Cake.Docker/ContainerStatus">ContainerStatus</a></li>
 
 
                     </ul>
@@ -198,7 +197,7 @@
 
 
 <section class="content-header">
-	<h1>ContainerStatus <small>Enum</small></h1>
+	<h1>ContainerStatus <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -225,20 +224,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Docker">Cake<wbr>.Docker</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -250,11 +239,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["ContainerStatus"]
 class Type type-node
 
@@ -265,7 +249,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum ContainerStatus</code></pre>
+	<pre><code>public sealed class ContainerStatus : Enum</code></pre>
 
 
 
@@ -335,6 +319,13 @@ class Type type-node
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/ContainerStatus/2E9A634C">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
 					</tbody></table>
 				</div>
 			</div>
@@ -362,6 +353,26 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Container<wbr>Status&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Container<wbr>Status&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -155,6 +155,7 @@
         <li><a href="/api/Cake.Chutzpah.dll">Cake<wbr>.Chutzpah<wbr>.dll</a></li>
         <li><a href="/api/Cake.CMake.dll">Cake<wbr>.CMake<wbr>.dll</a></li>
         <li><a href="/api/Cake.CodeAnalysisReporting.dll">Cake<wbr>.<wbr>Code<wbr>Analysis<wbr>Reporting<wbr>.dll</a></li>
+        <li><a href="/api/Cake.Codecov.dll">Cake<wbr>.Codecov<wbr>.dll</a></li>
         <li><a href="/api/Cake.Compression.dll">Cake<wbr>.Compression<wbr>.dll</a></li>
         <li><a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></li>
         <li><a href="/api/Cake.CsvHelper.dll">Cake<wbr>.CsvHelper<wbr>.dll</a></li>
@@ -183,6 +184,7 @@
         <li><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></li>
         <li><a href="/api/Cake.JMeter.dll">Cake<wbr>.JMeter<wbr>.dll</a></li>
         <li><a href="/api/Cake.Json.dll">Cake<wbr>.Json<wbr>.dll</a></li>
+        <li><a href="/api/Cake.KeePass.dll">Cake<wbr>.KeePass<wbr>.dll</a></li>
         <li><a href="/api/Cake.Kudu.dll">Cake<wbr>.Kudu<wbr>.dll</a></li>
         <li><a href="/api/Cake.MicrosoftTeams.dll">Cake<wbr>.MicrosoftTeams<wbr>.dll</a></li>
         <li><a href="/api/Cake.MsDeploy.dll">Cake<wbr>.MsDeploy<wbr>.dll</a></li>
@@ -211,6 +213,7 @@
         <li><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></li>
         <li><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></li>
         <li><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></li>
+        <li><a href="/api/Cake.SqlPackage.dll">Cake<wbr>.SqlPackage<wbr>.dll</a></li>
         <li><a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></li>
         <li><a href="/api/Cake.SqlServerPackager.dll">Cake<wbr>.SqlServerPackager<wbr>.dll</a></li>
         <li class="selected"><a href="/api/Cake.SqlTools.dll">Cake<wbr>.SqlTools<wbr>.dll</a></li>
@@ -275,23 +278,39 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlTools/BaseSqlQueryRepository">Base<wbr>Sql<wbr>Query<wbr>Repository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a MsSql database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/MySqlQueryRepository">MySqlQueryRepository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a MySql database
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlTools/NpgsqlQueryRepository">Npgsql<wbr>Query<wbr>Repository</a></td>
+									<td>
+            Provides a method to execture sql queries against a PostgresSql database
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/SqlQueryAliases">SqlQueryAliases</a></td>
-									<td></td>
+									<td>
+            Contains Cake aliases for executing sql queries
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlTools/SqlQuerySettings">SqlQuerySettings</a></td>
-									<td></td>
+									<td>
+            The settings to use when executing sql queries
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -309,7 +328,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlTools/ISqlQueryRepository">ISqlQueryRepository</a></td>
-									<td></td>
+									<td>
+            Provides a method to execture sql queries against a database
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#ClassTypes">Class Types</a></p>
 <p><a href="#EnumTypes">Enum Types</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -195,6 +196,7 @@
 			<li><a href="/api/Cake.CMake">Cake<wbr>.CMake</a></li>
 			<li><a href="/api/Cake.CocoaPods">Cake<wbr>.CocoaPods</a></li>
 			<li><a href="/api/Cake.CodeAnalysisReporting">Cake<wbr>.<wbr>Code<wbr>Analysis<wbr>Reporting</a></li>
+			<li><a href="/api/Cake.Codecov">Cake<wbr>.Codecov</a></li>
 			<li><a href="/api/Cake.Commands">Cake<wbr>.Commands</a></li>
 
 				<li class="treeview">
@@ -521,6 +523,7 @@
 			<li class=" selected"><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
 			<li><a href="/api/Cake.JMeter">Cake<wbr>.JMeter</a></li>
 			<li><a href="/api/Cake.Json">Cake<wbr>.Json</a></li>
+			<li><a href="/api/Cake.KeePass">Cake<wbr>.KeePass</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Kudu">Cake<wbr>.Kudu</a> <a href="#" class="expand"></a>
@@ -557,6 +560,7 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></li>
+			<li><a href="/api/Cake.Npm.Publish">Cake<wbr>.Npm<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Npm.RunScript">Cake<wbr>.Npm<wbr>.RunScript</a></li>
 </ul></li>
 				<li class="treeview">
@@ -645,7 +649,8 @@
 				<a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Sonar.Attributes">Cake<wbr>.Sonar<wbr>.Attributes</a></li>
-</ul></li>			<li><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></li>
+</ul></li>			<li><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></li>
+			<li><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></li>
 			<li><a href="/api/Cake.SqlServerPackager">Cake<wbr>.SqlServerPackager</a></li>
 			<li><a href="/api/Cake.SqlTools">Cake<wbr>.SqlTools</a></li>
 			<li><a href="/api/Cake.Squirrel">Cake<wbr>.Squirrel</a></li>
@@ -983,7 +988,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            This project contains various experimental but useful extension methods and aliases for Cake that over time may become part of the core project
+            </div>
+
 
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
@@ -1002,13 +1011,21 @@
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/CustomProjectFile">CustomProjectFile</a></td>
-									<td>Represents a MSBuild project file.</td>
+								<td><a href="/api/Cake.Incubator/BuildTarget">BuildTarget</a></td>
+									<td>
+            A project build target
+            </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/CustomProjectParser">CustomProjectParser</a></td>
+								<td><a href="/api/Cake.Incubator/BuildTargetExecutable">Build<wbr>Target<wbr>Executable</a></td>
 									<td>
-            Class to handle parsing of Visual Studio Project Files.
+            A executable build target 
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectFile">CustomProjectFile</a></td>
+									<td>
+            Represents a MSBuild project file.
             </td>
 							</tr>
 							<tr>
@@ -1025,6 +1042,12 @@
 								<td><a href="/api/Cake.Incubator/DotNetBuildSettingsExtensions">Dot<wbr>Net<wbr>Build<wbr>Settings<wbr>Extensions</a></td>
 									<td>
             Several extension methods when using DotNetBuildSettings.
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/DotNetCliToolReference">Dot<wbr>Net<wbr>Cli<wbr>Tool<wbr>Reference</a></td>
+									<td>
+            A dotnet cli tool referenceS
             </td>
 							</tr>
 							<tr>
@@ -1058,15 +1081,33 @@
             </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/GlobbingExtensions">GlobbingExtensions</a></td>
+									<td>
+            Contains functionality related to file system globbing. 
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></td>
 									<td>
             Several extension methods when using Logging.
             </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/NetCoreProject">NetCoreProject</a></td>
+									<td>
+            Describes a netcore project
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/PackageReference">PackageReference</a></td>
+									<td>
+            A project package reference
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></td>
 									<td>
-            Several extension methods when using ProjectParser.
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
             </td>
 							</tr>
 							<tr>
@@ -1082,22 +1123,15 @@
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/ProjectTypeExtensions">Project<wbr>Type<wbr>Extensions</a></td>
-									<td>
-            Several extension methods when using ProjectType.
-            </td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Incubator/ProjectTypes">ProjectTypes</a></td>
 									<td>
             Class to contain a list of the Project Type ID's that exist within the Visual Studio eco-system.
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/ProjectXElement">ProjectXElement</a></td>
+								<td><a href="/api/Cake.Incubator/RuntimeOptions">RuntimeOptions</a></td>
 									<td>
-            MSBuild Project Xml Element XNames
-            original source: https://github.com/cake-build/cake/blob/main/src/Cake.Common/Solution/Project/ProjectXElement.cs
+            Optional runtime options to override the default settings
             </td>
 							</tr>
 							<tr>
@@ -1110,12 +1144,6 @@
 								<td><a href="/api/Cake.Incubator/StringExtensions">StringExtensions</a></td>
 									<td>
             Several extension methods when using String.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/XDocumentExtensions">XDocumentExtensions</a></td>
-									<td>
-            Several extension methods when using XDocument.
             </td>
 							</tr>
 					</tbody></table>

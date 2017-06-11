@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -141,6 +142,7 @@
 				<li><a href="/api/Cake.SqlTools/BaseSqlQueryRepository">Base<wbr>Sql<wbr>Query<wbr>Repository</a></li>
 				<li><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></li>
 				<li><a href="/api/Cake.SqlTools/MySqlQueryRepository">MySqlQueryRepository</a></li>
+				<li><a href="/api/Cake.SqlTools/NpgsqlQueryRepository">Npgsql<wbr>Query<wbr>Repository</a></li>
 				<li class="selected"><a href="/api/Cake.SqlTools/SqlQueryAliases">SqlQueryAliases</a></li>
 				<li><a href="/api/Cake.SqlTools/SqlQuerySettings">SqlQuerySettings</a></li>
 			<li class="header">Interface Types</li>
@@ -169,7 +171,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains Cake aliases for executing sql queries
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -249,7 +255,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlTools/SqlQueryAliases/F78E4949">ExecuteSqlFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>SqlQuerySettings)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Executes a sql file against a database
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -257,7 +265,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlTools/SqlQueryAliases/8967ADF7">ExecuteSqlQuery<wbr>(ICakeContext, <wbr>string, <wbr>SqlQuerySettings)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Executes a sql query against a database
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

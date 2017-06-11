@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -194,6 +195,15 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static bool IsSolutionFolder(this SolutionProject project)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Identifies a SolutionProject as a solution folder type
+            <pre><code class="cs">// test.sln { proj1.csproj, solutionFolder }
+var projects = ParseSolution(new FilePath("test.sln")).Projects;
+
+projects[0].IsSolutionFolder(); // false
+projects[1].IsSolutionFolder(); // true</code></pre>
+            </div>
 
 
 
