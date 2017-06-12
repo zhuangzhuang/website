@@ -4,7 +4,68 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-06-11T07:41:34Z</updated>
+	<updated>2017-06-12T22:27:10Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/06/cake-v0.20.0-released" />
+		<id>http://cakebuild.net/blog/2017/06/cake-v0.20.0-released</id>
+		<title>Cake v0.20.0 released</title>
+		<updated>2017-06-12T00:00:00Z</updated>
+		<content>&lt;p&gt;Version 0.20.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This release hopefully contains no new features!&lt;/p&gt;
+&lt;p&gt;But nevertheless it's the result of a great team effort.
+With this release we've finally migrated from VS2015 and .NET Core preview bits and  &lt;em&gt;project.json&lt;/em&gt; to VS2017 / .NET Core SDK 1.0.4 and &lt;em&gt;csproj&lt;/em&gt;.
+This release also contains a few documentation improvements.&lt;/p&gt;
+&lt;p&gt;It's been a little more work than expected to get everything to compile and test successfully cross platform using the new SDK, but now the yak if finally shaved and we have an release out!&lt;/p&gt;
+&lt;p&gt;Our goal is for there to be no breaking changes with this build, but there's certainly a risk of that as changing underlying SDK and build tooling is a substantial move of cheese.&lt;/p&gt;
+&lt;p&gt;This is why we always recommend you pin the version of Cake you're running to avoid any unplanned broken builds. You can read more about pinning Cake version &lt;a href="http://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Huge thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/dudleyt"&gt;dudleyt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jnm2"&gt;jnm2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=31&amp;amp;state=closed"&gt;11 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Builds&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1539"&gt;&lt;strong&gt;#1539&lt;/strong&gt;&lt;/a&gt; Update solution to Visual Studio 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1640"&gt;&lt;strong&gt;#1640&lt;/strong&gt;&lt;/a&gt; Fetch version from solutioninfo &amp;amp; remove newtonsoft dependency&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1638"&gt;&lt;strong&gt;#1638&lt;/strong&gt;&lt;/a&gt; Unix Integration tests fail post new SDK&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1635"&gt;&lt;strong&gt;#1635&lt;/strong&gt;&lt;/a&gt; Non Nuspec assemblies not packaged after VS2017 upgrade&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1603"&gt;&lt;strong&gt;#1603&lt;/strong&gt;&lt;/a&gt; Push Cake.NuGet to MyGet/NuGet&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1538"&gt;&lt;strong&gt;#1538&lt;/strong&gt;&lt;/a&gt; Update DotNetInstallerUri to &lt;a href="https://dot.net/v1/dotnet-install.ps1"&gt;https://dot.net/v1/dotnet-install.ps1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1620"&gt;&lt;strong&gt;#1620&lt;/strong&gt;&lt;/a&gt; Improve documentation for RedirectStandardError and RedirectStandardOutput&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1613"&gt;&lt;strong&gt;#1613&lt;/strong&gt;&lt;/a&gt; Added documentation link to NUnit3Settings.Where&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1605"&gt;&lt;strong&gt;#1605&lt;/strong&gt;&lt;/a&gt; Fix the contribution-guidelines link again&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1604"&gt;&lt;strong&gt;#1604&lt;/strong&gt;&lt;/a&gt; Fix the contribution guidelines link in the README&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1595"&gt;&lt;strong&gt;#1595&lt;/strong&gt;&lt;/a&gt; Add Alistair and Martin names to all required places&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Version 0.20.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This release hopefully contains no new features!&lt;/p&gt;
+&lt;p&gt;But nevertheless it's the result of a great team effort.
+With this release we've finally migrated from VS2015 and .NET Core preview bits and  &lt;em&gt;project.json&lt;/em&gt; to VS2017 / .NET Core SDK 1.0.4 and &lt;em&gt;csproj&lt;/em&gt;.
+This release also contains a few documentation improvements.&lt;/p&gt;
+&lt;p&gt;It's been a little more work than expected to get everything to compile and test successfully cross platform using the new SDK, but now the yak if finally shaved and we have an release out!&lt;/p&gt;
+&lt;p&gt;Our goal is for there to be no breaking changes with this build, but there's certainly a risk of that as changing underlying SDK and build tooling is a substantial move of cheese.&lt;/p&gt;
+&lt;p&gt;This is why we always recommend you pin the version of Cake you're running to avoid any unplanned broken builds. You can read more about pinning Cake version &lt;a href="http://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Huge thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -1152,31 +1213,5 @@ Task("SendEmail")
 &lt;p&gt;My name is Alistair Chapman and I'm an ALM consultant and occasional .NET developer from Brisbane, Australia who started working on Cake in 2016 and coincidentally hasn't been bored ever since. You can find me on &lt;a href="https://github.com/agc93"&gt;GitHub&lt;/a&gt; and &lt;a href="https://twitter.com/agc93"&gt;Twitter&lt;/a&gt; as agc93, or check out &lt;a href="http://blog.agchapman.com"&gt;my blog&lt;/a&gt;.&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;I am very proud to announce the first release of the Cake for Visual Studio extension for Visual Studio 2015. This extension brings full syntax highlighting, integration with the Task Runner Explorer, special commands to get you started with Cake on new projects and new templates.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/09/cake-v0.16.1-released" />
-		<id>http://cakebuild.net/blog/2016/09/cake-v0.16.1-released</id>
-		<title>Cake v0.16.1 released</title>
-		<updated>2016-09-25T00:00:00Z</updated>
-		<content>&lt;p&gt;Version 0.16.1 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;Following the release of Cake v0.16.0 last week, &lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt; identified an issue with debugging in Visual Studio Code.  In addition, we also noticed that we were missing some properties in the generated assemblies.&lt;/p&gt;
-&lt;p&gt;As a result, v0.16.1 of Cake is now available.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;p&gt;&lt;strong&gt;Bugs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1237"&gt;&lt;strong&gt;#1237&lt;/strong&gt;&lt;/a&gt; Issue with debugging in v0.16.0 (.NET Core)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1230"&gt;&lt;strong&gt;#1230&lt;/strong&gt;&lt;/a&gt; Add missing assembly properties&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;Version 0.16.1 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;Following the release of Cake v0.16.0 last week, &lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt; identified an issue with debugging in Visual Studio Code.  In addition, we also noticed that we were missing some properties in the generated assemblies.&lt;/p&gt;
-&lt;p&gt;As a result, v0.16.1 of Cake is now available.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
 	</entry>
 </feed>

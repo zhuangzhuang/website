@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -139,6 +140,8 @@
 		<li><a href="/api/Cake.EntityFramework.Interfaces/IEfMigratorBackend">IEfMigratorBackend</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.EntityFramework.Interfaces/IEfMigratorBackend/57CA8311">Generate<wbr>Script<wbr>For<wbr>Latest<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Interfaces/IEfMigratorBackend/80AEF62A">Generate<wbr>Script<wbr>For<wbr>Version<wbr>(string)<wbr></a></li>
 				<li><a href="/api/Cake.EntityFramework.Interfaces/IEfMigratorBackend/091E57B3">GetCurrentMigration<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.EntityFramework.Interfaces/IEfMigratorBackend/C1FC9C32">GetLatestMigration<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.EntityFramework.Interfaces/IEfMigratorBackend/181F4D94">GetLocalMigrations<wbr>()<wbr></a></li>
@@ -174,7 +177,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Gets all migrations that are defined in the assembly but haven't been applied to the target database.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -211,7 +218,7 @@
 				</thead>
 				<tbody><tr>
 					<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
-					<td></td>
+					<td>List of pending migrations if any</td>
 				</tr>
 			</tbody></table>
 		</div>

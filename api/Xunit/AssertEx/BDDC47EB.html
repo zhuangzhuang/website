@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - Assert Class</title>
+        <title>Cake - API - AssertEx.ContainsFilePath(IEnumerable&lt;Path&gt;, FilePath) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -80,8 +80,8 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Methods">Methods</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -134,9 +134,17 @@
                         
 			<li class="header">Namespace</li>
 		<li><a href="/api/Xunit">Xunit</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Xunit/AssertEx">AssertEx</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li class="selected"><a href="/api/Xunit/Assert">Assert</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Xunit/AssertEx/96813CEC">Contains<wbr>Directory<wbr>Path<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
+				<li class="selected"><a href="/api/Xunit/AssertEx/BDDC47EB">ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/7148FCA6">ContainsPath<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>T)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/073AF58B">IsArgumentException<wbr>(Exception, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/FA13020E">Is<wbr>Argument<wbr>Null<wbr>Exception<wbr>(Exception, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/45292112">IsCakeException<wbr>(Exception, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/AAD1BF93">Is<wbr>Exception<wbr>With<wbr>Message<wbr>&lt;T&gt;<wbr><wbr>(Exception, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -150,195 +158,77 @@
 
 
 <section class="content-header">
-	<h1>Assert <small>Class</small></h1>
+			<h3><a href="/api/Xunit/AssertEx">AssertEx</a>.</h3>
+	<h1>ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 	
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-
-								<dt>Namespace</dt>
-								<dd><a href="/api/Xunit">Xunit</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
-	Type["Assert"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Xunit">Xunit</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Xunit/AssertEx">AssertEx</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class Assert</code></pre>
+	<pre><code>public static void ContainsFilePath(IEnumerable&lt;Path&gt; paths, FilePath expected)</code></pre>
 
 
 
 
 
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>paths</td>
+						<td>IEnumerable<wbr>&lt;Path&gt;<wbr></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>expected</td>
+						<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Xunit/Assert/32DDA41E">Contains<wbr>Directory<wbr>Path<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Xunit/Assert/A6D2295B">ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Xunit/Assert/9E3FA166">ContainsPath<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>T)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Xunit/Assert/BD388BF8">IsArgumentException<wbr>(Exception, <wbr>string, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Xunit/Assert/922475D1">Is<wbr>Argument<wbr>Null<wbr>Exception<wbr>(Exception, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Xunit/Assert/684F7437">IsCakeException<wbr>(Exception, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Xunit/Assert/7D4A2686">Is<wbr>Exception<wbr>With<wbr>Message<wbr>&lt;T&gt;<wbr><wbr>(Exception, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
-
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;Assert&gt;<wbr><wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-             Get a basic string representation of specified object.
-             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;Assert&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;Assert&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;Assert&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>T</td>
-								<td>
-									<div>
-            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
-            </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;Assert&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
-								<td>T</td>
-								<td>
-									<div>
-            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
-            </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 	
 </section>

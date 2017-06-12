@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - Assert.ContainsFilePath(IEnumerable&lt;Path&gt;, FilePath) Method</title>
+        <title>Cake - API - EfMigrator.GenerateScriptForLatest() Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Parameters">Parameters</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -132,19 +132,34 @@
 
                     <ul class="sidebar-menu">
                         
-			<li class="header">Namespace</li>
-		<li><a href="/api/Xunit">Xunit</a></li>
+			<li class="header">Assembly</li>
+		<li><a href="/api/Cake.EntityFramework.dll">Cake<wbr>.EntityFramework<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Cake.EntityFramework.Migrator">Cake<wbr>.EntityFramework<wbr>.Migrator</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Xunit/Assert">Assert</a></li>
+		<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator">EfMigrator</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/E761D03A">EfMigrator<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>ILogger, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/F95262EF">EfMigrator<wbr>(<wbr>I<wbr>Ef<wbr>Migrator<wbr>Backend, <wbr>ILogger)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Xunit/Assert/32DDA41E">Contains<wbr>Directory<wbr>Path<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
-				<li class="selected"><a href="/api/Xunit/Assert/A6D2295B">ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/9E3FA166">ContainsPath<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>T)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/BD388BF8">IsArgumentException<wbr>(Exception, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/922475D1">Is<wbr>Argument<wbr>Null<wbr>Exception<wbr>(Exception, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/684F7437">IsCakeException<wbr>(Exception, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/7D4A2686">Is<wbr>Exception<wbr>With<wbr>Message<wbr>&lt;T&gt;<wbr><wbr>(Exception, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/1E63BB38">Commit<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/1D6D7C30">Dispose<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/1FCA46E6">Generate<wbr>Script<wbr>For<wbr>Latest<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/80EE1F56">Generate<wbr>Script<wbr>For<wbr>Version<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/D925886A">GetCurrentMigration<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/28F0FD3B">GetLatestMigration<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/F1132C9D">GetLocalMigrations<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/798BCE74">GetPendingMigrations<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/D960028B">GetRemoteMigrations<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/DEFC1700">HasPendingMigrations<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/9AB63FAC">MigrateTo<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/83220062">MigrateToLatest<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/F788525E">Rollback<wbr>()<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/18C6463D">Committed</a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/6CFCC0F7">CurrentMigration</a></li>
+				<li><a href="/api/Cake.EntityFramework.Migrator/EfMigrator/A058ED0B">Ready</a></li>
 
 
                     </ul>
@@ -158,58 +173,46 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Xunit/Assert">Assert</a>.</h3>
-	<h1>ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.EntityFramework.Migrator/EfMigrator">EfMigrator</a>.</h3>
+	<h1>Generate<wbr>Script<wbr>For<wbr>Latest<wbr>()<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
+	        <div class="alert alert-info" role="alert">
+            <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
+
+                        For more information about this project, please visit 
+                        <a href="https://github.com/cake-contrib/Cake.EntityFramework/" class="alert-link">https://github.com/cake-contrib/Cake.EntityFramework/</a>.
+                            </div>
+
 	
-	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Generates a script from the data store for the latest version
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Cake.EntityFramework.dll">Cake<wbr>.EntityFramework<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Xunit">Xunit</a></dd>
+						<dd><a href="/api/Cake.EntityFramework.Migrator">Cake<wbr>.EntityFramework<wbr>.Migrator</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Xunit/Assert">Assert</a></dd>		
+						<dd><a href="/api/Cake.EntityFramework.Migrator/EfMigrator">EfMigrator</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void ContainsFilePath(IEnumerable&lt;Path&gt; paths, FilePath expected)</code></pre>
+	<pre><code>public string GenerateScriptForLatest()</code></pre>
 
 
 
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>paths</td>
-						<td>IEnumerable<wbr>&lt;Path&gt;<wbr></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>expected</td>
-						<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
@@ -222,8 +225,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>string</td>
+					<td>true if script generation was successful, otherwise false</td>
 				</tr>
 			</tbody></table>
 		</div>
