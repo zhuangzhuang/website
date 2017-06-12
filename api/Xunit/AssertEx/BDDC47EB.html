@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - Assert.IsExceptionWithMessage&lt;T&gt;(Exception, string) Method</title>
+        <title>Cake - API - AssertEx.ContainsFilePath(IEnumerable&lt;Path&gt;, FilePath) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -80,7 +80,6 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
-<p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -136,16 +135,16 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Xunit">Xunit</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Xunit/Assert">Assert</a></li>
+		<li><a href="/api/Xunit/AssertEx">AssertEx</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Xunit/Assert/32DDA41E">Contains<wbr>Directory<wbr>Path<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/A6D2295B">ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/9E3FA166">ContainsPath<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>T)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/BD388BF8">IsArgumentException<wbr>(Exception, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/922475D1">Is<wbr>Argument<wbr>Null<wbr>Exception<wbr>(Exception, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Xunit/Assert/684F7437">IsCakeException<wbr>(Exception, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Xunit/Assert/7D4A2686">Is<wbr>Exception<wbr>With<wbr>Message<wbr>&lt;T&gt;<wbr><wbr>(Exception, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/96813CEC">Contains<wbr>Directory<wbr>Path<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
+				<li class="selected"><a href="/api/Xunit/AssertEx/BDDC47EB">ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/7148FCA6">ContainsPath<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>T)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/073AF58B">IsArgumentException<wbr>(Exception, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/FA13020E">Is<wbr>Argument<wbr>Null<wbr>Exception<wbr>(Exception, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/45292112">IsCakeException<wbr>(Exception, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Xunit/AssertEx/AAD1BF93">Is<wbr>Exception<wbr>With<wbr>Message<wbr>&lt;T&gt;<wbr><wbr>(Exception, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -159,8 +158,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Xunit/Assert">Assert</a>.</h3>
-	<h1>Is<wbr>Exception<wbr>With<wbr>Message<wbr>&lt;T&gt;<wbr><wbr>(Exception, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Xunit/AssertEx">AssertEx</a>.</h3>
+	<h1>ContainsFilePath<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>FilePath)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
@@ -174,36 +173,18 @@
 						<dd><a href="/api/Xunit">Xunit</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Xunit/Assert">Assert</a></dd>		
+						<dd><a href="/api/Xunit/AssertEx">AssertEx</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void IsExceptionWithMessage&lt;T&gt;(Exception exception, string message) 
-    where T : Exception</code></pre>
+	<pre><code>public static void ContainsFilePath(IEnumerable&lt;Path&gt; paths, FilePath expected)</code></pre>
 
 
 
 
-	<h1 id="TypeParameters">Type Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr id="typeparam-T">
-						<td>T</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 	<h1 id="Parameters">Parameters</h1>
 	<div class="box">
@@ -217,13 +198,13 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>exception</td>
-						<td>Exception</td>
+						<td>paths</td>
+						<td>IEnumerable<wbr>&lt;Path&gt;<wbr></td>
 						<td></td>
 					</tr>
 					<tr>
-						<td>message</td>
-						<td>string</td>
+						<td>expected</td>
+						<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
 						<td></td>
 					</tr>
 			</tbody></table>
