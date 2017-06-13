@@ -5,8 +5,8 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Mon, 12 Jun 2017 22:53:50 GMT</pubDate>
-		<lastBuildDate>Mon, 12 Jun 2017 22:53:50 GMT</lastBuildDate>
+		<pubDate>Tue, 13 Jun 2017 20:39:22 GMT</pubDate>
+		<lastBuildDate>Tue, 13 Jun 2017 20:39:22 GMT</lastBuildDate>
 		<item>
 			<title>Cake v0.20.0 released</title>
 			<link>http://cakebuild.net/blog/2017/06/cake-v0.20.0-released</link>
@@ -64,6 +64,15 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1604"&gt;&lt;strong&gt;#1604&lt;/strong&gt;&lt;/a&gt; Fix the contribution guidelines link in the README&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1595"&gt;&lt;strong&gt;#1595&lt;/strong&gt;&lt;/a&gt; Add Alistair and Martin names to all required places&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id="known-issue"&gt;Known issue&lt;/h3&gt;
+&lt;p&gt;The Cake's dependency &lt;code&gt;NuGet.Core&lt;/code&gt; has been updated from &lt;code&gt;2.12.0&lt;/code&gt; to &lt;code&gt;2.14.0&lt;/code&gt;, these means that if you're using an earlier version of &lt;code&gt;NuGet.Core&lt;/code&gt; as a reference or addin in your build scripts you'll as reported issue &lt;a href="https://github.com/cake-build/cake/issues/1642"&gt;#1642&lt;/a&gt; get an error while executing the script, thanks &lt;a href="https://github.com/danwalmsley"&gt;danwalmsley&lt;/a&gt; for reporting!&lt;/p&gt;
+&lt;p&gt;The solution is to update to use same version as shipped with Cake i.e.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-cake"&gt;#addin &amp;quot;nuget:?package=NuGet.Core&amp;amp;version=2.12.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;gets changed to&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-cake"&gt;#addin &amp;quot;nuget:?package=NuGet.Core&amp;amp;version=2.14.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and the make sure any old version of &lt;code&gt;NuGet.Core&lt;/code&gt; is removed from your addin folder.&lt;/p&gt;
 </content:encoded>
 		</item>
 		<item>
