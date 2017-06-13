@@ -198,6 +198,15 @@ This release also contains a few documentation improvements.</p>
 <li><a href="https://github.com/cake-build/cake/pull/1604"><strong>#1604</strong></a> Fix the contribution guidelines link in the README</li>
 <li><a href="https://github.com/cake-build/cake/issues/1595"><strong>#1595</strong></a> Add Alistair and Martin names to all required places</li>
 </ul>
+<h3 id="known-issue">Known issue</h3>
+<p>The Cake's dependency <code>NuGet.Core</code> has been updated from <code>2.12.0</code> to <code>2.14.0</code>, these means that if you're using an earlier version of <code>NuGet.Core</code> as a reference or addin in your build scripts you'll as reported issue <a href="https://github.com/cake-build/cake/issues/1642">#1642</a> get an error while executing the script, thanks <a href="https://github.com/danwalmsley">danwalmsley</a> for reporting!</p>
+<p>The solution is to update to use same version as shipped with Cake i.e.</p>
+<pre><code class="language-cake">#addin &quot;nuget:?package=NuGet.Core&amp;version=2.12.0&quot;
+</code></pre>
+<p>gets changed to</p>
+<pre><code class="language-cake">#addin &quot;nuget:?package=NuGet.Core&amp;version=2.14.0&quot;
+</code></pre>
+<p>and the make sure any old version of <code>NuGet.Core</code> is removed from your addin folder.</p>
 
             </div>
         <hr />

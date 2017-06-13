@@ -326,8 +326,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -372,8 +372,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -439,10 +439,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -496,7 +494,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -637,11 +635,12 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </td>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/specflow">SpecFlow</a></td>
@@ -802,13 +801,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Cloud Front distributions
+            Contains Cake aliases for configuring Amazon Elastic Computing instances
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running commands managing Azure resource groups.
+            Contains Cake aliases for running Azure login commands.
             </td>
                 </tr>
                 <tr>
@@ -832,12 +831,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -895,8 +889,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -965,8 +959,7 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to creating new <a href="http://dotnet.github.io/docfx">DocFx</a>
-            projects.
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -999,7 +992,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            The result of EmailProvider
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1041,8 +1034,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fluentmigrator">FluentMigrator</a></td>
@@ -1088,12 +1081,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
@@ -1128,10 +1116,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/jmeter">JMeter</a></td>
@@ -1164,7 +1150,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -1248,8 +1234,8 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
-            pull requests.
+            Contains functionality related to importing code analysis issues from Markdownlint
+            to write them to pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1290,7 +1276,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Contains functionality related to SendGrid API
             </td>
                 </tr>
                 <tr>
@@ -1302,11 +1288,12 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </td>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sonar">Sonar</a></td>
@@ -1354,11 +1341,8 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionallity. The verify alias will check if an assembly has a 
-            strong name or not. If one has turned off strong name verification, you can still verify by using the
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </td>
                 </tr>
                 <tr>
