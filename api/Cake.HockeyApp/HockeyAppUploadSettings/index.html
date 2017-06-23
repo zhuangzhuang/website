@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -138,15 +139,15 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.HockeyApp">Cake<wbr>.HockeyApp</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
+			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.HockeyApp/DownloadStatus">DownloadStatus</a></li>
+				<li><a href="/api/Cake.HockeyApp/HockeyAppAliases">HockeyAppAliases</a></li>
+				<li><a href="/api/Cake.HockeyApp/HockeyAppUploadResult">Hockey<wbr>App<wbr>Upload<wbr>Result</a></li>
+				<li class="selected"><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings">Hockey<wbr>App<wbr>Upload<wbr>Settings</a></li>
 				<li><a href="/api/Cake.HockeyApp/MandatoryOption">MandatoryOption</a></li>
 				<li><a href="/api/Cake.HockeyApp/NoteType">NoteType</a></li>
 				<li><a href="/api/Cake.HockeyApp/NotifyOption">NotifyOption</a></li>
 				<li><a href="/api/Cake.HockeyApp/ReleaseType">ReleaseType</a></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Cake.HockeyApp/HockeyAppAliases">HockeyAppAliases</a></li>
-				<li class="selected"><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings">Hockey<wbr>App<wbr>Upload<wbr>Settings</a></li>
 
 
                     </ul>
@@ -171,7 +172,12 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by <code class="cs"><a href="/">HockeyAppClient</a></code>
+            For a detailed information look at the official <a href="http://support.hockeyapp.net/kb/api/api-versions#upload-version">API Documentation</a>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -187,7 +193,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
@@ -197,7 +203,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Type["HockeyAppUploadSettings"]
 class Type type-node
 
@@ -262,7 +268,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Gets or sets the application id. This is a required property. 
+            Gets or sets the application id. This is a required property if you don't upload an apk or ipa.
             You can only upload packages to apps you have created before.
             </div>
 								</td>
@@ -287,7 +293,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings/8408A50E">Mandatory</a></td>
-								<td>MandatoryOption?</td>
+								<td>Nullable<wbr>&lt;<wbr>Mandatory<wbr>Option&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the mandatory option for this version. Optional.
@@ -305,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings/3DA2D3B1">NoteType</a></td>
-								<td>NoteType?</td>
+								<td>Nullable<wbr>&lt;NoteType&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the type of notes. Either Plain Text or Markdown. Optional.
@@ -314,7 +320,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings/A24BBBC7">Notify</a></td>
-								<td>NotifyOption?</td>
+								<td>Nullable<wbr>&lt;NotifyOption&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the notify option declaring who has to be notified. Optional.
@@ -333,7 +339,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings/3189877F">Private</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets if this is a private version. Optional.
@@ -342,7 +348,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings/92455F06">ReleaseType</a></td>
-								<td>ReleaseType?</td>
+								<td>Nullable<wbr>&lt;ReleaseType&gt;<wbr></td>
 								<td>
 									<div>
             Gets or stets the release type for this version. Optional.
@@ -370,7 +376,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.HockeyApp/HockeyAppUploadSettings/76C3C09D">Status</a></td>
-								<td>DownloadStatus?</td>
+								<td>Nullable<wbr>&lt;<wbr>Download<wbr>Status&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the download status declaring if this version can be downloaded. Optional.
@@ -411,7 +417,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-            Gets or sets the version tag. This is a required property.
+            Gets or sets the version tag. This is a required property if you don't upload an apk or ipa. 
             </div>
 								</td>
 							</tr>

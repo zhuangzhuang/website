@@ -4,7 +4,26 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-06-13T20:39:22Z</updated>
+	<updated>2017-06-23T17:40:05Z</updated>
+	<entry>
+		<author>
+			<name>gep13</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/06/new-cake-contrib-icon" />
+		<id>http://cakebuild.net/blog/2017/06/new-cake-contrib-icon</id>
+		<title>New Cake Contrib Icon</title>
+		<updated>2017-06-23T00:00:00Z</updated>
+		<content>&lt;p&gt;Towards the end of 2016, the Cake Team had an internal discussion about the newly created &lt;a href="http://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contrib Organisation&lt;/a&gt;.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.&lt;/p&gt;
+&lt;p&gt;We, the Cake Team, are always startled by our amazing Cake Community.  There is now somewhere in the region of 166 addins/modules for Cake.  152 of those have added the &lt;a href="https://www.nuget.org/profiles/cake-contrib"&gt;cake-contrib NuGet user&lt;/a&gt; as a co-owner of that package on NuGet.org, and 72 of these packages have opted to move the repository into the &lt;a href="https://github.com/cake-contrib"&gt;Cake Contrib Organisation&lt;/a&gt; on GitHub.&lt;/p&gt;
+&lt;p&gt;To date, when things like Community contributed NuGet packages have been created, one of two things happened.  Either that package wasn't given an icon, and would appear with the default icon in the NuGet Gallery, or the package would use the main Cake icon.  While there is nothing necessarily &amp;quot;wrong&amp;quot; with using the main Cake icon for a package, it does give that package an elevated status in the eyes of some.  i.e. someone might think &amp;quot;ooo, that package has the Cake icon, it must be an official package from the Cake Team&amp;quot;.  While this is sometimes true, in the sense that one of the Core Cake Contributors might own a particular package, this is certainly not normally the case, and the Core Cake Team can't offer support for all these packages.&lt;/p&gt;
+&lt;p&gt;To help with this false association, and also as a means to highlight the amazing work that happens by our Cake Community, we are introducing the official Cake Contrib Icon:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png" class="img-fluid" alt="Offical Cake Contrib Icon" title="Official Cake Contrib Icon" /&gt;&lt;/p&gt;
+&lt;p&gt;Going forward, we will be encouraging all Cake Community Maintainers to use this icon whenever they are creating addins, modules, extensions, etc for Cake.  If you want to grab the icon, you can find various formats and sizes in the Cake Contrib &lt;a href="https://github.com/cake-contrib/graphics"&gt;graphics repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please do let us know what you think about the new icon, or if you have any questions.&lt;/p&gt;
+&lt;p&gt;We are very grateful to &lt;a href="https://twitter.com/spoike"&gt;Mikael Brassman&lt;/a&gt; for creating the icon for us.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Towards the end of 2016, the Cake Team had an internal discussion about the newly created &lt;a href="http://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contrib Organisation&lt;/a&gt;.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -1192,35 +1211,5 @@ Task("SendEmail")
 &lt;p&gt;A working example can be found &lt;a href="https://github.com/mholo65/cake-vscode-debug-example"&gt;here&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;As you might already know, debugging Cake scripts using Visual Studio has been supported since the v0.12.0 release of Cake. But since the v0.16.1 release of Cake, thanks to &lt;a href="https://github.com/cake-build/cake/issues/1015"&gt;porting Cake to .NET Core&lt;/a&gt;, it is now also possible to debug Cake files using Visual Studio Code.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>agc93</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/09/cake-for-visual-studio" />
-		<id>http://cakebuild.net/blog/2016/09/cake-for-visual-studio</id>
-		<title>Cake for Visual Studio released</title>
-		<updated>2016-09-25T00:00:00Z</updated>
-		<content>&lt;p&gt;I am very proud to announce the first release of the Cake for Visual Studio extension for Visual Studio 2015. This extension brings full syntax highlighting, integration with the Task Runner Explorer, special commands to get you started with Cake on new projects and new templates.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;h3 id="syntax-highlighting"&gt;Syntax Highlighting&lt;/h3&gt;
-&lt;p&gt;Opening a Cake script in Visual Studio is no longer a dreary, plain experience. With the extension installed, open your *.cake files and get full syntax and task highlighting, plus special editor treatments.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-for-vs/syntax-highlighting.png" class="img-fluid" alt="build.cake file with highlighting" /&gt;&lt;/p&gt;
-&lt;h3 id="task-runner-explorer-integration"&gt;Task Runner Explorer integration&lt;/h3&gt;
-&lt;p&gt;If you have a build.cake file included in your solution, open the Task Runner Explorer to enjoy first class support for running Cake tasks, including bindings! This means you can automatically run any Cake task when you open, clean or build your project.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-for-vs/trx.png" class="img-fluid" alt="task runner explorer with tasks" /&gt;&lt;/p&gt;
-&lt;h3 id="bootstrapper-commands"&gt;Bootstrapper commands&lt;/h3&gt;
-&lt;p&gt;Check out the new &amp;quot;Cake Build&amp;quot; group in your Build menu for a set of quick commands for installing Cake bootstrapper scripts or configuration files into your solution.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-for-vs/commands.png" class="img-fluid" alt="Build menu items" /&gt;&lt;/p&gt;
-&lt;h3 id="cake-templates"&gt;Cake Templates&lt;/h3&gt;
-&lt;p&gt;Authoring new addins just became much easier with the new Cake Addin project template. Create a new addin with the new template to automatically add the basic addin structure and get started building sooner. Plus, new templates are included for build scripts, unit tests and modules.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-for-vs/templates.png" class="img-fluid" alt="New project dialog with Cake addin" /&gt;&lt;/p&gt;
-&lt;h3 id="getting-started"&gt;Getting started&lt;/h3&gt;
-&lt;p&gt;To get started with Cake for Visual Studio, simply install the extension from the &lt;a href="https://visualstudiogallery.msdn.microsoft.com/57a658df-3577-440a-93e5-9f2734d80686"&gt;Visual Studio Gallery&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As always we welcome your contributions and feedback and you can find the extension &lt;a href="https://github.com/cake-build/cake-vs"&gt;on GitHub&lt;/a&gt; as well.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;My name is Alistair Chapman and I'm an ALM consultant and occasional .NET developer from Brisbane, Australia who started working on Cake in 2016 and coincidentally hasn't been bored ever since. You can find me on &lt;a href="https://github.com/agc93"&gt;GitHub&lt;/a&gt; and &lt;a href="https://twitter.com/agc93"&gt;Twitter&lt;/a&gt; as agc93, or check out &lt;a href="http://blog.agchapman.com"&gt;my blog&lt;/a&gt;.&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;I am very proud to announce the first release of the Cake for Visual Studio extension for Visual Studio 2015. This extension brings full syntax highlighting, integration with the Task Runner Explorer, special commands to get you started with Cake on new projects and new templates.&lt;/p&gt;</summary>
 	</entry>
 </feed>
