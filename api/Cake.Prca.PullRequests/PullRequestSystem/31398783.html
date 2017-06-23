@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - LogFileFormat.ReadIssues(ReportCodeAnalysisIssuesToPullRequestSettings, MsBuildIssuesSettings) Method</title>
+        <title>Cake - API - PullRequestSystem.Initialize(ReportIssuesToPullRequestSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -134,18 +134,28 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Prca.Issues.MsBuild.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.MsBuild<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Prca.dll">Cake<wbr>.Prca<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Prca.Issues.MsBuild">Cake<wbr>.Prca<wbr>.Issues<wbr>.MsBuild</a></li>
+		<li><a href="/api/Cake.Prca.PullRequests">Cake<wbr>.Prca<wbr>.PullRequests</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat">LogFileFormat</a></li>
+		<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat/FDCF8362">LogFileFormat<wbr>(ICakeLog)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/93772AE9">PullRequestSystem<wbr>(ICakeLog)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat/11247BE8">ReadIssues<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings, <wbr>Ms<wbr>Build<wbr>Issues<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/495D1D3B">Fetch<wbr>Active<wbr>Discussion<wbr>Threads<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/CB78097F">Get<wbr>Modified<wbr>Files<wbr>In<wbr>Pull<wbr>Request<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/0E614F14">Get<wbr>Preferred<wbr>Comment<wbr>Format<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/31398783">Initialize<wbr>(<wbr>Report<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/B531F6DD">Internal<wbr>Fetch<wbr>Active<wbr>Discussion<wbr>Threads<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/482C5CA6">Internal<wbr>Get<wbr>Modified<wbr>Files<wbr>In<wbr>Pull<wbr>Request<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/0FC8BD8A">Internal<wbr>Mark<wbr>Threads<wbr>As<wbr>Fixed<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/E94F7DF5">Internal<wbr>Post<wbr>Discussion<wbr>Threads<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/1A95FE33">MarkThreadsAsFixed<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/76EA3F17">Post<wbr>Discussion<wbr>Threads<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr>, <wbr>string)<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat/685EDF5F">Log</a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/64582440">Log</a></li>
+				<li><a href="/api/Cake.Prca.PullRequests/PullRequestSystem/403A7D02">PrcaSettings</a></li>
 
 
                     </ul>
@@ -159,41 +169,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat">LogFileFormat</a>.</h3>
-	<h1>ReadIssues<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings, <wbr>Ms<wbr>Build<wbr>Issues<wbr>Settings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a>.</h3>
+	<h1>Initialize<wbr>(<wbr>Report<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Prca.Issues.MsBuild" class="alert-link">https://github.com/cake-contrib/Cake.Prca.Issues.MsBuild</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Prca" class="alert-link">https://github.com/cake-contrib/Cake.Prca</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Gets all code analysis issues.
+            Initializes the code analysis provider.
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Prca.Issues.MsBuild.dll">Cake<wbr>.Prca<wbr>.Issues<wbr>.MsBuild<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Prca.dll">Cake<wbr>.Prca<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Prca.Issues.MsBuild">Cake<wbr>.Prca<wbr>.Issues<wbr>.MsBuild</a></dd>
+						<dd><a href="/api/Cake.Prca.PullRequests">Cake<wbr>.Prca<wbr>.PullRequests</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Prca.Issues.MsBuild/LogFileFormat">LogFileFormat</a></dd>		
+						<dd><a href="/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public abstract IEnumerable&lt;ICodeAnalysisIssue&gt; ReadIssues(ReportCodeAnalysisIssuesToPullRequestSettings prcaSettings, MsBuildIssuesSettings settings)</code></pre>
+	<pre><code>public virtual bool Initialize(ReportIssuesToPullRequestSettings settings)</code></pre>
 
 
 
@@ -211,14 +221,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>prcaSettings</td>
-						<td><a href="/api/Cake.Prca/ReportCodeAnalysisIssuesToPullRequestSettings">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings</a></td>
-						<td>General settings to use.</td>
-					</tr>
-					<tr>
 						<td>settings</td>
-						<td><a href="/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesSettings">Ms<wbr>Build<wbr>Issues<wbr>Settings</a></td>
-						<td>Settings for code analysis provider to use.</td>
+						<td><a href="/api/Cake.Prca/ReportIssuesToPullRequestSettings">Report<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings</a></td>
+						<td>General settings</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -235,8 +240,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
-					<td>List of code analysis issues</td>
+					<td>bool</td>
+					<td><code class="cs">true</code> if the initialization was successful, <code class="cs">false</code> otherwise.</td>
 				</tr>
 			</tbody></table>
 		</div>
