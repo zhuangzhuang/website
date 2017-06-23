@@ -4,7 +4,7 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-06-23T12:42:56Z</updated>
+	<updated>2017-06-23T17:28:13Z</updated>
 	<entry>
 		<author>
 			<name>gep13</name>
@@ -20,6 +20,7 @@
 &lt;p&gt;&lt;img src="https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png" class="img-fluid" alt="Offical Cake Contrib Icon" title="Official Cake Contrib Icon" /&gt;&lt;/p&gt;
 &lt;p&gt;Going forward, we will be encouraging all Cake Community Maintainers to use this icon whenever they are creating addins, modules, extensions, etc for Cake.  If you want to grab the icon, you can find various formats and sizes in the Cake Contrib &lt;a href="https://github.com/cake-contrib/graphics"&gt;graphics repository&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Please do let us know what you think about the new icon, or if you have any questions.&lt;/p&gt;
+&lt;p&gt;We are very grateful to &lt;a href="https://twitter.com/spoike"&gt;Mikael Brassman&lt;/a&gt; for creating the icon for us.&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Towards the end of 2016, the Cake Team had an internal discussion about the newly created &lt;a href="http://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contrib Organisation&lt;/a&gt;.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.&lt;/p&gt;</summary>
 	</entry>
