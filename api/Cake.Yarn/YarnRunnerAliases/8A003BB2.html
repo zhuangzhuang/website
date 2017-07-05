@@ -209,6 +209,13 @@
 {
     Yarn.Install();
 });</code></pre>
+            <p>Run 'yarn pack'</p>
+            <p>Cake task:</p>
+            <pre><code class="cs">Task("Yarn-Pack")
+    .Does(() =&gt;
+{
+    Yarn.Pack();
+});</code></pre>
             <p>Run 'yarn add gulp'</p>
             <p>Cake task:</p>
             <pre><code class="cs">Task("Yarn-Add-Gulp")

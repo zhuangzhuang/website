@@ -223,13 +223,13 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -239,20 +239,20 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["TaskTeardownContext"]
-	click Implementing0 "/api/Cake.Core/TaskTeardownContext"
-	Type-.-&gt;Implementing1["CakeContext"]
-	click Implementing1 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing2["ITaskTeardownContext"]
-	click Implementing2 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing3["TaskSetupContext"]
-	click Implementing3 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing4["TeardownContext"]
-	click Implementing4 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing0["TaskSetupContext"]
+	click Implementing0 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing1["ITaskTeardownContext"]
+	click Implementing1 "/api/Cake.Core/ITaskTeardownContext"
+	Type-.-&gt;Implementing2["TeardownContext"]
+	click Implementing2 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing3["ITaskSetupContext"]
+	click Implementing3 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing4["TaskTeardownContext"]
+	click Implementing4 "/api/Cake.Core/TaskTeardownContext"
 	Type-.-&gt;Implementing5["ITeardownContext"]
 	click Implementing5 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing6["ITaskSetupContext"]
-	click Implementing6 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing6["CakeContext"]
+	click Implementing6 "/api/Cake.Core/CakeContext"
 
 						</div>
 					</div>
@@ -2296,16 +2296,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2313,6 +2303,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
