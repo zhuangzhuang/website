@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - HttpSettingsExtensions.EnsureSuccessStatusCode(HttpSettings) Method</title>
+        <title>Cake - API - IYarnRunnerCommands.Pack(Action&lt;YarnPackSettings&gt;) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -134,29 +134,17 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Http.dll">Cake<wbr>.Http<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Yarn.dll">Cake<wbr>.Yarn<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Http">Cake<wbr>.Http</a></li>
+		<li><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Http/HttpSettingsExtensions">Http<wbr>Settings<wbr>Extensions</a></li>
+		<li><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/C59C33BC">AppendCookie<wbr>(HttpSettings, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/C25DEC00">AppendHeader<wbr>(HttpSettings, <wbr>string, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Http/HttpSettingsExtensions/93939D4E">Ensure<wbr>Success<wbr>Status<wbr>Code<wbr>(HttpSettings)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/3D5E4E56">SetAccept<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/354ABA83">SetAcceptLanguage<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/F7A831F3">SetAuthorization<wbr>(HttpSettings, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/9AC2047F">SetContentType<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/4DB0B17E">Set<wbr>Form<wbr>Url<wbr>Encoded<wbr>Request<wbr>Body<wbr>(HttpSettings, <wbr>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/1EA7FCA0">Set<wbr>Form<wbr>Url<wbr>Encoded<wbr>Request<wbr>Body<wbr>(HttpSettings, <wbr>IEnumerable<wbr>&lt;KeyValuePair<wbr>&lt;string, <wbr>string&gt;<wbr>&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/BB78F759">SetJsonRequestBody<wbr>&lt;T&gt;<wbr><wbr>(HttpSettings, <wbr>T, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/C615D0AD">SetNoCache<wbr>(HttpSettings)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/4D65ECC0">SetOrigin<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/DB0B343F">SetReferer<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/2FF5024F">SetRequestBody<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/27BEAC8E">Use<wbr>Basic<wbr>Authorization<wbr>(HttpSettings, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Http/HttpSettingsExtensions/D0792405">Use<wbr>Bearer<wbr>Authorization<wbr>(HttpSettings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/A5770A47">Add<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Add<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/899D5668">Install<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Install<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Yarn/IYarnRunnerCommands/94E45A37">Pack<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Pack<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/7A19F6DC">RunScript<wbr>(string, <wbr>Action<wbr>&lt;<wbr>Yarn<wbr>Run<wbr>Settings&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -170,41 +158,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Http/HttpSettingsExtensions">Http<wbr>Settings<wbr>Extensions</a>.</h3>
-	<h1>Ensure<wbr>Success<wbr>Status<wbr>Code<wbr>(HttpSettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a>.</h3>
+	<h1>Pack<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Pack<wbr>Settings&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Http" class="alert-link">https://github.com/cake-contrib/Cake.Http</a>.
+                        <a href="https://github.com/MilovanovM/cake-yarn" class="alert-link">https://github.com/MilovanovM/cake-yarn</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Sets the EnsureSuccessStatusCode to true. This makes the httpclient throw an error if it does not return a 200 range status.
+            execute 'yarn pack' with options
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Http.dll">Cake<wbr>.Http<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Yarn.dll">Cake<wbr>.Yarn<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Http">Cake<wbr>.Http</a></dd>
+						<dd><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Http/HttpSettingsExtensions">Http<wbr>Settings<wbr>Extensions</a></dd>		
+						<dd><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static HttpSettings EnsureSuccessStatusCode(this HttpSettings settings)</code></pre>
+	<pre><code>IYarnRunnerCommands Pack(Action&lt;YarnPackSettings&gt; packSettings = null)</code></pre>
 
 
 
@@ -222,9 +210,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.Http/HttpSettings">HttpSettings</a></td>
-						<td>The settings.</td>
+						<td>packSettings</td>
+						<td>Action<wbr>&lt;<wbr>Yarn<wbr>Pack<wbr>Settings&gt;<wbr></td>
+						<td>options when running 'yarn pack'</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -241,8 +229,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.Http/HttpSettings">HttpSettings</a></td>
-					<td>The same <code class="cs"><a href="/api/Cake.Http/HttpSettings">HttpSettings</a></code> instance so that multiple calls can be chained.</td>
+					<td><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

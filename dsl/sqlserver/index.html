@@ -184,6 +184,7 @@
     <li><a href="/dsl/figlet">Figlet</a></li>        
     <li><a href="/dsl/file-helpers">File Helpers</a></li>        
     <li><a href="/dsl/file-operations">File Operations</a></li>        
+    <li><a href="/dsl/fileset">FileSet</a></li>        
     <li><a href="/dsl/fluentmigrator">FluentMigrator</a></li>        
     <li><a href="/dsl/ftp">FTP</a></li>        
     <li><a href="/dsl/gem">Gem</a></li>        
@@ -194,6 +195,7 @@
     <li><a href="/dsl/guard">Guard</a></li>        
     <li><a href="/dsl/hipchat">HipChat</a></li>        
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
+    <li><a href="/dsl/hosts">Hosts</a></li>        
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
     <li><a href="/dsl/jmeter">JMeter</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
@@ -221,6 +223,7 @@
     <li><a href="/dsl/services">Services</a></li>        
     <li><a href="/dsl/signing">Signing</a></li>        
     <li><a href="/dsl/sonar">Sonar</a></li>        
+    <li><a href="/dsl/sonarscanner">SonarScanner</a></li>        
     <li><a href="/dsl/sqlpackage">SqlPackage</a></li>        
     <li class="selected"><a href="/dsl/sqlserver">SqlServer</a></li>        
     <li><a href="/dsl/sqltools">SqlTools</a></li>        
@@ -274,7 +277,15 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality to restore SQL Server backup files *.bak
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
             </div>
 
 
