@@ -198,9 +198,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfContextSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Context<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdateSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScriptSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Script<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAddSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Add<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScriptSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Script<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdateSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Update<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -214,12 +214,12 @@
 class Type type-node
 	Type--&gt;Derived0["DotNetCoreEfContextSettings"]
 	click Derived0 "/api/Cake.DotNetCoreEf/DotNetCoreEfContextSettings"
-	Type--&gt;Derived1["DotNetCoreEfDatabaseUpdateSettings"]
-	click Derived1 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdateSettings"
+	Type--&gt;Derived1["DotNetCoreEfMigrationAddSettings"]
+	click Derived1 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAddSettings"
 	Type--&gt;Derived2["DotNetCoreEfMigrationScriptSettings"]
 	click Derived2 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScriptSettings"
-	Type--&gt;Derived3["DotNetCoreEfMigrationAddSettings"]
-	click Derived3 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAddSettings"
+	Type--&gt;Derived3["DotNetCoreEfDatabaseUpdateSettings"]
+	click Derived3 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdateSettings"
 
 						</div>
 					</div>
@@ -381,16 +381,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -398,6 +388,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
