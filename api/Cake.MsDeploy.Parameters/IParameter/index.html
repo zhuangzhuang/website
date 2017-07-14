@@ -198,8 +198,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.MsDeploy.Parameters/DeclareParameter">DeclareParameter</a></li>								
 											<li><a href="/api/Cake.MsDeploy.Parameters/SetParameter">SetParameter</a></li>								
+											<li><a href="/api/Cake.MsDeploy.Parameters/DeclareParameter">DeclareParameter</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -211,10 +211,10 @@
 	click Interface0 "/api/Cake.MsDeploy/IMsDeployArgument"
 	Type["IParameter"]
 class Type type-node
-	Type-.-&gt;Implementing0["DeclareParameter"]
-	click Implementing0 "/api/Cake.MsDeploy.Parameters/DeclareParameter"
-	Type-.-&gt;Implementing1["SetParameter"]
-	click Implementing1 "/api/Cake.MsDeploy.Parameters/SetParameter"
+	Type-.-&gt;Implementing0["SetParameter"]
+	click Implementing0 "/api/Cake.MsDeploy.Parameters/SetParameter"
+	Type-.-&gt;Implementing1["DeclareParameter"]
+	click Implementing1 "/api/Cake.MsDeploy.Parameters/DeclareParameter"
 
 						</div>
 					</div>
@@ -318,16 +318,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;IParameter&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;IParameter&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -335,6 +325,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;IParameter&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
