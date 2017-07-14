@@ -198,8 +198,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.VsixSignTool/VsixSignToolVerifySettings">Vsix<wbr>Sign<wbr>Tool<wbr>Verify<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.VsixSignTool/VsixSignToolSignSettings">Vsix<wbr>Sign<wbr>Tool<wbr>Sign<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.VsixSignTool/VsixSignToolVerifySettings">Vsix<wbr>Sign<wbr>Tool<wbr>Verify<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -211,10 +211,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["AutoToolSettings"]
 class Type type-node
-	Type--&gt;Derived0["VsixSignToolVerifySettings"]
-	click Derived0 "/api/Cake.VsixSignTool/VsixSignToolVerifySettings"
-	Type--&gt;Derived1["VsixSignToolSignSettings"]
-	click Derived1 "/api/Cake.VsixSignTool/VsixSignToolSignSettings"
+	Type--&gt;Derived0["VsixSignToolSignSettings"]
+	click Derived0 "/api/Cake.VsixSignTool/VsixSignToolSignSettings"
+	Type--&gt;Derived1["VsixSignToolVerifySettings"]
+	click Derived1 "/api/Cake.VsixSignTool/VsixSignToolVerifySettings"
 
 						</div>
 					</div>
@@ -276,16 +276,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -293,6 +283,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
