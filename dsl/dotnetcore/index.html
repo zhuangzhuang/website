@@ -81,12 +81,16 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Build">Build</a></p>
+<p><a href="#Clean">Clean</a></p>
 <p><a href="#Execute">Execute</a></p>
+<p><a href="#MSBuild">MSBuild</a></p>
+<p><a href="#NuGet">NuGet</a></p>
 <p><a href="#Pack">Pack</a></p>
 <p><a href="#Publish">Publish</a></p>
 <p><a href="#Restore">Restore</a></p>
 <p><a href="#Run">Run</a></p>
 <p><a href="#Test">Test</a></p>
+<p><a href="#Tool">Tool</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -314,6 +318,31 @@
                 </tbody></table>
             </div>
         </div>
+        <h1 id="Clean">Clean</h1>  
+        <div class="box">
+            <div class="box-body no-padding">
+                <table class="table table-striped table-hover two-cols">
+                        <tbody><tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/75949DF3">DotNetCoreClean<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    Cleans a project's output.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/E9691F43">DotNetCoreClean<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Clean<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Cleans a project's output.
+     
+                            </td>
+                        </tr>
+                </tbody></table>
+            </div>
+        </div>
         <h1 id="Execute">Execute</h1>  
         <div class="box">
             <div class="box-body no-padding">
@@ -338,10 +367,132 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/1E1BF146">DotNetCoreExecute<wbr>(ICakeContext, <wbr>FilePath, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>DotNetCoreSettings)<wbr></a>                            </td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/980E2761">DotNetCoreExecute<wbr>(ICakeContext, <wbr>FilePath, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>Dot<wbr>Net<wbr>Core<wbr>Execute<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
      Execute an assembly with arguments in the specific path with settings.
+     
+                            </td>
+                        </tr>
+                </tbody></table>
+            </div>
+        </div>
+        <h1 id="MSBuild">MSBuild</h1>  
+        <div class="box">
+            <div class="box-body no-padding">
+                <table class="table table-striped table-hover two-cols">
+                        <tbody><tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/E4F74647">DotNetCoreMSBuild<wbr>(ICakeContext)<wbr></a>                            </td>
+                            <td>
+                                
+    Builds the specified targets in a project file found in the current working directory.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/B1AC2D04">DotNetCoreMSBuild<wbr>(ICakeContext, <wbr>Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Builds the specified targets in a project file found in the current working directory.
+     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/2A6E31D3">DotNetCoreMSBuild<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    Builds the specified targets in the project file.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/9789CA99">DotNetCoreMSBuild<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Builds the specified targets in the project file.
+     
+                            </td>
+                        </tr>
+                </tbody></table>
+            </div>
+        </div>
+        <h1 id="NuGet">NuGet</h1>  
+        <div class="box">
+            <div class="box-body no-padding">
+                <table class="table table-striped table-hover two-cols">
+                        <tbody><tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/E5078DE9">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(ICakeContext)<wbr></a>                            </td>
+                            <td>
+                                
+    Delete a NuGet Package from a server.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/1406E50B">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(ICakeContext, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Deletes a package from a server using the specified settings.
+     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/9F3B9DD6">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    Deletes a package from the NuGet.org.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/708E2F89">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Deletes a package from a server
+     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/B3548CC4">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    Deletes a specific version of a package from the NuGet.org.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/17C42973">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Deletes a package from a server using the specified settings.
+     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/C02DD80A">DotNetCoreNuGetPush<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    Pushes one or more packages to a server.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/813030CA">DotNetCoreNuGetPush<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Push<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Pushes one or more packages to a server using the specified settings.
      
                             </td>
                         </tr>
@@ -537,6 +688,58 @@
                                 
      Test project with settings.
      
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8FE77742">DotNetCoreVSTest<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Dot<wbr>Net<wbr>Core<wbr>V<wbr>S<wbr>Test<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Test one or more specified projects with settings using the VS Test host runner.
+     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/13D5671C">DotNetCoreVSTest<wbr>(ICakeContext, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    Test one or more projects specified by a path or glob pattern using the VS Test host runner.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8C1A4B59">DotNetCoreVSTest<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>V<wbr>S<wbr>Test<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+     Test one or more projects specified by a path or glob pattern with settings using the VS Test host runner.
+     
+                            </td>
+                        </tr>
+                </tbody></table>
+            </div>
+        </div>
+        <h1 id="Tool">Tool</h1>  
+        <div class="box">
+            <div class="box-body no-padding">
+                <table class="table table-striped table-hover two-cols">
+                        <tbody><tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/0C29BCC5">DotNetCoreTool<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a>                            </td>
+                            <td>
+                                
+    Execute an .NET Core Extensibility Tool.
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/96F6FCAA">DotNetCoreTool<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+    /// Execute an .NET Core Extensibility Tool.
+    
                             </td>
                         </tr>
                 </tbody></table>

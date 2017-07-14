@@ -168,6 +168,9 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li class="selected"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -182,9 +185,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -223,13 +223,13 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -239,20 +239,20 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["TeardownContext"]
-	click Implementing0 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing1["TaskTeardownContext"]
-	click Implementing1 "/api/Cake.Core/TaskTeardownContext"
-	Type-.-&gt;Implementing2["ITaskTeardownContext"]
-	click Implementing2 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing3["CakeContext"]
-	click Implementing3 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing4["ITaskSetupContext"]
-	click Implementing4 "/api/Cake.Core/ITaskSetupContext"
-	Type-.-&gt;Implementing5["ITeardownContext"]
-	click Implementing5 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing6["TaskSetupContext"]
-	click Implementing6 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing0["TaskSetupContext"]
+	click Implementing0 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing1["ITaskTeardownContext"]
+	click Implementing1 "/api/Cake.Core/ITaskTeardownContext"
+	Type-.-&gt;Implementing2["ITaskSetupContext"]
+	click Implementing2 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing3["TaskTeardownContext"]
+	click Implementing3 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing4["TeardownContext"]
+	click Implementing4 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing5["CakeContext"]
+	click Implementing5 "/api/Cake.Core/CakeContext"
+	Type-.-&gt;Implementing6["ITeardownContext"]
+	click Implementing6 "/api/Cake.Core/ITeardownContext"
 
 						</div>
 					</div>
@@ -583,6 +583,26 @@ class Type type-node
 								<td>
 									<div>
     Disables a Chocolatey Source using the specified name and settings
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/CDC6B63D">ChocolateyDownload<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Downloads a Chocolatey package to the current working directory.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases/B134C6A8">ChocolateyDownload<wbr>(string, <wbr>Chocolatey<wbr>Download<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Downloads a Chocolatey package using the specified settings.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
 								</td>
@@ -1229,6 +1249,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/75949DF3">DotNetCoreClean<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Cleans a project's output.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/E9691F43">DotNetCoreClean<wbr>(string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Clean<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Cleans a project's output.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/C7890987">DotNetCoreExecute<wbr>(FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1249,11 +1289,131 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/1E1BF146">DotNetCoreExecute<wbr>(FilePath, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>DotNetCoreSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/980E2761">DotNetCoreExecute<wbr>(FilePath, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>Dot<wbr>Net<wbr>Core<wbr>Execute<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
      Execute an assembly with arguments in the specific path with settings.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/E4F74647">DotNetCoreMSBuild<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Builds the specified targets in a project file found in the current working directory.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/B1AC2D04">DotNetCoreMSBuild<wbr>(<wbr>Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Builds the specified targets in a project file found in the current working directory.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/2A6E31D3">DotNetCoreMSBuild<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Builds the specified targets in the project file.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/9789CA99">DotNetCoreMSBuild<wbr>(string, <wbr>Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Builds the specified targets in the project file.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/E5078DE9">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Delete a NuGet Package from a server.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/1406E50B">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(<wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Deletes a package from a server using the specified settings.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/9F3B9DD6">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes a package from the NuGet.org.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/708E2F89">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Deletes a package from a server
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/B3548CC4">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes a specific version of a package from the NuGet.org.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/17C42973">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>(string, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Delete<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Deletes a package from a server using the specified settings.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/C02DD80A">DotNetCoreNuGetPush<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Pushes one or more packages to a server.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/813030CA">DotNetCoreNuGetPush<wbr>(string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Push<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Pushes one or more packages to a server using the specified settings.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
 								</td>
@@ -1404,6 +1564,56 @@ class Type type-node
 								<td>
 									<div>
      Test project with settings.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/0C29BCC5">DotNetCoreTool<wbr>(FilePath, <wbr>string, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Execute an .NET Core Extensibility Tool.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/96F6FCAA">DotNetCoreTool<wbr>(string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    /// Execute an .NET Core Extensibility Tool.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8FE77742">DotNetCoreVSTest<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Dot<wbr>Net<wbr>Core<wbr>V<wbr>S<wbr>Test<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Test one or more specified projects with settings using the VS Test host runner.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/13D5671C">DotNetCoreVSTest<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Test one or more projects specified by a path or glob pattern using the VS Test host runner.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8C1A4B59">DotNetCoreVSTest<wbr>(string, <wbr>Dot<wbr>Net<wbr>Core<wbr>V<wbr>S<wbr>Test<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+     Test one or more projects specified by a path or glob pattern with settings using the VS Test host runner.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
 								</td>
@@ -2296,16 +2506,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2313,6 +2513,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
