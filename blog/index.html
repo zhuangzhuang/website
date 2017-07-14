@@ -99,6 +99,7 @@
         <li><a href="/blog/release-notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/07">July, 2017</a></li>
         <li><a href="/blog/archive/2017/06">June, 2017</a></li>
         <li><a href="/blog/archive/2017/05">May, 2017</a></li>
         <li><a href="/blog/archive/2017/04">April, 2017</a></li>
@@ -150,6 +151,72 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/07/cake-v0.21.0-released">Cake v0.21.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Friday, July 14, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/release-notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <p>Version 0.21.0 of Cake has been released.</p>
+<p>So, let's be clear, this release will break things - but it is all intentional!</p>
+<p>This release is mostly about bringing the .NET Core aliases up-to-date with .NET Core SDK 1.0.4, which is the latest RTM/stable version.
+The shift to using MSBuild and from <code>project.json</code> to <code>csproj</code> project system has resulted in many breaking changes and additions to the .NET CLI.</p>
+<p>Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version <a href="http://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
+<p>Huge thanks to <a href="https://github.com/JonCubed">Jonathan Kuleff</a>, who has done a brilliant job and epic effort in methodically going through the .NET CLI and Cake aliases identifying what's been changed, removed or added! It's been great working with you through these pull-requests.</p>
+<p><img src="https://user-images.githubusercontent.com/1647294/28214695-9a6aea90-68ab-11e7-810a-6324ccef154e.png" class="img-fluid" alt="image" /></p>
+<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/JonCubed">JonCubed</a></li>
+<li><a href="https://github.com/pascalberger">pascalberger</a></li>
+<li><a href="https://github.com/henningst">henningst</a></li>
+<li><a href="https://github.com/ChrisMaddock">ChrisMaddock</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/ghuntley">ghuntley</a></li>
+<li><a href="https://github.com/phenixdotnet">phenixdotnet</a></li>
+<li><a href="https://github.com/JeremyCade">JeremyCade</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=36&amp;state=closed">20 issues</a> closed.
+.NET Core 1.0 Tooling</p>
+<p><strong>Breaking changes</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1533"><strong>#1533</strong></a> Update DotNetCore Aliases to match tooling 1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1554"><strong>#1554</strong></a> Updated DotNetCoreTest inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1553"><strong>#1553</strong></a> Updated DotNetCorePack inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1552"><strong>#1552</strong></a> Updated DotNetCorePublish inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1551"><strong>#1551</strong></a> Updated DotNetCoreExecute inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1550"><strong>#1550</strong></a> Updated DotNetCoreBuild inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1534"><strong>#1534</strong></a> Updated DotNetCoreRestore inline with Tooling v1.0</li>
+</ul>
+<p><strong>Features</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/pull/1599"><strong>#1599</strong></a> Added support for dotnet msbuild inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/issues/1591"><strong>#1591</strong></a> Add support for choco download</li>
+<li><a href="https://github.com/cake-build/cake/pull/1581"><strong>#1581</strong></a> Added support for dotnet nuget push inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/issues/1577"><strong>#1577</strong></a> .NET Core CLI tools - Surfacing additional commands with a new alias: DotNetCoreTool</li>
+<li><a href="https://github.com/cake-build/cake/pull/1565"><strong>#1565</strong></a> Added support for dotnet nuget delete inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1555"><strong>#1555</strong></a> Added support for <code>dotnet clean</code> inline with Tooling v1.0</li>
+<li><a href="https://github.com/cake-build/cake/pull/1549"><strong>#1549</strong></a> Common changes for DotNetCore Alias</li>
+</ul>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1679"><strong>#1679</strong></a> Cake on dotnet core doesn't load reference dll correctly if referenced from a subdirectory</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/pull/1673"><strong>#1673</strong></a> The xunit.runners package was deprecated</li>
+<li><a href="https://github.com/cake-build/cake/issues/1654"><strong>#1654</strong></a> Broken Documentation link for ReportUnit</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2017/06/new-cake-contrib-icon">New Cake Contrib Icon</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -160,14 +227,7 @@
         <dd><a href="/blog/author/gep13">gep13</a></dd>
 </dl>            <div>
                 <p>Towards the end of 2016, the Cake Team had an internal discussion about the newly created <a href="http://cakebuild.net/blog/2016/08/cake-contribution-organization">Cake Contrib Organisation</a>.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.</p>
-<p>We, the Cake Team, are always startled by our amazing Cake Community.  There is now somewhere in the region of 166 addins/modules for Cake.  152 of those have added the <a href="https://www.nuget.org/profiles/cake-contrib">cake-contrib NuGet user</a> as a co-owner of that package on NuGet.org, and 72 of these packages have opted to move the repository into the <a href="https://github.com/cake-contrib">Cake Contrib Organisation</a> on GitHub.</p>
-<p>To date, when things like Community contributed NuGet packages have been created, one of two things happened.  Either that package wasn't given an icon, and would appear with the default icon in the NuGet Gallery, or the package would use the main Cake icon.  While there is nothing necessarily &quot;wrong&quot; with using the main Cake icon for a package, it does give that package an elevated status in the eyes of some.  i.e. someone might think &quot;ooo, that package has the Cake icon, it must be an official package from the Cake Team&quot;.  While this is sometimes true, in the sense that one of the Core Cake Contributors might own a particular package, this is certainly not normally the case, and the Core Cake Team can't offer support for all these packages.</p>
-<p>To help with this false association, and also as a means to highlight the amazing work that happens by our Cake Community, we are introducing the official Cake Contrib Icon:</p>
-<p><img src="https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png" class="img-fluid" alt="Offical Cake Contrib Icon" title="Official Cake Contrib Icon" /></p>
-<p>Going forward, we will be encouraging all Cake Community Maintainers to use this icon whenever they are creating addins, modules, extensions, etc for Cake.  If you want to grab the icon, you can find various formats and sizes in the Cake Contrib <a href="https://github.com/cake-contrib/graphics">graphics repository</a>.</p>
-<p>Please do let us know what you think about the new icon, or if you have any questions.</p>
-<p>We are very grateful to <a href="https://twitter.com/spoike">Mikael Brassman</a> for creating the icon for us.</p>
-
+                <a href="/blog/2017/06/new-cake-contrib-icon">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/06/cake-v0.20.0-released">Cake v0.20.0 released</a></h2>
@@ -222,24 +282,6 @@ This release also contains a few documentation improvements.</p>
 </dl>            <div>
                 <p>Hi! My name is Martin Björkström and I'm a .NET Developer and father of two from Finland.  I started using Cake in early 2016 and have been making <a href="https://github.com/cake-build/cake/commits?author=mholo65">contributions</a> ever since. So far, the most notable is probably <a href="https://github.com/cake-build/cake/pull/858">debugging support</a>.  As of April, I'm also a member of the Cake Team!</p>
                 <a href="/blog/2017/05/intellisense-and-intro">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/04/cake-0.3.0-vso-released">Cake for Visual Studio Team Services v0.3.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Wednesday, April 19, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/release-notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/agc93">agc93</a></dd>
-</dl>            <div>
-                <p>Version 0.3.0 of Cake for Visual Studio Team Services and Team Foundation Server has been released.</p>
-<p>This release includes support for customising the location where <code>NuGet.exe</code>, as well as Cake and other tools, is retrieved from.</p>
-<p>The updated extension will now be live for VSTS users while TFS users may need to update the extension using the <em>Manage Extensions</em> page on your TFS server.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/04/cake-0.3.0-vso-released">Read more...</a>
             </div>
         <hr />
     <nav>

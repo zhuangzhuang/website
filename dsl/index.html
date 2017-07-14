@@ -331,14 +331,14 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-    Contains extension methods for working with directories.
-    </td>
+            Several extension methods when operating on a Directory.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotcover">DotCover</a></td>
@@ -366,13 +366,19 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -439,10 +445,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -496,7 +500,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -524,8 +528,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -597,7 +601,7 @@
                 <tr>
                     <td><a href="/dsl/reportunit">ReportUnit</a></td>
                     <td>
-    <p>Contains functionality related to <a href="http://relevantcodes.com/reportunit-report-generator/">ReportUnit</a>.</p>
+    <p>Contains functionality related to <a href="http://reportunit.relevantcodes.com/">ReportUnit</a>.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
     install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.ReportUnit/ReportUnitSettings">ReportUnitSettings</a></code> class:
@@ -637,12 +641,11 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
-    <p>
-    In order to use the commands for this alias, SignTool will need to be installed on the machine where
-    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
-    </p>
-    </td>
+            Contains functionality for working with VsixSignTool.
+            
+
+            Aliases for VsixSignTool.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/specflow">SpecFlow</a></td>
@@ -717,7 +720,7 @@
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
     install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.XUnit/XUnitSettings">XUnitSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=xunit.runners&amp;version=1.9.2"</code></pre>
+    <pre><code class="cs">#tool "nuget:?package=xunit.runner.console&amp;version=2.2.0"</code></pre>
     </p>
     </td>
                 </tr>
@@ -755,7 +758,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -803,7 +806,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Elastic Computing instances
+            Amazon Route53 aliases
             </td>
                 </tr>
                 <tr>
@@ -908,8 +911,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -961,25 +964,20 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            <p>
-            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
-            <p>
-            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
-            </p>    
-            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
+            Cake AddIn to upload files using WinSCP.
+            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-    Contains extension methods for working with directories.
-    </td>
+            Several extension methods when operating on a Directory.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to building websites using 
-            <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1007,12 +1005,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1035,8 +1028,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1054,7 +1047,13 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -1107,7 +1106,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            The result of GitterProvider Chat API post
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
@@ -1160,10 +1159,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/jmeter">JMeter</a></td>
@@ -1196,7 +1193,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -1223,8 +1220,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1284,8 +1281,8 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to writing code analysis issues to Team Foundation Server or
-            Visual Studio Team Services pull requests.
+            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
+            pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1326,7 +1323,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains functionality related to SendGrid API
             </td>
                 </tr>
                 <tr>
@@ -1338,12 +1335,11 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
-    <p>
-    In order to use the commands for this alias, SignTool will need to be installed on the machine where
-    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
-    </p>
-    </td>
+            Contains functionality for working with VsixSignTool.
+            
+
+            Aliases for VsixSignTool.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sonar">Sonar</a></td>
@@ -1372,15 +1368,8 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
+            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
+            create and restore DACPAC files
             </td>
                 </tr>
                 <tr>
@@ -1404,8 +1393,11 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
-            you can provide the StrongNameToolSettings with ForceVerification set to true.
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
+            strong name or not.
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
             </td>
                 </tr>
                 <tr>

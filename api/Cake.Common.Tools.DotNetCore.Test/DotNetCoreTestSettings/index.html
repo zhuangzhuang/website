@@ -236,21 +236,31 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/B4393ECA">BuildBasePath</a></td>
-								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
-								<td>
-									<div>
-    Gets or sets the directory in which to place temporary outputs.
-    </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/45211C43">Configuration</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the configuration under which to build.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/B30BDF93">DiagnosticFile</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets or sets a file to write diagnostic messages to.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/FA98C16E">DiagnosticOutput</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to not enable diagnostic output.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -264,11 +274,29 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/70031B9D">Filter</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets or sets the filter expression to filter out tests in the current project.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/95EB1BDD">Framework</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets specific framework to compile.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/9E4FA17A">Logger</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets or sets a logger for test results
     </div>
 								</td>
 							</tr>
@@ -291,11 +319,20 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/C2CE47E6">Runtime</a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/2F4ACB57">Settings</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
 								<td>
 									<div>
-    Gets or sets the target runtime.
+    Gets or sets the settings file to use when running tests.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTestSettings/F3FAF1BB">TestAdapterPath</a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Gets or sets the path to use for the custom test adapter in the test run.
     </div>
 								</td>
 							</tr>
@@ -320,11 +357,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/330A1321">Verbose</a></td>
-								<td>bool</td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/CC33F73E">Verbosity</a></td>
+								<td>DotNetCoreVerbosity?</td>
 								<td>
 									<div>
-    Gets or sets a value indicating whether to not enable verbose output.
+    Gets or sets the verbosity of logging to use.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></em></small></div>
 								</td>
@@ -368,16 +405,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -385,6 +412,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

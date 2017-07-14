@@ -136,8 +136,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.Restore</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreVerbosity">Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Verbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer">DotNetCoreRestorer</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings">Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Settings</a></li>
@@ -247,6 +245,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/FA98C16E">DiagnosticOutput</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to not enable diagnostic output.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/F7D1EF2D">DisableParallel</a></td>
 								<td>bool</td>
 								<td>
@@ -266,24 +274,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/584FEDC6">FallbackSources</a></td>
-								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
-								<td>
-									<div>
-    Gets or sets the list of packages sources to use as a fallback.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/EFD0A956">ForceEnglishOutput</a></td>
-								<td>bool</td>
-								<td>
-									<div>
-    Gets or sets a value indicating whether to force the application to run using an invariant, English-based culture.
-    </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/FDD52C8F">IgnoreFailedSources</a></td>
 								<td>bool</td>
 								<td>
@@ -293,11 +283,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/11EE0519">InferRuntimes</a></td>
-								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/ADBA2A4C">MSBuildSettings</a></td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Settings</a></td>
 								<td>
 									<div>
-    Gets or sets a temporary option to allow NuGet to infer RIDs for legacy repositories.
+    Gets or sets additional arguments to be passed to MSBuild.
     </div>
 								</td>
 							</tr>
@@ -311,6 +301,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/8EE50579">NoDependencies</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to ignore project to project references and restore only the root project.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/864830C6">PackagesDirectory</a></td>
 								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
 								<td>
@@ -320,11 +319,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/D4BD7F76">Quiet</a></td>
-								<td>bool</td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/C3ED4583">Runtime</a></td>
+								<td>string</td>
 								<td>
 									<div>
-    Gets or sets a value indicating whether to display any output.
+    Gets or sets the target runtime to restore packages for.
     </div>
 								</td>
 							</tr>
@@ -358,22 +357,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/330A1321">Verbose</a></td>
-								<td>bool</td>
-								<td>
-									<div>
-    Gets or sets a value indicating whether to not enable verbose output.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/EBA5057F">Verbosity</a></td>
-								<td>Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Verbosity?</td>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/CC33F73E">Verbosity</a></td>
+								<td>DotNetCoreVerbosity?</td>
 								<td>
 									<div>
     Gets or sets the verbosity of logging to use.
     </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -415,16 +405,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -432,6 +412,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Core<wbr>Restore<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

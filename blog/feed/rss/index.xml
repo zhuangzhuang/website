@@ -5,8 +5,81 @@
 		<link>http://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Fri, 14 Jul 2017 10:31:29 GMT</pubDate>
-		<lastBuildDate>Fri, 14 Jul 2017 10:31:29 GMT</lastBuildDate>
+		<pubDate>Fri, 14 Jul 2017 15:46:03 GMT</pubDate>
+		<lastBuildDate>Fri, 14 Jul 2017 15:46:03 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.21.0 released</title>
+			<link>http://cakebuild.net/blog/2017/07/cake-v0.21.0-released</link>
+			<description>&lt;p&gt;Version 0.21.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;So, let's be clear, this release will break things - but it is all intentional!&lt;/p&gt;
+&lt;p&gt;This release is mostly about bringing the .NET Core aliases up-to-date with .NET Core SDK 1.0.4, which is the latest RTM/stable version.
+The shift to using MSBuild and from &lt;code&gt;project.json&lt;/code&gt; to &lt;code&gt;csproj&lt;/code&gt; project system has resulted in many breaking changes and additions to the .NET CLI.&lt;/p&gt;
+&lt;p&gt;Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version &lt;a href="http://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Huge thanks to &lt;a href="https://github.com/JonCubed"&gt;Jonathan Kuleff&lt;/a&gt;, who has done a brilliant job and epic effort in methodically going through the .NET CLI and Cake aliases identifying what's been changed, removed or added! It's been great working with you through these pull-requests.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://user-images.githubusercontent.com/1647294/28214695-9a6aea90-68ab-11e7-810a-6324ccef154e.png" class="img-fluid" alt="image"&gt;&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>http://cakebuild.net/blog/2017/07/cake-v0.21.0-released</guid>
+			<pubDate>Fri, 14 Jul 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Version 0.21.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;So, let's be clear, this release will break things - but it is all intentional!&lt;/p&gt;
+&lt;p&gt;This release is mostly about bringing the .NET Core aliases up-to-date with .NET Core SDK 1.0.4, which is the latest RTM/stable version.
+The shift to using MSBuild and from &lt;code&gt;project.json&lt;/code&gt; to &lt;code&gt;csproj&lt;/code&gt; project system has resulted in many breaking changes and additions to the .NET CLI.&lt;/p&gt;
+&lt;p&gt;Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version &lt;a href="http://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Huge thanks to &lt;a href="https://github.com/JonCubed"&gt;Jonathan Kuleff&lt;/a&gt;, who has done a brilliant job and epic effort in methodically going through the .NET CLI and Cake aliases identifying what's been changed, removed or added! It's been great working with you through these pull-requests.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://user-images.githubusercontent.com/1647294/28214695-9a6aea90-68ab-11e7-810a-6324ccef154e.png" class="img-fluid" alt="image" /&gt;&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/JonCubed"&gt;JonCubed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/henningst"&gt;henningst&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ChrisMaddock"&gt;ChrisMaddock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ghuntley"&gt;ghuntley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/phenixdotnet"&gt;phenixdotnet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/JeremyCade"&gt;JeremyCade&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=36&amp;amp;state=closed"&gt;20 issues&lt;/a&gt; closed.
+.NET Core 1.0 Tooling&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1533"&gt;&lt;strong&gt;#1533&lt;/strong&gt;&lt;/a&gt; Update DotNetCore Aliases to match tooling 1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1554"&gt;&lt;strong&gt;#1554&lt;/strong&gt;&lt;/a&gt; Updated DotNetCoreTest inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1553"&gt;&lt;strong&gt;#1553&lt;/strong&gt;&lt;/a&gt; Updated DotNetCorePack inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1552"&gt;&lt;strong&gt;#1552&lt;/strong&gt;&lt;/a&gt; Updated DotNetCorePublish inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1551"&gt;&lt;strong&gt;#1551&lt;/strong&gt;&lt;/a&gt; Updated DotNetCoreExecute inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1550"&gt;&lt;strong&gt;#1550&lt;/strong&gt;&lt;/a&gt; Updated DotNetCoreBuild inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1534"&gt;&lt;strong&gt;#1534&lt;/strong&gt;&lt;/a&gt; Updated DotNetCoreRestore inline with Tooling v1.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1599"&gt;&lt;strong&gt;#1599&lt;/strong&gt;&lt;/a&gt; Added support for dotnet msbuild inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1591"&gt;&lt;strong&gt;#1591&lt;/strong&gt;&lt;/a&gt; Add support for choco download&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1581"&gt;&lt;strong&gt;#1581&lt;/strong&gt;&lt;/a&gt; Added support for dotnet nuget push inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1577"&gt;&lt;strong&gt;#1577&lt;/strong&gt;&lt;/a&gt; .NET Core CLI tools - Surfacing additional commands with a new alias: DotNetCoreTool&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1565"&gt;&lt;strong&gt;#1565&lt;/strong&gt;&lt;/a&gt; Added support for dotnet nuget delete inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1555"&gt;&lt;strong&gt;#1555&lt;/strong&gt;&lt;/a&gt; Added support for &lt;code&gt;dotnet clean&lt;/code&gt; inline with Tooling v1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1549"&gt;&lt;strong&gt;#1549&lt;/strong&gt;&lt;/a&gt; Common changes for DotNetCore Alias&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1679"&gt;&lt;strong&gt;#1679&lt;/strong&gt;&lt;/a&gt; Cake on dotnet core doesn't load reference dll correctly if referenced from a subdirectory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1673"&gt;&lt;strong&gt;#1673&lt;/strong&gt;&lt;/a&gt; The xunit.runners package was deprecated&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1654"&gt;&lt;strong&gt;#1654&lt;/strong&gt;&lt;/a&gt; Broken Documentation link for ReportUnit&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>New Cake Contrib Icon</title>
 			<link>http://cakebuild.net/blog/2017/06/new-cake-contrib-icon</link>
@@ -1103,75 +1176,6 @@ Task("SendEmail")
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1247"&gt;&lt;strong&gt;#1247&lt;/strong&gt;&lt;/a&gt; Fixed CakeExecuteScript getting access denied errors on mono/mac&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>
-		</item>
-		<item>
-			<title>How to debug a Cake file using Visual Studio Code</title>
-			<link>http://cakebuild.net/blog/2016/09/debug-cake-vscode</link>
-			<description>&lt;p&gt;As you might already know, debugging Cake scripts using Visual Studio has been supported since the v0.12.0 release of Cake. But since the v0.16.1 release of Cake, thanks to &lt;a href="https://github.com/cake-build/cake/issues/1015"&gt;porting Cake to .NET Core&lt;/a&gt;, it is now also possible to debug Cake files using Visual Studio Code.&lt;/p&gt;</description>
-			<author>mholo65</author>
-			<guid>http://cakebuild.net/blog/2016/09/debug-cake-vscode</guid>
-			<pubDate>Tue, 27 Sep 2016 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;As you might already know, debugging Cake scripts using Visual Studio has been supported since the v0.12.0 release of Cake. But since the v0.16.1 release of Cake, thanks to &lt;a href="https://github.com/cake-build/cake/issues/1015"&gt;porting Cake to .NET Core&lt;/a&gt;, it is now also possible to debug Cake files using Visual Studio Code.&lt;/p&gt;
-&lt;h3 id="what-does-this-mean"&gt;What does this mean?&lt;/h3&gt;
-&lt;p&gt;This means that while creating/modifying your Cake build script, you can use Visual Studio Code to step into the Cake file and get full debug support regardless of which operating system you are running (Windows / Linux / Mac).&lt;/p&gt;
-&lt;h3 id="how-does-this-work"&gt;How does this work?&lt;/h3&gt;
-&lt;p&gt;In order to enable debugging of a Cake file using Visual Studio Code, follow these steps:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Install &lt;a href="https://www.nuget.org/packages/Cake.CoreCLR"&gt;Cake.CoreCLR&lt;/a&gt; NuGet package to your &lt;code&gt;tools&lt;/code&gt; folder&lt;/li&gt;
-&lt;li&gt;Install &lt;a href="https://marketplace.visualstudio.com/items?itemName=cake-build.cake-vscode"&gt;Cake Extension&lt;/a&gt; for Visual Studio Code&lt;/li&gt;
-&lt;li&gt;Set up .NET Core debugger in Visual Studio Code. See &lt;a href="http://aka.ms/vscclrdebugger"&gt;http://aka.ms/vscclrdebugger&lt;/a&gt; for details&lt;/li&gt;
-&lt;li&gt;Open the directory containing your Cake files in Visual Studio Code&lt;/li&gt;
-&lt;li&gt;Create file &lt;code&gt;.vscode/launch.json&lt;/code&gt; and add the following content (assuming your Cake file is &lt;code&gt;build.cake&lt;/code&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code class="language-json"&gt;{
-        &amp;quot;version&amp;quot;: &amp;quot;0.2.0&amp;quot;,
-        &amp;quot;configurations&amp;quot;: [
-            {
-                &amp;quot;name&amp;quot;: &amp;quot;.NET Core Launch (console)&amp;quot;,
-                &amp;quot;type&amp;quot;: &amp;quot;coreclr&amp;quot;,
-                &amp;quot;request&amp;quot;: &amp;quot;launch&amp;quot;,
-                &amp;quot;program&amp;quot;: &amp;quot;${workspaceRoot}/tools/Cake.CoreCLR/Cake.dll&amp;quot;,
-                &amp;quot;args&amp;quot;: [
-                    &amp;quot;${workspaceRoot}/build.cake&amp;quot;,
-                    &amp;quot;--debug&amp;quot;,
-                    &amp;quot;--verbosity=diagnostic&amp;quot;
-                ],
-                &amp;quot;cwd&amp;quot;: &amp;quot;${workspaceRoot}&amp;quot;,
-                &amp;quot;stopAtEntry&amp;quot;: true,
-                &amp;quot;externalConsole&amp;quot;: false
-            }
-        ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Open your Cake file and add a breakpoint by hitting &lt;code&gt;F9&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Hit &lt;code&gt;F5&lt;/code&gt; to start debugging
-&lt;br/&gt;&lt;img src="/assets/img/debugging-cake-file-vscode/debugging.png" class="img-fluid" alt="Debugging" /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="alternative-approach"&gt;Alternative Approach&lt;/h3&gt;
-&lt;p&gt;Another way to enable debugging of a Cake script is to start Cake from the commandline and then attach the debugger from within Visual Studio Code. This can be done using the following steps:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add the following &lt;code&gt;configuration&lt;/code&gt; to the &lt;code&gt;.vscode/launch.json&lt;/code&gt; file that you created in the previous steps&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code class="language-json"&gt;{
-        &amp;quot;name&amp;quot;: &amp;quot;.NET Core Attach&amp;quot;,
-        &amp;quot;type&amp;quot;: &amp;quot;coreclr&amp;quot;,
-        &amp;quot;request&amp;quot;: &amp;quot;attach&amp;quot;,
-        &amp;quot;processId&amp;quot;: &amp;quot;${command.pickProcess}&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Open your Cake file and add a breakpoint by hitting &lt;code&gt;F9&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Select the &lt;code&gt;configuration&lt;/code&gt; you added in the previous step
-&lt;br/&gt;&lt;img src="/assets/img/debugging-cake-file-vscode/select_config.png" class="img-fluid" alt="Select config" /&gt;&lt;/li&gt;
-&lt;li&gt;Open terminal and run
-&lt;br/&gt;&lt;pre&gt;&lt;code class="bash"&gt;dotnet tools/Cake.CoreCLR/Cake.dll build.cake --debug&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;Hit &lt;code&gt;F5&lt;/code&gt; and select the process from the drop-down list
-&lt;br/&gt;&lt;img src="/assets/img/debugging-cake-file-vscode/select_process.png" class="img-fluid" alt="Select process" /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="example-code"&gt;Example Code&lt;/h3&gt;
-&lt;p&gt;A working example can be found &lt;a href="https://github.com/mholo65/cake-vscode-debug-example"&gt;here&lt;/a&gt;&lt;/p&gt;
 </content:encoded>
 		</item>
 	</channel>
