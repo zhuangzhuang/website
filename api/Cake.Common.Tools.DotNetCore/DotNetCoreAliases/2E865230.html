@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - DotNetCoreAliases.DotNetCoreTool(ICakeContext, string, string) Method</title>
+        <title>Cake - API - DotNetCoreAliases.DotNetCoreTool(ICakeContext, FilePath, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -175,8 +175,9 @@
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/C9C3270F">DotNetCoreTest<wbr>(ICakeContext)<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/DD3913B1">DotNetCoreTest<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8191BBC4">DotNetCoreTest<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Test<wbr>Settings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/96F6FCAA">DotNetCoreTool<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/2E865230">DotNetCoreTool<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/0C29BCC5">DotNetCoreTool<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/F55DA2CB">DotNetCoreTool<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>Dot<wbr>Net<wbr>Core<wbr>Tool<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/13D5671C">DotNetCoreVSTest<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8C1A4B59">DotNetCoreVSTest<wbr>(ICakeContext, <wbr>string, <wbr>Dot<wbr>Net<wbr>Core<wbr>V<wbr>S<wbr>Test<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/8FE77742">DotNetCoreVSTest<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Dot<wbr>Net<wbr>Core<wbr>V<wbr>S<wbr>Test<wbr>Settings)<wbr></a></li>
@@ -194,7 +195,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a>.</h3>
-	<h1>DotNetCoreTool<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>DotNetCoreTool<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
@@ -222,7 +223,7 @@
 	<pre><code>[CakeMethodAlias]
 [CakeAliasCategory("Tool")]
 [CakeNamespaceImport("Cake.Common.Tools.DotNetCore.Tool")]
-public static void DotNetCoreTool(this ICakeContext context, string project, string command)</code></pre>
+public static void DotNetCoreTool(this ICakeContext context, FilePath projectPath, string command)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
@@ -282,9 +283,9 @@ public static void DotNetCoreTool(this ICakeContext context, string project, str
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>project</td>
-						<td>string</td>
-						<td>The projects path.</td>
+						<td>projectPath</td>
+						<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+						<td>The project path.</td>
 					</tr>
 					<tr>
 						<td>command</td>
