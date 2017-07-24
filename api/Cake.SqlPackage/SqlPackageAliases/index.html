@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -142,20 +143,12 @@
 				<li><a href="/api/Cake.SqlPackage/SqlPackageAction">SqlPackageAction</a></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.SqlPackage/SqlPackageAliases">SqlPackageAliases</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportRunner">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportSettings">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageDriftReportRunner">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageDriftReportSettings">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageExportRunner">Sql<wbr>Package<wbr>Export<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageExportSettings">Sql<wbr>Package<wbr>Export<wbr>Settings</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageExtractRunner">Sql<wbr>Package<wbr>Extract<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageExtractSettings">Sql<wbr>Package<wbr>Extract<wbr>Settings</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageImportRunner">Sql<wbr>Package<wbr>Import<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageImportSettings">Sql<wbr>Package<wbr>Import<wbr>Settings</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackagePublishRunner">Sql<wbr>Package<wbr>Publish<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackagePublishSettings">Sql<wbr>Package<wbr>Publish<wbr>Settings</a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageRunner_1">SqlPackageRunner<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageScriptRunner">Sql<wbr>Package<wbr>Script<wbr>Runner</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageScriptSettings">Sql<wbr>Package<wbr>Script<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></li>
 
@@ -182,7 +175,15 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>Contains functionality related to <a href="https://msdn.microsoft.com/library/hh550080(vs.103).aspx">SqlPackage</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and reference from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.SqlPackage</code></pre>
+            <p></p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -262,7 +263,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/B2721B91">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an XML report of the changes that would be made by a publish action.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -270,7 +273,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/E6DA991B">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Creates an XML report of the changes that would be made by a publish action.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -278,7 +283,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/C08BBB24">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an XML report of the changes that have been made to a registered database since it was last registered.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -286,7 +293,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/2ED8CB34">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Creates an XML report of the changes that have been made to a registered database since it was last registered.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -294,7 +303,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/5837798F">SqlPackageExport<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Export<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Exports a live database to a BACPAC package (.bacpac file).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -302,7 +313,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/9348092E">SqlPackageExport<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Export<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Exports a live database to a BACPAC package (.bacpac file).
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -310,7 +323,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/1D638FDD">SqlPackageExtract<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Extract<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates a database snapshot (.dacpac) file from SQL Server.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -318,7 +333,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/68C64844">SqlPackageExtract<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Extract<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Creates a database snapshot (.dacpac) file from SQL Server.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -326,7 +343,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/7CE6E1CB">SqlPackageImport<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Import<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Imports the schema and table data from a BACPAC package into a new user database
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -334,7 +353,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/A0662841">SqlPackageImport<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Import<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Imports the schema and table data from a BACPAC package into a new user database
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -342,7 +363,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/656D1104">SqlPackagePublish<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Publish<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Incrementally updates a database schema to match the schema of a source .dacpac file.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -350,7 +373,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/F4677560">SqlPackagePublish<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Publish<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+             Incrementally updates a database schema to match the schema of a source .dacpac file.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -358,7 +383,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/E44698E9">SqlPackageScript<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Script<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -366,7 +393,9 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAliases/E8C3AF27">SqlPackageScript<wbr>(ICakeContext, <wbr>Sql<wbr>Package<wbr>Script<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
