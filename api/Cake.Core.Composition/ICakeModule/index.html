@@ -181,9 +181,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.NuGet/NuGetModule">NuGetModule</a></li>								
 											<li><a href="/api/Cake.Common.Modules/CommonModule">CommonModule</a></li>								
 											<li><a href="/api/Cake.Core.Modules/CoreModule">CoreModule</a></li>								
-											<li><a href="/api/Cake.NuGet/NuGetModule">NuGetModule</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -193,12 +193,12 @@
 							graph TD
 	Type["ICakeModule"]
 class Type type-node
-	Type-.-&gt;Implementing0["CommonModule"]
-	click Implementing0 "/api/Cake.Common.Modules/CommonModule"
-	Type-.-&gt;Implementing1["CoreModule"]
-	click Implementing1 "/api/Cake.Core.Modules/CoreModule"
-	Type-.-&gt;Implementing2["NuGetModule"]
-	click Implementing2 "/api/Cake.NuGet/NuGetModule"
+	Type-.-&gt;Implementing0["NuGetModule"]
+	click Implementing0 "/api/Cake.NuGet/NuGetModule"
+	Type-.-&gt;Implementing1["CommonModule"]
+	click Implementing1 "/api/Cake.Common.Modules/CommonModule"
+	Type-.-&gt;Implementing2["CoreModule"]
+	click Implementing2 "/api/Cake.Core.Modules/CoreModule"
 
 						</div>
 					</div>
@@ -263,6 +263,16 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;ICakeModule&gt;<wbr><wbr>(ICakeModule[])<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the source is contained in a list
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

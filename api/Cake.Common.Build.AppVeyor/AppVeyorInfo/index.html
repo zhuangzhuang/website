@@ -191,14 +191,14 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo">AppVeyorBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorTagInfo">AppVeyorTagInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorCommitInfo">AppVeyorCommitInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo">App<wbr>Veyor<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo">App<wbr>Veyor<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo">AppVeyorBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TeamCity.Data/TeamCityEnvironmentInfo">Team<wbr>City<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo">App<wbr>Veyor<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo">App<wbr>Veyor<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo">AppVeyorProjectInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -210,22 +210,22 @@
 	Base0["object"]--&gt;Type
 	Type["AppVeyorInfo"]
 class Type type-node
-	Type--&gt;Derived0["AppVeyorPullRequestInfo"]
-	click Derived0 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo"
+	Type--&gt;Derived0["AppVeyorBuildInfo"]
+	click Derived0 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo"
 	Type--&gt;Derived1["AppVeyorTagInfo"]
 	click Derived1 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorTagInfo"
 	Type--&gt;Derived2["AppVeyorCommitInfo"]
 	click Derived2 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorCommitInfo"
-	Type--&gt;Derived3["AppVeyorEnvironmentInfo"]
-	click Derived3 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo"
+	Type--&gt;Derived3["TeamCityEnvironmentInfo"]
+	click Derived3 "/api/Cake.Common.Build.TeamCity.Data/TeamCityEnvironmentInfo"
 	Type--&gt;Derived4["AppVeyorRepositoryInfo"]
 	click Derived4 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo"
-	Type--&gt;Derived5["AppVeyorBuildInfo"]
-	click Derived5 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo"
-	Type--&gt;Derived6["TeamCityEnvironmentInfo"]
-	click Derived6 "/api/Cake.Common.Build.TeamCity.Data/TeamCityEnvironmentInfo"
-	Type--&gt;Derived7["AppVeyorProjectInfo"]
-	click Derived7 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo"
+	Type--&gt;Derived5["AppVeyorEnvironmentInfo"]
+	click Derived5 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo"
+	Type--&gt;Derived6["AppVeyorProjectInfo"]
+	click Derived6 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo"
+	Type--&gt;Derived7["AppVeyorPullRequestInfo"]
+	click Derived7 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo"
 
 						</div>
 					</div>
@@ -328,6 +328,16 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;AppVeyorInfo&gt;<wbr><wbr>(AppVeyorInfo[])<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the source is contained in a list
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

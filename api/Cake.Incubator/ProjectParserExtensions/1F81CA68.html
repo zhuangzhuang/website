@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SqlPackageDeployReportRunner.SqlPackageDeployReportRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IToolLocator) Constructor</title>
+        <title>Cake - API - ProjectParserExtensions.IsWebApplication(CustomProjectParserResult) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -133,16 +135,21 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.SqlPackage.dll">Cake<wbr>.SqlPackage<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></li>
+		<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportRunner">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Runner</a></li>
+		<li><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li class="selected"><a href="/api/Cake.SqlPackage/SqlPackageDeployReportRunner/6EB10252">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportRunner/941E6816">DeployReport<wbr>(<wbr>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/D730FDAA">GetAssemblyFilePath<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/E4D53944">GetExtension<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/24DACD2D">IsLibrary<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/15402E06">IsType<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result, <wbr>ProjectType)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Incubator/ProjectParserExtensions/1F81CA68">IsWebApplication<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/B44346EE">ParseProject<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/D483A019">ParseProject<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/ProjectParserExtensions/39D454B0">ParseProject<wbr>(IFile, <wbr>string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -156,38 +163,48 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.SqlPackage/SqlPackageDeployReportRunner">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Runner</a>.</h3>
-	<h1>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr> <small>Constructor</small></h1>
+			<h3><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a>.</h3>
+	<h1>IsWebApplication<wbr>(<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/RLittlesII/Cake.SqlPackage" class="alert-link">https://github.com/RLittlesII/Cake.SqlPackage</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Incubator" class="alert-link">https://github.com/cake-contrib/Cake.Incubator</a>.
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Checks if the project is a web application.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.SqlPackage.dll">Cake<wbr>.SqlPackage<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></dd>
+						<dd><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.SqlPackage/SqlPackageDeployReportRunner">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Runner</a></dd>		
+						<dd><a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public SqlPackageDeployReportRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)</code></pre>
+	<pre><code>public static bool IsWebApplication(this CustomProjectParserResult projectParserResult)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Check if a parsed project is a web application
+            <pre><code class="cs">CustomParseProjectResult project = ParseProject(new FilePath("test.csproj"), "Release");
+if (project.IsWebApplication()) { ... }</code></pre>
+            </div>
 
 
 
@@ -204,24 +221,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>fileSystem</td>
-						<td>IFileSystem</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>environment</td>
-						<td>ICakeEnvironment</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>processRunner</td>
-						<td>IProcessRunner</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>tools</td>
-						<td>IToolLocator</td>
-						<td></td>
+						<td>projectParserResult</td>
+						<td><a href="/api/Cake.Incubator/CustomProjectParserResult">Custom<wbr>Project<wbr>Parser<wbr>Result</a></td>
+						<td>the parsed project</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -238,8 +240,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>bool</td>
+					<td>true if the project is a web application</td>
 				</tr>
 			</tbody></table>
 		</div>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SqlPackageScriptRunner.SqlPackageScriptRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IToolLocator) Constructor</title>
+        <title>Cake - API - EnumerableExtensions.IsIn&lt;T&gt;(T, T[]) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -133,16 +135,19 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.SqlPackage.dll">Cake<wbr>.SqlPackage<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></li>
+		<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.SqlPackage/SqlPackageScriptRunner">Sql<wbr>Package<wbr>Script<wbr>Runner</a></li>
+		<li><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li class="selected"><a href="/api/Cake.SqlPackage/SqlPackageScriptRunner/52A9364A">Sql<wbr>Package<wbr>Script<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.SqlPackage/SqlPackageScriptRunner/F8A85F6E">Script<wbr>(<wbr>Sql<wbr>Package<wbr>Script<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/EnumerableExtensions/4F0C32C4">Distinct<wbr>&lt;TSource, <wbr>TKey&gt;<wbr><wbr>(IEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TKey&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/EnumerableExtensions/EFDEDF72">Each<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;T&gt;<wbr>, <wbr>Action<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>T[])<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/EnumerableExtensions/DAAC3AB2">IsNullOrEmpty<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/EnumerableExtensions/570E9DB5">IsNullOrEmpty<wbr>&lt;T&gt;<wbr><wbr>(IList<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Incubator/EnumerableExtensions/A83C10B8">IsNullOrEmpty<wbr>&lt;T&gt;<wbr><wbr>(T[])<wbr></a></li>
 
 
                     </ul>
@@ -156,41 +161,62 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.SqlPackage/SqlPackageScriptRunner">Sql<wbr>Package<wbr>Script<wbr>Runner</a>.</h3>
-	<h1>Sql<wbr>Package<wbr>Script<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr> <small>Constructor</small></h1>
+			<h3><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a>.</h3>
+	<h1>IsIn<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>T[])<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/RLittlesII/Cake.SqlPackage" class="alert-link">https://github.com/RLittlesII/Cake.SqlPackage</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Incubator" class="alert-link">https://github.com/cake-contrib/Cake.Incubator</a>.
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Checks if the source is contained in a list
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.SqlPackage.dll">Cake<wbr>.SqlPackage<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></dd>
+						<dd><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.SqlPackage/SqlPackageScriptRunner">Sql<wbr>Package<wbr>Script<wbr>Runner</a></dd>		
+						<dd><a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public SqlPackageScriptRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)</code></pre>
+	<pre><code>public static bool IsIn&lt;T&gt;(this T source, params T[] list)</code></pre>
 
 
 
 
+	<h1 id="TypeParameters">Type Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr id="typeparam-T">
+						<td>T</td>
+						<td>The source and list type</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 	<h1 id="Parameters">Parameters</h1>
 	<div class="box">
@@ -204,24 +230,14 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>fileSystem</td>
-						<td>IFileSystem</td>
-						<td></td>
+						<td>source</td>
+						<td>T</td>
+						<td>The source item</td>
 					</tr>
 					<tr>
-						<td>environment</td>
-						<td>ICakeEnvironment</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>processRunner</td>
-						<td>IProcessRunner</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>tools</td>
-						<td>IToolLocator</td>
-						<td></td>
+						<td>list</td>
+						<td>T[]</td>
+						<td>The list of items to check</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -238,8 +254,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>bool</td>
+					<td>True if found, false if not</td>
 				</tr>
 			</tbody></table>
 		</div>

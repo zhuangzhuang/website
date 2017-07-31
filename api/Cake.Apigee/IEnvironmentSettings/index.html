@@ -204,8 +204,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apigee/DeleteKeyValueMapSettings">Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/ListKeyValueMapsSettings">List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/DeleteKeyValueMapSettings">Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/CreateKeyValueMapSettings">Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
 									</ul>
 								</dd>				
@@ -218,10 +218,10 @@
 	click Interface0 "/api/Cake.Apigee/ICredentialSettings"
 	Type["IEnvironmentSettings"]
 class Type type-node
-	Type-.-&gt;Implementing0["DeleteKeyValueMapSettings"]
-	click Implementing0 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
-	Type-.-&gt;Implementing1["ListKeyValueMapsSettings"]
-	click Implementing1 "/api/Cake.Apigee/ListKeyValueMapsSettings"
+	Type-.-&gt;Implementing0["ListKeyValueMapsSettings"]
+	click Implementing0 "/api/Cake.Apigee/ListKeyValueMapsSettings"
+	Type-.-&gt;Implementing1["DeleteKeyValueMapSettings"]
+	click Implementing1 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
 	Type-.-&gt;Implementing2["CreateKeyValueMapSettings"]
 	click Implementing2 "/api/Cake.Apigee/CreateKeyValueMapSettings"
 
@@ -286,6 +286,16 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>I<wbr>Environment<wbr>Settings&gt;<wbr><wbr>(<wbr>I<wbr>Environment<wbr>Settings[])<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the source is contained in a list
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
