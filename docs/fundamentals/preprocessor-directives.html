@@ -244,11 +244,13 @@ or
 <p>The tool directive installs external command-line tools using NuGet.</p>
 <h2 id="usage-3">Usage</h2>
 <p>The directive takes a single package URI parameter
-Right now, only NuGet packages are supported.</p>
+Right now, only NuGet packages are supported.
+Specify the <code>include</code> parameter if the executable does not end with .exe</p>
 <pre><code class="language-csharp">#tool nuget:?package=Cake.Foo
 #tool nuget:?package=Cake.Foo&amp;version=1.2.3
 #tool nuget:?package=Cake.Foo&amp;prerelease
 #tool nuget:https://myget.org/f/Cake/?package=Cake.Foo&amp;prerelease
+#tool nuget:?package=Cake.Foo&amp;include=path/to/foo.cmd
 </code></pre>
 <h1 id="shebang-directive">Shebang directive</h1>
 <p>Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead, passing to it as an argument the path that was initially used when attempting to run the script.</p>
