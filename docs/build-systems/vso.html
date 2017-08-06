@@ -217,7 +217,7 @@ build script to execute, what build target to run, the amount of logging
 (verbosity) and additional arguments sent to the build script.</p>
 <p>By default, the Cake build step (when added to a build) will try to run the <code>build.cake</code> build script (found in the root of your repository) with the target <code>Default</code>. If you wish to run another build script or build target you can change this in the build step settings.</p>
 <p><img src="https://raw.githubusercontent.com/cake-build/cake-vso/develop/Images/configurebuildstep.png" class="img-fluid" alt="Add build step"></p>
-<p>For those who are already using Cake making use of the <a href="http://cakebuild.net/docs/tutorials/setting-up-a-new-project">Bootstrapper file</a>, this is not called when using the VSO task.
+<p>For those who are already using Cake making use of the <a href="https://cakebuild.net/docs/tutorials/setting-up-a-new-project">Bootstrapper file</a>, this is not called when using the VSO task.
 To use the bootstrapper file you should add a "PowerShell" or "Shell Script" task instead.</p>
 <h2 id="notes-about-variables">Notes about Variables</h2>
 <p>Environment Variables which are marked secret in VSTS, cannot be resolved using <code>EnvironmentVariable()</code> in a Cake script. Instead they can be passed as arguments to the build script. You can read more about this limitation in the <a href="https://www.visualstudio.com/en-us/docs/build/define/variables#SecretVariables">Visual Studio documentation under the Secret Variables section</a>.</p>
@@ -231,7 +231,7 @@ An error occurred when executing task 'RestorePackages'.<br>
 Error: NuGet: Process returned an error (exit code 1).</p>
 </blockquote>
 <h1 id="download-the-bootstrapperfile">1. Download the Bootstrapperfile</h1>
-<p>To download the file go to the <a href="http://cakebuild.net/docs/tutorials/setting-up-a-new-project">Setting up a new project</a> page and download the bootstrapper file for your platform.</p>
+<p>To download the file go to the <a href="https://cakebuild.net/docs/tutorials/setting-up-a-new-project">Setting up a new project</a> page and download the bootstrapper file for your platform.</p>
 <h1 id="pin-nuget-to-at-least-v4.0.0">2. Pin NuGet to at least v4.0.0</h1>
 <p>To pin the version you have to edit the build.ps1 file. This is necessary because the current Hosted VS2017 agent has several versions installed and without pinning it, the wrong version will be resolved.
 Probably with the following Error:</p>
