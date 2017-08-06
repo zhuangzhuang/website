@@ -136,12 +136,12 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Packaging">Cake<wbr>.Core<wbr>.Packaging</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Packaging/PackageType">PackageType</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a></li>
 			<li class="header">Interface Types</li>
 				<li class="selected"><a href="/api/Cake.Core.Packaging/IPackageInstaller">IPackageInstaller</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Packaging/PackageType">PackageType</a></li>
 
 
                     </ul>
@@ -180,8 +180,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.NuGet/NuGetPackageInstaller">Nu<wbr>Get<wbr>Package<wbr>Installer</a></li>								
 											<li><a href="/api/Cake.NuGet/INuGetPackageInstaller">I<wbr>Nu<wbr>Get<wbr>Package<wbr>Installer</a></li>								
+											<li><a href="/api/Cake.NuGet/NuGetPackageInstaller">Nu<wbr>Get<wbr>Package<wbr>Installer</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -191,10 +191,10 @@
 							graph TD
 	Type["IPackageInstaller"]
 class Type type-node
-	Type-.-&gt;Implementing0["NuGetPackageInstaller"]
-	click Implementing0 "/api/Cake.NuGet/NuGetPackageInstaller"
-	Type-.-&gt;Implementing1["INuGetPackageInstaller"]
-	click Implementing1 "/api/Cake.NuGet/INuGetPackageInstaller"
+	Type-.-&gt;Implementing0["INuGetPackageInstaller"]
+	click Implementing0 "/api/Cake.NuGet/INuGetPackageInstaller"
+	Type-.-&gt;Implementing1["NuGetPackageInstaller"]
+	click Implementing1 "/api/Cake.NuGet/NuGetPackageInstaller"
 
 						</div>
 					</div>
@@ -281,16 +281,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Package<wbr>Installer&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Package<wbr>Installer&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -298,6 +288,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Package<wbr>Installer&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
