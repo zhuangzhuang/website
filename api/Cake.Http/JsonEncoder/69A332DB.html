@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SonarEndSettings.Password Property</title>
+        <title>Cake - API - JsonEncoder.SerializeObject(object, bool) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,10 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Value">Value</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -134,21 +133,25 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Http.dll">Cake<wbr>.Http<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></li>
+		<li><a href="/api/Cake.Http">Cake<wbr>.Http</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></li>
+		<li><a href="/api/Cake.Http/JsonEncoder">JsonEncoder</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Sonar/SonarEndSettings/28BEB710">SonarEndSettings<wbr>()<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Sonar/SonarSettings/D735B354">AppendArguments<wbr>(object, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ICakeEnvironment)<wbr></a></li>
-				<li><a href="/api/Cake.Sonar/SonarEndSettings/668D6D35">GetArguments<wbr>(ICakeEnvironment)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/0C701687">DeserializeObject<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/A97D27DE">DeserializeObject<wbr>(string, <wbr>Type, <wbr>I<wbr>Json<wbr>Serializer<wbr>Strategy)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/90B04C51">DeserializeObject<wbr>(string, <wbr>Type)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/719DB69C">DeserializeObject<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>I<wbr>Json<wbr>Serializer<wbr>Strategy)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/EF6722CE">DeserializeObject<wbr>&lt;T&gt;<wbr><wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/0DF94FB8">Escape<wbr>To<wbr>Javascript<wbr>String<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/830A50A5">SerializeObject<wbr>(object, <wbr>I<wbr>Json<wbr>Serializer<wbr>Strategy)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Http/JsonEncoder/69A332DB">SerializeObject<wbr>(object, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/A8CC16BE">TryDeserializeObject<wbr>(string, <wbr>object)<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Sonar/SonarEndSettings/C8A683DF">Login</a></li>
-				<li class="selected"><a href="/api/Cake.Sonar/SonarEndSettings/6A6D611C">Password</a></li>
-				<li><a href="/api/Cake.Sonar/SonarSettings/65A4D996">Silent</a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/1B31A19B">Current<wbr>Json<wbr>Serializer<wbr>Strategy</a></li>
+				<li><a href="/api/Cake.Http/JsonEncoder/160A0297">Poco<wbr>Json<wbr>Serializer<wbr>Strategy</a></li>
 
 
                     </ul>
@@ -162,64 +165,68 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a>.</h3>
-	<h1>Password <small>Property</small></h1>
+			<h3><a href="/api/Cake.Http/JsonEncoder">JsonEncoder</a>.</h3>
+	<h1>SerializeObject<wbr>(object, <wbr>bool)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/AgileArchitect/Cake.Sonar" class="alert-link">https://github.com/AgileArchitect/Cake.Sonar</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Http" class="alert-link">https://github.com/cake-contrib/Cake.Http</a>.
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Password to use for connecting to sonar.
-            </div>
-
+	
 		<div class="panel panel-default">
-  			<div class="panel-body">
+  			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Sonar.dll">Cake<wbr>.Sonar<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Http.dll">Cake<wbr>.Http<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Sonar">Cake<wbr>.Sonar</a></dd>
+						<dd><a href="/api/Cake.Http">Cake<wbr>.Http</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Sonar/SonarEndSettings">SonarEndSettings</a></dd>		
+						<dd><a href="/api/Cake.Http/JsonEncoder">JsonEncoder</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public string Password { get; set; }</code></pre>
+	<pre><code>public static string SerializeObject(object json, bool indentOutput = true)</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
+
+
+	<h1 id="Parameters">Parameters</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
+			<table class="table table-striped table-hover three-cols">
 				<thead>
 					<tr>
+						<th>Name</th>
 						<th>Type</th>
 						<th>Description</th>
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td><a href="/api/Cake.Sonar.Attributes/SecretArgumentAttribute">Secret<wbr>Argument<wbr>Attribute</a></td>
+						<td>json</td>
+						<td>object</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>indentOutput</td>
+						<td>bool</td>
 						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
 	</div>	
 
-
-	<h1 id="Value">Value</h1>
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
