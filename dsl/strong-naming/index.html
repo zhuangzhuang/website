@@ -180,6 +180,7 @@
     <li><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></li>        
     <li><a href="/dsl/email">Email</a></li>        
     <li><a href="/dsl/ember">Ember</a></li>        
+    <li><a href="/dsl/endpoint">Endpoint</a></li>        
     <li><a href="/dsl/entityframework">EntityFramework</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
     <li><a href="/dsl/figlet">Figlet</a></li>        
@@ -279,8 +280,11 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
-            you can provide the StrongNameToolSettings with ForceVerification set to true.
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
+            strong name or not.
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
             </div>
 
 
