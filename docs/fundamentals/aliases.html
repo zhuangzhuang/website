@@ -221,7 +221,7 @@ public static class MyCakeExtension
     }
 
     [CakeMethodAlias]
-    public static int GetMagicNumberOrDefault(this <a href="/api/Cake.Core/ICakeContext">ICakeContext</a> context, bool value, Func<int> defaultValueProvider = null)
+    public static int GetMagicNumberOrDefault(this <a href="/api/Cake.Core/ICakeContext">ICakeContext</a> context, bool value, Func&lt;int&gt; defaultValueProvider = null)
     {
         if (value)
         {
@@ -237,7 +237,7 @@ public static class MyCakeExtension
         return 42;
     }
 }
-</int></code></pre>
+</code></pre>
 <h3 id="importing-namespaces">Importing Namespaces</h3>
 <p>Your script alias may need to import one or more namespaces into your Cake script.  Cake supports the automatic import of namespaces with attributes.</p>
 <p>The <a href="/api/Cake.Core.Annotations/CakeNamespaceImportAttribute">CakeNamespaceImportAttribute</a> can be applied at the method, class, or assembly level, or any combination thereof.</p>
