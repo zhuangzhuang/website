@@ -4,7 +4,37 @@
 	<id>http://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-08-25T19:03:35Z</updated>
+	<updated>2017-08-26T06:33:01Z</updated>
+	<entry>
+		<author>
+			<name>gep13</name>
+		</author>
+		<link href="http://cakebuild.net/blog/2017/08/http-to-https" />
+		<id>http://cakebuild.net/blog/2017/08/http-to-https</id>
+		<title>HTTP to HTTPS</title>
+		<updated>2017-08-25T00:00:00Z</updated>
+		<content>&lt;p&gt;As some of you may have noticed, the &lt;a href="https://www.cakebuild.net/"&gt;Cake Website&lt;/a&gt; has changed to use an SSL Certificate.  This is something that has been &lt;a href="https://github.com/cake-build/website/issues/40"&gt;on our cards for a while&lt;/a&gt;, it is just something that we never got around to.&lt;/p&gt;
+&lt;h2 id="history"&gt;History&lt;/h2&gt;
+&lt;p&gt;Originally, we thought that we would purchase our own SSL Certificate, however, we never got around to it.  Then, after joining the .NET Foundation, we had the chance to have them purchase the certificate for us, but again, we never got around to it.  However, after some discussion, we decided to use &lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt; to sit in front on our site, which means that we get an SSL certificate, as well as caching, for free.  We like free.&lt;/p&gt;
+&lt;h2 id="what-does-this-mean"&gt;What does this mean?&lt;/h2&gt;
+&lt;p&gt;For the most part, the switch to HTTPS doesn't mean anything, and your normal everyday use of the website should not change.  We have put in place HTTP 301 redirects, so any attempt to access a non-HTTPS link directed at the site should redirect you through to the HTTPS version.  You can see that in action if you try to access this URL &lt;a href="http://www.cakebuild.net/"&gt;http://www.cakebuild.net/&lt;/a&gt; you should end up at the HTTPS version.&lt;/p&gt;
+&lt;p&gt;There is one area where HTTPS is important though, and that is when it comes to accessing the bootstrappers, config file, and packages.config file, which are downloaded either through our IDE integrations, or from the documentation on the website.  These are files that we, the Cake Team provide to you, and as a result, we want to make sure that these files haven't been tampered with.  Using HTTPS on the site ensures that this happens, and prevents the chance of a man in the middle attack, which could, in theory, tamper with those files.&lt;/p&gt;
+&lt;p&gt;All the documentation on the website has been updated to use the HTTPS URLs, as well as all IDE integrations, i.e:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual Studio&lt;/li&gt;
+&lt;li&gt;Visual Studio Code&lt;/li&gt;
+&lt;li&gt;Yeoman Generators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;have also all been updated to use the new HTTPS URLs for these files.&lt;/p&gt;
+&lt;p&gt;To be clear, these are files that we strongly recommended that you download and check into your source control repository.  Therefore, downloading of these files should be a one time thing for each project that you set up.  Without the SSL certificate in place, there was a very real chance that the downloaded files could have been tampered with.  There is an element of due diligence expected when downloading arbitrary scripts from the internet, i.e. you wouldn't just download and run a script from &lt;code&gt;i-am-a-hacker.net&lt;/code&gt;.  Having verified the downloaded files, you can commit them to your source control repository.  With the older version of the bootstrappers in your source control repository, they would still be downloading the packages.config (if required, i.e. not committed into your source control repository) from a non-HTTPS URL on each build.  As a result, again, on each build there was a chance that a malicious user could tamper with the downloaded file.  To be clear, this is not a file that is executed, but rather placed on your file system, and packages are restored from that file using NuGet.  As a result, in theory, you could have had packages restored onto your server/computer that you would not have expected to be there.  I think you will all agree that this is a minimal risk situation.&lt;/p&gt;
+&lt;p&gt;Going forward, none of the things that have been described above should be a problem.  The introduction of the SSL Certificate means that all future downloads from the Cake Website will be exactly what is expected.&lt;/p&gt;
+&lt;h2 id="what-do-i-need-to-do"&gt;What do I need to do?&lt;/h2&gt;
+&lt;p&gt;If you have already committed both the bootstrapper and the packages.config file into your repository, then &lt;em&gt;technically&lt;/em&gt; there is nothing that you need to do.  Since both artifacts exist in your repository, no additional downloads happen from the Cake Website, so you don't need to do anything immediately.  In the longer term, we would recommend that you pull the latest default bootstrapper(s) and commit them into your source control repository.&lt;/p&gt;
+&lt;p&gt;If you don't, for whatever reason, have the packages.config committed into your source control repository, then there is one thing that you need to do, and that is to refresh the bootstrapper(s).  This can be easily done fetching the latest bootstrapper(s) using the instructions &lt;a href="https://www.cakebuild.net/docs/tutorials/setting-up-a-new-project"&gt;here&lt;/a&gt;.  With this change made, simply commit the changes back into your source control repository, and you are good to go.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you have customised your bootstrapper(s), and you don't simply want to override it with the new default one(s), you can see the changes that were made to the default bootstrapper(s) in this &lt;a href="https://github.com/cake-build/resources/commit/2ed021f5cfef2d1106b0caf6c801633bbfb58cc0"&gt;commit&lt;/a&gt;.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;As some of you may have noticed, the &lt;a href="https://www.cakebuild.net/"&gt;Cake Website&lt;/a&gt; has changed to use an SSL Certificate.  This is something that has been &lt;a href="https://github.com/cake-build/website/issues/40"&gt;on our cards for a while&lt;/a&gt;, it is just something that we never got around to.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>RLittlesII</name>
@@ -1013,118 +1043,5 @@ It's truly amazing and humbling feeling that so many have found and appreciate t
 &lt;p&gt;My name is Alistair Chapman and I'm an InfoSec engineer and occasional .NET developer from Brisbane, Australia who started working on Cake in 2016 and coincidentally hasn't been bored ever since. You can find me on &lt;a href="https://github.com/agc93"&gt;GitHub&lt;/a&gt; and &lt;a href="https://twitter.com/agc93"&gt;Twitter&lt;/a&gt; as agc93, or check out &lt;a href="http://blog.agchapman.com"&gt;my blog&lt;/a&gt;.&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;We released the Cake for Visual Studio extension back in September and have been thrilled with the response from the whole community. There's been plenty of activity over &lt;a href="https://github.com/cake-build/cake-vs"&gt;on the GitHub repo&lt;/a&gt; with new issues, bug reports, features and even PRs. Now, you can get the benefits of all the brand new features as they arrive, right in Visual Studio.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>gep13</name>
-		</author>
-		<link href="http://cakebuild.net/blog/2016/11/cake-v0.17.0-released" />
-		<id>http://cakebuild.net/blog/2016/11/cake-v0.17.0-released</id>
-		<title>Cake v0.17.0 released</title>
-		<updated>2016-11-09T00:00:00Z</updated>
-		<content>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Version 0.17.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there was a breaking change.&lt;/p&gt;
-&lt;p&gt;This breaking change centred around the &lt;code&gt;&lt;a href="/api/Cake.Common.Tools.VSTest/VSTestSettings"&gt;VSTestSettings&lt;/a&gt;&lt;/code&gt; class, where the decision was wait to allow custom loggers to be passed into the &lt;code&gt;&lt;a href="/api/Cake.Common.Tools.VSTest/VSTestRunner"&gt;VSTestRunner&lt;/a&gt;&lt;/code&gt;.  As a result, the previous enumeration named &lt;code&gt;VSTestLogger&lt;/code&gt; has been removed, and replaced with a fully customizable string.  If you are using this enumeration in your scripts then you will see errors being generated if you update to the latest version of Cake.  You should be able to make use of the new extension methods called &lt;code&gt;WithVisualStudioLogger&lt;/code&gt; and &lt;code&gt;WithAppVeyorLogger&lt;/code&gt; on the &lt;code&gt;&lt;a href="/api/Cake.Common.Tools.VSTest/VSTestSettings"&gt;VSTestSettings&lt;/a&gt;&lt;/code&gt; to replace the enumeration values.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/enkafan"&gt;enkafan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/asbjornu"&gt;asbjornu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/stevensona"&gt;stevensona&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/jnm2"&gt;jnm2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Zack Harris&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cpx86"&gt;cpx86&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/daveaglick"&gt;daveaglick&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/RehanSaeed"&gt;RehanSaeed&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/tpodolak"&gt;tpodolak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/vip32"&gt;vip32&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/antwilliams"&gt;antwilliams&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/CaptainCow95"&gt;CaptainCow95&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/trailmax"&gt;trailmax&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/frozenskys"&gt;frozenskys&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/agc93"&gt;agc93&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/bradtwurst"&gt;bradtwurst&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/phillipsj"&gt;phillipsj&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/Jericho"&gt;Jericho&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/thomaslevesque"&gt;thomaslevesque&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/Giorgi"&gt;Giorgi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/Rookian"&gt;Rookian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/maddin2016"&gt;maddin2016&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/MohsenAra"&gt;MohsenAra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/stffabi"&gt;stffabi&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;p&gt;&lt;strong&gt;Breaking change&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1138"&gt;&lt;strong&gt;#1138&lt;/strong&gt;&lt;/a&gt; Allow custom loggers in the VSTestSettings&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1311"&gt;&lt;strong&gt;#1311&lt;/strong&gt;&lt;/a&gt; Add support for InnoSetup&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1281"&gt;&lt;strong&gt;#1281&lt;/strong&gt;&lt;/a&gt; Add a "Prepend" extension for the ProcessArgumentBuilder&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1280"&gt;&lt;strong&gt;#1280&lt;/strong&gt;&lt;/a&gt; Add Support for the Go.CD build provider&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1274"&gt;&lt;strong&gt;#1274&lt;/strong&gt;&lt;/a&gt; Add GitLab CI build system support&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1250"&gt;&lt;strong&gt;#1250&lt;/strong&gt;&lt;/a&gt; Add VSTS build system support&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1241"&gt;&lt;strong&gt;#1241&lt;/strong&gt;&lt;/a&gt; Wait for AppVeyor process to exit&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1172"&gt;&lt;strong&gt;#1172&lt;/strong&gt;&lt;/a&gt; Add Ability to Redirect Standard Error on IProcess&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1142"&gt;&lt;strong&gt;#1142&lt;/strong&gt;&lt;/a&gt; Add option to keep the autogenerated NuSpec file&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/991"&gt;&lt;strong&gt;#991&lt;/strong&gt;&lt;/a&gt; IsDependentOn with CakeTaskBuilder parameter&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/899"&gt;&lt;strong&gt;#899&lt;/strong&gt;&lt;/a&gt; CopyFiles doesn't respect source directory structure&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/724"&gt;&lt;strong&gt;#724&lt;/strong&gt;&lt;/a&gt; Add DotCover Report&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/472"&gt;&lt;strong&gt;#472&lt;/strong&gt;&lt;/a&gt; Support OctoPack&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/260"&gt;&lt;strong&gt;#260&lt;/strong&gt;&lt;/a&gt; Add support for moving directories&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bugs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1332"&gt;&lt;strong&gt;#1332&lt;/strong&gt;&lt;/a&gt; Typo in VSTestSettings extension method name&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1323"&gt;&lt;strong&gt;#1323&lt;/strong&gt;&lt;/a&gt; Globber exception when using a path with an exclamation&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1319"&gt;&lt;strong&gt;#1319&lt;/strong&gt;&lt;/a&gt; Error: An item with the same key has already been added while running Cake from commit hooks&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1314"&gt;&lt;strong&gt;#1314&lt;/strong&gt;&lt;/a&gt; System time separator is used when Octo DeployAt argument is converted to string&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1271"&gt;&lt;strong&gt;#1271&lt;/strong&gt;&lt;/a&gt; Unquoted VSTest settings file path&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1245"&gt;&lt;strong&gt;#1245&lt;/strong&gt;&lt;/a&gt; Globber exception when glob contains %&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1231"&gt;&lt;strong&gt;#1231&lt;/strong&gt;&lt;/a&gt; GetEntryAssembly can return null, leading to NullReferenceException&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1154"&gt;&lt;strong&gt;#1154&lt;/strong&gt;&lt;/a&gt; NuGetPack fails if no Files have been specified&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Improvements&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1324"&gt;&lt;strong&gt;#1324&lt;/strong&gt;&lt;/a&gt; Add support fort Specifying Dependencies for Multi Target package&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1318"&gt;&lt;strong&gt;#1318&lt;/strong&gt;&lt;/a&gt; Support DefaultCredentials usage for Http Downloads&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1312"&gt;&lt;strong&gt;#1312&lt;/strong&gt;&lt;/a&gt; Add additional parameters to MSBuild runner&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1296"&gt;&lt;strong&gt;#1296&lt;/strong&gt;&lt;/a&gt; Add Go.CD build history API call&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1292"&gt;&lt;strong&gt;#1292&lt;/strong&gt;&lt;/a&gt; Some properties for RoundhouseSettings in Cake.Common.Tools.Roundhouse are not working properly&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1289"&gt;&lt;strong&gt;#1289&lt;/strong&gt;&lt;/a&gt; Add user agent for DownloadFile&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1287"&gt;&lt;strong&gt;#1287&lt;/strong&gt;&lt;/a&gt; Guard against invalid path environment variables&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1279"&gt;&lt;strong&gt;#1279&lt;/strong&gt;&lt;/a&gt; Adding all current parameters for VSTest&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1251"&gt;&lt;strong&gt;#1251&lt;/strong&gt;&lt;/a&gt; OctoCreateRelease is missing channel option&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1228"&gt;&lt;strong&gt;#1228&lt;/strong&gt;&lt;/a&gt; Option to deploy an existing release in OctopusDeploy&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1160"&gt;&lt;strong&gt;#1160&lt;/strong&gt;&lt;/a&gt; Get return code from intercepted process in SpecFlow TestExecutionReport&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1151"&gt;&lt;strong&gt;#1151&lt;/strong&gt;&lt;/a&gt; Add parameter LogFile to DotCover commands&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/906"&gt;&lt;strong&gt;#906&lt;/strong&gt;&lt;/a&gt; Can't specify hash algorithm for the Sign command&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/703"&gt;&lt;strong&gt;#703&lt;/strong&gt;&lt;/a&gt; MSBuild add log file support&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/685"&gt;&lt;strong&gt;#685&lt;/strong&gt;&lt;/a&gt; Support for SHA256 code signing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1346"&gt;&lt;strong&gt;#1346&lt;/strong&gt;&lt;/a&gt; Fixed typos 'occured' and 'occuring'&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1309"&gt;&lt;strong&gt;#1309&lt;/strong&gt;&lt;/a&gt; Add CLA link to README.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1278"&gt;&lt;strong&gt;#1278&lt;/strong&gt;&lt;/a&gt; Removed erroneous apostrophes&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1263"&gt;&lt;strong&gt;#1263&lt;/strong&gt;&lt;/a&gt; Corrects the grammar "do/does" in exception messages and tests&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1234"&gt;&lt;strong&gt;#1234&lt;/strong&gt;&lt;/a&gt; Adds default CPU count behavior to MSBuild settings documentation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/body&gt;&lt;/html&gt;</content>
-		<summary>&lt;p&gt;Version 0.17.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there was a breaking change.&lt;/p&gt;
-&lt;p&gt;This breaking change centred around the &lt;code&gt;&lt;a href="/api/Cake.Common.Tools.VSTest/VSTestSettings"&gt;VSTestSettings&lt;/a&gt;&lt;/code&gt; class, where the decision was wait to allow custom loggers to be passed into the &lt;code&gt;&lt;a href="/api/Cake.Common.Tools.VSTest/VSTestRunner"&gt;VSTestRunner&lt;/a&gt;&lt;/code&gt;.  As a result, the previous enumeration named &lt;code&gt;VSTestLogger&lt;/code&gt; has been removed, and replaced with a fully customizable string.  If you are using this enumeration in your scripts then you will see errors being generated if you update to the latest version of Cake.  You should be able to make use of the new extension methods called &lt;code&gt;WithVisualStudioLogger&lt;/code&gt; and &lt;code&gt;WithAppVeyorLogger&lt;/code&gt; on the &lt;code&gt;&lt;a href="/api/Cake.Common.Tools.VSTest/VSTestSettings"&gt;VSTestSettings&lt;/a&gt;&lt;/code&gt; to replace the enumeration values.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
 	</entry>
 </feed>
