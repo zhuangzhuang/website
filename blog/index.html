@@ -91,14 +91,15 @@
                         
 
     <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-        <li><a href="/blog/addins">Addins</a></li>
-        <li><a href="/blog/announcement">Announcement</a></li>
-        <li><a href="/blog/how-tos">How To&#x27;s</a></li>
-        <li><a href="/blog/infrastructure">Infrastructure</a></li>
-        <li><a href="/blog/news">News</a></li>
-        <li><a href="/blog/release-notes">Release Notes</a></li>
+        <li><a href="/blog/Addins">Addins</a></li>
+        <li><a href="/blog/Announcement">Announcement</a></li>
+        <li><a href="/blog/How-Tos">How To&#x27;s</a></li>
+        <li><a href="/blog/Infrastructure">Infrastructure</a></li>
+        <li><a href="/blog/News">News</a></li>
+        <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/08">August, 2017</a></li>
         <li><a href="/blog/archive/2017/07">July, 2017</a></li>
         <li><a href="/blog/archive/2017/06">June, 2017</a></li>
         <li><a href="/blog/archive/2017/05">May, 2017</a></li>
@@ -130,11 +131,11 @@
         <li><a href="/blog/author/devlead">devlead</a></li>
         <li><a href="/blog/author/gep13">gep13</a></li>
         <li><a href="/blog/author/jericho">jericho</a></li>
-        <li><a href="/blog/author/larz-white">Larz White</a></li>
+        <li><a href="/blog/author/Larz-White">Larz White</a></li>
         <li><a href="/blog/author/mholo65">mholo65</a></li>
         <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
         <li><a href="/blog/author/phillipsj">phillipsj</a></li>
-        <li><a href="/blog/author/rlittlesii">RLittlesII</a></li>
+        <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
 
                     </ul>
                 </section>                
@@ -152,6 +153,37 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/08/http-to-https">HTTP to HTTPS</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Friday, August 25, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/news">News</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/gep13">gep13</a></dd>
+</dl>            <div>
+                <p>As some of you may have noticed, the <a href="https://www.cakebuild.net/">Cake Website</a> has changed to use an SSL Certificate.  This is something that has been <a href="https://github.com/cake-build/website/issues/40">on our cards for a while</a>, it is just something that we never got around to.</p>
+<h2 id="history">History</h2>
+<p>Originally, we thought that we would purchase our own SSL Certificate, however, we never got around to it.  Then, after joining the .NET Foundation, we had the chance to have them purchase the certificate for us, but again, we never got around to it.  However, after some discussion, we decided to use <a href="https://www.cloudflare.com/">Cloudflare</a> to sit in front on our site, which means that we get an SSL certificate, as well as caching, for free.  We like free.</p>
+<h2 id="what-does-this-mean">What does this mean?</h2>
+<p>For the most part, the switch to HTTPS doesn't mean anything, and your normal everyday use of the website should not change.  We have put in place HTTP 301 redirects, so any attempt to access a non-HTTPS link directed at the site should redirect you through to the HTTPS version.  You can see that in action if you try to access this URL <a href="http://www.cakebuild.net/">http://www.cakebuild.net/</a> you should end up at the HTTPS version.</p>
+<p>There is one area where HTTPS is important though, and that is when it comes to accessing the bootstrappers, config file, and packages.config file, which are downloaded either through our IDE integrations, or from the documentation on the website.  These are files that we, the Cake Team provide to you, and as a result, we want to make sure that these files haven't been tampered with.  Using HTTPS on the site ensures that this happens, and prevents the chance of a man in the middle attack, which could, in theory, tamper with those files.</p>
+<p>All the documentation on the website has been updated to use the HTTPS URLs, as well as all IDE integrations, i.e:</p>
+<ul>
+<li>Visual Studio</li>
+<li>Visual Studio Code</li>
+<li>Yeoman Generators</li>
+</ul>
+<p>have also all been updated to use the new HTTPS URLs for these files.</p>
+<p>To be clear, these are files that we strongly recommended that you download and check into your source control repository.  Therefore, downloading of these files should be a one time thing for each project that you set up.  Without the SSL certificate in place, there was a very real chance that the downloaded files could have been tampered with.  There is an element of due diligence expected when downloading arbitrary scripts from the internet, i.e. you wouldn't just download and run a script from <code>i-am-a-hacker.net</code>.  Having verified the downloaded files, you can commit them to your source control repository.  With the older version of the bootstrappers in your source control repository, they would still be downloading the packages.config (if required, i.e. not committed into your source control repository) from a non-HTTPS URL on each build.  As a result, again, on each build there was a chance that a malicious user could tamper with the downloaded file.  To be clear, this is not a file that is executed, but rather placed on your file system, and packages are restored from that file using NuGet.  As a result, in theory, you could have had packages restored onto your server/computer that you would not have expected to be there.  I think you will all agree that this is a minimal risk situation.</p>
+<p>Going forward, none of the things that have been described above should be a problem.  The introduction of the SSL Certificate means that all future downloads from the Cake Website will be exactly what is expected.</p>
+<h2 id="what-do-i-need-to-do">What do I need to do?</h2>
+<p>If you have already committed both the bootstrapper and the packages.config file into your repository, then <em>technically</em> there is nothing that you need to do.  Since both artifacts exist in your repository, no additional downloads happen from the Cake Website, so you don't need to do anything immediately.  In the longer term, we would recommend that you pull the latest default bootstrapper(s) and commit them into your source control repository.</p>
+<p>If you don't, for whatever reason, have the packages.config committed into your source control repository, then there is one thing that you need to do, and that is to refresh the bootstrapper(s).  This can be easily done fetching the latest bootstrapper(s) using the instructions <a href="https://www.cakebuild.net/docs/tutorials/setting-up-a-new-project">here</a>.  With this change made, simply commit the changes back into your source control repository, and you are good to go.</p>
+<p><strong>NOTE:</strong> If you have customised your bootstrapper(s), and you don't simply want to override it with the new default one(s), you can see the changes that were made to the default bootstrapper(s) in this <a href="https://github.com/cake-build/resources/commit/2ed021f5cfef2d1106b0caf6c801633bbfb58cc0">commit</a>.</p>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2017/07/debug-cake-addin">How to debug a Cake addin</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -162,38 +194,7 @@
         <dd><a href="/blog/author/rlittlesii">RLittlesII</a></dd>
 </dl>            <div>
                 <p>It's no secret, I like Cake.  When I have to write a script to build my source code, I use Cake.  On my most recent expedition writing a Cake script to publish a UWP application, I noticed Hockey App publish failed, <a href="https://github.com/cake-contrib/Cake.HockeyApp">Cake.HockeyApp</a> was throwing an exception.</p>
-<p>When I realized it wasn't the way my script interacted with Cake, but an issue with the addin itself, I immediately hit the Cake Gitter channel. I was in search of some documentation that allowed me to debug a Cake addin so I could address the issue that I was having Friday afternoon at half past quitting time.</p>
-<p>One of the members of the project team suggested the following:</p>
-<blockquote class="blockquote">
-<p>build your addin in debug, reference it from Cake script and attach to process from VS.
-Start Cake.exe with <code>--debug</code> flag so you have time to attach to process</p>
-</blockquote>
-<p>Now that I know where to start I created myself a task list:</p>
-<ol>
-<li>Change build.ps1 to run with --debug flag</li>
-<li>Build addin source</li>
-<li>Load addin from source in build.cake</li>
-<li>Find the error and fix it!</li>
-</ol>
-<p>For the purposes of this post, I will cover steps 1 and 3.  Step 2 is no more than building the addin source code in Visual Studio.</p>
-<h1 id="changing-the-bootstrapper">Changing the bootstrapper</h1>
-<p>This is the easiest part.  I modified the <code>Invoke-Expression</code> line of the bootstrapper to resemble the following.</p>
-<p><strong>NOTE</strong>: We should revert this before we commit.</p>
-<pre><code class="language-powershell">Invoke-Expression &quot;&amp; `&quot;$CAKE_EXE`&quot; `&quot;$Script`&quot; -target=`&quot;$Target`&quot; -configuration=`&quot;$Configuration`&quot; -verbosity=`&quot;$Verbosity`&quot; $UseMono $UseDryRun $UseExperimental $ScriptArgs --debug&quot;
-</code></pre>
-<p>And on the next execution of <code>.\build.ps1</code></p>
-<pre><code class="language-powershell">Preparing to run build script...
-Running build script...
-Attach debugger to process 80276 to continue
-</code></pre>
-<h1 id="loading-the-addin-from-source">Loading the addin from source</h1>
-<p>In the build.cake file I add the following <a href="https://cakebuild.net/docs/fundamentals/preprocessor-directives">preprocessor directive</a></p>
-<pre><code class="language-csharp">#r &quot;./Cake.HockeyApp/src/Cake.HockeyApp/bin/Debug/net45/Cake.HockeyApp.dll&quot;
-</code></pre>
-<p>I navigate back to Visual Studio Debug -&gt; Attach to Process (or Ctrl + Alt + P), pick the Cake execution with the corresponding process id and I hit break points!!!</p>
-<p><img src="https://raw.githubusercontent.com/RLittlesII/rodneylittlesii/master/src/images/Attach-To-Process.jpg" class="img-fluid" alt="Attach To Process" /></p>
-<p>Now I can debug the issue I am seeing, determine if it is user error or the addin, and resolve it either way!</p>
-
+                <a href="/blog/2017/07/debug-cake-addin">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/07/cake-v0.21.1-released">Cake v0.21.1 released</a></h2>
@@ -248,30 +249,6 @@ The shift to using MSBuild and from <code>project.json</code> to <code>csproj</c
 </dl>            <div>
                 <p>Towards the end of 2016, the Cake Team had an internal discussion about the newly created <a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization">Cake Contrib Organisation</a>.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.</p>
                 <a href="/blog/2017/06/new-cake-contrib-icon">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/06/cake-v0.20.0-released">Cake v0.20.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Monday, June 12, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/release-notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>Version 0.20.0 of Cake has been released.</p>
-<p>This release hopefully contains no new features!</p>
-<p>But nevertheless it's the result of a great team effort.
-With this release we've finally migrated from VS2015 and .NET Core preview bits and  <em>project.json</em> to VS2017 / .NET Core SDK 1.0.4 and <em>csproj</em>.
-This release also contains a few documentation improvements.</p>
-<p>It's been a little more work than expected to get everything to compile and test successfully cross platform using the new SDK, but now the yak if finally shaved and we have an release out!</p>
-<p>Our goal is for there to be no breaking changes with this build, but there's certainly a risk of that as changing underlying SDK and build tooling is a substantial move of cheese.</p>
-<p>This is why we always recommend you pin the version of Cake you're running to avoid any unplanned broken builds. You can read more about pinning Cake version <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
-<p>Huge thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/06/cake-v0.20.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

@@ -196,9 +196,9 @@
 <p>Cake uses a combination of standard <a href="https://msdn.microsoft.com/en-us/library/b2s063f7.aspx">C# XML Documentation Comments</a> and attributes to auto generate documentation to this site.</p>
 <h2 id="classes">Classes</h2>
 <p>Classes purpose are documented with a <a href="https://msdn.microsoft.com/en-us/library/2d6dt3kf.aspx">summary</a> tag and categorized using <a href="https://cakebuild.net/api/cake.core.annotations/cakealiascategoryattribute/">CakeAliasCategoryAttribute</a> attribute.</p>
-<pre><code class="language-csharp">/// <summary>
+<pre><code class="language-csharp">/// &lt;summary&gt;
 /// Contains functionality for working with GitReleaseManager.
-/// </summary>
+/// &lt;/summary&gt;
 [CakeAliasCategory("GitReleaseManager")]
 public static class <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">GitReleaseManagerAliases</a>
 {...}
@@ -206,17 +206,17 @@ public static class <a href="/api/Cake.Common.Tools.GitReleaseManager/GitRelease
 <h2 id="methods">Methods</h2>
 <p>Methods purpose are documented with a <a href="https://msdn.microsoft.com/en-us/library/2d6dt3kf.aspx">summary</a> tag, parameters with the <a href="https://msdn.microsoft.com/en-us/library/8cw818w8.aspx">param</a> tag, if it returns somethings it's you use the <a href="https://msdn.microsoft.com/en-us/library/4dcfdeds.aspx">returns</a> tag and categorized using <a href="https://cakebuild.net/api/cake.core.annotations/ffb6caa8">CakeAliasCategoryAttribute</a> attribute.</p>
 <p>Example usage is documented using the <a href="https://msdn.microsoft.com/en-us/library/9w4cf933.aspx">example</a> tag and <a href="https://msdn.microsoft.com/en-us/library/f8hahtxf.aspx">code</a> tag for code.</p>
-<pre><code class="language-csharp">/// <summary>
+<pre><code class="language-csharp">/// &lt;summary&gt;
 /// Makes the path absolute (if relative) using the current working directory.
-/// </summary>
-/// <example>
-/// <code>
+/// &lt;/summary&gt;
+/// &lt;example&gt;
+/// &lt;code&gt;
 /// var path = MakeAbsolute(Directory("./resources"));
-/// </code>
-/// </example>
-/// <param name="context">The context.
-/// <param name="path">The path.
-/// <returns>An absolute directory path.</returns>
+/// &lt;/code&gt;
+/// &lt;/example&gt;
+/// &lt;param name="context"&gt;The context.&lt;/param&gt;
+/// &lt;param name="path"&gt;The path.&lt;/param&gt;
+/// &lt;returns&gt;An absolute directory path.&lt;/returns&gt;
 [CakeMethodAlias]
 [CakeAliasCategory("Path")]
 public static <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> MakeAbsolute(this <a href="/api/Cake.Core/ICakeContext">ICakeContext</a> context, <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> path)

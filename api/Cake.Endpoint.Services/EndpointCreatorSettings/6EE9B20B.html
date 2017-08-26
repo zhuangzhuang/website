@@ -173,7 +173,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Build configuration. Can be used inside copy statements as [BuildConfiguration] pattern.
+            Gets or sets a value used as a replacement inside the parsed endpoints file. Value
+            will be injected as a replacement for every found <code class="cs">[BuildConfiguration]</code> pattern.
             </div>
 
 		<div class="panel panel-default">
@@ -211,7 +212,9 @@
 				</thead>
 				<tbody><tr>
 					<td>string</td>
-					<td></td>
+					<td>
+              A string that will be injected into the parsed endpoints file; otherwise, <code class="cs">null</code>.
+            </td>
 				</tr>
 			</tbody></table>
 		</div>

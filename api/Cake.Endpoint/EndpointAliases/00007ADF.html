@@ -172,7 +172,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Creates an endpoint by copying all files and directories accoring to the endpoint definition.
+            Creates endpoints by copying all files and directories accoring to the endpoint definition.
             </div>
 
 		<div class="panel panel-default">
@@ -200,7 +200,11 @@
             <pre><code class="cs">Task("Create")
     .Does(() =&gt;
 {
-    EndpointCreate( new Endpoint() );
+    var endpoints = DeserializeJsonFromFile&lt;IEnumerable&lt;Endpoint&gt;&gt;( "./endpoints.json" );
+    EndpointCreate( endpoints, new EndpointCreatorSettings
+    {
+      ZipTargetPath = true
+    } );
 });</code></pre>
             </div>
 
