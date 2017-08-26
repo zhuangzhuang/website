@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<link rel="self" href="http://cakebuild.net/" />
-	<id>http://cakebuild.net/</id>
+	<link rel="self" href="https://cakebuild.net/" />
+	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-08-26T14:47:04Z</updated>
+	<updated>2017-08-26T20:43:37Z</updated>
 	<entry>
 		<author>
 			<name>gep13</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/08/http-to-https" />
-		<id>http://cakebuild.net/blog/2017/08/http-to-https</id>
+		<link href="https://cakebuild.net/blog/2017/08/http-to-https" />
+		<id>https://cakebuild.net/blog/2017/08/http-to-https</id>
 		<title>HTTP to HTTPS</title>
 		<updated>2017-08-25T00:00:00Z</updated>
 		<content>&lt;p&gt;As some of you may have noticed, the &lt;a href="https://www.cakebuild.net/"&gt;Cake Website&lt;/a&gt; has changed to use an SSL Certificate.  This is something that has been &lt;a href="https://github.com/cake-build/website/issues/40"&gt;on our cards for a while&lt;/a&gt;, it is just something that we never got around to.&lt;/p&gt;
@@ -39,8 +39,8 @@
 		<author>
 			<name>RLittlesII</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/07/debug-cake-addin" />
-		<id>http://cakebuild.net/blog/2017/07/debug-cake-addin</id>
+		<link href="https://cakebuild.net/blog/2017/07/debug-cake-addin" />
+		<id>https://cakebuild.net/blog/2017/07/debug-cake-addin</id>
 		<title>How to debug a Cake addin</title>
 		<updated>2017-07-31T00:00:00Z</updated>
 		<content>&lt;p&gt;It's no secret, I like Cake.  When I have to write a script to build my source code, I use Cake.  On my most recent expedition writing a Cake script to publish a UWP application, I noticed Hockey App publish failed, &lt;a href="https://github.com/cake-contrib/Cake.HockeyApp"&gt;Cake.HockeyApp&lt;/a&gt; was throwing an exception.&lt;/p&gt;
@@ -82,8 +82,8 @@ Attach debugger to process 80276 to continue
 		<author>
 			<name>gep13</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/07/cake-v0.21.1-released" />
-		<id>http://cakebuild.net/blog/2017/07/cake-v0.21.1-released</id>
+		<link href="https://cakebuild.net/blog/2017/07/cake-v0.21.1-released" />
+		<id>https://cakebuild.net/blog/2017/07/cake-v0.21.1-released</id>
 		<title>Cake v0.21.1 released</title>
 		<updated>2017-07-15T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.21.1 of Cake has been released.&lt;/p&gt;
@@ -118,8 +118,8 @@ Attach debugger to process 80276 to continue
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/07/cake-v0.21.0-released" />
-		<id>http://cakebuild.net/blog/2017/07/cake-v0.21.0-released</id>
+		<link href="https://cakebuild.net/blog/2017/07/cake-v0.21.0-released" />
+		<id>https://cakebuild.net/blog/2017/07/cake-v0.21.0-released</id>
 		<title>Cake v0.21.0 released</title>
 		<updated>2017-07-14T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.21.0 of Cake has been released.&lt;/p&gt;
@@ -193,8 +193,8 @@ The shift to using MSBuild and from &lt;code&gt;project.json&lt;/code&gt; to &lt
 		<author>
 			<name>gep13</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/06/new-cake-contrib-icon" />
-		<id>http://cakebuild.net/blog/2017/06/new-cake-contrib-icon</id>
+		<link href="https://cakebuild.net/blog/2017/06/new-cake-contrib-icon" />
+		<id>https://cakebuild.net/blog/2017/06/new-cake-contrib-icon</id>
 		<title>New Cake Contrib Icon</title>
 		<updated>2017-06-23T00:00:00Z</updated>
 		<content>&lt;p&gt;Towards the end of 2016, the Cake Team had an internal discussion about the newly created &lt;a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contrib Organisation&lt;/a&gt;.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.&lt;/p&gt;
@@ -212,8 +212,8 @@ The shift to using MSBuild and from &lt;code&gt;project.json&lt;/code&gt; to &lt
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/06/cake-v0.20.0-released" />
-		<id>http://cakebuild.net/blog/2017/06/cake-v0.20.0-released</id>
+		<link href="https://cakebuild.net/blog/2017/06/cake-v0.20.0-released" />
+		<id>https://cakebuild.net/blog/2017/06/cake-v0.20.0-released</id>
 		<title>Cake v0.20.0 released</title>
 		<updated>2017-06-12T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.20.0 of Cake has been released.&lt;/p&gt;
@@ -282,8 +282,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/05/cake-v0.19.5-released" />
-		<id>http://cakebuild.net/blog/2017/05/cake-v0.19.5-released</id>
+		<link href="https://cakebuild.net/blog/2017/05/cake-v0.19.5-released" />
+		<id>https://cakebuild.net/blog/2017/05/cake-v0.19.5-released</id>
 		<title>Cake v0.19.5 released</title>
 		<updated>2017-05-04T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.19.5 of Cake has been released.&lt;/p&gt;
@@ -310,8 +310,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>mholo65</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/05/intellisense-and-intro" />
-		<id>http://cakebuild.net/blog/2017/05/intellisense-and-intro</id>
+		<link href="https://cakebuild.net/blog/2017/05/intellisense-and-intro" />
+		<id>https://cakebuild.net/blog/2017/05/intellisense-and-intro</id>
 		<title>Intellisense and new Cake team member</title>
 		<updated>2017-05-02T00:00:00Z</updated>
 		<content>&lt;p&gt;Hi! My name is Martin Björkström and I'm a .NET Developer and father of two from Finland.  I started using Cake in early 2016 and have been making &lt;a href="https://github.com/cake-build/cake/commits?author=mholo65"&gt;contributions&lt;/a&gt; ever since. So far, the most notable is probably &lt;a href="https://github.com/cake-build/cake/pull/858"&gt;debugging support&lt;/a&gt;.  As of April, I'm also a member of the Cake Team!&lt;/p&gt;
@@ -330,8 +330,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>agc93</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released" />
-		<id>http://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released</id>
+		<link href="https://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released" />
+		<id>https://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released</id>
 		<title>Cake for Visual Studio Team Services v0.3.0 released</title>
 		<updated>2017-04-19T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.3.0 of Cake for Visual Studio Team Services and Team Foundation Server has been released.&lt;/p&gt;
@@ -365,8 +365,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/04/cake-v0.19.4-released" />
-		<id>http://cakebuild.net/blog/2017/04/cake-v0.19.4-released</id>
+		<link href="https://cakebuild.net/blog/2017/04/cake-v0.19.4-released" />
+		<id>https://cakebuild.net/blog/2017/04/cake-v0.19.4-released</id>
 		<title>Cake v0.19.4 released</title>
 		<updated>2017-04-19T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
@@ -398,8 +398,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/04/cake-v0.19.3-released" />
-		<id>http://cakebuild.net/blog/2017/04/cake-v0.19.3-released</id>
+		<link href="https://cakebuild.net/blog/2017/04/cake-v0.19.3-released" />
+		<id>https://cakebuild.net/blog/2017/04/cake-v0.19.3-released</id>
 		<title>Cake v0.19.3 released</title>
 		<updated>2017-04-04T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.19.3 of Cake has been released.&lt;/p&gt;
@@ -426,8 +426,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/04/cake-v0.19.2-released" />
-		<id>http://cakebuild.net/blog/2017/04/cake-v0.19.2-released</id>
+		<link href="https://cakebuild.net/blog/2017/04/cake-v0.19.2-released" />
+		<id>https://cakebuild.net/blog/2017/04/cake-v0.19.2-released</id>
 		<title>Cake v0.19.2 released</title>
 		<updated>2017-04-01T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.19.2 of Cake has been released.&lt;/p&gt;
@@ -454,8 +454,8 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<author>
 			<name>phillipsj</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support" />
-		<id>http://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</id>
+		<link href="https://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support" />
+		<id>https://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</id>
 		<title>VSWhere and Visual Studio 2017 Support</title>
 		<updated>2017-03-27T00:00:00Z</updated>
 		<content>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;
@@ -582,8 +582,8 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/03/cake-v0.19.1-released" />
-		<id>http://cakebuild.net/blog/2017/03/cake-v0.19.1-released</id>
+		<link href="https://cakebuild.net/blog/2017/03/cake-v0.19.1-released" />
+		<id>https://cakebuild.net/blog/2017/03/cake-v0.19.1-released</id>
 		<title>Cake v0.19.1 released</title>
 		<updated>2017-03-24T00:00:00Z</updated>
 		<content>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Version 0.19.1 of Cake has been released.&lt;/p&gt;
@@ -633,8 +633,8 @@ MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBu
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/03/cake-v0.19.0-released" />
-		<id>http://cakebuild.net/blog/2017/03/cake-v0.19.0-released</id>
+		<link href="https://cakebuild.net/blog/2017/03/cake-v0.19.0-released" />
+		<id>https://cakebuild.net/blog/2017/03/cake-v0.19.0-released</id>
 		<title>Cake v0.19.0 released</title>
 		<updated>2017-03-23T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.19.0 of Cake has been released.&lt;/p&gt;
@@ -684,8 +684,8 @@ MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBu
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/03/cake-v0.18.0-released" />
-		<id>http://cakebuild.net/blog/2017/03/cake-v0.18.0-released</id>
+		<link href="https://cakebuild.net/blog/2017/03/cake-v0.18.0-released" />
+		<id>https://cakebuild.net/blog/2017/03/cake-v0.18.0-released</id>
 		<title>Cake v0.18.0 released</title>
 		<updated>2017-03-07T00:00:00Z</updated>
 		<content>&lt;p&gt;Version 0.18.0 of Cake has been released.&lt;/p&gt;
@@ -824,8 +824,8 @@ We do recommend you pin your builds to the version of Cake you using, that way y
 		<author>
 			<name>Larz White</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/01/cake-paket" />
-		<id>http://cakebuild.net/blog/2017/01/cake-paket</id>
+		<link href="https://cakebuild.net/blog/2017/01/cake-paket" />
+		<id>https://cakebuild.net/blog/2017/01/cake-paket</id>
 		<title>Cake.Paket - An Addin and Module to Add Support for Paket in Cake</title>
 		<updated>2017-01-25T00:00:00Z</updated>
 		<content>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Most .NET developers are comfortable using &lt;a href="https://www.nuget.org/"&gt;NuGet&lt;/a&gt; to manage their dependencies. This is probably why Cake has such great support for it. Unfortunately, &lt;a href="https://fsprojects.github.io/Paket/"&gt;Paket&lt;/a&gt; which is a popular alternative has very little support. Luckily, with the help of &lt;a href="https://github.com/larzw/Cake.Paket"&gt;Cake.Paket&lt;/a&gt; you can make Paket a first class citizen in your Cake scripts!&lt;/p&gt;
@@ -963,8 +963,8 @@ group modules
 		<author>
 			<name>daveaglick</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2017/01/new-static-site" />
-		<id>http://cakebuild.net/blog/2017/01/new-static-site</id>
+		<link href="https://cakebuild.net/blog/2017/01/new-static-site" />
+		<id>https://cakebuild.net/blog/2017/01/new-static-site</id>
 		<title>New Static Cake Website</title>
 		<updated>2017-01-22T00:00:00Z</updated>
 		<content>&lt;p&gt;Hi! My name is Dave Glick and I run the &lt;a href="http://wyam.io"&gt;Wyam static site engine&lt;/a&gt; project. I'm also a big Cake fanboy, and over the last couple months I've been privileged to work with the rest of the Cake team on transitioning the Cake website from a dynamic ASP.NET website to a static one built by &lt;a href="http://wyam.io"&gt;Wyam&lt;/a&gt;. This effort was more than mere window dressing; the new site goes beyond the old one in some interesting ways:&lt;/p&gt;
@@ -985,8 +985,8 @@ group modules
 		<author>
 			<name>devlead</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2016/12/icing-on-the-cake" />
-		<id>http://cakebuild.net/blog/2016/12/icing-on-the-cake</id>
+		<link href="https://cakebuild.net/blog/2016/12/icing-on-the-cake" />
+		<id>https://cakebuild.net/blog/2016/12/icing-on-the-cake</id>
 		<title>Icing on the Cake – reviewing the recipe for 2016</title>
 		<updated>2016-12-31T00:00:00Z</updated>
 		<content>&lt;p&gt;As 2016 is just about to be fully baked, the year has been packed with many ingredients, with this post we would like to take the opportunity to reflect on a few of the essences of what's been a truly amazing and eventful Cake year.&lt;/p&gt;
@@ -1019,8 +1019,8 @@ It's truly amazing and humbling feeling that so many have found and appreciate t
 		<author>
 			<name>agc93</name>
 		</author>
-		<link href="http://cakebuild.net/blog/2016/12/cake-vs-prerelease" />
-		<id>http://cakebuild.net/blog/2016/12/cake-vs-prerelease</id>
+		<link href="https://cakebuild.net/blog/2016/12/cake-vs-prerelease" />
+		<id>https://cakebuild.net/blog/2016/12/cake-vs-prerelease</id>
 		<title>Installing prerelease versions of Cake for Visual Studio</title>
 		<updated>2016-12-13T00:00:00Z</updated>
 		<content>&lt;p&gt;We released the Cake for Visual Studio extension back in September and have been thrilled with the response from the whole community. There's been plenty of activity over &lt;a href="https://github.com/cake-build/cake-vs"&gt;on the GitHub repo&lt;/a&gt; with new issues, bug reports, features and even PRs. Now, you can get the benefits of all the brand new features as they arrive, right in Visual Studio.&lt;/p&gt;

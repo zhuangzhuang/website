@@ -204,12 +204,12 @@ set of conventions are used to locate executables on disc.</p>
 </ol>
 <p>By inheriting from the <a href="/api/Cake.Core.Tooling/Tool_1">Tool<t></t></a> class
 when implementing tools, you will get the conventions "for free".</p>
-<p>You can override and register tool paths using the <a href="/api/Cake.Core.Tooling/IToolLocator/">IToolLocator</a> <a href="http://cakebuild.net/api/Cake.Core/ICakeContext/8C889AB4">Tools</a> property on the <a href="http://cakebuild.net/api/Cake.Core/ICakeContext/">ICakeContext</a>:</p>
+<p>You can override and register tool paths using the <a href="/api/Cake.Core.Tooling/IToolLocator/">IToolLocator</a> <a href="/api/Cake.Core/ICakeContext/8C889AB4">Tools</a> property on the <a href="/api/Cake.Core/ICakeContext/">ICakeContext</a>:</p>
 <pre><code class="language-csharp">Setup(context =&gt; {
     context.Tools.RegisterFile("C:/ProgramData/chocolatey/bin/NuGet.exe");
 });
 </code></pre>
-<p>If you want to use the tool resolution from your Cake script for generic tasks, i.e. starting a process, that's certainly possible using the <a href="http://cakebuild.net/api/Cake.Core.Tooling/IToolLocator/D57090B2">Resolve(string) </a> method:</p>
+<p>If you want to use the tool resolution from your Cake script for generic tasks, i.e. starting a process, that's certainly possible using the <a href="/api/Cake.Core.Tooling/IToolLocator/D57090B2">Resolve(string) </a> method:</p>
 <pre><code class="language-csharp">Task("NuGet-Help-Install")
     .Does(()=&gt; {
     <a href="/api/Cake.Core.IO/FilePath">FilePath</a> nugetPath = Context.Tools.Resolve("nuget.exe");
