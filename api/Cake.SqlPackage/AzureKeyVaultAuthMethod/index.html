@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - AzureKeyVaultAuthMethod Enum</title>
+        <title>Cake - API - AzureKeyVaultAuthMethod Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -138,10 +137,9 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
+			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.SqlPackage/AzureKeyVaultAuthMethod">Azure<wbr>Key<wbr>Vault<wbr>Auth<wbr>Method</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageAction">SqlPackageAction</a></li>
-			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageAliases">SqlPackageAliases</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportSettings">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageDriftReportSettings">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings</a></li>
@@ -164,7 +162,7 @@
 
 
 <section class="content-header">
-	<h1>Azure<wbr>Key<wbr>Vault<wbr>Auth<wbr>Method <small>Enum</small></h1>
+	<h1>Azure<wbr>Key<wbr>Vault<wbr>Auth<wbr>Method <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -175,11 +173,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Enumeration for Azure key vault authentication method
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -191,20 +185,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -216,11 +200,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["AzureKeyVaultAuthMethod"]
 class Type type-node
 
@@ -231,7 +210,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum AzureKeyVaultAuthMethod</code></pre>
+	<pre><code>public sealed class AzureKeyVaultAuthMethod : Enum</code></pre>
 
 
 
@@ -255,9 +234,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/AzureKeyVaultAuthMethod/A0F41A3C">ClientIdSecret</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            Authentication using client shared secret.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -265,10 +242,15 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/AzureKeyVaultAuthMethod/1431B7F5">Interactive</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            Authentication using interactive.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlPackage/AzureKeyVaultAuthMethod/A2D3B360">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -308,6 +290,26 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Azure<wbr>Key<wbr>Vault<wbr>Auth<wbr>Method&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Azure<wbr>Key<wbr>Vault<wbr>Auth<wbr>Method&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

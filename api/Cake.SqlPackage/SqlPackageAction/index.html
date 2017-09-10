@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SqlPackageAction Enum</title>
+        <title>Cake - API - SqlPackageAction Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -138,10 +137,9 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
+			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.SqlPackage/AzureKeyVaultAuthMethod">Azure<wbr>Key<wbr>Vault<wbr>Auth<wbr>Method</a></li>
 				<li class="selected"><a href="/api/Cake.SqlPackage/SqlPackageAction">SqlPackageAction</a></li>
-			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageAliases">SqlPackageAliases</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportSettings">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlPackage/SqlPackageDriftReportSettings">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings</a></li>
@@ -164,7 +162,7 @@
 
 
 <section class="content-header">
-	<h1>SqlPackageAction <small>Enum</small></h1>
+	<h1>SqlPackageAction <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -175,11 +173,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Action to execute on the command line.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -191,20 +185,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.SqlPackage">Cake<wbr>.SqlPackage</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -216,11 +200,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["SqlPackageAction"]
 class Type type-node
 
@@ -231,7 +210,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum SqlPackageAction</code></pre>
+	<pre><code>public sealed class SqlPackageAction : Enum</code></pre>
 
 
 
@@ -255,9 +234,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/480DF711">DeployReport</a></td>
 								<td>2</td>
 								<td>
-									<div>
-            Creates an XML report of the changes that would be made by a publish action.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -265,9 +242,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/64C5BCD0">DriftReport</a></td>
 								<td>3</td>
 								<td>
-									<div>
-            Creates an XML report of the changes that have been made to a registered database since it was last registered.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -275,9 +250,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/A650102B">Export</a></td>
 								<td>5</td>
 								<td>
-									<div>
-            Exports a live database to a .bacpac file.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -285,9 +258,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/18FCE4F6">Extract</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            Creates a database snapshot (.dacpac) file from a live SQL Server or Microsoft Azure SQL Database.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -295,9 +266,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/2F88D2F4">Import</a></td>
 								<td>6</td>
 								<td>
-									<div>
-            Imports the schema and table data from a BACPAC package into a new user database.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -305,9 +274,7 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/87012A70">Publish</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            Incrementally updates a database schema to match the schema of a source .dacpac file.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -315,10 +282,15 @@ class Type type-node
 								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/08C11D75">Script</a></td>
 								<td>4</td>
 								<td>
-									<div>
-            Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlPackage/SqlPackageAction/1DDCB75E">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -358,6 +330,26 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Action&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Action&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

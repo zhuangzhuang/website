@@ -333,8 +333,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -368,13 +368,19 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -435,14 +441,16 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-            Contains functionality related to file system globbing. 
-            </td>
+    Contains functionality related to file system globbing.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-    Contains functionality related to HTTP operations
-    </td>
+            <p>
+            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -496,8 +504,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
-            </td>
+    Contains functionality related to MSBuild XML document files.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mstest">MSTest</a></td>
@@ -524,8 +532,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -608,10 +616,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -755,7 +763,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB Package Manager commands
              </td>
                 </tr>
                 <tr>
@@ -803,7 +811,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+            Contains Cake aliases for configuring Amazon Elastic Load Balancers
             </td>
                 </tr>
                 <tr>
@@ -845,7 +853,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -903,8 +911,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -956,8 +964,12 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            Cake AddIn to upload files using WinSCP.
-            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
+            <p>
+            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
+            <p>
+            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
+            </p>    
+            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
             </td>
                 </tr>
                 <tr>
@@ -1032,8 +1044,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1051,7 +1063,13 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -1104,19 +1122,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            The result of GitterProvider Chat API post
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-            Contains functionality related to file system globbing. 
-            </td>
+    Contains functionality related to file system globbing.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1162,8 +1175,10 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-    Contains functionality related to HTTP operations
-    </td>
+            <p>
+            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/jmeter">JMeter</a></td>
@@ -1196,8 +1211,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
-            </td>
+    Contains functionality related to MSBuild XML document files.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msdeploy">MsDeploy</a></td>
@@ -1223,8 +1238,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1326,7 +1341,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1367,13 +1382,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/sqlpackage">SqlPackage</a></td>
-                    <td>
-            <p>Contains functionality related to <a href="https://msdn.microsoft.com/library/hh550080(vs.103).aspx">SqlPackage</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SqlPackage</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
@@ -1403,11 +1412,8 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
-            strong name or not.
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </td>
                 </tr>
                 <tr>
