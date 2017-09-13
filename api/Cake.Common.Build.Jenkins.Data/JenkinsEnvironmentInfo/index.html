@@ -140,6 +140,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>
+				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>
@@ -255,11 +256,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo/D48C216F">ExecutorNumber</a></td>
-								<td>int</td>
+								<td><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo/9F675A65">Change</a></td>
+								<td><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></td>
 								<td>
 									<div>
-    Gets the executor number.
+    Gets the change.
     </div>
 								</td>
 							</tr>
@@ -268,7 +269,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the jenkins home.
+    Gets the absolute path of the directory assigned on the master node for Jenkins to store data.
     </div>
 								</td>
 							</tr>
@@ -277,7 +278,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the jenkins URL.
+    Gets the full URL of Jenkins (note: only available if Jenkins URL is set in system configuration).
     </div>
 								</td>
 							</tr>
@@ -305,15 +306,6 @@ class Type type-node
 								<td>
 									<div>
     Gets Jenkins repository information.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo/FFF4A49D">Workspace</a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Gets the workspace.
     </div>
 								</td>
 							</tr>
@@ -401,16 +393,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Jenkins<wbr>Environment<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Jenkins<wbr>Environment<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -418,6 +400,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Jenkins<wbr>Environment<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

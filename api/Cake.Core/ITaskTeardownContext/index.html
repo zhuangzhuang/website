@@ -136,6 +136,9 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -152,6 +155,7 @@
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core/ActionTask">ActionTask</a></li>
+				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
 				<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>
 				<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>
 				<li><a href="/api/Cake.Core/CakeEngine">CakeEngine</a></li>
@@ -161,6 +165,7 @@
 				<li><a href="/api/Cake.Core/CakePlatformExtensions">Cake<wbr>Platform<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeReport">CakeReport</a></li>
 				<li><a href="/api/Cake.Core/CakeReportEntry">CakeReportEntry</a></li>
+				<li><a href="/api/Cake.Core/CakeReportPrinter">CakeReportPrinter</a></li>
 				<li><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></li>
 				<li><a href="/api/Cake.Core/CakeTask">CakeTask</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></li>
@@ -182,9 +187,6 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -1029,6 +1031,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.IO/DirectoryAliases/3B7C19F5">DeleteDirectories<wbr>(IEnumerable<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr>, <wbr>Delete<wbr>Directory<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes the specified directories.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/DirectoryAliases">DirectoryAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.IO/DirectoryAliases/42CC8366">DeleteDirectories<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>bool)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1039,7 +1051,27 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.IO/DirectoryAliases/2CB8A9C0">DeleteDirectories<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>Delete<wbr>Directory<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes the specified directories.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/DirectoryAliases">DirectoryAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.IO/DirectoryAliases/45405BF1">DeleteDirectory<wbr>(DirectoryPath, <wbr>bool)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes the specified directory.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/DirectoryAliases">DirectoryAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.IO/DirectoryAliases/D058677F">DeleteDirectory<wbr>(DirectoryPath, <wbr>Delete<wbr>Directory<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -1933,6 +1965,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.IO/DirectoryAliases/0F1E3857">GetSubDirectories<wbr>(DirectoryPath)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></td>
+								<td>
+									<div>
+    Gets a list of all the directories inside a directory.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/DirectoryAliases">DirectoryAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build/BuildSystemAliases/701ECBFA">GitLabCI<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Common.Build.GitLabCI/IGitLabCIProvider">IGitLabCIProvider</a></td>
 								<td>
@@ -1963,6 +2005,50 @@ class Type type-node
     This will allow anyone to step through the source code while debugging without a symbol source server.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.GitLink/GitLinkAliases">GitLinkAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases/BD1824FC">GitLink3<wbr>(FilePath)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Update the pdb file to link all sources.
+    This will allow anyone to step through the source code while debugging without a symbol source server.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases">GitLink3Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases/891FB250">GitLink3<wbr>(FilePath, <wbr>GitLink3Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Update the pdb file to link all sources.
+    This will allow anyone to step through the source code while debugging without a symbol source server.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases">GitLink3Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases/83787428">GitLink3<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Update the pdb files to link all sources.
+    This will allow anyone to step through the source code while debugging without a symbol source server.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases">GitLink3Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases/20F6E862">GitLink3<wbr>(IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>GitLink3Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Update the pdb files to link all sources.
+    This will allow anyone to step through the source code while debugging without a symbol source server.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitLink/GitLink3Aliases">GitLink3Aliases</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -2471,16 +2557,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2488,6 +2564,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -3368,6 +3454,16 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common/ProcessAliases/BAF6BEF4">StartProcess<wbr>(FilePath, <wbr>ProcessSettings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div>
+     Starts the process resource that is specified by the filename and settings.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common/ProcessAliases">ProcessAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common/ProcessAliases/34E38D20">StartProcess<wbr>(FilePath, <wbr>ProcessSettings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
 								<td>int</td>
 								<td>
 									<div>

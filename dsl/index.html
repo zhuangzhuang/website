@@ -112,6 +112,7 @@
     <li><a href="/dsl/file-operations">File Operations</a></li>        
     <li><a href="/dsl/fixie">Fixie</a></li>        
     <li><a href="/dsl/gitlink">GitLink</a></li>        
+    <li><a href="/dsl/gitlink-v3">GitLink v3</a></li>        
     <li><a href="/dsl/gitreleasemanager">GitReleaseManager</a></li>        
     <li><a href="/dsl/gitreleasenotes">GitReleaseNotes</a></li>        
     <li><a href="/dsl/gitversion">GitVersion</a></li>        
@@ -182,6 +183,7 @@
     <li><a href="/dsl/directory-operations">Directory Operations</a></li>        
     <li><a href="/dsl/docfx">DocFx</a></li>        
     <li><a href="/dsl/docker">Docker</a></li>        
+    <li><a href="/dsl/documentation">Documentation</a></li>        
     <li><a href="/dsl/doindirectory">DoInDirectory</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
     <li><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></li>        
@@ -367,14 +369,14 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -394,6 +396,17 @@
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
     install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.GitLink/GitLinkSettings">GitLinkSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=gitlink&amp;version=2.4.0"</code></pre>
+    </p>
+    </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/gitlink-v3">GitLink v3</a></td>
+                    <td>
+    <p>Contains functionality related to <a href="https://github.com/gittools/gitlink">GitLink</a> version 3.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.GitLink/GitLink3Settings">GitLink3Settings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=gitlink"</code></pre>
     </p>
     </td>
@@ -440,10 +453,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -497,7 +508,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -525,8 +536,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -609,10 +620,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -659,7 +670,12 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    </p>
     </td>
                 </tr>
                 <tr>
@@ -751,7 +767,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Activity Manager commands
+             Cake build aliases for Android ADB commands
              </td>
                 </tr>
                 <tr>
@@ -799,7 +815,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+            Contains Cake aliases for configuring Amazon Elastic Computing instances
             </td>
                 </tr>
                 <tr>
@@ -841,7 +857,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Class that lets you override default API settings
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -908,17 +929,7 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/coveralls">Coveralls</a></td>
-                    <td>
-            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#tool coveralls.net</code></pre>
-            <pre><code class="cs">#tool coveralls.io</code></pre>
-            In addition, you will need to include the following:
-            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/csvhelper">CsvHelper</a></td>
@@ -980,6 +991,12 @@
             </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/documentation">Documentation</a></td>
+                    <td>
+            Contains functionality to convert markdown to pdf files
+            </td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/doindirectory">DoInDirectory</a></td>
                     <td>
             Contains functionality for changing the current directory for an operation
@@ -1032,8 +1049,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1051,8 +1068,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fileset">FileSet</a></td>
@@ -1095,14 +1112,16 @@
                 <tr>
                     <td><a href="/dsl/git">Git</a></td>
                     <td>
-            Cake AddIn which copies files based on Git log.
-            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
+            Class GitAliases.
+            
+
+            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Contains GitterProvider Chat functionality.
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1155,10 +1174,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/jmeter">JMeter</a></td>
@@ -1191,7 +1208,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -1218,8 +1235,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1279,8 +1296,8 @@
                 <tr>
                     <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
                     <td>
-            Contains functionality related to importing code analysis issues from JetBrains Inspect Code
-            to write them to pull requests.
+            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
+            pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1321,12 +1338,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
-            </p>
+            The result of SendGridProvider API post
             </td>
                 </tr>
                 <tr>
@@ -1367,26 +1379,12 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/sqlpackage">SqlPackage</a></td>
-                    <td>
-            <p>Contains functionality related to <a href="https://msdn.microsoft.com/library/hh550080(vs.103).aspx">SqlPackage</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SqlPackage</code></pre>
-            </p>
-            </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
+            Contains functionality to restore SQL Server backup files *.bak
             </td>
                 </tr>
                 <tr>

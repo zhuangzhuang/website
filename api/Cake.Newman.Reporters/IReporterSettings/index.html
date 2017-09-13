@@ -194,9 +194,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Newman.Reporters/HtmlReporterSettings">HtmlReporterSettings</a></li>								
-											<li><a href="/api/Cake.Newman.Reporters/JUnitReporterSettings">J<wbr>Unit<wbr>Reporter<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Newman.Reporters/CLIReporterSettings">CLIReporterSettings</a></li>								
+											<li><a href="/api/Cake.Newman.Reporters/JUnitReporterSettings">J<wbr>Unit<wbr>Reporter<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Newman.Reporters/HtmlReporterSettings">HtmlReporterSettings</a></li>								
 											<li><a href="/api/Cake.Newman.Reporters/JsonReporterSettings">JsonReporterSettings</a></li>								
 									</ul>
 								</dd>				
@@ -207,12 +207,12 @@
 							graph TD
 	Type["IReporterSettings"]
 class Type type-node
-	Type-.-&gt;Implementing0["HtmlReporterSettings"]
-	click Implementing0 "/api/Cake.Newman.Reporters/HtmlReporterSettings"
+	Type-.-&gt;Implementing0["CLIReporterSettings"]
+	click Implementing0 "/api/Cake.Newman.Reporters/CLIReporterSettings"
 	Type-.-&gt;Implementing1["JUnitReporterSettings"]
 	click Implementing1 "/api/Cake.Newman.Reporters/JUnitReporterSettings"
-	Type-.-&gt;Implementing2["CLIReporterSettings"]
-	click Implementing2 "/api/Cake.Newman.Reporters/CLIReporterSettings"
+	Type-.-&gt;Implementing2["HtmlReporterSettings"]
+	click Implementing2 "/api/Cake.Newman.Reporters/HtmlReporterSettings"
 	Type-.-&gt;Implementing3["JsonReporterSettings"]
 	click Implementing3 "/api/Cake.Newman.Reporters/JsonReporterSettings"
 
@@ -292,16 +292,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -309,6 +299,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -99,6 +99,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/09">September, 2017</a></li>
         <li><a href="/blog/archive/2017/08">August, 2017</a></li>
         <li><a href="/blog/archive/2017/07">July, 2017</a></li>
         <li><a href="/blog/archive/2017/06">June, 2017</a></li>
@@ -153,6 +154,129 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/09/cake-v0.22.0-released">Cake v0.22.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, September 13, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/release-notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>            <div>
+                <p>Version 0.22.0 of Cake has been released.</p>
+<p>So, let's be clear, this release will break things - but it is all intentional!</p>
+<p>This release was initially about updating Roslyn, unifying scripting engines, and targeting .NET 4.6. But one thing led to another which resulted in better support for tool and addin versioning when using preprocessor directives, and an optional in-process NuGet client.</p>
+<p>Updating Roslyn and unifying scripting engines has been a long-awaited improvement for many of you. This brings you C# 7 features (without need for <code>--experimental</code> switch), debugging with Mono (as we completely removed the old Mono scripting engine), and much, much more. It also allows us to ship Roslyn with Cake, so there's no need for Cake to actually download Roslyn anymore. In order for us to update Roslyn, we also needed to change target framework to .NET 4.6.</p>
+<p>Tool and addin versioning when using preprocessor directives has been an issue, which has caused many questions. E.g. you may have noted that when changing version for a tool or addin, the old version was still used. Prior to this release, the only solution was to delete the tool/addin from the <code>tools</code> folder. This is now fixed as Cake supports side-by-side downloading of different versions of tools and addins.</p>
+<p>Due to unpredictable results when downloading packages using <code>nuget.exe</code>, tool/addin versioning was solved by adding a intermediate directory containing the version number. This intermediate directory can however cause <code>MAX_PATH</code> issues when downloading some specific packages. To address this issue, we implemented functionality in <code>Cake.NuGet</code> to allow Cake to download tools and addins without the need for <code>nuget.exe</code>. This functionality is currently optional through <a href="../docs/fundamentals/configuration.md">configuration</a>, and is the first step towards removing need for <code>nuget.exe</code> in Cake. Example usage to opt-in for the in-process NuGet client:</p>
+<pre><code>Cake.exe --nuget_useinprocessclient=true
+</code></pre>
+<p>The in-process NuGet client also gives the possibility to load assemblies from NuGet dependencies. This behaviour can be enabled either via <a href="../docs/fundamentals/configuration.md">configuration</a> or directive. Example usage for loading dependencies:</p>
+<pre><code>Cake.exe --nuget_useinprocessclient=true --nuget_loaddependencies=true
+</code></pre>
+<p>or</p>
+<pre><code>#addin nuget:?package=foo&amp;loaddependencies=true
+#addin nuget:?package=foo.bar&amp;loaddependencies=false
+</code></pre>
+<p>As 0.22.0 has several breaking changes, it will require addins to reference Cake.Core 0.22.0 or newer to be loaded, there's a &quot;you're on your own anything can happen&quot; setting to skip verification but we recommend to start targeting the newer version as soon as possible. Example usage to skip verification:</p>
+<pre><code>Cake.exe --settings_skipverification=true
+</code></pre>
+<p>We have said it before, but here it comes again. Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>. We always try to avoid breaking changes, but we think these new features and improvements justify the friction, and we hope you will too!</p>
+<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/pascalberger">pascalberger</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/soydachi">soydachi</a></li>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li>Eugen Richter</li>
+<li><a href="https://github.com/phillipsj">phillipsj</a></li>
+<li><a href="https://github.com/Roemer">Roemer</a></li>
+<li><a href="https://github.com/DixonDs">DixonDs</a></li>
+<li><a href="https://github.com/patridge">patridge</a></li>
+<li><a href="https://github.com/kcamp">kcamp</a></li>
+<li><a href="https://github.com/dudleyt">dudleyt</a></li>
+<li><a href="https://github.com/Redth">Redth</a></li>
+<li><a href="https://github.com/SIkebe">SIkebe</a></li>
+<li><a href="https://github.com/david-driscoll">david-driscoll</a></li>
+<li><a href="https://github.com/olevett">olevett</a></li>
+<li><a href="https://github.com/atsushieno">atsushieno</a></li>
+<li><a href="https://github.com/Cheesebaron">Cheesebaron</a></li>
+<li><a href="https://github.com/ErikSchierboom">ErikSchierboom</a></li>
+<li><a href="https://github.com/djdelaney">djdelaney</a></li>
+<li>Mahmoud Ali</li>
+<li><a href="https://github.com/akamud">akamud</a></li>
+<li><a href="https://github.com/Julien-Mialon">Julien-Mialon</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=32&amp;state=closed">49 issues</a> closed.</p>
+<p><strong>Breaking changes</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1785"><strong>#1785</strong></a> Bump LatestBreakingChange to 0.22.0</li>
+<li><a href="https://github.com/cake-build/cake/issues/1745"><strong>#1745</strong></a> Change parameter for InstallTools and InstallAddins in IScriptProcessor</li>
+<li><a href="https://github.com/cake-build/cake/issues/1720"><strong>#1720</strong></a> ILRepackSettings.Libs should be List of DirectoryPath</li>
+<li><a href="https://github.com/cake-build/cake/issues/1719"><strong>#1719</strong></a> Jenkins BRANCH_NAME is missing</li>
+<li><a href="https://github.com/cake-build/cake/pull/1714"><strong>#1714</strong></a> Updated CakeRuntime.TargetVersion to net462.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1674"><strong>#1674</strong></a> MSBuildFileLogger LogFile is a string and not a FilePath</li>
+<li><a href="https://github.com/cake-build/cake/issues/1665"><strong>#1665</strong></a> NUnit3Settings: Params and multiple results</li>
+<li><a href="https://github.com/cake-build/cake/issues/1651"><strong>#1651</strong></a> NUnit3Settings <code>Verbose</code> flag obsoleted by NUnit console runner</li>
+<li><a href="https://github.com/cake-build/cake/issues/1614"><strong>#1614</strong></a> Correct the class that TeamCityEnvironmentInfo inherits from</li>
+<li><a href="https://github.com/cake-build/cake/issues/1597"><strong>#1597</strong></a> CommitsSinceVersionSource and PreReleaseNumber as Integer</li>
+<li><a href="https://github.com/cake-build/cake/issues/1564"><strong>#1564</strong></a> DeleteDirectory cannot delete read-only files</li>
+<li><a href="https://github.com/cake-build/cake/issues/1540"><strong>#1540</strong></a> Upgrade to Roslyn 2.0</li>
+</ul>
+<p><strong>Features</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1791"><strong>#1791</strong></a> Add option to enable MSBuild binary logging</li>
+<li><a href="https://github.com/cake-build/cake/issues/1771"><strong>#1771</strong></a> Look for msbuild in default install path on Linux</li>
+<li><a href="https://github.com/cake-build/cake/issues/1761"><strong>#1761</strong></a> DoesForEach() extension method</li>
+<li><a href="https://github.com/cake-build/cake/issues/1754"><strong>#1754</strong></a> VSWhere not returning &quot;prerelease&quot; versions</li>
+<li><a href="https://github.com/cake-build/cake/issues/1743"><strong>#1743</strong></a> Implement functionality in Cake.NuGet for downloading packages</li>
+<li><a href="https://github.com/cake-build/cake/issues/1734"><strong>#1734</strong></a> Add GitLink 3 compatible aliases</li>
+<li><a href="https://github.com/cake-build/cake/issues/1710"><strong>#1710</strong></a> Add alias for simple sub-directory listing</li>
+<li><a href="https://github.com/cake-build/cake/issues/1699"><strong>#1699</strong></a> NuGetPackSettings missing language/locale ID for the package</li>
+<li><a href="https://github.com/cake-build/cake/issues/1670"><strong>#1670</strong></a> OpenCover is missing some commandline parameter (for example mergebyhash)</li>
+<li><a href="https://github.com/cake-build/cake/issues/1667"><strong>#1667</strong></a> Add support for choco download internalize-all-urls</li>
+<li><a href="https://github.com/cake-build/cake/issues/1621"><strong>#1621</strong></a> Add overload for StartProcess which also returns redircted error output</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1775"><strong>#1775</strong></a> Strange usage of Cake.Core.dll when executing cake sub process</li>
+<li><a href="https://github.com/cake-build/cake/issues/1773"><strong>#1773</strong></a> NuGetHasSource call do not take care of ArgumentCustomization in NuGetSourcesSettings</li>
+<li><a href="https://github.com/cake-build/cake/issues/1759"><strong>#1759</strong></a> XmlPoke always writes the xmldeclaration even if the original file didn't have one</li>
+<li><a href="https://github.com/cake-build/cake/issues/1742"><strong>#1742</strong></a> Some unit tests are locale-sensitive</li>
+<li><a href="https://github.com/cake-build/cake/issues/1739"><strong>#1739</strong></a> NuGetContentResolver can't find assemblies if located in root</li>
+<li><a href="https://github.com/cake-build/cake/issues/1738"><strong>#1738</strong></a> NuGetInstaller can't resolve files if package contains dependencies</li>
+<li><a href="https://github.com/cake-build/cake/issues/1697"><strong>#1697</strong></a> CakeContextAdapter do not implement ICakeContext</li>
+<li><a href="https://github.com/cake-build/cake/issues/1694"><strong>#1694</strong></a> Addin directive shouldn't attempt to load native assemblies</li>
+<li><a href="https://github.com/cake-build/cake/issues/1693"><strong>#1693</strong></a> Possible bug when setting process environment variable</li>
+<li><a href="https://github.com/cake-build/cake/issues/1625"><strong>#1625</strong></a> Comma in msbuild commands are not escaped</li>
+<li><a href="https://github.com/cake-build/cake/issues/1602"><strong>#1602</strong></a> MSBuildFileLogger Verbosity does not accept Verbosity.Verbose</li>
+<li><a href="https://github.com/cake-build/cake/issues/1537"><strong>#1537</strong></a> XmlPeek not working correctly for element nodes</li>
+<li><a href="https://github.com/cake-build/cake/issues/1422"><strong>#1422</strong></a> Error: Unkown token when directory contains multibyte characters</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1752"><strong>#1752</strong></a> Extend DownloadFile to allow AcceptEncoding gzip</li>
+<li><a href="https://github.com/cake-build/cake/issues/1746"><strong>#1746</strong></a> ScriptAnalyzer.Analyze() should not throw, instead return list of errors</li>
+<li><a href="https://github.com/cake-build/cake/issues/1704"><strong>#1704</strong></a> Move CakeConsole &amp; CakeBuildLog to Cake.Core and made CakeConfiguration public</li>
+<li><a href="https://github.com/cake-build/cake/issues/1512"><strong>#1512</strong></a> Please support C# 7 and Roslyn v2</li>
+<li><a href="https://github.com/cake-build/cake/issues/753"><strong>#753</strong></a> Tool Versioning</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1787"><strong>#1787</strong></a> Add opt-out config information to assembly version verification error message</li>
+<li><a href="https://github.com/cake-build/cake/pull/1780"><strong>#1780</strong></a> Fix typo in version.cake</li>
+<li><a href="https://github.com/cake-build/cake/issues/1727"><strong>#1727</strong></a> Incorrect documentation for XmlPeek Alias</li>
+<li><a href="https://github.com/cake-build/cake/pull/1700"><strong>#1700</strong></a> Update nuget license url</li>
+<li><a href="https://github.com/cake-build/cake/pull/1525"><strong>#1525</strong></a> Updated examples for DotNetCoreTest</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2017/08/http-to-https">HTTP to HTTPS</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -163,25 +287,7 @@
         <dd><a href="/blog/author/gep13">gep13</a></dd>
 </dl>            <div>
                 <p>As some of you may have noticed, the <a href="https://www.cakebuild.net/">Cake Website</a> has changed to use an SSL Certificate.  This is something that has been <a href="https://github.com/cake-build/website/issues/40">on our cards for a while</a>, it is just something that we never got around to.</p>
-<h2 id="history">History</h2>
-<p>Originally, we thought that we would purchase our own SSL Certificate, however, we never got around to it.  Then, after joining the .NET Foundation, we had the chance to have them purchase the certificate for us, but again, we never got around to it.  However, after some discussion, we decided to use <a href="https://www.cloudflare.com/">Cloudflare</a> to sit in front on our site, which means that we get an SSL certificate, as well as caching, for free.  We like free.</p>
-<h2 id="what-does-this-mean">What does this mean?</h2>
-<p>For the most part, the switch to HTTPS doesn't mean anything, and your normal everyday use of the website should not change.  We have put in place HTTP 301 redirects, so any attempt to access a non-HTTPS link directed at the site should redirect you through to the HTTPS version.  You can see that in action if you try to access this URL <a href="http://www.cakebuild.net/">http://www.cakebuild.net/</a> you should end up at the HTTPS version.</p>
-<p>There is one area where HTTPS is important though, and that is when it comes to accessing the bootstrappers, config file, and packages.config file, which are downloaded either through our IDE integrations, or from the documentation on the website.  These are files that we, the Cake Team provide to you, and as a result, we want to make sure that these files haven't been tampered with.  Using HTTPS on the site ensures that this happens, and prevents the chance of a man in the middle attack, which could, in theory, tamper with those files.</p>
-<p>All the documentation on the website has been updated to use the HTTPS URLs, as well as all IDE integrations, i.e:</p>
-<ul>
-<li>Visual Studio</li>
-<li>Visual Studio Code</li>
-<li>Yeoman Generators</li>
-</ul>
-<p>have also all been updated to use the new HTTPS URLs for these files.</p>
-<p>To be clear, these are files that we strongly recommended that you download and check into your source control repository.  Therefore, downloading of these files should be a one time thing for each project that you set up.  Without the SSL certificate in place, there was a very real chance that the downloaded files could have been tampered with.  There is an element of due diligence expected when downloading arbitrary scripts from the internet, i.e. you wouldn't just download and run a script from <code>i-am-a-hacker.net</code>.  Having verified the downloaded files, you can commit them to your source control repository.  With the older version of the bootstrappers in your source control repository, they would still be downloading the packages.config (if required, i.e. not committed into your source control repository) from a non-HTTPS URL on each build.  As a result, again, on each build there was a chance that a malicious user could tamper with the downloaded file.  To be clear, this is not a file that is executed, but rather placed on your file system, and packages are restored from that file using NuGet.  As a result, in theory, you could have had packages restored onto your server/computer that you would not have expected to be there.  I think you will all agree that this is a minimal risk situation.</p>
-<p>Going forward, none of the things that have been described above should be a problem.  The introduction of the SSL Certificate means that all future downloads from the Cake Website will be exactly what is expected.</p>
-<h2 id="what-do-i-need-to-do">What do I need to do?</h2>
-<p>If you have already committed both the bootstrapper and the packages.config file into your repository, then <em>technically</em> there is nothing that you need to do.  Since both artifacts exist in your repository, no additional downloads happen from the Cake Website, so you don't need to do anything immediately.  In the longer term, we would recommend that you pull the latest default bootstrapper(s) and commit them into your source control repository.</p>
-<p>If you don't, for whatever reason, have the packages.config committed into your source control repository, then there is one thing that you need to do, and that is to refresh the bootstrapper(s).  This can be easily done fetching the latest bootstrapper(s) using the instructions <a href="https://www.cakebuild.net/docs/tutorials/setting-up-a-new-project">here</a>.  With this change made, simply commit the changes back into your source control repository, and you are good to go.</p>
-<p><strong>NOTE:</strong> If you have customised your bootstrapper(s), and you don't simply want to override it with the new default one(s), you can see the changes that were made to the default bootstrapper(s) in this <a href="https://github.com/cake-build/resources/commit/2ed021f5cfef2d1106b0caf6c801633bbfb58cc0">commit</a>.</p>
-
+                <a href="/blog/2017/08/http-to-https">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/07/debug-cake-addin">How to debug a Cake addin</a></h2>
@@ -236,19 +342,6 @@ The shift to using MSBuild and from <code>project.json</code> to <code>csproj</c
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/07/cake-v0.21.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/06/new-cake-contrib-icon">New Cake Contrib Icon</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, June 23, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/announcement">Announcement</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>Towards the end of 2016, the Cake Team had an internal discussion about the newly created <a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization">Cake Contrib Organisation</a>.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.</p>
-                <a href="/blog/2017/06/new-cake-contrib-icon">Read more...</a>
             </div>
         <hr />
     <nav>

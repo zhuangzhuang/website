@@ -140,12 +140,15 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildAliases">MSBuildAliases</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogSettings">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Settings</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLogger">MSBuildFileLogger</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildLogger">MSBuildLogger</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildRunner">MSBuildRunner</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVerbosityExtensions">M<wbr>S<wbr>Build<wbr>Verbosity<wbr>Extensions</a></li>
 			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
@@ -278,7 +281,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLogger/CA9C3666">LogFile</a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
 								<td>
 									<div>
     Gets or sets LogFile. The path to the log file into which the build log is written.
@@ -367,7 +370,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLogger/5A71A7E8">GetParameters<wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLogger/7C501BEC">GetParameters<wbr>(ICakeEnvironment)<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
@@ -413,16 +416,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>File<wbr>Logger&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>File<wbr>Logger&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -430,6 +423,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>File<wbr>Logger&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

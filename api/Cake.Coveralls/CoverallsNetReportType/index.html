@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - CoverallsNetReportType Enum</title>
+        <title>Cake - API - CoverallsNetReportType Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -142,10 +141,9 @@
 				<li><a href="/api/Cake.Coveralls/CoverallsAliases">CoverallsAliases</a></li>
 				<li><a href="/api/Cake.Coveralls/CoverallsIoRunner">CoverallsIoRunner</a></li>
 				<li><a href="/api/Cake.Coveralls/CoverallsIoSettings">CoverallsIoSettings</a></li>
+				<li class="selected"><a href="/api/Cake.Coveralls/CoverallsNetReportType">Coveralls<wbr>Net<wbr>Report<wbr>Type</a></li>
 				<li><a href="/api/Cake.Coveralls/CoverallsNetRunner">CoverallsNetRunner</a></li>
 				<li><a href="/api/Cake.Coveralls/CoverallsNetSettings">CoverallsNetSettings</a></li>
-			<li class="header">Enum Types</li>
-				<li class="selected"><a href="/api/Cake.Coveralls/CoverallsNetReportType">Coveralls<wbr>Net<wbr>Report<wbr>Type</a></li>
 
 
                     </ul>
@@ -159,7 +157,7 @@
 
 
 <section class="content-header">
-	<h1>Coveralls<wbr>Net<wbr>Report<wbr>Type <small>Enum</small></h1>
+	<h1>Coveralls<wbr>Net<wbr>Report<wbr>Type <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -170,11 +168,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            The coverage report type for CoverallNetRunner
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -186,20 +180,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Coveralls">Cake<wbr>.Coveralls</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -211,11 +195,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["CoverallsNetReportType"]
 class Type type-node
 
@@ -226,7 +205,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum CoverallsNetReportType</code></pre>
+	<pre><code>public sealed class CoverallsNetReportType : Enum</code></pre>
 
 
 
@@ -250,9 +229,7 @@ class Type type-node
 								<td><a href="/api/Cake.Coveralls/CoverallsNetReportType/5BB0BB09">DynamicCodeCoverage</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            Reads input as the CodeCoverage.exe xml format
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -260,9 +237,7 @@ class Type type-node
 								<td><a href="/api/Cake.Coveralls/CoverallsNetReportType/8218D108">Monocov</a></td>
 								<td>2</td>
 								<td>
-									<div>
-            Reads input as monocov results folder
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -270,10 +245,15 @@ class Type type-node
 								<td><a href="/api/Cake.Coveralls/CoverallsNetReportType/1954767E">OpenCover</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            Reads input as OpenCover data
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Coveralls/CoverallsNetReportType/ECBEA244">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -313,6 +293,26 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Coveralls<wbr>Net<wbr>Report<wbr>Type&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Coveralls<wbr>Net<wbr>Report<wbr>Type&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

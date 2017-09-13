@@ -4,7 +4,146 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-08-26T20:43:37Z</updated>
+	<updated>2017-09-13T12:15:09Z</updated>
+	<entry>
+		<author>
+			<name>mholo65</name>
+		</author>
+		<link href="https://cakebuild.net/blog/2017/09/cake-v0.22.0-released" />
+		<id>https://cakebuild.net/blog/2017/09/cake-v0.22.0-released</id>
+		<title>Cake v0.22.0 released</title>
+		<updated>2017-09-13T00:00:00Z</updated>
+		<content>&lt;p&gt;Version 0.22.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;So, let's be clear, this release will break things - but it is all intentional!&lt;/p&gt;
+&lt;p&gt;This release was initially about updating Roslyn, unifying scripting engines, and targeting .NET 4.6. But one thing led to another which resulted in better support for tool and addin versioning when using preprocessor directives, and an optional in-process NuGet client.&lt;/p&gt;
+&lt;p&gt;Updating Roslyn and unifying scripting engines has been a long-awaited improvement for many of you. This brings you C# 7 features (without need for &lt;code&gt;--experimental&lt;/code&gt; switch), debugging with Mono (as we completely removed the old Mono scripting engine), and much, much more. It also allows us to ship Roslyn with Cake, so there's no need for Cake to actually download Roslyn anymore. In order for us to update Roslyn, we also needed to change target framework to .NET 4.6.&lt;/p&gt;
+&lt;p&gt;Tool and addin versioning when using preprocessor directives has been an issue, which has caused many questions. E.g. you may have noted that when changing version for a tool or addin, the old version was still used. Prior to this release, the only solution was to delete the tool/addin from the &lt;code&gt;tools&lt;/code&gt; folder. This is now fixed as Cake supports side-by-side downloading of different versions of tools and addins.&lt;/p&gt;
+&lt;p&gt;Due to unpredictable results when downloading packages using &lt;code&gt;nuget.exe&lt;/code&gt;, tool/addin versioning was solved by adding a intermediate directory containing the version number. This intermediate directory can however cause &lt;code&gt;MAX_PATH&lt;/code&gt; issues when downloading some specific packages. To address this issue, we implemented functionality in &lt;code&gt;Cake.NuGet&lt;/code&gt; to allow Cake to download tools and addins without the need for &lt;code&gt;nuget.exe&lt;/code&gt;. This functionality is currently optional through &lt;a href="../docs/fundamentals/configuration.md"&gt;configuration&lt;/a&gt;, and is the first step towards removing need for &lt;code&gt;nuget.exe&lt;/code&gt; in Cake. Example usage to opt-in for the in-process NuGet client:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Cake.exe --nuget_useinprocessclient=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The in-process NuGet client also gives the possibility to load assemblies from NuGet dependencies. This behaviour can be enabled either via &lt;a href="../docs/fundamentals/configuration.md"&gt;configuration&lt;/a&gt; or directive. Example usage for loading dependencies:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Cake.exe --nuget_useinprocessclient=true --nuget_loaddependencies=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#addin nuget:?package=foo&amp;amp;loaddependencies=true
+#addin nuget:?package=foo.bar&amp;amp;loaddependencies=false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As 0.22.0 has several breaking changes, it will require addins to reference Cake.Core 0.22.0 or newer to be loaded, there's a &amp;quot;you're on your own anything can happen&amp;quot; setting to skip verification but we recommend to start targeting the newer version as soon as possible. Example usage to skip verification:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Cake.exe --settings_skipverification=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We have said it before, but here it comes again. Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version &lt;a href="https://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;. We always try to avoid breaking changes, but we think these new features and improvements justify the friction, and we hope you will too!&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/soydachi"&gt;soydachi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eugen Richter&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/phillipsj"&gt;phillipsj&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Roemer"&gt;Roemer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DixonDs"&gt;DixonDs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patridge"&gt;patridge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kcamp"&gt;kcamp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/dudleyt"&gt;dudleyt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Redth"&gt;Redth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/SIkebe"&gt;SIkebe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/david-driscoll"&gt;david-driscoll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/olevett"&gt;olevett&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/atsushieno"&gt;atsushieno&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Cheesebaron"&gt;Cheesebaron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ErikSchierboom"&gt;ErikSchierboom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/djdelaney"&gt;djdelaney&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mahmoud Ali&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/akamud"&gt;akamud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Julien-Mialon"&gt;Julien-Mialon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=32&amp;amp;state=closed"&gt;49 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1785"&gt;&lt;strong&gt;#1785&lt;/strong&gt;&lt;/a&gt; Bump LatestBreakingChange to 0.22.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1745"&gt;&lt;strong&gt;#1745&lt;/strong&gt;&lt;/a&gt; Change parameter for InstallTools and InstallAddins in IScriptProcessor&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1720"&gt;&lt;strong&gt;#1720&lt;/strong&gt;&lt;/a&gt; ILRepackSettings.Libs should be List of DirectoryPath&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1719"&gt;&lt;strong&gt;#1719&lt;/strong&gt;&lt;/a&gt; Jenkins BRANCH_NAME is missing&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1714"&gt;&lt;strong&gt;#1714&lt;/strong&gt;&lt;/a&gt; Updated CakeRuntime.TargetVersion to net462.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1674"&gt;&lt;strong&gt;#1674&lt;/strong&gt;&lt;/a&gt; MSBuildFileLogger LogFile is a string and not a FilePath&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1665"&gt;&lt;strong&gt;#1665&lt;/strong&gt;&lt;/a&gt; NUnit3Settings: Params and multiple results&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1651"&gt;&lt;strong&gt;#1651&lt;/strong&gt;&lt;/a&gt; NUnit3Settings &lt;code&gt;Verbose&lt;/code&gt; flag obsoleted by NUnit console runner&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1614"&gt;&lt;strong&gt;#1614&lt;/strong&gt;&lt;/a&gt; Correct the class that TeamCityEnvironmentInfo inherits from&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1597"&gt;&lt;strong&gt;#1597&lt;/strong&gt;&lt;/a&gt; CommitsSinceVersionSource and PreReleaseNumber as Integer&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1564"&gt;&lt;strong&gt;#1564&lt;/strong&gt;&lt;/a&gt; DeleteDirectory cannot delete read-only files&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1540"&gt;&lt;strong&gt;#1540&lt;/strong&gt;&lt;/a&gt; Upgrade to Roslyn 2.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1791"&gt;&lt;strong&gt;#1791&lt;/strong&gt;&lt;/a&gt; Add option to enable MSBuild binary logging&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1771"&gt;&lt;strong&gt;#1771&lt;/strong&gt;&lt;/a&gt; Look for msbuild in default install path on Linux&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1761"&gt;&lt;strong&gt;#1761&lt;/strong&gt;&lt;/a&gt; DoesForEach() extension method&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1754"&gt;&lt;strong&gt;#1754&lt;/strong&gt;&lt;/a&gt; VSWhere not returning &amp;quot;prerelease&amp;quot; versions&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1743"&gt;&lt;strong&gt;#1743&lt;/strong&gt;&lt;/a&gt; Implement functionality in Cake.NuGet for downloading packages&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1734"&gt;&lt;strong&gt;#1734&lt;/strong&gt;&lt;/a&gt; Add GitLink 3 compatible aliases&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1710"&gt;&lt;strong&gt;#1710&lt;/strong&gt;&lt;/a&gt; Add alias for simple sub-directory listing&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1699"&gt;&lt;strong&gt;#1699&lt;/strong&gt;&lt;/a&gt; NuGetPackSettings missing language/locale ID for the package&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1670"&gt;&lt;strong&gt;#1670&lt;/strong&gt;&lt;/a&gt; OpenCover is missing some commandline parameter (for example mergebyhash)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1667"&gt;&lt;strong&gt;#1667&lt;/strong&gt;&lt;/a&gt; Add support for choco download internalize-all-urls&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1621"&gt;&lt;strong&gt;#1621&lt;/strong&gt;&lt;/a&gt; Add overload for StartProcess which also returns redircted error output&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bugs&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1775"&gt;&lt;strong&gt;#1775&lt;/strong&gt;&lt;/a&gt; Strange usage of Cake.Core.dll when executing cake sub process&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1773"&gt;&lt;strong&gt;#1773&lt;/strong&gt;&lt;/a&gt; NuGetHasSource call do not take care of ArgumentCustomization in NuGetSourcesSettings&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1759"&gt;&lt;strong&gt;#1759&lt;/strong&gt;&lt;/a&gt; XmlPoke always writes the xmldeclaration even if the original file didn't have one&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1742"&gt;&lt;strong&gt;#1742&lt;/strong&gt;&lt;/a&gt; Some unit tests are locale-sensitive&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1739"&gt;&lt;strong&gt;#1739&lt;/strong&gt;&lt;/a&gt; NuGetContentResolver can't find assemblies if located in root&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1738"&gt;&lt;strong&gt;#1738&lt;/strong&gt;&lt;/a&gt; NuGetInstaller can't resolve files if package contains dependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1697"&gt;&lt;strong&gt;#1697&lt;/strong&gt;&lt;/a&gt; CakeContextAdapter do not implement ICakeContext&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1694"&gt;&lt;strong&gt;#1694&lt;/strong&gt;&lt;/a&gt; Addin directive shouldn't attempt to load native assemblies&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1693"&gt;&lt;strong&gt;#1693&lt;/strong&gt;&lt;/a&gt; Possible bug when setting process environment variable&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1625"&gt;&lt;strong&gt;#1625&lt;/strong&gt;&lt;/a&gt; Comma in msbuild commands are not escaped&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1602"&gt;&lt;strong&gt;#1602&lt;/strong&gt;&lt;/a&gt; MSBuildFileLogger Verbosity does not accept Verbosity.Verbose&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1537"&gt;&lt;strong&gt;#1537&lt;/strong&gt;&lt;/a&gt; XmlPeek not working correctly for element nodes&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1422"&gt;&lt;strong&gt;#1422&lt;/strong&gt;&lt;/a&gt; Error: Unkown token when directory contains multibyte characters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1752"&gt;&lt;strong&gt;#1752&lt;/strong&gt;&lt;/a&gt; Extend DownloadFile to allow AcceptEncoding gzip&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1746"&gt;&lt;strong&gt;#1746&lt;/strong&gt;&lt;/a&gt; ScriptAnalyzer.Analyze() should not throw, instead return list of errors&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1704"&gt;&lt;strong&gt;#1704&lt;/strong&gt;&lt;/a&gt; Move CakeConsole &amp;amp; CakeBuildLog to Cake.Core and made CakeConfiguration public&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1512"&gt;&lt;strong&gt;#1512&lt;/strong&gt;&lt;/a&gt; Please support C# 7 and Roslyn v2&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/753"&gt;&lt;strong&gt;#753&lt;/strong&gt;&lt;/a&gt; Tool Versioning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1787"&gt;&lt;strong&gt;#1787&lt;/strong&gt;&lt;/a&gt; Add opt-out config information to assembly version verification error message&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1780"&gt;&lt;strong&gt;#1780&lt;/strong&gt;&lt;/a&gt; Fix typo in version.cake&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1727"&gt;&lt;strong&gt;#1727&lt;/strong&gt;&lt;/a&gt; Incorrect documentation for XmlPeek Alias&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1700"&gt;&lt;strong&gt;#1700&lt;/strong&gt;&lt;/a&gt; Update nuget license url&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1525"&gt;&lt;strong&gt;#1525&lt;/strong&gt;&lt;/a&gt; Updated examples for DotNetCoreTest&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Version 0.22.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;So, let's be clear, this release will break things - but it is all intentional!&lt;/p&gt;
+&lt;p&gt;This release was initially about updating Roslyn, unifying scripting engines, and targeting .NET 4.6. But one thing led to another which resulted in better support for tool and addin versioning when using preprocessor directives, and an optional in-process NuGet client.&lt;/p&gt;
+&lt;p&gt;Updating Roslyn and unifying scripting engines has been a long-awaited improvement for many of you. This brings you C# 7 features (without need for &lt;code&gt;--experimental&lt;/code&gt; switch), debugging with Mono (as we completely removed the old Mono scripting engine), and much, much more. It also allows us to ship Roslyn with Cake, so there's no need for Cake to actually download Roslyn anymore. In order for us to update Roslyn, we also needed to change target framework to .NET 4.6.&lt;/p&gt;
+&lt;p&gt;Tool and addin versioning when using preprocessor directives has been an issue, which has caused many questions. E.g. you may have noted that when changing version for a tool or addin, the old version was still used. Prior to this release, the only solution was to delete the tool/addin from the &lt;code&gt;tools&lt;/code&gt; folder. This is now fixed as Cake supports side-by-side downloading of different versions of tools and addins.&lt;/p&gt;
+&lt;p&gt;Due to unpredictable results when downloading packages using &lt;code&gt;nuget.exe&lt;/code&gt;, tool/addin versioning was solved by adding a intermediate directory containing the version number. This intermediate directory can however cause &lt;code&gt;MAX_PATH&lt;/code&gt; issues when downloading some specific packages. To address this issue, we implemented functionality in &lt;code&gt;Cake.NuGet&lt;/code&gt; to allow Cake to download tools and addins without the need for &lt;code&gt;nuget.exe&lt;/code&gt;. This functionality is currently optional through &lt;a href="../docs/fundamentals/configuration.md"&gt;configuration&lt;/a&gt;, and is the first step towards removing need for &lt;code&gt;nuget.exe&lt;/code&gt; in Cake. Example usage to opt-in for the in-process NuGet client:&lt;/p&gt;
+
+&lt;p&gt;The in-process NuGet client also gives the possibility to load assemblies from NuGet dependencies. This behaviour can be enabled either via &lt;a href="../docs/fundamentals/configuration.md"&gt;configuration&lt;/a&gt; or directive. Example usage for loading dependencies:&lt;/p&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;p&gt;As 0.22.0 has several breaking changes, it will require addins to reference Cake.Core 0.22.0 or newer to be loaded, there's a "you're on your own anything can happen" setting to skip verification but we recommend to start targeting the newer version as soon as possible. Example usage to skip verification:&lt;/p&gt;
+
+&lt;p&gt;We have said it before, but here it comes again. Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version &lt;a href="https://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;. We always try to avoid breaking changes, but we think these new features and improvements justify the friction, and we hope you will too!&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>gep13</name>
@@ -1014,34 +1153,5 @@ It's truly amazing and humbling feeling that so many have found and appreciate t
 &lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/1647294/21577775/620f0f4c-cf67-11e6-9b05-2860b75b9eb8.png" class="img-fluid" alt="happy new year" /&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;As 2016 is just about to be fully baked, the year has been packed with many ingredients, with this post we would like to take the opportunity to reflect on a few of the essences of what's been a truly amazing and eventful Cake year.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>agc93</name>
-		</author>
-		<link href="https://cakebuild.net/blog/2016/12/cake-vs-prerelease" />
-		<id>https://cakebuild.net/blog/2016/12/cake-vs-prerelease</id>
-		<title>Installing prerelease versions of Cake for Visual Studio</title>
-		<updated>2016-12-13T00:00:00Z</updated>
-		<content>&lt;p&gt;We released the Cake for Visual Studio extension back in September and have been thrilled with the response from the whole community. There's been plenty of activity over &lt;a href="https://github.com/cake-build/cake-vs"&gt;on the GitHub repo&lt;/a&gt; with new issues, bug reports, features and even PRs. Now, you can get the benefits of all the brand new features as they arrive, right in Visual Studio.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;h3 id="ci-releases"&gt;CI Releases&lt;/h3&gt;
-&lt;p&gt;We've always built and uploaded a VSIX package as part of our &lt;a href="https://ci.appveyor.com/project/cakebuild/cake-vs"&gt;CI builds on AppVeyor&lt;/a&gt; to make sure the extension still works and we can test our changes locally. However, installing a new VSIX every time there's a new feature gets cumbersome pretty quickly.&lt;/p&gt;
-&lt;p&gt;Today, however, we don't have to rely on our CI builds for packages anymore (although they'll still be there too!).&lt;/p&gt;
-&lt;h3 id="myget-vsix-feed"&gt;MyGet VSIX Feed&lt;/h3&gt;
-&lt;p&gt;Thanks to the awesome guys over at &lt;a href="https://www.myget.org/"&gt;MyGet&lt;/a&gt;, we now have a custom VSIX feed to use for our CI releases. The MyGet VSIX feed works much like the MyGet NuGet feed (you can read more about that &lt;a href="https://cakebuild.net/blog/2016/08/how-does-cake-use-myget"&gt;in an earlier blog post&lt;/a&gt;), but instead of serving NuGet packages, it serves a VSIX &lt;em&gt;feed&lt;/em&gt;, ready for Visual Studio to consume. This means you will be able to get every new feature and fix as it is merged, rather than waiting for the next stable release.&lt;/p&gt;
-&lt;p&gt;Note that being bleeding-edge builds, there may be occasional issues with these packages. New stable releases will still be published on &lt;a href="https://marketplace.visualstudio.com/items?itemName=vs-publisher-1392591.CakeforVisualStudio"&gt;the Visual Studio Marketplace&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="getting-started-with-the-myget-feed"&gt;Getting started with the MyGet feed&lt;/h3&gt;
-&lt;p&gt;To install the feed in Visual Studio, just open your options window (Tools &amp;gt; Options) and go to 'Extensions and Updates' under 'Environment'. Next, click Add on the right, give your new feed a name (here I'm using 'MyGet'), and use the url &lt;code&gt;https://www.myget.org/F/cake/vsix&lt;/code&gt;. Make sure to click Apply, then OK.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-for-vs-myget/cake-vs-myget.gif" class="img-fluid" alt="Adding a new VSIX feed" /&gt;&lt;/p&gt;
-&lt;p&gt;Now, open your Extensions and Updates window (Tools &amp;gt; Extensions and Updates) and under the Updates entry on the left, you will see your new feed with one pending update. Click Update there and restart Visual Studio when prompted to get started with your bleeding-edge update to Cake for Visual Studio.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-for-vs-myget/cake-vs-update.png" class="img-fluid" alt="Updating Cake for Visual Studio" /&gt;&lt;/p&gt;
-&lt;h3 id="new-features"&gt;New features&lt;/h3&gt;
-&lt;p&gt;Not only will you get the latest fixes, you'll also get new features as we introduce them. Updating now will bring you updated project and item templates as well as a significantly improved experience in the Task Runner Explorer, including support for nested Cake files, more name formats, and support for the experimental flag. Coming up we have even more features planned including auto-indentation, Cake-specific IDE settings, and special drag-and-drop support!&lt;/p&gt;
-&lt;p&gt;Remember, you can always install the latest stable release direct from the &lt;a href="https://marketplace.visualstudio.com/items?itemName=vs-publisher-1392591.CakeforVisualStudio"&gt;Visual Studio Marketplace&lt;/a&gt;, and we always welcome contributions and feedback &lt;a href="https://github.com/cake-build/cake-vs"&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;My name is Alistair Chapman and I'm an InfoSec engineer and occasional .NET developer from Brisbane, Australia who started working on Cake in 2016 and coincidentally hasn't been bored ever since. You can find me on &lt;a href="https://github.com/agc93"&gt;GitHub&lt;/a&gt; and &lt;a href="https://twitter.com/agc93"&gt;Twitter&lt;/a&gt; as agc93, or check out &lt;a href="http://blog.agchapman.com"&gt;my blog&lt;/a&gt;.&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;We released the Cake for Visual Studio extension back in September and have been thrilled with the response from the whole community. There's been plenty of activity over &lt;a href="https://github.com/cake-build/cake-vs"&gt;on the GitHub repo&lt;/a&gt; with new issues, bug reports, features and even PRs. Now, you can get the benefits of all the brand new features as they arrive, right in Visual Studio.&lt;/p&gt;</summary>
 	</entry>
 </feed>

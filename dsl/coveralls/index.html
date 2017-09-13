@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -105,6 +104,7 @@
     <li><a href="/dsl/file-operations">File Operations</a></li>        
     <li><a href="/dsl/fixie">Fixie</a></li>        
     <li><a href="/dsl/gitlink">GitLink</a></li>        
+    <li><a href="/dsl/gitlink-v3">GitLink v3</a></li>        
     <li><a href="/dsl/gitreleasemanager">GitReleaseManager</a></li>        
     <li><a href="/dsl/gitreleasenotes">GitReleaseNotes</a></li>        
     <li><a href="/dsl/gitversion">GitVersion</a></li>        
@@ -175,6 +175,7 @@
     <li><a href="/dsl/directory-operations">Directory Operations</a></li>        
     <li><a href="/dsl/docfx">DocFx</a></li>        
     <li><a href="/dsl/docker">Docker</a></li>        
+    <li><a href="/dsl/documentation">Documentation</a></li>        
     <li><a href="/dsl/doindirectory">DoInDirectory</a></li>        
     <li><a href="/dsl/dotnetcore">DotNetCore</a></li>        
     <li><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></li>        
@@ -278,19 +279,7 @@
                             </div>
 
 
-            <h1 id="Summary">Summary</h1>
-        <div>
-            <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#tool coveralls.net</code></pre>
-            <pre><code class="cs">#tool coveralls.io</code></pre>
-            In addition, you will need to include the following:
-            <pre><code class="cs">#addin Cake.Coveralls</code></pre>
-            <p></p>
-            </div>
-
+    
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -301,8 +290,6 @@
 <a href="/api/Cake.Coveralls/CoverallsAliases/E68936FB">CoverallsIo<wbr>(ICakeContext, <wbr>FilePath)<wbr></a>                            </td>
                             <td>
                                 
-            Uploads the code coverage report to Coveralls.io using the coveralls.io tool.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></i></small>
@@ -313,8 +300,6 @@
 <a href="/api/Cake.Coveralls/CoverallsAliases/5DF64EC6">CoverallsIo<wbr>(ICakeContext, <wbr>FilePath, <wbr>CoverallsIoSettings)<wbr></a>                            </td>
                             <td>
                                 
-            Uploads the code coverage report to Coveralls.io using the coveralls.io tool with the specified settings
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></i></small>
@@ -325,8 +310,6 @@
 <a href="/api/Cake.Coveralls/CoverallsAliases/E0A3F808">CoverallsNet<wbr>(ICakeContext, <wbr>FilePath, <wbr>Coveralls<wbr>Net<wbr>Report<wbr>Type)<wbr></a>                            </td>
                             <td>
                                 
-            Uploads the code coverage report to Coveralls.io using the coveralls.net tool.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></i></small>
@@ -337,8 +320,6 @@
 <a href="/api/Cake.Coveralls/CoverallsAliases/8F8968A7">CoverallsNet<wbr>(ICakeContext, <wbr>FilePath, <wbr>Coveralls<wbr>Net<wbr>Report<wbr>Type, <wbr>Coveralls<wbr>Net<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-            Uploads the code coverage report to Coveralls.io using the coveralls.net tool with the specified settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Coveralls.dll">Cake<wbr>.Coveralls<wbr>.dll</a></i></small>

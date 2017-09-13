@@ -137,6 +137,8 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.OpenCover">Cake<wbr>.Common<wbr>.Tools<wbr>.OpenCover</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverLogLevel">OpenCoverLogLevel</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverAliases">OpenCoverAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverRunner">OpenCoverRunner</a></li>
@@ -286,6 +288,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/98253EBC">ExcludeDirectories</a></td>
+								<td>ISet<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr></td>
+								<td>
+									<div>
+    Gets or sets a list of directories where assemblies being loaded from will be ignored.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/FC8D125E">Filters</a></td>
 								<td>ISet<wbr>&lt;string&gt;<wbr></td>
 								<td>
@@ -296,11 +307,49 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/A6ACA1F1">IsService</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating if the value provided in the target parameter
+    is the name of a service rather than a name of a process.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/39594430">LogLevel</a></td>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverLogLevel">OpenCoverLogLevel</a></td>
+								<td>
+									<div>
+    Gets or sets the log level of OpenCover.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/87371141">MergeByHash</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating to merge the coverage results for an assembly
+    regardless of where it was loaded assuming it has the same file-hash in each location.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/CFBC3DDD">MergeOutput</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to merge the results with an existing file
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/8F6E0AAB">NoDefaultFilters</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating if the default filters should be applied or not.
     </div>
 								</td>
 							</tr>
@@ -332,11 +381,31 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/40E88B39">SearchDirectories</a></td>
+								<td>ISet<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr></td>
+								<td>
+									<div>
+    Gets or sets a list of directories with alternative locations to look for PDBs.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/243C398E">SkipAutoProps</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether or not auto-implemented properties should be skipped.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/6A7F70E1">TargetDirectory</a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Gets or sets a value indicating the path to the target directory.
+    If the target already contains a path, this parameter can be used
+    as additional path where PDBs may be found.
     </div>
 								</td>
 							</tr>
@@ -430,16 +499,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Open<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Open<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -447,6 +506,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Open<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

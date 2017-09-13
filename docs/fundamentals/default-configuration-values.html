@@ -85,6 +85,7 @@
 <p><a href="#tools-path">Tools Path</a></p>
 <p><a href="#addins-path">Addins Path</a></p>
 <p><a href="#modules-path">Modules Path</a></p>
+<p><a href="#skip-verification">Skip Verification</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -203,7 +204,7 @@
 <pre><code class="language-sh">https://packages.nuget.org/api/v2
 </code></pre>
 <h2 id="environment-variable-name">Environment Variable Name</h2>
-<pre><code class="language-sh">NUGET_SOURCE
+<pre><code class="language-sh">CAKE_NUGET_SOURCE
 </code></pre>
 <h2 id="ini-file-contents">ini File Contents</h2>
 <pre><code class="language-sh">[Nuget]
@@ -275,6 +276,29 @@ Modules=./tools/Modules
 </code></pre>
 <h2 id="direct-argument-4">Direct Argument</h2>
 <pre><code class="language-sh">cake.exe --paths_modules=./tools/Modules
+</code></pre>
+<hr>
+<h1 id="skip-verification">Skip Verification</h1>
+<p>If any breaking changes are introduced to Cake, we'll set the minimum supported version of the <code>Cake.Core</code> assembly, any addin/assembly that references an older version of <code>Cake.Core</code> will generate an exception and ultimately abort the execution of the script. This is to avoid runtime errors during execution of the script.</p>
+<p>But if you really need to use an addin/assembly and have verified that the breaking change introduced doesn't concern the addin/assembly directly, i.e. it doesn't use a removed property or changed interface, for this scenario we'll allow you to temporarily opt-out of the assembly verification until addin/assembly author has released a version of the assembly targeting the minimum required version of <code>Cake.Core</code>.</p>
+<p>A word of <strong>caution</strong>, this setting is global for all addins/assemblies your script references and should therefore be considered a temporary quick fix.</p>
+<h2 id="default-value-5">Default Value</h2>
+<pre><code class="language-sh">false
+</code></pre>
+<h2 id="valid-values">Valid Values</h2>
+<pre><code class="language-sh">true
+or
+false
+</code></pre>
+<h2 id="environment-variable-name-5">Environment Variable Name</h2>
+<pre><code class="language-sh">CAKE_SETTINGS_SKIPVERIFICATION
+</code></pre>
+<h2 id="ini-file-contents-5">ini File Contents</h2>
+<pre><code class="language-sh">[Settings]
+SkipVerification=true
+</code></pre>
+<h2 id="direct-argument-5">Direct Argument</h2>
+<pre><code class="language-sh">cake.exe --settings_skipverification=true
 </code></pre>
 
 	</section>

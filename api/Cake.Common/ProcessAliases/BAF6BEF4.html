@@ -147,6 +147,7 @@
 				<li><a href="/api/Cake.Common/ProcessAliases/BB668900">StartProcess<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common/ProcessAliases/81E648CC">StartProcess<wbr>(ICakeContext, <wbr>FilePath, <wbr>ProcessSettings)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Common/ProcessAliases/BAF6BEF4">StartProcess<wbr>(ICakeContext, <wbr>FilePath, <wbr>ProcessSettings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common/ProcessAliases/34E38D20">StartProcess<wbr>(ICakeContext, <wbr>FilePath, <wbr>ProcessSettings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -187,19 +188,23 @@
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeMethodAlias]
-public static int StartProcess(this ICakeContext context, FilePath fileName, ProcessSettings settings, out IEnumerable&lt;string&gt; redirectedOutput)</code></pre>
+public static int StartProcess(this ICakeContext context, FilePath fileName, ProcessSettings settings, out IEnumerable&lt;string&gt; redirectedStandardOutput)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-     <pre><code class="cs"> IEnumerable&lt;string&gt; redirectedOutput;
- var exitCodeWithArgument = StartProcess("ping", new ProcessSettings{
- Arguments = "localhost",
- RedirectStandardOutput = true
- },
- out redirectedOutput
- );
- //Output last line of process output
- Information("Last line of output: {0}", redirectedOutput.LastOrDefault());
+     <pre><code class="cs"> IEnumerable&lt;string&gt; redirectedStandardOutput;
+ var exitCodeWithArgument =
+     StartProcess(
+         "ping",
+         new ProcessSettings {
+             Arguments = "localhost",
+             RedirectStandardOutput = true
+         },
+         out redirectedStandardOutput
+     );
+
+ // Output last line of process output.
+ Information("Last line of output: {0}", redirectedStandardOutput.LastOrDefault());
 
  // This should output 0 as valid arguments supplied
  Information("Exit code: {0}", exitCodeWithArgument);</code></pre>
@@ -254,9 +259,10 @@ public static int StartProcess(this ICakeContext context, FilePath fileName, Pro
 						<td>The settings.</td>
 					</tr>
 					<tr>
-						<td>redirectedOutput</td>
+						<td>redirectedStandardOutput</td>
 						<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
-						<td>outputs process output <code class="cs"><a href="/api/Cake.Core.IO/ProcessSettings/5E18213F">RedirectStandardOutput</a></code> is true</td>
+						<td>Returns process output if <code class="cs"><a href="/api/Cake.Core.IO/ProcessSettings/5E18213F">RedirectStandardOutput</a></code> is true.
+     Otherwise <code class="cs">null</code> is returned.</td>
 					</tr>
 			</tbody></table>
 		</div>
