@@ -136,19 +136,20 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.NUnit">Cake<wbr>.Common<wbr>.Tools<wbr>.NUnit</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Aliases">NUnit3Aliases</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Runner">NUnit3Runner</a></li>
-				<li class="selected"><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings">NUnit3Settings</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAliases">NUnitAliases</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitRunner">NUnitRunner</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitSettings">NUnitSettings</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3AppDomainUsage">NUnit3AppDomainUsage</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Labels">NUnit3Labels</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3ProcessOption">NUnit3ProcessOption</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAppDomainUsage">NUnitAppDomainUsage</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitProcessOption">NUnitProcessOption</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Aliases">NUnit3Aliases</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Result">NUnit3Result</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Runner">NUnit3Runner</a></li>
+				<li class="selected"><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings">NUnit3Settings</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAliases">NUnitAliases</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitRunner">NUnitRunner</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitSettings">NUnitSettings</a></li>
 
 
                     </ul>
@@ -367,6 +368,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/32637141">Params</a></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>
+									<div>
+    Gets or sets the params that should be passed to the runner.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/DD55B06A">Process</a></td>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3ProcessOption">NUnit3ProcessOption</a></td>
 								<td>
@@ -377,32 +387,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/9257ECA7">ResultFormat</a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Gets or sets the format that the results should be in. Results must be set to
-    have any effect. Specify nunit2 to output the results in NUnit 2 xml format.
-    nunit3 may be specified for NUnit 3 format, however this is the default. Additional
-    formats may be supported in the future, check the NUnit documentation.
-    </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/5FA90E73">Results</a></td>
-								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>ICollection<wbr>&lt;NUnit3Result&gt;<wbr></td>
 								<td>
 									<div>
-    Gets or sets the name of the XML result file.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/61BB0B65">ResultTransform</a></td>
-								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
-								<td>
-									<div>
-    Gets or sets the file name of an XSL transform that will be applied to the results.
+    Gets or sets the results that should be saved.
     </div>
 								</td>
 							</tr>
@@ -589,16 +578,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>N<wbr>Unit3<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>N<wbr>Unit3<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -606,6 +585,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>N<wbr>Unit3<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

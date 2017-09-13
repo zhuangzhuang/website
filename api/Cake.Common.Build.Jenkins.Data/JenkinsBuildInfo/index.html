@@ -140,6 +140,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>
+				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>
@@ -164,7 +165,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Provides Jenkins build information for a current build.
+    Provides Jenkins build information for the current build.
     </div>
 
 		<div class="panel panel-default">
@@ -259,7 +260,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the build identifier.
+    Gets the build identifier which is identical to <code class="cs"><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo/CF72FD83">BuildNumber</a></code> starting from Jenkins 1.597 and a YYYY-MM-DD_hh-mm-ss timestamp for older builds.
     </div>
 								</td>
 							</tr>
@@ -277,7 +278,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the build URL.
+    Gets the build tag which is a string of "jenkins-${JOB_NAME}-${BUILD_NUMBER}". All forward slashes (/) in the JOB_NAME are replaced with dashes (-).
     </div>
 								</td>
 							</tr>
@@ -296,6 +297,15 @@ class Type type-node
 								<td>
 									<div>
     Gets the executor number.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo/A723EA8C">Workspace</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets the absolute path of the workspace directory assigned to the build.
     </div>
 								</td>
 							</tr>
@@ -383,16 +393,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Jenkins<wbr>Build<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Jenkins<wbr>Build<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -400,6 +400,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>Jenkins<wbr>Build<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

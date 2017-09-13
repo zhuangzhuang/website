@@ -152,10 +152,9 @@
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/ED6843E4">NoHeader</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/37B9F1AD">NoResults</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/CFEE0B76">OutputFile</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/32637141">Params</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/DD55B06A">Process</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/9257ECA7">ResultFormat</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/5FA90E73">Results</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/61BB0B65">ResultTransform</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/EB514776">Seed</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/A27B1495">ShadowCopy</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/93DDAE80">StopOnError</a></li>
@@ -192,7 +191,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the name of the XML result file.
+    Gets or sets the results that should be saved.
     </div>
 
 		<div class="panel panel-default">
@@ -210,7 +209,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public FilePath Results { get; set; }</code></pre>
+	<pre><code>public ICollection&lt;NUnit3Result&gt; Results { get; set; }</code></pre>
 
 
 
@@ -227,10 +226,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
-					<td>
-    The name of the XML result file. Defaults to <code class="cs">TestResult.xml</code>.
-    </td>
+					<td>ICollection<wbr>&lt;NUnit3Result&gt;<wbr></td>
+					<td>The package owners.</td>
 				</tr>
 			</tbody></table>
 		</div>

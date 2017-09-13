@@ -190,18 +190,18 @@ public static string XmlPeek(this ICakeContext context, FilePath filePath, strin
 	<div>
     <pre><code class="cs"><para>XML document:</para>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;pastery xmlns = "http://cakebuild.net/pastery" &gt;
-    &lt; cake price="1.62" /&gt;
+&lt;pastery xmlns = "https://cakebuild.net/pastery" &gt;
+    &lt;cake price="1.62" /&gt;
 &lt;/pastery&gt;</code></pre>
     <p>XmlPeek usage:</p>
     <pre><code class="cs">string version = XmlPeek("./pastery.xml", "/pastery:pastery/pastery:cake/@price",
     new XmlPeekSettings {
-        Namespaces = new Dictionary&lt;string, string&gt; {{ "pastery", "http://cakebuild.net/pastery" }}
+        Namespaces = new Dictionary&lt;string, string&gt; {{ "pastery", "https://cakebuild.net/pastery" }}
     });
 string unknown = XmlPeek("./pastery.xml", "/pastery:pastery/pastery:cake/@recipe",
     new XmlPeekSettings {
-        Namespaces = new Dictionary&lt;string, string&gt; {{ "pastery", "http://cakebuild.net/pastery" }},
-        SuppressWarnings = true
+        Namespaces = new Dictionary&lt;string, string&gt; {{ "pastery", "https://cakebuild.net/pastery" }},
+        SuppressWarning = true
     });</code></pre>
     </div>
 

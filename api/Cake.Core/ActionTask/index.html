@@ -140,6 +140,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Core/ActionTask">ActionTask</a></li>
+				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
 				<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>
 				<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>
 				<li><a href="/api/Cake.Core/CakeEngine">CakeEngine</a></li>
@@ -149,6 +150,7 @@
 				<li><a href="/api/Cake.Core/CakePlatformExtensions">Cake<wbr>Platform<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeReport">CakeReport</a></li>
 				<li><a href="/api/Cake.Core/CakeReportEntry">CakeReportEntry</a></li>
+				<li><a href="/api/Cake.Core/CakeReportPrinter">CakeReportPrinter</a></li>
 				<li><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></li>
 				<li><a href="/api/Cake.Core/CakeTask">CakeTask</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></li>
@@ -170,9 +172,6 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -187,6 +186,9 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -316,6 +318,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/ActionTask/999A35A8">DeferExceptions</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether gets the task's state if it will defer exceptions until the end of the task.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ActionTask/2BB9DCF1">DelayedActions</a></td>
+								<td>Queue<wbr>&lt;Action&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the task's actions that are run at execution time to additionally populate <code class="cs"><a href="/api/Cake.Core/ActionTask/086AE04F">Actions</a></code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/8713EAA1">Dependencies</a></td>
 								<td>IReadOnlyList<wbr>&lt;string&gt;<wbr></td>
 								<td>
@@ -411,6 +431,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/ActionTask/BF744DDA">AddDelayedAction<wbr>(Action)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds a delayed action to the task.
+    This method will be executed the first time the task is executed.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/07296D54">AddDependency<wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -426,6 +456,15 @@ class Type type-node
 								<td>
 									<div>
     Executes the task using the specified context.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ActionTask/01BA03BE">SetDeferExceptions<wbr>(bool)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Wait until all actions have executed to report failure.
     </div>
 								</td>
 							</tr>
@@ -511,16 +550,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;ActionTask&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ActionTask&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -528,6 +557,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;ActionTask&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
