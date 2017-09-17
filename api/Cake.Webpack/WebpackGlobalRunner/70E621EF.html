@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -144,7 +151,10 @@
 				<li><a href="/api/Cake.Webpack/WebpackGlobalRunner/D3E85CCE">WebpackGlobalRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Webpack/WebpackGlobalRunner/22CAD52E">Execute<wbr>(Action<wbr>&lt;<wbr>Webpack<wbr>Runner<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Webpack/NodeToolRunner_1/DCF67F94">FromPath<wbr>(DirectoryPath)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Webpack/WebpackGlobalRunner/70E621EF">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Webpack/WebpackRunner_1/129E97E9">GetToolName<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Webpack/NodeToolRunner_1/27507BBA">GetWorkingDirectory<wbr>(TSettings)<wbr></a></li>
 
 
                     </ul>
@@ -227,7 +237,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 					<td>
             The tool executable name.
             </td>

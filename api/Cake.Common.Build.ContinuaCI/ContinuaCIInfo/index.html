@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -140,10 +147,10 @@
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo">ContinuaCIInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIProvider">ContinuaCIProvider</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Common.Build.ContinuaCI/IContinuaCIProvider">IContinuaCIProvider</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIMessageType">Continua<wbr>C<wbr>I<wbr>Message<wbr>Type</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Common.Build.ContinuaCI/IContinuaCIProvider">IContinuaCIProvider</a></li>
 
 
                     </ul>
@@ -187,11 +194,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo">Continua<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo">Continua<wbr>C<wbr>I<wbr>Changeset<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo">Continua<wbr>C<wbr>I<wbr>Configuration<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo">ContinuaCIBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo">Continua<wbr>C<wbr>I<wbr>Changeset<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo">Continua<wbr>C<wbr>I<wbr>Project<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo">ContinuaCIBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo">Continua<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -203,16 +210,16 @@
 	Base0["object"]--&gt;Type
 	Type["ContinuaCIInfo"]
 class Type type-node
-	Type--&gt;Derived0["ContinuaCIEnvironmentInfo"]
-	click Derived0 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo"
+	Type--&gt;Derived0["ContinuaCIConfigurationInfo"]
+	click Derived0 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo"
 	Type--&gt;Derived1["ContinuaCIChangesetInfo"]
 	click Derived1 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo"
-	Type--&gt;Derived2["ContinuaCIConfigurationInfo"]
-	click Derived2 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo"
+	Type--&gt;Derived2["ContinuaCIProjectInfo"]
+	click Derived2 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo"
 	Type--&gt;Derived3["ContinuaCIBuildInfo"]
 	click Derived3 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo"
-	Type--&gt;Derived4["ContinuaCIProjectInfo"]
-	click Derived4 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo"
+	Type--&gt;Derived4["ContinuaCIEnvironmentInfo"]
+	click Derived4 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo"
 
 						</div>
 					</div>
@@ -274,10 +281,10 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/81EB0256">Get<wbr>Environment<wbr>Date<wbr>Time<wbr>(string)<wbr></a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
-    Gets an environment variable as a <code class="cs"><a href="/">DateTime</a></code>.
+    Gets an environment variable as a <code class="cs">System.DateTime</code>.
     </div>
 								</td>
 							</tr>
@@ -310,7 +317,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/09D171A9">Get<wbr>Environment<wbr>String<wbr>Dictionary<wbr>(string)<wbr></a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets matching list of environment variables as an dictionary of <code class="cs"><a href="/">string</a></code>.
@@ -319,7 +326,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/D893F5E0">Get<wbr>Environment<wbr>String<wbr>List<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets an environment variable as an array of <code class="cs"><a href="/">string</a></code>.
@@ -328,10 +335,10 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/9B5FA24C">Get<wbr>Environment<wbr>Time<wbr>Span<wbr>(string)<wbr></a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
-    Gets an environment variable as a <code class="cs"><a href="/">TimeSpan</a></code>.
+    Gets an environment variable as a <code class="cs">System.TimeSpan</code>.
     </div>
 								</td>
 							</tr>

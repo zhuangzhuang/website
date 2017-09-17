@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -143,6 +150,7 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover/0D386356">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Remover<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1/CD7AA83E">Create<wbr>Argument<wbr>Builder<wbr>(TSettings)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover/87B38E63">Remove<wbr>(string, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Remove<wbr>Settings)<wbr></a></li>
 
 

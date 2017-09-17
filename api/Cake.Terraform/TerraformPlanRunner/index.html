@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -202,8 +209,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;<wbr>Terraform<wbr>Plan<wbr>Settings&gt;<wbr></li>								
-											<li>TerraformRunner<wbr>&lt;<wbr>Terraform<wbr>Plan<wbr>Settings&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li><a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner<wbr>&lt;<wbr>T<wbr>Terraform<wbr>Settings&gt;<wbr></a></li>								
 									</ul>
 								</dd>				
 							
@@ -213,8 +220,9 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["TerraformRunner&lt;TerraformPlanSettings&gt;"]--&gt;Type
-	Base1["Tool&lt;TerraformPlanSettings&gt;"]--&gt;Base0
+	Base0["TerraformRunner&lt;TTerraformSettings&gt;"]--&gt;Type
+	click Base0 "/api/Cake.Terraform/TerraformRunner_1"
+	Base1["Tool&lt;&gt;"]--&gt;Base0
 	Type["TerraformPlanRunner"]
 class Type type-node
 
@@ -288,6 +296,22 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Terraform/TerraformRunner_1/746B65D4">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner<wbr>&lt;<wbr>T<wbr>Terraform<wbr>Settings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Terraform/TerraformRunner_1/AC5039B2">GetToolName<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner<wbr>&lt;<wbr>T<wbr>Terraform<wbr>Settings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Terraform/TerraformPlanRunner/F65AD9DB">ProcessExitCode<wbr>(int)<wbr></a></td>
 								<td>void</td>
 								<td>

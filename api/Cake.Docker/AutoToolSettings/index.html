@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -235,29 +242,29 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Docker/DockerSwarmUpdateSettings">Docker<wbr>Swarm<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerSwarmJoinSettings">Docker<wbr>Swarm<wbr>Join<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerRmSettings">DockerRmSettings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerCpSettings">DockerCpSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerLoadSettings">DockerLoadSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerSwarmInitSettings">Docker<wbr>Swarm<wbr>Init<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerSwarmLeaveSettings">Docker<wbr>Swarm<wbr>Leave<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerPushSettings">DockerPushSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerNetworkCreateSettings">Docker<wbr>Network<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerBuildSettings">DockerBuildSettings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerPullSettings">DockerPullSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerTagSettings">DockerTagSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerRunSettings">DockerRunSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerStopSettings">DockerStopSettings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerRmiSettings">DockerRmiSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeSettings">Docker<wbr>Compose<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerNetworkDisconnectSettings">Docker<wbr>Network<wbr>Disconnect<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerSaveSettings">DockerSaveSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerCreateSettings">DockerCreateSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerNetworkDisconnectSettings">Docker<wbr>Network<wbr>Disconnect<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerPsSettings">DockerPsSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerRunSettings">DockerRunSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerSwarmUpdateSettings">Docker<wbr>Swarm<wbr>Update<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerSwarmLeaveSettings">Docker<wbr>Swarm<wbr>Leave<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerBuildSettings">DockerBuildSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerTagSettings">DockerTagSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerSwarmInitSettings">Docker<wbr>Swarm<wbr>Init<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeSettings">Docker<wbr>Compose<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerNetworkConnectSettings">Docker<wbr>Network<wbr>Connect<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerLoginSettings">DockerLoginSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerPushSettings">DockerPushSettings</a></li>								
 											<li><a href="/api/Cake.Docker/EmptySettings">EmptySettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerPsSettings">DockerPsSettings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerCreateSettings">DockerCreateSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerNetworkCreateSettings">Docker<wbr>Network<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerStopSettings">DockerStopSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerRmSettings">DockerRmSettings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerSwarmJoinSettings">Docker<wbr>Swarm<wbr>Join<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerLoadSettings">DockerLoadSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -269,52 +276,52 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["AutoToolSettings"]
 class Type type-node
-	Type--&gt;Derived0["DockerSwarmUpdateSettings"]
-	click Derived0 "/api/Cake.Docker/DockerSwarmUpdateSettings"
-	Type--&gt;Derived1["DockerSwarmJoinSettings"]
-	click Derived1 "/api/Cake.Docker/DockerSwarmJoinSettings"
-	Type--&gt;Derived2["DockerRmSettings"]
-	click Derived2 "/api/Cake.Docker/DockerRmSettings"
-	Type--&gt;Derived3["DockerCpSettings"]
-	click Derived3 "/api/Cake.Docker/DockerCpSettings"
-	Type--&gt;Derived4["DockerLoadSettings"]
-	click Derived4 "/api/Cake.Docker/DockerLoadSettings"
-	Type--&gt;Derived5["DockerSwarmInitSettings"]
-	click Derived5 "/api/Cake.Docker/DockerSwarmInitSettings"
-	Type--&gt;Derived6["DockerSwarmLeaveSettings"]
-	click Derived6 "/api/Cake.Docker/DockerSwarmLeaveSettings"
-	Type--&gt;Derived7["DockerPushSettings"]
-	click Derived7 "/api/Cake.Docker/DockerPushSettings"
-	Type--&gt;Derived8["DockerNetworkCreateSettings"]
-	click Derived8 "/api/Cake.Docker/DockerNetworkCreateSettings"
-	Type--&gt;Derived9["DockerBuildSettings"]
-	click Derived9 "/api/Cake.Docker/DockerBuildSettings"
-	Type--&gt;Derived10["DockerPullSettings"]
-	click Derived10 "/api/Cake.Docker/DockerPullSettings"
+	Type--&gt;Derived0["DockerCpSettings"]
+	click Derived0 "/api/Cake.Docker/DockerCpSettings"
+	Type--&gt;Derived1["DockerPullSettings"]
+	click Derived1 "/api/Cake.Docker/DockerPullSettings"
+	Type--&gt;Derived2["DockerRmiSettings"]
+	click Derived2 "/api/Cake.Docker/DockerRmiSettings"
+	Type--&gt;Derived3["DockerSaveSettings"]
+	click Derived3 "/api/Cake.Docker/DockerSaveSettings"
+	Type--&gt;Derived4["DockerCreateSettings"]
+	click Derived4 "/api/Cake.Docker/DockerCreateSettings"
+	Type--&gt;Derived5["DockerNetworkDisconnectSettings"]
+	click Derived5 "/api/Cake.Docker/DockerNetworkDisconnectSettings"
+	Type--&gt;Derived6["DockerPsSettings"]
+	click Derived6 "/api/Cake.Docker/DockerPsSettings"
+	Type--&gt;Derived7["DockerRunSettings"]
+	click Derived7 "/api/Cake.Docker/DockerRunSettings"
+	Type--&gt;Derived8["DockerSwarmUpdateSettings"]
+	click Derived8 "/api/Cake.Docker/DockerSwarmUpdateSettings"
+	Type--&gt;Derived9["DockerSwarmLeaveSettings"]
+	click Derived9 "/api/Cake.Docker/DockerSwarmLeaveSettings"
+	Type--&gt;Derived10["DockerBuildSettings"]
+	click Derived10 "/api/Cake.Docker/DockerBuildSettings"
 	Type--&gt;Derived11["DockerTagSettings"]
 	click Derived11 "/api/Cake.Docker/DockerTagSettings"
-	Type--&gt;Derived12["DockerRunSettings"]
-	click Derived12 "/api/Cake.Docker/DockerRunSettings"
-	Type--&gt;Derived13["DockerStopSettings"]
-	click Derived13 "/api/Cake.Docker/DockerStopSettings"
-	Type--&gt;Derived14["DockerRmiSettings"]
-	click Derived14 "/api/Cake.Docker/DockerRmiSettings"
-	Type--&gt;Derived15["DockerComposeSettings"]
-	click Derived15 "/api/Cake.Docker/DockerComposeSettings"
-	Type--&gt;Derived16["DockerNetworkDisconnectSettings"]
-	click Derived16 "/api/Cake.Docker/DockerNetworkDisconnectSettings"
-	Type--&gt;Derived17["DockerSaveSettings"]
-	click Derived17 "/api/Cake.Docker/DockerSaveSettings"
-	Type--&gt;Derived18["DockerNetworkConnectSettings"]
-	click Derived18 "/api/Cake.Docker/DockerNetworkConnectSettings"
-	Type--&gt;Derived19["DockerLoginSettings"]
-	click Derived19 "/api/Cake.Docker/DockerLoginSettings"
-	Type--&gt;Derived20["EmptySettings"]
-	click Derived20 "/api/Cake.Docker/EmptySettings"
-	Type--&gt;Derived21["DockerPsSettings"]
-	click Derived21 "/api/Cake.Docker/DockerPsSettings"
-	Type--&gt;Derived22["DockerCreateSettings"]
-	click Derived22 "/api/Cake.Docker/DockerCreateSettings"
+	Type--&gt;Derived12["DockerSwarmInitSettings"]
+	click Derived12 "/api/Cake.Docker/DockerSwarmInitSettings"
+	Type--&gt;Derived13["DockerComposeSettings"]
+	click Derived13 "/api/Cake.Docker/DockerComposeSettings"
+	Type--&gt;Derived14["DockerNetworkConnectSettings"]
+	click Derived14 "/api/Cake.Docker/DockerNetworkConnectSettings"
+	Type--&gt;Derived15["DockerLoginSettings"]
+	click Derived15 "/api/Cake.Docker/DockerLoginSettings"
+	Type--&gt;Derived16["DockerPushSettings"]
+	click Derived16 "/api/Cake.Docker/DockerPushSettings"
+	Type--&gt;Derived17["EmptySettings"]
+	click Derived17 "/api/Cake.Docker/EmptySettings"
+	Type--&gt;Derived18["DockerNetworkCreateSettings"]
+	click Derived18 "/api/Cake.Docker/DockerNetworkCreateSettings"
+	Type--&gt;Derived19["DockerStopSettings"]
+	click Derived19 "/api/Cake.Docker/DockerStopSettings"
+	Type--&gt;Derived20["DockerRmSettings"]
+	click Derived20 "/api/Cake.Docker/DockerRmSettings"
+	Type--&gt;Derived21["DockerSwarmJoinSettings"]
+	click Derived21 "/api/Cake.Docker/DockerSwarmJoinSettings"
+	Type--&gt;Derived22["DockerLoadSettings"]
+	click Derived22 "/api/Cake.Docker/DockerLoadSettings"
 
 						</div>
 					</div>

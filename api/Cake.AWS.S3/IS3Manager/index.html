@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -287,7 +294,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/F862471D">DeleteAll<wbr>(string, <wbr>DateTimeOffset, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -350,7 +357,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/B8A94E88">GetObjects<wbr>(string, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;S3Object&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -377,7 +384,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/503E89ED">SyncDownload<wbr>(DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -395,7 +402,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/FF1F47F4">SyncUpload<wbr>(DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified file to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.

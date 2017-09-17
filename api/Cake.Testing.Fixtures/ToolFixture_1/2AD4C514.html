@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -142,6 +149,18 @@
 				<li class="selected"><a href="/api/Cake.Testing.Fixtures/ToolFixture_1/2AD4C514">ToolFixture<wbr>(string)<wbr></a></li>
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_1/7DCD3229">CreateResult<wbr>(FilePath, <wbr>ProcessSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/548E816A">GetDefaultToolPath<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/A1C7DC35">Run<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/7A21C89A">RunTool<wbr>()<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/855CBBBA">Configuration</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/B818D32C">DefaultToolPath</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/35CA9FEF">Environment</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/FA0CE0EB">FileSystem</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/6178980E">Globber</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/37B6BA3D">ProcessRunner</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/31628C26">Settings</a></li>
+				<li><a href="/api/Cake.Testing.Fixtures/ToolFixture_2/A23D9F3D">Tools</a></li>
 
 
                     </ul>

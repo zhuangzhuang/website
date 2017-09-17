@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -262,7 +269,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AndroidAdb/AdbAliases/6319D551">AdbBugReport<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Dumps out a bug report.
@@ -282,7 +289,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/AdbAliases/653E1853">AdbDevices<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;<wbr>Adb<wbr>Device<wbr>Info&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Gets a list of all attached emulator/device instances.
@@ -342,7 +349,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/AdbAliases/C9E4E487">AdbLogcat<wbr>(ICakeContext, <wbr>AdbLogcatOptions, <wbr>string, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Dumps out Logcat output.
@@ -432,7 +439,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/AdbAliases/841BAB0B">AdbShell<wbr>(ICakeContext, <wbr>string, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Executes a shell command on the target.

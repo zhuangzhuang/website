@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -202,7 +209,7 @@
 	<h1 id="Examples">Examples</h1>
 	<div>
              The project or solution's <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code> and the build configuration will 
-             return the output file/s (dll or exe) for the project and return as an <code class="cs">System.Collections.Generic.IEnumerable`1</code>
+             return the output file/s (dll or exe) for the project and return as an <code class="cs"><a href="/">IEnumerable&lt;T&gt;</a></code>
              The alias expects a valid `.sln` or a `csproj` file.
             
              For a solution
@@ -279,7 +286,7 @@ IEnumerable&lt;FilePath&gt; filePaths = GetOutputAssemblies(new FilePath("test.c
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 					<td>the list of output assembly paths</td>
 				</tr>
 			</tbody></table>

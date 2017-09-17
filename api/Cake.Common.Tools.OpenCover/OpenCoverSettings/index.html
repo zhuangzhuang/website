@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -247,7 +254,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -259,7 +266,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -269,7 +276,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/F3E9697E">Excluded<wbr>Attribute<wbr>Filters</a></td>
-								<td>ISet<wbr>&lt;string&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets attribute filters used to exclude classes or methods.
@@ -279,7 +286,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/F44FACD0">ExcludedFileFilters</a></td>
-								<td>ISet<wbr>&lt;string&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets file filters used to excluded classes or methods.
@@ -289,7 +296,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/98253EBC">ExcludeDirectories</a></td>
-								<td>ISet<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets a list of directories where assemblies being loaded from will be ignored.
@@ -298,7 +305,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/FC8D125E">Filters</a></td>
-								<td>ISet<wbr>&lt;string&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets the filters.
@@ -373,7 +380,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/29D697C9">Return<wbr>Target<wbr>Code<wbr>Offset</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the Return target code offset to be used
@@ -382,7 +389,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings/40E88B39">SearchDirectories</a></td>
-								<td>ISet<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets a list of directories with alternative locations to look for PDBs.
@@ -421,7 +428,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.

@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -204,9 +211,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apigee/ListKeyValueMapsSettings">List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/CreateKeyValueMapSettings">Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/DeleteKeyValueMapSettings">Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/ListKeyValueMapsSettings">List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -218,12 +225,12 @@
 	click Interface0 "/api/Cake.Apigee/ICredentialSettings"
 	Type["IEnvironmentSettings"]
 class Type type-node
-	Type-.-&gt;Implementing0["ListKeyValueMapsSettings"]
-	click Implementing0 "/api/Cake.Apigee/ListKeyValueMapsSettings"
-	Type-.-&gt;Implementing1["CreateKeyValueMapSettings"]
-	click Implementing1 "/api/Cake.Apigee/CreateKeyValueMapSettings"
-	Type-.-&gt;Implementing2["DeleteKeyValueMapSettings"]
-	click Implementing2 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
+	Type-.-&gt;Implementing0["CreateKeyValueMapSettings"]
+	click Implementing0 "/api/Cake.Apigee/CreateKeyValueMapSettings"
+	Type-.-&gt;Implementing1["DeleteKeyValueMapSettings"]
+	click Implementing1 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
+	Type-.-&gt;Implementing2["ListKeyValueMapsSettings"]
+	click Implementing2 "/api/Cake.Apigee/ListKeyValueMapsSettings"
 
 						</div>
 					</div>

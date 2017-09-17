@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -262,7 +269,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IReadOnlyList<wbr>&lt;<wbr>Genymotion<wbr>Simulator&gt;<wbr></td>
+					<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

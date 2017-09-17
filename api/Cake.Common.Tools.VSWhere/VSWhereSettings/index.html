@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -185,8 +192,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.VSWhere.Product/VSWhereProductSettings">V<wbr>S<wbr>Where<wbr>Product<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings">VSWhereAllSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSWhere.Product/VSWhereProductSettings">V<wbr>S<wbr>Where<wbr>Product<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings">V<wbr>S<wbr>Where<wbr>Latest<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings">V<wbr>S<wbr>Where<wbr>Legacy<wbr>Settings</a></li>								
 									</ul>
@@ -202,10 +209,10 @@
 	Base1["object"]--&gt;Base0
 	Type["VSWhereSettings"]
 class Type type-node
-	Type--&gt;Derived0["VSWhereProductSettings"]
-	click Derived0 "/api/Cake.Common.Tools.VSWhere.Product/VSWhereProductSettings"
-	Type--&gt;Derived1["VSWhereAllSettings"]
-	click Derived1 "/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings"
+	Type--&gt;Derived0["VSWhereAllSettings"]
+	click Derived0 "/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings"
+	Type--&gt;Derived1["VSWhereProductSettings"]
+	click Derived1 "/api/Cake.Common.Tools.VSWhere.Product/VSWhereProductSettings"
 	Type--&gt;Derived2["VSWhereLatestSettings"]
 	click Derived2 "/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings"
 	Type--&gt;Derived3["VSWhereLegacySettings"]
@@ -261,7 +268,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -273,7 +280,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -320,7 +327,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -141,7 +148,18 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.Common.Tools.NuGet.Init/NuGetIniter/1EE73BD2">NuGetIniter<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>INuGetToolResolver)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1/7B5A01F5">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/32C94032">Get<wbr>Environment<wbr>Variables<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1/7A81E178">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1/F476BDE0">GetToolName<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/FAB95BAD">GetToolPath<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/9C92E157">GetWorkingDirectory<wbr>(TSettings)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.NuGet.Init/NuGetIniter/43B6E1CB">Init<wbr>(string, <wbr>string, <wbr>NuGetInitSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/5E8C62B8">ProcessExitCode<wbr>(int)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/7C97BC0F">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/8253AA41">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/A736B09F">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Tooling/Tool_1/225385F4">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings)<wbr></a></li>
 
 
                     </ul>

@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -292,7 +299,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PscpSettings/95419891">EnablePageant</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Enables or disabled use of Pageant.
@@ -310,7 +317,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PscpSettings/06DF8A87">IpVersion</a></td>
-								<td>IpVersion?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Force use of IPv4 or IPv6.
@@ -364,7 +371,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PscpSettings/A9AD8E76">Protocol</a></td>
-								<td>Protocol?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Force use of SFTP or SCP protocol.
@@ -373,7 +380,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Putty/PscpSettings/C7BEA090">SshVersion</a></td>
-								<td>SshVersion?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Force use of particular SSH protocol version.

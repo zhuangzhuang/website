@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -168,7 +175,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Contains settings used by <code class="cs">Cake.Codecov.CodecovRunner</code>. See <a href="https://github.com/codecov/codecov-exe/blob/master/Source/Codecov/Program/CommandLineOptions.cs">CommandLineOptions</a>
+            Contains settings used by <code class="cs"><a href="/">CodecovRunner</a></code>. See <a href="https://github.com/codecov/codecov-exe/blob/master/Source/Codecov/Program/CommandLineOptions.cs">CommandLineOptions</a>
             or run
             <pre><code class="cs">.\codecov.exe --help</code></pre>
             for more details.
@@ -297,7 +304,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Codecov/CodecovSettings/77072328">Envs</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value specifing the enviornment variables to be included with this build.
@@ -307,7 +314,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Codecov/CodecovSettings/8BD91902">Files</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value specifing the target file(s) to upload. (1) -f 'path/to/file'. Only

@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -305,7 +312,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantBoxAddSettings/2D344CB6">Clean</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 Gets or sets a value indicating whether to clean any existing temporary files before downloading
@@ -314,7 +321,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantBoxAddSettings/4C1A94D0">Force</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 When present, the box will be downloaded and overwrite any existing box with this name.
@@ -323,7 +330,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantBoxAddSettings/394445AD">Insecure</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 When present, SSL certificates will not be verified if the URL is an HTTPS URL.
@@ -366,7 +373,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantBoxAddSettings/34907229">GetToolArguments<wbr>()<wbr></a></td>
-								<td>Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Action<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 Gets the command arguments corresponding to the specified settings

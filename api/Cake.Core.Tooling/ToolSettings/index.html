@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -189,64 +196,64 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings">OctopusPackSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings">OpenCoverSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Publish/GitReleaseManagerPublishSettings">Git<wbr>Release<wbr>Manager<wbr>Publish<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSWhere/VSWhereSettings">VSWhereSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings">Report<wbr>Generator<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.SignTool/SignToolSignSettings">SignToolSignSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings">NuGetPackSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Install/NuGetInstallSettings">NuGetInstallSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxySettings">Nu<wbr>Get<wbr>Set<wbr>Proxy<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettings">DotCoverSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSettings">Chocolatey<wbr>Config<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Roundhouse/RoundhouseSettings">RoundhouseSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySettings">Chocolatey<wbr>Api<wbr>Key<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings">XUnit2Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitLink/GitLinkSettings">GitLinkSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureSettings">Chocolatey<wbr>Feature<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings">HeatSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.WiX/LightSettings">LightSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Fixie/FixieSettings">FixieSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings">NUnit3Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKeySettings">Nu<wbr>Get<wbr>Set<wbr>Api<wbr>Key<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Export/GitReleaseManagerExportSettings">Git<wbr>Release<wbr>Manager<wbr>Export<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAddAssetsSettings">Git<wbr>Release<wbr>Manager<wbr>Add<wbr>Assets<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NUnit/NUnitSettings">NUnitSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Add/NuGetAddSettings">NuGetAddSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NSIS/MakeNSISSettings">MakeNSISSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.ReportUnit/ReportUnitSettings">ReportUnitSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">Text<wbr>Transform<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesSettings">Git<wbr>Release<wbr>Notes<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings">NuGetRestoreSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Init/NuGetInitSettings">NuGetInitSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupSettings">InnoSetupSettings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.GitVersion/GitVersionSettings">GitVersionSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Cake/CakeSettings">CakeSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPushSettings">Chocolatey<wbr>Push<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinSettings">Chocolatey<wbr>Pin<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.XUnit/XUnitSettings">XUnitSettings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.ILMerge/ILMergeSettings">ILMergeSettings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAddAssetsSettings">Git<wbr>Release<wbr>Manager<wbr>Add<wbr>Assets<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.ILRepack/ILRepackSettings">ILRepackSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverSettings">OpenCoverSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NSIS/MakeNSISSettings">MakeNSISSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings">NUnit3Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings">NuGetRestoreSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.SignTool/SignToolSignSettings">SignToolSignSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.XUnit/XUnitSettings">XUnitSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKeySettings">Nu<wbr>Get<wbr>Set<wbr>Api<wbr>Key<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings">HeatSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettings">DotCoverSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.WiX/CandleSettings">CandleSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Add/NuGetAddSettings">NuGetAddSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Update/NuGetUpdateSettings">NuGetUpdateSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Sources/NuGetSourcesSettings">NuGetSourcesSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings">XUnit2Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Install/NuGetInstallSettings">NuGetInstallSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Fixie/FixieSettings">FixieSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.WiX/LightSettings">LightSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.VSTest/VSTestSettings">VSTestSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">Text<wbr>Transform<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitLink/GitLink3Settings">GitLink3Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.MSTest/MSTestSettings">MSTestSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesSettings">Git<wbr>Release<wbr>Notes<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.XBuild/XBuildSettings">XBuildSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreateSettings">Git<wbr>Release<wbr>Manager<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinSettings">Chocolatey<wbr>Pin<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Push/NuGetPushSettings">NuGetPushSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Publish/GitReleaseManagerPublishSettings">Git<wbr>Release<wbr>Manager<wbr>Publish<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupSettings">InnoSetupSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.VSWhere/VSWhereSettings">VSWhereSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySettings">Chocolatey<wbr>Api<wbr>Key<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSettings">Chocolatey<wbr>Config<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings">NuGetPackSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Cake/CakeSettings">CakeSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerCloseMilestoneSettings">Git<wbr>Release<wbr>Manager<wbr>Close<wbr>Milestone<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureSettings">Chocolatey<wbr>Feature<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings">Report<wbr>Generator<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPushSettings">Chocolatey<wbr>Push<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Roundhouse/RoundhouseSettings">RoundhouseSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NUnit/NUnitSettings">NUnitSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitLink/GitLinkSettings">GitLinkSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.ReportUnit/ReportUnitSettings">ReportUnitSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Export/GitReleaseManagerExportSettings">Git<wbr>Release<wbr>Manager<wbr>Export<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySourcesSettings">Chocolatey<wbr>Sources<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPackSettings">Chocolatey<wbr>Pack<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Init/NuGetInitSettings">NuGetInitSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxySettings">Nu<wbr>Get<wbr>Set<wbr>Proxy<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Update/NuGetUpdateSettings">NuGetUpdateSettings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.SpecFlow/SpecFlowSettings">SpecFlowSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreateSettings">Git<wbr>Release<wbr>Manager<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySourcesSettings">Chocolatey<wbr>Sources<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.ILRepack/ILRepackSettings">ILRepackSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Push/NuGetPushSettings">NuGetPushSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.WiX/CandleSettings">CandleSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitLink/GitLink3Settings">GitLink3Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Sources/NuGetSourcesSettings">NuGetSourcesSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSTest/VSTestSettings">VSTestSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.XBuild/XBuildSettings">XBuildSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.MSTest/MSTestSettings">MSTestSettings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerCloseMilestoneSettings">Git<wbr>Release<wbr>Manager<wbr>Close<wbr>Milestone<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings">OctopusPackSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -258,122 +265,122 @@
 	Base0["object"]--&gt;Type
 	Type["ToolSettings"]
 class Type type-node
-	Type--&gt;Derived0["OctopusPackSettings"]
-	click Derived0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings"
-	Type--&gt;Derived1["DupFinderSettings"]
-	click Derived1 "/api/Cake.Common.Tools.DupFinder/DupFinderSettings"
-	Type--&gt;Derived2["GitVersionSettings"]
-	click Derived2 "/api/Cake.Common.Tools.GitVersion/GitVersionSettings"
-	Type--&gt;Derived3["ILMergeSettings"]
-	click Derived3 "/api/Cake.Common.Tools.ILMerge/ILMergeSettings"
-	Type--&gt;Derived4["InspectCodeSettings"]
-	click Derived4 "/api/Cake.Common.Tools.InspectCode/InspectCodeSettings"
-	Type--&gt;Derived5["GitReleaseManagerAddAssetsSettings"]
-	click Derived5 "/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAddAssetsSettings"
-	Type--&gt;Derived6["ILRepackSettings"]
-	click Derived6 "/api/Cake.Common.Tools.ILRepack/ILRepackSettings"
-	Type--&gt;Derived7["OpenCoverSettings"]
-	click Derived7 "/api/Cake.Common.Tools.OpenCover/OpenCoverSettings"
-	Type--&gt;Derived8["MakeNSISSettings"]
-	click Derived8 "/api/Cake.Common.Tools.NSIS/MakeNSISSettings"
-	Type--&gt;Derived9["NUnit3Settings"]
-	click Derived9 "/api/Cake.Common.Tools.NUnit/NUnit3Settings"
-	Type--&gt;Derived10["NuGetRestoreSettings"]
-	click Derived10 "/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings"
-	Type--&gt;Derived11["SignToolSignSettings"]
-	click Derived11 "/api/Cake.Common.Tools.SignTool/SignToolSignSettings"
-	Type--&gt;Derived12["XUnitSettings"]
-	click Derived12 "/api/Cake.Common.Tools.XUnit/XUnitSettings"
-	Type--&gt;Derived13["OctopusDeploySettings"]
-	click Derived13 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings"
-	Type--&gt;Derived14["DotNetCoreSettings"]
-	click Derived14 "/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings"
-	Type--&gt;Derived15["NuGetSetApiKeySettings"]
-	click Derived15 "/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKeySettings"
+	Type--&gt;Derived0["OpenCoverSettings"]
+	click Derived0 "/api/Cake.Common.Tools.OpenCover/OpenCoverSettings"
+	Type--&gt;Derived1["OctopusDeploySettings"]
+	click Derived1 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings"
+	Type--&gt;Derived2["GitReleaseManagerPublishSettings"]
+	click Derived2 "/api/Cake.Common.Tools.GitReleaseManager.Publish/GitReleaseManagerPublishSettings"
+	Type--&gt;Derived3["VSWhereSettings"]
+	click Derived3 "/api/Cake.Common.Tools.VSWhere/VSWhereSettings"
+	Type--&gt;Derived4["ReportGeneratorSettings"]
+	click Derived4 "/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings"
+	Type--&gt;Derived5["SignToolSignSettings"]
+	click Derived5 "/api/Cake.Common.Tools.SignTool/SignToolSignSettings"
+	Type--&gt;Derived6["NuGetPackSettings"]
+	click Derived6 "/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings"
+	Type--&gt;Derived7["NuGetInstallSettings"]
+	click Derived7 "/api/Cake.Common.Tools.NuGet.Install/NuGetInstallSettings"
+	Type--&gt;Derived8["NuGetSetProxySettings"]
+	click Derived8 "/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxySettings"
+	Type--&gt;Derived9["DotCoverSettings"]
+	click Derived9 "/api/Cake.Common.Tools.DotCover/DotCoverSettings"
+	Type--&gt;Derived10["ChocolateyConfigSettings"]
+	click Derived10 "/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSettings"
+	Type--&gt;Derived11["RoundhouseSettings"]
+	click Derived11 "/api/Cake.Common.Tools.Roundhouse/RoundhouseSettings"
+	Type--&gt;Derived12["ChocolateyApiKeySettings"]
+	click Derived12 "/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySettings"
+	Type--&gt;Derived13["XUnit2Settings"]
+	click Derived13 "/api/Cake.Common.Tools.XUnit/XUnit2Settings"
+	Type--&gt;Derived14["GitLinkSettings"]
+	click Derived14 "/api/Cake.Common.Tools.GitLink/GitLinkSettings"
+	Type--&gt;Derived15["ChocolateyFeatureSettings"]
+	click Derived15 "/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureSettings"
 	Type--&gt;Derived16["HeatSettings"]
 	click Derived16 "/api/Cake.Common.Tools.WiX.Heat/HeatSettings"
-	Type--&gt;Derived17["DotCoverSettings"]
-	click Derived17 "/api/Cake.Common.Tools.DotCover/DotCoverSettings"
-	Type--&gt;Derived18["CandleSettings"]
-	click Derived18 "/api/Cake.Common.Tools.WiX/CandleSettings"
-	Type--&gt;Derived19["NuGetAddSettings"]
-	click Derived19 "/api/Cake.Common.Tools.NuGet.Add/NuGetAddSettings"
-	Type--&gt;Derived20["NuGetUpdateSettings"]
-	click Derived20 "/api/Cake.Common.Tools.NuGet.Update/NuGetUpdateSettings"
-	Type--&gt;Derived21["NuGetSourcesSettings"]
-	click Derived21 "/api/Cake.Common.Tools.NuGet.Sources/NuGetSourcesSettings"
-	Type--&gt;Derived22["XUnit2Settings"]
-	click Derived22 "/api/Cake.Common.Tools.XUnit/XUnit2Settings"
-	Type--&gt;Derived23["NuGetInstallSettings"]
-	click Derived23 "/api/Cake.Common.Tools.NuGet.Install/NuGetInstallSettings"
-	Type--&gt;Derived24["FixieSettings"]
-	click Derived24 "/api/Cake.Common.Tools.Fixie/FixieSettings"
-	Type--&gt;Derived25["ChocolateySettings"]
-	click Derived25 "/api/Cake.Common.Tools.Chocolatey/ChocolateySettings"
-	Type--&gt;Derived26["LightSettings"]
-	click Derived26 "/api/Cake.Common.Tools.WiX/LightSettings"
-	Type--&gt;Derived27["VSTestSettings"]
-	click Derived27 "/api/Cake.Common.Tools.VSTest/VSTestSettings"
+	Type--&gt;Derived17["LightSettings"]
+	click Derived17 "/api/Cake.Common.Tools.WiX/LightSettings"
+	Type--&gt;Derived18["FixieSettings"]
+	click Derived18 "/api/Cake.Common.Tools.Fixie/FixieSettings"
+	Type--&gt;Derived19["NUnit3Settings"]
+	click Derived19 "/api/Cake.Common.Tools.NUnit/NUnit3Settings"
+	Type--&gt;Derived20["NuGetSetApiKeySettings"]
+	click Derived20 "/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKeySettings"
+	Type--&gt;Derived21["GitReleaseManagerExportSettings"]
+	click Derived21 "/api/Cake.Common.Tools.GitReleaseManager.Export/GitReleaseManagerExportSettings"
+	Type--&gt;Derived22["GitReleaseManagerAddAssetsSettings"]
+	click Derived22 "/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAddAssetsSettings"
+	Type--&gt;Derived23["DupFinderSettings"]
+	click Derived23 "/api/Cake.Common.Tools.DupFinder/DupFinderSettings"
+	Type--&gt;Derived24["NUnitSettings"]
+	click Derived24 "/api/Cake.Common.Tools.NUnit/NUnitSettings"
+	Type--&gt;Derived25["NuGetAddSettings"]
+	click Derived25 "/api/Cake.Common.Tools.NuGet.Add/NuGetAddSettings"
+	Type--&gt;Derived26["MakeNSISSettings"]
+	click Derived26 "/api/Cake.Common.Tools.NSIS/MakeNSISSettings"
+	Type--&gt;Derived27["ReportUnitSettings"]
+	click Derived27 "/api/Cake.Common.Tools.ReportUnit/ReportUnitSettings"
 	Type--&gt;Derived28["TextTransformSettings"]
 	click Derived28 "/api/Cake.Common.Tools.TextTransform/TextTransformSettings"
-	Type--&gt;Derived29["GitLink3Settings"]
-	click Derived29 "/api/Cake.Common.Tools.GitLink/GitLink3Settings"
-	Type--&gt;Derived30["MSTestSettings"]
-	click Derived30 "/api/Cake.Common.Tools.MSTest/MSTestSettings"
-	Type--&gt;Derived31["GitReleaseNotesSettings"]
-	click Derived31 "/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesSettings"
-	Type--&gt;Derived32["XBuildSettings"]
-	click Derived32 "/api/Cake.Common.Tools.XBuild/XBuildSettings"
-	Type--&gt;Derived33["GitReleaseManagerCreateSettings"]
-	click Derived33 "/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreateSettings"
-	Type--&gt;Derived34["ChocolateyPinSettings"]
-	click Derived34 "/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinSettings"
-	Type--&gt;Derived35["NuGetPushSettings"]
-	click Derived35 "/api/Cake.Common.Tools.NuGet.Push/NuGetPushSettings"
-	Type--&gt;Derived36["MSBuildSettings"]
-	click Derived36 "/api/Cake.Common.Tools.MSBuild/MSBuildSettings"
-	Type--&gt;Derived37["GitReleaseManagerPublishSettings"]
-	click Derived37 "/api/Cake.Common.Tools.GitReleaseManager.Publish/GitReleaseManagerPublishSettings"
-	Type--&gt;Derived38["InnoSetupSettings"]
-	click Derived38 "/api/Cake.Common.Tools.InnoSetup/InnoSetupSettings"
-	Type--&gt;Derived39["VSWhereSettings"]
-	click Derived39 "/api/Cake.Common.Tools.VSWhere/VSWhereSettings"
-	Type--&gt;Derived40["ChocolateyApiKeySettings"]
-	click Derived40 "/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySettings"
-	Type--&gt;Derived41["ChocolateyConfigSettings"]
-	click Derived41 "/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSettings"
-	Type--&gt;Derived42["NuGetPackSettings"]
-	click Derived42 "/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings"
-	Type--&gt;Derived43["CakeSettings"]
-	click Derived43 "/api/Cake.Common.Tools.Cake/CakeSettings"
-	Type--&gt;Derived44["GitReleaseManagerCloseMilestoneSettings"]
-	click Derived44 "/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerCloseMilestoneSettings"
-	Type--&gt;Derived45["ChocolateyFeatureSettings"]
-	click Derived45 "/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureSettings"
-	Type--&gt;Derived46["ReportGeneratorSettings"]
-	click Derived46 "/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings"
-	Type--&gt;Derived47["ChocolateyPushSettings"]
-	click Derived47 "/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPushSettings"
-	Type--&gt;Derived48["RoundhouseSettings"]
-	click Derived48 "/api/Cake.Common.Tools.Roundhouse/RoundhouseSettings"
-	Type--&gt;Derived49["NUnitSettings"]
-	click Derived49 "/api/Cake.Common.Tools.NUnit/NUnitSettings"
-	Type--&gt;Derived50["GitLinkSettings"]
-	click Derived50 "/api/Cake.Common.Tools.GitLink/GitLinkSettings"
-	Type--&gt;Derived51["ReportUnitSettings"]
-	click Derived51 "/api/Cake.Common.Tools.ReportUnit/ReportUnitSettings"
-	Type--&gt;Derived52["GitReleaseManagerExportSettings"]
-	click Derived52 "/api/Cake.Common.Tools.GitReleaseManager.Export/GitReleaseManagerExportSettings"
-	Type--&gt;Derived53["ChocolateySourcesSettings"]
-	click Derived53 "/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySourcesSettings"
-	Type--&gt;Derived54["ChocolateyPackSettings"]
-	click Derived54 "/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPackSettings"
-	Type--&gt;Derived55["NuGetInitSettings"]
-	click Derived55 "/api/Cake.Common.Tools.NuGet.Init/NuGetInitSettings"
-	Type--&gt;Derived56["NuGetSetProxySettings"]
-	click Derived56 "/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxySettings"
-	Type--&gt;Derived57["SpecFlowSettings"]
-	click Derived57 "/api/Cake.Common.Tools.SpecFlow/SpecFlowSettings"
+	Type--&gt;Derived29["GitReleaseNotesSettings"]
+	click Derived29 "/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesSettings"
+	Type--&gt;Derived30["NuGetRestoreSettings"]
+	click Derived30 "/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings"
+	Type--&gt;Derived31["NuGetInitSettings"]
+	click Derived31 "/api/Cake.Common.Tools.NuGet.Init/NuGetInitSettings"
+	Type--&gt;Derived32["InnoSetupSettings"]
+	click Derived32 "/api/Cake.Common.Tools.InnoSetup/InnoSetupSettings"
+	Type--&gt;Derived33["GitVersionSettings"]
+	click Derived33 "/api/Cake.Common.Tools.GitVersion/GitVersionSettings"
+	Type--&gt;Derived34["CakeSettings"]
+	click Derived34 "/api/Cake.Common.Tools.Cake/CakeSettings"
+	Type--&gt;Derived35["ChocolateyPushSettings"]
+	click Derived35 "/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPushSettings"
+	Type--&gt;Derived36["ChocolateyPinSettings"]
+	click Derived36 "/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinSettings"
+	Type--&gt;Derived37["XUnitSettings"]
+	click Derived37 "/api/Cake.Common.Tools.XUnit/XUnitSettings"
+	Type--&gt;Derived38["ILMergeSettings"]
+	click Derived38 "/api/Cake.Common.Tools.ILMerge/ILMergeSettings"
+	Type--&gt;Derived39["InspectCodeSettings"]
+	click Derived39 "/api/Cake.Common.Tools.InspectCode/InspectCodeSettings"
+	Type--&gt;Derived40["ChocolateyPackSettings"]
+	click Derived40 "/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPackSettings"
+	Type--&gt;Derived41["NuGetUpdateSettings"]
+	click Derived41 "/api/Cake.Common.Tools.NuGet.Update/NuGetUpdateSettings"
+	Type--&gt;Derived42["SpecFlowSettings"]
+	click Derived42 "/api/Cake.Common.Tools.SpecFlow/SpecFlowSettings"
+	Type--&gt;Derived43["GitReleaseManagerCreateSettings"]
+	click Derived43 "/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreateSettings"
+	Type--&gt;Derived44["ChocolateySourcesSettings"]
+	click Derived44 "/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySourcesSettings"
+	Type--&gt;Derived45["ILRepackSettings"]
+	click Derived45 "/api/Cake.Common.Tools.ILRepack/ILRepackSettings"
+	Type--&gt;Derived46["NuGetPushSettings"]
+	click Derived46 "/api/Cake.Common.Tools.NuGet.Push/NuGetPushSettings"
+	Type--&gt;Derived47["CandleSettings"]
+	click Derived47 "/api/Cake.Common.Tools.WiX/CandleSettings"
+	Type--&gt;Derived48["GitLink3Settings"]
+	click Derived48 "/api/Cake.Common.Tools.GitLink/GitLink3Settings"
+	Type--&gt;Derived49["NuGetSourcesSettings"]
+	click Derived49 "/api/Cake.Common.Tools.NuGet.Sources/NuGetSourcesSettings"
+	Type--&gt;Derived50["VSTestSettings"]
+	click Derived50 "/api/Cake.Common.Tools.VSTest/VSTestSettings"
+	Type--&gt;Derived51["XBuildSettings"]
+	click Derived51 "/api/Cake.Common.Tools.XBuild/XBuildSettings"
+	Type--&gt;Derived52["DotNetCoreSettings"]
+	click Derived52 "/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings"
+	Type--&gt;Derived53["ChocolateySettings"]
+	click Derived53 "/api/Cake.Common.Tools.Chocolatey/ChocolateySettings"
+	Type--&gt;Derived54["MSBuildSettings"]
+	click Derived54 "/api/Cake.Common.Tools.MSBuild/MSBuildSettings"
+	Type--&gt;Derived55["MSTestSettings"]
+	click Derived55 "/api/Cake.Common.Tools.MSTest/MSTestSettings"
+	Type--&gt;Derived56["GitReleaseManagerCloseMilestoneSettings"]
+	click Derived56 "/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerCloseMilestoneSettings"
+	Type--&gt;Derived57["OctopusPackSettings"]
+	click Derived57 "/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings"
 
 						</div>
 					</div>
@@ -405,7 +412,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -416,7 +423,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -434,7 +441,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.

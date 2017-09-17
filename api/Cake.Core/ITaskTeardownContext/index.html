@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -170,6 +177,9 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -184,9 +194,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li class="selected"><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -1782,7 +1789,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common/EnvironmentAliases/97336C76">EnvironmentVariables<wbr>()<wbr></a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
      Retrieves all environment variables
@@ -3126,7 +3133,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common/ReleaseNotesAliases/321AAA80">ParseAllReleaseNotes<wbr>(FilePath)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;ReleaseNotes&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Parses all release notes.
@@ -3176,7 +3183,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Solution.Project.XmlDoc/XmlDocAliases/D5EA4B6B">Parse<wbr>Xml<wbr>Doc<wbr>Example<wbr>Code<wbr>(FilePath)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>Xml<wbr>Doc<wbr>Example<wbr>Code&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Parses Xml documentation example code from given path.
@@ -3186,7 +3193,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Solution.Project.XmlDoc/XmlDocAliases/09E48DBB">Parse<wbr>Xml<wbr>Doc<wbr>Files<wbr>Example<wbr>Code<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>Xml<wbr>Doc<wbr>Example<wbr>Code&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Parses Xml documentation example code from file(s) using given pattern.
@@ -3546,7 +3553,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/77B6C385">TransformText<wbr>(string)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template.
@@ -3556,7 +3563,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/4BDCF966">TransformText<wbr>(string, <wbr>string, <wbr>string)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template, using the specified placeholder.
@@ -3566,7 +3573,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/178B8586">TransformTextFile<wbr>(FilePath)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template on disc.
@@ -3576,7 +3583,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/1B6F02DC">TransformTextFile<wbr>(FilePath, <wbr>string, <wbr>string)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template on disc, using the specified placeholder.

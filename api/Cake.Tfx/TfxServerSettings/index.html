@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -202,8 +209,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings">Tfx<wbr>Extension<wbr>Install<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings">Tfx<wbr>Extension<wbr>Install<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings">Tfx<wbr>Extension<wbr>Share<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -218,10 +225,10 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["TfxServerSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxExtensionInstallSettings"]
-	click Derived0 "/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings"
-	Type--&gt;Derived1["TfxExtensionPublishSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
+	Type--&gt;Derived0["TfxExtensionPublishSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
+	Type--&gt;Derived1["TfxExtensionInstallSettings"]
+	click Derived1 "/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings"
 	Type--&gt;Derived2["TfxExtensionShareSettings"]
 	click Derived2 "/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings"
 
@@ -302,7 +309,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/44497BD4">Output</a></td>
-								<td>TfxOutputType?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value indicating the output type to be used for commands

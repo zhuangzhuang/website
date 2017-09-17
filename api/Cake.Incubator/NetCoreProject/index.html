@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -418,7 +425,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/NetCoreProject/D600E656">Dot<wbr>Net<wbr>Cli<wbr>Tool<wbr>References</a></td>
-								<td>ICollection<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Cli<wbr>Tool<wbr>Reference&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             The dotnet CLI tool references, a collection of <code class="cs"><a href="/api/Cake.Incubator/DotNetCliToolReference">DotNetCliToolReference</a></code>
@@ -665,7 +672,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/NetCoreProject/BDF3B093">PackageReferences</a></td>
-								<td>ICollection<wbr>&lt;<wbr>Package<wbr>Reference&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             The project package references. A collection of <code class="cs"><a href="/api/Cake.Incubator/PackageReference">PackageReference</a></code>
@@ -729,7 +736,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/NetCoreProject/A17B6228">ProjectReferences</a></td>
-								<td>ICollection<wbr>&lt;<wbr>Project<wbr>Reference&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             The references to other projects. A collection of <code class="cs"><a href="/api/Cake.Common.Solution.Project/ProjectReference">ProjectReference</a></code>
@@ -819,7 +826,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/NetCoreProject/43F1D3FB">Targets</a></td>
-								<td>ICollection<wbr>&lt;BuildTarget&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             The projects build targets. A collection of <code class="cs"><a href="/api/Cake.Incubator/BuildTarget">BuildTarget</a></code>

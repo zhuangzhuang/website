@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -232,7 +239,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Kudu.Provider/WebSite/E153799F">AlwaysOnEnabled</a></td>
-								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets if always on is specified and if it's enabled or not.
@@ -241,7 +248,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Kudu.Provider/WebSite/EC70FA0E">AuthEnabled</a></td>
-								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets if authentication is enabled.
@@ -268,7 +275,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Kudu.Provider/WebSite/0E812A41">HttpLoggingEnabled</a></td>
-								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets if http logging is specified and if it's enabled or not.

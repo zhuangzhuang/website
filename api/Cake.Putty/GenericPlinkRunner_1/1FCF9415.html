@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -142,6 +149,9 @@
 			<li class="header">Constructors</li>
 				<li class="selected"><a href="/api/Cake.Putty/GenericPlinkRunner_1/1FCF9415">GenericPlinkRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Putty/PlinkTool_1/2958BFAE">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Putty/PlinkTool_1/2E06630B">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Putty/PlinkTool_1/5FC825BE">GetToolName<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Putty/GenericPlinkRunner_1/499E3979">Run<wbr>(string, <wbr>string, <wbr>TSettings)<wbr></a></li>
 				<li><a href="/api/Cake.Putty/GenericPlinkRunner_1/38B5CF00">RunWithResult<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>string, <wbr>TSettings, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>T[]&gt;<wbr>)<wbr></a></li>
 

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -352,7 +359,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/PackageManagerAliases/FDA99819">PmListFeatures<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Gets a list of features implemented on the target.
@@ -362,7 +369,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/PackageManagerAliases/64EC5F66">PmListLibraries<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Gets a list of libraries that exist on the target.
@@ -372,7 +379,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/PackageManagerAliases/92BCFB04">PmListPackages<wbr>(ICakeContext, <wbr>bool, <wbr>PackageListState, <wbr>PackageSourceType, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;<wbr>Adb<wbr>Package<wbr>List<wbr>Info&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Gets a list of packages from the target.
@@ -382,7 +389,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/PackageManagerAliases/85AA762B">Pm<wbr>List<wbr>Permission<wbr>Groups<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Gets a list of Permission Groups on the target.
@@ -392,7 +399,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/PackageManagerAliases/F2775037">PmListPermissions<wbr>(ICakeContext, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;<wbr>Adb<wbr>Permission<wbr>Group<wbr>Info&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Gets a list of Permissions, grouped by Permission Group on the target

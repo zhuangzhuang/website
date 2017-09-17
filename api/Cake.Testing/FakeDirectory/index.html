@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -324,7 +331,7 @@ public sealed class FakeDirectory : IDirectory, IFileSystemInfo</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Testing/FakeDirectory/A3B74F5C">GetDirectories<wbr>(string, <wbr>SearchScope)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IDirectory&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets directories matching the specified filter and scope.
@@ -333,7 +340,7 @@ public sealed class FakeDirectory : IDirectory, IFileSystemInfo</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Testing/FakeDirectory/9BA3AD08">GetFiles<wbr>(string, <wbr>SearchScope)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IFile&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets files matching the specified filter and scope.
@@ -378,7 +385,7 @@ public sealed class FakeDirectory : IDirectory, IFileSystemInfo</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/5DFE4A4C">GetDirectories<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IDirectory&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets directories matching the specified filter and scope, with option to exclude hidden directories.
@@ -388,7 +395,7 @@ public sealed class FakeDirectory : IDirectory, IFileSystemInfo</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/DF4D07E6">GetDirectories<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>, <wbr>Action<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IDirectory&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets directories matching the specified filter and scope, with option to exclude hidden directories.
@@ -398,7 +405,7 @@ public sealed class FakeDirectory : IDirectory, IFileSystemInfo</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/3BA191FE">GetFiles<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IFile&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets files matching the specified filter and scope.
@@ -408,7 +415,7 @@ public sealed class FakeDirectory : IDirectory, IFileSystemInfo</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/C6824548">GetFiles<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>, <wbr>Action<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IFile&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets files matching the specified filter and scope.

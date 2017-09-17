@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -180,7 +187,7 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>object</li>								
-											<li>Tool<wbr>&lt;<wbr>Inno<wbr>Setup<wbr>Settings&gt;<wbr></li>								
+											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></li>								
 									</ul>
 								</dd>				
 							
@@ -190,7 +197,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;InnoSetupSettings&gt;"]--&gt;Type
+	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+	click Base0 "/api/Cake.Core.Tooling/Tool_1"
 	Base1["object"]--&gt;Base0
 	Type["InnoSetupRunner"]
 class Type type-node
@@ -246,7 +254,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner/0647422A">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(InnoSetupSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets alternative file paths which the tool may exist in
@@ -254,8 +262,18 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/32C94032">Get<wbr>Environment<wbr>Variables<wbr>(TSettings)<wbr></a></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the environment variables.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner/B4FF7946">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the possible names of the tool executable.
@@ -272,12 +290,84 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/FAB95BAD">GetToolPath<wbr>(TSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets the resolved tool path.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/9C92E157">GetWorkingDirectory<wbr>(TSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Gets the working directory.
+    Defaults to the currently set working directory.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/5E8C62B8">ProcessExitCode<wbr>(int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Customized exit code handling.
+    Standard behavior is to fail when non zero.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner/F61B0554">Run<wbr>(FilePath, <wbr>InnoSetupSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
     Runs <code class="cs">iscc.exe</code> with the specified script files and settings.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/7C97BC0F">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs the tool using the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/8253AA41">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs the tool using a custom tool path and the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/A736B09F">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
+								<td>
+									<div>
+    Runs the tool using a custom tool path and the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/225385F4">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
+								<td>
+									<div>
+    Runs the tool using a custom tool path and the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

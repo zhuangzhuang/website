@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -331,7 +338,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettings/4C1C5DD1">Reporters</a></td>
-								<td>Dictionary<wbr>&lt;string, <wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr></td>
+								<td>Dictionary<wbr>&lt;,&gt;<wbr></td>
 								<td>
 									<div>
                 Reporters (and any reporter-specific options) for test results

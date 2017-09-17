@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -285,7 +292,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSSHSettings/075D45EB">DoNotAuthenticate</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 OBSOLETE: Setting this will cause unexpected results and may block scripts.
@@ -319,7 +326,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantSSHSettings/4B9CCAD9">GetToolArguments<wbr>()<wbr></a></td>
-								<td>Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Action<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 Gets the command arguments corresponding to the specified <code class="cs"><a href="/">IVagrantCommandSettings</a></code>

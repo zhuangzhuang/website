@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -225,14 +232,14 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/E4A259CF">AndroidPermissions</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/E3111A73">Android<wbr>Permissions<wbr>Qualified</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -260,7 +267,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/0621467D">Debuggable</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -274,7 +281,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/749A0299">MinSdkVersion</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -288,7 +295,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/48846B5D">TargetSdkVersion</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -341,14 +348,14 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/178BF9DE">GetAllActivityNames<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest/B0391AAC">Get<wbr>Launchable<wbr>Activity<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>

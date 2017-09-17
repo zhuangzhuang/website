@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -205,9 +212,9 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerator<wbr>&lt;FilePath&gt;<wbr></td>
+					<td>IEnumerator<wbr>&lt;T&gt;<wbr></td>
 					<td>
-    A <code class="cs">System.Collections.Generic.IEnumerator`1</code> that can be used to iterate through the collection.
+    A <code class="cs"><a href="/">IEnumerator&lt;T&gt;</a></code> that can be used to iterate through the collection.
     </td>
 				</tr>
 			</tbody></table>

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -270,7 +277,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Incubator/FileExtensions/A863E047">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Filters FilePathCollection by filenames, in the order specified
@@ -280,7 +287,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/FileExtensions/F1111715">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
              Gets the output assembly paths for solution or project files, for a specific build configuration
@@ -300,7 +307,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/FileExtensions/DEC63D67">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the output assembly paths for a solution file, for a specific build configuration

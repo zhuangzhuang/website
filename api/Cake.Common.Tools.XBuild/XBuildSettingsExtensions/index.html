@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -135,13 +142,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.XBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.XBuild</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.XBuild/XBuildToolVersion">XBuildToolVersion</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.XBuild/XBuildAliases">XBuildAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.XBuild/XBuildRunner">XBuildRunner</a></li>
 				<li><a href="/api/Cake.Common.Tools.XBuild/XBuildSettings">XBuildSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.XBuild/XBuildSettingsExtensions">X<wbr>Build<wbr>Settings<wbr>Extensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.XBuild/XBuildToolVersion">XBuildToolVersion</a></li>
 
 
                     </ul>

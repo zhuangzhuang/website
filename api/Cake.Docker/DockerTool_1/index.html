@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -230,19 +237,27 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;TSettings&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Docker/GenericDockerRunner_1">GenericDockerRunner<wbr>&lt;TSettings&gt;<wbr></a></li>								
+									</ul>
+								</dd>			
 							
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["DockerTool&lt;TSettings&gt;"]
 class Type type-node
+	Type--&gt;Derived0["GenericDockerRunner&lt;TSettings&gt;"]
+	click Derived0 "/api/Cake.Docker/GenericDockerRunner_1"
 
 						</div>
 					</div>
@@ -312,7 +327,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Docker/DockerTool_1/21695E34">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             
@@ -321,7 +336,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerTool_1/80FF07AC">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.

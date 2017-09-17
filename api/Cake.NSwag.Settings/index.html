@@ -112,7 +112,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -124,6 +124,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -266,11 +273,9 @@
 				<li class="treeview">
 				<a href="/api/Cake.Common.IO">Cake<wbr>.Common<wbr>.IO</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Common.IO.Net">Cake<wbr>.Common<wbr>.IO<wbr>.Net</a></li>
-			<li><a href="/api/Cake.Common.IO.Paths">Cake<wbr>.Common<wbr>.IO<wbr>.Paths</a></li>
+						<li><a href="/api/Cake.Common.IO.Paths">Cake<wbr>.Common<wbr>.IO<wbr>.Paths</a></li>
 </ul></li>			<li><a href="/api/Cake.Common.Modules">Cake<wbr>.Common<wbr>.Modules</a></li>
 			<li><a href="/api/Cake.Common.Net">Cake<wbr>.Common<wbr>.Net</a></li>
-			<li><a href="/api/Cake.Common.Polyfill">Cake<wbr>.Common<wbr>.Polyfill</a></li>
 			<li><a href="/api/Cake.Common.Security">Cake<wbr>.Common<wbr>.Security</a></li>
 
 				<li class="treeview">
@@ -397,11 +402,9 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Common.Tools.WiX.Heat">Cake<wbr>.Common<wbr>.Tools<wbr>.WiX<wbr>.Heat</a></li>
 </ul></li>			<li><a href="/api/Cake.Common.Tools.XBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.XBuild</a></li>
-			<li><a href="/api/Cake.Common.Tools.Xml">Cake<wbr>.Common<wbr>.Tools<wbr>.Xml</a></li>
 			<li><a href="/api/Cake.Common.Tools.XUnit">Cake<wbr>.Common<wbr>.Tools<wbr>.XUnit</a></li>
 </ul></li>			<li><a href="/api/Cake.Common.Xml">Cake<wbr>.Common<wbr>.Xml</a></li>
-</ul></li>			<li><a href="/api/Cake.Composition">Cake<wbr>.Composition</a></li>
-
+</ul></li>
 				<li class="treeview">
 				<a href="/api/Cake.Compression">Cake<wbr>.Compression</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -412,31 +415,17 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Core.Annotations">Cake<wbr>.Core<wbr>.Annotations</a></li>
 			<li><a href="/api/Cake.Core.Composition">Cake<wbr>.Core<wbr>.Composition</a></li>
-
-				<li class="treeview">
-				<a href="/api/Cake.Core.Configuration">Cake<wbr>.Core<wbr>.Configuration</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Core.Configuration.Parser">Cake<wbr>.Core<wbr>.Configuration<wbr>.Parser</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.Core.Diagnostics">Cake<wbr>.Core<wbr>.Diagnostics</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Core.Diagnostics.Formatting">Cake<wbr>.Core<wbr>.Diagnostics<wbr>.Formatting</a></li>
-</ul></li>			<li><a href="/api/Cake.Core.Graph">Cake<wbr>.Core<wbr>.Graph</a></li>
+			<li><a href="/api/Cake.Core.Configuration">Cake<wbr>.Core<wbr>.Configuration</a></li>
+			<li><a href="/api/Cake.Core.Diagnostics">Cake<wbr>.Core<wbr>.Diagnostics</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Core.IO.Arguments">Cake<wbr>.Core<wbr>.IO<wbr>.Arguments</a></li>
-
-				<li class="treeview">
-				<a href="/api/Cake.Core.IO.Globbing">Cake<wbr>.Core<wbr>.IO<wbr>.Globbing</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Core.IO.Globbing.Nodes">Cake<wbr>.Core<wbr>.IO<wbr>.Globbing<wbr>.Nodes</a></li>
-</ul></li>			<li><a href="/api/Cake.Core.IO.NuGet">Cake<wbr>.Core<wbr>.IO<wbr>.NuGet</a></li>
+			<li><a href="/api/Cake.Core.IO.Globbing">Cake<wbr>.Core<wbr>.IO<wbr>.Globbing</a></li>
+			<li><a href="/api/Cake.Core.IO.NuGet">Cake<wbr>.Core<wbr>.IO<wbr>.NuGet</a></li>
 </ul></li>			<li><a href="/api/Cake.Core.Modules">Cake<wbr>.Core<wbr>.Modules</a></li>
 			<li><a href="/api/Cake.Core.Packaging">Cake<wbr>.Core<wbr>.Packaging</a></li>
-			<li><a href="/api/Cake.Core.Polyfill">Cake<wbr>.Core<wbr>.Polyfill</a></li>
 			<li><a href="/api/Cake.Core.Reflection">Cake<wbr>.Core<wbr>.Reflection</a></li>
 
 				<li class="treeview">
@@ -461,7 +450,6 @@
 				<a href="/api/Cake.DocFx">Cake<wbr>.DocFx</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.DocFx.Build">Cake<wbr>.DocFx<wbr>.Build</a></li>
-			<li><a href="/api/Cake.DocFx.Helper">Cake<wbr>.DocFx<wbr>.Helper</a></li>
 			<li><a href="/api/Cake.DocFx.Init">Cake<wbr>.DocFx<wbr>.Init</a></li>
 			<li><a href="/api/Cake.DocFx.Metadata">Cake<wbr>.DocFx<wbr>.Metadata</a></li>
 </ul></li>			<li><a href="/api/Cake.Docker">Cake<wbr>.Docker</a></li>
@@ -518,12 +506,8 @@
 			<li><a href="/api/Cake.Genymotion.Device">Cake<wbr>.Genymotion<wbr>.Device</a></li>
 			<li><a href="/api/Cake.Genymotion.License">Cake<wbr>.Genymotion<wbr>.License</a></li>
 			<li><a href="/api/Cake.Genymotion.Version">Cake<wbr>.Genymotion<wbr>.Version</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.Git">Cake<wbr>.Git</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Git.Extensions">Cake<wbr>.Git<wbr>.Extensions</a></li>
-</ul></li>			<li><a href="/api/Cake.GitPackager">Cake<wbr>.GitPackager</a></li>
+</ul></li>			<li><a href="/api/Cake.Git">Cake<wbr>.Git</a></li>
+			<li><a href="/api/Cake.GitPackager">Cake<wbr>.GitPackager</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Gitter">Cake<wbr>.Gitter</a> <a href="#" class="expand"></a>
@@ -537,12 +521,8 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.HockeyApp.Internal">Cake<wbr>.HockeyApp<wbr>.Internal</a></li>
 </ul></li>			<li><a href="/api/Cake.Hosts">Cake<wbr>.Hosts</a></li>
-
-				<li class="treeview">
-				<a href="/api/Cake.Http">Cake<wbr>.Http</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Http.Reflection">Cake<wbr>.Http<wbr>.Reflection</a></li>
-</ul></li>			<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
+			<li><a href="/api/Cake.Http">Cake<wbr>.Http</a></li>
+			<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
 			<li><a href="/api/Cake.JMeter">Cake<wbr>.JMeter</a></li>
 			<li><a href="/api/Cake.Json">Cake<wbr>.Json</a></li>
 			<li><a href="/api/Cake.KeePass">Cake<wbr>.KeePass</a></li>
@@ -550,20 +530,14 @@
 				<li class="treeview">
 				<a href="/api/Cake.Kudu">Cake<wbr>.Kudu</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Kudu.Helpers">Cake<wbr>.Kudu<wbr>.Helpers</a></li>
-			<li><a href="/api/Cake.Kudu.KuduSync">Cake<wbr>.Kudu<wbr>.KuduSync</a></li>
+						<li><a href="/api/Cake.Kudu.KuduSync">Cake<wbr>.Kudu<wbr>.KuduSync</a></li>
 			<li><a href="/api/Cake.Kudu.Provider">Cake<wbr>.Kudu<wbr>.Provider</a></li>
 </ul></li>
 				<li class="treeview">
 				<a href="/api/Cake.MarkdownToPdf">Cake<wbr>.MarkdownToPdf</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.MarkdownToPdf.Internal">Cake<wbr>.MarkdownToPdf<wbr>.Internal</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.MicrosoftTeams">Cake<wbr>.MicrosoftTeams</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.MicrosoftTeams.LitJson">Cake<wbr>.MicrosoftTeams<wbr>.LitJson</a></li>
-</ul></li>			<li><a href="/api/Cake.Modules">Cake<wbr>.Modules</a></li>
+</ul></li>			<li><a href="/api/Cake.MicrosoftTeams">Cake<wbr>.MicrosoftTeams</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.MsDeploy">Cake<wbr>.MsDeploy</a> <a href="#" class="expand"></a>
@@ -596,12 +570,8 @@
 				<ul class="treeview-menu">
 						<li class=" selected"><a href="/api/Cake.NSwag.Settings">Cake<wbr>.NSwag<wbr>.Settings</a></li>
 			<li><a href="/api/Cake.NSwag.Sources">Cake<wbr>.NSwag<wbr>.Sources</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Cake.NuGet">Cake<wbr>.NuGet</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.NuGet.Install">Cake<wbr>.NuGet<wbr>.Install</a></li>
-</ul></li>			<li><a href="/api/Cake.OctoDeploy">Cake<wbr>.OctoDeploy</a></li>
+</ul></li>			<li><a href="/api/Cake.NuGet">Cake<wbr>.NuGet</a></li>
+			<li><a href="/api/Cake.OctoDeploy">Cake<wbr>.OctoDeploy</a></li>
 			<li><a href="/api/Cake.OctoVariapus">Cake<wbr>.OctoVariapus</a></li>
 			<li><a href="/api/Cake.Orchard">Cake<wbr>.Orchard</a></li>
 
@@ -615,10 +585,8 @@
 						<li><a href="/api/Cake.Paket.Addin.Pack">Cake<wbr>.Paket<wbr>.Addin<wbr>.Pack</a></li>
 			<li><a href="/api/Cake.Paket.Addin.Push">Cake<wbr>.Paket<wbr>.Addin<wbr>.Push</a></li>
 			<li><a href="/api/Cake.Paket.Addin.Restore">Cake<wbr>.Paket<wbr>.Addin<wbr>.Restore</a></li>
-			<li><a href="/api/Cake.Paket.Addin.Tooling">Cake<wbr>.Paket<wbr>.Addin<wbr>.Tooling</a></li>
 </ul></li></ul></li>			<li><a href="/api/Cake.Path">Cake<wbr>.Path</a></li>
 			<li><a href="/api/Cake.Plist">Cake<wbr>.Plist</a></li>
-			<li><a href="/api/Cake.Polyfill">Cake<wbr>.Polyfill</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Prca">Cake<wbr>.Prca</a> <a href="#" class="expand"></a>
@@ -636,22 +604,14 @@
 				<li class="treeview">
 				<a href="/api/Cake.Prca.PullRequests">Cake<wbr>.Prca<wbr>.PullRequests</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Prca.PullRequests.Tfs.Authentication">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.Authentication</a></li>
-</ul></li></ul></li></ul></li>			<li><a href="/api/Cake.ProjHelpers">Cake<wbr>.ProjHelpers</a></li>
+						<li><a href="/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a></li>
+</ul></li></ul></li>			<li><a href="/api/Cake.ProjHelpers">Cake<wbr>.ProjHelpers</a></li>
 			<li><a href="/api/Cake.Putty">Cake<wbr>.Putty</a></li>
 			<li><a href="/api/Cake.Raygun">Cake<wbr>.Raygun</a></li>
 			<li><a href="/api/Cake.ReSharperReports">Cake<wbr>.ReSharperReports</a></li>
 			<li><a href="/api/Cake.ResxConverter">Cake<wbr>.ResxConverter</a></li>
-
-				<li class="treeview">
-				<a href="/api/Cake.Scripting">Cake<wbr>.Scripting</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Scripting.Roslyn">Cake<wbr>.Scripting<wbr>.Roslyn</a></li>
-</ul></li>			<li><a href="/api/Cake.Scripty">Cake<wbr>.Scripty</a></li>
+			<li><a href="/api/Cake.Scripting">Cake<wbr>.Scripting</a></li>
+			<li><a href="/api/Cake.Scripty">Cake<wbr>.Scripty</a></li>
 			<li><a href="/api/Cake.SemVer">Cake<wbr>.SemVer</a></li>
 
 				<li class="treeview">
@@ -718,13 +678,11 @@
 				<a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.XComponent.Exception">Cake<wbr>.XComponent<wbr>.Exception</a></li>
-			<li><a href="/api/Cake.XComponent.Utils">Cake<wbr>.XComponent<wbr>.Utils</a></li>
 </ul></li>			<li><a href="/api/Cake.XdtTransform">Cake<wbr>.XdtTransform</a></li>
 			<li><a href="/api/Cake.Yaml">Cake<wbr>.Yaml</a></li>
 			<li><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></li>
 			<li><a href="/api/Cake.Yeoman">Cake<wbr>.Yeoman</a></li>
-</ul></li>			<li><a href="/api/Costura">Costura</a></li>
-			<li><a href="/api/global">global</a></li>
+</ul></li>			<li><a href="/api/global">global</a></li>
 
 				<li class="treeview">
 				<a href="/api/MagicChunks">MagicChunks</a> <a href="#" class="expand"></a>
@@ -742,21 +700,13 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.Azure">Microsoft<wbr>.Azure</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/Microsoft.Azure.KeyVault">Microsoft<wbr>.Azure<wbr>.KeyVault</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Azure.KeyVault.Core">Microsoft<wbr>.Azure<wbr>.KeyVault<wbr>.Core</a></li>
-</ul></li>
+						<li><a href="/api/Microsoft.Azure.KeyVault">Microsoft<wbr>.Azure<wbr>.KeyVault</a></li>
+
 				<li class="treeview">
 				<a href="/api/Microsoft.Azure.Management">Microsoft<wbr>.Azure<wbr>.Management</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/Microsoft.Azure.Management.ResourceManager">Microsoft<wbr>.Azure<wbr>.Management<wbr>.ResourceManager</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Azure.Management.ResourceManager.Models">Microsoft<wbr>.Azure<wbr>.Management<wbr>.ResourceManager<wbr>.Models</a></li>
-</ul></li></ul></li></ul></li>
+						<li><a href="/api/Microsoft.Azure.Management.ResourceManager">Microsoft<wbr>.Azure<wbr>.Management<wbr>.ResourceManager</a></li>
+</ul></li></ul></li>
 				<li class="treeview">
 				<a href="/api/Microsoft.Data">Microsoft<wbr>.Data</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -764,8 +714,7 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.Data.Edm">Microsoft<wbr>.Data<wbr>.Edm</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.Edm.Annotations">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Annotations</a></li>
-
+			
 				<li class="treeview">
 				<a href="/api/Microsoft.Data.Edm.Csdl">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -773,51 +722,15 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.Data.Edm.Csdl.Internal">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.Edm.Csdl.Internal.CsdlSemantics">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal<wbr>.CsdlSemantics</a></li>
-
-				<li class="treeview">
-				<a href="/api/Microsoft.Data.Edm.Csdl.Internal.Parsing">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal<wbr>.Parsing</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.Edm.Csdl.Internal.Parsing.Ast">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal<wbr>.Parsing<wbr>.Ast</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Csdl.Internal.Parsing.Common">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal<wbr>.Parsing<wbr>.Common</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Data.Edm.Csdl.Internal.Serialization">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal<wbr>.Serialization</a></li>
-</ul></li></ul></li>			<li><a href="/api/Microsoft.Data.Edm.EdmToClrConversion">Microsoft<wbr>.Data<wbr>.Edm<wbr>.EdmToClrConversion</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Evaluation">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Evaluation</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Expressions">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Expressions</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Internal">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Internal</a></li>
-
-				<li class="treeview">
-				<a href="/api/Microsoft.Data.Edm.Library">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Library</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.Edm.Library.Annotations">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Library<wbr>.Annotations</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Library.Expressions">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Library<wbr>.Expressions</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Library.Internal">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Library<wbr>.Internal</a></li>
-			<li><a href="/api/Microsoft.Data.Edm.Library.Values">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Library<wbr>.Values</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Microsoft.Data.Edm.Validation">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Validation</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.Edm.Validation.Internal">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Validation<wbr>.Internal</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Data.Edm.Values">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Values</a></li>
+						<li><a href="/api/Microsoft.Data.Edm.Csdl.Internal.Parsing">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Csdl<wbr>.Internal<wbr>.Parsing</a></li>
+</ul></li></ul></li>			<li><a href="/api/Microsoft.Data.Edm.Library">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Library</a></li>
+			<li><a href="/api/Microsoft.Data.Edm.Validation">Microsoft<wbr>.Data<wbr>.Edm<wbr>.Validation</a></li>
 </ul></li>
 				<li class="treeview">
 				<a href="/api/Microsoft.Data.OData">Microsoft<wbr>.Data<wbr>.OData</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.OData.Atom">Microsoft<wbr>.Data<wbr>.OData<wbr>.Atom</a></li>
-			<li><a href="/api/Microsoft.Data.OData.Evaluation">Microsoft<wbr>.Data<wbr>.OData<wbr>.Evaluation</a></li>
-			<li><a href="/api/Microsoft.Data.OData.Json">Microsoft<wbr>.Data<wbr>.OData<wbr>.Json</a></li>
-			<li><a href="/api/Microsoft.Data.OData.JsonLight">Microsoft<wbr>.Data<wbr>.OData<wbr>.JsonLight</a></li>
-			<li><a href="/api/Microsoft.Data.OData.Metadata">Microsoft<wbr>.Data<wbr>.OData<wbr>.Metadata</a></li>
-
-				<li class="treeview">
-				<a href="/api/Microsoft.Data.OData.Query">Microsoft<wbr>.Data<wbr>.OData<wbr>.Query</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Data.OData.Query.Metadata">Microsoft<wbr>.Data<wbr>.OData<wbr>.Query<wbr>.Metadata</a></li>
-			<li><a href="/api/Microsoft.Data.OData.Query.SemanticAst">Microsoft<wbr>.Data<wbr>.OData<wbr>.Query<wbr>.SemanticAst</a></li>
-			<li><a href="/api/Microsoft.Data.OData.Query.SyntacticAst">Microsoft<wbr>.Data<wbr>.OData<wbr>.Query<wbr>.SyntacticAst</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Data.OData.VerboseJson">Microsoft<wbr>.Data<wbr>.OData<wbr>.VerboseJson</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Data.Spatial">Microsoft<wbr>.Data<wbr>.Spatial</a></li>
-</ul></li>
+						<li><a href="/api/Microsoft.Data.OData.Query">Microsoft<wbr>.Data<wbr>.OData<wbr>.Query</a></li>
+</ul></li></ul></li>
 				<li class="treeview">
 				<a href="/api/Microsoft.IdentityModel">Microsoft<wbr>.IdentityModel</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -825,12 +738,8 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.IdentityModel.Clients">Microsoft<wbr>.IdentityModel<wbr>.Clients</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/Microsoft.IdentityModel.Clients.ActiveDirectory">Microsoft<wbr>.IdentityModel<wbr>.Clients<wbr>.ActiveDirectory</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.IdentityModel.Clients.ActiveDirectory.Internal">Microsoft<wbr>.IdentityModel<wbr>.Clients<wbr>.ActiveDirectory<wbr>.Internal</a></li>
-</ul></li></ul></li></ul></li>
+						<li><a href="/api/Microsoft.IdentityModel.Clients.ActiveDirectory">Microsoft<wbr>.IdentityModel<wbr>.Clients<wbr>.ActiveDirectory</a></li>
+</ul></li></ul></li>
 				<li class="treeview">
 				<a href="/api/Microsoft.Rest">Microsoft<wbr>.Rest</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -838,12 +747,7 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.Rest.Azure">Microsoft<wbr>.Rest<wbr>.Azure</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/Microsoft.Rest.Azure.Authentication">Microsoft<wbr>.Rest<wbr>.Azure<wbr>.Authentication</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Rest.Azure.Authentication.Internal">Microsoft<wbr>.Rest<wbr>.Azure<wbr>.Authentication<wbr>.Internal</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Rest.Azure.OData">Microsoft<wbr>.Rest<wbr>.Azure<wbr>.OData</a></li>
+						<li><a href="/api/Microsoft.Rest.Azure.Authentication">Microsoft<wbr>.Rest<wbr>.Azure<wbr>.Authentication</a></li>
 </ul></li>
 				<li class="treeview">
 				<a href="/api/Microsoft.Rest.ClientRuntime">Microsoft<wbr>.Rest<wbr>.ClientRuntime</a> <a href="#" class="expand"></a>
@@ -852,16 +756,8 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.Rest.ClientRuntime.Azure">Microsoft<wbr>.Rest<wbr>.ClientRuntime<wbr>.Azure</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/Microsoft.Rest.ClientRuntime.Azure.Authentication">Microsoft<wbr>.Rest<wbr>.ClientRuntime<wbr>.Azure<wbr>.Authentication</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.Rest.ClientRuntime.Azure.Authentication.Properties">Microsoft<wbr>.Rest<wbr>.ClientRuntime<wbr>.Azure<wbr>.Authentication<wbr>.Properties</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Rest.ClientRuntime.Azure.Properties">Microsoft<wbr>.Rest<wbr>.ClientRuntime<wbr>.Azure<wbr>.Properties</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Rest.ClientRuntime.Properties">Microsoft<wbr>.Rest<wbr>.ClientRuntime<wbr>.Properties</a></li>
-</ul></li>			<li><a href="/api/Microsoft.Rest.Serialization">Microsoft<wbr>.Rest<wbr>.Serialization</a></li>
-			<li><a href="/api/Microsoft.Rest.TransientFaultHandling">Microsoft<wbr>.Rest<wbr>.<wbr>Transient<wbr>Fault<wbr>Handling</a></li>
-</ul></li>
+						<li><a href="/api/Microsoft.Rest.ClientRuntime.Azure.Authentication">Microsoft<wbr>.Rest<wbr>.ClientRuntime<wbr>.Azure<wbr>.Authentication</a></li>
+</ul></li></ul></li></ul></li>
 				<li class="treeview">
 				<a href="/api/Microsoft.WindowsAzure">Microsoft<wbr>.WindowsAzure</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -869,48 +765,14 @@
 				<li class="treeview">
 				<a href="/api/Microsoft.WindowsAzure.Storage">Microsoft<wbr>.WindowsAzure<wbr>.Storage</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Analytics">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Analytics</a></li>
-
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.Auth">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Auth</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Auth.Protocol">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Auth<wbr>.Protocol</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.Blob">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Blob</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Blob.Protocol">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Blob<wbr>.Protocol</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.Core">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Core</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Core.Auth">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Core<wbr>.Auth</a></li>
-			<li><a href="/api/Microsoft.WindowsAzure.Storage.Core.Executor">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Core<wbr>.Executor</a></li>
-			<li><a href="/api/Microsoft.WindowsAzure.Storage.Core.Util">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Core<wbr>.Util</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.File">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.File</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.File.Protocol">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.File<wbr>.Protocol</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.Queue">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Queue</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Queue.Protocol">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Queue<wbr>.Protocol</a></li>
-</ul></li>			<li><a href="/api/Microsoft.WindowsAzure.Storage.RetryPolicies">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.RetryPolicies</a></li>
-
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.Shared">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Shared</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Shared.Protocol">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Shared<wbr>.Protocol</a></li>
-</ul></li>
-				<li class="treeview">
-				<a href="/api/Microsoft.WindowsAzure.Storage.Table">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Table</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Microsoft.WindowsAzure.Storage.Table.DataServices">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Table<wbr>.DataServices</a></li>
-			<li><a href="/api/Microsoft.WindowsAzure.Storage.Table.Protocol">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Table<wbr>.Protocol</a></li>
-			<li><a href="/api/Microsoft.WindowsAzure.Storage.Table.Queryable">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Table<wbr>.Queryable</a></li>
-</ul></li></ul></li></ul></li></ul></li>
+						<li><a href="/api/Microsoft.WindowsAzure.Storage.Auth">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Auth</a></li>
+			<li><a href="/api/Microsoft.WindowsAzure.Storage.Blob">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Blob</a></li>
+			<li><a href="/api/Microsoft.WindowsAzure.Storage.Core">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Core</a></li>
+			<li><a href="/api/Microsoft.WindowsAzure.Storage.File">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.File</a></li>
+			<li><a href="/api/Microsoft.WindowsAzure.Storage.Queue">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Queue</a></li>
+			<li><a href="/api/Microsoft.WindowsAzure.Storage.Shared">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Shared</a></li>
+			<li><a href="/api/Microsoft.WindowsAzure.Storage.Table">Microsoft<wbr>.WindowsAzure<wbr>.Storage<wbr>.Table</a></li>
+</ul></li></ul></li></ul></li>
 				<li class="treeview">
 				<a href="/api/Newtonsoft">Newtonsoft</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -918,18 +780,8 @@
 				<li class="treeview">
 				<a href="/api/Newtonsoft.Json">Newtonsoft<wbr>.Json</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Newtonsoft.Json.Bson">Newtonsoft<wbr>.Json<wbr>.Bson</a></li>
-			<li><a href="/api/Newtonsoft.Json.Converters">Newtonsoft<wbr>.Json<wbr>.Converters</a></li>
-
-				<li class="treeview">
-				<a href="/api/Newtonsoft.Json.Linq">Newtonsoft<wbr>.Json<wbr>.Linq</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/Newtonsoft.Json.Linq.JsonPath">Newtonsoft<wbr>.Json<wbr>.Linq<wbr>.JsonPath</a></li>
-</ul></li>			<li><a href="/api/Newtonsoft.Json.Schema">Newtonsoft<wbr>.Json<wbr>.Schema</a></li>
-			<li><a href="/api/Newtonsoft.Json.Serialization">Newtonsoft<wbr>.Json<wbr>.Serialization</a></li>
-			<li><a href="/api/Newtonsoft.Json.Utilities">Newtonsoft<wbr>.Json<wbr>.Utilities</a></li>
-</ul></li></ul></li>			<li><a href="/api/RefitInternalGenerated">Refit<wbr>Internal<wbr>Generated</a></li>
-
+						<li><a href="/api/Newtonsoft.Json.Linq">Newtonsoft<wbr>.Json<wbr>.Linq</a></li>
+</ul></li></ul></li>
 				<li class="treeview">
 				<a href="/api/ResxConverter">ResxConverter</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
@@ -947,46 +799,15 @@
 				<li class="treeview">
 				<a href="/api/System.Data.Services">System<wbr>.Data<wbr>.Services</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/System.Data.Services.Client">System<wbr>.Data<wbr>.Services<wbr>.Client</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/System.Data.Services.Client.Materialization">System<wbr>.Data<wbr>.Services<wbr>.Client<wbr>.Materialization</a></li>
-			<li><a href="/api/System.Data.Services.Client.Metadata">System<wbr>.Data<wbr>.Services<wbr>.Client<wbr>.Metadata</a></li>
-			<li><a href="/api/System.Data.Services.Client.Providers">System<wbr>.Data<wbr>.Services<wbr>.Client<wbr>.Providers</a></li>
-			<li><a href="/api/System.Data.Services.Client.Serializers">System<wbr>.Data<wbr>.Services<wbr>.Client<wbr>.Serializers</a></li>
-</ul></li>			<li><a href="/api/System.Data.Services.Common">System<wbr>.Data<wbr>.Services<wbr>.Common</a></li>
-</ul></li></ul></li>			<li><a href="/api/System.Spatial">System<wbr>.Spatial</a></li>
-</ul></li>			<li><a href="/api/Xunit">Xunit</a></li>
+						<li><a href="/api/System.Data.Services.Client">System<wbr>.Data<wbr>.Services<wbr>.Client</a></li>
+</ul></li></ul></li></ul></li>			<li><a href="/api/Xunit">Xunit</a></li>
 
 				<li class="treeview">
 				<a href="/api/YamlDotNet">YamlDotNet</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/api/YamlDotNet.Core">YamlDotNet<wbr>.Core</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/YamlDotNet.Core.Events">YamlDotNet<wbr>.Core<wbr>.Events</a></li>
-			<li><a href="/api/YamlDotNet.Core.Tokens">YamlDotNet<wbr>.Core<wbr>.Tokens</a></li>
-</ul></li>			<li><a href="/api/YamlDotNet.Helpers">YamlDotNet<wbr>.Helpers</a></li>
-			<li><a href="/api/YamlDotNet.RepresentationModel">YamlDotNet<wbr>.RepresentationModel</a></li>
-
-				<li class="treeview">
-				<a href="/api/YamlDotNet.Serialization">YamlDotNet<wbr>.Serialization</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/api/YamlDotNet.Serialization.Converters">YamlDotNet<wbr>.Serialization<wbr>.Converters</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.EventEmitters">YamlDotNet<wbr>.Serialization<wbr>.EventEmitters</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.NamingConventions">YamlDotNet<wbr>.Serialization<wbr>.NamingConventions</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.NodeDeserializers">YamlDotNet<wbr>.Serialization<wbr>.NodeDeserializers</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.NodeTypeResolvers">YamlDotNet<wbr>.Serialization<wbr>.NodeTypeResolvers</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.ObjectFactories">YamlDotNet<wbr>.Serialization<wbr>.ObjectFactories</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.ObjectGraphTraversalStrategies">YamlDotNet<wbr>.Serialization<wbr>.<wbr>Object<wbr>Graph<wbr>Traversal<wbr>Strategies</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.ObjectGraphVisitors">YamlDotNet<wbr>.Serialization<wbr>.ObjectGraphVisitors</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.TypeInspectors">YamlDotNet<wbr>.Serialization<wbr>.TypeInspectors</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.TypeResolvers">YamlDotNet<wbr>.Serialization<wbr>.TypeResolvers</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.Utilities">YamlDotNet<wbr>.Serialization<wbr>.Utilities</a></li>
-			<li><a href="/api/YamlDotNet.Serialization.ValueDeserializers">YamlDotNet<wbr>.Serialization<wbr>.ValueDeserializers</a></li>
-</ul></li></ul></li>      
+						<li><a href="/api/YamlDotNet.Core">YamlDotNet<wbr>.Core</a></li>
+			<li><a href="/api/YamlDotNet.Serialization">YamlDotNet<wbr>.Serialization</a></li>
+</ul></li>      
 
                     </ul>
                 </section>                

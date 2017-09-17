@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -136,6 +143,11 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Build.TFBuild.Data">Cake<wbr>.Common<wbr>.Build<wbr>.TFBuild<wbr>.Data</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskStatus">TFBuildTaskStatus</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>
@@ -145,11 +157,6 @@
 				<li class="selected"><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData">TFBuildRecordData</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskStatus">TFBuildTaskStatus</a></li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></li>
 
 
                     </ul>
@@ -230,7 +237,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData/5E63FF81">FinishTime</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the finish time of this record.
@@ -248,7 +255,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData/DC91A828">Progress</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the current progress of this record.
@@ -257,7 +264,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData/FF1C7962">Result</a></td>
-								<td>TFBuildTaskResult?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the result of this record.
@@ -266,7 +273,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData/1EE2769E">StartTime</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the start time of this record.
@@ -275,7 +282,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData/F0B8130A">Status</a></td>
-								<td>TFBuildTaskStatus?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the current status of this record.

@@ -118,7 +118,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -130,6 +130,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -195,9 +202,9 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li>IDictionary<wbr>&lt;string, <wbr>object&gt;<wbr></li>								
-											<li>ICollection<wbr>&lt;KeyValuePair<wbr>&lt;string, <wbr>object&gt;<wbr>&gt;<wbr></li>								
-											<li>IEnumerable<wbr>&lt;KeyValuePair<wbr>&lt;string, <wbr>object&gt;<wbr>&gt;<wbr></li>								
+											<li>IDictionary<wbr>&lt;,&gt;<wbr></li>								
+											<li>ICollection<wbr>&lt;&gt;<wbr></li>								
+											<li>IEnumerable<wbr>&lt;&gt;<wbr></li>								
 											<li>IEnumerable</li>								
 									</ul>
 								</dd>
@@ -216,9 +223,9 @@
 						<div class="mermaid">
 							graph TD
 	Base0["DynamicObject"]--&gt;Type
-	Interface0["IDictionary&lt;string, object&gt;"]-.-&gt;Type
-	Interface1["ICollection&lt;KeyValuePair&lt;string, object&gt;&gt;"]-.-&gt;Type
-	Interface2["IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;"]-.-&gt;Type
+	Interface0["IDictionary&lt;,&gt;"]-.-&gt;Type
+	Interface1["ICollection&lt;&gt;"]-.-&gt;Type
+	Interface2["IEnumerable&lt;&gt;"]-.-&gt;Type
 	Interface3["IEnumerable"]-.-&gt;Type
 	Type["JsonObject"]
 class Type type-node
@@ -324,7 +331,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Http/JsonObject/2249DCB3">Keys</a></td>
-								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the keys.
@@ -351,7 +358,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Http/JsonObject/C9CD6F11">Values</a></td>
-								<td>ICollection<wbr>&lt;object&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the values.
@@ -430,7 +437,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Http/JsonObject/2F41D431">Get<wbr>Dynamic<wbr>Member<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Returns the enumeration of all dynamic member names.
@@ -439,7 +446,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Http/JsonObject/67C4B449">GetEnumerator<wbr>()<wbr></a></td>
-								<td>IEnumerator<wbr>&lt;KeyValuePair<wbr>&lt;string, <wbr>object&gt;<wbr>&gt;<wbr></td>
+								<td>IEnumerator<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the enumerator.

@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -312,7 +319,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/4133B6CF">BlkioWeight</a></td>
-								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Block IO weight (relative weight)
@@ -366,7 +373,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/E8D1CE46">CpuPeriod</a></td>
-								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Limit CPU CFS (Completely Fair Scheduler) period
@@ -375,7 +382,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/FAEE56C9">CpuQuota</a></td>
-								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Limit CPU CFS (Completely Fair Scheduler) quota
@@ -402,7 +409,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/5ABE2913">CpuShares</a></td>
-								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             CPU shares (relative weight)
@@ -501,7 +508,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/A036DD66">Env</a></td>
-								<td>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>Dictionary<wbr>&lt;,&gt;<wbr></td>
 								<td>
 									<div>
             Set environment variables
@@ -735,7 +742,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/D9A0E755">OomScoreAdj</a></td>
-								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Tune the host's OOM preferences for containers (accepts -1000 to 1000)
@@ -753,7 +760,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerCreateSettings/6BE7CBF7">PidsLimit</a></td>
-								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Tune container pids limit (set -1 for unlimited), kernel &gt;= 4.3

@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -181,10 +188,28 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>object</li>								
-											<li>Tool<wbr>&lt;TSettings&gt;<wbr></li>								
+											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></li>								
 									</ul>
 								</dd>				
 							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester">DotNetCoreVSTester</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner">DotNetCoreCleaner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker">DotNetCorePacker</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Builder</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher">DotNetCorePublisher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Pusher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester">DotNetCoreTester</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer">DotNetCoreRestorer</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor">DotNetCoreExecutor</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner">DotNetCoreRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Deleter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner">DotNetCoreToolRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder">DotNetCoreBuilder</a></li>								
+									</ul>
+								</dd>			
 							
 						</dl>
 					</div>		
@@ -192,9 +217,36 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+	click Base0 "/api/Cake.Core.Tooling/Tool_1"
 	Base1["object"]--&gt;Base0
 	Type["DotNetCoreTool&lt;TSettings&gt;"]
 class Type type-node
+	Type--&gt;Derived0["DotNetCoreVSTester"]
+	click Derived0 "/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester"
+	Type--&gt;Derived1["DotNetCoreCleaner"]
+	click Derived1 "/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner"
+	Type--&gt;Derived2["DotNetCorePacker"]
+	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker"
+	Type--&gt;Derived3["DotNetCoreMSBuildBuilder"]
+	click Derived3 "/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder"
+	Type--&gt;Derived4["DotNetCorePublisher"]
+	click Derived4 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher"
+	Type--&gt;Derived5["DotNetCoreNuGetPusher"]
+	click Derived5 "/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher"
+	Type--&gt;Derived6["DotNetCoreTester"]
+	click Derived6 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester"
+	Type--&gt;Derived7["DotNetCoreRestorer"]
+	click Derived7 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer"
+	Type--&gt;Derived8["DotNetCoreExecutor"]
+	click Derived8 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor"
+	Type--&gt;Derived9["DotNetCoreRunner"]
+	click Derived9 "/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner"
+	Type--&gt;Derived10["DotNetCoreNuGetDeleter"]
+	click Derived10 "/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter"
+	Type--&gt;Derived11["DotNetCoreToolRunner"]
+	click Derived11 "/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner"
+	Type--&gt;Derived12["DotNetCoreBuilder"]
+	click Derived12 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder"
 
 						</div>
 					</div>
@@ -273,8 +325,28 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/9B12C97A">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets alternative file paths which the tool may exist in
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/32C94032">Get<wbr>Environment<wbr>Variables<wbr>(TSettings)<wbr></a></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the environment variables.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1/07AAACA6">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the possible names of the tool executable.
@@ -288,6 +360,58 @@ class Type type-node
 									<div>
     Gets the name of the tool.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/FAB95BAD">GetToolPath<wbr>(TSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets the resolved tool path.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/9C92E157">GetWorkingDirectory<wbr>(TSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Gets the working directory.
+    Defaults to the currently set working directory.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/5E8C62B8">ProcessExitCode<wbr>(int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Customized exit code handling.
+    Standard behavior is to fail when non zero.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/7C97BC0F">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs the tool using the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/8253AA41">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs the tool using a custom tool path and the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -306,6 +430,26 @@ class Type type-node
 									<div>
     Runs the dotnet cli command using the specified settings and arguments.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/A736B09F">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
+								<td>
+									<div>
+    Runs the tool using a custom tool path and the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/Tool_1/225385F4">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
+								<td>
+									<div>
+    Runs the tool using a custom tool path and the specified settings.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

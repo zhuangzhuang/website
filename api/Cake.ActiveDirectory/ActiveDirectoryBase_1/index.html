@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -192,6 +199,16 @@
 									</ul>
 								</dd>				
 							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.ActiveDirectory.Users/UserFind">UserFind</a></li>								
+											<li><a href="/api/Cake.ActiveDirectory.Users/UserUpdate">UserUpdate</a></li>								
+											<li><a href="/api/Cake.ActiveDirectory.Users/UserDisable">UserDisable</a></li>								
+											<li><a href="/api/Cake.ActiveDirectory.Users/UserCreate">UserCreate</a></li>								
+											<li><a href="/api/Cake.ActiveDirectory.Users/UserDelete">UserDelete</a></li>								
+									</ul>
+								</dd>			
 							
 						</dl>
 					</div>		
@@ -201,6 +218,16 @@
 	Base0["object"]--&gt;Type
 	Type["ActiveDirectoryBase&lt;TSettings&gt;"]
 class Type type-node
+	Type--&gt;Derived0["UserFind"]
+	click Derived0 "/api/Cake.ActiveDirectory.Users/UserFind"
+	Type--&gt;Derived1["UserUpdate"]
+	click Derived1 "/api/Cake.ActiveDirectory.Users/UserUpdate"
+	Type--&gt;Derived2["UserDisable"]
+	click Derived2 "/api/Cake.ActiveDirectory.Users/UserDisable"
+	Type--&gt;Derived3["UserCreate"]
+	click Derived3 "/api/Cake.ActiveDirectory.Users/UserCreate"
+	Type--&gt;Derived4["UserDelete"]
+	click Derived4 "/api/Cake.ActiveDirectory.Users/UserDelete"
 
 						</div>
 					</div>

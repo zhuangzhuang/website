@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -136,6 +143,11 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Build.TFBuild.Data">Cake<wbr>.Common<wbr>.Build<wbr>.TFBuild<wbr>.Data</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></li>
+				<li class="selected"><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskStatus">TFBuildTaskStatus</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>
@@ -145,11 +157,6 @@
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData">TFBuildRecordData</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></li>
-				<li class="selected"><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskStatus">TFBuildTaskStatus</a></li>
-				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></li>
 
 
                     </ul>

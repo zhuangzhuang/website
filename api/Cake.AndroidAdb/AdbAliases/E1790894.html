@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -256,27 +263,27 @@
 					</tr>
 					<tr>
 						<td>recordingCancelToken</td>
-						<td>CancellationToken?</td>
+						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 						<td>Recording cancel token.  If specified, the cancel token must be cancelled to stop the recording.</td>
 					</tr>
 					<tr>
 						<td>timeLimit</td>
-						<td>TimeSpan?</td>
+						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 						<td>Time limit.  If specified, recording will stop after the specified time.</td>
 					</tr>
 					<tr>
 						<td>bitrateMbps</td>
-						<td>int?</td>
+						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 						<td>Bitrate quality in megabits per second.  Default is 4mbps.</td>
 					</tr>
 					<tr>
 						<td>width</td>
-						<td>int?</td>
+						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 						<td>Recording width.</td>
 					</tr>
 					<tr>
 						<td>height</td>
-						<td>int?</td>
+						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 						<td>Recording height.</td>
 					</tr>
 					<tr>

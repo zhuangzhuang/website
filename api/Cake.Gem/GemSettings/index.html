@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -195,8 +202,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Gem.Build/GemBuildSettings">GemBuildSettings</a></li>								
 											<li><a href="/api/Cake.Gem.Push/GemPushSettings">GemPushSettings</a></li>								
+											<li><a href="/api/Cake.Gem.Build/GemBuildSettings">GemBuildSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -208,10 +215,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["GemSettings"]
 class Type type-node
-	Type--&gt;Derived0["GemBuildSettings"]
-	click Derived0 "/api/Cake.Gem.Build/GemBuildSettings"
-	Type--&gt;Derived1["GemPushSettings"]
-	click Derived1 "/api/Cake.Gem.Push/GemPushSettings"
+	Type--&gt;Derived0["GemPushSettings"]
+	click Derived0 "/api/Cake.Gem.Push/GemPushSettings"
+	Type--&gt;Derived1["GemBuildSettings"]
+	click Derived1 "/api/Cake.Gem.Build/GemBuildSettings"
 
 						</div>
 					</div>

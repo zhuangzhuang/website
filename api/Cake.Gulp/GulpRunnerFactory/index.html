@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -234,7 +241,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Gulp/GulpRunnerFactory/6B7F3078">Global</a></td>
-								<td>GulpRunner<wbr>&lt;<wbr>Gulp<wbr>Runner<wbr>Settings&gt;<wbr></td>
+								<td><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></td>
 								<td>
 									<div>
             Get a gulp global runner based on a global gulp installation, a global installation is achieved through `npm install gulp -g`
@@ -243,7 +250,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gulp/GulpRunnerFactory/E7F13F01">Local</a></td>
-								<td>GulpRunner<wbr>&lt;<wbr>Gulp<wbr>Local<wbr>Runner<wbr>Settings&gt;<wbr></td>
+								<td><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></td>
 								<td>
 									<div>
             Get a gulp local runner based on a local gulp installation, a local installation is achieved through `npm install gulp`

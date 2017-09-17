@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -136,6 +143,17 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
+				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
+				<li><a href="/api/Cake.Core.IO/IFileSystem">IFileSystem</a></li>
+				<li><a href="/api/Cake.Core.IO/IFileSystemInfo">IFileSystemInfo</a></li>
+				<li><a href="/api/Cake.Core.IO/IGlobber">IGlobber</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcess">IProcess</a></li>
+				<li class="selected"><a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
+				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
+				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></li>
@@ -155,17 +173,6 @@
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
 				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
-				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
-				<li><a href="/api/Cake.Core.IO/IFileSystem">IFileSystem</a></li>
-				<li><a href="/api/Cake.Core.IO/IFileSystemInfo">IFileSystemInfo</a></li>
-				<li><a href="/api/Cake.Core.IO/IGlobber">IGlobber</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcess">IProcess</a></li>
-				<li class="selected"><a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
-				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
-				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
 
 
                     </ul>
@@ -205,8 +212,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
 									</ul>
 								</dd>				
@@ -219,10 +226,10 @@
 class Type type-node
 	Type-.-&gt;Implementing0["SecretArgument"]
 	click Implementing0 "/api/Cake.Core.IO.Arguments/SecretArgument"
-	Type-.-&gt;Implementing1["TextArgument"]
-	click Implementing1 "/api/Cake.Core.IO.Arguments/TextArgument"
-	Type-.-&gt;Implementing2["SwitchArgument"]
-	click Implementing2 "/api/Cake.Core.IO.Arguments/SwitchArgument"
+	Type-.-&gt;Implementing1["SwitchArgument"]
+	click Implementing1 "/api/Cake.Core.IO.Arguments/SwitchArgument"
+	Type-.-&gt;Implementing2["TextArgument"]
+	click Implementing2 "/api/Cake.Core.IO.Arguments/TextArgument"
 	Type-.-&gt;Implementing3["QuotedArgument"]
 	click Implementing3 "/api/Cake.Core.IO.Arguments/QuotedArgument"
 

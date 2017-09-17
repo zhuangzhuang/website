@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -215,7 +222,7 @@
 				</thead>
 					<tbody><tr>
 						<td>builder</td>
-						<td>CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr></td>
+						<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
 						<td>The task builder.</td>
 					</tr>
 			</tbody></table>
@@ -233,7 +240,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr></td>
+					<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
 					<td>The same <code class="cs"><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder&lt;T&gt;</a></code> instance so that multiple calls can be chained.</td>
 				</tr>
 			</tbody></table>
