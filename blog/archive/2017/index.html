@@ -154,6 +154,26 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/09/cake-v0.22.1-and-v0.22.2-released">Cake v0.22.1 and v0.22.2 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Sunday, September 17, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <p>Version 0.22.1 and 0.22.2 of Cake have been released.</p>
+<p>Following the release of Cake 0.22.0 the 13th of September, an issue with the GitVersion alias and deserializing certain integer properties the tools output was uncovered, and the decision was taken to quickly correct it.</p>
+<p>A little too quickly, but fortunately David Driscoll caught, reported and supplied a pull request quickly, so huge thanks for that!</p>
+<p>In these releases it's corrected in a non breaking way and for the next release these properties will be corrected from integer to nullable integers, which potentially will be a breaking change for anyone using those properties.</p>
+<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in these releases can be seen below.</p>
+                <a href="/blog/2017/09/cake-v0.22.1-and-v0.22.2-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2017/09/cake-v0.22.0-released">Cake v0.22.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -226,29 +246,6 @@
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/07/cake-v0.21.1-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/07/cake-v0.21.0-released">Cake v0.21.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, July 14, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>Version 0.21.0 of Cake has been released.</p>
-<p>So, let's be clear, this release will break things - but it is all intentional!</p>
-<p>This release is mostly about bringing the .NET Core aliases up-to-date with .NET Core SDK 1.0.4, which is the latest RTM/stable version.
-The shift to using MSBuild and from <code>project.json</code> to <code>csproj</code> project system has resulted in many breaking changes and additions to the .NET CLI.</p>
-<p>Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
-<p>Huge thanks to <a href="https://github.com/JonCubed">Jonathan Kuleff</a>, who has done a brilliant job and epic effort in methodically going through the .NET CLI and Cake aliases identifying what's been changed, removed or added! It's been great working with you through these pull-requests.</p>
-<p><img src="https://user-images.githubusercontent.com/1647294/28214695-9a6aea90-68ab-11e7-810a-6324ccef154e.png" class="img-fluid" alt="image"></p>
-<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/07/cake-v0.21.0-released">Read more...</a>
             </div>
         <hr />
     <nav>
