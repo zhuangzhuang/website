@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -205,9 +212,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
-											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
 											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
+											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -219,12 +226,12 @@
 class Type type-node
 	Type-.-&gt;Implementing0["IDirectory"]
 	click Implementing0 "/api/Cake.Core.IO/IDirectory"
-	Type-.-&gt;Implementing1["IFile"]
-	click Implementing1 "/api/Cake.Core.IO/IFile"
-	Type-.-&gt;Implementing2["FakeDirectory"]
-	click Implementing2 "/api/Cake.Testing/FakeDirectory"
-	Type-.-&gt;Implementing3["FakeFile"]
-	click Implementing3 "/api/Cake.Testing/FakeFile"
+	Type-.-&gt;Implementing1["FakeDirectory"]
+	click Implementing1 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing2["FakeFile"]
+	click Implementing2 "/api/Cake.Testing/FakeFile"
+	Type-.-&gt;Implementing3["IFile"]
+	click Implementing3 "/api/Cake.Core.IO/IFile"
 
 						</div>
 					</div>

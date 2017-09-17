@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -189,19 +196,30 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;TSettings&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Ember.Build/EmberBuildRunner">EmberBuildRunner</a></li>								
+											<li><a href="/api/Cake.Ember.Serve/EmberServeRunner">EmberServeRunner</a></li>								
+									</ul>
+								</dd>			
 							
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["EmberTool&lt;TSettings&gt;"]
 class Type type-node
+	Type--&gt;Derived0["EmberBuildRunner"]
+	click Derived0 "/api/Cake.Ember.Build/EmberBuildRunner"
+	Type--&gt;Derived1["EmberServeRunner"]
+	click Derived1 "/api/Cake.Ember.Serve/EmberServeRunner"
 
 						</div>
 					</div>
@@ -271,7 +289,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Ember/EmberTool_1/A140EBED">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -360,7 +367,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/618393D1">GetS3Objects<wbr>(ICakeContext, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;S3Object&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -370,7 +377,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/4B5C4202">GetS3Objects<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;S3Object&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -424,7 +431,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/48EA9FD2">S3DeleteAll<wbr>(ICakeContext, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -434,7 +441,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/B0A851AC">S3DeleteAll<wbr>(ICakeContext, <wbr>string, <wbr>DateTimeOffset, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -444,7 +451,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/E520FE74">S3DeleteAll<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -554,7 +561,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/F31E04AA">S3Sync<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory to Amazon S3, checking the modified date of the local fiels with existing S3Objects.
@@ -564,7 +571,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/30317DF6">S3SyncDownload<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Syncs the specified directory from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -584,7 +591,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/9353A9C4">S3SyncUpload<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.

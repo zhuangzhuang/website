@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -245,7 +252,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/88B41741">Addins</a></td>
-								<td>HashSet<wbr>&lt;<wbr>Package<wbr>Reference&gt;<wbr></td>
+								<td>HashSet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets the addins.
@@ -254,7 +261,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/10BDAEA2">Errors</a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Script<wbr>Analyzer<wbr>Error&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the list of analyzer errors.
@@ -263,7 +270,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/91227AD4">Lines</a></td>
-								<td>IReadOnlyList<wbr>&lt;string&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the merged script lines.
@@ -272,7 +279,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/E7BCB04C">Namespaces</a></td>
-								<td>ISet<wbr>&lt;string&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets all the namespaces.
@@ -281,7 +288,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/DA4B9B4A">References</a></td>
-								<td>ISet<wbr>&lt;string&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets all references.
@@ -308,7 +315,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/70708171">Tools</a></td>
-								<td>HashSet<wbr>&lt;<wbr>Package<wbr>Reference&gt;<wbr></td>
+								<td>HashSet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets the tools.
@@ -317,7 +324,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/E77CB0CC">UsingAliases</a></td>
-								<td>ISet<wbr>&lt;string&gt;<wbr></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
     Gets the using aliases.

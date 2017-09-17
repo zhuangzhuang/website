@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -167,7 +174,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Contains settings used by <code class="cs">Cake.DocFx.Metadata.DocFxMetadataRunner</code>.
+            Contains settings used by <code class="cs"><a href="/">DocFxMetadataRunner</a></code>.
             </div>
 
 		<div class="panel panel-default">
@@ -274,7 +281,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DocFx.Metadata/DocFxMetadataSettings/DD1E1FD2">Projects</a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 Specifies the projects to have metadata extracted. There are several approaches to extract language metadata.

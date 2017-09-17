@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -201,8 +208,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -214,10 +221,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TfxSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxServerSettings"]
-	click Derived0 "/api/Cake.Tfx/TfxServerSettings"
-	Type--&gt;Derived1["TfxExtensionCreateSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived0["TfxExtensionCreateSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived1["TfxServerSettings"]
+	click Derived1 "/api/Cake.Tfx/TfxServerSettings"
 
 						</div>
 					</div>
@@ -285,7 +292,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/44497BD4">Output</a></td>
-								<td>TfxOutputType?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value indicating the output type to be used for commands

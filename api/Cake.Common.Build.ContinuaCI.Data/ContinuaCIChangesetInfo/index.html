@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -256,7 +263,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo/7966CA9C">Created</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the changeset created date and time.
@@ -283,7 +290,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo/2BB1A71D">IssueNames</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets list of changeset issue names
@@ -310,7 +317,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo/1EAC956C">TagNames</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets list of changeset tag names
@@ -354,10 +361,10 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/81EB0256">Get<wbr>Environment<wbr>Date<wbr>Time<wbr>(string)<wbr></a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
-    Gets an environment variable as a <code class="cs">System.DateTime</code>.
+    Gets an environment variable as a <code class="cs"><a href="/">DateTime</a></code>.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo">ContinuaCIInfo</a></em></small></div>
 								</td>
@@ -394,7 +401,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/09D171A9">Get<wbr>Environment<wbr>String<wbr>Dictionary<wbr>(string)<wbr></a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets matching list of environment variables as an dictionary of <code class="cs"><a href="/">string</a></code>.
@@ -404,7 +411,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/D893F5E0">Get<wbr>Environment<wbr>String<wbr>List<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets an environment variable as an array of <code class="cs"><a href="/">string</a></code>.
@@ -414,7 +421,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.ContinuaCI/ContinuaCIInfo/9B5FA24C">Get<wbr>Environment<wbr>Time<wbr>Span<wbr>(string)<wbr></a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets an environment variable as a <code class="cs"><a href="/">TimeSpan</a></code>.

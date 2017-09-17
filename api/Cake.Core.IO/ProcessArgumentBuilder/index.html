@@ -118,7 +118,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -130,6 +130,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -204,8 +211,8 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li>IReadOnlyCollection<wbr>&lt;<wbr>I<wbr>Process<wbr>Argument&gt;<wbr></li>								
-											<li>IEnumerable<wbr>&lt;<wbr>I<wbr>Process<wbr>Argument&gt;<wbr></li>								
+											<li>IReadOnlyCollection<wbr>&lt;T&gt;<wbr></li>								
+											<li>IEnumerable<wbr>&lt;T&gt;<wbr></li>								
 											<li>IEnumerable</li>								
 									</ul>
 								</dd>
@@ -224,8 +231,8 @@
 						<div class="mermaid">
 							graph TD
 	Base0["object"]--&gt;Type
-	Interface0["IReadOnlyCollection&lt;IProcessArgument&gt;"]-.-&gt;Type
-	Interface1["IEnumerable&lt;IProcessArgument&gt;"]-.-&gt;Type
+	Interface0["IReadOnlyCollection&lt;T&gt;"]-.-&gt;Type
+	Interface1["IEnumerable&lt;T&gt;"]-.-&gt;Type
 	Interface2["IEnumerable"]-.-&gt;Type
 	Type["ProcessArgumentBuilder"]
 class Type type-node

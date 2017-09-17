@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -259,7 +266,7 @@ public static TextTransformation&lt;TextTransformationTemplate&gt; TransformText
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+					<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 					<td>A <code class="cs"><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation&lt;TTemplate&gt;</a></code> representing the provided template.</td>
 				</tr>
 			</tbody></table>

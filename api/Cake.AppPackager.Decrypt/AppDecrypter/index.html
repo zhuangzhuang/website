@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -180,8 +187,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;<wbr>App<wbr>Packager<wbr>Settings&gt;<wbr></li>								
-											<li>AppPackagerTool<wbr>&lt;<wbr>App<wbr>Packager<wbr>Settings&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li><a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
 									</ul>
 								</dd>				
 							
@@ -191,8 +198,9 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["AppPackagerTool&lt;AppPackagerSettings&gt;"]--&gt;Type
-	Base1["Tool&lt;AppPackagerSettings&gt;"]--&gt;Base0
+	Base0["AppPackagerTool&lt;TSettings&gt;"]--&gt;Type
+	click Base0 "/api/Cake.AppPackager/AppPackagerTool_1"
+	Base1["Tool&lt;&gt;"]--&gt;Base0
 	Type["AppDecrypter"]
 class Type type-node
 
@@ -248,6 +256,30 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/A3C8219C">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/9273AC42">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/99B6A64B">GetToolName<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -245,28 +252,28 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Genymotion.Config/GenymotionConfigSettings/D7DB1A5A">EnableLicenseServer</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Genymotion.Config/GenymotionConfigSettings/7CA872B7">EnableProxy</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Genymotion.Config/GenymotionConfigSettings/C03162E6">EnableProxyAuth</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Genymotion.Config/GenymotionConfigSettings/B5B20A5D">EnableStatistics</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -336,7 +343,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Genymotion/GenymotionSettings/C1617B6E">Timeout</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.Genymotion/GenymotionSettings">GenymotionSettings</a></em></small></div>
@@ -344,7 +351,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Genymotion.Config/GenymotionConfigSettings/39D0B7A6">UseCustomSdk</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>

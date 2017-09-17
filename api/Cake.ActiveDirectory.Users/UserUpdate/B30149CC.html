@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -143,6 +150,7 @@
 			<li class="header">Constructors</li>
 				<li class="selected"><a href="/api/Cake.ActiveDirectory.Users/UserUpdate/B30149CC">UserUpdate<wbr>(IADOperator)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.ActiveDirectory/ActiveDirectoryBase_1/AB409DBE">AddSettingsToUser<wbr>(UserObject, <wbr>UserSettings)<wbr></a></li>
 				<li><a href="/api/Cake.ActiveDirectory.Users/UserUpdate/DD325F0D">Update<wbr>Organization<wbr>Unit<wbr>(string, <wbr>string, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.ActiveDirectory.Users/UserUpdate/ED8289F4">UpdateUser<wbr>(string, <wbr>string, <wbr>UserSettings)<wbr></a></li>
 

@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -221,12 +228,12 @@
 					</tr>
 					<tr>
 						<td>includes</td>
-						<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+						<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 						<td>Patterns to include.</td>
 					</tr>
 					<tr>
 						<td>excludes</td>
-						<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+						<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 						<td>Patterns to exclude.</td>
 					</tr>
 					<tr>
@@ -249,7 +256,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 					<td>Returns an IEnumberable of <code class="cs">FilePath</code> that match the input patterns.</td>
 				</tr>
 			</tbody></table>

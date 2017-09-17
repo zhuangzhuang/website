@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -272,7 +279,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/6484DE95">AmClearDebugApp<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Clears the set debug app on the target.
@@ -282,7 +289,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/7F3FA5E5">AmDisplayDensity<wbr>(ICakeContext, <wbr>int, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Override the target's display density. This command is helpful for testing your app across different screen densities on high-density screen environment using a low density screen, and vice versa.
@@ -292,7 +299,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/36878DA1">AmDisplaySize<wbr>(ICakeContext, <wbr>int, <wbr>int, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Override the target's display size. This command is helpful for testing your app across different screen sizes by mimicking a small screen resolution using a device with a large screen, and vice versa.
@@ -302,7 +309,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/1332E1A9">AmDumpHeap<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>string, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Dumps the heap from a process on the target.
@@ -322,7 +329,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/53E23EC4">AmInstrument<wbr>(ICakeContext, <wbr>string, <wbr>Am<wbr>Instrument<wbr>Options, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Ams the instrument.
@@ -372,7 +379,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9916CF8F">AmMonitor<wbr>(ICakeContext, <wbr>int?, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Starts monitoring for crashes or ANRs on the target.
@@ -382,7 +389,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9FA3467F">AmResetDisplaySize<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Resets the target's display size.
@@ -392,7 +399,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/934ACB02">AmScreenCompat<wbr>(ICakeContext, <wbr>bool, <wbr>string, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Turn screen compatibility mode on/off for the given package on the target.
@@ -402,7 +409,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/2178E560">AmSetDebugApp<wbr>(ICakeContext, <wbr>string, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Set the debug app on the target.
@@ -422,7 +429,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9A799938">AmStartProfiling<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Starts profiling on the target.
@@ -442,7 +449,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/08074795">AmStopProfiling<wbr>(ICakeContext, <wbr>string, <wbr>AdbToolSettings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Stops profiling on the target.

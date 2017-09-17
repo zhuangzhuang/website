@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -187,12 +194,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo">TFBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo">T<wbr>F<wbr>Build<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo">TFBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -204,18 +211,18 @@
 	Base0["object"]--&gt;Type
 	Type["TFInfo"]
 class Type type-node
-	Type--&gt;Derived0["TFBuildDefinitionInfo"]
-	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
-	Type--&gt;Derived1["TFBuildAgentInfo"]
-	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
-	Type--&gt;Derived2["TFBuildTeamProjectInfo"]
-	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
+	Type--&gt;Derived0["TFBuildTeamProjectInfo"]
+	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
+	Type--&gt;Derived1["TFBuildEnvironmentInfo"]
+	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Type--&gt;Derived2["TFBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
 	Type--&gt;Derived3["TFBuildRepositoryInfo"]
 	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo"
-	Type--&gt;Derived4["TFBuildInfo"]
-	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
-	Type--&gt;Derived5["TFBuildEnvironmentInfo"]
-	click Derived5 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Type--&gt;Derived4["TFBuildAgentInfo"]
+	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
+	Type--&gt;Derived5["TFBuildDefinitionInfo"]
+	click Derived5 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
 
 						</div>
 					</div>
@@ -304,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild/TFInfo/2EBB8F7A">GetRepositoryType<wbr>(string)<wbr></a></td>
-								<td>TFRepositoryType?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the current repository type as a <code class="cs"><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></code> from an environment variable.

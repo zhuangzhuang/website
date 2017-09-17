@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -276,7 +283,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantProvisionerSettings/80163389">Provisioners</a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 This will only run the given provisioners.
@@ -310,7 +317,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantProvisionerSettings/40570802">GetToolArguments<wbr>()<wbr></a></td>
-								<td>Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Action<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
                 Gets the command arguments corresponding to the specified <code class="cs"><a href="/">IVagrantCommandSettings</a></code>

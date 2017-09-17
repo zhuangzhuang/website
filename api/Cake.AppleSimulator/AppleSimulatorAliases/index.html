@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -376,7 +383,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/6570639A">List<wbr>Apple<wbr>Simulator<wbr>Device<wbr>Types<wbr>(ICakeContext)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator<wbr>Device<wbr>Type&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -384,7 +391,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/50C270CA">List<wbr>Apple<wbr>Simulator<wbr>Device<wbr>Types<wbr>(ICakeContext, <wbr>SimCtlSettings)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator<wbr>Device<wbr>Type&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -392,7 +399,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/4C399561">List<wbr>Apple<wbr>Simulator<wbr>Pairs<wbr>(ICakeContext)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator<wbr>Pair&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -400,7 +407,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/6754421B">List<wbr>Apple<wbr>Simulator<wbr>Pairs<wbr>(ICakeContext, <wbr>SimCtlSettings)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator<wbr>Pair&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -408,7 +415,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/34CF004F">List<wbr>Apple<wbr>Simulator<wbr>Runtimes<wbr>(ICakeContext)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator<wbr>Runtime&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -416,7 +423,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/57912BD0">List<wbr>Apple<wbr>Simulator<wbr>Runtimes<wbr>(ICakeContext, <wbr>SimCtlSettings)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator<wbr>Runtime&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -424,7 +431,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/EFAF5373">ListAppleSimulators<wbr>(ICakeContext)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>
@@ -432,7 +439,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppleSimulator/AppleSimulatorAliases/7C01F035">ListAppleSimulators<wbr>(ICakeContext, <wbr>SimCtlSettings)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;<wbr>Apple<wbr>Simulator&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>static</em></small></div>

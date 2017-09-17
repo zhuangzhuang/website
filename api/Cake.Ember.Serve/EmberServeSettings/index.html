@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -299,7 +306,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/11C0A255">LiveReloadPort</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value to use for the port for Live Reload Server.
@@ -318,7 +325,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/A20F4125">Port</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value to use for the port to host website on.

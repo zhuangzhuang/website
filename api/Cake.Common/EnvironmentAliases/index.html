@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -254,7 +261,7 @@ public static class EnvironmentAliases</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common/EnvironmentAliases/97336C76">EnvironmentVariables<wbr>(ICakeContext)<wbr></a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
      Retrieves all environment variables

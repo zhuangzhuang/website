@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -185,12 +192,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -202,18 +209,18 @@
 	Base0["object"]--&gt;Type
 	Type["JenkinsInfo"]
 class Type type-node
-	Type--&gt;Derived0["JenkinsRepositoryInfo"]
-	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
-	Type--&gt;Derived1["JenkinsNodeInfo"]
-	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
-	Type--&gt;Derived2["JenkinsEnvironmentInfo"]
-	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
-	Type--&gt;Derived3["JenkinsJobInfo"]
-	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
-	Type--&gt;Derived4["JenkinsChangeInfo"]
-	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo"
-	Type--&gt;Derived5["JenkinsBuildInfo"]
-	click Derived5 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
+	Type--&gt;Derived0["JenkinsNodeInfo"]
+	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived1["JenkinsRepositoryInfo"]
+	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
+	Type--&gt;Derived2["JenkinsJobInfo"]
+	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
+	Type--&gt;Derived3["JenkinsBuildInfo"]
+	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
+	Type--&gt;Derived4["JenkinsEnvironmentInfo"]
+	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived5["JenkinsChangeInfo"]
+	click Derived5 "/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo"
 
 						</div>
 					</div>

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -244,7 +251,7 @@ public static class ReleaseNotesAliases</code></pre>
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Common/ReleaseNotesAliases/321AAA80">ParseAllReleaseNotes<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;ReleaseNotes&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Parses all release notes.

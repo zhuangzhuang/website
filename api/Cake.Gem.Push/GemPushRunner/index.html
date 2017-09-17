@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -186,8 +193,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;<wbr>Gem<wbr>Push<wbr>Settings&gt;<wbr></li>								
-											<li>GemTool<wbr>&lt;<wbr>Gem<wbr>Push<wbr>Settings&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li><a href="/api/Cake.Gem/GemTool_1">GemTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
 									</ul>
 								</dd>				
 							
@@ -197,8 +204,9 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["GemTool&lt;GemPushSettings&gt;"]--&gt;Type
-	Base1["Tool&lt;GemPushSettings&gt;"]--&gt;Base0
+	Base0["GemTool&lt;TSettings&gt;"]--&gt;Type
+	click Base0 "/api/Cake.Gem/GemTool_1"
+	Base1["Tool&lt;&gt;"]--&gt;Base0
 	Type["GemPushRunner"]
 class Type type-node
 
@@ -252,12 +260,42 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Gem/GemTool_1/6C81F23F">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+            Gets the possible names of the tool executable.
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemTool_1">GemTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Gem/GemTool_1/AF340262">GetToolName<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets the name of the tool.
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemTool_1">GemTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Gem.Push/GemPushRunner/33C56A3A">Push<wbr>(FilePath, <wbr>GemPushSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
             Pushes a gem using the specified settings.
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Gem/GemTool_1/CBD7A6F2">RunGem<wbr>&lt;TBuilder&gt;<wbr><wbr>(TSettings, <wbr>TBuilder)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Runs the Gem tool with the specified settings.
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Gem/GemTool_1">GemTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

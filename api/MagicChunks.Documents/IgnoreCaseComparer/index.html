@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -182,7 +189,7 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li>IEqualityComparer<wbr>&lt;object&gt;<wbr></li>								
+											<li>IEqualityComparer<wbr>&lt;T&gt;<wbr></li>								
 									</ul>
 								</dd>
 							
@@ -200,7 +207,7 @@
 						<div class="mermaid">
 							graph TD
 	Base0["object"]--&gt;Type
-	Interface0["IEqualityComparer&lt;object&gt;"]-.-&gt;Type
+	Interface0["IEqualityComparer&lt;T&gt;"]-.-&gt;Type
 	Type["IgnoreCaseComparer"]
 class Type type-node
 

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -283,7 +290,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/9408AF46">GetHostedZones<wbr>(Route53Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;HostedZone&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Retrieve a list of your hosted zones.
@@ -292,7 +299,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/6BD41DB4">Get<wbr>Resource<wbr>Record<wbr>Sets<wbr>(string, <wbr>Route53Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;<wbr>Resource<wbr>Record<wbr>Set&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             To retrieve a list of record sets for a particular hosted zone.

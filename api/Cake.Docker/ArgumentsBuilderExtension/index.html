@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -322,7 +329,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/ArgumentsBuilderExtension/5160D9CC">Get<wbr>Argument<wbr>From<wbr>Dictionary<wbr>Property<wbr>(PropertyInfo, <wbr>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             
@@ -352,7 +359,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/ArgumentsBuilderExtension/97AD0FAB">Get<wbr>Argument<wbr>From<wbr>Property<wbr>&lt;TSettings&gt;<wbr><wbr>(PropertyInfo, <wbr>TSettings, <wbr>bool)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets and processes <span name="property" class="paramref">property</span> value from <span name="settings" class="paramref">settings</span>.
@@ -362,7 +369,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/ArgumentsBuilderExtension/9042B183">Get<wbr>Argument<wbr>From<wbr>String<wbr>Array<wbr>Property<wbr>(PropertyInfo, <wbr>string[])<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             

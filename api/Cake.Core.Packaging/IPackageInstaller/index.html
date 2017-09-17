@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -180,8 +187,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.NuGet/NuGetPackageInstaller">Nu<wbr>Get<wbr>Package<wbr>Installer</a></li>								
 											<li><a href="/api/Cake.NuGet/INuGetPackageInstaller">I<wbr>Nu<wbr>Get<wbr>Package<wbr>Installer</a></li>								
+											<li><a href="/api/Cake.NuGet/NuGetPackageInstaller">Nu<wbr>Get<wbr>Package<wbr>Installer</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -191,10 +198,10 @@
 							graph TD
 	Type["IPackageInstaller"]
 class Type type-node
-	Type-.-&gt;Implementing0["NuGetPackageInstaller"]
-	click Implementing0 "/api/Cake.NuGet/NuGetPackageInstaller"
-	Type-.-&gt;Implementing1["INuGetPackageInstaller"]
-	click Implementing1 "/api/Cake.NuGet/INuGetPackageInstaller"
+	Type-.-&gt;Implementing0["INuGetPackageInstaller"]
+	click Implementing0 "/api/Cake.NuGet/INuGetPackageInstaller"
+	Type-.-&gt;Implementing1["NuGetPackageInstaller"]
+	click Implementing1 "/api/Cake.NuGet/NuGetPackageInstaller"
 
 						</div>
 					</div>
@@ -236,7 +243,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Packaging/IPackageInstaller/05B934E7">Install<wbr>(PackageReference, <wbr>PackageType, <wbr>DirectoryPath)<wbr></a></td>
-								<td>IReadOnlyCollection<wbr>&lt;IFile&gt;<wbr></td>
+								<td>IReadOnlyCollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Installs the specified resource at the given location.

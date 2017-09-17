@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -237,7 +244,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/4ECE603D">DescribeInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;<wbr>Instance<wbr>Status&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Describes the status of one or more instances. Instance status includes the following components:
@@ -251,7 +258,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/4B6845CE">DescribeTags<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;<wbr>Tag<wbr>Description&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Describes one or more of the tags for your EC2 resources.

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -136,13 +143,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Diagnostics">Cake<wbr>.Core<wbr>.Diagnostics</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
+				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
-				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogAction">LogAction</a></li>
 				<li class="selected"><a href="/api/Cake.Core.Diagnostics/LogActionEntry">LogActionEntry</a></li>

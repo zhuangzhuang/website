@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -306,7 +313,7 @@ public static void DotNetCoreVSTest(this ICakeContext context, IEnumerable&lt;Fi
 					</tr>
 					<tr>
 						<td>testFiles</td>
-						<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+						<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 						<td>The project paths to test.</td>
 					</tr>
 					<tr>

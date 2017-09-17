@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -193,8 +200,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
 											<li><a href="/api/Cake.SqlServerPackager/DiskFilesProvider">DiskFilesProvider</a></li>								
+											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -204,10 +211,10 @@
 							graph TD
 	Type["IFilesProvider"]
 class Type type-node
-	Type-.-&gt;Implementing0["GitFilesProvider"]
-	click Implementing0 "/api/Cake.SqlServerPackager/GitFilesProvider"
-	Type-.-&gt;Implementing1["DiskFilesProvider"]
-	click Implementing1 "/api/Cake.SqlServerPackager/DiskFilesProvider"
+	Type-.-&gt;Implementing0["DiskFilesProvider"]
+	click Implementing0 "/api/Cake.SqlServerPackager/DiskFilesProvider"
+	Type-.-&gt;Implementing1["GitFilesProvider"]
+	click Implementing1 "/api/Cake.SqlServerPackager/GitFilesProvider"
 
 						</div>
 					</div>
@@ -240,7 +247,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SqlServerPackager/IFilesProvider/DB5CDEBB">GetFiles<wbr>(<wbr>Sql<wbr>Server<wbr>Packager<wbr>Settings)<wbr></a></td>
-								<td>List<wbr>&lt;string&gt;<wbr></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns the list of SQL scripts for packaging.

@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -143,7 +150,10 @@
 			<li class="header">Constructors</li>
 				<li class="selected"><a href="/api/Cake.Tfx.Extension.Install/TfxExtensionInstallRunner/C8C536C1">Tfx<wbr>Extension<wbr>Install<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Tfx/TfxTool_1/95A6DCD8">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Tfx/TfxTool_1/C4AA207F">GetToolName<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Tfx.Extension.Install/TfxExtensionInstallRunner/15B4EDB2">Install<wbr>(FilePath, <wbr>ICollection<wbr>&lt;string&gt;<wbr>, <wbr>Tfx<wbr>Extension<wbr>Install<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Tfx/TfxTool_1/2009C4D3">RunTfx<wbr>&lt;TBuilder&gt;<wbr><wbr>(TSettings, <wbr>TBuilder)<wbr></a></li>
 
 
                     </ul>

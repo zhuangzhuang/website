@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -142,7 +149,14 @@
 			<li class="header">Constructors</li>
 				<li class="selected"><a href="/api/Cake.Npm.Install/NpmInstaller/A87B7F05">NpmInstaller<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>ICakeLog)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Npm/NpmTool_1/5C41958F">GetArguments<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmTool_1/8D13141B">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmTool_1/8142AE0D">GetToolName<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Npm.Install/NpmInstaller/28DE3687">Install<wbr>(NpmInstallSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmTool_1/43C49967">RunCore<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Npm/NpmTool_1/C4670B0D">RunCore<wbr>(TSettings, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Npm/NpmTool_1/73A86D9C">CakeLog</a></li>
 
 
                     </ul>

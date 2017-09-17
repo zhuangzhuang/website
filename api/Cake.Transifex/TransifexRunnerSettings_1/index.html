@@ -119,7 +119,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -131,6 +131,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -203,6 +210,13 @@
 									</ul>
 								</dd>				
 							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Transifex/TransifexStatusSettings">Transifex<wbr>Status<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Transifex/TransifexRunnerRemoteSettings_1">Transifex<wbr>Runner<wbr>Remote<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr></a></li>								
+									</ul>
+								</dd>			
 							
 						</dl>
 					</div>		
@@ -214,6 +228,10 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["TransifexRunnerSettings&lt;TSettingsType&gt;"]
 class Type type-node
+	Type--&gt;Derived0["TransifexStatusSettings"]
+	click Derived0 "/api/Cake.Transifex/TransifexStatusSettings"
+	Type--&gt;Derived1["TransifexRunnerRemoteSettings&lt;TSettingsType&gt;"]
+	click Derived1 "/api/Cake.Transifex/TransifexRunnerRemoteSettings_1"
 
 						</div>
 					</div>

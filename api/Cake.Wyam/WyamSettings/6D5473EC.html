@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -145,8 +152,6 @@
 				<li class="selected"><a href="/api/Cake.Wyam/WyamSettings/6D5473EC">Assemblies</a></li>
 				<li><a href="/api/Cake.Wyam/WyamSettings/9405BA84">Attach</a></li>
 				<li><a href="/api/Cake.Wyam/WyamSettings/49975C5A">ConfigurationFile</a></li>
-				<li><a href="/api/Cake.Wyam/WyamSettings/6C75101B">GlobalMetadata</a></li>
-				<li><a href="/api/Cake.Wyam/WyamSettings/35B18553">InitialMetadata</a></li>
 				<li><a href="/api/Cake.Wyam/WyamSettings/940478E7">InputPaths</a></li>
 				<li><a href="/api/Cake.Wyam/WyamSettings/DD9C69D4">LogFilePath</a></li>
 				<li><a href="/api/Cake.Wyam/WyamSettings/25716494">NoCache</a></li>
@@ -235,7 +240,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

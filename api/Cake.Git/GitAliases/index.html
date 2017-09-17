@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -411,7 +418,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Git/GitAliases/D5568940">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
-								<td>ICollection<wbr>&lt;GitDiffFile&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Get changed files from inital commit id up to current.
@@ -421,7 +428,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Git/GitAliases/6D2E6120">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></td>
-								<td>ICollection<wbr>&lt;GitDiffFile&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Get changed files from certain commit id up to current.
@@ -431,7 +438,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Git/GitAliases/CAD727C5">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></td>
-								<td>ICollection<wbr>&lt;GitDiffFile&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Get changed files from certain commit id up to current.
@@ -491,7 +498,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Git/GitAliases/469FCAAF">GitLog<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>int)<wbr></a></td>
-								<td>ICollection<wbr>&lt;GitCommit&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Get commit log.
@@ -501,7 +508,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Git/GitAliases/9F14EF4E">GitLog<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></td>
-								<td>ICollection<wbr>&lt;GitCommit&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Get commit from certain commit id up to current.
@@ -646,6 +653,16 @@ class Type type-node
 								<td>
 									<div>
             Applys tagName to repository.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Git/GitAliases/0A452041">GitTags<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
+								<td>List<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+            Gets a list of all tags from the repo
             </div>
 											<div><small><em>static</em></small></div>
 								</td>

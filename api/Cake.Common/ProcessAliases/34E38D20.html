@@ -117,7 +117,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -129,6 +129,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -271,13 +278,13 @@ public static int StartProcess(this ICakeContext context, FilePath fileName, Pro
 					</tr>
 					<tr>
 						<td>redirectedStandardOutput</td>
-						<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+						<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 						<td>Returns process output if <code class="cs"><a href="/api/Cake.Core.IO/ProcessSettings/5E18213F">RedirectStandardOutput</a></code> is true.
      Otherwise <code class="cs">null</code> is returned.</td>
 					</tr>
 					<tr>
 						<td>redirectedErrorOutput</td>
-						<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
+						<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 						<td>Returns process error output if <code class="cs"><a href="/api/Cake.Core.IO/ProcessSettings/6334A01B">RedirectStandardError</a></code> is true.
      Otherwise <code class="cs">null</code> is returned.</td>
 					</tr>

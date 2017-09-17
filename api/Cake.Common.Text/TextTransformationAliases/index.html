@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -241,7 +248,7 @@ public static class TextTransformationAliases</code></pre>
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/77B6C385">TransformText<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template.
@@ -251,7 +258,7 @@ public static class TextTransformationAliases</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/4BDCF966">TransformText<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template, using the specified placeholder.
@@ -261,7 +268,7 @@ public static class TextTransformationAliases</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/178B8586">TransformTextFile<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template on disc.
@@ -271,7 +278,7 @@ public static class TextTransformationAliases</code></pre>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/1B6F02DC">TransformTextFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>string)<wbr></a></td>
-								<td>TextTransformation<wbr>&lt;<wbr>Text<wbr>Transformation<wbr>Template&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template on disc, using the specified placeholder.

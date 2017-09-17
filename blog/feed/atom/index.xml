@@ -4,7 +4,43 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-09-13T12:15:09Z</updated>
+	<updated>2017-09-17T14:27:51Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="https://cakebuild.net/blog/2017/09/cake-v0.22.1-and-v0.22.2-released" />
+		<id>https://cakebuild.net/blog/2017/09/cake-v0.22.1-and-v0.22.2-released</id>
+		<title>Cake v0.22.1 and v0.22.2 released</title>
+		<updated>2017-09-17T00:00:00Z</updated>
+		<content>&lt;p&gt;Version 0.22.1 and 0.22.2 of Cake have been released.&lt;/p&gt;
+&lt;p&gt;Following the release of Cake 0.22.0 the 13th of September, an issue with the GitVersion alias and deserializing certain integer properties the tools output was uncovered, and the decision was taken to quickly correct it.&lt;/p&gt;
+&lt;p&gt;A little too quickly, but fortunately David Driscoll caught, reported and supplied a pull request quickly, so huge thanks for that!&lt;/p&gt;
+&lt;p&gt;In these releases it's corrected in a non breaking way and for the next release these properties will be corrected from integer to nullable integers, which potentially will be a breaking change for anyone using those properties.&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/david-driscoll"&gt;david-driscoll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in these releases can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of release v0.22.1 we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=41&amp;amp;state=closed"&gt;1 issue&lt;/a&gt; closed and as part of release v0.22.2 we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=42&amp;amp;state=closed"&gt;1 issue&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1807"&gt;&lt;strong&gt;#1807&lt;/strong&gt;&lt;/a&gt; NuGetVersion and CommitDate are null with 0.22.1&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1798"&gt;&lt;strong&gt;#1798&lt;/strong&gt;&lt;/a&gt; GitVersion error on build on master branch with version 0.22.0&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Version 0.22.1 and 0.22.2 of Cake have been released.&lt;/p&gt;
+&lt;p&gt;Following the release of Cake 0.22.0 the 13th of September, an issue with the GitVersion alias and deserializing certain integer properties the tools output was uncovered, and the decision was taken to quickly correct it.&lt;/p&gt;
+&lt;p&gt;A little too quickly, but fortunately David Driscoll caught, reported and supplied a pull request quickly, so huge thanks for that!&lt;/p&gt;
+&lt;p&gt;In these releases it's corrected in a non breaking way and for the next release these properties will be corrected from integer to nullable integers, which potentially will be a breaking change for anyone using those properties.&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in these releases can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>mholo65</name>
@@ -1119,39 +1155,5 @@ group modules
 &lt;p&gt;Finally, I'd like to thank the Cake team for coming along on this adventure with me. This was the ideal test case for the new &lt;a href="http://wyam.io/recipes/docs"&gt;Wyam docs recipe&lt;/a&gt; and simultaneously building out both has proven hugely beneficial. As this project has shown, Cake and Wyam work really well together and I'm looking forward to exploring more ways that the two can interoperate (did you know there's already a &lt;a href="/dsl/wyam"&gt;Wyam addin for Cake&lt;/a&gt;?).&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Hi! My name is Dave Glick and I run the &lt;a href="http://wyam.io"&gt;Wyam static site engine&lt;/a&gt; project. I'm also a big Cake fanboy, and over the last couple months I've been privileged to work with the rest of the Cake team on transitioning the Cake website from a dynamic ASP.NET website to a static one built by &lt;a href="http://wyam.io"&gt;Wyam&lt;/a&gt;. This effort was more than mere window dressing; the new site goes beyond the old one in some interesting ways:&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>devlead</name>
-		</author>
-		<link href="https://cakebuild.net/blog/2016/12/icing-on-the-cake" />
-		<id>https://cakebuild.net/blog/2016/12/icing-on-the-cake</id>
-		<title>Icing on the Cake – reviewing the recipe for 2016</title>
-		<updated>2016-12-31T00:00:00Z</updated>
-		<content>&lt;p&gt;As 2016 is just about to be fully baked, the year has been packed with many ingredients, with this post we would like to take the opportunity to reflect on a few of the essences of what's been a truly amazing and eventful Cake year.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;h3 id="community"&gt;Community&lt;/h3&gt;
-&lt;p&gt;First of all we must highlight, and send a big THANK YOU to, the amazing community that has formed around Cake!&lt;/p&gt;
-&lt;p&gt;There are now over one hundred individual contributors to the various Cake projects, helping out with documentation, adding new features, raising issues and fixing bugs. In addition, over a quarter of a million downloads of the main Cake NuGet package! Together, with you, during 2016 we released no less than fifteen releases!&lt;/p&gt;
-&lt;p&gt;As maintainers of an open source project it's both amazing and humbling so see how people are getting a taste for your project and going out speaking, blogging, tweeting and helping out fellow bakers on the &lt;a href="https://gitter.im/cake-build/cake"&gt;Gitter chat&lt;/a&gt;, &lt;a href="http://stackoverflow.com/questions/tagged/cakebuild"&gt;Stack Overflow&lt;/a&gt;, forums and social media.&lt;/p&gt;
-&lt;h3 id="debugging-support"&gt;Debugging support&lt;/h3&gt;
-&lt;p&gt;In May we added support for debugging your Cake scripts with &lt;a href="https://cakebuild.net/blog/2016/05/debug-cake-file"&gt;Visual Studio&lt;/a&gt;, enabling you to do things like stepping through code, setting break points and watch variables. In September we added debugging in &lt;a href="https://cakebuild.net/blog/2016/09/debug-cake-vscode"&gt;VSCode&lt;/a&gt; as well.&lt;/p&gt;
-&lt;h3 id="net-foundation"&gt;.NET Foundation&lt;/h3&gt;
-&lt;p&gt;One of the bigger announcements of 2016, was in June when Gary at &lt;a href="https://vimeo.com/171704581"&gt;NDC Oslo&lt;/a&gt; announced that &lt;a href="https://cakebuild.net/blog/2016/06/cake-joins-dotnetfoundation"&gt;Cake joins the .NET foundation&lt;/a&gt;. Joining the foundation ensures the longevity of the Cake project, making sure it's here to stay and has the resources to do so.&lt;/p&gt;
-&lt;h3 id="cake-contribution-organization"&gt;Cake Contribution Organization&lt;/h3&gt;
-&lt;p&gt;In August we launched the &lt;a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contribution Organization&lt;/a&gt; to ensure that any addins and modules that are created, can continue to be maintained, should the original developer no longer be in a position to maintain it. It has been very well received and there's now almost one hundred &lt;a href="https://www.nuget.org/profiles/cake-contrib"&gt;NuGet&lt;/a&gt; packages that have adopted the cake-contrib as a co-maintainer of the package and twenty-six projects that have chosen to move their repositories into the GitHub organization.&lt;/p&gt;
-&lt;h3 id="net-core-support"&gt;.NET Core support&lt;/h3&gt;
-&lt;p&gt;Cake was early to support the .NET Core tooling, but in September we announced &lt;a href="https://cakebuild.net/blog/2016/09/cake-v0-16-0-released"&gt;Cake v0.16.0 released&lt;/a&gt;.  With this release finally Cake itself was able to run cross platform on .NET Core. This was the largest refactoring we've ever done and it was a great feeling to get that out the door!&lt;/p&gt;
-&lt;h3 id="the-team"&gt;The Team&lt;/h3&gt;
-&lt;p&gt;In December we added an additional member to the team, &lt;a href="https://github.com/agc93"&gt;Alistair Chapman&lt;/a&gt;, he's been an amazing asset, contributing directly to Cake, surrounding tooling and in supporting the community.  He's been the mastermind behind the &lt;a href="https://cakebuild.net/blog/2016/09/cake-for-visual-studio"&gt;Cake for Visual Studio extension&lt;/a&gt; and &lt;a href="https://cakebuild.net/blog/2016/09/cake-for-yeoman"&gt;Cake for Yeoman&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="in-the-spotlight"&gt;In the spotlight&lt;/h3&gt;
-&lt;p&gt;2016 certainly feels like the year awareness of the project exponentially increased, Cake core team members appeared on no less than six &lt;a href="https://cakebuild.net/docs/resources/podcasts"&gt;podcasts&lt;/a&gt;, a number of conference &lt;a href="https://cakebuild.net/docs/resources/presentations"&gt;presentations&lt;/a&gt;, articles in the &lt;a href="https://cakebuild.net/docs/resources/in-the-news"&gt;news&lt;/a&gt; and &lt;a href="https://cakebuild.net/docs/resources/blogs"&gt;blog posts&lt;/a&gt;.
-It's truly amazing and humbling feeling that so many have found and appreciate the project.&lt;/p&gt;
-&lt;h3 id="closing-words"&gt;Closing words&lt;/h3&gt;
-&lt;p&gt;Yet again a big thanks do all that have contributed to Cake, 2016 has been a great journey and we're really looking forward to what 2017 will bring!&lt;/p&gt;
-&lt;p&gt;The Cake Team thanks you for 2016 and wishes you Happy New Year!&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/1647294/21577775/620f0f4c-cf67-11e6-9b05-2860b75b9eb8.png" class="img-fluid" alt="happy new year" /&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;As 2016 is just about to be fully baked, the year has been packed with many ingredients, with this post we would like to take the opportunity to reflect on a few of the essences of what's been a truly amazing and eventful Cake year.&lt;/p&gt;</summary>
 	</entry>
 </feed>

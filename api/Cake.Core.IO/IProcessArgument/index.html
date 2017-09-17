@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -204,10 +211,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -217,14 +224,14 @@
 							graph TD
 	Type["IProcessArgument"]
 class Type type-node
-	Type-.-&gt;Implementing0["SwitchArgument"]
-	click Implementing0 "/api/Cake.Core.IO.Arguments/SwitchArgument"
+	Type-.-&gt;Implementing0["SecretArgument"]
+	click Implementing0 "/api/Cake.Core.IO.Arguments/SecretArgument"
 	Type-.-&gt;Implementing1["QuotedArgument"]
 	click Implementing1 "/api/Cake.Core.IO.Arguments/QuotedArgument"
-	Type-.-&gt;Implementing2["TextArgument"]
-	click Implementing2 "/api/Cake.Core.IO.Arguments/TextArgument"
-	Type-.-&gt;Implementing3["SecretArgument"]
-	click Implementing3 "/api/Cake.Core.IO.Arguments/SecretArgument"
+	Type-.-&gt;Implementing2["SwitchArgument"]
+	click Implementing2 "/api/Cake.Core.IO.Arguments/SwitchArgument"
+	Type-.-&gt;Implementing3["TextArgument"]
+	click Implementing3 "/api/Cake.Core.IO.Arguments/TextArgument"
 
 						</div>
 					</div>

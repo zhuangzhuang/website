@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -210,15 +217,15 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apigee/ListKeyValueMapsSettings">List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apigee/GetApiProxySettings">GetApiProxySettings</a></li>								
-											<li><a href="/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings">Delete<wbr>All<wbr>Undeployed<wbr>Api<wbr>Proxy<wbr>Revisions<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apigee/ImportProxySettings">ImportProxySettings</a></li>								
-											<li><a href="/api/Cake.Apigee/InstallNodePackagedModulesSettings">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/DeleteKeyValueMapSettings">Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apigee/CreateKeyValueMapSettings">Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apigee/DeleteApiProxyRevisionSettings">Delete<wbr>Api<wbr>Proxy<wbr>Revision<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/ImportProxySettings">ImportProxySettings</a></li>								
 											<li><a href="/api/Cake.Apigee/DeployProxySettings">DeployProxySettings</a></li>								
+											<li><a href="/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings">Delete<wbr>All<wbr>Undeployed<wbr>Api<wbr>Proxy<wbr>Revisions<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/InstallNodePackagedModulesSettings">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/DeleteApiProxyRevisionSettings">Delete<wbr>Api<wbr>Proxy<wbr>Revision<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/GetApiProxySettings">GetApiProxySettings</a></li>								
+											<li><a href="/api/Cake.Apigee/ListKeyValueMapsSettings">List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/CreateKeyValueMapSettings">Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -232,24 +239,24 @@
 	click Interface0 "/api/Cake.Apigee/ICredentialSettings"
 	Type["BaseSettings"]
 class Type type-node
-	Type--&gt;Derived0["ListKeyValueMapsSettings"]
-	click Derived0 "/api/Cake.Apigee/ListKeyValueMapsSettings"
-	Type--&gt;Derived1["GetApiProxySettings"]
-	click Derived1 "/api/Cake.Apigee/GetApiProxySettings"
-	Type--&gt;Derived2["DeleteAllUndeployedApiProxyRevisionsSettings"]
-	click Derived2 "/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings"
-	Type--&gt;Derived3["ImportProxySettings"]
-	click Derived3 "/api/Cake.Apigee/ImportProxySettings"
+	Type--&gt;Derived0["DeleteKeyValueMapSettings"]
+	click Derived0 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
+	Type--&gt;Derived1["ImportProxySettings"]
+	click Derived1 "/api/Cake.Apigee/ImportProxySettings"
+	Type--&gt;Derived2["DeployProxySettings"]
+	click Derived2 "/api/Cake.Apigee/DeployProxySettings"
+	Type--&gt;Derived3["DeleteAllUndeployedApiProxyRevisionsSettings"]
+	click Derived3 "/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings"
 	Type--&gt;Derived4["InstallNodePackagedModulesSettings"]
 	click Derived4 "/api/Cake.Apigee/InstallNodePackagedModulesSettings"
-	Type--&gt;Derived5["DeleteKeyValueMapSettings"]
-	click Derived5 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
-	Type--&gt;Derived6["CreateKeyValueMapSettings"]
-	click Derived6 "/api/Cake.Apigee/CreateKeyValueMapSettings"
-	Type--&gt;Derived7["DeleteApiProxyRevisionSettings"]
-	click Derived7 "/api/Cake.Apigee/DeleteApiProxyRevisionSettings"
-	Type--&gt;Derived8["DeployProxySettings"]
-	click Derived8 "/api/Cake.Apigee/DeployProxySettings"
+	Type--&gt;Derived5["DeleteApiProxyRevisionSettings"]
+	click Derived5 "/api/Cake.Apigee/DeleteApiProxyRevisionSettings"
+	Type--&gt;Derived6["GetApiProxySettings"]
+	click Derived6 "/api/Cake.Apigee/GetApiProxySettings"
+	Type--&gt;Derived7["ListKeyValueMapsSettings"]
+	click Derived7 "/api/Cake.Apigee/ListKeyValueMapsSettings"
+	Type--&gt;Derived8["CreateKeyValueMapSettings"]
+	click Derived8 "/api/Cake.Apigee/CreateKeyValueMapSettings"
 
 						</div>
 					</div>

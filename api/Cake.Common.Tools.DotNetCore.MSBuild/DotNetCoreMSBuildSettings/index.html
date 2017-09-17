@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -137,10 +144,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.MSBuild</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildConsoleColorType">M<wbr>S<wbr>Build<wbr>Console<wbr>Color<wbr>Type</a></li>
-				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildLoggerOutputLevel">M<wbr>S<wbr>Build<wbr>Logger<wbr>Output<wbr>Level</a></li>
-				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildTreatAllWarningsAs">M<wbr>S<wbr>Build<wbr>Treat<wbr>All<wbr>Warnings<wbr>As</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Builder</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Settings</a></li>
@@ -149,6 +152,10 @@
 				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildDistributedLogger">M<wbr>S<wbr>Build<wbr>Distributed<wbr>Logger</a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildFileLoggerSettings">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildLoggerSettings">M<wbr>S<wbr>Build<wbr>Logger<wbr>Settings</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildConsoleColorType">M<wbr>S<wbr>Build<wbr>Console<wbr>Color<wbr>Type</a></li>
+				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildLoggerOutputLevel">M<wbr>S<wbr>Build<wbr>Logger<wbr>Output<wbr>Level</a></li>
+				<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/MSBuildTreatAllWarningsAs">M<wbr>S<wbr>Build<wbr>Treat<wbr>All<wbr>Warnings<wbr>As</a></li>
 
 
                     </ul>
@@ -255,7 +262,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder, <wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -313,7 +320,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/1F17B59C">DistributedLoggers</a></td>
-								<td>ICollection<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Distributed<wbr>Logger&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the distributed loggers to use.
@@ -322,7 +329,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -341,7 +348,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/996AD27A">FileLoggers</a></td>
-								<td>ICollection<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Settings&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the file loggers to use.
@@ -350,7 +357,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/A444E470">Ignore<wbr>Project<wbr>Extensions</a></td>
-								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets extensions to ignore when determining which project file to build.
@@ -359,7 +366,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/F959B5E3">Loggers</a></td>
-								<td>ICollection<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Logger&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the loggers to use to log events from MSBuild.
@@ -368,7 +375,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/FBF15FDC">MaxCpuCount</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the maximum number of concurrent processes to use when building.
@@ -386,7 +393,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/773AF08F">Properties</a></td>
-								<td>IDictionary<wbr>&lt;string, <wbr>ICollection<wbr>&lt;string&gt;<wbr>&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
 									<div>
     Gets the project-level properties to set or override.
@@ -395,7 +402,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/19530AAF">ResponseFiles</a></td>
-								<td>ICollection<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the response files to use.
@@ -404,7 +411,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/5455D473">Targets</a></td>
-								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the targets to build in the project.
@@ -423,7 +430,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>TimeSpan?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.
@@ -433,7 +440,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/4781AA27">ToolVersion</a></td>
-								<td>MSBuildVersion?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the version of the Toolset to use to build the project.
@@ -460,7 +467,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings/CC33F73E">Verbosity</a></td>
-								<td>DotNetCoreVerbosity?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the verbosity of logging to use.
@@ -470,7 +477,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/D7997474">WarningCodesAsError</a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the warning codes to treats as errors.
@@ -479,7 +486,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildSettings/FED6E405">Warning<wbr>Codes<wbr>As<wbr>Message</a></td>
-								<td>IList<wbr>&lt;string&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
     Gets the warning codes to treats as low importance messages.

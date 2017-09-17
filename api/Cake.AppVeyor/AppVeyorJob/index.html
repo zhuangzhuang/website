@@ -116,7 +116,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -128,6 +128,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -305,7 +312,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppVeyor/AppVeyorJob/D67A6554">Created</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the create time.
@@ -323,7 +330,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppVeyor/AppVeyorJob/AEBFA30C">Finished</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the finish time.
@@ -368,7 +375,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppVeyor/AppVeyorJob/B45BCE52">Started</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the start time.
@@ -395,7 +402,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppVeyor/AppVeyorJob/995BC320">Updated</a></td>
-								<td>DateTime?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the update time.

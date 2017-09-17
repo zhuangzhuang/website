@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -143,6 +150,9 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.VsCode/VscePackager/1330A289">VscePackager<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>IVsceToolResolver)<wbr></a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.VsCode/VsceTool_1/BDEAAFAA">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></li>
+				<li><a href="/api/Cake.VsCode/VsceTool_1/F1262C15">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.VsCode/VsceTool_1/A4A8D264">GetToolName<wbr>()<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.VsCode/VscePackager/FE9D6562">Run<wbr>(<wbr>Vsce<wbr>Package<wbr>Settings)<wbr></a></li>
 
 

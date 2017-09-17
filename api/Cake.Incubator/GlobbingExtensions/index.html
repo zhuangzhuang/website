@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -280,7 +287,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/GlobbingExtensions/6160F9D7">GetMatchingFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;IFile&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
              Returns files in the same directory that have the same file name but different extensions

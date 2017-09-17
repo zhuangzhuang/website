@@ -114,7 +114,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -126,6 +126,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -211,7 +218,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
+					<td>Action<wbr>&lt;T&gt;<wbr></td>
 					<td>An action to add required command arguments</td>
 				</tr>
 			</tbody></table>

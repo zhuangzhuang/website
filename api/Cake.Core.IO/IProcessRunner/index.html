@@ -115,7 +115,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -127,6 +127,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -204,8 +211,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>								
 											<li><a href="/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1">Tool<wbr>Fixture<wbr>Process<wbr>Runner<wbr>&lt;<wbr>T<wbr>Fixture<wbr>Result&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -215,10 +222,10 @@
 							graph TD
 	Type["IProcessRunner"]
 class Type type-node
-	Type-.-&gt;Implementing0["ProcessRunner"]
-	click Implementing0 "/api/Cake.Core.IO/ProcessRunner"
-	Type-.-&gt;Implementing1["ToolFixtureProcessRunner&lt;TFixtureResult&gt;"]
-	click Implementing1 "/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1"
+	Type-.-&gt;Implementing0["ToolFixtureProcessRunner&lt;TFixtureResult&gt;"]
+	click Implementing0 "/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1"
+	Type-.-&gt;Implementing1["ProcessRunner"]
+	click Implementing1 "/api/Cake.Core.IO/ProcessRunner"
 
 						</div>
 					</div>
