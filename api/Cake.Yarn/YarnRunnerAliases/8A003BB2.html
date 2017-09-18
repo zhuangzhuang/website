@@ -244,6 +244,13 @@
 {
     Yarn.RunScript("hello");
 });</code></pre>
+            <p>Run 'yarn version'</p>
+            <p>Cake task:</p>
+            <pre><code class="cs">Task("Yarn-Version")
+    .Does(() =&gt;
+{
+    Yarn.Version();
+});</code></pre>
             </div>
 
 
