@@ -83,6 +83,7 @@
     <div id="infobar-headings"><h6>On This Page</h6><p><a href="#pinning-cake-version">Pinning Cake version</a></p>
 <p><a href="#updating-the-cake-version-after-pinning">Updating the Cake version after pinning</a></p>
 <p><a href="#video">Video</a></p>
+<p><a href="#pinning-addin-version">Pinning addin version</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -206,6 +207,11 @@
 <h1 id="video">Video</h1>
 <p>Further information on this topic can be seen in the following video:</p>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/xq41JgaGN7k" frameborder="0" allowfullscreen=""></iframe>
+<h1 id="pinning-addin-version">Pinning addin version</h1>
+<p>If addins are referenced through the <em>packages.config</em> file they can be pinned the same way as the Cake version.</p>
+<p>If addins are referenced using the <code>#addin</code> preprocessor directive the can be pinned like this:</p>
+<pre><code>#addin nuget:?package=Cake.Foo&amp;version=1.2.3
+</code></pre>
 
 	</section>
                 
