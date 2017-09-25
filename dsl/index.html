@@ -208,6 +208,7 @@
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
     <li><a href="/dsl/hosts">Hosts</a></li>        
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
+    <li><a href="/dsl/issues">Issues</a></li>        
     <li><a href="/dsl/jmeter">JMeter</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
     <li><a href="/dsl/keepass">KeePass</a></li>        
@@ -225,7 +226,6 @@
     <li><a href="/dsl/path">Path</a></li>        
     <li><a href="/dsl/plist">plist</a></li>        
     <li><a href="/dsl/postman">Postman</a></li>        
-    <li><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></li>        
     <li><a href="/dsl/raygun">Raygun</a></li>        
     <li><a href="/dsl/resharperreports">ReSharperReports</a></li>        
     <li><a href="/dsl/resxconverter">ResxConverter</a></li>        
@@ -334,14 +334,14 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-            Several extension methods when operating on a Directory.
-            </td>
+    Contains extension methods for working with directories.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotcover">DotCover</a></td>
@@ -363,13 +363,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
@@ -380,14 +375,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Aliases for Putty.
-            
-
-            Contains functionality for working with PSCP.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -458,14 +447,16 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-    Contains functionality related to HTTP operations
-    </td>
+            <p>
+            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -547,8 +538,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -680,12 +671,7 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
-    <p>
-    In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
-    </p>
+    Contains functionality related to text transformation.
     </td>
                 </tr>
                 <tr>
@@ -777,7 +763,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-             Cake build aliases for Android ADB Package Manager commands
+             Cake build aliases for Android ADB Activity Manager commands
              </td>
                 </tr>
                 <tr>
@@ -825,13 +811,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Elastic Load Balancers
+            Contains Cake aliases for configuring Amazon Elastic Computing instances
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running commands managing Azure resource groups.
+            Contains Cake aliases for running Azure login commands.
             </td>
                 </tr>
                 <tr>
@@ -867,12 +853,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
-            </p>
+            Contains functionality related to CakeMail API
             </td>
                 </tr>
                 <tr>
@@ -930,8 +911,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -980,8 +961,8 @@
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-            Several extension methods when operating on a Directory.
-            </td>
+    Contains extension methods for working with directories.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
@@ -1011,13 +992,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></td>
@@ -1074,14 +1050,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Aliases for Putty.
-            
-
-            Contains functionality for working with PSCP.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fileset">FileSet</a></td>
@@ -1131,19 +1101,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            The result of GitterProvider Chat API post
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1189,8 +1154,16 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-    Contains functionality related to HTTP operations
-    </td>
+            <p>
+            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
+            </p>
+            </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/issues">Issues</a></td>
+                    <td>
+            Contains functionality for reading warnings from MSBuild log files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/jmeter">JMeter</a></td>
@@ -1250,8 +1223,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1309,12 +1282,6 @@
             </td>
                 </tr>
                 <tr>
-                    <td><a href="/dsl/pull-request-code-analysis">Pull Request Code Analysis</a></td>
-                    <td>
-            Contains functionality related to writing code analysis issues to pull requests.
-            </td>
-                </tr>
-                <tr>
                     <td><a href="/dsl/raygun">Raygun</a></td>
                     <td></td>
                 </tr>
@@ -1352,12 +1319,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
