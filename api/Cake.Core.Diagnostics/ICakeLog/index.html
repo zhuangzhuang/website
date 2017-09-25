@@ -144,6 +144,9 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Diagnostics">Cake<wbr>.Core<wbr>.Diagnostics</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
+				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></li>
@@ -153,9 +156,6 @@
 				<li><a href="/api/Cake.Core.Diagnostics/LogActionEntry">LogActionEntry</a></li>
 			<li class="header">Interface Types</li>
 				<li class="selected"><a href="/api/Cake.Core.Diagnostics/ICakeLog">ICakeLog</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
-				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 
 
                     </ul>
@@ -194,9 +194,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 											<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>								
 											<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>								
-											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -206,12 +206,12 @@
 							graph TD
 	Type["ICakeLog"]
 class Type type-node
-	Type-.-&gt;Implementing0["NullLog"]
-	click Implementing0 "/api/Cake.Core.Diagnostics/NullLog"
-	Type-.-&gt;Implementing1["CakeBuildLog"]
-	click Implementing1 "/api/Cake.Core.Diagnostics/CakeBuildLog"
-	Type-.-&gt;Implementing2["FakeLog"]
-	click Implementing2 "/api/Cake.Testing/FakeLog"
+	Type-.-&gt;Implementing0["FakeLog"]
+	click Implementing0 "/api/Cake.Testing/FakeLog"
+	Type-.-&gt;Implementing1["NullLog"]
+	click Implementing1 "/api/Cake.Core.Diagnostics/NullLog"
+	Type-.-&gt;Implementing2["CakeBuildLog"]
+	click Implementing2 "/api/Cake.Core.Diagnostics/CakeBuildLog"
 
 						</div>
 					</div>
