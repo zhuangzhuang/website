@@ -374,13 +374,19 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -513,8 +519,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
-    </td>
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mstest">MSTest</a></td>
@@ -718,7 +724,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XSL transformation.
+    Contains functionality related to XML XPath queries.
     </td>
                 </tr>
                 <tr>
@@ -812,7 +818,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Elastic Computing instances
+            Amazon Route53 aliases
             </td>
                 </tr>
                 <tr>
@@ -854,7 +860,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Contains functionality related to CakeMail API
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -955,12 +966,8 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            <p>
-            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
-            <p>
-            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
-            </p>    
-            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
+            Cake AddIn to upload files using WinSCP.
+            <pre><code class="cs">#addin Cake.WinSCP</code></pre>
             </td>
                 </tr>
                 <tr>
@@ -972,7 +979,8 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to creating new <a href="http://dotnet.github.io/docfx">DocFx</a>
+            projects.
             </td>
                 </tr>
                 <tr>
@@ -1011,7 +1019,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            The result of EmailProvider
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1040,8 +1048,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1059,7 +1067,13 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Several extension methods when using File.
+            Contains functionality for working with Plink.
+            
+
+            Aliases for Putty.
+            
+
+            Contains functionality for working with PSCP.
             </td>
                 </tr>
                 <tr>
@@ -1103,8 +1117,10 @@
                 <tr>
                     <td><a href="/dsl/git">Git</a></td>
                     <td>
-            Cake AddIn which copies files based on Git log.
-            <pre><code class="cs">#addin Cake.GitPackager</code></pre>
+            Class GitAliases.
+            
+
+            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
             </td>
                 </tr>
                 <tr>
@@ -1169,8 +1185,7 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to writing code analysis issues to Team Foundation Server or
-            Visual Studio Team Services pull requests.
+            Contains functionality related to reporting issues to pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1204,8 +1219,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
-    </td>
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msdeploy">MsDeploy</a></td>
@@ -1325,7 +1340,12 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Class that lets you override default API settings
+            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1370,7 +1390,8 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            Contains functionality to restore SQL Server backup files *.bak
+            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
+            create and restore DACPAC files
             </td>
                 </tr>
                 <tr>
