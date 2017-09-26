@@ -146,10 +146,13 @@
 		<li><a href="/api/Cake.Xamarin">Cake<wbr>.Xamarin</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Xamarin/CommonProjectTypeGuids">Common<wbr>Project<wbr>Type<wbr>Guids</a></li>
 				<li><a href="/api/Cake.Xamarin/MDToolSettings">MDToolSettings</a></li>
 				<li><a href="/api/Cake.Xamarin/MDToolSetupRunner">MDToolSetupRunner</a></li>
 				<li><a href="/api/Cake.Xamarin/MDToolSetupSettings">MDToolSetupSettings</a></li>
 				<li><a href="/api/Cake.Xamarin/TestCloudSettings">TestCloudSettings</a></li>
+				<li><a href="/api/Cake.Xamarin/VSToolSetupRunner">VSToolSetupRunner</a></li>
+				<li><a href="/api/Cake.Xamarin/VSToolSetupSettings">VSToolSetupSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Xamarin/XamarinAliases">XamarinAliases</a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinComponentCredentialSettings">Xamarin<wbr>Component<wbr>Credential<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinComponentRestoreSettings">Xamarin<wbr>Component<wbr>Restore<wbr>Settings</a></li>
@@ -200,7 +203,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
@@ -210,7 +213,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Type["XamarinAliases"]
 class Type type-node
 
@@ -265,7 +268,9 @@ class Type type-node
 								<td>FilePath</td>
 								<td>
 									<div>
-            Creates an android .APK package file
+            DEPRECATED: Creates an android .APK package file
+            Use the MSBuild target `SignAndroidPackage` instead.
+            See documentation for more info: https://developer.xamarin.com/guides/android/under_the_hood/build_process/#Build_Targets
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -275,7 +280,9 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Creates an archive of an app with MDTool
+            DEPRECATED: Creates an archive of an app with MDTool
+            Change your project settings to output an IPA file, and use the MSBuild to build.
+            See documentation for more info: https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/app_distribution/ipa_support/#Building_via_the_Command_Line_On_Mac
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -285,7 +292,8 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Builds a project with MDTool
+            DEPRECATED: Builds a project with MDTool
+            Use MSBuild instead.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -376,6 +384,16 @@ class Type type-node
 								<td>
 									<div>
             Finds and Uploads .xam component packages which match the globbing patterns
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Xamarin/XamarinAliases/C53C8932">VSToolSetup<wbr>(ICakeContext)<wbr></a></td>
+								<td><a href="/api/Cake.Xamarin/VSToolSetupRunner">VSToolSetupRunner</a></td>
+								<td>
+									<div>
+            Gets a runner for invoking the Visual Studio Mac Add-in Setup Utility.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>

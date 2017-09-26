@@ -161,6 +161,7 @@
 				<li><a href="/api/Cake.Xamarin/XamarinAliases/8F996960">UITest<wbr>(ICakeContext, <wbr>FilePath, <wbr>NUnitSettings)<wbr></a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinAliases/119D6D1D">UploadComponent<wbr>(ICakeContext, <wbr>FilePath, <wbr>Xamarin<wbr>Component<wbr>Upload<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinAliases/F3A93364">UploadComponents<wbr>(ICakeContext, <wbr>Xamarin<wbr>Component<wbr>Upload<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Xamarin/XamarinAliases/C53C8932">VSToolSetup<wbr>(ICakeContext)<wbr></a></li>
 
 
                     </ul>
@@ -188,7 +189,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Builds a project with MDTool
+            DEPRECATED: Builds a project with MDTool
+            Use MSBuild instead.
             </div>
 
 		<div class="panel panel-default">
@@ -226,6 +228,10 @@
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
 						<td></td>
 					</tr>
+					<tr>
+						<td>ObsoleteAttribute</td>
+						<td></td>
+					</tr>
 			</tbody></table>
 		</div>
 	</div>	
@@ -254,7 +260,7 @@
 					</tr>
 					<tr>
 						<td>settings</td>
-						<td>Action<wbr>&lt;T&gt;<wbr></td>
+						<td>Action<wbr>&lt;&gt;<wbr></td>
 						<td>The mdtool settings.</td>
 					</tr>
 			</tbody></table>

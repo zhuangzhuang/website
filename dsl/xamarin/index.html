@@ -295,7 +295,9 @@
 <a href="/api/Cake.Xamarin/XamarinAliases/32D90E29">AndroidPackage<wbr>(ICakeContext, <wbr>FilePath, <wbr>bool, <wbr>Action<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Build<wbr>Settings&gt;<wbr>)<wbr></a>                            </td>
                             <td>
                                 
-            Creates an android .APK package file
+            DEPRECATED: Creates an android .APK package file
+            Use the MSBuild target `SignAndroidPackage` instead.
+            See documentation for more info: https://developer.xamarin.com/guides/android/under_the_hood/build_process/#Build_Targets
             
 
                                             <br>
@@ -307,7 +309,9 @@
 <a href="/api/Cake.Xamarin/XamarinAliases/9BB414B2">MDToolArchive<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>Action<wbr>&lt;<wbr>M<wbr>D<wbr>Tool<wbr>Settings&gt;<wbr>)<wbr></a>                            </td>
                             <td>
                                 
-            Creates an archive of an app with MDTool
+            DEPRECATED: Creates an archive of an app with MDTool
+            Change your project settings to output an IPA file, and use the MSBuild to build.
+            See documentation for more info: https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/app_distribution/ipa_support/#Building_via_the_Command_Line_On_Mac
             
 
                                             <br>
@@ -319,7 +323,8 @@
 <a href="/api/Cake.Xamarin/XamarinAliases/C513C0C5">MDToolBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>Action<wbr>&lt;<wbr>M<wbr>D<wbr>Tool<wbr>Settings&gt;<wbr>)<wbr></a>                            </td>
                             <td>
                                 
-            Builds a project with MDTool
+            DEPRECATED: Builds a project with MDTool
+            Use MSBuild instead.
             
 
                                             <br>
@@ -428,6 +433,18 @@
                             <td>
                                 
             Finds and Uploads .xam component packages which match the globbing patterns
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Xamarin.dll">Cake<wbr>.Xamarin<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Xamarin/XamarinAliases/C53C8932">VSToolSetup</a>                            </td>
+                            <td>
+                                
+            Gets a runner for invoking the Visual Studio Mac Add-in Setup Utility.
             
 
                                             <br>
