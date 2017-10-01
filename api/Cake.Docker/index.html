@@ -859,12 +859,6 @@
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/ContainerStatus">ContainerStatus</a></td>
-									<td>
-            Container status
-            </td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Docker/DockerAliases">DockerAliases</a></td>
 									<td>
             Contains functionality for working with Docker commands.
@@ -874,12 +868,6 @@
 								<td><a href="/api/Cake.Docker/DockerBridge">DockerBridge</a></td>
 									<td>
             Bridge type
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerBuildSettings">DockerBuildSettings</a></td>
-									<td>
-            Settings for docker build.
             </td>
 							</tr>
 							<tr>
@@ -955,135 +943,171 @@
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/DockerCpSettings">DockerCpSettings</a></td>
+								<td><a href="/api/Cake.Docker/DockerContainerCpSettings">Docker<wbr>Container<wbr>Cp<wbr>Settings</a></td>
 									<td>
-            Settings for docker build.
+            Settings for docker Use: `cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-.
+            Copy files/folders between a container and the local filesystem
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/DockerCreateSettings">DockerCreateSettings</a></td>
+								<td><a href="/api/Cake.Docker/DockerContainerCreateSettings">Docker<wbr>Container<wbr>Create<wbr>Settings</a></td>
 									<td>
-            Settings for docker build.
+            Settings for docker create [OPTIONS] IMAGE [COMMAND] [ARG...].
+            Create a new container
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/DockerLoadSettings">DockerLoadSettings</a></td>
+								<td><a href="/api/Cake.Docker/DockerContainerExecSettings">Docker<wbr>Container<wbr>Exec<wbr>Settings</a></td>
 									<td>
-             Settings for docker stop
+            Settings for docker exec [OPTIONS] CONTAINER COMMAND [ARG...].
+            Run a command in a running container
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/DockerLoginSettings">DockerLoginSettings</a></td>
+								<td><a href="/api/Cake.Docker/DockerContainerLogsSettings">Docker<wbr>Container<wbr>Logs<wbr>Settings</a></td>
 									<td>
-            Settings for docker login.
+            Settings for docker logs [OPTIONS] CONTAINER.
+            Fetch the logs of a container
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerContainerRmSettings">Docker<wbr>Container<wbr>Rm<wbr>Settings</a></td>
+									<td>
+            Settings for docker rm [OPTIONS] CONTAINER [CONTAINER...].
+            Remove one or more containers
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerContainerRunSettings">Docker<wbr>Container<wbr>Run<wbr>Settings</a></td>
+									<td>
+            Settings for docker run [OPTIONS] IMAGE [COMMAND] [ARG...].
+            Run a command in a new container
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerContainerStartSettings">Docker<wbr>Container<wbr>Start<wbr>Settings</a></td>
+									<td>
+            Settings for docker start [OPTIONS] CONTAINER [CONTAINER...].
+            Start one or more stopped containers
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerContainerStopSettings">Docker<wbr>Container<wbr>Stop<wbr>Settings</a></td>
+									<td>
+            Settings for docker stop [OPTIONS] CONTAINER [CONTAINER...].
+            Stop one or more running containers
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImageBuildSettings">Docker<wbr>Image<wbr>Build<wbr>Settings</a></td>
+									<td>
+            Settings for docker build [OPTIONS] PATH | URL | -.
+            Build an image from a Dockerfile
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImageLoadSettings">Docker<wbr>Image<wbr>Load<wbr>Settings</a></td>
+									<td>
+            Settings for docker load [OPTIONS].
+            Load an image from a tar archive or STDIN
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImagePullSettings">Docker<wbr>Image<wbr>Pull<wbr>Settings</a></td>
+									<td>
+            Settings for docker pull [OPTIONS] NAME[:TAG|@DIGEST].
+            Pull an image or a repository from a registry
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImagePushSettings">Docker<wbr>Image<wbr>Push<wbr>Settings</a></td>
+									<td>
+            Settings for docker push [OPTIONS] NAME[:TAG].
+            Push an image or a repository to a registry
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImageRemoveSettings">Docker<wbr>Image<wbr>Remove<wbr>Settings</a></td>
+									<td>
+            Settings for docker rmi [OPTIONS] IMAGE [IMAGE...].
+            Remove one or more images
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImageSaveSettings">Docker<wbr>Image<wbr>Save<wbr>Settings</a></td>
+									<td>
+            Settings for docker save [OPTIONS] IMAGE [IMAGE...].
+            Save one or more images to a tar archive (streamed to STDOUT by default)
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerImageTagSettings">Docker<wbr>Image<wbr>Tag<wbr>Settings</a></td>
+									<td>
+            Settings for docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG].
+            Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerNetworkConnectSettings">Docker<wbr>Network<wbr>Connect<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
+            Settings for docker connect [OPTIONS] NETWORK CONTAINER.
+            Connect a container to a network
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerNetworkCreateSettings">Docker<wbr>Network<wbr>Create<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
+            Settings for docker create [OPTIONS] NETWORK.
+            Create a network
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerNetworkDisconnectSettings">Docker<wbr>Network<wbr>Disconnect<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
+            Settings for docker disconnect [OPTIONS] NETWORK CONTAINER.
+            Disconnect a container from a network
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/DockerPsParser">DockerPsParser</a></td>
+								<td><a href="/api/Cake.Docker/DockerNetworkRemoveSettings">Docker<wbr>Network<wbr>Remove<wbr>Settings</a></td>
 									<td>
-            
+            Settings for docker rm NETWORK [NETWORK...].
+            Remove one or more networks
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Docker/DockerPsResult">DockerPsResult</a></td>
+								<td><a href="/api/Cake.Docker/DockerRegistryLoginSettings">Docker<wbr>Registry<wbr>Login<wbr>Settings</a></td>
 									<td>
-            Result of docker ps command.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerPsSettings">DockerPsSettings</a></td>
-									<td>
-            Settings for docker build.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerPullSettings">DockerPullSettings</a></td>
-									<td>
-            Settings for docker push.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerPushSettings">DockerPushSettings</a></td>
-									<td>
-            Settings for docker push.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerRmiSettings">DockerRmiSettings</a></td>
-									<td>
-            Settings for docker rmi
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerRmSettings">DockerRmSettings</a></td>
-									<td>
-            Settings for docker rm
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerRunSettings">DockerRunSettings</a></td>
-									<td>
-            Settings for docker push.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerSaveSettings">DockerSaveSettings</a></td>
-									<td>
-             Settings for docker stop
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerStopSettings">DockerStopSettings</a></td>
-									<td>
-             Settings for docker stop
+            Settings for docker login [OPTIONS] [SERVER].
+            Log in to a Docker registry
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerSwarmInitSettings">Docker<wbr>Swarm<wbr>Init<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
+            Settings for docker init [OPTIONS].
+            Initialize a swarm
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerSwarmJoinSettings">Docker<wbr>Swarm<wbr>Join<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
+            Settings for docker join [OPTIONS] HOST:PORT.
+            Join a swarm as a node and/or manager
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerSwarmLeaveSettings">Docker<wbr>Swarm<wbr>Leave<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
+            Settings for docker leave [OPTIONS].
+            Leave the swarm
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerSwarmUpdateSettings">Docker<wbr>Swarm<wbr>Update<wbr>Settings</a></td>
 									<td>
-            Settings for docker swarm init.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Docker/DockerTagSettings">DockerTagSettings</a></td>
-									<td>
-            Settings for docker tag.
+            Settings for docker update [OPTIONS].
+            Update the swarm
             </td>
 							</tr>
 							<tr>

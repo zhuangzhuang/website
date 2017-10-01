@@ -200,19 +200,19 @@
 </ul>
 <p><strong>NOTE:</strong> These configuration options are prioritised in the order shown above.  i.e. The configuration file overrides any Environment variables, and arguments passed directly into cake.exe override both Environment variables and configuration file settings.</p>
 <h2 id="where-can-this-configuration-be-applied">Where can this configuration be applied?</h2>
-<p>As an example of where this overridable configuration can be applied, let's look at how Cake determines where the required Roslyn assemblies (which Cake requires in order to function) are downloaded from.  By default, it does this by downloading the nuget packages from the following URL <code>https://packages.nuget.org/api/v2</code>.  However, it may be necessary (for example, when running in an offline/local environment) to download these nuget packages from an alternative source.  This is where the Cake Configuration comes into play.</p>
-<p>By creating an Environment variable with the name of <code>CAKE_ROSLYN_NUGETSOURCE</code> and setting the value to the URL that is required, Cake will use this alternative download source, rather than the default.</p>
+<p>As an example of where this overridable configuration can be applied, let's look at how Cake determines where to download NuGet packages from. By default, it does this by downloading the nuget packages user configured sources.  However, it may be necessary (for example, when running in an offline/local environment) to download these nuget packages from an alternative source.  This is where the Cake Configuration comes into play.</p>
+<p>By creating an Environment variable with the name of <code>CAKE_NUGET_SOURCE</code> and setting the value to the URL that is required, Cake will use this alternative download source, rather than the defaults.</p>
 <p>Alternatively, you can create a <code>cake.config</code> file with the following content:</p>
 <pre><code class="language-sh">; The configuration file for Cake.
 
-[Roslyn]
-NuGetSource=https://mycustomurl
+[Nuget]
+Source=https://mycustomurl
 </code></pre>
 <br/>
 Specifying a configuration value within a configuration file will override the same configuration value stored within an equivalent Environment variable.
 <p><strong>NOTE:</strong> This configuration file should be located in the same directory as your <code>build.cake</code> file.</p>
 <p>Finally, you can specify an input parameter directly to the Cake.exe, in the following format:</p>
-<pre><code class="language-sh">cake.exe --roslyn_nugetsource=http://mycustomurl
+<pre><code class="language-sh">cake.exe --nuget_source=http://mycustomurl
 </code></pre>
 <br/>
 Passing a configuration value directly to the Cake.exe will override the same configuration value stored within an Environment variable and also any stored in a local configuration file.
