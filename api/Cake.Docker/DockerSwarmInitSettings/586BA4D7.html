@@ -149,13 +149,17 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/4700E34D">Docker<wbr>Swarm<wbr>Init<wbr>Settings<wbr>()<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/67D89A1B">AutoAccept</a></li>
+				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/B90E9DBC">AdvertiseAddr</a></li>
+				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/5F50C7C0">Autolock</a></li>
+				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/A00EE95F">Availability</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/3770899B">CertExpiry</a></li>
+				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/21E1C587">DataPathAddr</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/C109FAC4">DispatcherHeartbeat</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/69035E01">ExternalCa</a></li>
 				<li class="selected"><a href="/api/Cake.Docker/DockerSwarmInitSettings/586BA4D7">ForceNewCluster</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/ECDF1563">ListenAddr</a></li>
-				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/31DEE6F2">Secret</a></li>
+				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/325BDBF0">MaxSnapshots</a></li>
+				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/154A1E1E">SnapshotInterval</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings/78F12C59">TaskHistoryLimit</a></li>
 
 
@@ -184,7 +188,9 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Force create a new cluster from current state.
+            --force-new-cluster
+            default: false
+            Force create a new cluster from current state
             </div>
 
 		<div class="panel panel-default">
@@ -204,7 +210,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool ForceNewCluster { get; set; }</code></pre>
+	<pre><code>public Nullable&lt;bool&gt; ForceNewCluster { get; set; }</code></pre>
 
 
 
@@ -221,7 +227,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>Nullable<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

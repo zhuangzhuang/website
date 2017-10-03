@@ -177,7 +177,9 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Force leave ignoring warnings.
+            --force, -f
+            default: false
+            Force this node to leave the swarm, ignoring warnings
             </div>
 
 		<div class="panel panel-default">
@@ -197,7 +199,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool Force { get; set; }</code></pre>
+	<pre><code>public Nullable&lt;bool&gt; Force { get; set; }</code></pre>
 
 
 
@@ -214,7 +216,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>Nullable<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
