@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - DefaultExecutionStrategy.Execute(CakeTask, ICakeContext) Method</title>
+        <title>Cake - API - Script.Defines Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,8 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -141,22 +140,19 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
+		<li><a href="/api/Cake.Core.Scripting">Cake<wbr>.Core<wbr>.Scripting</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
+		<li><a href="/api/Cake.Core.Scripting/Script">Script</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/A3460760">Default<wbr>Execution<wbr>Strategy<wbr>(ICakeLog)<wbr></a></li>
-			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Core/DefaultExecutionStrategy/9CBF8F21">Execute<wbr>(CakeTask, <wbr>ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/88A26592">HandleErrors<wbr>(Action<wbr>&lt;Exception&gt;<wbr>, <wbr>Exception)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/770B2082">InvokeFinally<wbr>(Action)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/C2D9149F">PerformSetup<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>, <wbr>ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/7249B6A9">PerformTaskSetup<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>, <wbr>ITaskSetupContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/A129DB4F">PerformTaskTeardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>, <wbr>I<wbr>Task<wbr>Teardown<wbr>Context)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/E2B4ECE0">PerformTeardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context&gt;<wbr>, <wbr>ITeardownContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/4194C00C">ReportErrors<wbr>(Action<wbr>&lt;Exception&gt;<wbr>, <wbr>Exception)<wbr></a></li>
-				<li><a href="/api/Cake.Core/DefaultExecutionStrategy/8D7205AB">Skip<wbr>(CakeTask)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Scripting/Script/4EA2A8DB">Script<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;ScriptAlias&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Core.Scripting/Script/274C3BF8">Aliases</a></li>
+				<li class="selected"><a href="/api/Cake.Core.Scripting/Script/55BD16DE">Defines</a></li>
+				<li><a href="/api/Cake.Core.Scripting/Script/743CFD9A">Lines</a></li>
+				<li><a href="/api/Cake.Core.Scripting/Script/6ABBC296">Namespaces</a></li>
+				<li><a href="/api/Cake.Core.Scripting/Script/2507E08C">UsingAliasDirectives</a></li>
+				<li><a href="/api/Cake.Core.Scripting/Script/ABF0AA64">Using<wbr>Static<wbr>Directives</a></li>
 
 
                     </ul>
@@ -170,64 +166,39 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a>.</h3>
-	<h1>Execute<wbr>(CakeTask, <wbr>ICakeContext)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Core.Scripting/Script">Script</a>.</h3>
+	<h1>Defines <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Executes the specified task.
+    Gets the defines.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Core">Cake<wbr>.Core</a></dd>
+						<dd><a href="/api/Cake.Core.Scripting">Cake<wbr>.Core<wbr>.Scripting</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></dd>		
+						<dd><a href="/api/Cake.Core.Scripting/Script">Script</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void Execute(CakeTask task, ICakeContext context)</code></pre>
+	<pre><code>public IReadOnlyList&lt;string&gt; Defines { get; }</code></pre>
 
 
 
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>task</td>
-						<td><a href="/api/Cake.Core/CakeTask">CakeTask</a></td>
-						<td>The task to execute.</td>
-					</tr>
-					<tr>
-						<td>context</td>
-						<td><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></td>
-						<td>The context.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -238,8 +209,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+					<td>The defines.</td>
 				</tr>
 			</tbody></table>
 		</div>

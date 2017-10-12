@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - DryRunScriptHost.RunTarget(string) Method</title>
+        <title>Cake - API - ICakeTaskInfo.Dependees Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,8 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -141,27 +140,15 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Scripting">Cake<wbr>.Scripting</a></li>
+		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>
+		<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Scripting/DryRunScriptHost/086F8F9C">DryRunScriptHost<wbr>(ICakeEngine, <wbr>ICakeContext, <wbr>ICakeLog)<wbr></a></li>
-			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Scripting/DryRunScriptHost/D6B7653D">RunTarget<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/1CB34DD2">Setup<wbr>(Action)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/9DA05356">Setup<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/CDDAE491">Task<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/CF9F3617">TaskSetup<wbr>(Action<wbr>&lt;ICakeContext, <wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/EE14E4AB">TaskSetup<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/EA010CCF">TaskTeardown<wbr>(Action<wbr>&lt;ICakeContext, <wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/9454E14A">TaskTeardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/03E67EB8">Teardown<wbr>(Action)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/784A0A52">Teardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/CEC6A009">Context</a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/4895DD1B">Engine</a></li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptHost/85E8A69C">Tasks</a></li>
+				<li class="selected"><a href="/api/Cake.Core/ICakeTaskInfo/8DD46E97">Dependees</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo/5734BBE8">Dependencies</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo/E59033B4">Description</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo/A32CF181">Name</a></li>
 
 
                     </ul>
@@ -175,59 +162,39 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a>.</h3>
-	<h1>RunTarget<wbr>(string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a>.</h3>
+	<h1>Dependees <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Runs the specified target.
+    Gets the tasks that the task want to be a dependency of.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Scripting">Cake<wbr>.Scripting</a></dd>
+						<dd><a href="/api/Cake.Core">Cake<wbr>.Core</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></dd>		
+						<dd><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public override CakeReport RunTarget(string target)</code></pre>
+	<pre><code>IReadOnlyList&lt;CakeTaskDependency&gt; Dependees { get; }</code></pre>
 
 
 
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>target</td>
-						<td>string</td>
-						<td>The target to run.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -238,8 +205,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.Core/CakeReport">CakeReport</a></td>
-					<td>The resulting report.</td>
+					<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+					<td>The tasks that the task want to be a dependency of.</td>
 				</tr>
 			</tbody></table>
 		</div>

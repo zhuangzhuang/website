@@ -152,6 +152,8 @@
 				<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptProcessor">ScriptProcessor</a></li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptRunner">ScriptRunner</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Scripting/ScriptAliasType">ScriptAliasType</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptAliasFinder">IScriptAliasFinder</a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptConventions">IScriptConventions</a></li>
@@ -160,8 +162,6 @@
 				<li><a href="/api/Cake.Core.Scripting/IScriptProcessor">IScriptProcessor</a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptRunner">IScriptRunner</a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptSession">IScriptSession</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptAliasType">ScriptAliasType</a></li>
 
 
                     </ul>
@@ -237,7 +237,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Core.Scripting/Script/B46C837D">Script<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;ScriptAlias&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core.Scripting/Script/4EA2A8DB">Script<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;ScriptAlias&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
 									<td>
     Initializes a new instance of the <code class="cs"><a href="/api/Cake.Core.Scripting/Script">Script</a></code> class.
     </td>
@@ -270,6 +270,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.Scripting/Script/55BD16DE">Defines</a></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the defines.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core.Scripting/Script/743CFD9A">Lines</a></td>
 								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
 								<td>
@@ -293,6 +302,15 @@ class Type type-node
 								<td>
 									<div>
     Gets the using alias directives.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Scripting/Script/ABF0AA64">Using<wbr>Static<wbr>Directives</a></td>
+								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the using static directives.
     </div>
 								</td>
 							</tr>
@@ -335,16 +353,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Script&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;Script&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -352,6 +360,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Script&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

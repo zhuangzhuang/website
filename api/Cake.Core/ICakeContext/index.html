@@ -160,6 +160,7 @@
 				<li><a href="/api/Cake.Core/CakeTask">CakeTask</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></li>
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
@@ -232,14 +233,14 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -249,22 +250,22 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeContextAdapter"]
-	click Implementing0 "/api/Cake.Core/CakeContextAdapter"
-	Type-.-&gt;Implementing1["TaskTeardownContext"]
-	click Implementing1 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing0["ITaskTeardownContext"]
+	click Implementing0 "/api/Cake.Core/ITaskTeardownContext"
+	Type-.-&gt;Implementing1["CakeContextAdapter"]
+	click Implementing1 "/api/Cake.Core/CakeContextAdapter"
 	Type-.-&gt;Implementing2["TeardownContext"]
 	click Implementing2 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing3["ITaskTeardownContext"]
-	click Implementing3 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing4["CakeContext"]
-	click Implementing4 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing5["TaskSetupContext"]
-	click Implementing5 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing6["ITeardownContext"]
-	click Implementing6 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing7["ITaskSetupContext"]
-	click Implementing7 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing3["TaskSetupContext"]
+	click Implementing3 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing4["TaskTeardownContext"]
+	click Implementing4 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing5["ITeardownContext"]
+	click Implementing5 "/api/Cake.Core/ITeardownContext"
+	Type-.-&gt;Implementing6["ITaskSetupContext"]
+	click Implementing6 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing7["CakeContext"]
+	click Implementing7 "/api/Cake.Core/CakeContext"
 
 						</div>
 					</div>
@@ -2622,16 +2623,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2639,6 +2630,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -2798,6 +2799,36 @@ class Type type-node
 									<div>
      Installs NuGet packages using the specified package configurations and settings.
      </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/CD21260C">NuGetList<wbr>(NuGetListSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    List packages on available from source using specified settings
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/20FD7D58">NuGetList<wbr>(string)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    List packages on available from source using specified settings
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/4196A558">NuGetList<wbr>(string, <wbr>NuGetListSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    List packages on available from source using specified settings
+    </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
 								</td>
 							</tr>
