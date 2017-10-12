@@ -221,6 +221,12 @@ RunTarget("Default");
 <p>The output is</p>
 <pre><code>My setting is: from a batch file
 </code></pre>
+<p>Bash (Linux/macOS):</p>
+<pre><code>./build.sh --my_setting="from Bash"
+</code></pre>
+<p>The output is</p>
+<pre><code>My setting is: from Bash
+</code></pre>
 <h1 id="environment-variables">Environment Variables</h1>
 <p>Call the EnvironmentVariable() alias in your cake file to get the environment variable.</p>
 <pre><code class="language-csharp">var mySetting = EnvironmentVariable("my_setting") ?? "default value";

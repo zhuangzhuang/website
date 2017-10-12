@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - IExecutionStrategy.Execute(CakeTask, ICakeContext) Method</title>
+        <title>Cake - API - NuGetAliases.NuGetList(ICakeContext, string, NuGetListSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,6 +81,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -141,20 +143,49 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
+		<li><a href="/api/Cake.Common.Tools.NuGet">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+		<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Core/IExecutionStrategy/1D9ECEDC">Execute<wbr>(CakeTask, <wbr>ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/4399D438">HandleErrors<wbr>(Action<wbr>&lt;Exception&gt;<wbr>, <wbr>Exception)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/F764F0D8">InvokeFinally<wbr>(Action)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/F181D7A5">PerformSetup<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>, <wbr>ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/79D577C0">PerformTaskSetup<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>, <wbr>ITaskSetupContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/6FDC30F0">PerformTaskTeardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>, <wbr>I<wbr>Task<wbr>Teardown<wbr>Context)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/7B2FE06E">PerformTeardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context&gt;<wbr>, <wbr>ITeardownContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/8AAF71A6">ReportErrors<wbr>(Action<wbr>&lt;Exception&gt;<wbr>, <wbr>Exception)<wbr></a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy/7992E677">Skip<wbr>(CakeTask)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/22664610">NuGetAdd<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/278882B5">NuGetAdd<wbr>(ICakeContext, <wbr>string, <wbr>NuGetAddSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/45A5D0C0">NuGetAddSource<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/8B9ADF68">NuGetAddSource<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Nu<wbr>Get<wbr>Sources<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/818C0717">NuGetHasSource<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/9606D1D8">NuGetHasSource<wbr>(ICakeContext, <wbr>string, <wbr>Nu<wbr>Get<wbr>Sources<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/44FD4AFB">NuGetInit<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/11FD6BD2">NuGetInit<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>NuGetInitSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/C013EBFA">NuGetInstall<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/F1E1076D">NuGetInstall<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/343A93DB">NuGetInstall<wbr>(ICakeContext, <wbr>string, <wbr>Nu<wbr>Get<wbr>Install<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/609A3F76">NuGetInstall<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>Nu<wbr>Get<wbr>Install<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/6E05F5F4">Nu<wbr>Get<wbr>Install<wbr>From<wbr>Config<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/83F9182E">Nu<wbr>Get<wbr>Install<wbr>From<wbr>Config<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/E9204FB6">Nu<wbr>Get<wbr>Install<wbr>From<wbr>Config<wbr>(ICakeContext, <wbr>FilePath, <wbr>Nu<wbr>Get<wbr>Install<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/49217368">Nu<wbr>Get<wbr>Install<wbr>From<wbr>Config<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Nu<wbr>Get<wbr>Install<wbr>Settings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/4196A558">NuGetList<wbr>(ICakeContext, <wbr>string, <wbr>NuGetListSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/20FD7D58">NuGetList<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/CD21260C">NuGetList<wbr>(ICakeContext, <wbr>NuGetListSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/EF4ED944">NuGetPack<wbr>(ICakeContext, <wbr>FilePath, <wbr>NuGetPackSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/811F8B9C">NuGetPack<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>NuGetPackSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/9C675079">NuGetPack<wbr>(ICakeContext, <wbr>NuGetPackSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/08163C34">NuGetPush<wbr>(ICakeContext, <wbr>FilePath, <wbr>NuGetPushSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/354BEEEF">NuGetPush<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>NuGetPushSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/1DC9CA2D">NuGetRemoveSource<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/B9584C4D">NuGetRemoveSource<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Nu<wbr>Get<wbr>Sources<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/09815AAD">NuGetRestore<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/E0A372F5">NuGetRestore<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/E6B1300E">NuGetRestore<wbr>(ICakeContext, <wbr>FilePath, <wbr>Nu<wbr>Get<wbr>Restore<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/CD562779">NuGetRestore<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>Nu<wbr>Get<wbr>Restore<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/746339CF">NuGetSetApiKey<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Nu<wbr>Get<wbr>Set<wbr>Api<wbr>Key<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/B66E171D">NuGetSetApiKey<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/092E29E3">NuGetSetProxy<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>Nu<wbr>Get<wbr>Set<wbr>Proxy<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/C97A771F">NuGetSetProxy<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/7C243605">NuGetUpdate<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/8FADA7FF">NuGetUpdate<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/33449732">NuGetUpdate<wbr>(ICakeContext, <wbr>FilePath, <wbr>NuGetUpdateSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/ACF163E2">NuGetUpdate<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>NuGetUpdateSettings)<wbr></a></li>
 
 
                     </ul>
@@ -168,15 +199,15 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a>.</h3>
-	<h1>Execute<wbr>(CakeTask, <wbr>ICakeContext)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a>.</h3>
+	<h1>NuGetList<wbr>(ICakeContext, <wbr>string, <wbr>NuGetListSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Executes the specified task.
+    List packages on available from source using specified settings
     </div>
 
 		<div class="panel panel-default">
@@ -184,20 +215,67 @@
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Core">Cake<wbr>.Core</a></dd>
+						<dd><a href="/api/Cake.Common.Tools.NuGet">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></dd>		
+						<dd><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>void Execute(CakeTask task, ICakeContext context)</code></pre>
+	<pre><code>[CakeMethodAlias]
+[CakeAliasCategory("List")]
+[CakeNamespaceImport("Cake.Common.Tools.NuGet.List")]
+public static IEnumerable&lt;NuGetListItem&gt; NuGetList(this ICakeContext context, string packageId, NuGetListSettings settings)</code></pre>
+
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">var packageList = NuGetList("Cake", new NuGetListSettings {
+    AllVersions = false,
+    Prerelease = false
+    });
+foreach(var package in packageList)
+{
+    Information("Found package {0}, version {1}", package.Name, package.Version);
+}</code></pre>
+    </div>
 
 
-
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td><a href="/api/Cake.Core.Annotations/CakeMethodAliasAttribute">Cake<wbr>Method<wbr>Alias<wbr>Attribute</a></td>
+						<td>
+    An attribute used to mark script method aliases.
+    </td>
+					</tr>
+					<tr>
+						<td><a href="/api/Cake.Core.Annotations/CakeAliasCategoryAttribute">Cake<wbr>Alias<wbr>Category<wbr>Attribute</a></td>
+						<td>
+    An attribute used for documentation of alias methods/properties.
+    </td>
+					</tr>
+					<tr>
+						<td><a href="/api/Cake.Core.Annotations/CakeNamespaceImportAttribute">Cake<wbr>Namespace<wbr>Import<wbr>Attribute</a></td>
+						<td>
+    An attribute used to hint Cake about additional namespaces that need
+    to be imported for an alias to work. This attribute can mark an
+    extension method, the extension method class, or the assembly to provide a global set of imports
+    </td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	<h1 id="Parameters">Parameters</h1>
@@ -212,14 +290,19 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>task</td>
-						<td><a href="/api/Cake.Core/CakeTask">CakeTask</a></td>
-						<td>The task to execute.</td>
-					</tr>
-					<tr>
 						<td>context</td>
 						<td><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></td>
 						<td>The context.</td>
+					</tr>
+					<tr>
+						<td>packageId</td>
+						<td>string</td>
+						<td>The package Id</td>
+					</tr>
+					<tr>
+						<td>settings</td>
+						<td><a href="/api/Cake.Common.Tools.NuGet.List/NuGetListSettings">NuGetListSettings</a></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -236,8 +319,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+					<td>List of packages with their version</td>
 				</tr>
 			</tbody></table>
 		</div>

@@ -151,6 +151,7 @@
 				<li><a href="/api/Cake.Core/CakeTask/5021EE32">Criterias</a></li>
 				<li><a href="/api/Cake.Core/ActionTask/999A35A8">DeferExceptions</a></li>
 				<li><a href="/api/Cake.Core/ActionTask/2BB9DCF1">DelayedActions</a></li>
+				<li><a href="/api/Cake.Core/CakeTask/BA79E975">Dependees</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/8713EAA1">Dependencies</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/030D538C">Description</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/5D2BDA78">ErrorHandler</a></li>
@@ -158,10 +159,11 @@
 				<li><a href="/api/Cake.Core/CakeTask/57E77A51">FinallyHandler</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/F305953D">Name</a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Core/ActionTask/66D4432B">AddAction<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core/ActionTask/96490929">AddAction<wbr>(Func<wbr>&lt;ICakeContext, <wbr>Task&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Core/CakeTask/F2CE61C5">AddCriteria<wbr>(Func<wbr>&lt;ICakeContext, <wbr>bool&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Core/ActionTask/BF744DDA">AddDelayedAction<wbr>(Action)<wbr></a></li>
-				<li><a href="/api/Cake.Core/CakeTask/07296D54">AddDependency<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Core/CakeTask/18AF1AD8">AddDependency<wbr>(string, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Cake.Core/CakeTask/258F8BFC">AddReverseDependency<wbr>(string, <wbr>bool)<wbr></a></li>
 				<li><a href="/api/Cake.Core/ActionTask/D41D5859">Execute<wbr>(ICakeContext)<wbr></a></li>
 				<li><a href="/api/Cake.Core/ActionTask/01BA03BE">SetDeferExceptions<wbr>(bool)<wbr></a></li>
 				<li><a href="/api/Cake.Core/CakeTask/84FD043B">SetErrorHandler<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></li>
@@ -206,7 +208,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public List&lt;Action&lt;ICakeContext&gt;&gt; Actions { get; }</code></pre>
+	<pre><code>public List&lt;Func&lt;ICakeContext, Task&gt;&gt; Actions { get; }</code></pre>
 
 
 

@@ -441,6 +441,35 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/A846986C">WarningsAsError</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether warnings should be treated as errors.
+    Treats all warnings as errors unless <code class="cs"><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/1CF00CE0">WarningsAsErrorCodes</a></code> has specific codes specified.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/1CF00CE0">WarningsAsErrorCodes</a></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the warning codes to treat as errors.
+    If any specified  will implicitly be treated as true.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/9F310A82">Warnings<wbr>As<wbr>Message<wbr>Codes</a></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the warning codes to NOT treat as errors.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/A29EC283">WorkingDirectory</a></td>
 								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
 								<td>
@@ -515,16 +544,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -532,6 +551,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -670,6 +699,26 @@ class Type type-node
 								<td>
 									<div>
     Adds a MSBuild target to the configuration.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/AA2066F5">WithWarningsAsError<wbr>(string[])<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Treat warnnings as errors, if no codes specified all errors will be treated as errors.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/22D7899C">With<wbr>Warnings<wbr>As<wbr>Message<wbr>(string[])<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Warnings to not treat as errors.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
