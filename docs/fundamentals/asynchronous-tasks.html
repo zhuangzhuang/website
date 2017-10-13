@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - Setting Up A New Project</title>
+        <title>Cake - Asynchronous Tasks</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,10 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/cake-build/website/blob/develop/input/docs/tutorials/setting-up-a-new-project.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#install-the-bootstrapper">1. Install the bootstrapper</a></p>
-<p><a href="#create-a-cake-script">2. Create a Cake script</a></p>
-<p><a href="#run-the-cake-script">3. Run the Cake script</a></p>
+        <div><p><a href="https://github.com/cake-build/website/blob/develop/input/docs/fundamentals/asynchronous-tasks.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#asynchronous-tasks">Asynchronous Tasks</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -100,18 +98,18 @@
 
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="/docs/tutorials">Tutorials</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/docs/tutorials/getting-started">Getting Started</a></li>
-                <li class="selected"><a href="/docs/tutorials/setting-up-a-new-project">Setting Up A New Project</a></li>
+                <li><a href="/docs/tutorials/setting-up-a-new-project">Setting Up A New Project</a></li>
                 <li><a href="/docs/tutorials/powershell-security">Powershell Security</a></li>
                 <li><a href="/docs/tutorials/extending-the-bootstrapper">Extending The Bootstrapper</a></li>
                 <li><a href="/docs/tutorials/pinning-cake-version">Pinning Cake Version</a></li>
 
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="/docs/fundamentals">Fundamentals</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/docs/fundamentals/tasks">Tasks</a></li>
@@ -119,7 +117,7 @@
                 <li><a href="/docs/fundamentals/criteria">Criteria</a></li>
                 <li><a href="/docs/fundamentals/error-handling">Error Handling</a></li>
                 <li><a href="/docs/fundamentals/finally-block">Finally Block</a></li>
-                <li><a href="/docs/fundamentals/asynchronous-tasks">Asynchronous Tasks</a></li>
+                <li class="selected"><a href="/docs/fundamentals/asynchronous-tasks">Asynchronous Tasks</a></li>
                 <li><a href="/docs/fundamentals/setup-and-teardown">Setup And Teardown</a></li>
                 <li><a href="/docs/fundamentals/running-targets">Running Targets</a></li>
                 <li><a href="/docs/fundamentals/args-and-environment-vars">Arguments And Environment Variables</a></li>
@@ -192,63 +190,27 @@
 
 
 	<section class="content-header">
-		<h1>Setting Up A New Project</h1>
+		<h1>Asynchronous Tasks</h1>
 	</section>
 	<section class="content">
-		<p>This guide will show you how to setup Cake for a new project.</p>
-<h1 id="install-the-bootstrapper">1. Install the bootstrapper</h1>
-<p>The bootstrapper is used to download Cake and the tools required by the
-build script. This is (kind of) an optional step, but recommended since
-it removes the need to store binaries in the source code repository.</p>
-<p>We install the bootstrapper by downloading it from the <a href="https://github.com/cake-build/resources">Cake Resources
-repository</a>.</p>
-<h2 id="windows">Windows</h2>
-<p>Open a new PowerShell window and run the following command.</p>
-<pre><code class="language-powershell">Invoke-WebRequest https://cakebuild.net/download/bootstrapper/windows -OutFile build.ps1
-</code></pre>
-<h2 id="linux">Linux</h2>
-<p>Open a new shell and run the following command.</p>
-<pre><code class="language-bash">curl -Lsfo build.sh https://cakebuild.net/download/bootstrapper/linux
-</code></pre>
-<h2 id="os-x">OS X</h2>
-<p>Open a new shell and run the following command.</p>
-<pre><code class="language-bash">curl -Lsfo build.sh https://cakebuild.net/download/bootstrapper/osx
-</code></pre>
-<h1 id="create-a-cake-script">2. Create a Cake script</h1>
-<p>Add a cake script called <code>build.cake</code> to the same location as the
-bootstrapper script that you downloaded.</p>
-<pre><code class="language-csharp">var target = Argument("target", "Default");
-
-Task("Default")
-  .Does(() =&gt;
-{
-  Information("Hello World!");
+		<h1 id="asynchronous-tasks">Asynchronous Tasks</h1>
+<p>Cake supports having asynchronous tasks since version 0.23.0, this will let you use the <code>async</code> and <code>await</code> C# features within a task.</p>
+<p>Tasks will still execute single threaded and in order as before, but this really simplifies asynchronous programming and utilizing asynchronous APIs within your Cake scripts.</p>
+<pre><code class="language-csharp">Task("Copy-To-Memory-Async")
+    .Does(async () =&gt; {
+    <a href="/api/Cake.Core.IO/IFile">IFile</a> file = Context.FileSystem.GetFile("./test.txt");
+    using(Stream
+            inputStream = testFile.OpenRead(),
+            outputStream = new MemoryStream())
+    {
+        await inputStream.CopyToAsync(outputStream);
+        await outputStream.FlushAsync();
+        Information("Copied {0} bytes into memory.",
+            outputStream.Length
+            );
+    }
 });
-
-RunTarget(target);
 </code></pre>
-<h1 id="run-the-cake-script">3. Run the Cake script</h1>
-<p>Now you should be able to run your Cake script by invoking the bootstrapper.</p>
-<h2 id="windows-1">Windows</h2>
-<pre><code class="language-powershell">./build.ps1
-</code></pre>
-<p>If script execution fail due to the execution policy, you might have to
-tell PowerShell to allow running scripts. You do this by
-<a href="https://technet.microsoft.com/en-us/library/ee176961.aspx">changing the execution policy</a>.</p>
-<h2 id="linuxos-x">Linux/OS X</h2>
-<p>To be able to execute the bash script on Linux or OS X you should
-give the owner of the script permission to execute it.</p>
-<pre><code class="language-bash">chmod +x build.sh
-</code></pre>
-<p>When this has been done, you should be able to run your Cake script
-by invoking the bootstrapper.</p>
-<pre><code class="language-bash">./build.sh
-</code></pre>
-<h2 id="note">Note</h2>
-<p>If you are downloading the <code>build.sh</code> file on a Windows machine (for example, you are using something like <a href="https://travis-ci.org/">Travis CI</a> to run your Linux/OS builds) you can give the script permission to execute using the following command:</p>
-<pre><code class="language-bash">git update-index --add --chmod=+x build.sh
-</code></pre>
-<p>Obviously, this assumes that you have the git command line tool installed.</p>
 
 	</section>
                 
