@@ -195,10 +195,10 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Uninstall/ChocolateyUninstallSettings">Chocolatey<wbr>Uninstall<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings">Chocolatey<wbr>Upgrade<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.New/ChocolateyNewSettings">Chocolatey<wbr>New<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings">Chocolatey<wbr>Download<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings">Chocolatey<wbr>Install<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings">Chocolatey<wbr>Upgrade<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings">Chocolatey<wbr>Download<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -214,14 +214,14 @@
 class Type type-node
 	Type--&gt;Derived0["ChocolateyUninstallSettings"]
 	click Derived0 "/api/Cake.Common.Tools.Chocolatey.Uninstall/ChocolateyUninstallSettings"
-	Type--&gt;Derived1["ChocolateyUpgradeSettings"]
-	click Derived1 "/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings"
-	Type--&gt;Derived2["ChocolateyNewSettings"]
-	click Derived2 "/api/Cake.Common.Tools.Chocolatey.New/ChocolateyNewSettings"
-	Type--&gt;Derived3["ChocolateyDownloadSettings"]
-	click Derived3 "/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings"
-	Type--&gt;Derived4["ChocolateyInstallSettings"]
-	click Derived4 "/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings"
+	Type--&gt;Derived1["ChocolateyNewSettings"]
+	click Derived1 "/api/Cake.Common.Tools.Chocolatey.New/ChocolateyNewSettings"
+	Type--&gt;Derived2["ChocolateyInstallSettings"]
+	click Derived2 "/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings"
+	Type--&gt;Derived3["ChocolateyUpgradeSettings"]
+	click Derived3 "/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings"
+	Type--&gt;Derived4["ChocolateyDownloadSettings"]
+	click Derived4 "/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings"
 
 						</div>
 					</div>
@@ -487,16 +487,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Chocolatey<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Chocolatey<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -504,6 +494,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Chocolatey<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
