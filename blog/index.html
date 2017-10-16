@@ -193,7 +193,7 @@ RunTarget("B");
 </code></pre>
 <p>Since task <code>A</code> is configured to be a dependee of <code>B</code> the task definition will be identical to the following:</p>
 <pre><code class="language-csharp">Task("A");
-Task("B").IsDependencyOf("A");
+Task("B").IsDependentOn("A");
 
 RunTarget("B");
 </code></pre>

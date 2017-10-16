@@ -5,8 +5,8 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Sun, 15 Oct 2017 20:25:41 GMT</pubDate>
-		<lastBuildDate>Sun, 15 Oct 2017 20:25:41 GMT</lastBuildDate>
+		<pubDate>Mon, 16 Oct 2017 12:44:18 GMT</pubDate>
+		<lastBuildDate>Mon, 16 Oct 2017 12:44:18 GMT</lastBuildDate>
 		<item>
 			<title>Cake v0.23.0 released</title>
 			<link>https://cakebuild.net/blog/2017/10/cake-v0.23.0-released</link>
@@ -62,7 +62,7 @@ RunTarget("B");
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Since task &lt;code&gt;A&lt;/code&gt; is configured to be a dependee of &lt;code&gt;B&lt;/code&gt; the task definition will be identical to the following:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;Task("A");
-Task("B").IsDependencyOf("A");
+Task("B").IsDependentOn("A");
 
 RunTarget("B");
 &lt;/code&gt;&lt;/pre&gt;
