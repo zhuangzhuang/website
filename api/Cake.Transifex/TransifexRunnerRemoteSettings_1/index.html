@@ -214,8 +214,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Transifex/TransifexPushSettings">Transifex<wbr>Push<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Transifex/TransifexPullSettings">Transifex<wbr>Pull<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Transifex/TransifexPushSettings">Transifex<wbr>Push<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -231,10 +231,10 @@
 	Base2["ToolSettings"]--&gt;Base1
 	Type["TransifexRunnerRemoteSettings&lt;TSettingsType&gt;"]
 class Type type-node
-	Type--&gt;Derived0["TransifexPushSettings"]
-	click Derived0 "/api/Cake.Transifex/TransifexPushSettings"
-	Type--&gt;Derived1["TransifexPullSettings"]
-	click Derived1 "/api/Cake.Transifex/TransifexPullSettings"
+	Type--&gt;Derived0["TransifexPullSettings"]
+	click Derived0 "/api/Cake.Transifex/TransifexPullSettings"
+	Type--&gt;Derived1["TransifexPushSettings"]
+	click Derived1 "/api/Cake.Transifex/TransifexPushSettings"
 
 						</div>
 					</div>
@@ -423,16 +423,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Transifex<wbr>Runner<wbr>Remote<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Transifex<wbr>Runner<wbr>Remote<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -440,6 +430,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Transifex<wbr>Runner<wbr>Remote<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

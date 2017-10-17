@@ -205,10 +205,10 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseDropper">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Dropper</a></li>								
-											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Remover</a></li>								
-											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Updater</a></li>								
-											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAdder">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Adder</a></li>								
 											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Scripter</a></li>								
+											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Remover</a></li>								
+											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAdder">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Adder</a></li>								
+											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Updater</a></li>								
 									</ul>
 								</dd>			
 							
@@ -222,14 +222,14 @@
 class Type type-node
 	Type--&gt;Derived0["DotNetCoreEfDatabaseDropper"]
 	click Derived0 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseDropper"
-	Type--&gt;Derived1["DotNetCoreEfMigrationRemover"]
-	click Derived1 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover"
-	Type--&gt;Derived2["DotNetCoreEfDatabaseUpdater"]
-	click Derived2 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater"
+	Type--&gt;Derived1["DotNetCoreEfMigrationScripter"]
+	click Derived1 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter"
+	Type--&gt;Derived2["DotNetCoreEfMigrationRemover"]
+	click Derived2 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover"
 	Type--&gt;Derived3["DotNetCoreEfMigrationAdder"]
 	click Derived3 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAdder"
-	Type--&gt;Derived4["DotNetCoreEfMigrationScripter"]
-	click Derived4 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter"
+	Type--&gt;Derived4["DotNetCoreEfDatabaseUpdater"]
+	click Derived4 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater"
 
 						</div>
 					</div>
@@ -345,16 +345,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -362,6 +352,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
