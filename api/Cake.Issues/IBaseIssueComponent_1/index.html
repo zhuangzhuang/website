@@ -212,13 +212,13 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues/IssueProvider">IssueProvider</a></li>								
-											<li><a href="/api/Cake.Issues.Testing/FakeIssueProvider">FakeIssueProvider</a></li>								
-											<li><a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a></li>								
 											<li><a href="/api/Cake.Issues.PullRequests/IPullRequestSystem">IPullRequestSystem</a></li>								
 											<li><a href="/api/Cake.Issues/BaseIssueComponent_1">BaseIssueComponent<wbr>&lt;T&gt;<wbr></a></li>								
-											<li><a href="/api/Cake.Issues.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeIssueComponent">FakeIssueComponent</a></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
+											<li><a href="/api/Cake.Issues.Testing/FakeIssueProvider">FakeIssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues/IssueProvider">IssueProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -228,20 +228,20 @@
 							graph TD
 	Type["IBaseIssueComponent&lt;T&gt;"]
 class Type type-node
-	Type-.-&gt;Implementing0["IssueProvider"]
-	click Implementing0 "/api/Cake.Issues/IssueProvider"
-	Type-.-&gt;Implementing1["FakeIssueProvider"]
-	click Implementing1 "/api/Cake.Issues.Testing/FakeIssueProvider"
-	Type-.-&gt;Implementing2["IIssueProvider"]
-	click Implementing2 "/api/Cake.Issues/IIssueProvider"
-	Type-.-&gt;Implementing3["IPullRequestSystem"]
-	click Implementing3 "/api/Cake.Issues.PullRequests/IPullRequestSystem"
-	Type-.-&gt;Implementing4["BaseIssueComponent&lt;T&gt;"]
-	click Implementing4 "/api/Cake.Issues/BaseIssueComponent_1"
-	Type-.-&gt;Implementing5["PullRequestSystem"]
-	click Implementing5 "/api/Cake.Issues.PullRequests/PullRequestSystem"
-	Type-.-&gt;Implementing6["FakeIssueComponent"]
-	click Implementing6 "/api/Cake.Issues.Testing/FakeIssueComponent"
+	Type-.-&gt;Implementing0["IPullRequestSystem"]
+	click Implementing0 "/api/Cake.Issues.PullRequests/IPullRequestSystem"
+	Type-.-&gt;Implementing1["BaseIssueComponent&lt;T&gt;"]
+	click Implementing1 "/api/Cake.Issues/BaseIssueComponent_1"
+	Type-.-&gt;Implementing2["FakeIssueComponent"]
+	click Implementing2 "/api/Cake.Issues.Testing/FakeIssueComponent"
+	Type-.-&gt;Implementing3["PullRequestSystem"]
+	click Implementing3 "/api/Cake.Issues.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing4["FakeIssueProvider"]
+	click Implementing4 "/api/Cake.Issues.Testing/FakeIssueProvider"
+	Type-.-&gt;Implementing5["IIssueProvider"]
+	click Implementing5 "/api/Cake.Issues/IIssueProvider"
+	Type-.-&gt;Implementing6["IssueProvider"]
+	click Implementing6 "/api/Cake.Issues/IssueProvider"
 
 						</div>
 					</div>
@@ -336,16 +336,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -353,6 +343,16 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
