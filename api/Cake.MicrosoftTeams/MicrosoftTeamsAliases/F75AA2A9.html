@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -177,11 +175,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-             Posts a message to a Microsoft Teams channel
-             </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -201,37 +195,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static HttpStatusCode MicrosoftTeamsPostMessage(this ICakeContext context, MicrosoftTeamsMessageCard message, MicrosoftTeamsSettings settings)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-             <pre><code class="cs"> var messageCard = new MicrosoftTeamsMessageCard {
-    summary = "Cake posted message using Cake.MicrosoftTeams",
-    title ="Cake Microsoft Teams",
-    sections = new []{
-        new MicrosoftTeamsMessageSection{
-            activityTitle = "Cake posted message",
-            activitySubtitle = "using Cake.MicrosoftTeams",
-            activityText = "Here is the runtime Information",
-            activityImage = "https://raw.githubusercontent.com/cake-build/graphics/master/png/cake-small.png",
-            facts = new [] {
-                new MicrosoftTeamsMessageFacts { name ="CakeVersion", value = Context.Environment.Runtime.CakeVersion.ToString() },
-                new MicrosoftTeamsMessageFacts { name ="TargetFramework", value = Context.Environment.Runtime.TargetFramework.ToString() },
-                new MicrosoftTeamsMessageFacts { name ="IsCoreClr", value = Context.Environment.Runtime.IsCoreClr.ToString() }
-            },
-        }
-    },
-    potentialAction = new [] { 
-        new MicrosoftTeamsMessagePotentialAction {
-            name = "View in Trello",
-            target = new []{"https://trello.com/c/1101/"}
-        }
-    }
- };
-
- MicrosoftTeamsPostMessage(messageCard,
-    new MicrosoftTeamsSettings {
-        IncomingWebhookUrl = EnvironmentVariable("MicrosoftTeamsWebHook")
-    });</code></pre>
-             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -271,17 +234,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>message</td>
 						<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageCard">Microsoft<wbr>Teams<wbr>Message<wbr>Card</a></td>
-						<td>The message as <code class="cs"><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsMessageCard">MicrosoftTeamsMessageCard</a></code>.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.MicrosoftTeams/MicrosoftTeamsSettings">Microsoft<wbr>Teams<wbr>Settings</a></td>
-						<td>The settings.</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -299,20 +262,7 @@
 				</thead>
 				<tbody><tr>
 					<td>HttpStatusCode</td>
-					<td>
-             <listheaders>
-             <term>Response Code</term>
-             <term>Description</term>
-             <term>Details</term>
-             </listheaders><table class="table">
-             
-             <tbody><tr><td>200</td><td>Ok</td><td>A well-formed request is sent to an existing webhook. The request contains a valid payload, and has a valid corresponding webhook configuration.</td></tr>
-             <tr><td>400</td><td>Bad Request</td><td>An incorrectly-formed request is sent to a webhook that exists. The payload could contain non-parseable JSON, incorrect JSON values (e.g.expected a String, got an array), incorrect content-type, etc..</td></tr>
-             <tr><td>404</td><td>Not Found</td><td>A request is sent to a webhook that does not exist.</td></tr>
-             <tr><td>413</td><td>Payload Too Large</td><td>A request is sent to a webhook that is too large in size for processing.</td></tr>
-             <tr><td>429</td><td>Too Many Requests</td><td>Client is sending too many requests and Office 365 is throttling the requests to a webhook.</td></tr>
-             </tbody></table>
-             </td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
