@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - BumpyRunner.Increment(string, int) Method</title>
+        <title>Cake - API - BumpyRunner.Write(string, BumpySettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -151,17 +151,16 @@
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/3A4E3571">BumpyRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/47E69472">Assign<wbr>(int, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/26F3A6F3">Assign<wbr>(string, <wbr>int, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/2444173F">CreateConfiguration<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyRunner/48C69BA4">Assign<wbr>(int, <wbr>int, <wbr>BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/75BF646D">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/DDCA4EE8">GetToolName<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/50DF1CB1">Increment<wbr>(int)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Bumpy/BumpyRunner/4BA128DB">Increment<wbr>(string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyRunner/5E7BBF57">Increment<wbr>(int, <wbr>BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/F1BDE0AB">List<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/5233D239">List<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/EA95FE3B">Profiles<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyRunner/107EC7E3">List<wbr>(BumpySettings)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyRunner/0687B696">New<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/A0BAA977">Write<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/9030EE63">Write<wbr>(string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Bumpy/BumpyRunner/6A8CD6FD">Write<wbr>(string, <wbr>BumpySettings)<wbr></a></li>
 
 
                     </ul>
@@ -176,7 +175,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Bumpy/BumpyRunner">BumpyRunner</a>.</h3>
-	<h1>Increment<wbr>(string, <wbr>int)<wbr> <small>Method</small></h1>
+	<h1>Write<wbr>(string, <wbr>BumpySettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -189,7 +188,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Runs "bumpy [profile] -i [position]".
+            Runs "bumpy write [version] with additional settings".
             </div>
 
 		<div class="panel panel-default">
@@ -209,7 +208,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void Increment(string profile, int position)</code></pre>
+	<pre><code>public void Write(string version, BumpySettings settings)</code></pre>
 
 
 
@@ -227,14 +226,14 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>profile</td>
+						<td>version</td>
 						<td>string</td>
-						<td>The profile.</td>
+						<td>The version.</td>
 					</tr>
 					<tr>
-						<td>position</td>
-						<td>int</td>
-						<td>The position.</td>
+						<td>settings</td>
+						<td><a href="/api/Cake.Bumpy/BumpySettings">BumpySettings</a></td>
+						<td>The tool settings.</td>
 					</tr>
 			</tbody></table>
 		</div>
