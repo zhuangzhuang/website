@@ -215,14 +215,14 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Terraform/TerraformDestroySettings">Terraform<wbr>Destroy<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Terraform/TerraformEnvNewSettings">Terraform<wbr>Env<wbr>New<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Terraform/TerraformShowSettings">Terraform<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Terraform/TerraformInitSettings">Terraform<wbr>Init<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Terraform/TerraformEnvListSettings">Terraform<wbr>Env<wbr>List<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformEnvSelectSettings">Terraform<wbr>Env<wbr>Select<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformEnvNewSettings">Terraform<wbr>Env<wbr>New<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformPlanSettings">Terraform<wbr>Plan<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformEnvDeleteSettings">Terraform<wbr>Env<wbr>Delete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformEnvListSettings">Terraform<wbr>Env<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformShowSettings">Terraform<wbr>Show<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformApplySettings">Terraform<wbr>Apply<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformInitSettings">Terraform<wbr>Init<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -236,22 +236,22 @@
 class Type type-node
 	Type--&gt;Derived0["TerraformDestroySettings"]
 	click Derived0 "/api/Cake.Terraform/TerraformDestroySettings"
-	Type--&gt;Derived1["TerraformEnvNewSettings"]
-	click Derived1 "/api/Cake.Terraform/TerraformEnvNewSettings"
-	Type--&gt;Derived2["TerraformShowSettings"]
-	click Derived2 "/api/Cake.Terraform/TerraformShowSettings"
-	Type--&gt;Derived3["TerraformInitSettings"]
-	click Derived3 "/api/Cake.Terraform/TerraformInitSettings"
-	Type--&gt;Derived4["TerraformEnvListSettings"]
-	click Derived4 "/api/Cake.Terraform/TerraformEnvListSettings"
-	Type--&gt;Derived5["TerraformEnvSelectSettings"]
-	click Derived5 "/api/Cake.Terraform/TerraformEnvSelectSettings"
-	Type--&gt;Derived6["TerraformPlanSettings"]
-	click Derived6 "/api/Cake.Terraform/TerraformPlanSettings"
-	Type--&gt;Derived7["TerraformEnvDeleteSettings"]
-	click Derived7 "/api/Cake.Terraform/TerraformEnvDeleteSettings"
-	Type--&gt;Derived8["TerraformApplySettings"]
-	click Derived8 "/api/Cake.Terraform/TerraformApplySettings"
+	Type--&gt;Derived1["TerraformEnvSelectSettings"]
+	click Derived1 "/api/Cake.Terraform/TerraformEnvSelectSettings"
+	Type--&gt;Derived2["TerraformEnvNewSettings"]
+	click Derived2 "/api/Cake.Terraform/TerraformEnvNewSettings"
+	Type--&gt;Derived3["TerraformPlanSettings"]
+	click Derived3 "/api/Cake.Terraform/TerraformPlanSettings"
+	Type--&gt;Derived4["TerraformEnvDeleteSettings"]
+	click Derived4 "/api/Cake.Terraform/TerraformEnvDeleteSettings"
+	Type--&gt;Derived5["TerraformEnvListSettings"]
+	click Derived5 "/api/Cake.Terraform/TerraformEnvListSettings"
+	Type--&gt;Derived6["TerraformShowSettings"]
+	click Derived6 "/api/Cake.Terraform/TerraformShowSettings"
+	Type--&gt;Derived7["TerraformApplySettings"]
+	click Derived7 "/api/Cake.Terraform/TerraformApplySettings"
+	Type--&gt;Derived8["TerraformInitSettings"]
+	click Derived8 "/api/Cake.Terraform/TerraformInitSettings"
 
 						</div>
 					</div>
@@ -310,6 +310,7 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -320,16 +321,7 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Terraform<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -340,6 +332,18 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Terraform<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -350,6 +354,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -360,6 +365,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

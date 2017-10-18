@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - BumpyAliases.BumpyWrite(ICakeContext, string, string) Method</title>
+        <title>Cake - API - BumpyAliases.BumpyAssign(ICakeContext, int, int, BumpySettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -151,15 +151,14 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Bumpy/BumpyAliases/671006ED">BumpyAssign<wbr>(ICakeContext, <wbr>int, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyAliases/A114B24E">BumpyAssign<wbr>(ICakeContext, <wbr>string, <wbr>int, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyAliases/FC74B165">Bumpy<wbr>Create<wbr>Configuration<wbr>(ICakeContext)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Bumpy/BumpyAliases/5720A093">BumpyAssign<wbr>(ICakeContext, <wbr>int, <wbr>int, <wbr>BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyAliases/3FDA8F69">BumpyIncrement<wbr>(ICakeContext, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyAliases/957093B2">BumpyIncrement<wbr>(ICakeContext, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyAliases/44B9D0BF">BumpyIncrement<wbr>(ICakeContext, <wbr>int, <wbr>BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyAliases/10E4160C">BumpyList<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyAliases/25B35E63">BumpyList<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyAliases/F6668071">BumpyProfiles<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyAliases/342C5C96">BumpyList<wbr>(ICakeContext, <wbr>BumpySettings)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyAliases/B98A7366">BumpyNew<wbr>(ICakeContext)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyAliases/88EE8922">BumpyWrite<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Bumpy/BumpyAliases/07A13845">BumpyWrite<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpyAliases/08D8977B">BumpyWrite<wbr>(ICakeContext, <wbr>string, <wbr>BumpySettings)<wbr></a></li>
 
 
                     </ul>
@@ -174,7 +173,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Bumpy/BumpyAliases">BumpyAliases</a>.</h3>
-	<h1>BumpyWrite<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>BumpyAssign<wbr>(ICakeContext, <wbr>int, <wbr>int, <wbr>BumpySettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -187,7 +186,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Runs "bumpy.exe [profile] -w [version]" to overwrite all versions of a profile.
+            Runs "bumpy.exe assign [position] [number]" to assign a given position with a given number for all versions.
             </div>
 
 		<div class="panel panel-default">
@@ -207,12 +206,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void BumpyWrite(this ICakeContext context, string profile, string version)</code></pre>
+	<pre><code>public static void BumpyAssign(this ICakeContext context, int position, int number, BumpySettings settings)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-            <pre><code class="cs">// e.g. 1.0.0.0 -&gt; 2.10.0.0
-BumpyVersion("foo", "2.10.0.0");</code></pre>
+            <pre><code class="cs">// e.g. 1.0.0.0 -&gt; 1.42.0.0
+BumpyAssign(2, 42, new BumpySettings() { Profile = "my_profile" });</code></pre>
             </div>
 
 
@@ -252,14 +251,19 @@ BumpyVersion("foo", "2.10.0.0");</code></pre>
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>profile</td>
-						<td>string</td>
-						<td>The profile.</td>
+						<td>position</td>
+						<td>int</td>
+						<td>The position.</td>
 					</tr>
 					<tr>
-						<td>version</td>
-						<td>string</td>
-						<td>The version.</td>
+						<td>number</td>
+						<td>int</td>
+						<td>The version number part.</td>
+					</tr>
+					<tr>
+						<td>settings</td>
+						<td><a href="/api/Cake.Bumpy/BumpySettings">BumpySettings</a></td>
+						<td>The tool settings.</td>
 					</tr>
 			</tbody></table>
 		</div>

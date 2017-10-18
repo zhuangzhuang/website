@@ -201,10 +201,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Newman.Reporters/JUnitReporterSettings">J<wbr>Unit<wbr>Reporter<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Newman.Reporters/CLIReporterSettings">CLIReporterSettings</a></li>								
 											<li><a href="/api/Cake.Newman.Reporters/JsonReporterSettings">JsonReporterSettings</a></li>								
 											<li><a href="/api/Cake.Newman.Reporters/HtmlReporterSettings">HtmlReporterSettings</a></li>								
-											<li><a href="/api/Cake.Newman.Reporters/CLIReporterSettings">CLIReporterSettings</a></li>								
+											<li><a href="/api/Cake.Newman.Reporters/JUnitReporterSettings">J<wbr>Unit<wbr>Reporter<wbr>Settings</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -214,14 +214,14 @@
 							graph TD
 	Type["IReporterSettings"]
 class Type type-node
-	Type-.-&gt;Implementing0["JUnitReporterSettings"]
-	click Implementing0 "/api/Cake.Newman.Reporters/JUnitReporterSettings"
+	Type-.-&gt;Implementing0["CLIReporterSettings"]
+	click Implementing0 "/api/Cake.Newman.Reporters/CLIReporterSettings"
 	Type-.-&gt;Implementing1["JsonReporterSettings"]
 	click Implementing1 "/api/Cake.Newman.Reporters/JsonReporterSettings"
 	Type-.-&gt;Implementing2["HtmlReporterSettings"]
 	click Implementing2 "/api/Cake.Newman.Reporters/HtmlReporterSettings"
-	Type-.-&gt;Implementing3["CLIReporterSettings"]
-	click Implementing3 "/api/Cake.Newman.Reporters/CLIReporterSettings"
+	Type-.-&gt;Implementing3["JUnitReporterSettings"]
+	click Implementing3 "/api/Cake.Newman.Reporters/JUnitReporterSettings"
 
 						</div>
 					</div>
@@ -286,6 +286,7 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -296,16 +297,7 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -316,6 +308,18 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Reporter<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -326,6 +330,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -336,6 +341,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

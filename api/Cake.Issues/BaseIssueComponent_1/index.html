@@ -226,8 +226,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Issues.Testing/FakeIssueComponent">FakeIssueComponent</a></li>								
-											<li><a href="/api/Cake.Issues.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
 											<li><a href="/api/Cake.Issues/IssueProvider">IssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
 									</ul>
 								</dd>			
 							
@@ -243,10 +243,10 @@
 class Type type-node
 	Type--&gt;Derived0["FakeIssueComponent"]
 	click Derived0 "/api/Cake.Issues.Testing/FakeIssueComponent"
-	Type--&gt;Derived1["PullRequestSystem"]
-	click Derived1 "/api/Cake.Issues.PullRequests/PullRequestSystem"
-	Type--&gt;Derived2["IssueProvider"]
-	click Derived2 "/api/Cake.Issues/IssueProvider"
+	Type--&gt;Derived1["IssueProvider"]
+	click Derived1 "/api/Cake.Issues/IssueProvider"
+	Type--&gt;Derived2["PullRequestSystem"]
+	click Derived2 "/api/Cake.Issues.PullRequests/PullRequestSystem"
 
 						</div>
 					</div>
@@ -391,6 +391,7 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -401,16 +402,7 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -421,6 +413,18 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -431,6 +435,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -441,6 +446,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - BumpyRunner.Assign(string, int, int) Method</title>
+        <title>Cake - API - BumpySettings.Directory Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,8 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -145,23 +144,14 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Bumpy">Cake<wbr>.Bumpy</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Bumpy/BumpyRunner">BumpyRunner</a></li>
+		<li><a href="/api/Cake.Bumpy/BumpySettings">BumpySettings</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/3A4E3571">BumpyRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
-			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/47E69472">Assign<wbr>(int, <wbr>int)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Bumpy/BumpyRunner/26F3A6F3">Assign<wbr>(string, <wbr>int, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/2444173F">CreateConfiguration<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/75BF646D">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/DDCA4EE8">GetToolName<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/50DF1CB1">Increment<wbr>(int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/4BA128DB">Increment<wbr>(string, <wbr>int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/F1BDE0AB">List<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/5233D239">List<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/EA95FE3B">Profiles<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/A0BAA977">Write<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/9030EE63">Write<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Bumpy/BumpySettings/F64C7FE9">BumpySettings<wbr>()<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Bumpy/BumpySettings/3630BE09">Configuration</a></li>
+				<li class="selected"><a href="/api/Cake.Bumpy/BumpySettings/A7B37613">Directory</a></li>
+				<li><a href="/api/Cake.Bumpy/BumpySettings/C03CDA8B">Profile</a></li>
 
 
                     </ul>
@@ -175,8 +165,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Bumpy/BumpyRunner">BumpyRunner</a>.</h3>
-	<h1>Assign<wbr>(string, <wbr>int, <wbr>int)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Bumpy/BumpySettings">BumpySettings</a>.</h3>
+	<h1>Directory <small>Property</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -189,11 +179,11 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Runs "bumpy [profile] -a [position] [number]".
+            Gets or sets the directory path in which Bumpy will operate.
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
 						<dd><a href="/api/Cake.Bumpy.dll">Cake<wbr>.Bumpy<wbr>.dll</a></dd>
@@ -202,50 +192,20 @@
 						<dd><a href="/api/Cake.Bumpy">Cake<wbr>.Bumpy</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Bumpy/BumpyRunner">BumpyRunner</a></dd>		
+						<dd><a href="/api/Cake.Bumpy/BumpySettings">BumpySettings</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void Assign(string profile, int position, int number)</code></pre>
+	<pre><code>public DirectoryPath Directory { get; set; }</code></pre>
 
 
 
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>profile</td>
-						<td>string</td>
-						<td>The profile.</td>
-					</tr>
-					<tr>
-						<td>position</td>
-						<td>int</td>
-						<td>The position.</td>
-					</tr>
-					<tr>
-						<td>number</td>
-						<td>int</td>
-						<td>The number.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -256,8 +216,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>DirectoryPath</td>
+					<td>A directory path.</td>
 				</tr>
 			</tbody></table>
 		</div>

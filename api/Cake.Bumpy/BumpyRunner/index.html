@@ -262,25 +262,16 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy -a [position] [number]".
+            Runs "bumpy assign [position] [number]".
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Bumpy/BumpyRunner/26F3A6F3">Assign<wbr>(string, <wbr>int, <wbr>int)<wbr></a></td>
+								<td><a href="/api/Cake.Bumpy/BumpyRunner/48C69BA4">Assign<wbr>(int, <wbr>int, <wbr>BumpySettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy [profile] -a [position] [number]".
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Bumpy/BumpyRunner/2444173F">CreateConfiguration<wbr>()<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Runs "bumpy -c".
+            Runs "bumpy assign [position] [number]" with additional settings.
             </div>
 								</td>
 							</tr>
@@ -307,16 +298,16 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy -i [position]".
+            Runs "bumpy increment [position]".
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Bumpy/BumpyRunner/4BA128DB">Increment<wbr>(string, <wbr>int)<wbr></a></td>
+								<td><a href="/api/Cake.Bumpy/BumpyRunner/5E7BBF57">Increment<wbr>(int, <wbr>BumpySettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy [profile] -i [position]".
+            Runs "bumpy increment [position]" with additional settings.
             </div>
 								</td>
 							</tr>
@@ -325,25 +316,25 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy -l".
+            Runs "bumpy list".
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Bumpy/BumpyRunner/5233D239">List<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Bumpy/BumpyRunner/107EC7E3">List<wbr>(BumpySettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy [profile] -l".
+            Runs "bumpy list" with additional settings.
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Bumpy/BumpyRunner/EA95FE3B">Profiles<wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Bumpy/BumpyRunner/0687B696">New<wbr>()<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy -p".
+            Runs "bumpy new".
             </div>
 								</td>
 							</tr>
@@ -352,16 +343,16 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy -w [version]".
+            Runs "bumpy write [version]".
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Bumpy/BumpyRunner/9030EE63">Write<wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Bumpy/BumpyRunner/6A8CD6FD">Write<wbr>(string, <wbr>BumpySettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Runs "bumpy [profile] -w [version]".
+            Runs "bumpy write [version] with additional settings".
             </div>
 								</td>
 							</tr>
@@ -390,6 +381,7 @@ class Type type-node
              Get a basic string representation of specified object.
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -400,16 +392,7 @@ class Type type-node
             Checks if the source is contained in a list
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BumpyRunner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -420,6 +403,18 @@ class Type type-node
             Throws an exception if the specified parameter's value is null.
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BumpyRunner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -430,6 +425,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -440,6 +436,7 @@ class Type type-node
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
