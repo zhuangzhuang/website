@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - XcToolsAliases.SetXcToolsPath(ICakeContext, string) Method</title>
+        <title>Cake - API - XcBuildAliases.SetXcBuildPath(ICakeContext, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -146,13 +146,14 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.XComponent/XcToolsAliases">XcToolsAliases</a></li>
+		<li><a href="/api/Cake.XComponent/XcBuildAliases">XcBuildAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.XComponent/XcToolsAliases/6C31C49E">SetXcToolsPath<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.XComponent/XcToolsAliases/F03FB455">XcToolsBuild<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.XComponent/XcToolsAliases/8200710E">Xc<wbr>Tools<wbr>Execute<wbr>Command<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.XComponent/XcToolsAliases/7D5281C2">Xc<wbr>Tools<wbr>Export<wbr>Runtimes<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>bool, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.XComponent/XcBuildAliases/F0C546E3">SetXcBuildPath<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/19130E67">XcBuildBuild<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/1E27240F">Xc<wbr>Build<wbr>Build<wbr>Component<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/5553094B">Xc<wbr>Build<wbr>Execute<wbr>Command<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/E85464C7">Xc<wbr>Build<wbr>Export<wbr>Runtimes<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>bool, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -166,8 +167,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.XComponent/XcToolsAliases">XcToolsAliases</a>.</h3>
-	<h1>SetXcToolsPath<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.XComponent/XcBuildAliases">XcBuildAliases</a>.</h3>
+	<h1>SetXcBuildPath<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -180,7 +181,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            This method sets the path of XcTools that will be used by all other commands.
+            This method sets the path of XcBuild that will be used by all other commands.
             </div>
 
 		<div class="panel panel-default">
@@ -193,14 +194,14 @@
 						<dd><a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.XComponent/XcToolsAliases">XcToolsAliases</a></dd>		
+						<dd><a href="/api/Cake.XComponent/XcBuildAliases">XcBuildAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void SetXcToolsPath(this ICakeContext context, string xcToolsPath)</code></pre>
+	<pre><code>public static void SetXcBuildPath(this ICakeContext context, string xcBuildPath)</code></pre>
 
 
 
@@ -240,9 +241,9 @@
 						<td>The Cake Context</td>
 					</tr>
 					<tr>
-						<td>xcToolsPath</td>
+						<td>xcBuildPath</td>
 						<td>string</td>
-						<td>The XcTools Path</td>
+						<td>The XcBuild Path</td>
 					</tr>
 			</tbody></table>
 		</div>
