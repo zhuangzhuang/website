@@ -194,9 +194,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo">Continua<wbr>C<wbr>I<wbr>Changeset<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo">Continua<wbr>C<wbr>I<wbr>Configuration<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo">Continua<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo">Continua<wbr>C<wbr>I<wbr>Changeset<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo">ContinuaCIBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIProjectInfo">Continua<wbr>C<wbr>I<wbr>Project<wbr>Info</a></li>								
 									</ul>
@@ -210,12 +210,12 @@
 	Base0["object"]--&gt;Type
 	Type["ContinuaCIInfo"]
 class Type type-node
-	Type--&gt;Derived0["ContinuaCIConfigurationInfo"]
-	click Derived0 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo"
-	Type--&gt;Derived1["ContinuaCIEnvironmentInfo"]
-	click Derived1 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo"
-	Type--&gt;Derived2["ContinuaCIChangesetInfo"]
-	click Derived2 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo"
+	Type--&gt;Derived0["ContinuaCIChangesetInfo"]
+	click Derived0 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIChangesetInfo"
+	Type--&gt;Derived1["ContinuaCIConfigurationInfo"]
+	click Derived1 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIConfigurationInfo"
+	Type--&gt;Derived2["ContinuaCIEnvironmentInfo"]
+	click Derived2 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIEnvironmentInfo"
 	Type--&gt;Derived3["ContinuaCIBuildInfo"]
 	click Derived3 "/api/Cake.Common.Build.ContinuaCI.Data/ContinuaCIBuildInfo"
 	Type--&gt;Derived4["ContinuaCIProjectInfo"]
@@ -284,7 +284,7 @@ class Type type-node
 								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
-    Gets an environment variable as a <code class="cs"><a href="/">DateTime</a></code>.
+    Gets an environment variable as a <code class="cs">System.DateTime</code>.
     </div>
 								</td>
 							</tr>
@@ -338,7 +338,7 @@ class Type type-node
 								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
-    Gets an environment variable as a <code class="cs"><a href="/">TimeSpan</a></code>.
+    Gets an environment variable as a <code class="cs">System.TimeSpan</code>.
     </div>
 								</td>
 							</tr>
