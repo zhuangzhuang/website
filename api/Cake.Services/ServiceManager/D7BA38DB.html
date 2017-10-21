@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SendGridProvider.CreateAttachmentFromLocalFile(string, string, string) Method</title>
+        <title>Cake - API - ServiceManager.GetServices(string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -141,20 +141,40 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a></li>
+		<li><a href="/api/Cake.Services">Cake<wbr>.Services</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a></li>
+		<li><a href="/api/Cake.Services/ServiceManager">ServiceManager</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/5BB8D0F2">SendGridProvider<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/50E4B33F">ServiceManager<wbr>(ICakeEnvironment, <wbr>ICakeLog, <wbr>IPowershellRunner)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.SendGrid/SendGridProvider/3B3AE79E">Create<wbr>Attachment<wbr>From<wbr>Local<wbr>File<wbr>(string, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/376E59AF">Create<wbr>Attachment<wbr>From<wbr>Stream<wbr>(Stream, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/B91C8B9C">SendEmail<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/9918684F">SendEmail<wbr>(string, <wbr>string, <wbr>MailAddress, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/2977145A">SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/6A3F5B32">CanPauseAndContinue<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/57CF70E1">CanShutdown<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/C5924126">CanStop<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/1340660B">Continue<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/52EDA80E">Create<wbr>Install<wbr>Arguments<wbr>(string, <wbr>InstallSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/9203C324">ExecuteCommand<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/BB08B33B">GetService<wbr>(string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Services/ServiceManager/D7BA38DB">GetServices<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/F4720B1C">GetStatus<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/EBE70D2B">Install<wbr>(InstallSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/A0C0F2AA">Install<wbr>(string, <wbr>InstallSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/427EDB9D">IsContinuing<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/417E0C3D">IsInstalled<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/8735A817">IsPaused<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/25A113B6">IsPausing<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/FB2DA66F">IsRunning<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/581BBD1A">IsStarting<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/255AEA3D">IsStopped<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/8E21E18E">IsStopping<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/B703B3BA">Pause<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/E207C364">Restart<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/72D0B5F1">ServiceExists<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/8DBFBC59">Start<wbr>(string, <wbr>string, <wbr>int, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/F8B20ABC">Stop<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/ServiceManager/D426FBB2">Uninstall<wbr>(string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -168,41 +188,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a>.</h3>
-	<h1>Create<wbr>Attachment<wbr>From<wbr>Local<wbr>File<wbr>(string, <wbr>string, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Services/ServiceManager">ServiceManager</a>.</h3>
+	<h1>GetServices<wbr>(string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.SendGrid/" class="alert-link">https://github.com/cake-contrib/Cake.SendGrid/</a>.
+                        <a href="https://github.com/SharpeRAD/Cake.Services" class="alert-link">https://github.com/SharpeRAD/Cake.Services</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Convenience method that creates an attachment from a local file.
+            Gets a list of <code class="cs">System.ServiceProcess.ServiceController</code> on the specified computer.
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a></dd>
+						<dd><a href="/api/Cake.Services">Cake<wbr>.Services</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a></dd>		
+						<dd><a href="/api/Cake.Services/ServiceManager">ServiceManager</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public AttachmentBase CreateAttachmentFromLocalFile(string filePath, string mimeType = null, string contentId = null)</code></pre>
+	<pre><code>public List&lt;ServiceController&gt; GetServices(string computer = "")</code></pre>
 
 
 
@@ -220,19 +240,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>filePath</td>
+						<td>computer</td>
 						<td>string</td>
-						<td>The file path.</td>
-					</tr>
-					<tr>
-						<td>mimeType</td>
-						<td>string</td>
-						<td>Optional: MIME type of the attachment. If this parameter is null, the MIME type will be derived from the file extension.</td>
-					</tr>
-					<tr>
-						<td>contentId</td>
-						<td>string</td>
-						<td>Optional: the unique identifier for this attachment IF AND ONLY IF the attachment should be embedded in the body of the email. This is useful, for example, if you want to embbed an image to be displayed in the HTML content. For standard attachment, this value should be null.</td>
+						<td>The computer on which the service resides.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -249,8 +259,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>AttachmentBase</td>
-					<td>The attachment</td>
+					<td>List<wbr>&lt;T&gt;<wbr></td>
+					<td>A list of <code class="cs">System.ServiceProcess.ServiceController</code> on the specified computer.</td>
 				</tr>
 			</tbody></table>
 		</div>

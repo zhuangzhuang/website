@@ -200,11 +200,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
 											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
-											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
-											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
 											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
 											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
 									</ul>
 								</dd>			
@@ -217,16 +217,16 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["AppPackagerTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["AppUnbundler"]
-	click Derived0 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
-	Type--&gt;Derived1["AppPacker"]
-	click Derived1 "/api/Cake.AppPackager.Pack/AppPacker"
+	Type--&gt;Derived0["AppPacker"]
+	click Derived0 "/api/Cake.AppPackager.Pack/AppPacker"
+	Type--&gt;Derived1["AppBundler"]
+	click Derived1 "/api/Cake.AppPackager.Bundle/AppBundler"
 	Type--&gt;Derived2["AppUnpacker"]
 	click Derived2 "/api/Cake.AppPackager.Unpack/AppUnpacker"
-	Type--&gt;Derived3["AppEncrypter"]
-	click Derived3 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
-	Type--&gt;Derived4["AppBundler"]
-	click Derived4 "/api/Cake.AppPackager.Bundle/AppBundler"
+	Type--&gt;Derived3["AppUnbundler"]
+	click Derived3 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
+	Type--&gt;Derived4["AppEncrypter"]
+	click Derived4 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
 	Type--&gt;Derived5["AppDecrypter"]
 	click Derived5 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
 

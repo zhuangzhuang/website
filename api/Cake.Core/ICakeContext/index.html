@@ -178,9 +178,6 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li class="selected"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -195,6 +192,9 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -233,13 +233,13 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
 											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
 											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 									</ul>
 								</dd>				
@@ -250,20 +250,20 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeContextAdapter"]
-	click Implementing0 "/api/Cake.Core/CakeContextAdapter"
-	Type-.-&gt;Implementing1["TeardownContext"]
-	click Implementing1 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing2["ITeardownContext"]
-	click Implementing2 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing3["TaskTeardownContext"]
-	click Implementing3 "/api/Cake.Core/TaskTeardownContext"
-	Type-.-&gt;Implementing4["TaskSetupContext"]
-	click Implementing4 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing5["CakeContext"]
-	click Implementing5 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing6["ITaskSetupContext"]
-	click Implementing6 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing0["ITeardownContext"]
+	click Implementing0 "/api/Cake.Core/ITeardownContext"
+	Type-.-&gt;Implementing1["ITaskSetupContext"]
+	click Implementing1 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing2["CakeContextAdapter"]
+	click Implementing2 "/api/Cake.Core/CakeContextAdapter"
+	Type-.-&gt;Implementing3["TaskSetupContext"]
+	click Implementing3 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing4["TeardownContext"]
+	click Implementing4 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing5["TaskTeardownContext"]
+	click Implementing5 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing6["CakeContext"]
+	click Implementing6 "/api/Cake.Core/CakeContext"
 	Type-.-&gt;Implementing7["ITaskTeardownContext"]
 	click Implementing7 "/api/Cake.Core/ITaskTeardownContext"
 
