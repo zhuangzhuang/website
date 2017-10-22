@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - DeployManager.RegisterApplicationRevision(string, DeploySettings) Method</title>
+        <title>Cake - API - CodeDeployAliases.RegisterApplicationRevision(ICakeContext, string, DeploySettings, CancellationToken) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -145,13 +146,13 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.AWS.CodeDeploy">Cake<wbr>.AWS<wbr>.CodeDeploy</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.AWS.CodeDeploy/DeployManager">DeployManager</a></li>
+		<li><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases">CodeDeployAliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.AWS.CodeDeploy/DeployManager/D76A975F">DeployManager<wbr>(ICakeEnvironment, <wbr>ICakeLog)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.AWS.CodeDeploy/DeployManager/8AA570C2">CreateDeployment<wbr>(string, <wbr>string, <wbr>DeploySettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.AWS.CodeDeploy/DeployManager/87EEBA6B">Register<wbr>Application<wbr>Revision<wbr>(string, <wbr>DeploySettings)<wbr></a></li>
+				<li><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases/B8A27B6D">CreateDeployment<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>DeploySettings)<wbr></a></li>
+				<li><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases/549C9517">CreateDeployment<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>DeploySettings, <wbr>CancellationToken)<wbr></a></li>
+				<li><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases/CA4ACE6C">Register<wbr>Application<wbr>Revision<wbr>(ICakeContext, <wbr>string, <wbr>DeploySettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases/80A97B66">Register<wbr>Application<wbr>Revision<wbr>(ICakeContext, <wbr>string, <wbr>DeploySettings, <wbr>CancellationToken)<wbr></a></li>
 
 
                     </ul>
@@ -165,8 +166,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.AWS.CodeDeploy/DeployManager">DeployManager</a>.</h3>
-	<h1>Register<wbr>Application<wbr>Revision<wbr>(string, <wbr>DeploySettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases">CodeDeployAliases</a>.</h3>
+	<h1>Register<wbr>Application<wbr>Revision<wbr>(ICakeContext, <wbr>string, <wbr>DeploySettings, <wbr>CancellationToken)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -192,17 +193,42 @@
 						<dd><a href="/api/Cake.AWS.CodeDeploy">Cake<wbr>.AWS<wbr>.CodeDeploy</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.AWS.CodeDeploy/DeployManager">DeployManager</a></dd>		
+						<dd><a href="/api/Cake.AWS.CodeDeploy/CodeDeployAliases">CodeDeployAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool RegisterApplicationRevision(string applicationName, DeploySettings settings)</code></pre>
+	<pre><code>public static Task&lt;bool&gt; RegisterApplicationRevision(this ICakeContext context, string applicationName, DeploySettings settings, CancellationToken cancellationToken)</code></pre>
 
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>Async<wbr>State<wbr>Machine<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	<h1 id="Parameters">Parameters</h1>
@@ -217,6 +243,11 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td>The cake context.</td>
+					</tr>
+					<tr>
 						<td>applicationName</td>
 						<td>string</td>
 						<td>The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.</td>
@@ -225,6 +256,11 @@
 						<td>settings</td>
 						<td><a href="/api/Cake.AWS.CodeDeploy/DeploySettings">DeploySettings</a></td>
 						<td>The <code class="cs"><a href="/api/Cake.AWS.CodeDeploy/DeploySettings">DeploySettings</a></code> used during the request to AWS.</td>
+					</tr>
+					<tr>
+						<td>cancellationToken</td>
+						<td>CancellationToken</td>
+						<td>A cancellation token that can be used by other objects or threads to receive notice of cancellation.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -241,7 +277,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>Task<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
