@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - DeployManager.CreateDeployment(string, string, DeploySettings) Method</title>
+        <title>Cake - API - IServiceManager.GetServices(string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -141,17 +141,36 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.AWS.CodeDeploy.dll">Cake<wbr>.AWS<wbr>.CodeDeploy<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.AWS.CodeDeploy">Cake<wbr>.AWS<wbr>.CodeDeploy</a></li>
+		<li><a href="/api/Cake.Services">Cake<wbr>.Services</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.AWS.CodeDeploy/DeployManager">DeployManager</a></li>
+		<li><a href="/api/Cake.Services/IServiceManager">IServiceManager</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.AWS.CodeDeploy/DeployManager/D76A975F">DeployManager<wbr>(ICakeEnvironment, <wbr>ICakeLog)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.AWS.CodeDeploy/DeployManager/8AA570C2">CreateDeployment<wbr>(string, <wbr>string, <wbr>DeploySettings)<wbr></a></li>
-				<li><a href="/api/Cake.AWS.CodeDeploy/DeployManager/87EEBA6B">Register<wbr>Application<wbr>Revision<wbr>(string, <wbr>DeploySettings)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/85BE4102">CanPauseAndContinue<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/FE45FE1D">CanShutdown<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/5800958B">CanStop<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/9C2C3F48">Continue<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/624C3E53">ExecuteCommand<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/E0DDB10C">GetService<wbr>(string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Services/IServiceManager/33059AAB">GetServices<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/1FD9E5C6">GetStatus<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/0E2AED52">Install<wbr>(string, <wbr>InstallSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/84EB2D32">IsContinuing<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/E8F482C1">IsInstalled<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/EC0EBB99">IsPaused<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/CE0AFD6C">IsPausing<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/108648B5">IsRunning<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/03CEBF2D">IsStarting<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/CEF104E7">IsStopped<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/D5F4E3B9">IsStopping<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/5805CD15">Pause<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/8AE24654">Restart<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/62411D83">ServiceExists<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/24318085">Start<wbr>(string, <wbr>string, <wbr>int, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/511117C8">Stop<wbr>(string, <wbr>string, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Cake.Services/IServiceManager/3F8D1568">Uninstall<wbr>(string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -165,41 +184,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.AWS.CodeDeploy/DeployManager">DeployManager</a>.</h3>
-	<h1>CreateDeployment<wbr>(string, <wbr>string, <wbr>DeploySettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Services/IServiceManager">IServiceManager</a>.</h3>
+	<h1>GetServices<wbr>(string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/SharpeRAD/Cake.AWS.CodeDeploy" class="alert-link">https://github.com/SharpeRAD/Cake.AWS.CodeDeploy</a>.
+                        <a href="https://github.com/SharpeRAD/Cake.Services" class="alert-link">https://github.com/SharpeRAD/Cake.Services</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Deploys an application revision through the specified deployment group.
+            Gets a list of <code class="cs">System.ServiceProcess.ServiceController</code> on the specified computer.
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.AWS.CodeDeploy.dll">Cake<wbr>.AWS<wbr>.CodeDeploy<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Services.dll">Cake<wbr>.Services<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.AWS.CodeDeploy">Cake<wbr>.AWS<wbr>.CodeDeploy</a></dd>
+						<dd><a href="/api/Cake.Services">Cake<wbr>.Services</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.AWS.CodeDeploy/DeployManager">DeployManager</a></dd>		
+						<dd><a href="/api/Cake.Services/IServiceManager">IServiceManager</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool CreateDeployment(string applicationName, string deploymentGroup, DeploySettings settings)</code></pre>
+	<pre><code>List&lt;ServiceController&gt; GetServices(string computer = "")</code></pre>
 
 
 
@@ -217,19 +236,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>applicationName</td>
+						<td>computer</td>
 						<td>string</td>
-						<td>The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.</td>
-					</tr>
-					<tr>
-						<td>deploymentGroup</td>
-						<td>string</td>
-						<td>The name of the deployment group.</td>
-					</tr>
-					<tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.AWS.CodeDeploy/DeploySettings">DeploySettings</a></td>
-						<td>The <code class="cs"><a href="/api/Cake.AWS.CodeDeploy/DeploySettings">DeploySettings</a></code> used during the request to AWS.</td>
+						<td>The computer on which the service resides.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -246,8 +255,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
-					<td></td>
+					<td>List<wbr>&lt;T&gt;<wbr></td>
+					<td>A list of <code class="cs">System.ServiceProcess.ServiceController</code> on the specified computer.</td>
 				</tr>
 			</tbody></table>
 		</div>

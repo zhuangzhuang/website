@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - SendGridProvider.SendEmail(string, string, IEnumerable&lt;MailAddress&gt;, string, string, string, IEnumerable&lt;AttachmentBase&gt;, SendGridSettings) Method</title>
+        <title>Cake - API - CakeMailProvider.SendEmail(string, string, MailAddress, string, string, string, CakeMailSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -143,20 +143,19 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></li>
+		<li><a href="/api/Cake.CakeMail.dll">Cake<wbr>.CakeMail<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a></li>
+		<li><a href="/api/Cake.CakeMail">Cake<wbr>.CakeMail</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a></li>
+		<li><a href="/api/Cake.CakeMail/CakeMailProvider">CakeMailProvider</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/5BB8D0F2">SendGridProvider<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/api/Cake.CakeMail/CakeMailProvider/90F5A0EE">CakeMailProvider<wbr>(ICakeContext)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/3B3AE79E">Create<wbr>Attachment<wbr>From<wbr>Local<wbr>File<wbr>(string, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/376E59AF">Create<wbr>Attachment<wbr>From<wbr>Stream<wbr>(Stream, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/B91C8B9C">SendEmail<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
-				<li><a href="/api/Cake.SendGrid/SendGridProvider/9918684F">SendEmail<wbr>(string, <wbr>string, <wbr>MailAddress, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.SendGrid/SendGridProvider/2977145A">SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CakeMail/CakeMailProvider/5A218EDE">SendEmail<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>CakeMailSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.CakeMail/CakeMailProvider/4FC4407A">SendEmail<wbr>(string, <wbr>string, <wbr>MailAddress, <wbr>string, <wbr>string, <wbr>string, <wbr>CakeMailSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CakeMail/CakeMailProvider/AD0E28F2">SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>CakeMailSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CakeMail/CakeMailProvider/D985851E">SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>CakeMailSettings)<wbr></a></li>
 
 
                     </ul>
@@ -170,65 +169,62 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a>.</h3>
-	<h1>SendEmail<wbr>(string, <wbr>string, <wbr>IEnumerable<wbr>&lt;MailAddress&gt;<wbr>, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;<wbr>Attachment<wbr>Base&gt;<wbr>, <wbr>SendGridSettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.CakeMail/CakeMailProvider">CakeMailProvider</a>.</h3>
+	<h1>SendEmail<wbr>(string, <wbr>string, <wbr>MailAddress, <wbr>string, <wbr>string, <wbr>string, <wbr>CakeMailSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.SendGrid/" class="alert-link">https://github.com/cake-contrib/Cake.SendGrid/</a>.
+                        <a href="https://github.com/cake-contrib/Cake.CakeMail/" class="alert-link">https://github.com/cake-contrib/Cake.CakeMail/</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Send an email through SendGrid
+            Send an email through CakeMail
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.SendGrid.dll">Cake<wbr>.SendGrid<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.CakeMail.dll">Cake<wbr>.CakeMail<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.SendGrid">Cake<wbr>.SendGrid</a></dd>
+						<dd><a href="/api/Cake.CakeMail">Cake<wbr>.CakeMail</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.SendGrid/SendGridProvider">SendGridProvider</a></dd>		
+						<dd><a href="/api/Cake.CakeMail/CakeMailProvider">CakeMailProvider</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public SendGridResult SendEmail(string senderName, string senderAddress, IEnumerable&lt;MailAddress&gt; recipients, string subject, string htmlContent, string textContent, IEnumerable&lt;AttachmentBase&gt; attachments, SendGridSettings settings)</code></pre>
+	<pre><code>public CakeMailResult SendEmail(string senderName, string senderAddress, MailAddress recipient, string subject, string htmlContent, string textContent, CakeMailSettings settings)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
             <pre><code class="cs">var apiKey = "... your api key ...";
-var attachments = new[]
-{
-    SendGrid.CreateAttachmentFromLocalFile("C:\\temp\\MyFile.txt"),
-    SendGrid.CreateAttachmentFromLocalFile("C:\\temp\\MySpreadsheet.xls"),
-    SendGrid.CreateAttachmentFromLocalFile("C:\\temp\\MyFile.pdf"),
-};
+var userName = "... your username ...";
+var password = "... your password ...";
 try
 {
-    var result = SendGrid.SendEmail(
+    var result = CakeMail.SendEmail(
         senderName: "Bob Smith",
         senderAddress: "bob@example.com",
-        recipients: new[] {
-            new MailAddress("jane@example.com", "Jane Doe"),
-            new MailAddress("jane@example.com", "Jane Doe")
-           },
+        recipientAddress: "jane@example.com",
         subject: "This is a test",
         htmlContent: "This is a test",
         textContent: "This is a test",
-        attachments: attachments,
-        settings: new SendGridEmailSettings { ApiKey = apiKey }
+        settings: new CakeMailEmailSettings
+        {
+        ApiKey = apiKey,
+        UserName = userName,
+        Password = password
+        }
     );
     if (result.Ok)
     {
@@ -287,9 +283,9 @@ catch(Exception ex)
 						<td>The email addresses of the person sending the email</td>
 					</tr>
 					<tr>
-						<td>recipients</td>
-						<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-						<td>An enumeration of recipients who will receive the email</td>
+						<td>recipient</td>
+						<td>MailAddress</td>
+						<td>The MailAddress of the person who will recieve the email</td>
 					</tr>
 					<tr>
 						<td>subject</td>
@@ -307,13 +303,8 @@ catch(Exception ex)
 						<td>The text content</td>
 					</tr>
 					<tr>
-						<td>attachments</td>
-						<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-						<td>Attachments to send with the email</td>
-					</tr>
-					<tr>
 						<td>settings</td>
-						<td><a href="/api/Cake.SendGrid.Email/SendGridSettings">SendGridSettings</a></td>
+						<td><a href="/api/Cake.CakeMail.Email/CakeMailSettings">CakeMailSettings</a></td>
 						<td>The settings to be used when sending the email</td>
 					</tr>
 			</tbody></table>
@@ -331,8 +322,8 @@ catch(Exception ex)
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.SendGrid/SendGridResult">SendGridResult</a></td>
-					<td>An instance of <code class="cs"><a href="/api/Cake.SendGrid/SendGridResult">SendGridResult</a></code> indicating success/failure</td>
+					<td><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></td>
+					<td>An instance of <code class="cs"><a href="/api/Cake.CakeMail/CakeMailResult">CakeMailResult</a></code> indicating success/failure</td>
 				</tr>
 			</tbody></table>
 		</div>
