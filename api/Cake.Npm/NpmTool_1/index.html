@@ -204,9 +204,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
 											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
+											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
 											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
 											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
 									</ul>
@@ -220,12 +220,12 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["NpmTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["NpmPacker"]
-	click Derived0 "/api/Cake.Npm.Pack/NpmPacker"
-	Type--&gt;Derived1["NpmRebuilder"]
-	click Derived1 "/api/Cake.Npm.Rebuild/NpmRebuilder"
-	Type--&gt;Derived2["NpmPublisher"]
-	click Derived2 "/api/Cake.Npm.Publish/NpmPublisher"
+	Type--&gt;Derived0["NpmRebuilder"]
+	click Derived0 "/api/Cake.Npm.Rebuild/NpmRebuilder"
+	Type--&gt;Derived1["NpmPublisher"]
+	click Derived1 "/api/Cake.Npm.Publish/NpmPublisher"
+	Type--&gt;Derived2["NpmPacker"]
+	click Derived2 "/api/Cake.Npm.Pack/NpmPacker"
 	Type--&gt;Derived3["NpmScriptRunner"]
 	click Derived3 "/api/Cake.Npm.RunScript/NpmScriptRunner"
 	Type--&gt;Derived4["NpmInstaller"]
