@@ -209,6 +209,7 @@
     <li><a href="/dsl/kudu">Kudu</a></li>        
     <li><a href="/dsl/microsoft-teams">Microsoft Teams</a></li>        
     <li><a href="/dsl/msbuild-resource">MSBuild Resource</a></li>        
+    <li><a href="/dsl/msbuildtask">MSBuildTask</a></li>        
     <li><a href="/dsl/msdeploy">MsDeploy</a></li>        
     <li><a href="/dsl/node">Node</a></li>        
     <li><a href="/dsl/npm">Npm</a></li>        
@@ -228,6 +229,7 @@
     <li><a href="/dsl/sendgrid">SendGrid</a></li>        
     <li><a href="/dsl/services">Services</a></li>        
     <li><a href="/dsl/signing">Signing</a></li>        
+    <li><a href="/dsl/slack">Slack</a></li>        
     <li><a href="/dsl/sonar">Sonar</a></li>        
     <li><a href="/dsl/sonarscanner">SonarScanner</a></li>        
     <li><a href="/dsl/sqlpackage">SqlPackage</a></li>        
@@ -236,6 +238,7 @@
     <li><a href="/dsl/squirrel">Squirrel</a></li>        
     <li><a href="/dsl/storyteller">Storyteller</a></li>        
     <li><a href="/dsl/strong-naming">Strong Naming</a></li>        
+    <li><a href="/dsl/svn">Svn</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
     <li><a href="/dsl/synver">SynVer</a></li>        
     <li><a href="/dsl/terraform">Terraform</a></li>        
@@ -277,7 +280,12 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    </p><pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    <p></p>
     </div>
 
 
