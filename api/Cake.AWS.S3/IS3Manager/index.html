@@ -151,6 +151,7 @@
 				<li><a href="/api/Cake.AWS.S3/CakeEnvironmentExtensions">Cake<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.AWS.S3/DownloadSettings">DownloadSettings</a></li>
 				<li><a href="/api/Cake.AWS.S3/DownloadSettingsExtensions">Download<wbr>Settings<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.AWS.S3/ModifiedCheck">ModifiedCheck</a></li>
 				<li><a href="/api/Cake.AWS.S3/S3Aliases">S3Aliases</a></li>
 				<li><a href="/api/Cake.AWS.S3/S3Manager">S3Manager</a></li>
 				<li><a href="/api/Cake.AWS.S3/S3Settings">S3Settings</a></li>
@@ -162,8 +163,6 @@
 				<li><a href="/api/Cake.AWS.S3/UploadSettingsExtensions">Upload<wbr>Settings<wbr>Extensions</a></li>
 			<li class="header">Interface Types</li>
 				<li class="selected"><a href="/api/Cake.AWS.S3/IS3Manager">IS3Manager</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.AWS.S3/ModifiedCheck">ModifiedCheck</a></li>
 
 
                     </ul>
@@ -282,8 +281,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/92400851">Delete<wbr>(string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/648C98EA">Delete<wbr>(string, <wbr>string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task</td>
 								<td>
 									<div>
             Removes the null version (if there is one) of an object and inserts a delete
@@ -293,8 +292,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/F862471D">DeleteAll<wbr>(string, <wbr>DateTimeOffset, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/F1EE99C7">DeleteAll<wbr>(string, <wbr>DateTimeOffset, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -302,8 +301,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/8D81B727">Download<wbr>(FilePath, <wbr>string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/9094CD16">Download<wbr>(FilePath, <wbr>string, <wbr>string, <wbr>DownloadSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task</td>
 								<td>
 									<div>
             Downloads the content from Amazon S3 and writes it to the specified file.
@@ -320,8 +319,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/8DD4C4F7">GetBytes<wbr>(string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>byte[]</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/9CED2AAA">GetBytes<wbr>(string, <wbr>string, <wbr>DownloadSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Get the byte array of the content from Amazon S3
@@ -338,8 +337,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/99707517">GetObject<wbr>(string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>S3Object</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/3DC7C118">GetObject<wbr>(string, <wbr>string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Retrieves object from Amazon S3.
@@ -347,8 +346,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/8DCAC61D">GetObjectMetaData<wbr>(string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>MetadataCollection</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/E394DAB8">GetObjectMetaData<wbr>(string, <wbr>string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Retrieves object Metadata from Amazon S3.
@@ -356,8 +355,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/B8A94E88">GetObjects<wbr>(string, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/E93F28FC">GetObjects<wbr>(string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -374,8 +373,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/F53EDEF2">Open<wbr>(string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>Stream</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/2A987091">Open<wbr>(string, <wbr>string, <wbr>DownloadSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Opens a stream of the content from Amazon S3
@@ -383,8 +382,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/503E89ED">SyncDownload<wbr>(DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/44C7C195">SyncDownload<wbr>(DirectoryPath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -392,8 +391,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/AF28A776">SyncDownload<wbr>(FilePath, <wbr>SyncSettings)<wbr></a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/5AC015EB">SyncDownload<wbr>(FilePath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified file from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -401,8 +400,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/FF1F47F4">SyncUpload<wbr>(DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/FC75E8C2">SyncUpload<wbr>(DirectoryPath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified file to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.
@@ -410,8 +409,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/C1CF50EB">SyncUpload<wbr>(FilePath, <wbr>SyncSettings)<wbr></a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/626F154E">SyncUpload<wbr>(FilePath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.
@@ -419,8 +418,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/6135C180">Upload<wbr>(FilePath, <wbr>string, <wbr>UploadSettings)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/CBAE0C89">Upload<wbr>(FilePath, <wbr>string, <wbr>UploadSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task</td>
 								<td>
 									<div>
             Uploads the specified file. For large uploads, the file will be divided and uploaded in parts 
@@ -429,8 +428,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.S3/IS3Manager/C5B8559C">Upload<wbr>(Stream, <wbr>string, <wbr>UploadSettings)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.AWS.S3/IS3Manager/1E0E21C6">Upload<wbr>(Stream, <wbr>string, <wbr>UploadSettings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task</td>
 								<td>
 									<div>
             Uploads the contents of the specified stream. For large uploads, the file will be divided and uploaded in parts 
