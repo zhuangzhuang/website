@@ -601,7 +601,13 @@
 						<li><a href="/api/Cake.NuGet.Install">Cake<wbr>.NuGet<wbr>.Install</a></li>
 </ul></li>			<li><a href="/api/Cake.OctoDeploy">Cake<wbr>.OctoDeploy</a></li>
 			<li><a href="/api/Cake.OctoVariapus">Cake<wbr>.OctoVariapus</a></li>
-			<li><a href="/api/Cake.Orchard">Cake<wbr>.Orchard</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.Openshift">Cake<wbr>.Openshift</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Openshift.Login">Cake<wbr>.Openshift<wbr>.Login</a></li>
+			<li><a href="/api/Cake.Openshift.StartBuild">Cake<wbr>.Openshift<wbr>.StartBuild</a></li>
+</ul></li>			<li><a href="/api/Cake.Orchard">Cake<wbr>.Orchard</a></li>
 
 				<li class="treeview">
 				<a href="/api/Cake.Paket">Cake<wbr>.Paket</a> <a href="#" class="expand"></a>
@@ -880,7 +886,7 @@
 							<tr>
 								<td><a href="/api/Cake.Codecov/CodecovSettings">CodecovSettings</a></td>
 									<td>
-            Contains settings used by <code class="cs"><a href="/">CodecovRunner</a></code>. See <a href="https://github.com/codecov/codecov-exe/blob/master/Source/Codecov/Program/CommandLineOptions.cs">CommandLineOptions</a>
+            Contains settings used by <code class="cs">Cake.Codecov.CodecovRunner</code>. See <a href="https://github.com/codecov/codecov-exe/blob/master/Source/Codecov/Program/CommandLineOptions.cs">CommandLineOptions</a>
             or run
             <pre><code class="cs">.\codecov.exe --help</code></pre>
             for more details.

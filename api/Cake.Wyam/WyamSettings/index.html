@@ -257,7 +257,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/6D5473EC">Assemblies</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Adds references to multiple assemblies by name, file name, or globbing patterns.
@@ -284,7 +284,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/940478E7">InputPaths</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value indicating the input paths that should be used while running Wyam.
@@ -320,7 +320,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/28D09226">NuGetPackages</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Adds NuGet packages (downloading and installing them if needed).
@@ -329,7 +329,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/02F6BF48">NuGetSources</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Specifies additional package sources to use.
@@ -428,7 +428,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Wyam/WyamSettings/3AD529FB">Settings</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;,&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets metadata settings.
@@ -539,17 +539,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;WyamSettings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;WyamSettings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -558,6 +547,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;WyamSettings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
