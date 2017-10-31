@@ -155,6 +155,7 @@
 				<li><a href="/api/Cake.Svn/SvnTool_1">SvnTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></li>
+				<li><a href="/api/Cake.Svn/SvnKind">SvnKind</a></li>
 				<li><a href="/api/Cake.Svn/SvnLineStyle">SvnLineStyle</a></li>
 
 
@@ -261,12 +262,186 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/970B3FD1">GetSvnDirectoryInfo<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+             Gets Subversion information about the directory at <span name="directoryPath" class="paramref">directoryPath</span>.
+             The result list contains recursive information about the <span name="directoryPath" class="paramref">directoryPath</span> 
+             (<code class="cs"><a href="/api/Cake.Svn/SvnDepth/146E08FE">Infinity</a></code>). To get information with another <code class="cs"><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></code> 
+             the overload <code class="cs">Cake.Svn.SvnAliases.GetSvnDirectoryInfo(Cake.Core.ICakeContext,Cake.Core.IO.DirectoryPath,Cake.Svn.Info.SvnInfoSettings)</code> 
+             can be used with changing the settings parameter.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/2ED164BB">GetSvnDirectoryInfo<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SvnInfoSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+             Gets Subversion information about the directory at <span name="directoryPath" class="paramref">directoryPath</span> with specific settings.
+             The result list contains recursive information about the <span name="directoryPath" class="paramref">directoryPath</span> 
+             (<code class="cs"><a href="/api/Cake.Svn/SvnDepth/146E08FE">Infinity</a></code>). To get information with another <code class="cs"><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></code> 
+             change the <code class="cs"><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></code> on <span name="settings" class="paramref">settings</span>.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/643A5344">GetSvnFileInfo<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
+								<td><a href="/api/Cake.Svn.Info/SvnInfoResult">SvnInfoResult</a></td>
+								<td>
+									<div>
+             Gets Subversion information about the file at <span name="filePath" class="paramref">filePath</span>.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/C791ABEB">GetSvnFileInfo<wbr>(ICakeContext, <wbr>FilePath, <wbr>SvnInfoSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Svn.Info/SvnInfoResult">SvnInfoResult</a></td>
+								<td>
+									<div>
+             Gets Subversion information about file at <span name="filePath" class="paramref">filePath</span> with specific settings.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/AFFD890E">GetSvnRemoteInfo<wbr>(ICakeContext, <wbr>Uri)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+             Gets Subversion information about the file or directory at <span name="repositoryUrl" class="paramref">repositoryUrl</span>.
+             The result list contains recursive information about the <span name="repositoryUrl" class="paramref">repositoryUrl</span> 
+             (<code class="cs"><a href="/api/Cake.Svn/SvnDepth/146E08FE">Infinity</a></code>). To get information with another <code class="cs"><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></code> 
+             the overload <code class="cs">Cake.Svn.SvnAliases.GetSvnDirectoryInfo(Cake.Core.ICakeContext,Cake.Core.IO.DirectoryPath,Cake.Svn.Info.SvnInfoSettings)</code> 
+             can be used with changing the settings parameter.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/1EBBA8C8">GetSvnRemoteInfo<wbr>(ICakeContext, <wbr>Uri, <wbr>SvnInfoSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+             Gets Subversion information about the file or directory at <span name="repositoryUrl" class="paramref">repositoryUrl</span> with specific settings.
+             The result list contains recursive information about the <span name="repositoryUrl" class="paramref">repositoryUrl</span> 
+             (<code class="cs"><a href="/api/Cake.Svn/SvnDepth/146E08FE">Infinity</a></code>). To get information with another <code class="cs"><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></code> 
+             change the <code class="cs"><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></code> on <span name="settings" class="paramref">settings</span>.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/23ECD301">Is<wbr>Directory<wbr>In<wbr>Svn<wbr>Working<wbr>Copy<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Check if the <span name="directoryPath" class="paramref">directoryPath</span> was added to the Subversion working copy.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/BAFF0F96">Is<wbr>File<wbr>In<wbr>Svn<wbr>Working<wbr>Copy<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Check if the <span name="filePath" class="paramref">filePath</span> was added to the Subversion working copy.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/0A5E7391">SvnAddDirectory<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Add a directory to Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/43E221AD">SvnAddDirectory<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SvnAddSettings)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Add a directory to Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/A05B3EFB">SvnAddFile<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Add a file to Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/ACB77DAB">SvnAddFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>SvnAddSettings)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Add a file to Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/9433F6E1">SvnDeleteDirectory<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Delete a directory from Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/AABB95F1">SvnDeleteDirectory<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SvnDeleteSettings)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Delete a directory from Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/9534B95D">SvnDeleteFile<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Delete a file from Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Svn/SvnAliases/19804CC0">SvnDeleteFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>SvnDeleteSettings)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+             Delete a file from Subversion.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Svn/SvnAliases/9526EEA8">SvnExport<wbr>(ICakeContext, <wbr>Uri, <wbr>DirectoryPath)<wbr></a></td>
 								<td><a href="/api/Cake.Svn.Export/SvnExportResult">SvnExportResult</a></td>
 								<td>
 									<div>
-            Export a Subversion directory tree.
-            </div>
+             Export a Subversion directory tree.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -275,8 +450,8 @@ class Type type-node
 								<td><a href="/api/Cake.Svn.Export/SvnExportResult">SvnExportResult</a></td>
 								<td>
 									<div>
-            Export a Subversion directory tree.
-            </div>
+             Export a Subversion directory tree with specific settings.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

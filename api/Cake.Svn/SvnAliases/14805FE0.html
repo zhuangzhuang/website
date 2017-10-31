@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -149,6 +150,22 @@
 		<li><a href="/api/Cake.Svn/SvnAliases">SvnAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Svn/SvnAliases/970B3FD1">GetSvnDirectoryInfo<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/2ED164BB">GetSvnDirectoryInfo<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SvnInfoSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/643A5344">GetSvnFileInfo<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/C791ABEB">GetSvnFileInfo<wbr>(ICakeContext, <wbr>FilePath, <wbr>SvnInfoSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/AFFD890E">GetSvnRemoteInfo<wbr>(ICakeContext, <wbr>Uri)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/1EBBA8C8">GetSvnRemoteInfo<wbr>(ICakeContext, <wbr>Uri, <wbr>SvnInfoSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/23ECD301">Is<wbr>Directory<wbr>In<wbr>Svn<wbr>Working<wbr>Copy<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/BAFF0F96">Is<wbr>File<wbr>In<wbr>Svn<wbr>Working<wbr>Copy<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/0A5E7391">SvnAddDirectory<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/43E221AD">SvnAddDirectory<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SvnAddSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/A05B3EFB">SvnAddFile<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/ACB77DAB">SvnAddFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>SvnAddSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/9433F6E1">SvnDeleteDirectory<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/AABB95F1">SvnDeleteDirectory<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SvnDeleteSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/9534B95D">SvnDeleteFile<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Svn/SvnAliases/19804CC0">SvnDeleteFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>SvnDeleteSettings)<wbr></a></li>
 				<li><a href="/api/Cake.Svn/SvnAliases/9526EEA8">SvnExport<wbr>(ICakeContext, <wbr>Uri, <wbr>DirectoryPath)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Svn/SvnAliases/14805FE0">SvnExport<wbr>(ICakeContext, <wbr>Uri, <wbr>DirectoryPath, <wbr>SvnExportSettings)<wbr></a></li>
 
@@ -178,8 +195,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Export a Subversion directory tree.
-            </div>
+             Export a Subversion directory tree with specific settings.
+             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -200,6 +217,23 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static SvnExportResult SvnExport(this ICakeContext context, Uri repositoryUrl, DirectoryPath path, SvnExportSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+             <p>Export root files from a SVN repository while overwriting files in the target location and output revision ID:</p>
+             <pre><code class="cs"> var settings =
+         new SvnExportSettings 
+         { 
+             Overwrite = true,
+             Depth = SvnDepth.Files 
+         };
+         
+     var result = SvnExport(
+         new Uri("https://svn.example.com"),
+         @"c:\repo",
+         settings);
+
+     Verbose("Revision: {0}", result.Revision);</code></pre>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>

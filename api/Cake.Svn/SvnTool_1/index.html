@@ -157,6 +157,7 @@
 				<li class="selected"><a href="/api/Cake.Svn/SvnTool_1">SvnTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Svn/SvnDepth">SvnDepth</a></li>
+				<li><a href="/api/Cake.Svn/SvnKind">SvnKind</a></li>
 				<li><a href="/api/Cake.Svn/SvnLineStyle">SvnLineStyle</a></li>
 
 
@@ -209,7 +210,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Svn.Info/SvnInfo">SvnInfo</a></li>								
+											<li><a href="/api/Cake.Svn.Delete/SvnDeleter">SvnDeleter</a></li>								
 											<li><a href="/api/Cake.Svn.Export/SvnExporter">SvnExporter</a></li>								
+											<li><a href="/api/Cake.Svn.Add/SvnAdder">SvnAdder</a></li>								
 									</ul>
 								</dd>			
 							
@@ -221,8 +225,14 @@
 	Base0["object"]--&gt;Type
 	Type["SvnTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["SvnExporter"]
-	click Derived0 "/api/Cake.Svn.Export/SvnExporter"
+	Type--&gt;Derived0["SvnInfo"]
+	click Derived0 "/api/Cake.Svn.Info/SvnInfo"
+	Type--&gt;Derived1["SvnDeleter"]
+	click Derived1 "/api/Cake.Svn.Delete/SvnDeleter"
+	Type--&gt;Derived2["SvnExporter"]
+	click Derived2 "/api/Cake.Svn.Export/SvnExporter"
+	Type--&gt;Derived3["SvnAdder"]
+	click Derived3 "/api/Cake.Svn.Add/SvnAdder"
 
 						</div>
 					</div>
