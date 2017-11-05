@@ -243,8 +243,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/4ECE603D">DescribeInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/DC6D4ECB">DescribeInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Describes the status of one or more instances. Instance status includes the following components:
@@ -257,8 +257,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/4B6845CE">DescribeTags<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/6F926F1E">DescribeTags<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Describes one or more of the tags for your EC2 resources.
@@ -266,8 +266,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/4CF4CF44">StartInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>bool</td>
+								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/E40ACCEB">StartInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Starts an Amazon EBS-backed AMI that you've previously stopped. Instances that use Amazon EBS volumes as their root devices can be quickly stopped
@@ -278,8 +278,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/73FC4DDC">StopInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>bool</td>
+								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/B08B230C">StopInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Stops an Amazon EBS-backed instance. Each time you transition an instance from stopped to started, Amazon EC2 charges a full instance hour, even if transitions
@@ -292,8 +292,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/F7400E5C">TerminateInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings)<wbr></a></td>
-								<td>bool</td>
+								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/0B1E9B03">TerminateInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Shuts down one or more instances. This operation is idempotent; if you terminate an instance more than once, each call succeeds.
@@ -345,17 +345,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IEC2Manager&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;IEC2Manager&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -364,6 +353,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IEC2Manager&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

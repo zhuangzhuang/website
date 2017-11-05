@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -155,7 +156,7 @@
 				<li><a href="/api/Cake.Hg.Aliases/HgAliases/A75BD76E">HgInit<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
 				<li><a href="/api/Cake.Hg.Aliases/HgAliases/E82E043F">HgTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Hg.Aliases/HgAliases/020258BC">HgVersion<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
-				<li><a href="/api/Cake.Hg.Aliases/HgAliases/CA12417B">HgVersion<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>HgVersionSettings)<wbr></a></li>
+				<li><a href="/api/Cake.Hg.Aliases/HgAliases/53CE6180">HgVersion<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>HgVersionSettings)<wbr></a></li>
 
 
                     </ul>
@@ -183,7 +184,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Get diff of repository. 
+            Get diff of repository.
             </div>
 
 		<div class="panel panel-default">
@@ -203,8 +204,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void HgDiff(this ICakeContext context, DirectoryPath repositoryPath, RevSpec revisions)</code></pre>
+	<pre><code>public static string HgDiff(this ICakeContext context, DirectoryPath repositoryPath, RevSpec revisions)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">var diff = HgDiff("./", "6b0f32157b9045a9495821db1927348250076e6b:e40ce466124109a074af6dc582c1d54db3e9cd01");</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -271,7 +276,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>string</td>
 					<td></td>
 				</tr>
 			</tbody></table>

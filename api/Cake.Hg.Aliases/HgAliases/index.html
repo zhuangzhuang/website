@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -169,7 +171,12 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains functionality for working with Mercurial.
+            <pre><code class="cs">#addin Cake.Hg</code></pre>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -210,6 +217,23 @@ class Type type-node
 
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 
@@ -234,6 +258,11 @@ class Type type-node
 								<td>
 									<div>
             Return mercurial repository. 
+            <example>
+            <code class="cs">
+                var repo = Hg("./");
+            </code>
+            </example>
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -243,17 +272,17 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-            Create mercurial commit. 
+            Create mercurial commit.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Hg.Aliases/HgAliases/52C0087A">HgDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>RevSpec)<wbr></a></td>
-								<td>void</td>
+								<td>string</td>
 								<td>
 									<div>
-            Get diff of repository. 
+            Get diff of repository.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -280,7 +309,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Hg.Aliases/HgAliases/020258BC">HgVersion<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></td>
-								<td><a href="/api/Cake.Hg.Versions/HgVersionInfo">HgVersionInfo</a></td>
+								<td><a href="/api/Cake.Hg.Versioning/HgVersionInfo">HgVersionInfo</a></td>
 								<td>
 									<div>
             Get the mercurial version info for the project. 
@@ -289,8 +318,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Hg.Aliases/HgAliases/CA12417B">HgVersion<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>HgVersionSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Hg.Versions/HgVersionInfo">HgVersionInfo</a></td>
+								<td><a href="/api/Cake.Hg.Aliases/HgAliases/53CE6180">HgVersion<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>HgVersionSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Hg.Versioning/HgVersionInfo">HgVersionInfo</a></td>
 								<td>
 									<div>
             Get the mercurial version info for the project. 

@@ -211,7 +211,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static bool DisableAvailabilityZones(this ICakeContext context, string loadBalancer, IList&lt;string&gt; zones, LoadBalancingSettings settings)</code></pre>
+	<pre><code>public static Task&lt;bool&gt; DisableAvailabilityZones(this ICakeContext context, string loadBalancer, IList&lt;string&gt; zones, LoadBalancingSettings settings)</code></pre>
 
 
 
@@ -226,6 +226,10 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>Async<wbr>State<wbr>Machine<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
 						<td></td>
 					</tr>
@@ -261,7 +265,7 @@
 					</tr>
 					<tr>
 						<td>zones</td>
-						<td>IList<wbr>&lt;T&gt;<wbr></td>
+						<td>IList<wbr>&lt;&gt;<wbr></td>
 						<td>The Availability Zones to remove from the load balancer.</td>
 					</tr>
 					<tr>
@@ -284,7 +288,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>Task<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
