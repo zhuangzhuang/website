@@ -150,6 +150,7 @@
 				<li><a href="/api/Cake.AWS.S3/CakeEnvironmentExtensions">Cake<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.AWS.S3/DownloadSettings">DownloadSettings</a></li>
 				<li><a href="/api/Cake.AWS.S3/DownloadSettingsExtensions">Download<wbr>Settings<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.AWS.S3/ModifiedCheck">ModifiedCheck</a></li>
 				<li class="selected"><a href="/api/Cake.AWS.S3/S3Aliases">S3Aliases</a></li>
 				<li><a href="/api/Cake.AWS.S3/S3Manager">S3Manager</a></li>
 				<li><a href="/api/Cake.AWS.S3/S3Settings">S3Settings</a></li>
@@ -161,8 +162,6 @@
 				<li><a href="/api/Cake.AWS.S3/UploadSettingsExtensions">Upload<wbr>Settings<wbr>Extensions</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.AWS.S3/IS3Manager">IS3Manager</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.AWS.S3/ModifiedCheck">ModifiedCheck</a></li>
 
 
                     </ul>
@@ -207,7 +206,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
@@ -217,7 +216,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Type["S3Aliases"]
 class Type type-node
 
@@ -327,7 +326,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/67EBED03">GetS3Bytes<wbr>(ICakeContext, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>byte[]</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Get the byte array of a S3 object
@@ -337,7 +336,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/794EF331">GetS3Bytes<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>byte[]</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Get the byte array of a S3 object
@@ -347,7 +346,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/A566B798">GetS3Object<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>S3Object</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Retrieves object from Amazon S3.
@@ -357,7 +356,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/F440A0DC">GetS3Object<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>S3Object</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Retrieves object from Amazon S3.
@@ -367,7 +366,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/618393D1">GetS3Objects<wbr>(ICakeContext, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -377,7 +376,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/4B5C4202">GetS3Objects<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -387,7 +386,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/9BAFC34F">GetS3String<wbr>(ICakeContext, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Get the string of a S3 object
@@ -397,7 +396,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/00FB7C22">GetS3String<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Get the string of a S3 object
@@ -407,7 +406,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/DD334036">S3Delete<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>void</td>
+								<td>Task</td>
 								<td>
 									<div>
             Removes the null version (if there is one) of an object and inserts a delete
@@ -419,7 +418,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/30FF2D82">S3Delete<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>void</td>
+								<td>Task</td>
 								<td>
 									<div>
             Removes the null version (if there is one) of an object and inserts a delete
@@ -431,7 +430,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/48EA9FD2">S3DeleteAll<wbr>(ICakeContext, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -441,7 +440,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/B0A851AC">S3DeleteAll<wbr>(ICakeContext, <wbr>string, <wbr>DateTimeOffset, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -451,7 +450,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/E520FE74">S3DeleteAll<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -461,7 +460,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/EFB5814A">S3Download<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>void</td>
+								<td>Task</td>
 								<td>
 									<div>
             Downloads the content from Amazon S3 and writes it to the specified file.
@@ -471,7 +470,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/8F82E8F2">S3Download<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>void</td>
+								<td>Task</td>
 								<td>
 									<div>
             Downloads the content from Amazon S3 and writes it to the specified file.
@@ -481,7 +480,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/E7B4A922">S3GetETag<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the ETag of an S3 object
@@ -491,7 +490,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/60CCC6ED">S3GetETag<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the ETag of an S3 object
@@ -501,7 +500,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/FA83C26E">S3GetHashTag<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the ETag of an S3 object
@@ -511,7 +510,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/0E2816C3">S3GetHashTag<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the ETag of an S3 object
@@ -521,7 +520,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/3C20FF43">S3LastModified<wbr>(ICakeContext, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>DateTimeOffset</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the last modified date of an S3 object
@@ -531,7 +530,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/BD8C4E90">S3LastModified<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>S3Settings)<wbr></a></td>
-								<td>DateTimeOffset</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets the last modified date of an S3 object
@@ -541,7 +540,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/44D28F77">S3Open<wbr>(ICakeContext, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>Stream</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Opens a stream of the content from Amazon S3.
@@ -551,7 +550,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/5B27888A">S3Open<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>DownloadSettings)<wbr></a></td>
-								<td>Stream</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Opens a stream of the content from Amazon S3.
@@ -561,7 +560,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/F31E04AA">S3Sync<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory to Amazon S3, checking the modified date of the local fiels with existing S3Objects.
@@ -571,7 +570,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/30317DF6">S3SyncDownload<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
              Syncs the specified directory from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -581,7 +580,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/4EE4B606">S3SyncDownload<wbr>(ICakeContext, <wbr>FilePath, <wbr>SyncSettings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
              Syncs the specified file from Amazon S3, checking the modified date of the local file with a existing S3Object and downloads it if its changed.
@@ -591,7 +590,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/9353A9C4">S3SyncUpload<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>SyncSettings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.
@@ -601,7 +600,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/68560593">S3SyncUpload<wbr>(ICakeContext, <wbr>FilePath, <wbr>SyncSettings)<wbr></a></td>
-								<td>string</td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified file to Amazon S3, checking the modified date of the local file with a existing S3Object and uploads it if its changes.
@@ -611,7 +610,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/0A2FFEBB">S3Upload<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>UploadSettings)<wbr></a></td>
-								<td>void</td>
+								<td>Task</td>
 								<td>
 									<div>
             Uploads the specified file. For large uploads, the file will be divided and uploaded in parts 
@@ -622,7 +621,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/S3Aliases/7CFA9493">S3Upload<wbr>(ICakeContext, <wbr>Stream, <wbr>string, <wbr>UploadSettings)<wbr></a></td>
-								<td>void</td>
+								<td>Task</td>
 								<td>
 									<div>
             Uploads the contents of the specified stream. For large uploads, the file will be divided and uploaded in parts 

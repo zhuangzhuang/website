@@ -231,7 +231,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static Stream S3Open(this ICakeContext context, string key, string version, DownloadSettings settings)</code></pre>
+	<pre><code>public static Task&lt;Stream&gt; S3Open(this ICakeContext context, string key, string version, DownloadSettings settings)</code></pre>
 
 
 
@@ -246,6 +246,10 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>Async<wbr>State<wbr>Machine<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
 						<td></td>
 					</tr>
@@ -304,7 +308,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>Stream</td>
+					<td>Task<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

@@ -243,8 +243,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/E7BBBAC7">CreateHostedZone<wbr>(string, <wbr>string, <wbr>VPCRegion, <wbr>Route53Settings)<wbr></a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/1FC7D51F">CreateHostedZone<wbr>(string, <wbr>string, <wbr>VPCRegion, <wbr>Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Create a new hosted zone. When you create a zone, its initial status is PENDING. This means that it is not yet available on all DNS servers.
@@ -253,8 +253,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/1848EE16">Create<wbr>Resource<wbr>Record<wbr>Set<wbr>(string, <wbr>string, <wbr>RRType, <wbr>string, <wbr>long, <wbr>Route53Settings)<wbr></a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/7B69A933">Create<wbr>Resource<wbr>Record<wbr>Set<wbr>(string, <wbr>string, <wbr>RRType, <wbr>string, <wbr>long, <wbr>Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Create or change a DNS record for a hosted zone.
@@ -262,8 +262,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/B8176765">DeleteHostedZone<wbr>(string, <wbr>Route53Settings)<wbr></a></td>
-								<td>bool</td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/F59DF5B4">DeleteHostedZone<wbr>(string, <wbr>Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Delete a hosted zone.
@@ -271,8 +271,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/2DBDEFBB">Delete<wbr>Resource<wbr>Record<wbr>Set<wbr>(string, <wbr>string, <wbr>RRType, <wbr>string, <wbr>long, <wbr>Route53Settings)<wbr></a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/AF622499">Delete<wbr>Resource<wbr>Record<wbr>Set<wbr>(string, <wbr>string, <wbr>RRType, <wbr>string, <wbr>long, <wbr>Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Delete a DNS record for a hosted zone.
@@ -280,8 +280,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/1A97C0E6">GetHostedZone<wbr>(string, <wbr>Route53Settings)<wbr></a></td>
-								<td>HostedZone</td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/AE51CF38">GetHostedZone<wbr>(string, <wbr>Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Retrieve the hosted zone for a specific domain.
@@ -289,8 +289,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/9408AF46">GetHostedZones<wbr>(Route53Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/3F92EF7A">GetHostedZones<wbr>(Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Retrieve a list of your hosted zones.
@@ -298,8 +298,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/6BD41DB4">Get<wbr>Resource<wbr>Record<wbr>Sets<wbr>(string, <wbr>Route53Settings)<wbr></a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.AWS.Route53/IRoute53Manager/93815599">Get<wbr>Resource<wbr>Record<wbr>Sets<wbr>(string, <wbr>Route53Settings, <wbr>CancellationToken)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             To retrieve a list of record sets for a particular hosted zone.
@@ -346,17 +346,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Route53<wbr>Manager&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Route53<wbr>Manager&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -365,6 +354,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Route53<wbr>Manager&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

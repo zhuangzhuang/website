@@ -197,10 +197,12 @@
     <li><a href="/dsl/gitter">Gitter</a></li>        
     <li><a href="/dsl/globbing">Globbing</a></li>        
     <li><a href="/dsl/guard">Guard</a></li>        
+    <li><a href="/dsl/hg">Hg</a></li>        
     <li><a href="/dsl/hipchat">HipChat</a></li>        
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
     <li><a href="/dsl/hosts">Hosts</a></li>        
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
+    <li><a href="/dsl/iso">ISO</a></li>        
     <li><a href="/dsl/issues">Issues</a></li>        
     <li><a href="/dsl/jmeter">JMeter</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
@@ -215,6 +217,7 @@
     <li><a href="/dsl/nuget">NuGet</a></li>        
     <li><a href="/dsl/octodeploy">OctoDeploy</a></li>        
     <li><a href="/dsl/octovariableimport">OctoVariableImport</a></li>        
+    <li><a href="/dsl/openshift">Openshift</a></li>        
     <li><a href="/dsl/orchard">Orchard</a></li>        
     <li><a href="/dsl/paket">Paket</a></li>        
     <li><a href="/dsl/path">Path</a></li>        
@@ -275,21 +278,16 @@
 	<h1>Signing</h1>
 </section>
 <section class="content">
-            <div class="alert alert-info" role="alert">
-            <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
-
-                        For more information about this project, please visit 
-                        <a href="https://github.com/MihaMarkic/Cake.VsixSignTool" class="alert-link">https://github.com/MihaMarkic/Cake.VsixSignTool</a>.
-                            </div>
-
+    
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </div>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </div>
 
 
         <h1 id="General">General</h1>  

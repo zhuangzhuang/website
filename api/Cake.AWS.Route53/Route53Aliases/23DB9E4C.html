@@ -206,7 +206,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static IList&lt;ResourceRecordSet&gt; GetResourceRecordSets(this ICakeContext context, string hostedZoneId, Route53Settings settings)</code></pre>
+	<pre><code>public static Task&lt;IList&lt;ResourceRecordSet&gt;&gt; GetResourceRecordSets(this ICakeContext context, string hostedZoneId, Route53Settings settings)</code></pre>
 
 
 
@@ -221,6 +221,10 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>Async<wbr>State<wbr>Machine<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
 						<td></td>
 					</tr>
@@ -274,7 +278,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IList<wbr>&lt;T&gt;<wbr></td>
+					<td>Task<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
