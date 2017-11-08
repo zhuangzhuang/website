@@ -201,8 +201,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Openshift.Login/OpenshiftLoginSettings">Openshift<wbr>Login<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -214,10 +214,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["OpenshiftSettings"]
 class Type type-node
-	Type--&gt;Derived0["OpenshiftBuildStarterSettings"]
-	click Derived0 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings"
-	Type--&gt;Derived1["OpenshiftLoginSettings"]
-	click Derived1 "/api/Cake.Openshift.Login/OpenshiftLoginSettings"
+	Type--&gt;Derived0["OpenshiftLoginSettings"]
+	click Derived0 "/api/Cake.Openshift.Login/OpenshiftLoginSettings"
+	Type--&gt;Derived1["OpenshiftBuildStarterSettings"]
+	click Derived1 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings"
 
 						</div>
 					</div>

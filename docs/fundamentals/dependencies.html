@@ -82,6 +82,7 @@
         <div><p><a href="https://github.com/cake-build/website/blob/develop/input/docs/fundamentals/dependencies.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"><h6>On This Page</h6><p><a href="#task-dependencies">Task dependencies</a></p>
 <p><a href="#reverse-task-dependencies">Reverse task dependencies</a></p>
+<p><a href="#multiple-dependencies-is-also-possible">Multiple dependencies is also possible.</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -227,6 +228,27 @@ Task("B")
 
 RunTarget("B");
 </code></pre>
+<h1 id="multiple-dependencies-is-also-possible">Multiple dependencies is also possible.</h1>
+<pre><code class="language-csharp">Task("A")
+    .Does(() =&gt;
+{
+});
+
+Task("B")
+    .Does(() =&gt;
+{
+});
+
+Task("C")
+    .IsDependentOn("A")
+    .IsDependentOn("B")
+    .Does(() =&gt;
+{
+});
+
+RunTarget("C");
+</code></pre>
+<p>Running target <code>C</code> will execute <code>A</code> and then <code>B</code>.</p>
 
 	</section>
                 

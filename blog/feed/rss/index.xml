@@ -5,8 +5,58 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2017</copyright>
-		<pubDate>Mon, 06 Nov 2017 22:17:48 GMT</pubDate>
-		<lastBuildDate>Mon, 06 Nov 2017 22:17:48 GMT</lastBuildDate>
+		<pubDate>Wed, 08 Nov 2017 13:30:12 GMT</pubDate>
+		<lastBuildDate>Wed, 08 Nov 2017 13:30:12 GMT</lastBuildDate>
+		<item>
+			<title>Intellisense in Visual Studio Code</title>
+			<link>https://cakebuild.net/blog/2017/11/intellisense-vscode</link>
+			<description>&lt;p&gt;As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the &lt;a href="http://www.omnisharp.net/"&gt;OmniSharp&lt;/a&gt; project have merged our pull requests (&lt;a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932"&gt;#932&lt;/a&gt; and &lt;a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681"&gt;#1681&lt;/a&gt;) and released v1.13.0 of the &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp"&gt;C# extension for Visual Studio Code&lt;/a&gt;, which includes support for Cake.  In addition to this, we have released a new tool, called &lt;a href="https://github.com/cake-build/bakery"&gt;bakery&lt;/a&gt;, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.&lt;/p&gt;</description>
+			<author>mholo65</author>
+			<guid>https://cakebuild.net/blog/2017/11/intellisense-vscode</guid>
+			<pubDate>Wed, 08 Nov 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;h2 id="intellisense"&gt;Intellisense&lt;/h2&gt;
+&lt;p&gt;As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the &lt;a href="http://www.omnisharp.net/"&gt;OmniSharp&lt;/a&gt; project have merged our pull requests (&lt;a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932"&gt;#932&lt;/a&gt; and &lt;a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681"&gt;#1681&lt;/a&gt;) and released v1.13.0 of the &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp"&gt;C# extension for Visual Studio Code&lt;/a&gt;, which includes support for Cake.  In addition to this, we have released a new tool, called &lt;a href="https://github.com/cake-build/bakery"&gt;bakery&lt;/a&gt;, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.&lt;/p&gt;
+&lt;h2 id="how"&gt;How&lt;/h2&gt;
+&lt;p&gt;How do you get this working then? Well, just follow the following steps (we assume that you already have Visual Studio Code installed):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Visual Studio Code to the folder that you have a Cake file in.&lt;/li&gt;
+&lt;li&gt;Make sure v1.13.0 of the &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp"&gt;C# for Visual Studio Code&lt;/a&gt; extension is installed in Visual Studio Code.&lt;/li&gt;
+&lt;li&gt;Make sure v0.10.1 of the &lt;a href="https://marketplace.visualstudio.com/items?itemName=cake-build.cake-vscode"&gt;Visual Studio Code Extension for Cake&lt;/a&gt; is installed in Visual Studio Code.&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;a href="https://www.nuget.org/packages/Cake/"&gt;Cake&lt;/a&gt; is installed in your &lt;code&gt;tools&lt;/code&gt; folder. We recommend v0.22.0 or later, otherwise your addins will be installed twice.  The easiest way to do this would be to run your &lt;code&gt;.\build.ps1&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;a href="https://www.nuget.org/packages/Cake.Bakery/"&gt;Bakery&lt;/a&gt; is installed in your &lt;code&gt;tools&lt;/code&gt; folder.  The easiest way to do this would be using the &lt;code&gt;Install intellisense support&lt;/code&gt; command which ships with the Visual Studio Code Extension for Cake.  Simply open the command palette, type &lt;code&gt;cake&lt;/code&gt; and then select the option.&lt;/li&gt;
+&lt;li&gt;At this point, you will need to close and re-open the folder within Visual Studio Code.&lt;/li&gt;
+&lt;li&gt;Success!
+&lt;br/&gt;&lt;img src="/assets/img/intellisense-vscode/intellisense-vscode.png" class="img-fluid" alt="Intellisense" /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="troubleshooting"&gt;Troubleshooting&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: I've followed the steps, but I don't get any intellisense.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The C# Extension for Visual Studio Code will automatically locate any &lt;code&gt;*.sln&lt;/code&gt; file and use that as the target directory when starting &lt;code&gt;omnisharp&lt;/code&gt;. If your &lt;code&gt;*.cake&lt;/code&gt; files are located in a different location, you might need to select &lt;code&gt;Cake&lt;/code&gt; project in the &lt;a href="https://code.visualstudio.com/docs/languages/csharp#_roslyn-and-omnisharp"&gt;project selector&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: I've selected the &lt;code&gt;Cake&lt;/code&gt; project, but still don't get intellisense.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Look in the &lt;code&gt;OmniSharp Log&lt;/code&gt; for errors or warnings.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[warn]: OmniSharp.Cake.CakeProjectSystem
+    Cake script service not connected. Aborting.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above is an indication that &lt;code&gt;Cake.Bakery&lt;/code&gt; isn't installed in your &lt;code&gt;tools&lt;/code&gt; folder, while the below usually means that &lt;code&gt;Cake&lt;/code&gt; isn't installed in your &lt;code&gt;tools&lt;/code&gt; folder. (Yes, we are working on better error messages :))&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[fail]: OmniSharp.Cake.CakeProjectSystem
+    c:\Users\mb\src\gh\bakery\setup.cake will be ignored due to an following error
+    System.TypeLoadException: A null or zero length string does not represent a valid Type.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Q: I don't see any error message and still don't get intellisense.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Look in the &lt;code&gt;OmniSharp Log&lt;/code&gt; do you see anything even related to &lt;code&gt;Cake&lt;/code&gt; if everything is setup correctly, you should at least see something similar to this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[info]: OmniSharp.Cake.CakeProjectSystem
+    Detecting Cake files in 'c:\Users\mb\src\gh\bakery'.
+[info]: OmniSharp.Cake.CakeProjectSystem
+    Found 29 Cake files.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you don't. You probably have issues with getting v1.13.0 of the C# extension for Visual Studio Code installed. Please uninstall the extension and then try installing it again. Look for &lt;code&gt;OmniSharp.Cake.dll&lt;/code&gt; in &lt;code&gt;%userprofile%\.vscode\extensions\ms-vscode.csharp-1.13.0\.omnisharp\&lt;/code&gt; if you're on Windows and &lt;code&gt;~/.vscode/extensions/ms-vscode.csharp-1.13.0/.omnisharp/&lt;/code&gt; if you are running Linux or Mac OS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Ok, I get intellisense. But files I've added after opening Visual Studio Code won't light up.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is a known issue in &lt;code&gt;omnisharp&lt;/code&gt; also when it comes to &lt;code&gt;*.csx&lt;/code&gt; files. We are working with the &lt;code&gt;omnisharp&lt;/code&gt; team on getting this fixed in a later release.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: I have &lt;code&gt;Cake.CoreCLR&lt;/code&gt; installed in my tools folder, isn't that enough?.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;No, at the moment &lt;code&gt;Cake.CoreCLR&lt;/code&gt; wont work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: I tried everything above, I still don't get intellisense.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Submit an issue in the &lt;a href="https://github.com/cake-build/bakery"&gt;bakery&lt;/a&gt; repository on Github or reach out to us on &lt;a href="https://gitter.im/cake-build/cake"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>Cake v0.23.0 released</title>
 			<link>https://cakebuild.net/blog/2017/10/cake-v0.23.0-released</link>
@@ -1086,143 +1136,6 @@ We do recommend you pin your builds to the version of Cake you using, that way y
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1372"&gt;&lt;strong&gt;#1372&lt;/strong&gt;&lt;/a&gt; Fixed Spelling Mistake.&lt;/li&gt;
 &lt;/ul&gt;
 </content:encoded>
-		</item>
-		<item>
-			<title>Cake.Paket - An Addin and Module to Add Support for Paket in Cake</title>
-			<link>https://cakebuild.net/blog/2017/01/cake-paket</link>
-			<description>&lt;p&gt;Most .NET developers are comfortable using &lt;a href="https://www.nuget.org/"&gt;NuGet&lt;/a&gt; to manage their dependencies. This is probably why Cake has such great support for it. Unfortunately, &lt;a href="https://fsprojects.github.io/Paket/"&gt;Paket&lt;/a&gt; which is a popular alternative has very little support. Luckily, with the help of &lt;a href="https://github.com/larzw/Cake.Paket"&gt;Cake.Paket&lt;/a&gt; you can make Paket a first class citizen in your Cake scripts!&lt;/p&gt;</description>
-			<author>Larz White</author>
-			<guid>https://cakebuild.net/blog/2017/01/cake-paket</guid>
-			<pubDate>Wed, 25 Jan 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Most .NET developers are comfortable using &lt;a href="https://www.nuget.org/"&gt;NuGet&lt;/a&gt; to manage their dependencies. This is probably why Cake has such great support for it. Unfortunately, &lt;a href="https://fsprojects.github.io/Paket/"&gt;Paket&lt;/a&gt; which is a popular alternative has very little support. Luckily, with the help of &lt;a href="https://github.com/larzw/Cake.Paket"&gt;Cake.Paket&lt;/a&gt; you can make Paket a first class citizen in your Cake scripts!&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;h3 id="paket"&gt;Paket&lt;/h3&gt;
-&lt;blockquote class="blockquote"&gt;
-&lt;p&gt;Paket is a dependency manager for .NET and mono projects, which is designed to work well with NuGet packages and also enables referencing files directly from Git repositories or any HTTP resource. It enables precise and predictable control over what packages the projects within your application reference. ~ Paket Website&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Although this is not a tutorial on Paket, a brief discussion is necessary.&lt;/p&gt;
-&lt;p&gt;Dependencies such as NuGet packages are handled external to Visual Studio by specifying them in the &lt;em&gt;paket.dependencies&lt;/em&gt; file. This is analogous to the &lt;em&gt;packages.config&lt;/em&gt; file which is updated when you install NuGet packages inside Visual Studio. For example, to install &lt;em&gt;xUnit&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# paket.dependencies
-
-source https://nuget.org/api/v2
-nuget xunit # Required in order to run the unit tests.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and then run &lt;code&gt;paket.exe install&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;For the above example we used &lt;em&gt;paket.exe&lt;/em&gt; which is analogous to &lt;em&gt;nuget.exe&lt;/em&gt;. In fact, a lot of the Paket commands are similar to NuGet commands: &lt;code&gt;paket.exe restore&lt;/code&gt;, &lt;code&gt;paket.exe pack&lt;/code&gt;, and &lt;code&gt;paket.exe push&lt;/code&gt;. For a complete list of Paket commands see Paket's website.&lt;/p&gt;
-&lt;h3 id="cake.paket-cake-addin"&gt;Cake.Paket: Cake Addin&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.nuget.org/packages/Cake.Paket/"&gt;Cake.Paket&lt;/a&gt; is an addin that provides support for Paket commands such as &lt;em&gt;restore&lt;/em&gt;, &lt;em&gt;pack&lt;/em&gt;, and &lt;em&gt;push&lt;/em&gt;. For example,&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;// Required in order to run the unit tests.
-#tool nuget:?package=xunit.runner.console
-
-// Required in order to use the addin Cake.Paket because it downloads paket.exe.
-#tool nuget:?package=Paket
-
-// Required in order to use PaketRestore, PaketPack, and PaketPush.
-#addin nuget:?package=Cake.Paket
-
-// Restores xUnit dependency specified in the paket.dependencies file.
-Task("Paket-Restore")
-    .Does(() =&amp;gt;
-{
-    PaketRestore();
-});
-
-Task("Build")
-    .IsDependentOn("Paket-Restore")
-    .Does(() =&amp;gt;
-{
-    MSBuild("./src/Cake.sln");
-});
-
-Task("Run-Unit-Tests")
-    .IsDependentOn("Build")
-    .Does(() =&amp;gt;
-{
-    XUnit2("./src/**/bin/Release/*.Tests.dll");
-});
-
-// Creates a NuGet package.
-Task("Paket-Pack")
-    .IsDependentOn("Build")
-    .Does(() =&amp;gt;
-{
-    PaketPack("./NuGet");
-});
-
-// Pushes the package to a NuGet feed.
-Task("Paket-Push")
-    .IsDependentOn("Paket-Pack")
-    .Does(() =&amp;gt;
-{
-    PaketPush("./NuGet/foo.nupkg", new &lt;a href="/api/Cake.Paket.Addin.Push/PaketPushSettings"&gt;PaketPushSettings&lt;/a&gt; { ApiKey = "00000000-0000-0000-0000-000000000000" });
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;where the script can be run using the Cake teams bootstrapper scripts &lt;a href="https://github.com/cake-build/example/blob/master/build.ps1"&gt;build.ps1&lt;/a&gt; and &lt;a href="https://github.com/cake-build/example/blob/master/build.sh"&gt;build.sh&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="cake.paket.module-cake-module"&gt;Cake.Paket.Module: Cake Module&lt;/h3&gt;
-&lt;p&gt;The astute reader will notice we used NuGet to manage our dependencies in the previous Cake script because we used the preprocessor directives &lt;code&gt;#tool nuget:?package=foo&lt;/code&gt; and &lt;code&gt;#addin nuget:?package=bar&lt;/code&gt;. Wouldn't it be great if we could use Paket instead? That's where &lt;a href="https://www.nuget.org/packages/Cake.Paket.Module/"&gt;Cake.Paket.Module&lt;/a&gt; comes to the rescue! The Cake script above can be rewritten using the syntax &lt;code&gt;#tool paket:?package=foo&lt;/code&gt; and &lt;code&gt;#addin paket:?package=bar&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;// Required in order to run the unit tests.
-#tool paket:?package=xunit.runner.console
-
-// Required in order to use PaketPack and PaketPush.
-#addin paket:?package=Cake.Paket
-
-// Paket restore is handled by the bootstrapper.
-
-Task("Build")
-    .Does(() =&amp;gt;
-{
-    MSBuild("./src/Cake.sln");
-});
-
-Task("Run-Unit-Tests")
-    .IsDependentOn("Build")
-    .Does(() =&amp;gt;
-{
-    XUnit2("./src/**/bin/Release/*.Tests.dll");
-});
-
-// Creates a NuGet package.
-Task("Paket-Pack")
-    .IsDependentOn("Build")
-    .Does(() =&amp;gt;
-{
-    PaketPack("./NuGet");
-});
-
-// Pushes the package to a NuGet feed.
-Task("Paket-Push")
-    .IsDependentOn("Paket-Pack")
-    .Does(() =&amp;gt;
-{
-    PaketPush("./NuGet/foo.nupkg", new &lt;a href="/api/Cake.Paket.Addin.Push/PaketPushSettings"&gt;PaketPushSettings&lt;/a&gt; { ApiKey = "00000000-0000-0000-0000-000000000000" });
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;where the Cake script can be run using the &lt;strong&gt;modified bootstrapper scripts&lt;/strong&gt; &lt;a href="https://github.com/larzw/Cake.Paket/blob/master/build.ps1"&gt;build.ps1&lt;/a&gt; and/or &lt;a href="https://github.com/larzw/Cake.Paket/blob/master/build.sh"&gt;build.sh&lt;/a&gt; and the following &lt;em&gt;paket.dependencies&lt;/em&gt; file&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# paket.dependencies
-
-source https://nuget.org/api/v2
-nuget xunit # Required in order to run the unit tests.
-
-group tools
-    source https://nuget.org/api/v2
-    nuget Cake # Required in order to download Cake.exe.
-    nuget xunit.runner.console # Required in order to run the unit tests.
-
-group addins
-    source https://nuget.org/api/v2
-    nuget Cake.Paket # Required in order to use PaketPack and PaketPush.
-
-group modules
-    source https://nuget.org/api/v2
-    nuget Cake.Paket # Required in order to use paket in the preprocessor directives.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In the above &lt;em&gt;paket.dependencies&lt;/em&gt; file we used &lt;a href="https://fsprojects.github.io/Paket/groups.html"&gt;Dependency Groups&lt;/a&gt; to organize the file. It's important to note that you can organize the file however you want! For example, you don't need to use &lt;em&gt;tools&lt;/em&gt;, &lt;em&gt;addins&lt;/em&gt; and &lt;em&gt;modules&lt;/em&gt; for the default group names. You can set them to whatever you want. See the command line arguments in the &lt;strong&gt;modified bootstrapper scripts&lt;/strong&gt; &lt;a href="https://github.com/larzw/Cake.Paket/blob/master/build.ps1"&gt;build.ps1&lt;/a&gt; and/or &lt;a href="https://github.com/larzw/Cake.Paket/blob/master/build.sh"&gt;build.sh&lt;/a&gt; for more detail. Additionally, the dependencies don't have to be in the same group! If you need to specify a dependency in another group just include it in the URI &lt;code&gt;#tool paket:?package=foo&amp;amp;group=bar&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;A few side notes are in order. First, if you need to specify a package without a group (Paket calls it the &lt;em&gt;main&lt;/em&gt; group) use &lt;code&gt;#tool paket:?package=foo&amp;amp;group=main&lt;/code&gt;. Second, a version number in the URI is not allowed. This is because version's are handled in the &lt;em&gt;paket.dependencies&lt;/em&gt; file.&lt;/p&gt;
-&lt;h3 id="conclusion"&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;The Cake.Paket addin and module make Paket a first class citizen in your Cake scripts. The addin provides support for common Paket commands such as &lt;em&gt;restore&lt;/em&gt;, &lt;em&gt;pack&lt;/em&gt;, and &lt;em&gt;push&lt;/em&gt; while the module allows you to use Paket for the dependency management system in your Cake scripts. Checkout &lt;a href="https://github.com/larzw/Cake.Paket.Example"&gt;Cake.Paket.Example&lt;/a&gt; for a working example of how to use the addin and module as well as the &lt;a href="https://cakebuild.net/dsl/paket/"&gt;API&lt;/a&gt; documentation on Cake's website.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;My name is Larz White. My educational background is in computational nuclear physics. This is how I developed a passion for computing. For the past few years I've been working in industry as a C# developer. You can find me on &lt;a href="https://github.com/larzw"&gt;GitHub&lt;/a&gt; as larzw.&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</content:encoded>
 		</item>
 	</channel>
 </rss>

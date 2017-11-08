@@ -99,6 +99,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/11">November, 2017</a></li>
         <li><a href="/blog/archive/2017/10">October, 2017</a></li>
         <li><a href="/blog/archive/2017/09">September, 2017</a></li>
         <li><a href="/blog/archive/2017/08">August, 2017</a></li>
@@ -155,6 +156,59 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/11/intellisense-vscode">Intellisense in Visual Studio Code</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, November 8, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Announcement">Announcement</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>            <div>
+                <h2 id="intellisense">Intellisense</h2>
+<p>As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the <a href="http://www.omnisharp.net/">OmniSharp</a> project have merged our pull requests (<a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932">#932</a> and <a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681">#1681</a>) and released v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension for Visual Studio Code</a>, which includes support for Cake.  In addition to this, we have released a new tool, called <a href="https://github.com/cake-build/bakery">bakery</a>, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.</p>
+<h2 id="how">How</h2>
+<p>How do you get this working then? Well, just follow the following steps (we assume that you already have Visual Studio Code installed):</p>
+<ol>
+<li>Open Visual Studio Code to the folder that you have a Cake file in.</li>
+<li>Make sure v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> extension is installed in Visual Studio Code.</li>
+<li>Make sure v0.10.1 of the <a href="https://marketplace.visualstudio.com/items?itemName=cake-build.cake-vscode">Visual Studio Code Extension for Cake</a> is installed in Visual Studio Code.</li>
+<li>Make sure that <a href="https://www.nuget.org/packages/Cake/">Cake</a> is installed in your <code>tools</code> folder. We recommend v0.22.0 or later, otherwise your addins will be installed twice.  The easiest way to do this would be to run your <code>.\build.ps1</code> file.</li>
+<li>Make sure that <a href="https://www.nuget.org/packages/Cake.Bakery/">Bakery</a> is installed in your <code>tools</code> folder.  The easiest way to do this would be using the <code>Install intellisense support</code> command which ships with the Visual Studio Code Extension for Cake.  Simply open the command palette, type <code>cake</code> and then select the option.</li>
+<li>At this point, you will need to close and re-open the folder within Visual Studio Code.</li>
+<li>Success!
+<br/><img src="/assets/img/intellisense-vscode/intellisense-vscode.png" class="img-fluid" alt="Intellisense" /></li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Q: I've followed the steps, but I don't get any intellisense.</strong></p>
+<p>The C# Extension for Visual Studio Code will automatically locate any <code>*.sln</code> file and use that as the target directory when starting <code>omnisharp</code>. If your <code>*.cake</code> files are located in a different location, you might need to select <code>Cake</code> project in the <a href="https://code.visualstudio.com/docs/languages/csharp#_roslyn-and-omnisharp">project selector</a>.</p>
+<p><strong>Q: I've selected the <code>Cake</code> project, but still don't get intellisense.</strong></p>
+<p>Look in the <code>OmniSharp Log</code> for errors or warnings.</p>
+<pre><code>[warn]: OmniSharp.Cake.CakeProjectSystem
+    Cake script service not connected. Aborting.
+</code></pre>
+<p>The above is an indication that <code>Cake.Bakery</code> isn't installed in your <code>tools</code> folder, while the below usually means that <code>Cake</code> isn't installed in your <code>tools</code> folder. (Yes, we are working on better error messages :))</p>
+<pre><code>[fail]: OmniSharp.Cake.CakeProjectSystem
+    c:\Users\mb\src\gh\bakery\setup.cake will be ignored due to an following error
+    System.TypeLoadException: A null or zero length string does not represent a valid Type.
+</code></pre>
+<p><strong>Q: I don't see any error message and still don't get intellisense.</strong></p>
+<p>Look in the <code>OmniSharp Log</code> do you see anything even related to <code>Cake</code> if everything is setup correctly, you should at least see something similar to this:</p>
+<pre><code>[info]: OmniSharp.Cake.CakeProjectSystem
+    Detecting Cake files in 'c:\Users\mb\src\gh\bakery'.
+[info]: OmniSharp.Cake.CakeProjectSystem
+    Found 29 Cake files.
+</code></pre>
+<p>If you don't. You probably have issues with getting v1.13.0 of the C# extension for Visual Studio Code installed. Please uninstall the extension and then try installing it again. Look for <code>OmniSharp.Cake.dll</code> in <code>%userprofile%\.vscode\extensions\ms-vscode.csharp-1.13.0\.omnisharp\</code> if you're on Windows and <code>~/.vscode/extensions/ms-vscode.csharp-1.13.0/.omnisharp/</code> if you are running Linux or Mac OS.</p>
+<p><strong>Q: Ok, I get intellisense. But files I've added after opening Visual Studio Code won't light up.</strong></p>
+<p>This is a known issue in <code>omnisharp</code> also when it comes to <code>*.csx</code> files. We are working with the <code>omnisharp</code> team on getting this fixed in a later release.</p>
+<p><strong>Q: I have <code>Cake.CoreCLR</code> installed in my tools folder, isn't that enough?.</strong></p>
+<p>No, at the moment <code>Cake.CoreCLR</code> wont work.</p>
+<p><strong>Q: I tried everything above, I still don't get intellisense.</strong></p>
+<p>Submit an issue in the <a href="https://github.com/cake-build/bakery">bakery</a> repository on Github or reach out to us on <a href="https://gitter.im/cake-build/cake">Gitter</a>.</p>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2017/10/cake-v0.23.0-released">Cake v0.23.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -164,105 +218,27 @@
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
 </dl>            <div>
-                <html><head></head><body><p>Version 0.23.0 has been released!</p>
+                <p>Version 0.23.0 has been released!</p>
 <p>This release contains three new features specially worth highlighting and a lot of bugfixes and improvements.</p>
-<h1 id="asynchronous-tasks">Asynchronous Tasks</h1>
+
 <p>Cake now supports asynchronous tasks. This will let you use the <code>async</code> and <code>await</code> C# features within a task.</p>
 <p>Tasks will still execute single threaded and in order as before, but this really simplifies asynchronous programming and utilizing asynchronous APIs within your Cake scripts.</p>
-<pre><code class="language-csharp">Task("Copy-To-Memory-Async")
-    .Does(async () =&gt; {
-    <a href="/api/Cake.Core.IO/IFile">IFile</a> file = Context.FileSystem.GetFile("./test.txt");
-    using(Stream
-            inputStream = testFile.OpenRead(),
-            outputStream = new MemoryStream())
-    {
-        await inputStream.CopyToAsync(outputStream);
-        await outputStream.FlushAsync();
-        Information("Copied {0} bytes into memory.",
-            outputStream.Length
-            );
-    }
-});
-</code></pre>
-<h1 id="reverse-task-dependencies">Reverse task dependencies</h1>
+
+
 <p>Ever wished you could define your task as a dependency of another task - i.e. a reversed dependency relationship? The good news is that you now can.</p>
-<pre><code class="language-csharp">Task("A").IsDependeeOf("B");
-Task("B");
 
-RunTarget("B");
-</code></pre>
 <p>Since task <code>A</code> is configured to be a dependee of <code>B</code> the task definition will be identical to the following:</p>
-<pre><code class="language-csharp">Task("A");
-Task("B").IsDependentOn("A");
 
-RunTarget("B");
-</code></pre>
-<h1 id="optional-or-required-task-dependencies">Optional or required task dependencies</h1>
+
 <p>You can now explicitly specify whether or not a dependency (or dependee) is optional or required.
 This is useful if you want to create "extension points" in your build script.</p>
-<pre><code class="language-csharp">Task("Bar").IsDependencyOf("Foo", required: true);
-Task("Baz").IsDependencyOf("Qux", required: false)
-</code></pre>
+
 <p>In the above example, <code>Bar</code> is dependent on <code>Foo</code> while <code>Baz</code> is dependent on <code>Qux</code>.
 The difference between the two dependencies above is that Cake will throw an exception if no task called <code>Foo</code> was found.</p>
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/devlead">devlead</a></li>
-<li><a href="https://github.com/dracan">dracan</a></li>
-<li><a href="https://github.com/ErikSchierboom">ErikSchierboom</a></li>
-<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
-<li><a href="https://github.com/adamhathcock">adamhathcock</a></li>
-<li><a href="https://github.com/mholo65">mholo65</a></li>
-<li><a href="https://github.com/jpreese">jpreese</a></li>
-<li><a href="https://github.com/Redth">Redth</a></li>
-<li><a href="https://github.com/joaoasrosa">joaoasrosa</a></li>
-<li>Giovanni Van Geel</li>
-<li><a href="https://github.com/gep13">gep13</a></li>
-<li><a href="https://github.com/kcamp">kcamp</a></li>
-<li><a href="https://github.com/phillipsj">phillipsj</a></li>
-</ul>
+
 <p>Full details of everything that was included in these releases can be seen below.</p>
-<!--excerpt-->
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=34&amp;state=closed">29 issues</a> closed.</p>
-<p><strong>Breaking change</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1805"><strong>#1805</strong></a> Change GitVersion settings to use nullable integer</li>
-</ul>
-<p><strong>Features</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1856"><strong>#1856</strong></a> Support MSBuild warnaserror and warnasmessage arguments</li>
-<li><a href="https://github.com/cake-build/cake/issues/1821"><strong>#1821</strong></a> Missing Cake method for nuget list</li>
-<li><a href="https://github.com/cake-build/cake/issues/1818"><strong>#1818</strong></a> Support task dependees (reverse dependencies)</li>
-<li><a href="https://github.com/cake-build/cake/issues/1766"><strong>#1766</strong></a> Support for #define</li>
-<li><a href="https://github.com/cake-build/cake/issues/1032"><strong>#1032</strong></a> Support async callbacks</li>
-</ul>
-<p><strong>Bugs</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1853"><strong>#1853</strong></a> using static Directive doesn't compile</li>
-<li><a href="https://github.com/cake-build/cake/issues/1843"><strong>#1843</strong></a> NuGetContentResolver should not return ref assemblies.</li>
-<li><a href="https://github.com/cake-build/cake/issues/1842"><strong>#1842</strong></a> Params in URI pre-processor directives are case sensitive</li>
-<li><a href="https://github.com/cake-build/cake/issues/1838"><strong>#1838</strong></a> Dependencies are installed but have no references added when using <code>LoadDependencies=true</code> with in process nuget client</li>
-<li><a href="https://github.com/cake-build/cake/issues/1831"><strong>#1831</strong></a> CleanDirectories Throws NullReferenceException When Token Is Null</li>
-<li><a href="https://github.com/cake-build/cake/issues/1815"><strong>#1815</strong></a> Exception Message should be shown rather than "One or more errors occurred."</li>
-<li><a href="https://github.com/cake-build/cake/issues/1404"><strong>#1404</strong></a> MsBuildSettings.WithProperty does not escape values</li>
-</ul>
-<p><strong>Improvements</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1840"><strong>#1840</strong></a> Fix Chocolatey Package</li>
-<li><a href="https://github.com/cake-build/cake/issues/1804"><strong>#1804</strong></a> Unable to execute when namespace-less assembly with CakeMethodAlias is referenced</li>
-<li><a href="https://github.com/cake-build/cake/issues/1731"><strong>#1731</strong></a> GitLabCI variable changes.</li>
-<li><a href="https://github.com/cake-build/cake/issues/1632"><strong>#1632</strong></a> Tasks with long names do not display nicely with showdescription</li>
-<li><a href="https://github.com/cake-build/cake/issues/1607"><strong>#1607</strong></a> ToolResolutionStrategy fails unexpectedly with Cake.LongPath.Module</li>
-<li><a href="https://github.com/cake-build/cake/issues/1548"><strong>#1548</strong></a> LogExtension colorizes output incorrectly</li>
-<li><a href="https://github.com/cake-build/cake/issues/1547"><strong>#1547</strong></a> Escaping curly braces in log messages</li>
-<li><a href="https://github.com/cake-build/cake/issues/787"><strong>#787</strong></a> Reference NuGet dependencies installed via the #addin directive</li>
-</ul>
-<p><strong>Documentation</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/pull/1835"><strong>#1835</strong></a> Fixed typo in installer scripts</li>
-<li><a href="https://github.com/cake-build/cake/pull/1814"><strong>#1814</strong></a> Fix typo: envrionment</li>
-</ul>
-</body></html>
+                <a href="/blog/2017/10/cake-v0.23.0-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/09/cake-v0.22.1-and-v0.22.2-released">Cake v0.22.1 and v0.22.2 released</a></h2>
@@ -326,19 +302,6 @@ The difference between the two dependencies above is that Cake will throw an exc
 </dl>            <div>
                 <p>As some of you may have noticed, the <a href="https://www.cakebuild.net/">Cake Website</a> has changed to use an SSL Certificate.  This is something that has been <a href="https://github.com/cake-build/website/issues/40">on our cards for a while</a>, it is just something that we never got around to.</p>
                 <a href="/blog/2017/08/http-to-https">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/07/debug-cake-addin">How to debug a Cake addin</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Monday, July 31, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/How-Tos">How To&#x27;s</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/RLittlesII">RLittlesII</a></dd>
-</dl>            <div>
-                <p>It's no secret, I like Cake.  When I have to write a script to build my source code, I use Cake.  On my most recent expedition writing a Cake script to publish a UWP application, I noticed Hockey App publish failed, <a href="https://github.com/cake-contrib/Cake.HockeyApp">Cake.HockeyApp</a> was throwing an exception.</p>
-                <a href="/blog/2017/07/debug-cake-addin">Read more...</a>
             </div>
         <hr />
     <nav>
