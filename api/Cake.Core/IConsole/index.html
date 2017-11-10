@@ -179,9 +179,6 @@
 				<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -196,6 +193,9 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -234,8 +234,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>								
 											<li><a href="/api/Cake.Testing/FakeConsole">FakeConsole</a></li>								
+											<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -245,10 +245,10 @@
 							graph TD
 	Type["IConsole"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeConsole"]
-	click Implementing0 "/api/Cake.Core/CakeConsole"
-	Type-.-&gt;Implementing1["FakeConsole"]
-	click Implementing1 "/api/Cake.Testing/FakeConsole"
+	Type-.-&gt;Implementing0["FakeConsole"]
+	click Implementing0 "/api/Cake.Testing/FakeConsole"
+	Type-.-&gt;Implementing1["CakeConsole"]
+	click Implementing1 "/api/Cake.Core/CakeConsole"
 
 						</div>
 					</div>
