@@ -159,9 +159,6 @@
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -173,6 +170,9 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -211,10 +211,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -224,14 +224,14 @@
 							graph TD
 	Type["IProcessArgument"]
 class Type type-node
-	Type-.-&gt;Implementing0["TextArgument"]
-	click Implementing0 "/api/Cake.Core.IO.Arguments/TextArgument"
-	Type-.-&gt;Implementing1["SwitchArgument"]
-	click Implementing1 "/api/Cake.Core.IO.Arguments/SwitchArgument"
-	Type-.-&gt;Implementing2["SecretArgument"]
-	click Implementing2 "/api/Cake.Core.IO.Arguments/SecretArgument"
-	Type-.-&gt;Implementing3["QuotedArgument"]
-	click Implementing3 "/api/Cake.Core.IO.Arguments/QuotedArgument"
+	Type-.-&gt;Implementing0["SecretArgument"]
+	click Implementing0 "/api/Cake.Core.IO.Arguments/SecretArgument"
+	Type-.-&gt;Implementing1["QuotedArgument"]
+	click Implementing1 "/api/Cake.Core.IO.Arguments/QuotedArgument"
+	Type-.-&gt;Implementing2["SwitchArgument"]
+	click Implementing2 "/api/Cake.Core.IO.Arguments/SwitchArgument"
+	Type-.-&gt;Implementing3["TextArgument"]
+	click Implementing3 "/api/Cake.Core.IO.Arguments/TextArgument"
 
 						</div>
 					</div>
