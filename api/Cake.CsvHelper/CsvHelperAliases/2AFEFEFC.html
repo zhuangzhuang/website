@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - CsvHelpers.ReadRecords&lt;T&gt;(FilePath, CsvClassMap, CsvHelperSettings) Method</title>
+        <title>Cake - API - CsvHelperAliases.WriteCsv&lt;T&gt;(ICakeContext, FilePath, List&lt;T&gt;, ClassMap, CsvHelperSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,6 +81,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -146,15 +148,17 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.CsvHelper">Cake<wbr>.CsvHelper</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.CsvHelper/CsvHelpers">CsvHelpers</a></li>
+		<li><a href="/api/Cake.CsvHelper/CsvHelperAliases">CsvHelperAliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.CsvHelper/CsvHelpers/EEBDABA2">CsvHelpers<wbr>(IFileSystem, <wbr>ICakeEnvironment)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.CsvHelper/CsvHelpers/4EA27DC4">ReadRecords<wbr>&lt;T&gt;<wbr><wbr>(FilePath, <wbr>CsvClassMap, <wbr>CsvHelperSettings)<wbr></a></li>
-				<li><a href="/api/Cake.CsvHelper/CsvHelpers/5856D526">WriteRecords<wbr>&lt;T&gt;<wbr><wbr>(FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>CsvClassMap, <wbr>CsvHelperSettings)<wbr></a></li>
-				<li><a href="/api/Cake.CsvHelper/CsvHelpers/6754118F">WriteRecords<wbr>&lt;T&gt;<wbr><wbr>(FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr>, <wbr>CsvHelperSettings)<wbr></a></li>
-				<li><a href="/api/Cake.CsvHelper/CsvHelpers/AA3F7203">WriteRecords<wbr>&lt;T&gt;<wbr><wbr>(FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>CsvHelperSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/CF28BD57">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/EAC0E577">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>CsvHelperSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/D03952A2">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>ClassMap)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/76632C92">ReadCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>ClassMap, <wbr>CsvHelperSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/3734CE22">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/0B4E1C3D">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>CsvHelperSettings)<wbr></a></li>
+				<li><a href="/api/Cake.CsvHelper/CsvHelperAliases/2C2A5D9D">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr>, <wbr>CsvHelperSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.CsvHelper/CsvHelperAliases/2AFEFEFC">WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>ClassMap, <wbr>CsvHelperSettings)<wbr></a></li>
 
 
                     </ul>
@@ -168,8 +172,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.CsvHelper/CsvHelpers">CsvHelpers</a>.</h3>
-	<h1>ReadRecords<wbr>&lt;T&gt;<wbr><wbr>(FilePath, <wbr>CsvClassMap, <wbr>CsvHelperSettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.CsvHelper/CsvHelperAliases">CsvHelperAliases</a>.</h3>
+	<h1>WriteCsv<wbr>&lt;T&gt;<wbr><wbr>(ICakeContext, <wbr>FilePath, <wbr>List<wbr>&lt;T&gt;<wbr>, <wbr>ClassMap, <wbr>CsvHelperSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -182,7 +186,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Reads records from a CSV returning a list of the object type passed. Automapping is used if a Map is configured in settings.
+             Writes the records to the speficed file using the specified class mapp and settings.
             </div>
 
 		<div class="panel panel-default">
@@ -195,17 +199,54 @@
 						<dd><a href="/api/Cake.CsvHelper">Cake<wbr>.CsvHelper</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.CsvHelper/CsvHelpers">CsvHelpers</a></dd>		
+						<dd><a href="/api/Cake.CsvHelper/CsvHelperAliases">CsvHelperAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public IEnumerable&lt;T&gt; ReadRecords&lt;T&gt;(FilePath csvFile, CsvClassMap classMap, CsvHelperSettings settings)</code></pre>
+	<pre><code>public static void WriteCsv&lt;T&gt;(this ICakeContext context, FilePath csvFile, List&lt;T&gt; records, ClassMap classMap, CsvHelperSettings settings)</code></pre>
+
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">public sealed class PersonMap : CsvClassMap&lt;Person&gt;
+{
+    public PersonMap()
+    {
+        Map(m =&gt; m.Id);
+        Map(m =&gt; m.Name);
+    }
+}
+WriteCsv&lt;Person&gt;("./people.csv", new List&lt;Person&gt;(), PersonMap, new CsvHelperSettings { HasHeaderRecord = true });</code></pre>
+            </div>
 
 
-
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Namespace<wbr>Import<wbr>Attribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 	<h1 id="TypeParameters">Type Parameters</h1>
 	<div class="box">
@@ -219,7 +260,7 @@
 				</thead>
 					<tbody><tr id="typeparam-T">
 						<td>T</td>
-						<td>The record type.</td>
+						<td>The type.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -237,14 +278,24 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td>The context.</td>
+					</tr>
+					<tr>
 						<td>csvFile</td>
 						<td>FilePath</td>
-						<td>The CSV file to read.</td>
+						<td>The CSV to file to write.</td>
+					</tr>
+					<tr>
+						<td>records</td>
+						<td>List<wbr>&lt;T&gt;<wbr></td>
+						<td>The list objects you want to write to a csv.</td>
 					</tr>
 					<tr>
 						<td>classMap</td>
-						<td>CsvClassMap</td>
-						<td>The class map to use, null if not needed.</td>
+						<td>ClassMap</td>
+						<td>The CSV Helper Class Map.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
@@ -266,8 +317,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-					<td>List of defined type.</td>
+					<td>void</td>
+					<td>List objects as defined by type.</td>
 				</tr>
 			</tbody></table>
 		</div>
