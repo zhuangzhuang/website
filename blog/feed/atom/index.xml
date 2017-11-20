@@ -4,7 +4,7 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-11-20T20:50:40Z</updated>
+	<updated>2017-11-20T21:02:03Z</updated>
 	<entry>
 		<author>
 			<name>mholo65</name>
@@ -683,39 +683,6 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 	</entry>
 	<entry>
 		<author>
-			<name>devlead</name>
-		</author>
-		<link href="https://cakebuild.net/blog/2017/04/cake-v0.19.4-released" />
-		<id>https://cakebuild.net/blog/2017/04/cake-v0.19.4-released</id>
-		<title>Cake v0.19.4 released</title>
-		<updated>2017-04-19T00:00:00Z</updated>
-		<content>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/kcamp"&gt;kcamp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=38&amp;amp;state=closed"&gt;2 issues&lt;/a&gt; closed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Breaking change&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1556"&gt;&lt;strong&gt;#1556&lt;/strong&gt;&lt;/a&gt; TeamCity BuildNumber is a string&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1566"&gt;&lt;strong&gt;#1566&lt;/strong&gt;&lt;/a&gt; Generic alias methods with type constraints fail compilation&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
 			<name>agc93</name>
 		</author>
 		<link href="https://cakebuild.net/blog/2017/04/cake-0.3.0-vso-released" />
@@ -745,6 +712,39 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 		<summary>&lt;p&gt;Version 0.3.0 of Cake for Visual Studio Team Services and Team Foundation Server has been released.&lt;/p&gt;
 &lt;p&gt;This release includes support for customising the location where &lt;code&gt;NuGet.exe&lt;/code&gt;, as well as Cake and other tools, is retrieved from.&lt;/p&gt;
 &lt;p&gt;The updated extension will now be live for VSTS users while TFS users may need to update the extension using the &lt;em&gt;Manage Extensions&lt;/em&gt; page on your TFS server.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="https://cakebuild.net/blog/2017/04/cake-v0.19.4-released" />
+		<id>https://cakebuild.net/blog/2017/04/cake-v0.19.4-released</id>
+		<title>Cake v0.19.4 released</title>
+		<updated>2017-04-19T00:00:00Z</updated>
+		<content>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kcamp"&gt;kcamp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=38&amp;amp;state=closed"&gt;2 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking change&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1556"&gt;&lt;strong&gt;#1556&lt;/strong&gt;&lt;/a&gt; TeamCity BuildNumber is a string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1566"&gt;&lt;strong&gt;#1566&lt;/strong&gt;&lt;/a&gt; Generic alias methods with type constraints fail compilation&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
 &lt;p&gt;Contributions were included from:&lt;/p&gt;
 
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
