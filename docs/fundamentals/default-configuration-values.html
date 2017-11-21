@@ -202,6 +202,7 @@
 	</section>
 	<section class="content">
 		<p>The following shows all of the configuration options currently available within Cake, as well as their default values.</p>
+<p>Refer to <a href="/docs/fundamentals/configuration">Configuration</a> for instructions on using a config file.</p>
 <h1 id="nuget-download-url">NuGet Download Url</h1>
 <p>This allows the control of where Cake downloads NuGet packages from when using the addin and tool preprocessor directives.  This can be useful when it is necessary to work in an offline mode, where direct access to nuget.org is not available.</p>
 <h2 id="default-value">Default Value</h2>
@@ -210,7 +211,7 @@
 <h2 id="environment-variable-name">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_NUGET_SOURCE
 </code></pre>
-<h2 id="ini-file-contents">ini File Contents</h2>
+<h2 id="config-file-contents">Config File Contents</h2>
 <pre><code class="language-sh">[Nuget]
 Source=http://myfeed/nuget/
 </code></pre>
@@ -226,7 +227,7 @@ Source=http://myfeed/nuget/
 <h2 id="environment-variable-name-1">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_PATHS_TOOLS
 </code></pre>
-<h2 id="ini-file-contents-1">ini File Contents</h2>
+<h2 id="config-file-contents-1">Config File Contents</h2>
 <pre><code class="language-sh">[Paths]
 Tools=./tools
 </code></pre>
@@ -242,7 +243,7 @@ Tools=./tools
 <h2 id="environment-variable-name-2">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_PATHS_ADDINS
 </code></pre>
-<h2 id="ini-file-contents-2">ini File Contents</h2>
+<h2 id="config-file-contents-2">Config File Contents</h2>
 <pre><code class="language-sh">[Paths]
 Addins=./tools/Addins
 </code></pre>
@@ -258,7 +259,7 @@ Addins=./tools/Addins
 <h2 id="environment-variable-name-3">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_PATHS_MODULES
 </code></pre>
-<h2 id="ini-file-contents-3">ini File Contents</h2>
+<h2 id="config-file-contents-3">Config File Contents</h2>
 <pre><code class="language-sh">[Paths]
 Modules=./tools/Modules
 </code></pre>
@@ -281,7 +282,7 @@ false
 <h2 id="environment-variable-name-4">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_SETTINGS_SKIPVERIFICATION
 </code></pre>
-<h2 id="ini-file-contents-4">ini File Contents</h2>
+<h2 id="config-file-contents-4">Config File Contents</h2>
 <pre><code class="language-sh">[Settings]
 SkipVerification=true
 </code></pre>
@@ -302,7 +303,7 @@ false
 <h2 id="environment-variable-name-5">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_NUGET_USEINPROCESSCLIENT
 </code></pre>
-<h2 id="ini-file-contents-5">ini File Contents</h2>
+<h2 id="config-file-contents-5">Config File Contents</h2>
 <pre><code class="language-sh">[NuGet]
 UseInProcessClient=true
 </code></pre>
@@ -311,7 +312,7 @@ UseInProcessClient=true
 </code></pre>
 <hr>
 <h1 id="addin-nuget-dependencies">Addin NuGet dependencies</h1>
-<p>When using In-Process NuGet installation available since Cake <code>0.22.0</code>, you now got the option to opt-in to installing and referencing NuGet package dependencies.</p>
+<p>When using In-Process NuGet installation, available since Cake <code>0.22.0</code>, you can also opt in to automatically installing and referencing NuGet package dependencies.</p>
 <h2 id="default-value-6">Default Value</h2>
 <pre><code class="language-sh">false
 </code></pre>
@@ -323,7 +324,7 @@ false
 <h2 id="environment-variable-name-6">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_NUGET_LOADDEPENDENCIES
 </code></pre>
-<h2 id="ini-file-contents-6">ini File Contents</h2>
+<h2 id="config-file-contents-6">Config File Contents</h2>
 <pre><code class="language-sh">[NuGet]
 LoadDependencies=true
 </code></pre>
@@ -340,7 +341,7 @@ LoadDependencies=true
 <h2 id="environment-variable-name-7">Environment Variable Name</h2>
 <pre><code class="language-sh">CAKE_ROSLYN_NUGETSOURCE
 </code></pre>
-<h2 id="ini-file-contents-7">ini File Contents</h2>
+<h2 id="config-file-contents-7">Config File Contents</h2>
 <pre><code class="language-sh">[Roslyn]
 NuGetSource=https://mycustomurl
 </code></pre>
