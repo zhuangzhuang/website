@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - OctoVariableImportAlias.OctoImportVariables(ICakeContext, string, string, string, IEnumerable&lt;OctoVariable&gt;) Method</title>
+        <title>Cake - API - OctoVariableImportAlias.OctoImportVariables(ICakeContext, string, string, string, FilePath, bool) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -148,8 +148,8 @@
 		<li><a href="/api/Cake.OctoVariapus/OctoVariableImportAlias">Octo<wbr>Variable<wbr>Import<wbr>Alias</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.OctoVariapus/OctoVariableImportAlias/4D567E40">OctoImportVariables<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;OctoVariable&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.OctoVariapus/OctoVariableImportAlias/DA0CAF85">OctoImportVariables<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.OctoVariapus/OctoVariableImportAlias/57B2C6CF">OctoImportVariables<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;OctoVariable&gt;<wbr>, <wbr>bool)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.OctoVariapus/OctoVariableImportAlias/5CA76F17">OctoImportVariables<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>FilePath, <wbr>bool)<wbr></a></li>
 
 
                     </ul>
@@ -164,7 +164,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.OctoVariapus/OctoVariableImportAlias">Octo<wbr>Variable<wbr>Import<wbr>Alias</a>.</h3>
-	<h1>OctoImportVariables<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>IEnumerable<wbr>&lt;OctoVariable&gt;<wbr>)<wbr> <small>Method</small></h1>
+	<h1>OctoImportVariables<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>FilePath, <wbr>bool)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -193,7 +193,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void OctoImportVariables(this ICakeContext context, string octopusServerEndpoint, string octopusProjectName, string octopusApiKey, IEnumerable&lt;OctoVariable&gt; variables)</code></pre>
+	<pre><code>public static void OctoImportVariables(this ICakeContext context, string octopusServerEndpoint, string octopusProjectName, string octopusApiKey, FilePath jsonVariableFilePath, bool clearAllNonSensitiveExistingVariables = false)</code></pre>
 
 
 
@@ -248,8 +248,13 @@
 						<td></td>
 					</tr>
 					<tr>
-						<td>variables</td>
-						<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+						<td>jsonVariableFilePath</td>
+						<td>FilePath</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>clearAllNonSensitiveExistingVariables</td>
+						<td>bool</td>
 						<td></td>
 					</tr>
 			</tbody></table>
