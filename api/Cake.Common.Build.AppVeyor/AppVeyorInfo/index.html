@@ -198,13 +198,13 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo">App<wbr>Veyor<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo">AppVeyorProjectInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo">App<wbr>Veyor<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorCommitInfo">AppVeyorCommitInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorTagInfo">AppVeyorTagInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo">AppVeyorBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo">App<wbr>Veyor<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo">App<wbr>Veyor<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo">AppVeyorProjectInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorCommitInfo">AppVeyorCommitInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -216,20 +216,20 @@
 	Base0["object"]--&gt;Type
 	Type["AppVeyorInfo"]
 class Type type-node
-	Type--&gt;Derived0["AppVeyorEnvironmentInfo"]
-	click Derived0 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo"
-	Type--&gt;Derived1["AppVeyorProjectInfo"]
-	click Derived1 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo"
-	Type--&gt;Derived2["AppVeyorRepositoryInfo"]
-	click Derived2 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo"
-	Type--&gt;Derived3["AppVeyorCommitInfo"]
-	click Derived3 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorCommitInfo"
-	Type--&gt;Derived4["AppVeyorTagInfo"]
-	click Derived4 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorTagInfo"
-	Type--&gt;Derived5["AppVeyorPullRequestInfo"]
-	click Derived5 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo"
-	Type--&gt;Derived6["AppVeyorBuildInfo"]
-	click Derived6 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo"
+	Type--&gt;Derived0["AppVeyorTagInfo"]
+	click Derived0 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorTagInfo"
+	Type--&gt;Derived1["AppVeyorBuildInfo"]
+	click Derived1 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorBuildInfo"
+	Type--&gt;Derived2["AppVeyorEnvironmentInfo"]
+	click Derived2 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorEnvironmentInfo"
+	Type--&gt;Derived3["AppVeyorRepositoryInfo"]
+	click Derived3 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorRepositoryInfo"
+	Type--&gt;Derived4["AppVeyorProjectInfo"]
+	click Derived4 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorProjectInfo"
+	Type--&gt;Derived5["AppVeyorCommitInfo"]
+	click Derived5 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorCommitInfo"
+	Type--&gt;Derived6["AppVeyorPullRequestInfo"]
+	click Derived6 "/api/Cake.Common.Build.AppVeyor.Data/AppVeyorPullRequestInfo"
 
 						</div>
 					</div>
@@ -347,17 +347,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;AppVeyorInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;AppVeyorInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -366,6 +355,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;AppVeyorInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
