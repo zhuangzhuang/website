@@ -210,6 +210,10 @@ Right now, only NuGet packages are supported.</p>
 #addin nuget:?package=Cake.Foo&amp;version=1.2.3
 #addin nuget:?package=Cake.Foo&amp;prerelease
 #addin nuget:https://myget.org/f/Cake/?package=Cake.Foo&amp;prerelease
+// Local feed
+#addin nuget:file://localhost/packages/?package=Cake.Foo
+#addin nuget:file://localhost/packages/?package=Cake.Foo&amp;version=1.2.3
+#addin nuget:file://localhost/packages/?package=Cake.Foo&amp;prerelease
 </code></pre>
 <h3 id="dependencies">Dependencies</h3>
 <p>From Cake version 0.22.0 there's an option to fetch and load NuGet dependencies</p>
@@ -260,6 +264,10 @@ Specify the <code>include</code> parameter if the executable does not end with .
 #tool nuget:?package=Cake.Foo&amp;prerelease
 #tool nuget:https://myget.org/f/Cake/?package=Cake.Foo&amp;prerelease
 #tool nuget:?package=Cake.Foo&amp;include=path/to/foo.cmd
+// Local feed
+#tool nuget:file://localhost/packages/?package=Cake.Foo
+#tool nuget:file://localhost/packages/?package=Cake.Foo&amp;version=1.2.3
+#tool nuget:file://localhost/packages/?package=Cake.Foo&amp;prerelease
 </code></pre>
 <h1 id="shebang-directive">Shebang directive</h1>
 <p>Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead, passing to it as an argument the path that was initially used when attempting to run the script.</p>
