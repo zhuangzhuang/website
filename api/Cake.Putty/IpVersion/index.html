@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - IpVersion Enum</title>
+        <title>Cake - API - IpVersion Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -151,16 +151,15 @@
 				<li><a href="/api/Cake.Putty/BoolParameterAttribute">Bool<wbr>Parameter<wbr>Attribute</a></li>
 				<li><a href="/api/Cake.Putty/GenericPlinkRunner_1">GenericPlinkRunner<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Putty/GenericPscpRunner_1">GenericPscpRunner<wbr>&lt;TSettings&gt;<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Putty/IpVersion">IpVersion</a></li>
 				<li><a href="/api/Cake.Putty/ParameterAttribute">ParameterAttribute</a></li>
+				<li><a href="/api/Cake.Putty/PlinkProtocol">PlinkProtocol</a></li>
 				<li><a href="/api/Cake.Putty/PlinkSettings">PlinkSettings</a></li>
 				<li><a href="/api/Cake.Putty/PlinkTool_1">PlinkTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Putty/Protocol">Protocol</a></li>
 				<li><a href="/api/Cake.Putty/PscpSettings">PscpSettings</a></li>
 				<li><a href="/api/Cake.Putty/PscpTool_1">PscpTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Putty/PuttyAliases">PuttyAliases</a></li>
-			<li class="header">Enum Types</li>
-				<li class="selected"><a href="/api/Cake.Putty/IpVersion">IpVersion</a></li>
-				<li><a href="/api/Cake.Putty/PlinkProtocol">PlinkProtocol</a></li>
-				<li><a href="/api/Cake.Putty/Protocol">Protocol</a></li>
 				<li><a href="/api/Cake.Putty/SshVersion">SshVersion</a></li>
 
 
@@ -175,7 +174,7 @@
 
 
 <section class="content-header">
-	<h1>IpVersion <small>Enum</small></h1>
+	<h1>IpVersion <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -202,20 +201,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Putty">Cake<wbr>.Putty</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -227,11 +216,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["IpVersion"]
 class Type type-node
 
@@ -242,7 +226,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum IpVersion</code></pre>
+	<pre><code>public sealed class IpVersion : Enum</code></pre>
 
 
 
@@ -280,6 +264,13 @@ class Type type-node
             IPv6
             </div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Putty/IpVersion/83B25417">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -321,6 +312,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;IpVersion&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IpVersion&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
