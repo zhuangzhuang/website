@@ -86,6 +86,7 @@
 <p><a href="#tool-directive">Tool directive</a></p>
 <p><a href="#shebang-directive">Shebang directive</a></p>
 <p><a href="#break-directive">Break directive</a></p>
+<p><a href="#using-static-directive">Using static directive</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -295,6 +296,13 @@ or
 <p><strong>NOTE:</strong> If the debugger is not currently attached, then the <code>#break</code> directive is simply ignored.</p>
 <h2 id="usage-5">Usage</h2>
 <pre><code class="language-bash">#break
+</code></pre>
+<h1 id="using-static-directive">Using static directive</h1>
+<p>The using static directive allows referencing a type's static members without needed to specify the type name.</p>
+<h2 id="usage-6">Usage</h2>
+<pre><code class="language-csharp">using static System.Math;
+
+Information(Round(1.1));
 </code></pre>
 
 	</section>

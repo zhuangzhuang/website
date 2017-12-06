@@ -152,6 +152,7 @@
 				<li><a href="/api/Cake.SSRS/CacheRefreshPlan">CacheRefreshPlan</a></li>
 				<li><a href="/api/Cake.SSRS/CacheRefreshPlanState">Cache<wbr>Refresh<wbr>Plan<wbr>State</a></li>
 				<li><a href="/api/Cake.SSRS/CatalogItem">CatalogItem</a></li>
+				<li><a href="/api/Cake.SSRS/ClientCredentialType">ClientCredentialType</a></li>
 				<li><a href="/api/Cake.SSRS/ConditionEnum">ConditionEnum</a></li>
 				<li><a href="/api/Cake.SSRS/ConnectionProperties">ConnectionProperties</a></li>
 				<li><a href="/api/Cake.SSRS/CredentialRetrievalEnum">Credential<wbr>Retrieval<wbr>Enum</a></li>
@@ -196,6 +197,7 @@
 				<li><a href="/api/Cake.SSRS/ParameterValueOrFieldReference">Parameter<wbr>Value<wbr>Or<wbr>Field<wbr>Reference</a></li>
 				<li><a href="/api/Cake.SSRS/Policy">Policy</a></li>
 				<li><a href="/api/Cake.SSRS/Property">Property</a></li>
+				<li><a href="/api/Cake.SSRS/ProxyCredentialType">ProxyCredentialType</a></li>
 				<li><a href="/api/Cake.SSRS/QueryDefinition">QueryDefinition</a></li>
 				<li><a href="/api/Cake.SSRS/RecurrencePattern">RecurrencePattern</a></li>
 				<li><a href="/api/Cake.SSRS/Role">Role</a></li>
@@ -207,6 +209,7 @@
 				<li><a href="/api/Cake.SSRS/ScheduleExpiration">ScheduleExpiration</a></li>
 				<li><a href="/api/Cake.SSRS/ScheduleReference">ScheduleReference</a></li>
 				<li><a href="/api/Cake.SSRS/SearchCondition">SearchCondition</a></li>
+				<li><a href="/api/Cake.SSRS/SecurityMode">SecurityMode</a></li>
 				<li><a href="/api/Cake.SSRS/SensitivityEnum">SensitivityEnum</a></li>
 				<li><a href="/api/Cake.SSRS/ServerInfoHeader">ServerInfoHeader</a></li>
 				<li><a href="/api/Cake.SSRS/SsrsAliases">SsrsAliases</a></li>
@@ -327,6 +330,15 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings/E8492EFE">ClientCredentialType</a></td>
+								<td><a href="/api/Cake.SSRS/ClientCredentialType">ClientCredentialType</a></td>
+								<td>
+									<div>
+            Client Credential Type used to authenciate the against SSRS
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings/C2CA76EF">Domain</a></td>
 								<td>string</td>
 								<td>
@@ -336,11 +348,38 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings/B25C6A04">ImperonsationLevel</a></td>
+								<td>Token<wbr>Impersonation<wbr>Level</td>
+								<td>
+									<div>
+            Defines security impersonation levels. Security impersonation levels govern the degree to which a server process can act on behalf of a client process.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings/C07444AE">Password</a></td>
 								<td>string</td>
 								<td>
 									<div>
             The Password used to connect to the SSRS Server
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings/937E5163">ProxyCredentialType</a></td>
+								<td><a href="/api/Cake.SSRS/ProxyCredentialType">ProxyCredentialType</a></td>
+								<td>
+									<div>
+            Proxy Client Type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings/9110DC41">SecurityMode</a></td>
+								<td><a href="/api/Cake.SSRS/SecurityMode">SecurityMode</a></td>
+								<td>
+									<div>
+            Security Mode. Used only for Http only security.
             </div>
 								</td>
 							</tr>
@@ -413,6 +452,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.SSRS/SsrsConnectionSettingsExtensions/77C7E05C">AuthenticateWith<wbr>(string, <wbr>string, <wbr>string, <wbr>Client<wbr>Credential<wbr>Type)<wbr></a></td>
+								<td><a href="/api/Cake.SSRS/SsrsConnectionSettings">Ssrs<wbr>Connection<wbr>Settings</a></td>
+								<td>
+									<div></div>
+										<div><small><em>From <a href="/api/Cake.SSRS/SsrsConnectionSettingsExtensions">Ssrs<wbr>Connection<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.SSRS addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Ssrs<wbr>Connection<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
@@ -435,17 +483,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Ssrs<wbr>Connection<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Ssrs<wbr>Connection<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -454,6 +491,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Ssrs<wbr>Connection<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
