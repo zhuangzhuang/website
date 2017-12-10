@@ -86,6 +86,7 @@
 <p><a href="#tool-directive">Tool directive</a></p>
 <p><a href="#shebang-directive">Shebang directive</a></p>
 <p><a href="#break-directive">Break directive</a></p>
+<p><a href="#using-static-directive">Using static directive</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -110,6 +111,7 @@
                 <li><a href="/docs/tutorials/setting-up-a-new-project">Setting Up A New Project</a></li>
                 <li><a href="/docs/tutorials/powershell-security">Powershell Security</a></li>
                 <li><a href="/docs/tutorials/extending-the-bootstrapper">Extending The Bootstrapper</a></li>
+                <li><a href="/docs/tutorials/using-cake-pre-release">Using Cake Pre Release</a></li>
                 <li><a href="/docs/tutorials/pinning-cake-version">Pinning Cake Version</a></li>
 
                     </ul>
@@ -210,6 +212,10 @@ Right now, only NuGet packages are supported.</p>
 #addin nuget:?package=Cake.Foo&amp;version=1.2.3
 #addin nuget:?package=Cake.Foo&amp;prerelease
 #addin nuget:https://myget.org/f/Cake/?package=Cake.Foo&amp;prerelease
+// Local feed
+#addin nuget:file://localhost/packages/?package=Cake.Foo
+#addin nuget:file://localhost/packages/?package=Cake.Foo&amp;version=1.2.3
+#addin nuget:file://localhost/packages/?package=Cake.Foo&amp;prerelease
 </code></pre>
 <h3 id="dependencies">Dependencies</h3>
 <p>From Cake version 0.22.0 there's an option to fetch and load NuGet dependencies</p>
@@ -218,6 +224,11 @@ or
 #addin nuget:?package=foo.bar&amp;loaddependencies=false
 </code></pre>
 <p>This feature requires Cake to be <a href="/fundamentals/configuration.md">configured</a> to not use <code>nuget.exe</code> but instead let Cake handle NuGet installation in-process.</p>
+<h3 id="include-and-exclude-options">Include and Exclude Options:</h3>
+<pre><code class="language-csharp">#addin nuget:?package=Cake.Foo&amp;include=/**/NoFoo.dll
+or
+#addin nuget:?package=Cake.Foo&amp;exclude=/**/Foo.dll
+</code></pre>
 <h1 id="load-directive">Load directive</h1>
 <p>The load directive is used to reference external Cake scripts. Useful i.e. if you have common utility functions.
 Starting from 0.18.0 you can also load cake scripts from nuget.</p>
@@ -241,6 +252,11 @@ or
 #load "nuget:?package=utilities.cake"
 </code></pre>
 <p>Attempts to load <code>utilities.cake</code> from nuget</p>
+<h3 id="include-and-exclude-options-1">Include and Exclude Options:</h3>
+<pre><code class="language-csharp">#load nuget:?package=utilities.cake&amp;include=/**/NoFoo.cake
+or
+#load nuget:?package=utilities.cake&amp;=exclude/**/Foo.cake
+</code></pre>
 <h1 id="reference-directive">Reference directive</h1>
 <p>The reference directive is used to reference external assemblies for use in your scripts.</p>
 <h2 id="usage-2">Usage</h2>
@@ -260,6 +276,15 @@ Specify the <code>include</code> parameter if the executable does not end with .
 #tool nuget:?package=Cake.Foo&amp;prerelease
 #tool nuget:https://myget.org/f/Cake/?package=Cake.Foo&amp;prerelease
 #tool nuget:?package=Cake.Foo&amp;include=path/to/foo.cmd
+// Local feed
+#tool nuget:file://localhost/packages/?package=Cake.Foo
+#tool nuget:file://localhost/packages/?package=Cake.Foo&amp;version=1.2.3
+#tool nuget:file://localhost/packages/?package=Cake.Foo&amp;prerelease
+</code></pre>
+<h3 id="include-and-exclude-options-2">Include and Exclude Options:</h3>
+<pre><code class="language-csharp">#tool nuget:?package=Cake.Foo&amp;include=/**/NoFoo.exe
+or
+#tool nuget:?package=Cake.Foo&amp;=exclude/**/Foo.exe
 </code></pre>
 <h1 id="shebang-directive">Shebang directive</h1>
 <p>Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead, passing to it as an argument the path that was initially used when attempting to run the script.</p>
@@ -272,6 +297,13 @@ Specify the <code>include</code> parameter if the executable does not end with .
 <p><strong>NOTE:</strong> If the debugger is not currently attached, then the <code>#break</code> directive is simply ignored.</p>
 <h2 id="usage-5">Usage</h2>
 <pre><code class="language-bash">#break
+</code></pre>
+<h1 id="using-static-directive">Using static directive</h1>
+<p>The using static directive allows referencing a type's static members without needed to specify the type name.</p>
+<h2 id="usage-6">Usage</h2>
+<pre><code class="language-csharp">using static System.Math;
+
+Information(Round(1.1));
 </code></pre>
 
 	</section>
