@@ -145,10 +145,20 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Talend">Cake<wbr>.Talend</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Talend/EsbTaskStateEnum">EsbTaskStateEnum</a></li>
+				<li><a href="/api/Cake.Talend/RepositoryEnum">RepositoryEnum</a></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Talend/EsbTaskStateEnumExtensions">Esb<wbr>Task<wbr>State<wbr>Enum<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Talend/RepositoryEnumExtensions">Repository<wbr>Enum<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Talend/TalendAdminApi">TalendAdminApi</a></li>
+				<li><a href="/api/Cake.Talend/TalendAdminApiAliases">Talend<wbr>Admin<wbr>Api<wbr>Aliases</a></li>
+				<li><a href="/api/Cake.Talend/TalendAdminApiSettings">Talend<wbr>Admin<wbr>Api<wbr>Settings</a></li>
 				<li class="selected"><a href="/api/Cake.Talend/TalendCommandLineAliases">Talend<wbr>Command<wbr>Line<wbr>Aliases</a></li>
 				<li><a href="/api/Cake.Talend/TalendCommandLineSettings">Talend<wbr>Command<wbr>Line<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool<wbr>&lt;TSettings&gt;<wbr></a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Talend/ITalendAdminApi">ITalendAdminApi</a></li>
 
 
                     </ul>
@@ -232,6 +242,10 @@ class Type type-node
 						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
 						<td></td>
 					</tr>
+					<tr>
+						<td>Cake<wbr>Namespace<wbr>Import<wbr>Attribute</td>
+						<td></td>
+					</tr>
 			</tbody></table>
 		</div>
 	</div>	
@@ -259,6 +273,56 @@ class Type type-node
 								<td>
 									<div>
             Builds a Talend job and outputs to specified directory.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Talend/TalendCommandLineAliases/8582BD1D">BuildRoute<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>DirectoryPath, <wbr>Talend<wbr>Command<wbr>Line<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Builds a Talend route and outputs to specified directory.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Talend/TalendCommandLineAliases/CFC56667">PublishJob<wbr>(ICakeContext, <wbr>PublishJobSettings, <wbr>Talend<wbr>Command<wbr>Line<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Publishes a Talend job to specified Nexus repository.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Talend/TalendCommandLineAliases/EFC082F3">PublishJobs<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;<wbr>Publish<wbr>Job<wbr>Settings&gt;<wbr>, <wbr>PublishJobSettings, <wbr>Talend<wbr>Command<wbr>Line<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Publishes multiple Talend jobs with the option to share base settings.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Talend/TalendCommandLineAliases/23F91C29">PublishRoute<wbr>(ICakeContext, <wbr>Publish<wbr>Route<wbr>Settings, <wbr>Talend<wbr>Command<wbr>Line<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Publishes a Talend route to specified Nexus repository.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Talend/TalendCommandLineAliases/2E46F15E">PublishRoutes<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;<wbr>Publish<wbr>Route<wbr>Settings&gt;<wbr>, <wbr>Publish<wbr>Route<wbr>Settings, <wbr>Talend<wbr>Command<wbr>Line<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Publishes multiple Talend routes with the option to share base settings.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
