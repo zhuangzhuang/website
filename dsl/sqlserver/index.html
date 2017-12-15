@@ -225,6 +225,7 @@
     <li><a href="/dsl/plist">plist</a></li>        
     <li><a href="/dsl/postman">Postman</a></li>        
     <li><a href="/dsl/powershell">Powershell</a></li>        
+    <li><a href="/dsl/progetasset">ProGetAsset</a></li>        
     <li><a href="/dsl/protobuf">Protobuf</a></li>        
     <li><a href="/dsl/raygun">Raygun</a></li>        
     <li><a href="/dsl/resharperreports">ReSharperReports</a></li>        
@@ -255,6 +256,7 @@
     <li><a href="/dsl/topshelf">Topshelf</a></li>        
     <li><a href="/dsl/transifex">Transifex</a></li>        
     <li><a href="/dsl/twitter">Twitter</a></li>        
+    <li><a href="/dsl/upack">UPack</a></li>        
     <li><a href="/dsl/vagrant">Vagrant</a></li>        
     <li><a href="/dsl/version-reader">Version Reader</a></li>        
     <li><a href="/dsl/vs-.proj-file-helpers">VS .proj file helpers</a></li>        
@@ -295,8 +297,15 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
-            create and restore DACPAC files
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
             </div>
 
 
