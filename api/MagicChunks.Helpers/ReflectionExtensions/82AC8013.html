@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - JsonExtensions.GetChildPropertyValue(JObject, string) Method</title>
+        <title>Cake - API - ReflectionExtensions.GetAllTypes(Assembly, Func&lt;TypeInfo, bool&gt;) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -144,11 +144,10 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/MagicChunks.Helpers">MagicChunks<wbr>.Helpers</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/MagicChunks.Helpers/JsonExtensions">JsonExtensions</a></li>
+		<li><a href="/api/MagicChunks.Helpers/ReflectionExtensions">ReflectionExtensions</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/MagicChunks.Helpers/JsonExtensions/01CEDB82">GetChildProperty<wbr>(JObject, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/MagicChunks.Helpers/JsonExtensions/D03AF903">Get<wbr>Child<wbr>Property<wbr>Value<wbr>(JObject, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/MagicChunks.Helpers/ReflectionExtensions/82AC8013">GetAllTypes<wbr>(Assembly, <wbr>Func<wbr>&lt;TypeInfo, <wbr>bool&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -162,8 +161,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/MagicChunks.Helpers/JsonExtensions">JsonExtensions</a>.</h3>
-	<h1>Get<wbr>Child<wbr>Property<wbr>Value<wbr>(JObject, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/MagicChunks.Helpers/ReflectionExtensions">ReflectionExtensions</a>.</h3>
+	<h1>GetAllTypes<wbr>(Assembly, <wbr>Func<wbr>&lt;TypeInfo, <wbr>bool&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -185,14 +184,14 @@
 						<dd><a href="/api/MagicChunks.Helpers">MagicChunks<wbr>.Helpers</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/MagicChunks.Helpers/JsonExtensions">JsonExtensions</a></dd>		
+						<dd><a href="/api/MagicChunks.Helpers/ReflectionExtensions">ReflectionExtensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static JToken GetChildPropertyValue(this JObject source, string name)</code></pre>
+	<pre><code>public static IEnumerable&lt;Type&gt; GetAllTypes(this Assembly source, Func&lt;TypeInfo, bool&gt; predicate = null)</code></pre>
 
 
 
@@ -211,12 +210,12 @@
 				</thead>
 					<tbody><tr>
 						<td>source</td>
-						<td>JObject</td>
+						<td>Assembly</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td>name</td>
-						<td>string</td>
+						<td>predicate</td>
+						<td>Func<wbr>&lt;,&gt;<wbr></td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -234,7 +233,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>JToken</td>
+					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
