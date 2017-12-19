@@ -206,10 +206,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker">Universal<wbr>Package<wbr>Packer</a></li>								
-											<li><a href="/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller">Universal<wbr>Package<wbr>Installer</a></li>								
-											<li><a href="/api/Cake.ProGet.Universal.Push/UniversalPackagePusher">Universal<wbr>Package<wbr>Pusher</a></li>								
 											<li><a href="/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker">Universal<wbr>Package<wbr>Unpacker</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Push/UniversalPackagePusher">Universal<wbr>Package<wbr>Pusher</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller">Universal<wbr>Package<wbr>Installer</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker">Universal<wbr>Package<wbr>Packer</a></li>								
 									</ul>
 								</dd>			
 							
@@ -221,14 +221,14 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["UPackTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["UniversalPackagePacker"]
-	click Derived0 "/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker"
-	Type--&gt;Derived1["UniversalPackageInstaller"]
-	click Derived1 "/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller"
-	Type--&gt;Derived2["UniversalPackagePusher"]
-	click Derived2 "/api/Cake.ProGet.Universal.Push/UniversalPackagePusher"
-	Type--&gt;Derived3["UniversalPackageUnpacker"]
-	click Derived3 "/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker"
+	Type--&gt;Derived0["UniversalPackageUnpacker"]
+	click Derived0 "/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker"
+	Type--&gt;Derived1["UniversalPackagePusher"]
+	click Derived1 "/api/Cake.ProGet.Universal.Push/UniversalPackagePusher"
+	Type--&gt;Derived2["UniversalPackageInstaller"]
+	click Derived2 "/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller"
+	Type--&gt;Derived3["UniversalPackagePacker"]
+	click Derived3 "/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker"
 
 						</div>
 					</div>
