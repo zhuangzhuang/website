@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -197,6 +198,51 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public BitriseBuildInfo Build { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.Bitrise.IsRunningOnBitrise)
+{
+    Information(
+        @"Build:
+        Build Number: {0}
+        Build Url: {1}
+        Build Slug: {2}
+        Build Trigger Timestamp: {3}
+        Build Status: {4}",
+        BuildSystem.Bitrise.Environment.Build.BuildNumber,
+        BuildSystem.Bitrise.Environment.Build.BuildUrl,
+        BuildSystem.Bitrise.Environment.Build.BuildSlug,
+        BuildSystem.Bitrise.Environment.Build.BuildTriggerTimestamp,
+        BuildSystem.Bitrise.Environment.Build.BuildStatus
+        );
+}
+else
+{
+    Information("Not running on Bitrise");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (Bitrise.IsRunningOnBitrise)
+{
+    Information(
+        @"Build:
+        Build Number: {0}
+        Build Url: {1}
+        Build Slug: {2}
+        Build Trigger Timestamp: {3}
+        Build Status: {4}",
+        Bitrise.Environment.Build.BuildNumber,
+        Bitrise.Environment.Build.BuildUrl,
+        Bitrise.Environment.Build.BuildSlug,
+        Bitrise.Environment.Build.BuildTriggerTimestamp,
+        Bitrise.Environment.Build.BuildStatus
+        );
+}
+else
+{
+    Information("Not running on Bitrise");
+}</code></pre>
+    </div>
 
 
 

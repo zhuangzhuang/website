@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,43 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public JenkinsJobInfo Job { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.Jenkins.IsRunningOnJenkins)
+{
+    Information(
+        @"Job:
+        JobName: {0}
+        JobBaseName: {1}
+        JobUrl: {2}",
+        BuildSystem.Jenkins.Environment.Job.JobName,
+        BuildSystem.Jenkins.Environment.Job.JobBaseName,
+        BuildSystem.Jenkins.Environment.Job.JobUrl
+        );
+}
+else
+{
+    Information("Not running on Jenkins");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (Jenkins.IsRunningOnJenkins)
+{
+    Information(
+        @"Job:
+        JobName: {0}
+        JobBaseName: {1}
+        JobUrl: {2}",
+        Jenkins.Environment.Job.JobName,
+        Jenkins.Environment.Job.JobBaseName,
+        Jenkins.Environment.Job.JobUrl
+        );
+}
+else
+{
+    Information("Not running on Jenkins");
+}</code></pre>
+    </div>
 
 
 

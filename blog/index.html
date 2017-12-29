@@ -99,6 +99,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/12">December, 2017</a></li>
         <li><a href="/blog/archive/2017/11">November, 2017</a></li>
         <li><a href="/blog/archive/2017/10">October, 2017</a></li>
         <li><a href="/blog/archive/2017/09">September, 2017</a></li>
@@ -156,6 +157,96 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/12/cake-v0.24.0-released">Cake v0.24.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Friday, December 29, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <p>Version 0.24.0 of Cake has been released.</p>
+<p>As a little holiday gift from the Cake team and contributors, the last version for 2017 just shipped!
+This release shouldn't have any breaking changes, but it does have several improvements, bug fixes, and a couple new features.</p>
+<p>A notable new feature is module bootstrapping built into the Cake script runner, which lets you download and install modules from NuGet with a <code>#module</code> preprocessor directive in your build script, similar to what you've previously already been able to do with <code>#tool</code> and <code>#addin</code>.</p>
+<pre><code class="language-cake">#module nuget:?package=Cake.UrlLoadDirective.Module&amp;version=1.0.2
+</code></pre>
+<p>The only caveat is that as modules can change and extend the internals of Cake, this bootstrapping needs to be done before Cake executes. This is solved by bootrapping being it's own step by invoking Cake with a <code>--bootstrap</code> argument before you execute the script normally.</p>
+<pre><code class="language-bash">./cake.exe build.cake --bootstrap
+./cake.exe build.cake
+</code></pre>
+<p>Notable amongst the improvements is that we've upgraded to Roslyn 2.6.1 which gives you <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-2">C# 7.2</a> support in your Cake scripts.</p>
+<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/holytshirt">holytshirt</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/phillipsj">phillipsj</a></li>
+<li><a href="https://github.com/Marusyk">Marusyk</a></li>
+<li><a href="https://github.com/johankson">johankson</a></li>
+<li><a href="https://github.com/kcamp">kcamp</a></li>
+<li><a href="https://github.com/Cheesebaron">Cheesebaron</a></li>
+<li><a href="https://github.com/onovotny">onovotny</a></li>
+<li><a href="https://github.com/Sam13">Sam13</a></li>
+<li><a href="https://github.com/robsammons">robsammons</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li>Richard J Foster</li>
+<li><a href="https://github.com/DorSoluto">DorSoluto</a></li>
+<li><a href="https://github.com/Thealexbarney">Thealexbarney</a></li>
+<li><a href="https://github.com/djdelaney">djdelaney</a></li>
+<li><a href="https://github.com/gabrielweyer">gabrielweyer</a></li>
+<li>BKDEVCONSTRUCTIV</li>
+<li>Bert Van Steen</li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=43&amp;state=closed">33 issues</a> closed.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1950"><strong>#1950</strong></a> Allow Cake modules to be bootstrapped by Cake in a pre-processing phase</li>
+<li><a href="https://github.com/cake-build/cake/issues/1833"><strong>#1833</strong></a> NUnit: Add support for /labels</li>
+<li><a href="https://github.com/cake-build/cake/issues/1653"><strong>#1653</strong></a> Add Before and After options to NUnit3Labels enum</li>
+<li><a href="https://github.com/cake-build/cake/issues/74"><strong>#74</strong></a> MSpec support</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1957"><strong>#1957</strong></a> Use working directory instead if initial script path for resolving tools directory in NuGetLoadDirectiveProvider</li>
+<li><a href="https://github.com/cake-build/cake/issues/1939"><strong>#1939</strong></a> Bug - TypeExtensions.GetFullName doesn't handle nested types correctly</li>
+<li><a href="https://github.com/cake-build/cake/issues/1933"><strong>#1933</strong></a> NuGetPackSettings.Properties does not support whitespaces.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1930"><strong>#1930</strong></a> The &quot;out&quot; parameters are not compiled properly.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1915"><strong>#1915</strong></a> Only set working directory on process runner if set in settings</li>
+<li><a href="https://github.com/cake-build/cake/issues/1889"><strong>#1889</strong></a> XmlPoke ignores BOM encoding settings</li>
+<li><a href="https://github.com/cake-build/cake/issues/1874"><strong>#1874</strong></a> NuGet script load: Do not add include for all cake scripts when include already specified</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1968"><strong>#1968</strong></a> Add interface for AssemblyVerifier so that it can be mocked</li>
+<li><a href="https://github.com/cake-build/cake/issues/1960"><strong>#1960</strong></a> Update Roslyn to 2.6.1</li>
+<li><a href="https://github.com/cake-build/cake/issues/1955"><strong>#1955</strong></a> ResultsDirectory is missing from DotNetCoreTestSettings</li>
+<li><a href="https://github.com/cake-build/cake/issues/1952"><strong>#1952</strong></a> Add support for class/namespace/method arguments for XUnit2</li>
+<li><a href="https://github.com/cake-build/cake/issues/1946"><strong>#1946</strong></a> Add option to pack files into the NuGet tool directory</li>
+<li><a href="https://github.com/cake-build/cake/issues/1943"><strong>#1943</strong></a> Chocolatey package dependencies cannot be set using the ChocolateyPackSettings</li>
+<li><a href="https://github.com/cake-build/cake/pull/1936"><strong>#1936</strong></a> Move to signing service v2</li>
+<li><a href="https://github.com/cake-build/cake/issues/1931"><strong>#1931</strong></a> Allow passing a nuget.config as environment variable or in cake.config</li>
+<li><a href="https://github.com/cake-build/cake/issues/1924"><strong>#1924</strong></a> Set UserAgent for in process nuget</li>
+<li><a href="https://github.com/cake-build/cake/issues/1922"><strong>#1922</strong></a> GitVersion is missing AssemblySemFileVer</li>
+<li><a href="https://github.com/cake-build/cake/issues/1912"><strong>#1912</strong></a> Support for DotCover Process Filter</li>
+<li><a href="https://github.com/cake-build/cake/issues/1910"><strong>#1910</strong></a> MSBuild property values should escape carriage return and line feed</li>
+<li><a href="https://github.com/cake-build/cake/issues/1855"><strong>#1855</strong></a> SignTool is not found with latest windows 10 SDK</li>
+<li><a href="https://github.com/cake-build/cake/issues/1796"><strong>#1796</strong></a> Obsolete DotNetBuild and ultimately remove it</li>
+<li><a href="https://github.com/cake-build/cake/issues/1692"><strong>#1692</strong></a> Log script compilation warnings and other diagnostics</li>
+<li><a href="https://github.com/cake-build/cake/issues/1522"><strong>#1522</strong></a> The MSTest tool doesn't pick up the mstest.exe from Visual Studio 2017</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1811"><strong>#1811</strong></a> Add code sample to build system properties</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2017/11/intellisense-vscode">Intellisense in Visual Studio Code</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -165,48 +256,8 @@
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/mholo65">mholo65</a></dd>
 </dl>            <div>
-                <h2 id="intellisense">Intellisense</h2>
-<p>As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the <a href="http://www.omnisharp.net/">OmniSharp</a> project have merged our pull requests (<a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932">#932</a> and <a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681">#1681</a>) and released v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension for Visual Studio Code</a>, which includes support for Cake.  In addition to this, we have released a new tool, called <a href="https://github.com/cake-build/bakery">bakery</a>, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.</p>
-<h2 id="how">How</h2>
-<p>How do you get this working then? Well, just follow the following steps (we assume that you already have Visual Studio Code installed):</p>
-<ol>
-<li>Open Visual Studio Code to the folder that you have a Cake file in.</li>
-<li>Make sure v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> extension is installed in Visual Studio Code.</li>
-<li>Make sure v0.10.1 of the <a href="https://marketplace.visualstudio.com/items?itemName=cake-build.cake-vscode">Visual Studio Code Extension for Cake</a> is installed in Visual Studio Code.</li>
-<li>Make sure that <a href="https://www.nuget.org/packages/Cake/">Cake</a> is installed in your <code>tools</code> folder. We recommend v0.22.0 or later, otherwise your addins will be installed twice.  The easiest way to do this would be to run your <code>.\build.ps1</code> file.</li>
-<li>Make sure that <a href="https://www.nuget.org/packages/Cake.Bakery/">Bakery</a> is installed in your <code>tools</code> folder.  The easiest way to do this would be using the <code>Install intellisense support</code> command which ships with the Visual Studio Code Extension for Cake.  Simply open the command palette, type <code>cake</code> and then select the option.</li>
-<li>At this point, you will need to close and re-open the folder within Visual Studio Code.</li>
-<li>Success!
-<br/><img src="/assets/img/intellisense-vscode/intellisense-vscode.png" class="img-fluid" alt="Intellisense" /></li>
-</ol>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p><strong>Q: I've followed the steps, but I don't get any intellisense.</strong></p>
-<p>The C# Extension for Visual Studio Code will automatically locate any <code>*.sln</code> file and use that as the target directory when starting <code>omnisharp</code>. If your <code>*.cake</code> files are located in a different location, you might need to select <code>Cake</code> project in the <a href="https://code.visualstudio.com/docs/languages/csharp#_roslyn-and-omnisharp">project selector</a>.</p>
-<p><strong>Q: I've selected the <code>Cake</code> project, but still don't get intellisense.</strong></p>
-<p>Look in the <code>OmniSharp Log</code> for errors or warnings.</p>
-<pre><code>[warn]: OmniSharp.Cake.CakeProjectSystem
-    Cake script service not connected. Aborting.
-</code></pre>
-<p>The above is an indication that <code>Cake.Bakery</code> isn't installed in your <code>tools</code> folder, while the below usually means that <code>Cake</code> isn't installed in your <code>tools</code> folder. (Yes, we are working on better error messages :))</p>
-<pre><code>[fail]: OmniSharp.Cake.CakeProjectSystem
-    c:\Users\mb\src\gh\bakery\setup.cake will be ignored due to an following error
-    System.TypeLoadException: A null or zero length string does not represent a valid Type.
-</code></pre>
-<p><strong>Q: I don't see any error message and still don't get intellisense.</strong></p>
-<p>Look in the <code>OmniSharp Log</code> do you see anything even related to <code>Cake</code> if everything is setup correctly, you should at least see something similar to this:</p>
-<pre><code>[info]: OmniSharp.Cake.CakeProjectSystem
-    Detecting Cake files in 'c:\Users\mb\src\gh\bakery'.
-[info]: OmniSharp.Cake.CakeProjectSystem
-    Found 29 Cake files.
-</code></pre>
-<p>If you don't. You probably have issues with getting v1.13.0 of the C# extension for Visual Studio Code installed. Please uninstall the extension and then try installing it again. Look for <code>OmniSharp.Cake.dll</code> in <code>%userprofile%\.vscode\extensions\ms-vscode.csharp-1.13.0\.omnisharp\</code> if you're on Windows and <code>~/.vscode/extensions/ms-vscode.csharp-1.13.0/.omnisharp/</code> if you are running Linux or Mac OS.</p>
-<p><strong>Q: Ok, I get intellisense. But files I've added after opening Visual Studio Code won't light up.</strong></p>
-<p>This is a known issue in <code>omnisharp</code> also when it comes to <code>*.csx</code> files. We are working with the <code>omnisharp</code> team on getting this fixed in a later release.</p>
-<p><strong>Q: I have <code>Cake.CoreCLR</code> installed in my tools folder, isn't that enough?.</strong></p>
-<p>No, at the moment <code>Cake.CoreCLR</code> wont work.</p>
-<p><strong>Q: I tried everything above, I still don't get intellisense.</strong></p>
-<p>Submit an issue in the <a href="https://github.com/cake-build/bakery">bakery</a> repository on Github or reach out to us on <a href="https://gitter.im/cake-build/cake">Gitter</a>.</p>
-
+                <p>As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the <a href="http://www.omnisharp.net/">OmniSharp</a> project have merged our pull requests (<a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932">#932</a> and <a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681">#1681</a>) and released v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension for Visual Studio Code</a>, which includes support for Cake.  In addition to this, we have released a new tool, called <a href="https://github.com/cake-build/bakery">bakery</a>, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.</p>
+                <a href="/blog/2017/11/intellisense-vscode">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2017/10/cake-v0.23.0-released">Cake v0.23.0 released</a></h2>
@@ -289,19 +340,6 @@ The difference between the two dependencies above is that Cake will throw an exc
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/09/cake-v0.22.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/08/http-to-https">HTTP to HTTPS</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, August 25, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/News">News</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>As some of you may have noticed, the <a href="https://www.cakebuild.net/">Cake Website</a> has changed to use an SSL Certificate.  This is something that has been <a href="https://github.com/cake-build/website/issues/40">on our cards for a while</a>, it is just something that we never got around to.</p>
-                <a href="/blog/2017/08/http-to-https">Read more...</a>
             </div>
         <hr />
     <nav>

@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,43 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public GoCDRepositoryInfo Repository { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.GoCD.IsRunningOnGoCD)
+{
+    Information(
+        @"Repository:
+        Revision: {0}
+        ToRevision: {1}
+        FromRevision: {2}",
+        BuildSystem.GoCD.Environment.Repository.Revision,
+        BuildSystem.GoCD.Environment.Repository.ToRevision,
+        BuildSystem.GoCD.Environment.Repository.FromRevision
+        );
+}
+else
+{
+    Information("Not running on GoCD");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (GoCD.IsRunningOnGoCD)
+{
+    Information(
+        @"Repository:
+        Revision: {0}
+        ToRevision: {1}
+        FromRevision: {2}",
+        GoCD.Environment.Repository.Revision,
+        GoCD.Environment.Repository.ToRevision,
+        GoCD.Environment.Repository.FromRevision
+        );
+}
+else
+{
+    Information("Not running on GoCD");
+}</code></pre>
+    </div>
 
 
 

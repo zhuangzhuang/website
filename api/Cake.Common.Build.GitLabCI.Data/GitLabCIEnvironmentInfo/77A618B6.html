@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,44 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public GitLabCIBuildInfo Build { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+{
+    Information(
+        @"Build:
+        Id: {0}
+        Reference: {1}
+        Tag: {2}
+        Name: {3}
+        Stage: {4}",
+        BuildSystem.GitLabCI.Environment.Build.Id,
+        BuildSystem.GitLabCI.Environment.Build.Reference,
+        BuildSystem.GitLabCI.Environment.Build.Tag,
+        BuildSystem.GitLabCI.Environment.Build.Tag,
+        BuildSystem.GitLabCI.Environment.Build.Stage
+        );
+}
+else
+{
+    Information("Not running on GitLabCI");
+}</code></pre>
+    
+
+    <pre><code class="cs">Information(
+    @"Build:
+    Id: {0}
+    Reference: {1}
+    Tag: {2}
+    Name: {3}
+    Stage: {4}",
+    GitLabCI.Environment.Build.Id,
+    GitLabCI.Environment.Build.Reference,
+    GitLabCI.Environment.Build.Tag,
+    GitLabCI.Environment.Build.Tag,
+    GitLabCI.Environment.Build.Stage
+    );</code></pre>
+    </div>
 
 
 

@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,39 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public TFBuildAgentInfo Agent { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+{
+    Information(
+        @"Agent:
+        Id: {0}
+        Name: {1}",
+        BuildSystem.TFBuild.Environment.Agent.Id,
+        BuildSystem.TFBuild.Environment.Agent.Name
+        );
+}
+else
+{
+    Information("Not running on TFBuild");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (TFBuild.IsRunningOnTFBuild)
+{
+    Information(
+        @"Agent:
+        Id: {0}
+        Name: {1}",
+        TFBuild.Environment.Agent.Id,
+        TFBuild.Environment.Agent.Name
+        );
+}
+else
+{
+    Information("Not running on TFBuild");
+}</code></pre>
+    </div>
 
 
 

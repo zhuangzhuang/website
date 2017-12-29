@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -195,6 +196,63 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public BambooBuildInfo Build { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.Bamboo.IsRunningOnBamboo)
+{
+    Information(
+        @"Build:
+        Folder: {0}
+        Number: {1}
+        Build Key: {2}
+        Result Key: {3}
+        Results Url: {4}
+        Build Timestamp: {5}
+        Is Custom: {6}
+        Revision Name: {7}",
+        BuildSystem.Bamboo.Environment.Build.Folder,
+        BuildSystem.Bamboo.Environment.Build.Number,
+        BuildSystem.Bamboo.Environment.Build.BuildKey,
+        BuildSystem.Bamboo.Environment.Build.ResultKey,
+        BuildSystem.Bamboo.Environment.Build.ResultsUrl,
+        BuildSystem.Bamboo.Environment.Build.BuildTimestamp,
+        BuildSystem.Bamboo.Environment.Build.CustomBuild.IsCustomBuld,
+        BuildSystem.Bamboo.Environment.Build.CustomBuild.RevisionName
+        );
+}
+else
+{
+    Information("Not running on Bamboo");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (Bamboo.IsRunningOnBamboo)
+{
+    Information(
+        @"Build:
+        Folder: {0}
+        Number: {1}
+        Build Key: {2}
+        Result Key: {3}
+        Results Url: {4}
+        Build Timestamp: {5}
+        Is Custom: {6}
+        Revision Name: {7}",
+        Bamboo.Environment.Build.Folder,
+        Bamboo.Environment.Build.Number,
+        Bamboo.Environment.Build.BuildKey,
+        Bamboo.Environment.Build.ResultKey,
+        Bamboo.Environment.Build.ResultsUrl,
+        Bamboo.Environment.Build.BuildTimestamp,
+        Bamboo.Environment.Build.CustomBuild.IsCustomBuld,
+        Bamboo.Environment.Build.CustomBuild.RevisionName
+        );
+}
+else
+{
+    Information("Not running on Bamboo");
+}</code></pre>
+    </div>
 
 
 

@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -191,6 +192,51 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public BitbucketPipelinesRepositoryInfo Repository { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.BitbucketPipelines.IsRunningOnBitbucketPipelines)
+{
+    Information(
+        @"Repository:
+        Branch: {0}
+        Tag: {1}
+        Commit: {2}
+        Repo Owner: {3}
+        Repo Slug: {4}",
+        BuildSystem.BitbucketPipelines.Environment.Repository.Branch,
+        BuildSystem.BitbucketPipelines.Environment.Repository.Tag,
+        BuildSystem.BitbucketPipelines.Environment.Repository.Commit,
+        BuildSystem.BitbucketPipelines.Environment.Repository.RepoOwner,
+        BuildSystem.BitbucketPipelines.Environment.Repository.RepoSlug
+        );
+}
+else
+{
+    Information("Not running on BitbucketPipelines");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (BitbucketPipelines.IsRunningOnBitbucketPipelines)
+{
+    Information(
+        @"Repository:
+        Branch: {0}
+        Tag: {1}
+        Commit: {2}
+        Repo Owner: {3}
+        Repo Slug: {4}",
+        BitbucketPipelines.Environment.Repository.Branch,
+        BitbucketPipelines.Environment.Repository.Tag,
+        BitbucketPipelines.Environment.Repository.Commit,
+        BitbucketPipelines.Environment.Repository.RepoOwner,
+        BitbucketPipelines.Environment.Repository.RepoSlug
+        );
+}
+else
+{
+    Information("Not running on BitbucketPipelines");
+}</code></pre>
+    </div>
 
 
 

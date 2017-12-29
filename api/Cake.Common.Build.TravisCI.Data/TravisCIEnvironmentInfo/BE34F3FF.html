@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -198,6 +199,43 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public TravisCIJobInfo Job { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+{
+    Information(
+        @"Job:
+        JobId: {0}
+        JobNumber: {1}
+        OSName: {2}",
+        BuildSystem.TravisCI.Environment.Job.JobId,
+        BuildSystem.TravisCI.Environment.Job.JobNumber,
+        BuildSystem.TravisCI.Environment.Job.OSName
+        );
+}
+else
+{
+    Information("Not running on TravisCI");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (TravisCI.IsRunningOnTravisCI)
+{
+    Information(
+        @"Job:
+        JobId: {0}
+        JobNumber: {1}
+        OSName: {2}",
+        TravisCI.Environment.Job.JobId,
+        TravisCI.Environment.Job.JobNumber,
+        TravisCI.Environment.Job.OSName
+        );
+}
+else
+{
+    Information("Not running on TravisCI");
+}</code></pre>
+    </div>
 
 
 

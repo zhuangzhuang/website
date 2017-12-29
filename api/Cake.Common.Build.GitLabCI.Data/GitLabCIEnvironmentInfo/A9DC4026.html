@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,43 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public GitLabCIRunnerInfo Runner { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+{
+    Information(
+        @"Runner:
+        Id: {0}
+        Description: {1}
+        Tags: {2}",
+        BuildSystem.GitLabCI.Environment.Runner.Id,
+        BuildSystem.GitLabCI.Environment.Runner.Description,
+        BuildSystem.GitLabCI.Environment.Runner.Tags
+        );
+}
+else
+{
+    Information("Not running on GitLabCI");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (GitLabCI.IsRunningOnGitLabCI)
+{
+    Information(
+        @"Runner:
+        Id: {0}
+        Description: {1}
+        Tags: {2}",
+        GitLabCI.Environment.Runner.Id,
+        GitLabCI.Environment.Runner.Description,
+        GitLabCI.Environment.Runner.Tags
+        );
+}
+else
+{
+    Information("Not running on GitLabCI");
+}</code></pre>
+    </div>
 
 
 

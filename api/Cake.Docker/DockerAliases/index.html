@@ -150,6 +150,8 @@
 				<li><a href="/api/Cake.Docker/AutoPropertyAttribute">Auto<wbr>Property<wbr>Attribute</a></li>
 				<li><a href="/api/Cake.Docker/AutoToolSettings">AutoToolSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Docker/DockerAliases">DockerAliases</a></li>
+				<li><a href="/api/Cake.Docker/DockerArgument">DockerArgument</a></li>
+				<li><a href="/api/Cake.Docker/DockerArgumentQuoting">Docker<wbr>Argument<wbr>Quoting</a></li>
 				<li><a href="/api/Cake.Docker/DockerBridge">DockerBridge</a></li>
 				<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>
@@ -702,6 +704,17 @@ class Type type-node
 								<td>
 									<div>
             Register or log in to a Docker registry.
+            If no server is specified, the docker engine default is used.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Docker/DockerAliases/B9D1092C">DockerLogout<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Logout from a Docker registry.
             If no server is specified, the docker engine default is used.
             </div>
 											<div><small><em>static</em></small></div>

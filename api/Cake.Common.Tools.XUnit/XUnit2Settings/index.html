@@ -268,6 +268,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings/7EC75DD6">ClassesToInclude</a></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the class names to include.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
 								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
@@ -292,6 +301,24 @@ class Type type-node
 								<td>
 									<div>
     Gets or sets the maximum thread count for collection parallelization.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings/7F12EEF9">MethodsToInclude</a></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the test methods to include.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings/FAFD9BA6">NamespacesToInclude</a></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the namespaces to include.
     </div>
 								</td>
 							</tr>
@@ -466,6 +493,36 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions/3D3E0234">IncludeClass<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings">XUnit2Settings</a></td>
+								<td>
+									<div>
+    Adds a class name to the settings, to include in test execution. Class name should be fully qualified; i.e., MyNameSpace.MyClassName
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions">X<wbr>Unit2<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions/83CA96A0">IncludeMethod<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings">XUnit2Settings</a></td>
+								<td>
+									<div>
+    Adds a method name to the settings, to include in test execution. Method name should be fully qualified; i.e., MyNameSpace.MyClassName.MyMethod
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions">X<wbr>Unit2<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions/D9FB60F5">IncludeNamespace<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings">XUnit2Settings</a></td>
+								<td>
+									<div>
+    Adds a namespace to the settings, to include in test execution.  Namespace should be fully qualified; i.e., MyNameSpace.MySubNamespace
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions">X<wbr>Unit2<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2SettingsExtensions/DAD33F9D">IncludeTrait<wbr>(string, <wbr>string[])<wbr></a></td>
 								<td><a href="/api/Cake.Common.Tools.XUnit/XUnit2Settings">XUnit2Settings</a></td>
 								<td>
@@ -487,17 +544,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>X<wbr>Unit2<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>X<wbr>Unit2<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -506,6 +552,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>X<wbr>Unit2<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

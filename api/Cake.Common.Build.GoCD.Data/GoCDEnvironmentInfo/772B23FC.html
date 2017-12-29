@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,43 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public GoCDPipelineInfo Pipeline { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.GoCD.IsRunningOnGoCD)
+{
+    Information(
+        @"Pipeline:
+        Name: {0}
+        Counter: {1}
+        Label: {2}",
+        BuildSystem.GoCD.Environment.Pipeline.Name,
+        BuildSystem.GoCD.Environment.Pipeline.Counter,
+        BuildSystem.GoCD.Environment.Pipeline.Label
+        );
+}
+else
+{
+    Information("Not running on GoCD");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (GoCD.IsRunningOnGoCD)
+{
+    Information(
+        @"Pipeline:
+        Name: {0}
+        Counter: {1}
+        Label: {2}",
+        GoCD.Environment.Pipeline.Name,
+        GoCD.Environment.Pipeline.Counter,
+        GoCD.Environment.Pipeline.Label
+        );
+}
+else
+{
+    Information("Not running on GoCD");
+}</code></pre>
+    </div>
 
 
 

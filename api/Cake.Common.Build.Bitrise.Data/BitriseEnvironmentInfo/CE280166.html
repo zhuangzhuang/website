@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -197,6 +198,39 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public BitriseWorkflowInfo Workflow { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.Bitrise.IsRunningOnBitrise)
+{
+    Information(
+        @"Workflow:
+        Workflow Id: {0}
+        Workflow Title: {1}",
+        BuildSystem.Bitrise.Environment.Workflow.WorkflowId,
+        BuildSystem.Bitrise.Environment.Workflow.WorkflowTitle
+        );
+}
+else
+{
+    Information("Not running on Bitrise");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (Bitrise.IsRunningOnBitrise)
+{
+    Information(
+        @"Workflow:
+        Workflow Id: {0}
+        Workflow Title: {1}",
+        Bitrise.Environment.Workflow.WorkflowId,
+        Bitrise.Environment.Workflow.WorkflowTitle
+        );
+}
+else
+{
+    Information("Not running on Bitrise");
+}</code></pre>
+    </div>
 
 
 

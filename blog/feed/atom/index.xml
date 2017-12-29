@@ -4,7 +4,107 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2017</rights>
-	<updated>2017-12-13T08:29:14Z</updated>
+	<updated>2017-12-29T09:42:31Z</updated>
+	<entry>
+		<author>
+			<name>devlead</name>
+		</author>
+		<link href="https://cakebuild.net/blog/2017/12/cake-v0.24.0-released" />
+		<id>https://cakebuild.net/blog/2017/12/cake-v0.24.0-released</id>
+		<title>Cake v0.24.0 released</title>
+		<updated>2017-12-29T00:00:00Z</updated>
+		<content>&lt;p&gt;Version 0.24.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;As a little holiday gift from the Cake team and contributors, the last version for 2017 just shipped!
+This release shouldn't have any breaking changes, but it does have several improvements, bug fixes, and a couple new features.&lt;/p&gt;
+&lt;p&gt;A notable new feature is module bootstrapping built into the Cake script runner, which lets you download and install modules from NuGet with a &lt;code&gt;#module&lt;/code&gt; preprocessor directive in your build script, similar to what you've previously already been able to do with &lt;code&gt;#tool&lt;/code&gt; and &lt;code&gt;#addin&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-cake"&gt;#module nuget:?package=Cake.UrlLoadDirective.Module&amp;amp;version=1.0.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The only caveat is that as modules can change and extend the internals of Cake, this bootstrapping needs to be done before Cake executes. This is solved by bootrapping being it's own step by invoking Cake with a &lt;code&gt;--bootstrap&lt;/code&gt; argument before you execute the script normally.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;./cake.exe build.cake --bootstrap
+./cake.exe build.cake
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notable amongst the improvements is that we've upgraded to Roslyn 2.6.1 which gives you &lt;a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-2"&gt;C# 7.2&lt;/a&gt; support in your Cake scripts.&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/holytshirt"&gt;holytshirt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/phillipsj"&gt;phillipsj&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Marusyk"&gt;Marusyk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/johankson"&gt;johankson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kcamp"&gt;kcamp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Cheesebaron"&gt;Cheesebaron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/onovotny"&gt;onovotny&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Sam13"&gt;Sam13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/robsammons"&gt;robsammons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Richard J Foster&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DorSoluto"&gt;DorSoluto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Thealexbarney"&gt;Thealexbarney&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/djdelaney"&gt;djdelaney&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gabrielweyer"&gt;gabrielweyer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BKDEVCONSTRUCTIV&lt;/li&gt;
+&lt;li&gt;Bert Van Steen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=43&amp;amp;state=closed"&gt;33 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1950"&gt;&lt;strong&gt;#1950&lt;/strong&gt;&lt;/a&gt; Allow Cake modules to be bootstrapped by Cake in a pre-processing phase&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1833"&gt;&lt;strong&gt;#1833&lt;/strong&gt;&lt;/a&gt; NUnit: Add support for /labels&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1653"&gt;&lt;strong&gt;#1653&lt;/strong&gt;&lt;/a&gt; Add Before and After options to NUnit3Labels enum&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/74"&gt;&lt;strong&gt;#74&lt;/strong&gt;&lt;/a&gt; MSpec support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bugs&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1957"&gt;&lt;strong&gt;#1957&lt;/strong&gt;&lt;/a&gt; Use working directory instead if initial script path for resolving tools directory in NuGetLoadDirectiveProvider&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1939"&gt;&lt;strong&gt;#1939&lt;/strong&gt;&lt;/a&gt; Bug - TypeExtensions.GetFullName doesn't handle nested types correctly&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1933"&gt;&lt;strong&gt;#1933&lt;/strong&gt;&lt;/a&gt; NuGetPackSettings.Properties does not support whitespaces.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1930"&gt;&lt;strong&gt;#1930&lt;/strong&gt;&lt;/a&gt; The &amp;quot;out&amp;quot; parameters are not compiled properly.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1915"&gt;&lt;strong&gt;#1915&lt;/strong&gt;&lt;/a&gt; Only set working directory on process runner if set in settings&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1889"&gt;&lt;strong&gt;#1889&lt;/strong&gt;&lt;/a&gt; XmlPoke ignores BOM encoding settings&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1874"&gt;&lt;strong&gt;#1874&lt;/strong&gt;&lt;/a&gt; NuGet script load: Do not add include for all cake scripts when include already specified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1968"&gt;&lt;strong&gt;#1968&lt;/strong&gt;&lt;/a&gt; Add interface for AssemblyVerifier so that it can be mocked&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1960"&gt;&lt;strong&gt;#1960&lt;/strong&gt;&lt;/a&gt; Update Roslyn to 2.6.1&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1955"&gt;&lt;strong&gt;#1955&lt;/strong&gt;&lt;/a&gt; ResultsDirectory is missing from DotNetCoreTestSettings&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1952"&gt;&lt;strong&gt;#1952&lt;/strong&gt;&lt;/a&gt; Add support for class/namespace/method arguments for XUnit2&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1946"&gt;&lt;strong&gt;#1946&lt;/strong&gt;&lt;/a&gt; Add option to pack files into the NuGet tool directory&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1943"&gt;&lt;strong&gt;#1943&lt;/strong&gt;&lt;/a&gt; Chocolatey package dependencies cannot be set using the ChocolateyPackSettings&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1936"&gt;&lt;strong&gt;#1936&lt;/strong&gt;&lt;/a&gt; Move to signing service v2&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1931"&gt;&lt;strong&gt;#1931&lt;/strong&gt;&lt;/a&gt; Allow passing a nuget.config as environment variable or in cake.config&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1924"&gt;&lt;strong&gt;#1924&lt;/strong&gt;&lt;/a&gt; Set UserAgent for in process nuget&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1922"&gt;&lt;strong&gt;#1922&lt;/strong&gt;&lt;/a&gt; GitVersion is missing AssemblySemFileVer&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1912"&gt;&lt;strong&gt;#1912&lt;/strong&gt;&lt;/a&gt; Support for DotCover Process Filter&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1910"&gt;&lt;strong&gt;#1910&lt;/strong&gt;&lt;/a&gt; MSBuild property values should escape carriage return and line feed&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1855"&gt;&lt;strong&gt;#1855&lt;/strong&gt;&lt;/a&gt; SignTool is not found with latest windows 10 SDK&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1796"&gt;&lt;strong&gt;#1796&lt;/strong&gt;&lt;/a&gt; Obsolete DotNetBuild and ultimately remove it&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1692"&gt;&lt;strong&gt;#1692&lt;/strong&gt;&lt;/a&gt; Log script compilation warnings and other diagnostics&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1522"&gt;&lt;strong&gt;#1522&lt;/strong&gt;&lt;/a&gt; The MSTest tool doesn't pick up the mstest.exe from Visual Studio 2017&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1811"&gt;&lt;strong&gt;#1811&lt;/strong&gt;&lt;/a&gt; Add code sample to build system properties&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Version 0.24.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;As a little holiday gift from the Cake team and contributors, the last version for 2017 just shipped!
+This release shouldn't have any breaking changes, but it does have several improvements, bug fixes, and a couple new features.&lt;/p&gt;
+&lt;p&gt;A notable new feature is module bootstrapping built into the Cake script runner, which lets you download and install modules from NuGet with a &lt;code&gt;#module&lt;/code&gt; preprocessor directive in your build script, similar to what you've previously already been able to do with &lt;code&gt;#tool&lt;/code&gt; and &lt;code&gt;#addin&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The only caveat is that as modules can change and extend the internals of Cake, this bootstrapping needs to be done before Cake executes. This is solved by bootrapping being it's own step by invoking Cake with a &lt;code&gt;--bootstrap&lt;/code&gt; argument before you execute the script normally.&lt;/p&gt;
+
+&lt;p&gt;Notable amongst the improvements is that we've upgraded to Roslyn 2.6.1 which gives you &lt;a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-2"&gt;C# 7.2&lt;/a&gt; support in your Cake scripts.&lt;/p&gt;
+&lt;p&gt;And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>mholo65</name>
@@ -1029,146 +1129,6 @@ MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBu
 		<summary>&lt;p&gt;Version 0.19.0 of Cake has been released.&lt;/p&gt;
 &lt;p&gt;This release of Cake is a smaller release in preparation for upgrading Cake itself to utilize latest RTM .NET SDK and Visual Studio 2017. The goal for v0.20.0 is also to unify around one scripting engine - Roslyn version 2.0 and depreciating the Mono scripting engine, this will likely result in raising the minimum supported version of .NET and Mono. We will before next release document and communicate exact versions.&lt;/p&gt;
 &lt;p&gt;We strongly recommend you pin the current version of Cake your using to avoid any unplanned interruption in your builds as the result of any potential future breaking changes. The &lt;a href="https://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;Pinning Cake Version&lt;/a&gt; under the tutorials section of our website describes how to achieve this with the default bootstrappers.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>devlead</name>
-		</author>
-		<link href="https://cakebuild.net/blog/2017/03/cake-v0.18.0-released" />
-		<id>https://cakebuild.net/blog/2017/03/cake-v0.18.0-released</id>
-		<title>Cake v0.18.0 released</title>
-		<updated>2017-03-07T00:00:00Z</updated>
-		<content>&lt;p&gt;Version 0.18.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there's a couple of breaking changes.&lt;/p&gt;
-&lt;p&gt;The minor breaking changes involve the old obsoleted DNU alias have been removed and WiXHeat had an incorrect signature which have been corrected.&lt;/p&gt;
-&lt;p&gt;The bigger breaking change is that with this release addins must target at least Cake.Core version 0.16.2 or later, addins targeting older versions will abort script execution.
-Many addins have already been updated and the many of those who have not yet upgraded, have pull requests ready for them. If any of the addins you use should be affected by this, please raise an issue in that addins repository. We've tried to reach out to all authors, but with hundreds of addins we've surely missed one or two.
-We do recommend you pin your builds to the version of Cake you using, that way you reduce the risk of builds failing because breaking changes. Instead you can do a controlled upgrade and take your time to sort any issues.&lt;/p&gt;
-&lt;p&gt;Amongst the more notable new features is MSBuild / Visual Studio 2017 support and support for loading scripts from NuGet.&lt;/p&gt;
-&lt;p&gt;We're also pleased to announce that from this release and forward all official Cake binaries will be signed with a .NET Foundation certificate, this isn't strong naming, so it won't affect addins in any way, just ensure the authenticity of the binaries.
-&lt;img src="https://cloud.githubusercontent.com/assets/1647294/23683657/8172ad14-039a-11e7-9d95-a4701bfd7f61.png" class="img-fluid" alt="image" /&gt;&lt;/p&gt;
-&lt;p&gt;Worth noting in a near future release we will update to and unify around latest stable version Roslyn scripting - this means Mono scripting engine will be removed, we will still run on Mono, but we will require a newer version of Mono than we do today. This will bring a lot of benefit for Cake as we will be able to support the latest C# features and reduce the maintenance burden and error process of maintaining multiple scripting engines.&lt;/p&gt;
-&lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
-&lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/JeremyCade"&gt;JeremyCade&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/stffabi"&gt;stffabi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/phillipsj"&gt;phillipsj&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/thomaslevesque"&gt;thomaslevesque&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/kcamp"&gt;kcamp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/jjschlesinger"&gt;jjschlesinger&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/agc93"&gt;agc93&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/brettpsion"&gt;brettpsion&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/bspinner"&gt;bspinner&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/mrahhal"&gt;mrahhal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/aateeque"&gt;aateeque&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/wwwlicious"&gt;wwwlicious&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/nalla"&gt;nalla&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/flcdrg"&gt;flcdrg&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/Redth"&gt;Redth&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/gsferreira"&gt;gsferreira&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/RehanSaeed"&gt;RehanSaeed&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/jnm2"&gt;jnm2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/molehillrocker"&gt;molehillrocker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pedro Henrique Marques&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/kvanover"&gt;kvanover&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=29&amp;amp;state=closed"&gt;59 issues&lt;/a&gt; closed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Breaking changes&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1396"&gt;&lt;strong&gt;#1396&lt;/strong&gt;&lt;/a&gt; Remove obsoleted DNU aliases&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1276"&gt;&lt;strong&gt;#1276&lt;/strong&gt;&lt;/a&gt; WiXHeat misleading signature- no mode operates on file list&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1518"&gt;&lt;strong&gt;#1518&lt;/strong&gt;&lt;/a&gt; Add &amp;quot;build tools&amp;quot; path for MSBuild 2017 to MSBuildResolver&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1492"&gt;&lt;strong&gt;#1492&lt;/strong&gt;&lt;/a&gt; Add ChocolateyNew Alias&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1481"&gt;&lt;strong&gt;#1481&lt;/strong&gt;&lt;/a&gt; Add support for NuGet Init and Add commands&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1466"&gt;&lt;strong&gt;#1466&lt;/strong&gt;&lt;/a&gt; NUnitSettings does not have X86 property&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1416"&gt;&lt;strong&gt;#1416&lt;/strong&gt;&lt;/a&gt; Enhance TeamCity provider&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1399"&gt;&lt;strong&gt;#1399&lt;/strong&gt;&lt;/a&gt; Support for TF Build Commands&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1381"&gt;&lt;strong&gt;#1381&lt;/strong&gt;&lt;/a&gt; Provide ability to add Custom attributes when creating AssemblyInfo&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1377"&gt;&lt;strong&gt;#1377&lt;/strong&gt;&lt;/a&gt; Support for uninstall packages using Chocolatey&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1374"&gt;&lt;strong&gt;#1374&lt;/strong&gt;&lt;/a&gt; Provide ability to specify name for xunit report&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1369"&gt;&lt;strong&gt;#1369&lt;/strong&gt;&lt;/a&gt; MSBuild support for Visual Studio 2017 (aka &amp;quot;15&amp;quot;)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1352"&gt;&lt;strong&gt;#1352&lt;/strong&gt;&lt;/a&gt; Add support for importing namespaces at the assembly level&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1301"&gt;&lt;strong&gt;#1301&lt;/strong&gt;&lt;/a&gt; Add DotCover Merge&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1249"&gt;&lt;strong&gt;#1249&lt;/strong&gt;&lt;/a&gt; Allow modules to listen for script lifecycle events&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1166"&gt;&lt;strong&gt;#1166&lt;/strong&gt;&lt;/a&gt; Support optional parameters on alias methods&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1053"&gt;&lt;strong&gt;#1053&lt;/strong&gt;&lt;/a&gt; Support downloadable .cake script directive&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/887"&gt;&lt;strong&gt;#887&lt;/strong&gt;&lt;/a&gt; Extending the Sign command&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/600"&gt;&lt;strong&gt;#600&lt;/strong&gt;&lt;/a&gt; ParseAssemblyInfo does not work .vb&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Bugs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1483"&gt;&lt;strong&gt;#1483&lt;/strong&gt;&lt;/a&gt; Duplicate depedencies references in project.json for Cake.Testing.XUnit&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1448"&gt;&lt;strong&gt;#1448&lt;/strong&gt;&lt;/a&gt; Cake.Testing package depends on xunit.core package&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1441"&gt;&lt;strong&gt;#1441&lt;/strong&gt;&lt;/a&gt; Optional parameter codegen not invariant&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1427"&gt;&lt;strong&gt;#1427&lt;/strong&gt;&lt;/a&gt; XBuildRunner#GetToolExecutableNames returning wrong executables&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1426"&gt;&lt;strong&gt;#1426&lt;/strong&gt;&lt;/a&gt; Space in Reference Preprocessor Directive Throws Illegal characters in path&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1389"&gt;&lt;strong&gt;#1389&lt;/strong&gt;&lt;/a&gt; Spaces in #load path will cause an Illegal characters in path error.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1386"&gt;&lt;strong&gt;#1386&lt;/strong&gt;&lt;/a&gt; Add CakeNamespaceImport for BuildSystem Aliases&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1363"&gt;&lt;strong&gt;#1363&lt;/strong&gt;&lt;/a&gt; HeatSettings.OutputGroup is unusable&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1349"&gt;&lt;strong&gt;#1349&lt;/strong&gt;&lt;/a&gt; OctoPack not passing --format to octo.exe&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1342"&gt;&lt;strong&gt;#1342&lt;/strong&gt;&lt;/a&gt; Error: Unknown Token when directory contains &amp;#64; character.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1260"&gt;&lt;strong&gt;#1260&lt;/strong&gt;&lt;/a&gt; Using reserved name for parameter name causes a parser failure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Improvements&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1513"&gt;&lt;strong&gt;#1513&lt;/strong&gt;&lt;/a&gt; signtool.exe should be called only once when signing multiple files&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1510"&gt;&lt;strong&gt;#1510&lt;/strong&gt;&lt;/a&gt; Missing MSBuild15 on enum NuGetMSBuildVersion for VS 2017&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1504"&gt;&lt;strong&gt;#1504&lt;/strong&gt;&lt;/a&gt; Add ChocoPush alias for an IEnumerable&lt;FilePath&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1503"&gt;&lt;strong&gt;#1503&lt;/strong&gt;&lt;/a&gt; Add ChocoPack alias for an IEnumerable&lt;FilePath&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1487"&gt;&lt;strong&gt;#1487&lt;/strong&gt;&lt;/a&gt; Usage of -NoCache on installing tools and addins&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1469"&gt;&lt;strong&gt;#1469&lt;/strong&gt;&lt;/a&gt; Mac OSX is not properly detected when running on Mono&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1463"&gt;&lt;strong&gt;#1463&lt;/strong&gt;&lt;/a&gt; NuGet Tool Locator system paths on mac need updating&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1455"&gt;&lt;strong&gt;#1455&lt;/strong&gt;&lt;/a&gt; Logging throws exception when there are curly braces in the string&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1439"&gt;&lt;strong&gt;#1439&lt;/strong&gt;&lt;/a&gt; CopyDirectory - Missing Log information&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1438"&gt;&lt;strong&gt;#1438&lt;/strong&gt;&lt;/a&gt; Teach XmlPeek to silence warnings, if needed&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1424"&gt;&lt;strong&gt;#1424&lt;/strong&gt;&lt;/a&gt; Http call in unit test&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1403"&gt;&lt;strong&gt;#1403&lt;/strong&gt;&lt;/a&gt; Add optional Go.CD Server URL Parameter to GetHistory&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1379"&gt;&lt;strong&gt;#1379&lt;/strong&gt;&lt;/a&gt; Add RedirectStandardError to ProcessRunner&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1344"&gt;&lt;strong&gt;#1344&lt;/strong&gt;&lt;/a&gt; Cake's default tools / addins / modules paths are not so default as they seem.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1338"&gt;&lt;strong&gt;#1338&lt;/strong&gt;&lt;/a&gt; ArgumentException with illegal character information&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1293"&gt;&lt;strong&gt;#1293&lt;/strong&gt;&lt;/a&gt; Add mechanism to validate addins&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/670"&gt;&lt;strong&gt;#670&lt;/strong&gt;&lt;/a&gt; Support XUnit's x86 .exe runner&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/568"&gt;&lt;strong&gt;#568&lt;/strong&gt;&lt;/a&gt; Add Gitter and Twitter Notifications&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1501"&gt;&lt;strong&gt;#1501&lt;/strong&gt;&lt;/a&gt; DownloadFile typo in docs&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1495"&gt;&lt;strong&gt;#1495&lt;/strong&gt;&lt;/a&gt; Typo in SignTool docs&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1489"&gt;&lt;strong&gt;#1489&lt;/strong&gt;&lt;/a&gt; Fix typos in GitVersion documentation&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1472"&gt;&lt;strong&gt;#1472&lt;/strong&gt;&lt;/a&gt; Correct issue with GitLink Alias Category&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1434"&gt;&lt;strong&gt;#1434&lt;/strong&gt;&lt;/a&gt; Fix commented example for DotNetCoreTest&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1388"&gt;&lt;strong&gt;#1388&lt;/strong&gt;&lt;/a&gt; Fix doc comments in InnoSetupAliases&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1373"&gt;&lt;strong&gt;#1373&lt;/strong&gt;&lt;/a&gt; Fix typo in comment&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1372"&gt;&lt;strong&gt;#1372&lt;/strong&gt;&lt;/a&gt; Fixed Spelling Mistake.&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;Version 0.18.0 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there's a couple of breaking changes.&lt;/p&gt;
-&lt;p&gt;The minor breaking changes involve the old obsoleted DNU alias have been removed and WiXHeat had an incorrect signature which have been corrected.&lt;/p&gt;
-&lt;p&gt;The bigger breaking change is that with this release addins must target at least Cake.Core version 0.16.2 or later, addins targeting older versions will abort script execution.
-Many addins have already been updated and the many of those who have not yet upgraded, have pull requests ready for them. If any of the addins you use should be affected by this, please raise an issue in that addins repository. We've tried to reach out to all authors, but with hundreds of addins we've surely missed one or two.
-We do recommend you pin your builds to the version of Cake you using, that way you reduce the risk of builds failing because breaking changes. Instead you can do a controlled upgrade and take your time to sort any issues.&lt;/p&gt;
-&lt;p&gt;Amongst the more notable new features is MSBuild / Visual Studio 2017 support and support for loading scripts from NuGet.&lt;/p&gt;
-&lt;p&gt;We're also pleased to announce that from this release and forward all official Cake binaries will be signed with a .NET Foundation certificate, this isn't strong naming, so it won't affect addins in any way, just ensure the authenticity of the binaries.
-&lt;img src="https://cloud.githubusercontent.com/assets/1647294/23683657/8172ad14-039a-11e7-9d95-a4701bfd7f61.png" class="img-fluid" alt="image"&gt;&lt;/p&gt;
-&lt;p&gt;Worth noting in a near future release we will update to and unify around latest stable version Roslyn scripting - this means Mono scripting engine will be removed, we will still run on Mono, but we will require a newer version of Mono than we do today. This will bring a lot of benefit for Cake as we will be able to support the latest C# features and reduce the maintenance burden and error process of maintaining multiple scripting engines.&lt;/p&gt;
 &lt;p&gt;Please let us know if you run into any issues with this latest release.&lt;/p&gt;
 &lt;p&gt;Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!&lt;/p&gt;
 &lt;p&gt;Contributions were included from:&lt;/p&gt;
