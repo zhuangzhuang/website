@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -195,6 +196,47 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public BambooRepositoryInfo Repository { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.Bamboo.IsRunningOnBamboo)
+{
+    Information(
+        @"Repository:
+        Branch: {0}
+        Name: {1}
+        Repository Revision: {2}
+        Scm: {3}",
+        BuildSystem.Bamboo.Environment.Repository.Branch,
+        BuildSystem.Bamboo.Environment.Repository.Name,
+        BuildSystem.Bamboo.Environment.Repository.Commit.RepositoryRevision,
+        BuildSystem.Bamboo.Environment.Repository.Scm
+        );
+}
+else
+{
+    Information("Not running on Bamboo");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (Bamboo.IsRunningOnBamboo)
+{
+    Information(
+        @"Repository:
+        Branch: {0}
+        Name: {1}
+        Repository Revision: {2}
+        Scm: {3}",
+        Bamboo.Environment.Repository.Branch,
+        Bamboo.Environment.Repository.Name,
+        Bamboo.Environment.Repository.Commit.RepositoryRevision,
+        Bamboo.Environment.Repository.Scm
+        );
+}
+else
+{
+    Information("Not running on Bamboo");
+}</code></pre>
+    </div>
 
 
 

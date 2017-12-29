@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,43 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public TFBuildDefinitionInfo BuildDefinition { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+{
+    Information(
+        @"BuildDefinition:
+        Id: {0}
+        Name: {1}
+        Version: {2}",
+        BuildSystem.TFBuild.Environment.BuildDefinition.Id,
+        BuildSystem.TFBuild.Environment.BuildDefinition.Name,
+        BuildSystem.TFBuild.Environment.BuildDefinition.Version
+        );
+}
+else
+{
+    Information("Not running on TFBuild");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (TFBuild.IsRunningOnTFBuild)
+{
+    Information(
+        @"BuildDefinition:
+        Id: {0}
+        Name: {1}
+        Version: {2}",
+        TFBuild.Environment.BuildDefinition.Id,
+        TFBuild.Environment.BuildDefinition.Name,
+        TFBuild.Environment.BuildDefinition.Version
+        );
+}
+else
+{
+    Information("Not running on TFBuild");
+}</code></pre>
+    </div>
 
 
 

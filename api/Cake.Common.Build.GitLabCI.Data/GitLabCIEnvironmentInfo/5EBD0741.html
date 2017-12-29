@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -199,6 +200,48 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public GitLabCIProjectInfo Project { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+{
+    Information(
+        @"Project:
+        Id: {0}
+        Name: {1}
+        Namespace: {2}
+        Path: {3}
+        Url: {4}
+        Directory: {5}",
+        BuildSystem.GitLabCI.Environment.Project.Id,
+        BuildSystem.GitLabCI.Environment.Project.Name,
+        BuildSystem.GitLabCI.Environment.Project.Namespace,
+        BuildSystem.GitLabCI.Environment.Project.Path,
+        BuildSystem.GitLabCI.Environment.Project.Url,
+        BuildSystem.GitLabCI.Environment.Project.Directory
+        );
+}
+else
+{
+    Information("Not running on GitLabCI");
+}</code></pre>
+    
+
+    <pre><code class="cs">Information(
+    @"Project:
+    Id: {0}
+    Name: {1}
+    Namespace: {2}
+    Path: {3}
+    Url: {4}
+    Directory: {5}",
+    GitLabCI.Environment.Project.Id,
+    GitLabCI.Environment.Project.Name,
+    GitLabCI.Environment.Project.Namespace,
+    GitLabCI.Environment.Project.Path,
+    GitLabCI.Environment.Project.Url,
+    GitLabCI.Environment.Project.Directory
+    );</code></pre>
+    </div>
 
 
 

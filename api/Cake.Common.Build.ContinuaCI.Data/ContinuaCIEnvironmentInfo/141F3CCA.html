@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -203,6 +204,55 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public ContinuaCIBuildInfo Build { get; }</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+{
+    Information(
+        @"Build:
+        Id: {0}
+        Version: {1}
+        Started By: {2}
+        Is Feature Branch Build: {3}
+        Build Number: {4}
+        Started: {5}",
+        BuildSystem.ContinuaCI.Environment.Build.Id,
+        BuildSystem.ContinuaCI.Environment.Build.Version,
+        BuildSystem.ContinuaCI.Environment.Build.StartedBy,
+        BuildSystem.ContinuaCI.Environment.Build.IsFeatureBranchBuild,
+        BuildSystem.ContinuaCI.Environment.Build.BuildNumber,
+        BuildSystem.ContinuaCI.Environment.Build.Started
+        );
+}
+else
+{
+    Information("Not running on ContinuaCI");
+}</code></pre>
+    
+
+    <pre><code class="cs">if (ContinuaCI.IsRunningOnContinuaCI)
+{
+    Information(
+        @"Build:
+        Id: {0}
+        Version: {1}
+        Started By: {2}
+        Is Feature Branch Build: {3}
+        Build Number: {4}
+        Started: {5}",
+        ContinuaCI.Environment.Build.Id,
+        ContinuaCI.Environment.Build.Version,
+        ContinuaCI.Environment.Build.StartedBy,
+        ContinuaCI.Environment.Build.IsFeatureBranchBuild,
+        ContinuaCI.Environment.Build.BuildNumber,
+        ContinuaCI.Environment.Build.Started
+        );
+}
+else
+{
+    Information("Not running on ContinuaCI");
+}</code></pre>
+    </div>
 
 
 
