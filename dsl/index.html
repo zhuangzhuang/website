@@ -352,8 +352,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -387,8 +387,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
@@ -471,16 +471,14 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -534,7 +532,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -573,8 +571,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -858,7 +856,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-             Contains Cake aliases for configuring Amazon Simple Storage Service
+            Amazon Route53 aliases
             </td>
                 </tr>
                 <tr>
@@ -900,7 +898,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            The result of CakeMailProvider API post
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -958,8 +961,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -1013,8 +1016,8 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to extracting API metadata using
-            <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to creating new <a href="http://dotnet.github.io/docfx">DocFx</a>
+            projects.
             </td>
                 </tr>
                 <tr>
@@ -1048,12 +1051,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            The result of EmailProvider
             </td>
                 </tr>
                 <tr>
@@ -1082,8 +1080,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/figlet">Figlet</a></td>
@@ -1158,14 +1156,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1218,10 +1216,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/iso">ISO</a></td>
@@ -1230,7 +1226,7 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to reporting issues to pull requests.
+            Contains functionality related to read warnings from DocFx log files.
             </td>
                 </tr>
                 <tr>
@@ -1260,7 +1256,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -1293,8 +1289,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1409,7 +1405,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1431,7 +1427,7 @@
                 <tr>
                     <td><a href="/dsl/slack">Slack</a></td>
                     <td>
-            Class that lets you override default API settings
+            Field for message attachment
             </td>
                 </tr>
                 <tr>
@@ -1498,11 +1494,8 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
-            strong name or not.
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </td>
                 </tr>
                 <tr>
