@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Cake - API - CloudShellSettings Class</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li><a href="/dsl">Reference</a></li>
+        <li><a href="/addins">Addins</a></li>
+        <li class="active"><a href="/api">API</a></li>
+        <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Constructors">Constructors</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<p><a href="#SeeAlso">See Also</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">                    
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Cake.Apprenda.dll">Cake<wbr>.Apprenda<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Cake.Apprenda">Cake<wbr>.Apprenda</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Apprenda/AddOnInfo">AddOnInfo</a></li>
+				<li><a href="/api/Cake.Apprenda/ApprendaAliases">ApprendaAliases</a></li>
+				<li><a href="/api/Cake.Apprenda/ApprendaToolProvider">ApprendaToolProvider</a></li>
+				<li><a href="/api/Cake.Apprenda/CloudInfo">CloudInfo</a></li>
+				<li><a href="/api/Cake.Apprenda/CloudShellContextExtensions">Cloud<wbr>Shell<wbr>Context<wbr>Extensions</a></li>
+				<li class="selected"><a href="/api/Cake.Apprenda/CloudShellSettings">CloudShellSettings</a></li>
+				<li><a href="/api/Cake.Apprenda/CloudShellTool_1">CloudShellTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Apprenda/CloudShellToolResolver">Cloud<wbr>Shell<wbr>Tool<wbr>Resolver</a></li>
+				<li><a href="/api/Cake.Apprenda/DeployedAddOnInfo">DeployedAddOnInfo</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Apprenda/ICloudShellToolResolver">I<wbr>Cloud<wbr>Shell<wbr>Tool<wbr>Resolver</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Apprenda/ApplicationStage">ApplicationStage</a></li>
+
+
+                    </ul>
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>CloudShellSettings <small>Class</small></h1>
+</section>
+<section class="content">
+	        <div class="alert alert-info" role="alert">
+            <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
+
+                        For more information about this project, please visit 
+                        <a href="https://github.com/apprenda/Cake.Apprenda" class="alert-link">https://github.com/apprenda/Cake.Apprenda</a>.
+                            </div>
+
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by ACS Tool
+            </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Cake.Apprenda.dll">Cake<wbr>.Apprenda<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Cake.Apprenda">Cake<wbr>.Apprenda</a></dd>
+											
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>ToolSettings</li>								
+									</ul>
+								</dd>				
+							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Apprenda.ACS.StartVersion/StartVersionSettings">StartVersionSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.RegisterCloud/RegisterCloudSettings">Register<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.PatchVersion/PatchVersionSettings">PatchVersionSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.RemoveVersion/RemoveVersionSettings">Remove<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ConnectCloud/ConnectCloudSettings">ConnectCloudSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredCloudsSettings">Read<wbr>Registered<wbr>Clouds<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.GetDeployedAddOns/GetDeployedAddOnsSettings">Get<wbr>Deployed<wbr>Add<wbr>Ons<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ReadRegisteredClouds/ReadRegisteredCloudsSettings">Read<wbr>Registered<wbr>Clouds<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloudSettings">Disconnect<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ExportArchive/ExportArchiveSettings">Export<wbr>Archive<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewApplication/NewApplicationSettings">New<wbr>Application<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ProvisionAddOn/ProvisionAddOnSettings">Provision<wbr>Add<wbr>On<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewUser/NewUserSettings">NewUserSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.CancelVersionPromotion/CancelVersionPromotionSettings">Cancel<wbr>Version<wbr>Promotion<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.DisconnectCloud/DisconnectCloudSettings">Disconnect<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.StopDebugMode/StopDebugModeSettings">Stop<wbr>Debug<wbr>Mode<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeStateSettings">SetNodeStateSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.DeProvisionAddOn/DeProvisionAddOnSettings">De<wbr>Provision<wbr>Add<wbr>On<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloudSettings">ConnectCloudSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.SetInstanceCount/SetInstanceCountSettings">Set<wbr>Instance<wbr>Count<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.GetAddOns/GetAddOnsSettings">GetAddOnsSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.StopVersion/StopVersionSettings">StopVersionSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.SetArchive/SetArchiveSettings">SetArchiveSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloudSettings">Register<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.DemoteVersion/DemoteVersionSettings">Demote<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.PromoteVersion/PromoteVersionSettings">Promote<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewPackage/NewPackageSettings">NewPackageSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.RemoveApplication/RemoveApplicationSettings">Remove<wbr>Application<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.SetInstanceMinimum/SetInstanceMinimumSettings">Set<wbr>Instance<wbr>Minimum<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeStateSettings">GetNodeStateSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ExportManifest/ExportManifestSettings">Export<wbr>Manifest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.StartInDebugMode/StartInDebugModeSettings">Start<wbr>In<wbr>Debug<wbr>Mode<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewVersion/NewVersionSettings">NewVersionSettings</a></li>								
+									</ul>
+								</dd>			
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Base0["ToolSettings"]--&gt;Type
+	Type["CloudShellSettings"]
+class Type type-node
+	Type--&gt;Derived0["StartVersionSettings"]
+	click Derived0 "/api/Cake.Apprenda.ACS.StartVersion/StartVersionSettings"
+	Type--&gt;Derived1["RegisterCloudSettings"]
+	click Derived1 "/api/Cake.Apprenda.ACS.RegisterCloud/RegisterCloudSettings"
+	Type--&gt;Derived2["PatchVersionSettings"]
+	click Derived2 "/api/Cake.Apprenda.ACS.PatchVersion/PatchVersionSettings"
+	Type--&gt;Derived3["RemoveVersionSettings"]
+	click Derived3 "/api/Cake.Apprenda.ACS.RemoveVersion/RemoveVersionSettings"
+	Type--&gt;Derived4["ConnectCloudSettings"]
+	click Derived4 "/api/Cake.Apprenda.ACS.ConnectCloud/ConnectCloudSettings"
+	Type--&gt;Derived5["ReadRegisteredCloudsSettings"]
+	click Derived5 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredCloudsSettings"
+	Type--&gt;Derived6["GetDeployedAddOnsSettings"]
+	click Derived6 "/api/Cake.Apprenda.ACS.GetDeployedAddOns/GetDeployedAddOnsSettings"
+	Type--&gt;Derived7["ReadRegisteredCloudsSettings"]
+	click Derived7 "/api/Cake.Apprenda.ACS.ReadRegisteredClouds/ReadRegisteredCloudsSettings"
+	Type--&gt;Derived8["DisconnectCloudSettings"]
+	click Derived8 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloudSettings"
+	Type--&gt;Derived9["ExportArchiveSettings"]
+	click Derived9 "/api/Cake.Apprenda.ACS.ExportArchive/ExportArchiveSettings"
+	Type--&gt;Derived10["NewApplicationSettings"]
+	click Derived10 "/api/Cake.Apprenda.ACS.NewApplication/NewApplicationSettings"
+	Type--&gt;Derived11["ProvisionAddOnSettings"]
+	click Derived11 "/api/Cake.Apprenda.ACS.ProvisionAddOn/ProvisionAddOnSettings"
+	Type--&gt;Derived12["NewUserSettings"]
+	click Derived12 "/api/Cake.Apprenda.ACS.NewUser/NewUserSettings"
+	Type--&gt;Derived13["CancelVersionPromotionSettings"]
+	click Derived13 "/api/Cake.Apprenda.ACS.CancelVersionPromotion/CancelVersionPromotionSettings"
+	Type--&gt;Derived14["DisconnectCloudSettings"]
+	click Derived14 "/api/Cake.Apprenda.ACS.DisconnectCloud/DisconnectCloudSettings"
+	Type--&gt;Derived15["StopDebugModeSettings"]
+	click Derived15 "/api/Cake.Apprenda.ACS.StopDebugMode/StopDebugModeSettings"
+	Type--&gt;Derived16["SetNodeStateSettings"]
+	click Derived16 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeStateSettings"
+	Type--&gt;Derived17["DeProvisionAddOnSettings"]
+	click Derived17 "/api/Cake.Apprenda.ACS.DeProvisionAddOn/DeProvisionAddOnSettings"
+	Type--&gt;Derived18["ConnectCloudSettings"]
+	click Derived18 "/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloudSettings"
+	Type--&gt;Derived19["SetInstanceCountSettings"]
+	click Derived19 "/api/Cake.Apprenda.ACS.SetInstanceCount/SetInstanceCountSettings"
+	Type--&gt;Derived20["GetAddOnsSettings"]
+	click Derived20 "/api/Cake.Apprenda.ACS.GetAddOns/GetAddOnsSettings"
+	Type--&gt;Derived21["StopVersionSettings"]
+	click Derived21 "/api/Cake.Apprenda.ACS.StopVersion/StopVersionSettings"
+	Type--&gt;Derived22["SetArchiveSettings"]
+	click Derived22 "/api/Cake.Apprenda.ACS.SetArchive/SetArchiveSettings"
+	Type--&gt;Derived23["RegisterCloudSettings"]
+	click Derived23 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloudSettings"
+	Type--&gt;Derived24["DemoteVersionSettings"]
+	click Derived24 "/api/Cake.Apprenda.ACS.DemoteVersion/DemoteVersionSettings"
+	Type--&gt;Derived25["PromoteVersionSettings"]
+	click Derived25 "/api/Cake.Apprenda.ACS.PromoteVersion/PromoteVersionSettings"
+	Type--&gt;Derived26["NewPackageSettings"]
+	click Derived26 "/api/Cake.Apprenda.ACS.NewPackage/NewPackageSettings"
+	Type--&gt;Derived27["RemoveApplicationSettings"]
+	click Derived27 "/api/Cake.Apprenda.ACS.RemoveApplication/RemoveApplicationSettings"
+	Type--&gt;Derived28["SetInstanceMinimumSettings"]
+	click Derived28 "/api/Cake.Apprenda.ACS.SetInstanceMinimum/SetInstanceMinimumSettings"
+	Type--&gt;Derived29["GetNodeStateSettings"]
+	click Derived29 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeStateSettings"
+	Type--&gt;Derived30["ExportManifestSettings"]
+	click Derived30 "/api/Cake.Apprenda.ACS.ExportManifest/ExportManifestSettings"
+	Type--&gt;Derived31["StartInDebugModeSettings"]
+	click Derived31 "/api/Cake.Apprenda.ACS.StartInDebugMode/StartInDebugModeSettings"
+	Type--&gt;Derived32["NewVersionSettings"]
+	click Derived32 "/api/Cake.Apprenda.ACS.NewVersion/NewVersionSettings"
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public class CloudShellSettings : ToolSettings</code></pre>
+
+
+
+
+
+
+			<h1 id="Constructors">Constructors</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Apprenda/CloudShellSettings/8E55CFA6">CloudShellSettings<wbr>()<wbr></a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+             Get a basic string representation of specified object.
+             </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(<wbr>Cloud<wbr>Shell<wbr>Settings[])<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the source is contained in a list
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+	<h1 id="SeeAlso">See Also</h1>
+	<ul class="list-unstyled">
+			<li><code><a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></code></li>
+	</ul>
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    <a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> GitHub</a> |
+    <a href="https://twitter.com/cakebuildnet"><i class="fa fa-twitter"></i> Twitter</a> |
+    <a href="https://gitter.im/cake-build/cake"><i class="fa fa-comment"></i> Gitter</a>
+    <br>
+    Copyright © <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
+    <br>
+    Generated by <a href="http://wyam.io">Wyam</a>
+</p>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Gitter -->
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'cake-build/cake'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

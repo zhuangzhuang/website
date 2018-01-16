@@ -151,6 +151,7 @@
     <li><a href="/dsl/apigee">Apigee</a></li>        
     <li><a href="/dsl/applesimulator">AppleSimulator</a></li>        
     <li><a href="/dsl/apppacakager">AppPacakager</a></li>        
+    <li><a href="/dsl/apprenda">Apprenda</a></li>        
     <li><a href="/dsl/appveyor">AppVeyor</a></li>        
     <li><a href="/dsl/argument">Argument</a></li>        
     <li><a href="/dsl/assembly-info">Assembly Info</a></li>        
@@ -161,6 +162,7 @@
     <li><a href="/dsl/bumpy">Bumpy</a></li>        
     <li><a href="/dsl/cake-extension-for-xcbuild">Cake Extension for XcBuild</a></li>        
     <li><a href="/dsl/cake-extension-for-xcstudio">Cake Extension for XcStudio</a></li>        
+    <li><a href="/dsl/cake-extension-to-help-you-find-xcomponent-applications">Cake Extension to help you find XComponent Applications</a></li>        
     <li><a href="/dsl/cakemail">CakeMail</a></li>        
     <li><a href="/dsl/chutzpah">Chutzpah</a></li>        
     <li><a href="/dsl/cmake">CMake</a></li>        
@@ -175,6 +177,7 @@
     <li><a href="/dsl/curl">Curl</a></li>        
     <li><a href="/dsl/database">Database</a></li>        
     <li><a href="/dsl/deployment">Deployment</a></li>        
+    <li><a href="/dsl/devicexunittestreceiver">DeviceXunitTestReceiver</a></li>        
     <li><a href="/dsl/directory-operations">Directory Operations</a></li>        
     <li><a href="/dsl/docfx">DocFx</a></li>        
     <li><a href="/dsl/docker">Docker</a></li>        
@@ -187,6 +190,7 @@
     <li><a href="/dsl/endpoint">Endpoint</a></li>        
     <li><a href="/dsl/entityframework">EntityFramework</a></li>        
     <li><a href="/dsl/environment">Environment</a></li>        
+    <li><a href="/dsl/fastlane">Fastlane</a></li>        
     <li><a href="/dsl/figlet">Figlet</a></li>        
     <li><a href="/dsl/file-helpers">File Helpers</a></li>        
     <li><a href="/dsl/file-operations">File Operations</a></li>        
@@ -290,21 +294,16 @@
 	<h1>Signing</h1>
 </section>
 <section class="content">
-            <div class="alert alert-info" role="alert">
-            <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
-
-                        For more information about this project, please visit 
-                        <a href="https://github.com/MihaMarkic/Cake.VsixSignTool" class="alert-link">https://github.com/MihaMarkic/Cake.VsixSignTool</a>.
-                            </div>
-
+    
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </div>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </div>
 
 
         <h1 id="General">General</h1>  

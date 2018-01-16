@@ -195,25 +195,126 @@
 		<h1>Criteria</h1>
 	</section>
 	<section class="content">
-		<p>You can control and influence the flow of the build script execution by providing criteria. This is a predicate that has to be fulfilled for the task to execute. The criteria does not affect however succeeding task will be executed.</p>
-<pre><code class="language-csharp">Task(&quot;A&quot;)
+		<html><head></head><body><p>You can control and influence the flow of the build script execution by providing criteria. This is a predicate that has to be fulfilled for the task to execute. The criteria does not affect however succeeding task will be executed.</p>
+<pre><code class="language-csharp">Task("A")
     .WithCriteria(DateTime.Now.Second % 2 == 0)
     .Does(() =&gt;
-{
-});
-
-Task(&quot;B&quot;)
+    {
+    });
+    
+Task("B")
     .WithCriteria(() =&gt; DateTime.Now.Second % 2 == 0)
-    .IsDependentOn(&quot;A&quot;)
-    .Does(() =&gt;
-{
-});
+    .IsDependentOn("A")
+    .Does(() =&gt; 
+    {
+    });
 
-RunTarget(&quot;B&quot;);
+RunTarget("B");
 </code></pre>
 <p>Task <code>A</code>'s criteria will be set when the task is created while Task <code>B</code>'s criteria will be evaluated when the task is being executed.</p>
-<p>For criteria with states that might change during the execution of the build script, consider using the lambda alternative.</p>
+<p>In a real project, we would control the execution of the tasks as a pipeline according to different environmental states, the repository branches, etc. In this case we get two criterias from outside to detect if local build and we are working on master branch. Notice we are using AppVeyor Build System, you can do similar stuff with other Build Systems as well.</p>
+<pre><code class="language-csharp">var isLocalBuild = <a href="/api/Cake.Common.Build/BuildSystem/041CC18A">BuildSystem.IsLocalBuild</a>
+var isMasterBranch = StringComparer.OrdinalIgnoreCase.Equals("master",
+    BuildSystem.AppVeyor.Environment.Repository.Branch));
+    
+var deployUrl = HasArgument("DeployUrl") 
+    ? Argument&lt;string&gt;("DeployUrl") 
+    : EnvironmentVariable("DEPLOY_URL");
+    
+var target = "Default";
 
+Task("Clean")
+    .Does(() =&gt;
+    {
+    });
+
+Task("Restore")
+    .Does(() =&gt; 
+    {
+    });
+
+Task("Build")    
+    .Does(() =&gt;
+    {
+    });
+
+Task("Migrate")    
+    .WithCriteria(!isLocalBuild)
+    .WithCriteria(isMasterBranch)
+    .Does(() =&gt; 
+    {
+    });
+
+Task("Deploy")    
+    .WithCriteria(!isLocalBuild)
+    .WithCriteria(isMasterBranch)
+    .Does(() =&gt; 
+    {
+        // Deploy to some server using content and deployUrl
+    });    
+
+Task("Default")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore")
+    .IsDependentOn("Build")
+    .IsDependentOn("Migrate")
+    .IsDependentOn("Deploy")    
+    .Does(() =&gt; 
+    {
+    });
+
+RunTarget(target);
+</code></pre>
+<p>For criteria with states that might change during the execution of the build script, consider using the lambda alternative.</p>
+<p>Using the previous example, we add one local var to pass to recovery mode with some error in the <code><a href="/api/Cake.EntityFramework.Models/Migration">Migration</a></code> task.</p>
+<pre><code class="language-csharp">...
+var target = "Default";
+
+var isRecoveryMode = false;    
+
+Task("Migrate")    
+    .WithCriteria(!isLocalBuild)
+    .WithCriteria(isMasterBranch)
+    .Does(() =&gt; 
+    {
+    })
+    .OnError(ex =&gt; 
+    {
+        isRecoveryMode = true
+    });
+
+Task("Deploy")    
+    .WithCriteria(!isLocalBuild)
+    .WithCriteria(isMasterBranch)
+    .WithCriteria(() =&gt; !isRecoveryMode)
+    .Does(() =&gt; 
+    {        
+        // Deploy to some server using content and deployUrl
+    });    
+
+Task("Recovery")
+    .WithCriteria(!isLocalBuild)
+    .WithCriteria(isMasterBranch)
+    .WithCriteria(() =&gt; isRecoveryMode)
+    .Does(() =&gt;
+    {
+        // Restore database
+    });
+
+Task("Default")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore")
+    .IsDependentOn("Build")
+    .IsDependentOn("Migrate")
+    .IsDependentOn("Deploy")    
+    .IsDependentOn("Recovery")
+    .Does(() =&gt; 
+    {
+    });
+
+RunTarget(target);
+</code></pre>
+</body></html>
 	</section>
                 
             </div>           
