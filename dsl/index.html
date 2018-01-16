@@ -385,19 +385,14 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
@@ -474,16 +469,14 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-            Contains functionality related to file system globbing. 
-            </td>
+    Contains functionality related to file system globbing.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -537,7 +530,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -689,11 +682,12 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </td>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/specflow">SpecFlow</a></td>
@@ -709,7 +703,12 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    </p>
     </td>
                 </tr>
                 <tr>
@@ -801,7 +800,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-            Cake build aliases for Android ADB Package Manager commands
+            Cake build aliases for Android ADB commands
             </td>
                 </tr>
                 <tr>
@@ -861,13 +860,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Cloud Front distributions
+            Amazon Route53 aliases
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running Azure login commands.
+            Contains Cake aliases for running commands managing Azure resource groups.
             </td>
                 </tr>
                 <tr>
@@ -909,7 +908,12 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            Contains functionality related to CakeMail API
+            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1028,8 +1032,7 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to building websites using 
-            <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1053,13 +1056,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></td>
@@ -1097,8 +1095,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fastlane">Fastlane</a></td>
@@ -1171,19 +1169,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Gitter</code></pre>
-            </p>
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-            Contains functionality related to file system globbing. 
-            </td>
+    Contains functionality related to file system globbing.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1236,10 +1229,8 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-            <p>
-            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
-            </p>
-            </td>
+    Contains functionality related to HTTP operations
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/iso">ISO</a></td>
@@ -1248,7 +1239,7 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to read warnings from DocFx log files.
+            Contains functionality related to reporting issues to pull requests.
             </td>
                 </tr>
                 <tr>
@@ -1278,7 +1269,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -1427,12 +1418,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
-            </p>
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1444,16 +1430,17 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </td>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/slack">Slack</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of SlackProvider Chat API post
             </td>
                 </tr>
                 <tr>
