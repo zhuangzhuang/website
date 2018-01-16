@@ -87,6 +87,7 @@
 <p><a href="#shebang-directive">Shebang directive</a></p>
 <p><a href="#break-directive">Break directive</a></p>
 <p><a href="#using-static-directive">Using static directive</a></p>
+<p><a href="#module-directive">Module directive</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -304,6 +305,15 @@ or
 <pre><code class="language-csharp">using static System.Math;
 
 Information(Round(1.1));
+</code></pre>
+<h1 id="module-directive">Module directive</h1>
+<p>The module directive lets you boostrap Cake modules by downloading them from a NuGet source.</p>
+<h2 id="usage-7">Usage</h2>
+<pre><code class="language-cake">#module nuget:?package=Cake.UrlLoadDirective.Module&amp;version=1.0.2
+</code></pre>
+<p>As modules can change and extend the internals of Cake, this bootstrapping needs to be done before Cake executes. This is solved by bootrapping being it's own step by invoking Cake with a <code>--bootstrap</code> argument before you execute the script normally.</p>
+<pre><code class="language-bash">./cake.exe build.cake --bootstrap
+./cake.exe build.cake
 </code></pre>
 
 	</section>
