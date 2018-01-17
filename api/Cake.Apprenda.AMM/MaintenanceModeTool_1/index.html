@@ -212,8 +212,8 @@
 											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud">ConnectCloud</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState">GetNodeState</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState">SetNodeState</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds">ReadRegisteredClouds</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud">RegisterCloud</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds">ReadRegisteredClouds</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud">DisconnectCloud</a></li>								
 									</ul>
 								</dd>			
@@ -232,10 +232,10 @@ class Type type-node
 	click Derived1 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState"
 	Type--&gt;Derived2["SetNodeState"]
 	click Derived2 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState"
-	Type--&gt;Derived3["ReadRegisteredClouds"]
-	click Derived3 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds"
-	Type--&gt;Derived4["RegisterCloud"]
-	click Derived4 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud"
+	Type--&gt;Derived3["RegisterCloud"]
+	click Derived3 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud"
+	Type--&gt;Derived4["ReadRegisteredClouds"]
+	click Derived4 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds"
 	Type--&gt;Derived5["DisconnectCloud"]
 	click Derived5 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud"
 
