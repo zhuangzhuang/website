@@ -181,6 +181,9 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -195,9 +198,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -248,8 +248,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -265,10 +265,10 @@
 class Type type-node
 	Type--&gt;Derived0["TaskTeardownContext"]
 	click Derived0 "/api/Cake.Core/TaskTeardownContext"
-	Type--&gt;Derived1["TaskSetupContext"]
-	click Derived1 "/api/Cake.Core/TaskSetupContext"
-	Type--&gt;Derived2["TeardownContext"]
-	click Derived2 "/api/Cake.Core/TeardownContext"
+	Type--&gt;Derived1["TeardownContext"]
+	click Derived1 "/api/Cake.Core/TeardownContext"
+	Type--&gt;Derived2["TaskSetupContext"]
+	click Derived2 "/api/Cake.Core/TaskSetupContext"
 
 						</div>
 					</div>
@@ -629,6 +629,7 @@ class Type type-node
 								<td>
 									<div>
     Downloads a Chocolatey package to the current working directory.
+    Requires Chocolatey licensed edition.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
 								</td>
@@ -639,6 +640,9 @@ class Type type-node
 								<td>
 									<div>
     Downloads a Chocolatey package using the specified settings.
+    Requires Chocolatey licensed edition.
+    Features requiring Chocolatey for Business or a minimum version are documented
+    in <code class="cs"><a href="/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings">ChocolateyDownloadSettings</a></code>.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></em></small></div>
 								</td>
@@ -2708,17 +2712,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2727,6 +2720,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
