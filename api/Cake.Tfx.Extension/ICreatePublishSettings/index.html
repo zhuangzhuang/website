@@ -87,7 +87,8 @@
 </div>
 
                 </section>
-                <section class="sidebar">                    
+                <section class="sidebar">    
+                                     
                     	
 	    <script src="/assets/js/lunr.min.js"></script>
     <script src="/assets/js/searchIndex.js"></script>
@@ -150,6 +151,7 @@
 
 
                     </ul>
+                            
                 </section>                
             </aside>
             
@@ -193,8 +195,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -204,10 +206,10 @@
 							graph TD
 	Type["ICreatePublishSettings"]
 class Type type-node
-	Type-.-&gt;Implementing0["TfxExtensionPublishSettings"]
-	click Implementing0 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
-	Type-.-&gt;Implementing1["TfxExtensionCreateSettings"]
-	click Implementing1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type-.-&gt;Implementing0["TfxExtensionCreateSettings"]
+	click Implementing0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type-.-&gt;Implementing1["TfxExtensionPublishSettings"]
+	click Implementing1 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
 
 						</div>
 					</div>
@@ -359,17 +361,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Create<wbr>Publish<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Create<wbr>Publish<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -378,6 +369,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Create<wbr>Publish<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
