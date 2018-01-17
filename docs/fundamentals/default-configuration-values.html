@@ -292,9 +292,9 @@ SkipVerification=true
 </code></pre>
 <hr>
 <h1 id="in-process-nuget-installation">In-Process NuGet installation</h1>
-<p>From Cake version <code>0.22.0</code> you can opt-in to not use <code>NuGet.exe</code> but instead let Cake handle the installation of addins, tools and scripts in-process.</p>
+<p>From version <code>0.25.0</code> of Cake, the default is now to use the In-Process NuGet Client.  If you require to use NuGet.exe instead, you can opt-out by setting this value to false.</p>
 <h2 id="default-value-5">Default Value</h2>
-<pre><code class="language-sh">false
+<pre><code class="language-sh">true
 </code></pre>
 <h2 id="valid-values-1">Valid Values</h2>
 <pre><code class="language-sh">true
@@ -306,10 +306,10 @@ false
 </code></pre>
 <h2 id="config-file-contents-5">Config File Contents</h2>
 <pre><code class="language-sh">[NuGet]
-UseInProcessClient=true
+UseInProcessClient=false
 </code></pre>
 <h2 id="direct-argument-5">Direct Argument</h2>
-<pre><code class="language-sh">cake.exe --nuget_useinprocessclient=true
+<pre><code class="language-sh">cake.exe --nuget_useinprocessclient=false
 </code></pre>
 <hr>
 <h1 id="addin-nuget-dependencies">Addin NuGet dependencies</h1>
