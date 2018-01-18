@@ -219,6 +219,7 @@
     <li><a href="/dsl/msbuild-resource">MSBuild Resource</a></li>        
     <li><a href="/dsl/msbuildtask">MSBuildTask</a></li>        
     <li><a href="/dsl/msdeploy">MsDeploy</a></li>        
+    <li><a href="/dsl/ndepend">NDepend</a></li>        
     <li><a href="/dsl/node">Node</a></li>        
     <li><a href="/dsl/npm">Npm</a></li>        
     <li><a href="/dsl/nuget">NuGet</a></li>        
@@ -306,15 +307,7 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            <p></p>
+            Contains functionality to restore SQL Server backup files *.bak
             </div>
 
 
