@@ -194,6 +194,7 @@
 				<li><a href="/api/Cake.Docker/DockerAliases/E17B347B">DockerLogin<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Docker/DockerAliases/68E06099">DockerLogin<wbr>(ICakeContext, <wbr>Docker<wbr>Registry<wbr>Login<wbr>Settings, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Docker/DockerAliases/B9D1092C">DockerLogout<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Docker/DockerAliases/C11D224D">DockerLogout<wbr>(ICakeContext, <wbr>Docker<wbr>Registry<wbr>Logout<wbr>Settings, <wbr>string)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Docker/DockerAliases/A4A83F7F">DockerLogs<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Docker/DockerAliases/16B7FCC4">DockerLogs<wbr>(ICakeContext, <wbr>Docker<wbr>Container<wbr>Logs<wbr>Settings, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Docker/DockerAliases/FE72D38B">DockerNetworkConnect<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string[])<wbr></a></li>
@@ -276,7 +277,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void DockerLogs(this ICakeContext context, string container)</code></pre>
+	<pre><code>public static IEnumerable&lt;string&gt; DockerLogs(this ICakeContext context, string container)</code></pre>
 
 
 
@@ -335,7 +336,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>
