@@ -187,6 +187,7 @@
 				<li><a href="/api/Cake.Docker/DockerNetworkDisconnectSettings">Docker<wbr>Network<wbr>Disconnect<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerNetworkRemoveSettings">Docker<wbr>Network<wbr>Remove<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerRegistryLoginSettings">Docker<wbr>Registry<wbr>Login<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Docker/DockerRegistryLogoutSettings">Docker<wbr>Registry<wbr>Logout<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmInitSettings">Docker<wbr>Swarm<wbr>Init<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmJoinSettings">Docker<wbr>Swarm<wbr>Join<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerSwarmLeaveSettings">Docker<wbr>Swarm<wbr>Leave<wbr>Settings</a></li>
@@ -733,6 +734,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Docker/DockerAliases/C11D224D">DockerLogout<wbr>(ICakeContext, <wbr>Docker<wbr>Registry<wbr>Logout<wbr>Settings, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Logout from a Docker registry.
+            If no server is specified, the docker engine default is used.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Docker/DockerAliases/B9D1092C">DockerLogout<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -745,7 +757,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerAliases/16B7FCC4">DockerLogs<wbr>(ICakeContext, <wbr>Docker<wbr>Container<wbr>Logs<wbr>Settings, <wbr>string)<wbr></a></td>
-								<td>void</td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Logs <span name="container" class="paramref">container</span> using the given <span name="settings" class="paramref">settings</span>.
@@ -755,7 +767,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerAliases/A4A83F7F">DockerLogs<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
-								<td>void</td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Logs <span name="container" class="paramref">container</span> using default settings.

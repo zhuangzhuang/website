@@ -302,7 +302,7 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            True if the project is a net core project
+            True if the project is a net core compatible project
             </div>
 								</td>
 							</tr>
@@ -311,7 +311,25 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            True if the project is a net framework project
+            True if the project is a net framework compatible project
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/579B3FB5">IsNetStandard</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            True if the project is a net standard compatible project
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/EA376810">Is<wbr>V<wbr>S2017<wbr>Project<wbr>Format</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Whether the project parsed is in the newer VS2017 onwards format or the legacy pre 2017 format
             </div>
 								</td>
 							</tr>
@@ -328,7 +346,17 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/F27EADE5">OutputPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div>Gets the compiler output path.</div>
+									<div>
+            Gets the first compiler artifact output path.
+            Use OutputPaths for multi-targeting libraries
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/45F15848">OutputPaths</a></td>
+								<td>DirectoryPath[]</td>
+								<td>
+									<div>Gets the compiler artifact output paths.</div>
 								</td>
 							</tr>
 							<tr>
@@ -341,10 +369,28 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/CA2937D6">PackageReferences</a></td>
+								<td>ICollection<wbr>&lt;&gt;<wbr></td>
+								<td>
+									<div>
+            The project package references. A collection of <code class="cs"><a href="/api/Cake.Incubator/PackageReference">PackageReference</a></code>
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/CA1448AF">Platform</a></td>
 								<td>string</td>
 								<td>
 									<div>Gets the target platform.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/515A1B4C">ProjectFilePath</a></td>
+								<td>FilePath</td>
+								<td>
+									<div>
+            The path for the parsed project file
+            </div>
 								</td>
 							</tr>
 							<tr>
@@ -393,7 +439,14 @@ class Type type-node
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/5A0E9736">Target<wbr>Framework<wbr>Version</a></td>
 								<td>string</td>
 								<td>
-									<div>Gets the compiler target framework version.</div>
+									<div>Gets the first compiler target framework version.</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/EFE08690">Target<wbr>Framework<wbr>Versions</a></td>
+								<td>string[]</td>
+								<td>
+									<div>Gets the first compiler target framework versions.</div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -437,11 +490,110 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/ABC1C8BA">GetAssemblyFilePaths<wbr>()<wbr></a></td>
+								<td>FilePath[]</td>
+								<td>
+									<div>
+            Gets a parsed projects output assembly paths for mulit-targeting projects
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/5451AA27">Get<wbr>Dot<wbr>Net<wbr>Cli<wbr>Tool<wbr>Reference<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator/DotNetCliToolReference">Dot<wbr>Net<wbr>Cli<wbr>Tool<wbr>Reference</a></td>
+								<td>
+									<div>
+            Gets a project DotNetCliToolReference
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/E4D53944">GetExtension<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
             Returns the parsed projects output assembly extension
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/9B031987">GetPackage<wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator/PackageReference">PackageReference</a></td>
+								<td>
+									<div>
+            Gets a project package reference
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/26F8283F">GetReference<wbr>(string)<wbr></a></td>
+								<td>Project<wbr>Assembly<wbr>Reference</td>
+								<td>
+									<div>
+            Gets a project assembly reference by name or alias
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/F42A737D">Has<wbr>Dot<wbr>Net<wbr>Cli<wbr>Tool<wbr>Reference<wbr>(string)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks for a DotNet Cli Tool Reference by name
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/65B8BD5B">HasPackage<wbr>(string, <wbr>string)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks for a project package refernce by name and optional TargetFramework
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/A4259E3E">HasReference<wbr>(string)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks for a project assembly refernce by name or alias
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/A5213119">Is<wbr>Dot<wbr>Net<wbr>Cli<wbr>Test<wbr>Project<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is a `dotnet test` compatible project
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/9F5CC15B">Is<wbr>Framework<wbr>Test<wbr>Project<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is a pre `dotnet test` compatible project
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
@@ -464,6 +616,17 @@ class Type type-node
 								<td>
 									<div>
             Checks if the project is a library
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/34616854">IsTestProject<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is a test compatible project
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - FileExtensions.GetProjectAssembly(ICakeContext, FilePath, string) Method</title>
+        <title>Cake - API - KuduClientAliases.KuduClient(ICakeContext, KuduClientSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -144,20 +144,15 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Kudu.Client.dll">Cake<wbr>.Kudu<wbr>.Client<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></li>
+		<li><a href="/api/Cake.Kudu.Client">Cake<wbr>.Kudu<wbr>.Client</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></li>
+		<li><a href="/api/Cake.Kudu.Client/KuduClientAliases">KuduClientAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Incubator/FileExtensions/A863E047">Filter<wbr>(<wbr>File<wbr>Path<wbr>Collection, <wbr>string[])<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FileExtensions/F1111715">GetOutputAssemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Incubator/FileExtensions/844C5069">GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FileExtensions/DEC63D67">Get<wbr>Solution<wbr>Assemblies<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FileExtensions/95C14A1C">LoadXml<wbr>(IFile)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FileExtensions/4357238F">Move<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Incubator/FileExtensions/AAC7621F">Move<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Kudu.Client/KuduClientAliases/759221F1">KuduClient<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Kudu.Client/KuduClientAliases/A726459F">KuduClient<wbr>(ICakeContext, <wbr>KuduClientSettings)<wbr></a></li>
 
 
                     </ul>
@@ -172,50 +167,59 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a>.</h3>
-	<h1>GetProjectAssembly<wbr>(ICakeContext, <wbr>FilePath, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Kudu.Client/KuduClientAliases">KuduClientAliases</a>.</h3>
+	<h1>KuduClient<wbr>(ICakeContext, <wbr>KuduClientSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Incubator" class="alert-link">https://github.com/cake-contrib/Cake.Incubator</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Kudu.Client" class="alert-link">https://github.com/cake-contrib/Cake.Kudu.Client</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Gets the output assembly path for a project file, for a specific build configuration
-            </div>
+             Get a Kudu client using supplied <code class="cs"></code>.
+             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Incubator.dll">Cake<wbr>.Incubator<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Kudu.Client.dll">Cake<wbr>.Kudu<wbr>.Client<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Incubator">Cake<wbr>.Incubator</a></dd>
+						<dd><a href="/api/Cake.Kudu.Client">Cake<wbr>.Kudu<wbr>.Client</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Incubator/FileExtensions">FileExtensions</a></dd>		
+						<dd><a href="/api/Cake.Kudu.Client/KuduClientAliases">KuduClientAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static FilePath GetProjectAssembly(this ICakeContext context, FilePath target, string configuration)</code></pre>
+	<pre><code>public static IKuduClient KuduClient(this ICakeContext context, KuduClientSettings settings)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-            The project's <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code> and the build configuration will return the 
-            output file (dll or exe) for the project and return as a <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code>
-            The alias expects a valid project file.
-            <pre><code class="cs">// Project output dll/exe as FilePath[] for 'Custom' configuration
-IEnumerable&lt;FilePath&gt; filePaths = GetOutputAssemblies(new FilePath("test.csproj"), "Custom");</code></pre>
-            </div>
+             <pre><code class="cs"> #addin nuget:?package=Cake.Kudu.Client
+
+ string  baseUri     = EnvironmentVariable("KUDU_CLIENT_BASEURI"),
+         userName    = EnvironmentVariable("KUDU_CLIENT_USERNAME"),
+         password    = EnvironmentVariable("KUDU_CLIENT_PASSWORD");
+
+ IKuduClient kuduClient = KuduClient(
+     new KuduClientSettings(
+         baseUri,
+        userName,
+        password
+    ){
+        Timeout = TimeSpan.FromSeconds(120)
+        });</code></pre>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -255,17 +259,12 @@ IEnumerable&lt;FilePath&gt; filePaths = GetOutputAssemblies(new FilePath("test.c
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>the cake context</td>
+						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>target</td>
-						<td>FilePath</td>
-						<td>the project file</td>
-					</tr>
-					<tr>
-						<td>configuration</td>
-						<td>string</td>
-						<td>the build configuration</td>
+						<td>settings</td>
+						<td><a href="/api/Cake.Kudu.Client/KuduClientSettings">KuduClientSettings</a></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -282,8 +281,8 @@ IEnumerable&lt;FilePath&gt; filePaths = GetOutputAssemblies(new FilePath("test.c
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>FilePath</td>
-					<td>the output assembly path</td>
+					<td><a href="/api/Cake.Kudu.Client/IKuduClient">IKuduClient</a></td>
+					<td>A new instance of a <code class="cs"></code>.</td>
 				</tr>
 			</tbody></table>
 		</div>
