@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -148,6 +149,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.DependencyCheck/ArgumentAppender">ArgumentAppender</a></li>
+				<li><a href="/api/Cake.DependencyCheck/ArgumentAttribute">ArgumentAttribute</a></li>
 				<li><a href="/api/Cake.DependencyCheck/DependencyCheckAliases">Dependency<wbr>Check<wbr>Aliases</a></li>
 				<li class="selected"><a href="/api/Cake.DependencyCheck/DependencyCheckRunner">Dependency<wbr>Check<wbr>Runner</a></li>
 				<li><a href="/api/Cake.DependencyCheck/DependencyCheckSettings">Dependency<wbr>Check<wbr>Settings</a></li>
@@ -176,7 +178,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Dependency Check runner class.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -232,11 +238,15 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckRunner/CA35ACDE">Dependency<wbr>Check<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></td>
-									<td></td>
+									<td>
+            Dependency Check runner.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckRunner/274AE834">Dependency<wbr>Check<wbr>Runner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>ArgumentAppender)<wbr></a></td>
-									<td></td>
+									<td>
+            Dependency Check runner.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -261,14 +271,18 @@ class Type type-node
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckRunner/C7B94848">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Dependency Check executable names
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckRunner/3A3D5543">GetToolName<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Tool name
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -311,17 +325,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dependency<wbr>Check<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Dependency<wbr>Check<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -330,6 +333,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dependency<wbr>Check<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

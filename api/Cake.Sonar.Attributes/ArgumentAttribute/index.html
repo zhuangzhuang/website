@@ -83,6 +83,7 @@
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
+<p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -149,7 +150,6 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute">ArgumentAttribute</a></li>
-				<li><a href="/api/Cake.Sonar.Attributes/SecretArgumentAttribute">Secret<wbr>Argument<wbr>Attribute</a></li>
 
 
                     </ul>
@@ -247,7 +247,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/78F01CE0">ArgumentAttribute<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/8CAA6A90">ArgumentAttribute<wbr>(string, <wbr>bool)<wbr></a></td>
 									<td></td>
 							</tr>
 					</tbody></table>
@@ -269,7 +269,35 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/1DBFA118">Default</a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/9E6418F6">From</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/E8BB2111">Name</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/5BFD2D1D">Secure</a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/849E9D6A">ToExcluding</a></td>
 								<td>string</td>
 								<td>
 									<div></div>
@@ -280,6 +308,35 @@ class Type type-node
 			</div>
 		
 
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/49616BFC">Apply<wbr>(<wbr>Process<wbr>Argument<wbr>Builder, <wbr>string, <wbr>SonarSettings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar.Attributes/ArgumentAttribute/DA19C702">Match<wbr>(Version)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 			<h1 id="ExtensionMethods">Extension Methods</h1>
@@ -316,17 +373,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Argument<wbr>Attribute&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Argument<wbr>Attribute&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -335,6 +381,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Argument<wbr>Attribute&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

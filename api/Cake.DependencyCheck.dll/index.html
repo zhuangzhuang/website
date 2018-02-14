@@ -319,27 +319,43 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.DependencyCheck/ArgumentAppender">ArgumentAppender</a></td>
-									<td></td>
+									<td>
+            Argument appender. This class searching all filled settings and append them.
+            </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.DependencyCheck.Attributes/ArgumentAttribute">ArgumentAttribute</a></td>
-									<td></td>
+								<td><a href="/api/Cake.DependencyCheck/ArgumentAttribute">ArgumentAttribute</a></td>
+									<td>
+            Argument attribute class
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckAliases">Dependency<wbr>Check<wbr>Aliases</a></td>
-									<td></td>
+									<td>
+            <p>
+            Contains functionality for running a OWASP Dependency Check analysis on a C# project.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#tool "nuget:?package=DependencyCheck.Runner.Tool&amp;include=./**/dependency-check.sh&amp;include=./**/dependency-check.bat"
+#addin "nuget:?package=Cake.DependencyCheck"</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckRunner">Dependency<wbr>Check<wbr>Runner</a></td>
-									<td></td>
+									<td>
+            Dependency Check runner class.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings">Dependency<wbr>Check<wbr>Settings</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.DependencyCheck.Attributes/FlagAttribute">FlagAttribute</a></td>
-									<td></td>
+									<td>
+            Required:
+             - Project
+             - Scan
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

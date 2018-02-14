@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -147,6 +149,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.DependencyCheck/ArgumentAppender">ArgumentAppender</a></li>
+				<li><a href="/api/Cake.DependencyCheck/ArgumentAttribute">ArgumentAttribute</a></li>
 				<li class="selected"><a href="/api/Cake.DependencyCheck/DependencyCheckAliases">Dependency<wbr>Check<wbr>Aliases</a></li>
 				<li><a href="/api/Cake.DependencyCheck/DependencyCheckRunner">Dependency<wbr>Check<wbr>Runner</a></li>
 				<li><a href="/api/Cake.DependencyCheck/DependencyCheckSettings">Dependency<wbr>Check<wbr>Settings</a></li>
@@ -175,7 +178,19 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>
+            Contains functionality for running a OWASP Dependency Check analysis on a C# project.
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#tool "nuget:?package=DependencyCheck.Runner.Tool&amp;include=./**/dependency-check.sh&amp;include=./**/dependency-check.bat"
+#addin "nuget:?package=Cake.DependencyCheck"</code></pre>
+            <p></p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -214,6 +229,24 @@ class Type type-node
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static class DependencyCheckAliases</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            Project and Scan attributes required.
+            Also Format can be (XML, HTML, CSV, JSON, VULN, ALL). The default is HTML.
+            
+            <pre><code class="cs">#tool "nuget:?package=DependencyCheck.Runner.Tool&amp;include=./**/dependency-check.sh&amp;include=./**/dependency-check.bat"
+#addin "nuget:?package=Cake.DependencyCheck"
+
+Task("Dependency-Check")
+   .Does(() =&gt; {
+      DependencyCheck(new DependencyCheckSettings
+      {
+         Project = "ExampleProjectName",
+         Scan = "source/directory/*",
+         Format = "HTML"
+      });
+  });</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -255,7 +288,9 @@ class Type type-node
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckAliases/327187D9">DependencyCheck<wbr>(ICakeContext, <wbr>Dependency<wbr>Check<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run the actual OWASP Dependency Check analysis.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -263,7 +298,9 @@ class Type type-node
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckAliases/EB996022">DependencyCheck<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Run the actual OWASP Dependency Check analysis.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
