@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -148,6 +149,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.DependencyCheck/ArgumentAppender">ArgumentAppender</a></li>
+				<li><a href="/api/Cake.DependencyCheck/ArgumentAttribute">ArgumentAttribute</a></li>
 				<li><a href="/api/Cake.DependencyCheck/DependencyCheckAliases">Dependency<wbr>Check<wbr>Aliases</a></li>
 				<li><a href="/api/Cake.DependencyCheck/DependencyCheckRunner">Dependency<wbr>Check<wbr>Runner</a></li>
 				<li class="selected"><a href="/api/Cake.DependencyCheck/DependencyCheckSettings">Dependency<wbr>Check<wbr>Settings</a></li>
@@ -176,7 +178,13 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Required:
+             - Project
+             - Scan
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -232,11 +240,15 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/290CCED4">Dependency<wbr>Check<wbr>Settings<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Default constructor
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/D29D6CF6">Dependency<wbr>Check<wbr>Settings<wbr>(string, <wbr>string)<wbr></a></td>
-									<td></td>
+									<td>
+            Parameterized constructor
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -260,112 +272,513 @@ class Type type-node
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/5891378B">AdvancedHelp</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Print the advanced help message.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/0283999B">BundleAudit</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The path to the bundle-audit executable.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/100BBF05">ConnectionString</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The connection string to the database.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/037F6733">ConnectionTimeout</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The connection timeout (in milliseconds) to use when downloading resources.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/325FF11B">CveUrl12Base</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Base URL for each year’s CVE 1.2, the %d will be replaced with the year
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/AB4B66C2">CveUrl12Modified</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            URL for the modified CVE 1.2
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/FC7EA5E7">CveUrl20Base</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Base URL for each year’s CVE 2.0, the %d will be replaced with the year
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/2ED8A707">CveUrl20Modified</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            URL for the modified CVE 2.0
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/82098135">CveValidForHours</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The number of hours to wait before checking for new updates from the NVD. The default is 4 hours.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/9F3E0A9E">Data</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The location of the data directory used to store persistent data. This option should generally not be set.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/58DDC03F">DatabaseDriverName</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The database driver name.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/5128B76A">DatabaseDriverPath</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The path to the database driver; note, this does not need to be set unless the JAR is outside of the class path.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/8808D8FD">DatabasePassword</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The password for connecting to the database.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/82DCFDCB">DatabaseUser</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The username used to connect to the database.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/45381645">DisableArchive</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the Archive Analyzer will be disabled.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/1E6F96E5">DisableAssembly</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether or not the .NET Assembly Analyzer should be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/2AF9CA86">DisableAutoconf</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Autoconf Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/5CCC5573">DisableBundleAudit</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Ruby Bundler Audit Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/7A472942">DisableCentral</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the Central Analyzer will be used. Disabling this analyzer is not recommended as it could lead to false negatives (e.g. libraries that have vulnerabilities may not be reported correctly). If this analyzer is being disabled there is a good chance you also want to disable the Nexus Analyzer.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/4573565E">DisableCmake</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Cmake Analyzer will be disabled.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/E3A93CF2">Disable<wbr>Cocoapods<wbr>Analyzer</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Cocoapods Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/CD86EC67">DisableComposer</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental PHP Composer Lock File Analyzer will be disabled.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/81AC28C0">DisableJar</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the Jar Analyzer will be disabled.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/6A8D1050">DisableNexus</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the Nexus Analyzer will be used (requires Nexus Pro). Note, this has been superceded by the Central Analyzer. However, you can configure the Nexus URL to utilize an internally hosted Nexus Pro server.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/44A98ACF">DisableNodeJS</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the retired Node.js Package Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/C81131FF">DisableNSP</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the NSP Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/1B203C06">DisableNuspec</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether or not the .NET Nuget Nuspec Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/A2607771">DisableOpenSSL</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the OpenSSL Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/06C6501B">DisablePyDist</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Python Distribution Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/54B0CA6D">DisablePyPkg</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Python Package Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/EFE9D48A">DisableRubygems</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Ruby Gemspec Analyzer will be used.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/7657A9A7">Disable<wbr>Swift<wbr>Package<wbr>Manager<wbr>Analyzer</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Sets whether the experimental Swift Package Manager Analyzer will be used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/F1C89C46">EnableExperimental</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Enable the experimental analyzers. If not set the analyzers marked as experimental below will not be loaded or used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/0EA799FA">EnableRetired</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Enable the retired analyzers. If not set the analyzers marked as retired below will not be loaded or used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/458E6964">Exclude</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The path patterns to exclude from the scan - this option can be specified multiple times. This accepts Ant style path patterns (e.g. /exclude/).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/D6392703">FailOnCVSS</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            If the score set between 0 and 10 the exit code from dependency-check will indicate if a vulnerability with a CVSS score equal to or higher was identified.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/9A516683">Format</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The output format to write to (XML, HTML, CSV, JSON, VULN, ALL). The default is HTML.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/50917E3B">Help</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Print the help message.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/A871EF75">Log</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The file path to write verbose logging information.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/C38B09BE">Mono</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The path to Mono for .NET Assembly analysis on non-windows systems.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/27EA4699">Nexus</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The url to the Nexus Server’s web service end point (example: http://domain.enterprise/nexus/service/local/). If not set the Nexus Analyzer will be disabled.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/655A8835">NexusUsesProxy</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Whether or not the defined proxy should be used when connecting to Nexus.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/D95233DB">Noupdate</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Disables the automatic updating of the CPE data.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/F4743A43">Out</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The folder to write reports to. This defaults to the current directory. If the format is not set to ALL one could specify a specific file name.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/D2B95829">Project</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The name of the project being scanned.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/F00EDAD2">Propertyfile</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Specifies a file that contains properties to use instead of applicaion defaults.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/FA64BC4C">ProxyPassword</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The proxy password to use when downloading resources.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/8EFBE813">ProxyPort</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The proxy port to use when downloading resources.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/D5AE97A7">ProxyServer</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The proxy server to use when downloading resources; see the proxy configuration page for more information.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/0B70EADD">ProxyUser</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The proxy username to use when downloading resources.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/0FD43897">Purge</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Delete the local copy of the NVD. This is used to force a refresh of the data.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/527E4AF7">Scan</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The path to scan - this option can be specified multiple times. It is also possible to specify Ant style paths (e.g. directory/*/.jar).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/3DA09902">Suppression</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The file paths to the suppression XML files; used to suppress false positives. This can be specified more than once to utilize multiple suppression files.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/D27A52BC">SymLink</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The depth that symbolic links will be followed; the default is 0 meaning symbolic links will not be followed.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/25A043D4">Updateonly</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            If set only the update phase of dependency-check will be executed; no scan will be executed and no report will be generated.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/FFBAF7B9">Version</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Print the runner version information.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.DependencyCheck/DependencyCheckSettings/24C7485F">ZipExtensions</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            A comma-separated list of additional file extensions to be treated like a ZIP file, the contents will be extracted and analyzed.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
