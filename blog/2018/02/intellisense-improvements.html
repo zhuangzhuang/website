@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="description" />
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Cake - Intellisense improvements in Visual Studio Code</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
+        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet" />
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li class="active"><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li><a href="/dsl">Reference</a></li>
+        <li><a href="/addins">Addins</a></li>
+        <li><a href="/api">API</a></li>
+        <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/cake-build/website/blob/develop/input/blog/2018-02-21-intellisense-improvements.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"></div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+        <li><a href="/blog/Addins">Addins</a></li>
+        <li><a href="/blog/Announcement">Announcement</a></li>
+        <li><a href="/blog/How-Tos">How To&#x27;s</a></li>
+        <li><a href="/blog/Infrastructure">Infrastructure</a></li>
+        <li><a href="/blog/News">News</a></li>
+        <li><a href="/blog/Release-Notes">Release Notes</a></li>
+    
+    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/02">February, 2018</a></li>
+        <li><a href="/blog/archive/2018/01">January, 2018</a></li>
+        <li><a href="/blog/archive/2017/12">December, 2017</a></li>
+        <li><a href="/blog/archive/2017/11">November, 2017</a></li>
+        <li><a href="/blog/archive/2017/10">October, 2017</a></li>
+        <li><a href="/blog/archive/2017/09">September, 2017</a></li>
+        <li><a href="/blog/archive/2017/08">August, 2017</a></li>
+        <li><a href="/blog/archive/2017/07">July, 2017</a></li>
+        <li><a href="/blog/archive/2017/06">June, 2017</a></li>
+        <li><a href="/blog/archive/2017/05">May, 2017</a></li>
+        <li><a href="/blog/archive/2017/04">April, 2017</a></li>
+        <li><a href="/blog/archive/2017/03">March, 2017</a></li>
+        <li><a href="/blog/archive/2017/01">January, 2017</a></li>
+        <li><a href="/blog/archive/2016/12">December, 2016</a></li>
+        <li><a href="/blog/archive/2016/11">November, 2016</a></li>
+        <li><a href="/blog/archive/2016/10">October, 2016</a></li>
+        <li><a href="/blog/archive/2016/09">September, 2016</a></li>
+        <li><a href="/blog/archive/2016/08">August, 2016</a></li>
+        <li><a href="/blog/archive/2016/07">July, 2016</a></li>
+        <li><a href="/blog/archive/2016/06">June, 2016</a></li>
+        <li><a href="/blog/archive/2016/05">May, 2016</a></li>
+        <li><a href="/blog/archive/2016/04">April, 2016</a></li>
+        <li><a href="/blog/archive/2016/03">March, 2016</a></li>
+        <li><a href="/blog/archive/2016/02">February, 2016</a></li>
+        <li><a href="/blog/archive/2016/01">January, 2016</a></li>
+        <li><a href="/blog/archive/2015/12">December, 2015</a></li>
+        <li><a href="/blog/archive/2015/11">November, 2015</a></li>
+        <li><a href="/blog/archive/2015/10">October, 2015</a></li>
+        <li><a href="/blog/archive/2015/09">September, 2015</a></li>
+        <li><a href="/blog/archive/2015/08">August, 2015</a></li>
+        <li><a href="/blog/archive/2015/07">July, 2015</a></li>
+    
+    <li class="header"><i class="fa fa-user"></i> Authors</li>    
+        <li><a href="/blog/author/agc93">agc93</a></li>
+        <li><a href="/blog/author/daveaglick">daveaglick</a></li>
+        <li><a href="/blog/author/devlead">devlead</a></li>
+        <li><a href="/blog/author/gep13">gep13</a></li>
+        <li><a href="/blog/author/jericho">jericho</a></li>
+        <li><a href="/blog/author/Larz-White">Larz White</a></li>
+        <li><a href="/blog/author/mholo65">mholo65</a></li>
+        <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
+        <li><a href="/blog/author/phillipsj">phillipsj</a></li>
+        <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+	<section class="content-header">
+		<h1>Intellisense improvements in Visual Studio Code</h1>
+	</section>
+	<section class="content">
+		
+
+
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, February 21, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Announcement">Announcement</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>
+
+<h2 id="intellisense-improvements">Intellisense improvements</h2>
+<p>In case you missed it, <a href="/blog/2017/11/intellisense-vscode">intellisense support</a> for Cake files in Visual Studio Code was announced a couple of months ago. Since then, we have actively been working on improving it, and the v1.14.0 release of <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> comes with some Cake specific improvements we'd like to share with you. In the <a href="https://github.com/OmniSharp/omnisharp-roslyn/releases/tag/v1.28.0">v1.28.0 release notes</a> for Omnisharp-Roslyn we can read the following:</p>
+<h3 id="improvements-to-the-cake-bakery-resolver-to-resolve-from-both-omnisharp-options-and-path.pr-1047">Improvements to the Cake bakery resolver to resolve from both OmniSharp options and PATH. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1047">#1047</a>)</h3>
+<p>This was one of the most requested features regarding intellisense support. Previously, intellisense support was dependent on <a href="https://github.com/cake-build/bakery">Cake.Bakery</a> being present inside the <code>tools</code> folder in your workspace. With this fix, you can simply install <code>Cake.Bakery</code> wherever you want and just specify the path to <code>Cake.Bakery.exe</code> using the <a href="https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options">OmniSharp Configuration System</a>. The following steps will tell <code>OmniSharp</code> to use a globally installed <code>Cake.Bakery</code>:</p>
+<ol>
+<li>Install <code>Cake.Bakery</code> globally (replace &lt;global_path&gt; with the path of your choice).</li>
+</ol>
+<pre><code>nuget.exe install Cake.Bakery -OutputDirectory &lt;global_path&gt; -ExcludeVersion
+</code></pre>
+<ol start="2">
+<li>Create a file called <code>omnisharp.json</code> in <code>%USERPROFILE%/.omnisharp/</code> (<code>~/.omnisharp/</code> if you are on Linux/macOS) with the following content (replace &lt;global_path&gt; with the path you chose in the previous step):</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;cake&quot;: {
+    &quot;bakeryPath&quot;: &quot;&lt;global_path&gt;/Cake.Bakery/tools/Cake.Bakery.exe&quot;
+  }
+}
+</code></pre>
+<ol start="3">
+<li>Start Visual Studio Code and start editing your <code>.cake</code> files.</li>
+</ol>
+<p>To further improve this feature, we are also looking into distributing <code>Cake.Bakery</code> via both <code>Chocolatey</code>, <code>Homebrew</code> and plan old <code>Zip-files</code>/ <code>tarballs</code>.</p>
+<h3 id="ensure-that-the-cake.core-assembly-is-not-locked-on-disk-when-loading-the-host-object-type.pr-1044">Ensure that the Cake.Core assembly is not locked on disk when loading the host object type. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1044">#1044</a>)</h3>
+<p>This fix, along with the previous, will make sure no files in your workspace are actually getting locked while providing intellisense. I.e. no more errors when trying to clean <code>tools</code> folder while Visual Studio Code is open.</p>
+<h3 id="watch-addedremoved.cake-files-and-update-workspace-accordingly.pr-1054">Watch added/removed .cake-files and update workspace accordingly. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1054">#1054</a>)</h3>
+<p>Previously, when adding <code>.cake</code> files to the workspace you would not get intellisense for those files unless you restarted the omnisharp server. This fix will automatically watch for any added, removed or renamed <code>.cake</code> files and update the Roslyn workspace accordingly, thus removing the need for restarting the omnisharp server.</p>
+<h3 id="updated-cake.scripting.transport-dependencies-to-0.2.0-in-order-to-improve-performance-when-working-with-cake-files.pr-1057">Updated Cake.Scripting.Transport dependencies to 0.2.0 in order to improve performance when working with Cake files. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1057">#1057</a>)</h3>
+<p>This fix brings significant performance boost when editing <code>.cake</code> files. Unfortunately, this fix also introduced a breaking change. So after updating to v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> extension, please make sure v0.2.0 or newer of <code>Cake.Bakery</code> is installed.</p>
+
+
+<hr />
+
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements&t=Intellisense%20improvements%20in%20Visual%20Studio%20Code" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements&text=Intellisense%20improvements%20in%20Visual%20Studio%20Code:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements&via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements&title=Intellisense%20improvements%20in%20Visual%20Studio%20Code" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements&title=Intellisense%20improvements%20in%20Visual%20Studio%20Code&summary=&source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="mailto:?subject=Intellisense%20improvements%20in%20Visual%20Studio%20Code&body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fintellisense-improvements" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    <a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> GitHub</a> |
+    <a href="https://twitter.com/cakebuildnet"><i class="fa fa-twitter"></i> Twitter</a> |
+    <a href="https://gitter.im/cake-build/cake"><i class="fa fa-comment"></i> Gitter</a>
+    <br/>
+    Copyright &copy; <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
+    <br/>
+    Generated by <a href="http://wyam.io">Wyam</a>
+</p>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Gitter -->
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'cake-build/cake'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    </body>
+</html>
