@@ -161,6 +161,37 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/02/cake-v0.26.0-released">Cake v0.26.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Tuesday, February 27, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>            <div>
+                <p>Version 0.26.0 of Cake has been released.</p>
+<p>The second release of 2018 is here! This release brings you the long awaited .NET Core 2 support. A special thanks goes to <a href="https://github.com/adamhathcock">Adam Hathcock</a> for all the hard work with the contribution.</p>
+<p>One of the benefits in moving to .NET Core 2 is that addin authors should no longer need to target both <code>net46</code> and <code>netstandard1.6</code> in order to support <code>Cake</code> and <code>Cake.CoreCLR</code>. Instead addins should now be able to target <code>netstandard2.0</code> only and still be compatible with both <code>Cake</code> and <code>Cake.CoreCLR</code>. At the time of writing, we are experiencing an <a href="https://github.com/cake-build/cake/issues/2063">issue</a> with loading <code>netstandard2.0</code> assemblies when running <code>Cake</code> on <code>mono</code>. We are currently investigating this and will provide a hotfix once the issue is resolved.</p>
+<p>While working on this release, we introduced a <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-55631c5d6cc133447feb92b62eb77118">breaking change</a> in one of the interfaces in <code>Cake.Core</code>. Because of that, we bumped the <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-85a96088153087f031e3c4fd629acc4d">latest breaking change</a> version number to 0.26.0. In practice this means that <code>Cake</code> will not load addins targeting a lower version than 0.26.0 of <code>Cake.Core</code>. This is by design and for your protection. Even though the breaking change should be compatible with the majority of the addins out there. one can never be sure. However, if you really need to use an incompatible addin and have verified that the breaking change introduced doesn't concern the addin directly, we'll allow you to temporarily opt-out of the assembly verification until addin author has released a version of the assembly targeting the minimum required version of <code>Cake.Core</code>. See the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#skip-verification">skip verification</a> configuration value for more details.</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/adamhathcock">adamhathcock</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=45&amp;state=closed">3 issues</a> closed.</p>
+<p><strong>Breaking change</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1781"><strong>#1781</strong></a> Update to .NET Core 2</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2018/02/intellisense-improvements">Intellisense improvements in Visual Studio Code</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -170,35 +201,8 @@
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/mholo65">mholo65</a></dd>
 </dl>            <div>
-                <h2 id="intellisense-improvements">Intellisense improvements</h2>
-<p>In case you missed it, <a href="/blog/2017/11/intellisense-vscode">intellisense support</a> for Cake files in Visual Studio Code was announced a couple of months ago. Since then, we have actively been working on improving it, and the v1.14.0 release of <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> comes with some Cake specific improvements we'd like to share with you. In the <a href="https://github.com/OmniSharp/omnisharp-roslyn/releases/tag/v1.28.0">v1.28.0 release notes</a> for Omnisharp-Roslyn we can read the following:</p>
-<h3 id="improvements-to-the-cake-bakery-resolver-to-resolve-from-both-omnisharp-options-and-path.pr-1047">Improvements to the Cake bakery resolver to resolve from both OmniSharp options and PATH. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1047">#1047</a>)</h3>
-<p>This was one of the most requested features regarding intellisense support. Previously, intellisense support was dependent on <a href="https://github.com/cake-build/bakery">Cake.Bakery</a> being present inside the <code>tools</code> folder in your workspace. With this fix, you can simply install <code>Cake.Bakery</code> wherever you want and just specify the path to <code>Cake.Bakery.exe</code> using the <a href="https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options">OmniSharp Configuration System</a>. The following steps will tell <code>OmniSharp</code> to use a globally installed <code>Cake.Bakery</code>:</p>
-<ol>
-<li>Install <code>Cake.Bakery</code> globally (replace &lt;global_path&gt; with the path of your choice).</li>
-</ol>
-<pre><code>nuget.exe install Cake.Bakery -OutputDirectory &lt;global_path&gt; -ExcludeVersion
-</code></pre>
-<ol start="2">
-<li>Create a file called <code>omnisharp.json</code> in <code>%USERPROFILE%/.omnisharp/</code> (<code>~/.omnisharp/</code> if you are on Linux/macOS) with the following content (replace &lt;global_path&gt; with the path you chose in the previous step):</li>
-</ol>
-<pre><code class="language-json">{
-  &quot;cake&quot;: {
-    &quot;bakeryPath&quot;: &quot;&lt;global_path&gt;/Cake.Bakery/tools/Cake.Bakery.exe&quot;
-  }
-}
-</code></pre>
-<ol start="3">
-<li>Start Visual Studio Code and start editing your <code>.cake</code> files.</li>
-</ol>
-<p>To further improve this feature, we are also looking into distributing <code>Cake.Bakery</code> via both <code>Chocolatey</code>, <code>Homebrew</code> and plan old <code>Zip-files</code>/ <code>tarballs</code>.</p>
-<h3 id="ensure-that-the-cake.core-assembly-is-not-locked-on-disk-when-loading-the-host-object-type.pr-1044">Ensure that the Cake.Core assembly is not locked on disk when loading the host object type. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1044">#1044</a>)</h3>
-<p>This fix, along with the previous, will make sure no files in your workspace are actually getting locked while providing intellisense. I.e. no more errors when trying to clean <code>tools</code> folder while Visual Studio Code is open.</p>
-<h3 id="watch-addedremoved.cake-files-and-update-workspace-accordingly.pr-1054">Watch added/removed .cake-files and update workspace accordingly. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1054">#1054</a>)</h3>
-<p>Previously, when adding <code>.cake</code> files to the workspace you would not get intellisense for those files unless you restarted the omnisharp server. This fix will automatically watch for any added, removed or renamed <code>.cake</code> files and update the Roslyn workspace accordingly, thus removing the need for restarting the omnisharp server.</p>
-<h3 id="updated-cake.scripting.transport-dependencies-to-0.2.0-in-order-to-improve-performance-when-working-with-cake-files.pr-1057">Updated Cake.Scripting.Transport dependencies to 0.2.0 in order to improve performance when working with Cake files. (PR: <a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/1057">#1057</a>)</h3>
-<p>This fix brings significant performance boost when editing <code>.cake</code> files. Unfortunately, this fix also introduced a breaking change. So after updating to v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> extension, please make sure v0.2.0 or newer of <code>Cake.Bakery</code> is installed.</p>
-
+                <p>In case you missed it, <a href="/blog/2017/11/intellisense-vscode">intellisense support</a> for Cake files in Visual Studio Code was announced a couple of months ago. Since then, we have actively been working on improving it, and the v1.14.0 release of <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code</a> comes with some Cake specific improvements we'd like to share with you. In the <a href="https://github.com/OmniSharp/omnisharp-roslyn/releases/tag/v1.28.0">v1.28.0 release notes</a> for Omnisharp-Roslyn we can read the following:</p>
+                <a href="/blog/2018/02/intellisense-improvements">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2018/01/cake-v0.25.0-released">Cake v0.25.0 released</a></h2>
@@ -263,38 +267,6 @@ This release shouldn't have any breaking changes, but it does have several impro
 </dl>            <div>
                 <p>As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the <a href="http://www.omnisharp.net/">OmniSharp</a> project have merged our pull requests (<a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932">#932</a> and <a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681">#1681</a>) and released v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension for Visual Studio Code</a>, which includes support for Cake.  In addition to this, we have released a new tool, called <a href="https://github.com/cake-build/bakery">bakery</a>, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.</p>
                 <a href="/blog/2017/11/intellisense-vscode">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/10/cake-v0.23.0-released">Cake v0.23.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Sunday, October 15, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
-</dl>            <div>
-                <p>Version 0.23.0 has been released!</p>
-<p>This release contains three new features specially worth highlighting and a lot of bugfixes and improvements.</p>
-
-<p>Cake now supports asynchronous tasks. This will let you use the <code>async</code> and <code>await</code> C# features within a task.</p>
-<p>Tasks will still execute single threaded and in order as before, but this really simplifies asynchronous programming and utilizing asynchronous APIs within your Cake scripts.</p>
-
-
-<p>Ever wished you could define your task as a dependency of another task - i.e. a reversed dependency relationship? The good news is that you now can.</p>
-
-<p>Since task <code>A</code> is configured to be a dependee of <code>B</code> the task definition will be identical to the following:</p>
-
-
-<p>You can now explicitly specify whether or not a dependency (or dependee) is optional or required.
-This is useful if you want to create "extension points" in your build script.</p>
-
-<p>In the above example, <code>Bar</code> is dependent on <code>Foo</code> while <code>Baz</code> is dependent on <code>Qux</code>.
-The difference between the two dependencies above is that Cake will throw an exception if no task called <code>Foo</code> was found.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in these releases can be seen below.</p>
-                <a href="/blog/2017/10/cake-v0.23.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

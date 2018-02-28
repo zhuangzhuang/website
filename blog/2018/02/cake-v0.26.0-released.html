@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - Blog (Page 3)</title>
+        <title>Cake - Cake v0.26.0 released</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -81,6 +81,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
+        <div><p><a href="https://github.com/cake-build/website/blob/develop/input/blog/2018-02-27-cake-v0.26.0-released.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -156,117 +157,51 @@
 
 
 	<section class="content-header">
-		<h1>Blog (Page 3)</h1>
+		<h1>Cake v0.26.0 released</h1>
 	</section>
 	<section class="content">
 		
 
-        <h2><a href="/blog/2017/07/cake-v0.21.1-released">Cake v0.21.1 released</a></h2>
+
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Saturday, July 15, 2017</dd>
+    <dd>Tuesday, February 27, 2018</dd>
         <dt><i class="fa fa-bookmark"></i> Category</dt>
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>Version 0.21.1 of Cake has been released.</p>
-<p>Following the release of Cake 0.21.0 yesterday, a couple of issues were uncovered, and the decision was taken to correct them immediately.  These are minor issues, and are not expected to cause any major problems.  Please let us know if you have any issues.</p>
-<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>
+
+<p>Version 0.26.0 of Cake has been released.</p>
+<p>The second release of 2018 is here! This release brings you the long awaited .NET Core 2 support. A special thanks goes to <a href="https://github.com/adamhathcock">Adam Hathcock</a> for all the hard work with the contribution.</p>
+<p>One of the benefits in moving to .NET Core 2 is that addin authors should no longer need to target both <code>net46</code> and <code>netstandard1.6</code> in order to support <code>Cake</code> and <code>Cake.CoreCLR</code>. Instead addins should now be able to target <code>netstandard2.0</code> only and still be compatible with both <code>Cake</code> and <code>Cake.CoreCLR</code>. At the time of writing, we are experiencing an <a href="https://github.com/cake-build/cake/issues/2063">issue</a> with loading <code>netstandard2.0</code> assemblies when running <code>Cake</code> on <code>mono</code>. We are currently investigating this and will provide a hotfix once the issue is resolved.</p>
+<p>While working on this release, we introduced a <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-55631c5d6cc133447feb92b62eb77118">breaking change</a> in one of the interfaces in <code>Cake.Core</code>. Because of that, we bumped the <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-85a96088153087f031e3c4fd629acc4d">latest breaking change</a> version number to 0.26.0. In practice this means that <code>Cake</code> will not load addins targeting a lower version than 0.26.0 of <code>Cake.Core</code>. This is by design and for your protection. Even though the breaking change should be compatible with the majority of the addins out there. one can never be sure. However, if you really need to use an incompatible addin and have verified that the breaking change introduced doesn't concern the addin directly, we'll allow you to temporarily opt-out of the assembly verification until addin author has released a version of the assembly targeting the minimum required version of <code>Cake.Core</code>. See the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#skip-verification">skip verification</a> configuration value for more details.</p>
 <p>Contributions were included from:</p>
-
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/adamhathcock">adamhathcock</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+</ul>
 <p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/07/cake-v0.21.1-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/07/cake-v0.21.0-released">Cake v0.21.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, July 14, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>Version 0.21.0 of Cake has been released.</p>
-<p>So, let's be clear, this release will break things - but it is all intentional!</p>
-<p>This release is mostly about bringing the .NET Core aliases up-to-date with .NET Core SDK 1.0.4, which is the latest RTM/stable version.
-The shift to using MSBuild and from <code>project.json</code> to <code>csproj</code> project system has resulted in many breaking changes and additions to the .NET CLI.</p>
-<p>Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
-<p>Huge thanks to <a href="https://github.com/JonCubed">Jonathan Kuleff</a>, who has done a brilliant job and epic effort in methodically going through the .NET CLI and Cake aliases identifying what's been changed, removed or added! It's been great working with you through these pull-requests.</p>
-<p><img src="https://user-images.githubusercontent.com/1647294/28214695-9a6aea90-68ab-11e7-810a-6324ccef154e.png" class="img-fluid" alt="image"></p>
-<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
-<p>Contributions were included from:</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=45&amp;state=closed">3 issues</a> closed.</p>
+<p><strong>Breaking change</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/1781"><strong>#1781</strong></a> Update to .NET Core 2</li>
+</ul>
 
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/07/cake-v0.21.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/06/new-cake-contrib-icon">New Cake Contrib Icon</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, June 23, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Announcement">Announcement</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>Towards the end of 2016, the Cake Team had an internal discussion about the newly created <a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization">Cake Contrib Organisation</a>.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.</p>
-                <a href="/blog/2017/06/new-cake-contrib-icon">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/06/cake-v0.20.0-released">Cake v0.20.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Monday, June 12, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>Version 0.20.0 of Cake has been released.</p>
-<p>This release hopefully contains no new features!</p>
-<p>But nevertheless it's the result of a great team effort.
-With this release we've finally migrated from VS2015 and .NET Core preview bits and  <em>project.json</em> to VS2017 / .NET Core SDK 1.0.4 and <em>csproj</em>.
-This release also contains a few documentation improvements.</p>
-<p>It's been a little more work than expected to get everything to compile and test successfully cross platform using the new SDK, but now the yak if finally shaved and we have an release out!</p>
-<p>Our goal is for there to be no breaking changes with this build, but there's certainly a risk of that as changing underlying SDK and build tooling is a substantial move of cheese.</p>
-<p>This is why we always recommend you pin the version of Cake you're running to avoid any unplanned broken builds. You can read more about pinning Cake version <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
-<p>Huge thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
-<p>Contributions were included from:</p>
 
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/06/cake-v0.20.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/05/cake-v0.19.5-released">Cake v0.19.5 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Thursday, May 4, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>Version 0.19.5 of Cake has been released.</p>
-<p>This is a minor release, which adds a missing channel parameter for Octopus Deploy release tool.</p>
-<p>Contributions were included from:</p>
+<hr />
 
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/05/cake-v0.19.5-released">Read more...</a>
-            </div>
-        <hr />
-    <nav>
-        <ul class="pager">
-            <li class="previous">                
-                    <a href="/blog/page2"><span aria-hidden="true">&larr;</span> Newer</a>
-            </li>
-            <li class="next">
-                    <a href="/blog/page4">Older <span aria-hidden="true">&rarr;</span></a>
-            </li>
-        </ul>
-    </nav>
-
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released&t=Cake%20v0.26.0%20released" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released&text=Cake%20v0.26.0%20released:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released&via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released&title=Cake%20v0.26.0%20released" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released&title=Cake%20v0.26.0%20released&summary=&source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="mailto:?subject=Cake%20v0.26.0%20released&body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F02%2Fcake-v0.26.0-released" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
 
 	</section>
                 

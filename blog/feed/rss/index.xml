@@ -5,8 +5,42 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2018</copyright>
-		<pubDate>Wed, 28 Feb 2018 08:44:11 GMT</pubDate>
-		<lastBuildDate>Wed, 28 Feb 2018 08:44:11 GMT</lastBuildDate>
+		<pubDate>Wed, 28 Feb 2018 09:31:02 GMT</pubDate>
+		<lastBuildDate>Wed, 28 Feb 2018 09:31:02 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.26.0 released</title>
+			<link>https://cakebuild.net/blog/2018/02/cake-v0.26.0-released</link>
+			<description>&lt;p&gt;Version 0.26.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;The second release of 2018 is here! This release brings you the long awaited .NET Core 2 support. A special thanks goes to &lt;a href="https://github.com/adamhathcock"&gt;Adam Hathcock&lt;/a&gt; for all the hard work with the contribution.&lt;/p&gt;
+&lt;p&gt;One of the benefits in moving to .NET Core 2 is that addin authors should no longer need to target both &lt;code&gt;net46&lt;/code&gt; and &lt;code&gt;netstandard1.6&lt;/code&gt; in order to support &lt;code&gt;Cake&lt;/code&gt; and &lt;code&gt;Cake.CoreCLR&lt;/code&gt;. Instead addins should now be able to target &lt;code&gt;netstandard2.0&lt;/code&gt; only and still be compatible with both &lt;code&gt;Cake&lt;/code&gt; and &lt;code&gt;Cake.CoreCLR&lt;/code&gt;. At the time of writing, we are experiencing an &lt;a href="https://github.com/cake-build/cake/issues/2063"&gt;issue&lt;/a&gt; with loading &lt;code&gt;netstandard2.0&lt;/code&gt; assemblies when running &lt;code&gt;Cake&lt;/code&gt; on &lt;code&gt;mono&lt;/code&gt;. We are currently investigating this and will provide a hotfix once the issue is resolved.&lt;/p&gt;
+&lt;p&gt;While working on this release, we introduced a &lt;a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-55631c5d6cc133447feb92b62eb77118"&gt;breaking change&lt;/a&gt; in one of the interfaces in &lt;code&gt;Cake.Core&lt;/code&gt;. Because of that, we bumped the &lt;a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-85a96088153087f031e3c4fd629acc4d"&gt;latest breaking change&lt;/a&gt; version number to 0.26.0. In practice this means that &lt;code&gt;Cake&lt;/code&gt; will not load addins targeting a lower version than 0.26.0 of &lt;code&gt;Cake.Core&lt;/code&gt;. This is by design and for your protection. Even though the breaking change should be compatible with the majority of the addins out there. one can never be sure. However, if you really need to use an incompatible addin and have verified that the breaking change introduced doesn't concern the addin directly, we'll allow you to temporarily opt-out of the assembly verification until addin author has released a version of the assembly targeting the minimum required version of &lt;code&gt;Cake.Core&lt;/code&gt;. See the &lt;a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#skip-verification"&gt;skip verification&lt;/a&gt; configuration value for more details.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>mholo65</author>
+			<guid>https://cakebuild.net/blog/2018/02/cake-v0.26.0-released</guid>
+			<pubDate>Tue, 27 Feb 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Version 0.26.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;The second release of 2018 is here! This release brings you the long awaited .NET Core 2 support. A special thanks goes to &lt;a href="https://github.com/adamhathcock"&gt;Adam Hathcock&lt;/a&gt; for all the hard work with the contribution.&lt;/p&gt;
+&lt;p&gt;One of the benefits in moving to .NET Core 2 is that addin authors should no longer need to target both &lt;code&gt;net46&lt;/code&gt; and &lt;code&gt;netstandard1.6&lt;/code&gt; in order to support &lt;code&gt;Cake&lt;/code&gt; and &lt;code&gt;Cake.CoreCLR&lt;/code&gt;. Instead addins should now be able to target &lt;code&gt;netstandard2.0&lt;/code&gt; only and still be compatible with both &lt;code&gt;Cake&lt;/code&gt; and &lt;code&gt;Cake.CoreCLR&lt;/code&gt;. At the time of writing, we are experiencing an &lt;a href="https://github.com/cake-build/cake/issues/2063"&gt;issue&lt;/a&gt; with loading &lt;code&gt;netstandard2.0&lt;/code&gt; assemblies when running &lt;code&gt;Cake&lt;/code&gt; on &lt;code&gt;mono&lt;/code&gt;. We are currently investigating this and will provide a hotfix once the issue is resolved.&lt;/p&gt;
+&lt;p&gt;While working on this release, we introduced a &lt;a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-55631c5d6cc133447feb92b62eb77118"&gt;breaking change&lt;/a&gt; in one of the interfaces in &lt;code&gt;Cake.Core&lt;/code&gt;. Because of that, we bumped the &lt;a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-85a96088153087f031e3c4fd629acc4d"&gt;latest breaking change&lt;/a&gt; version number to 0.26.0. In practice this means that &lt;code&gt;Cake&lt;/code&gt; will not load addins targeting a lower version than 0.26.0 of &lt;code&gt;Cake.Core&lt;/code&gt;. This is by design and for your protection. Even though the breaking change should be compatible with the majority of the addins out there. one can never be sure. However, if you really need to use an incompatible addin and have verified that the breaking change introduced doesn't concern the addin directly, we'll allow you to temporarily opt-out of the assembly verification until addin author has released a version of the assembly targeting the minimum required version of &lt;code&gt;Cake.Core&lt;/code&gt;. See the &lt;a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#skip-verification"&gt;skip verification&lt;/a&gt; configuration value for more details.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/adamhathcock"&gt;adamhathcock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=45&amp;amp;state=closed"&gt;3 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking change&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1781"&gt;&lt;strong&gt;#1781&lt;/strong&gt;&lt;/a&gt; Update to .NET Core 2&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>Intellisense improvements in Visual Studio Code</title>
 			<link>https://cakebuild.net/blog/2018/02/intellisense-improvements</link>
@@ -990,132 +1024,6 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1546"&gt;&lt;strong&gt;#1546&lt;/strong&gt;&lt;/a&gt; MSBuild Logger Path are not correctly quoted&lt;/li&gt;
 &lt;/ul&gt;
 </content:encoded>
-		</item>
-		<item>
-			<title>VSWhere and Visual Studio 2017 Support</title>
-			<link>https://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</link>
-			<description>&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;
-&lt;p&gt;Shortly after the release of version 0.18.0, Microsoft released a tool called &lt;a href="https://github.com/Microsoft/vswhere"&gt;vswhere&lt;/a&gt; to help locate Visual Studio and other products in the family. This tool was released with Cake version 0.19.1 to allow everyone that moved to Visual Studio 2017 to get their builds up and running.&lt;/p&gt;
-&lt;p&gt;This post is going to walk through the different pieces of functionality supported by the &lt;a href="https://cakebuild.net/dsl/vswhere/"&gt;VSWhere tool&lt;/a&gt;.&lt;/p&gt;</description>
-			<author>phillipsj</author>
-			<guid>https://cakebuild.net/blog/2017/03/vswhere-and-visual-studio-2017-support</guid>
-			<pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the &lt;a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/"&gt;Microsoft.VisualStudio.Setup.Configuration.Interop&lt;/a&gt; package that was created by Microsoft to help locate Visual Studio 2017 installations.&lt;/p&gt;
-&lt;p&gt;Shortly after the release of version 0.18.0, Microsoft released a tool called &lt;a href="https://github.com/Microsoft/vswhere"&gt;vswhere&lt;/a&gt; to help locate Visual Studio and other products in the family. This tool was released with Cake version 0.19.1 to allow everyone that moved to Visual Studio 2017 to get their builds up and running.&lt;/p&gt;
-&lt;p&gt;This post is going to walk through the different pieces of functionality supported by the &lt;a href="https://cakebuild.net/dsl/vswhere/"&gt;VSWhere tool&lt;/a&gt;.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;h2 id="getting-started"&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;VSWhere is available on &lt;a href="https://www.nuget.org/packages/vswhere/"&gt;NuGet&lt;/a&gt; (and &lt;a href="https://chocolatey.org/packages/vswhere"&gt;Chocolatey&lt;/a&gt;) which means you can fetch it using the tool pre-processor directive like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id="getting-the-latest-installation"&gt;Getting the &lt;strong&gt;Latest&lt;/strong&gt; installation&lt;/h2&gt;
-&lt;p&gt;If you just want to use the latest Visual Studio version available - then there's the &lt;a href="https://cakebuild.net/api/Cake.Common.Tools.VSWhere/VSWhereAliases/59EB3043"&gt;VSWhereLatest&lt;/a&gt; alias. A complete example of fetching the VSWhere tool and using it to find path to MSBuild is shown below:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; vsLatest  = VSWhereLatest();
-&lt;a href="/api/Cake.Core.IO/FilePath"&gt;FilePath&lt;/a&gt; msBuildPathX64 = (vsLatest==null)
-                            ? null
-                            : vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe");
-
-MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings"&gt;MSBuildSettings&lt;/a&gt; {
-    ToolPath = msBuildPathX64
-});
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you are looking for the latest installation that supports a specific, optional component, like the .NET Framework (desktop) workload you would specify that in the &lt;em&gt;Requires&lt;/em&gt; property in the settings.&lt;/p&gt;
-&lt;p&gt;To find a comprehensive list of components, please see the Microsoft Documentation &lt;a href="https://docs.microsoft.com/en-us/visualstudio/install/workload-and-component-ids"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; vsLatest  = VSWhereLatest(new &lt;a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings"&gt;VSWhereLatestSettings&lt;/a&gt; { Requires = "Microsoft.VisualStudio.Workload.ManagedDesktop"});
-&lt;a href="/api/Cake.Core.IO/FilePath"&gt;FilePath&lt;/a&gt; msBuildPathX64 = (vsLatest==null)
-                            ? null
-                            : vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe");
-
-MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings"&gt;MSBuildSettings&lt;/a&gt; {
-    ToolPath = msBuildPathX64
-});
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id="finding-all-visual-studio-installations"&gt;Finding all Visual Studio installations&lt;/h2&gt;
-&lt;p&gt;If you would like to find all Visual Studio installations regardless if they are complete installations you would run the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPathCollection"&gt;DirectoryPathCollection&lt;/a&gt; allInstalled  = VSWhereAll();
-
-foreach(var install in allInstalled)
-{
-    // Find the installation you need
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Of course you can find all restricted to the type of components or workloads installed by using the settings and setting the required component. In this instance it restricts it to only installations that have MSBuild installed.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPathCollection"&gt;DirectoryPathCollection&lt;/a&gt; allInstalled  = VSWhereAll(new &lt;a href="/api/Cake.Common.Tools.VSWhere.All/VSWhereAllSettings"&gt;VSWhereAllSettings&lt;/a&gt; { Requires = "Microsoft.Component.MSBuild" });
-
-foreach(var install in allInstalled)
-{
-    // Find the installation you need
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id="finding-a-specific-product-including-vstest"&gt;Finding a specific product, including VSTest&lt;/h2&gt;
-&lt;p&gt;If you know you would like to find the directory for a specific product you can do the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; buildToolsInstallation  = VSWhereProducts("Microsoft.VisualStudio.Product.BuildTools").FirstOrDefault();
-
-if(buildToolsInstallation != null)
-{
-    MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings"&gt;MSBuildSettings&lt;/a&gt; {
-        ToolPath = buildToolsInstallation.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe")
-    });
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you know you need the build tools installation with a specific component or workload installed then you can search for it.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; buildToolsInstallation  = VSWhereProducts("Microsoft.VisualStudio.Product.BuildTools",
-                                            new &lt;a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings"&gt;VSWhereLatestSettings&lt;/a&gt; { Requires = "Microsoft.VisualStudio.Workload.ManagedDesktop"}).FirstOrDefault();
-
-if(buildToolsInstallation != null)
-{
-    MSBuild("./src/Example.sln", new &lt;a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings"&gt;MSBuildSettings&lt;/a&gt; {
-        ToolPath = buildToolsInstallation.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe")
-    });
-}
-else
-{
-    Information("Could not find suitable build environment.");
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You can also find VSTest using VSWhere.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; vsTestInstallationPath  = VSWhereProducts("*", new &lt;a href="/api/Cake.Common.Tools.VSWhere.Latest/VSWhereLatestSettings"&gt;VSWhereLatestSettings&lt;/a&gt; { Requires = "Microsoft.VisualStudio.PackageGroup.TestTools.Core"}).FirstOrDefault();
-
-&lt;a href="/api/Cake.Core.IO/FilePath"&gt;FilePath&lt;/a&gt; vsTestPath = (vsTestInstallationPath==null)
-                            ? null
-                            : vsTestInstallationPath.CombineWithFilePath("./Common7/IDE/CommonExtensions/Microsoft/TestWindow/vstest.console.exe");
-
-VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
-                                            Logger = VSTestLogger.Trx,
-                                            ToolPath = vsTestPath });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id="finding-legacy-products"&gt;Finding legacy products&lt;/h2&gt;
-&lt;p&gt;VSWhere also has support for finding legacy products.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; legacyInstallationPath = VSWhereLegacy(true);  // Passing true gets the latest version.
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you know you are looking for a specific version of a legacy product then you can do the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool nuget:?package=vswhere
-
-&lt;a href="/api/Cake.Core.IO/DirectoryPath"&gt;DirectoryPath&lt;/a&gt; legacyInstallationPath = VSWhereLegacy(new &lt;a href="/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings"&gt;VSWhereLegacySettings&lt;/a&gt; { Version = "10.0"}).FirstOrDefault();
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/body&gt;&lt;/html&gt;</content:encoded>
 		</item>
 	</channel>
 </rss>
