@@ -215,8 +215,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Transifex/TransifexRunnerRemoteSettings_1">Transifex<wbr>Runner<wbr>Remote<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr></a></li>								
 											<li><a href="/api/Cake.Transifex/TransifexStatusSettings">Transifex<wbr>Status<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Transifex/TransifexRunnerRemoteSettings_1">Transifex<wbr>Runner<wbr>Remote<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr></a></li>								
 									</ul>
 								</dd>			
 							
@@ -230,10 +230,10 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["TransifexRunnerSettings&lt;TSettingsType&gt;"]
 class Type type-node
-	Type--&gt;Derived0["TransifexRunnerRemoteSettings&lt;TSettingsType&gt;"]
-	click Derived0 "/api/Cake.Transifex/TransifexRunnerRemoteSettings_1"
-	Type--&gt;Derived1["TransifexStatusSettings"]
-	click Derived1 "/api/Cake.Transifex/TransifexStatusSettings"
+	Type--&gt;Derived0["TransifexStatusSettings"]
+	click Derived0 "/api/Cake.Transifex/TransifexStatusSettings"
+	Type--&gt;Derived1["TransifexRunnerRemoteSettings&lt;TSettingsType&gt;"]
+	click Derived1 "/api/Cake.Transifex/TransifexRunnerRemoteSettings_1"
 
 						</div>
 					</div>
@@ -386,17 +386,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Transifex<wbr>Runner<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Transifex<wbr>Runner<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -405,6 +394,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Transifex<wbr>Runner<wbr>Settings<wbr>&lt;<wbr>T<wbr>Settings<wbr>Type&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

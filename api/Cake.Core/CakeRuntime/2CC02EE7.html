@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ICakeRuntime.TargetFramework Property</title>
+        <title>Cake - API - CakeRuntime.BuiltFramework Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -143,12 +143,15 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
+		<li><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Cake.Core/CakeRuntime/0F3A7CA6">CakeRuntime<wbr>()<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Core/ICakeRuntime/6B2B9594">CakeVersion</a></li>
-				<li><a href="/api/Cake.Core/ICakeRuntime/95EE4001">IsCoreClr</a></li>
-				<li class="selected"><a href="/api/Cake.Core/ICakeRuntime/8FB28BBF">TargetFramework</a></li>
+				<li class="selected"><a href="/api/Cake.Core/CakeRuntime/2CC02EE7">BuiltFramework</a></li>
+				<li><a href="/api/Cake.Core/CakeRuntime/CD0F00B5">CakeVersion</a></li>
+				<li><a href="/api/Cake.Core/CakeRuntime/A16FA765">IsCoreClr</a></li>
+				<li><a href="/api/Cake.Core/CakeRuntime/FB585463">Runtime</a></li>
 
 
                     </ul>
@@ -163,15 +166,15 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a>.</h3>
-	<h1>TargetFramework <small>Property</small></h1>
+			<h3><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a>.</h3>
+	<h1>BuiltFramework <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets the target .NET framework version that the current AppDomain is targeting.
+    Gets the build-time .NET framework version that is being used.
     </div>
 
 		<div class="panel panel-default">
@@ -182,14 +185,14 @@
 						<dd><a href="/api/Cake.Core">Cake<wbr>.Core</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></dd>		
+						<dd><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>FrameworkName TargetFramework { get; }</code></pre>
+	<pre><code>public FrameworkName BuiltFramework { get; }</code></pre>
 
 
 
