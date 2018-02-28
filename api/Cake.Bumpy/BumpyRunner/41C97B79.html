@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - BumpyRunner.List() Method</title>
+        <title>Cake - API - BumpyRunner.Ensure(BumpySettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -150,20 +151,15 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/3A4E3571">BumpyRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/47E69472">Assign<wbr>(int, <wbr>int)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/48C69BA4">Assign<wbr>(int, <wbr>int, <wbr>BumpySettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Bumpy/BumpyRunner/41C97B79">Ensure<wbr>(BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/75BF646D">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/DDCA4EE8">GetToolName<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/50DF1CB1">Increment<wbr>(int)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/5E7BBF57">Increment<wbr>(int, <wbr>BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/E9203053">IncrementOnly<wbr>(int, <wbr>BumpySettings)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/369F226A">IncrementOnly<wbr>(int)<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/D01852A5">Label<wbr>(string)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/688307BD">Label<wbr>(string, <wbr>BumpySettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Bumpy/BumpyRunner/F1BDE0AB">List<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/107EC7E3">List<wbr>(BumpySettings)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/0687B696">New<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Bumpy/BumpyRunner/A0BAA977">Write<wbr>(string)<wbr></a></li>
 				<li><a href="/api/Cake.Bumpy/BumpyRunner/6A8CD6FD">Write<wbr>(string, <wbr>BumpySettings)<wbr></a></li>
 
 
@@ -180,7 +176,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Bumpy/BumpyRunner">BumpyRunner</a>.</h3>
-	<h1>List<wbr>()<wbr> <small>Method</small></h1>
+	<h1>Ensure<wbr>(BumpySettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -193,7 +189,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Runs "bumpy list".
+            Runs "bumpy ensure".
             </div>
 
 		<div class="panel panel-default">
@@ -213,12 +209,31 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void List()</code></pre>
+	<pre><code>public void Ensure(BumpySettings settings)</code></pre>
 
 
 
 
 
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>settings</td>
+						<td><a href="/api/Cake.Bumpy/BumpySettings">BumpySettings</a></td>
+						<td>The tool settings.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">

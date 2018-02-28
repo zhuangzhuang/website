@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - FakeEnvironment.GetTargetFramework() Method</title>
+        <title>Cake - API - FakeRuntime.BuiltFramework Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,8 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -144,30 +143,15 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Testing">Cake<wbr>.Testing</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>
+		<li><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/9DF74A41">FakeEnvironment<wbr>(PlatformFamily, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Cake.Testing/FakeRuntime/980B0CF8">FakeRuntime<wbr>()<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/63E9AD5E">ApplicationRoot</a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/E5AB6061">Platform</a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/4633918F">Runtime</a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/326409DF">WorkingDirectory</a></li>
-			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/CFDA55DF">Change<wbr>Operating<wbr>System<wbr>Family<wbr>(PlatformFamily)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/6090C0AC">Change<wbr>Operative<wbr>System<wbr>Bitness<wbr>(bool)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/3124836C">Create<wbr>Unix<wbr>Environment<wbr>(bool)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/B1D0F545">Create<wbr>Windows<wbr>Environment<wbr>(bool)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/535B25D5">GetApplicationRoot<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/D9AF4795">Get<wbr>Environment<wbr>Variable<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/7B8D4268">Get<wbr>Environment<wbr>Variables<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/22A1B7CB">GetSpecialPath<wbr>(SpecialPath)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Testing/FakeEnvironment/EBB85B4B">GetTargetFramework<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/995DBF11">Is64<wbr>Bit<wbr>Operative<wbr>System<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/E9C3E916">IsUnix<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/F960EFDB">Set<wbr>Environment<wbr>Variable<wbr>(string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/2C2B487A">SetSpecialPath<wbr>(SpecialPath, <wbr>DirectoryPath)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/ADC69472">SetTargetFramework<wbr>(FrameworkName)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Testing/FakeRuntime/75769887">BuiltFramework</a></li>
+				<li><a href="/api/Cake.Testing/FakeRuntime/50B36F32">CakeVersion</a></li>
+				<li><a href="/api/Cake.Testing/FakeRuntime/3A32A2A7">IsCoreClr</a></li>
+				<li><a href="/api/Cake.Testing/FakeRuntime/DD19EDCC">Runtime</a></li>
 
 
                     </ul>
@@ -182,58 +166,39 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a>.</h3>
-	<h1>GetTargetFramework<wbr>()<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a>.</h3>
+	<h1>BuiltFramework <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets the target .Net framework version that the current AppDomain is targeting.
+    Gets or sets the build-time .NET framework version that is being used.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
 						<dd><a href="/api/Cake.Testing">Cake<wbr>.Testing</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></dd>		
+						<dd><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>[Obsolete("Please use FakeEnvironment.Runtime.TargetFramework instead.")]
-public FrameworkName GetTargetFramework()</code></pre>
+	<pre><code>public FrameworkName BuiltFramework { get; set; }</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>ObsoleteAttribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
-
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -245,7 +210,7 @@ public FrameworkName GetTargetFramework()</code></pre>
 				</thead>
 				<tbody><tr>
 					<td>FrameworkName</td>
-					<td>The target framework.</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

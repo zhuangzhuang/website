@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - FakeEnvironment.SetTargetFramework(FrameworkName) Method</title>
+        <title>Cake - API - FakeEnvironment.SetBuiltFramework(FrameworkName) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -159,15 +159,15 @@
 				<li><a href="/api/Cake.Testing/FakeEnvironment/3124836C">Create<wbr>Unix<wbr>Environment<wbr>(bool)<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/B1D0F545">Create<wbr>Windows<wbr>Environment<wbr>(bool)<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/535B25D5">GetApplicationRoot<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Testing/FakeEnvironment/A452E94F">GetBuiltFramework<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/D9AF4795">Get<wbr>Environment<wbr>Variable<wbr>(string)<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/7B8D4268">Get<wbr>Environment<wbr>Variables<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/22A1B7CB">GetSpecialPath<wbr>(SpecialPath)<wbr></a></li>
-				<li><a href="/api/Cake.Testing/FakeEnvironment/EBB85B4B">GetTargetFramework<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/995DBF11">Is64<wbr>Bit<wbr>Operative<wbr>System<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/E9C3E916">IsUnix<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Testing/FakeEnvironment/ACB6E59B">SetBuiltFramework<wbr>(FrameworkName)<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/F960EFDB">Set<wbr>Environment<wbr>Variable<wbr>(string, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Testing/FakeEnvironment/2C2B487A">SetSpecialPath<wbr>(SpecialPath, <wbr>DirectoryPath)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Testing/FakeEnvironment/ADC69472">SetTargetFramework<wbr>(FrameworkName)<wbr></a></li>
 
 
                     </ul>
@@ -183,14 +183,14 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a>.</h3>
-	<h1>SetTargetFramework<wbr>(FrameworkName)<wbr> <small>Method</small></h1>
+	<h1>SetBuiltFramework<wbr>(FrameworkName)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Sets the target framework.
+    Sets the built framework.
     </div>
 
 		<div class="panel panel-default">
@@ -208,7 +208,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void SetTargetFramework(FrameworkName targetFramework)</code></pre>
+	<pre><code>public void SetBuiltFramework(FrameworkName builtFramework)</code></pre>
 
 
 
@@ -226,7 +226,7 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>targetFramework</td>
+						<td>builtFramework</td>
 						<td>FrameworkName</td>
 						<td>The target framework.</td>
 					</tr>
