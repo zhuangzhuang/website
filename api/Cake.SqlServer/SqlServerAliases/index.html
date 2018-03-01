@@ -148,6 +148,8 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.SqlServer/BackupAliases">BackupAliases</a></li>
+				<li><a href="/api/Cake.SqlServer/CreateDatabaseFileSpec">Create<wbr>Database<wbr>File<wbr>Spec</a></li>
+				<li><a href="/api/Cake.SqlServer/CreateDatabaseSettings">Create<wbr>Database<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlServer/DacAliases">DacAliases</a></li>
 				<li><a href="/api/Cake.SqlServer/ExtractDacpacSettings">Extract<wbr>Dacpac<wbr>Settings</a></li>
 				<li><a href="/api/Cake.SqlServer/LocalDbAliases">LocalDbAliases</a></li>
@@ -281,6 +283,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.SqlServer/SqlServerAliases/F690F90D">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Creates an empty database. If database with this name already exists, throws a SqlException.
+            Allows to specify primary and log files location.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/ECCAEFC0">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -291,7 +304,37 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.SqlServer/SqlServerAliases/1D0FDBC8">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Creates an empty database if another database with the same does not already exist.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlServer/SqlServerAliases/3232E5FC">DatabaseExists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Test if the database exists
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.SqlServer/SqlServerAliases/241A5A8D">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             First drops, then recreates the database
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.SqlServer/SqlServerAliases/70AE1AA4">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>

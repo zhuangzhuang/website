@@ -84,6 +84,7 @@
 <p><a href="#updating-the-cake-version-after-pinning">Updating the Cake version after pinning</a></p>
 <p><a href="#video">Video</a></p>
 <p><a href="#pinning-addin-version">Pinning addin version</a></p>
+<p><a href="#pinning-tool-version">Pinning tool version</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -216,6 +217,11 @@
 <p>If addins are referenced through the <em>packages.config</em> file they can be pinned the same way as the Cake version.</p>
 <p>If addins are referenced using the <code>#addin</code> preprocessor directive the can be pinned like this:</p>
 <pre><code>#addin nuget:?package=Cake.Foo&amp;version=1.2.3
+</code></pre>
+<h1 id="pinning-tool-version">Pinning tool version</h1>
+<p>If tools are referenced through the <em>packages.config</em> file they can be pinned the same way as the Cake version.</p>
+<p>If tools are referenced using the <code>#tool</code> preprocessor directive the can be pinned like this:</p>
+<pre><code>#tool nuget:?package=Tool.Foo&amp;version=1.2.3
 </code></pre>
 
 	</section>
