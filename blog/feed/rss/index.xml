@@ -5,8 +5,36 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2018</copyright>
-		<pubDate>Wed, 28 Feb 2018 09:46:06 GMT</pubDate>
-		<lastBuildDate>Wed, 28 Feb 2018 09:46:06 GMT</lastBuildDate>
+		<pubDate>Sat, 03 Mar 2018 18:23:00 GMT</pubDate>
+		<lastBuildDate>Sat, 03 Mar 2018 18:23:00 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.26.1 released</title>
+			<link>https://cakebuild.net/blog/2018/03/cake-v0.26.1-released</link>
+			<description>&lt;p&gt;Version 0.26.1 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a bug fix release.  After releasing 0.26.0 last week, it was noted that when running Cake on Mono, it wasn't possible to load netstandard 2.0 assemblies.  Since this will impact a number of users, we decided to release a fix for this as soon as possible.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>gep13</author>
+			<guid>https://cakebuild.net/blog/2018/03/cake-v0.26.1-released</guid>
+			<pubDate>Sat, 03 Mar 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Version 0.26.1 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is a bug fix release.  After releasing 0.26.0 last week, it was noted that when running Cake on Mono, it wasn't possible to load netstandard 2.0 assemblies.  Since this will impact a number of users, we decided to release a fix for this as soon as possible.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=47&amp;amp;state=closed"&gt;1 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2063"&gt;&lt;strong&gt;#2063&lt;/strong&gt;&lt;/a&gt; Cake running on Mono can't load netstandard 2.0 assembly&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>Cake v0.26.0 released</title>
 			<link>https://cakebuild.net/blog/2018/02/cake-v0.26.0-released</link>
@@ -996,32 +1024,6 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1544"&gt;&lt;strong&gt;#1544&lt;/strong&gt;&lt;/a&gt; Windows 10 SDK path is not being resolved&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-		</item>
-		<item>
-			<title>Cake v0.19.2 released</title>
-			<link>https://cakebuild.net/blog/2017/04/cake-v0.19.2-released</link>
-			<description>&lt;p&gt;Version 0.19.2 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This is a minor hotfix release for 0.19.1, which fixes an issue discovered with MSBuild logger paths not being correctly quoted, causing issues logging to paths containing spaces.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
-			<author>devlead</author>
-			<guid>https://cakebuild.net/blog/2017/04/cake-v0.19.2-released</guid>
-			<pubDate>Sat, 01 Apr 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Version 0.19.2 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This is a minor hotfix release for 0.19.1, which fixes an issue discovered with MSBuild logger paths not being correctly quoted, causing issues logging to paths containing spaces.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=35&amp;amp;state=closed"&gt;1 issue&lt;/a&gt; closed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1546"&gt;&lt;strong&gt;#1546&lt;/strong&gt;&lt;/a&gt; MSBuild Logger Path are not correctly quoted&lt;/li&gt;
 &lt;/ul&gt;
 </content:encoded>
 		</item>

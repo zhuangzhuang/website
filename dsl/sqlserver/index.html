@@ -308,8 +308,7 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
-            create and restore DACPAC files
+            Contains functionality to restore SQL Server backup files *.bak
             </div>
 
 
@@ -344,6 +343,19 @@
                         </tr>
                         <tr>
                             <td>
+<a href="/api/Cake.SqlServer/SqlServerAliases/F690F90D">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+            Creates an empty database. If database with this name already exists, throws a SqlException.
+            Allows to specify primary and log files location.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
 <a href="/api/Cake.SqlServer/SqlServerAliases/ECCAEFC0">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
@@ -356,7 +368,43 @@
                         </tr>
                         <tr>
                             <td>
+<a href="/api/Cake.SqlServer/SqlServerAliases/1D0FDBC8">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+            Creates an empty database if another database with the same does not already exist.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.SqlServer/SqlServerAliases/3232E5FC">DatabaseExists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+            Test if the database exists
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
 <a href="/api/Cake.SqlServer/SqlServerAliases/241A5A8D">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a>                            </td>
+                            <td>
+                                
+             First drops, then recreates the database
+             
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.SqlServer/SqlServerAliases/70AE1AA4">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
              First drops, then recreates the database

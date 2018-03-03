@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - AndoridAppManifestAliases.DeserializeAppManifest(ICakeContext, string) Method</title>
+        <title>Cake - API - SqlServerAliases.DatabaseExists(ICakeContext, string, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,6 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -143,16 +144,27 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.AndroidAppManifest.dll">Cake<wbr>.AndroidAppManifest<wbr>.dll</a></li>
+		<li><a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></li>
+		<li><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.AndroidAppManifest/AndoridAppManifestAliases">Andorid<wbr>App<wbr>Manifest<wbr>Aliases</a></li>
+		<li><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.AndroidAppManifest/AndoridAppManifestAliases/9EFF8C9F">Deserialize<wbr>App<wbr>Manifest<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.AndroidAppManifest/AndoridAppManifestAliases/F3D4241A">Deserialize<wbr>App<wbr>Manifest<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.AndroidAppManifest/AndoridAppManifestAliases/77A2F17F">SerializeAppManifest<wbr>(ICakeContext, <wbr>FilePath, <wbr>AndroidAppManifest)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/698DA7E9">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/F690F90D">CreateDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/ECCAEFC0">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/1D0FDBC8">Create<wbr>Database<wbr>If<wbr>Not<wbr>Exists<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.SqlServer/SqlServerAliases/3232E5FC">DatabaseExists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/241A5A8D">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/70AE1AA4">Drop<wbr>And<wbr>Create<wbr>Database<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>Create<wbr>Database<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/AC2ED47F">DropDatabase<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/9358AEA2">ExecuteSqlCommand<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/E1E3A471">ExecuteSqlCommand<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/362AE44A">ExecuteSqlFile<wbr>(ICakeContext, <wbr>string, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/0C0D9E92">ExecuteSqlFile<wbr>(ICakeContext, <wbr>SqlConnection, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/E3BF74B0">OpenSqlConnection<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.SqlServer/SqlServerAliases/AE3CED99">SetSqlCommandTimeout<wbr>(ICakeContext, <wbr>int)<wbr></a></li>
 
 
                     </ul>
@@ -167,42 +179,59 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.AndroidAppManifest/AndoridAppManifestAliases">Andorid<wbr>App<wbr>Manifest<wbr>Aliases</a>.</h3>
-	<h1>Deserialize<wbr>App<wbr>Manifest<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a>.</h3>
+	<h1>DatabaseExists<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/ghuntley/Cake.AndroidAppManifest" class="alert-link">https://github.com/ghuntley/Cake.AndroidAppManifest</a>.
+                        <a href="https://github.com/AMVSoftware/Cake.SqlServer" class="alert-link">https://github.com/AMVSoftware/Cake.SqlServer</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-                Deserializes the Android AppManifest
+            Test if the database exists
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.AndroidAppManifest.dll">Cake<wbr>.AndroidAppManifest<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.SqlServer.dll">Cake<wbr>.SqlServer<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.AndroidAppManifest">Cake<wbr>.AndroidAppManifest</a></dd>
+						<dd><a href="/api/Cake.SqlServer">Cake<wbr>.SqlServer</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.AndroidAppManifest/AndoridAppManifestAliases">Andorid<wbr>App<wbr>Manifest<wbr>Aliases</a></dd>		
+						<dd><a href="/api/Cake.SqlServer/SqlServerAliases">SqlServerAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static AndroidAppManifest DeserializeAppManifest(this ICakeContext context, string xml)</code></pre>
+	<pre><code>public static bool DatabaseExists(this ICakeContext context, string connectionString, string databaseName)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">    #addin "nuget:?package=Cake.SqlServer"
+
+    Task("Deploy-Database")
+         .Does(() =&gt;
+         {
+            var connectionString = @"Server=(LocalDb)\v12.0";
+            var dbName = "CakeTest";
+
+            if (DatabaseExists(connectionString, dbName))
+            {
+                throw new Exception("A database with the same name already exists");
+            }
+            // do other stuff
+        });</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -238,12 +267,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
-						<td>xml</td>
+						<td>connectionString</td>
 						<td>string</td>
-						<td>appmanifest xml as string</td>
+						<td>The connection string. For this operation, it is recommended to connect to the master database (default). If there are changing parameters, <code class="cs">System.Data.SqlClient.SqlConnectionStringBuilder</code> is recommended to escape input.</td>
+					</tr>
+					<tr>
+						<td>databaseName</td>
+						<td>string</td>
+						<td>Database name to test</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -260,8 +294,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.AndroidAppManifest/AndroidAppManifest">AndroidAppManifest</a></td>
-					<td>deserialized appmanifest</td>
+					<td>bool</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
