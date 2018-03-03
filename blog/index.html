@@ -100,6 +100,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/03">March, 2018</a></li>
         <li><a href="/blog/archive/2018/02">February, 2018</a></li>
         <li><a href="/blog/archive/2018/01">January, 2018</a></li>
         <li><a href="/blog/archive/2017/12">December, 2017</a></li>
@@ -161,6 +162,33 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/03/cake-v0.26.1-released">Cake v0.26.1 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Saturday, March 3, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/gep13">gep13</a></dd>
+</dl>            <div>
+                <p>Version 0.26.1 of Cake has been released.</p>
+<p>This is a bug fix release.  After releasing 0.26.0 last week, it was noted that when running Cake on Mono, it wasn't possible to load netstandard 2.0 assemblies.  Since this will impact a number of users, we decided to release a fix for this as soon as possible.</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=47&amp;state=closed">1 issues</a> closed.</p>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2063"><strong>#2063</strong></a> Cake running on Mono can't load netstandard 2.0 assembly</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2018/02/cake-v0.26.0-released">Cake v0.26.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -175,21 +203,9 @@
 <p>One of the benefits in moving to .NET Core 2 is that addin authors should no longer need to target both <code>net46</code> and <code>netstandard1.6</code> in order to support <code>Cake</code> and <code>Cake.CoreCLR</code>. Instead addins should now be able to target <code>netstandard2.0</code> only and still be compatible with both <code>Cake</code> and <code>Cake.CoreCLR</code>. At the time of writing, we are experiencing an <a href="https://github.com/cake-build/cake/issues/2063">issue</a> with loading <code>netstandard2.0</code> assemblies when running <code>Cake</code> on <code>mono</code>. We are currently investigating this and will provide a hotfix once the issue is resolved.</p>
 <p>While working on this release, we introduced a <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-55631c5d6cc133447feb92b62eb77118">breaking change</a> in one of the interfaces in <code>Cake.Core</code>. Because of that, we bumped the <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-85a96088153087f031e3c4fd629acc4d">latest breaking change</a> version number to 0.26.0. In practice this means that <code>Cake</code> will not load addins targeting a lower version than 0.26.0 of <code>Cake.Core</code>. This is by design and for your protection. Even though the breaking change should be compatible with the majority of the addins out there. one can never be sure. However, if you really need to use an incompatible addin and have verified that the breaking change introduced doesn't concern the addin directly, we'll allow you to temporarily opt-out of the assembly verification until addin author has released a version of the assembly targeting the minimum required version of <code>Cake.Core</code>. See the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#skip-verification">skip verification</a> configuration value for more details.</p>
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/devlead">devlead</a></li>
-<li><a href="https://github.com/adamhathcock">adamhathcock</a></li>
-<li><a href="https://github.com/mholo65">mholo65</a></li>
-<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
-<li><a href="https://github.com/gep13">gep13</a></li>
-</ul>
-<p>Full details of everything that was included in this release can be seen below.</p>
-<!--excerpt-->
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=45&amp;state=closed">3 issues</a> closed.</p>
-<p><strong>Breaking change</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/1781"><strong>#1781</strong></a> Update to .NET Core 2</li>
-</ul>
 
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2018/02/cake-v0.26.0-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2018/02/intellisense-improvements">Intellisense improvements in Visual Studio Code</a></h2>
@@ -254,19 +270,6 @@ This release shouldn't have any breaking changes, but it does have several impro
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/12/cake-v0.24.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/11/intellisense-vscode">Intellisense in Visual Studio Code</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Wednesday, November 8, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Announcement">Announcement</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
-</dl>            <div>
-                <p>As some of you might have noticed, we have been working on getting intellisense working for Cake files in Visual Studio Code.  Today we are happy to announce that the <a href="http://www.omnisharp.net/">OmniSharp</a> project have merged our pull requests (<a href="https://github.com/OmniSharp/omnisharp-roslyn/pull/932">#932</a> and <a href="https://github.com/OmniSharp/omnisharp-vscode/pull/1681">#1681</a>) and released v1.13.0 of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension for Visual Studio Code</a>, which includes support for Cake.  In addition to this, we have released a new tool, called <a href="https://github.com/cake-build/bakery">bakery</a>, which is the script analysis and code generation engine making this possible. More information about bakery and how everything works behind the scenes are coming in an upcoming blog.</p>
-                <a href="/blog/2017/11/intellisense-vscode">Read more...</a>
             </div>
         <hr />
     <nav>

@@ -184,18 +184,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.NDepend.Exceptions">Cake<wbr>.NDepend<wbr>.Exceptions</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>ISerializable</li>								
-											<li>_Exception</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
 											<li>Exception</li>								
 									</ul>
 								</dd>				
@@ -207,9 +199,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Exception"]--&gt;Type
-	Base1["object"]--&gt;Base0
-	Interface0["ISerializable"]-.-&gt;Type
-	Interface1["_Exception"]-.-&gt;Type
 	Type["NDependConsoleRunnerException"]
 class Type type-node
 
@@ -220,7 +209,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class NDependConsoleRunnerException : Exception, ISerializable, _Exception</code></pre>
+	<pre><code>public class NDependConsoleRunnerException : Exception</code></pre>
 
 
 
@@ -256,39 +245,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions/C1EF533F">IsArgumentException<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Checks if an execption is of type <code class="cs">System.ArgumentException</code>.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions">Exception<wbr>Assert<wbr>Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues.Testing addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions/511A2708">Is<wbr>Argument<wbr>Null<wbr>Exception<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Checks if an execption is of type <code class="cs">System.ArgumentNullException</code>.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions">Exception<wbr>Assert<wbr>Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues.Testing addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions/8C48EC87">Is<wbr>Argument<wbr>Out<wbr>Of<wbr>Range<wbr>Exception<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Checks if an execption is of type <code class="cs">System.ArgumentOutOfRangeException</code>.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions">Exception<wbr>Assert<wbr>Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues.Testing addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>N<wbr>Depend<wbr>Console<wbr>Runner<wbr>Exception&gt;<wbr><wbr>(<wbr>N<wbr>Depend<wbr>Console<wbr>Runner<wbr>Exception[])<wbr></a></td>
 								<td>bool</td>
 								<td>
@@ -297,17 +253,6 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions/22E95B69">Is<wbr>Invalid<wbr>Operation<wbr>Exception<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Checks if an execption is of type <code class="cs">System.InvalidOperationException</code>.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions">Exception<wbr>Assert<wbr>Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues.Testing addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
