@@ -219,7 +219,7 @@ Task("PackageWithSettings")
    settings.NoMsi = true;
    settings.Silent = true; 
 
-   Squirrel(GetFile("Package.nupkg"), settings, true, false);
+   Squirrel(File("Package.nupkg"), settings, true, false);
 });</code></pre>
             </div>
 
