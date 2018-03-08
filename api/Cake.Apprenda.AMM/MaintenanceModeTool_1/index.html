@@ -211,12 +211,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud">DisconnectCloud</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud">RegisterCloud</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud">DisconnectCloud</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState">SetNodeState</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud">ConnectCloud</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState">GetNodeState</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds">ReadRegisteredClouds</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState">GetNodeState</a></li>								
 									</ul>
 								</dd>			
 							
@@ -228,18 +228,18 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["MaintenanceModeTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["DisconnectCloud"]
-	click Derived0 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud"
-	Type--&gt;Derived1["RegisterCloud"]
-	click Derived1 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud"
+	Type--&gt;Derived0["RegisterCloud"]
+	click Derived0 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud"
+	Type--&gt;Derived1["DisconnectCloud"]
+	click Derived1 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud"
 	Type--&gt;Derived2["SetNodeState"]
 	click Derived2 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState"
 	Type--&gt;Derived3["ConnectCloud"]
 	click Derived3 "/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud"
-	Type--&gt;Derived4["GetNodeState"]
-	click Derived4 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState"
-	Type--&gt;Derived5["ReadRegisteredClouds"]
-	click Derived5 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds"
+	Type--&gt;Derived4["ReadRegisteredClouds"]
+	click Derived4 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds"
+	Type--&gt;Derived5["GetNodeState"]
+	click Derived5 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState"
 
 						</div>
 					</div>
@@ -371,17 +371,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Maintenance<wbr>Mode<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Maintenance<wbr>Mode<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -390,6 +379,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Maintenance<wbr>Mode<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
