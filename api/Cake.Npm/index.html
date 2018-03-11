@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#ClassTypes">Class Types</a></p>
 <p><a href="#Namespaces">Namespaces</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -616,7 +617,12 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.MarkdownToPdf.Internal">Cake<wbr>.MarkdownToPdf<wbr>.Internal</a></li>
 </ul></li>			<li><a href="/api/Cake.MicrosoftTeams">Cake<wbr>.MicrosoftTeams</a></li>
-			<li><a href="/api/Cake.MobileCenter">Cake<wbr>.MobileCenter</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.MiniCover">Cake<wbr>.MiniCover</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.MiniCover.Settings">Cake<wbr>.MiniCover<wbr>.Settings</a></li>
+</ul></li>			<li><a href="/api/Cake.MobileCenter">Cake<wbr>.MobileCenter</a></li>
 			<li><a href="/api/Cake.MSBuildTask">Cake<wbr>.MSBuildTask</a></li>
 
 				<li class="treeview">
@@ -644,7 +650,8 @@
 				<li class="treeview active selected">
 				<a href="/api/Cake.Npm">Cake<wbr>.Npm</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></li>
+						<li><a href="/api/Cake.Npm.Ci">Cake<wbr>.Npm<wbr>.Ci</a></li>
+			<li><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></li>
 			<li><a href="/api/Cake.Npm.Publish">Cake<wbr>.Npm<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Npm.Rebuild">Cake<wbr>.Npm<wbr>.Rebuild</a></li>
@@ -1017,7 +1024,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            This namespace contain types used for operations using the Npm tool wrapper.
+            </div>
+
 
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
@@ -1030,40 +1041,64 @@
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Npm/NpmCiAliases">NpmCiAliases</a></td>
+									<td>
+            Npm Ci aliases
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Npm/NpmInstallAliases">NpmInstallAliases</a></td>
-									<td></td>
+									<td>
+            Npm Install aliases
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></td>
-									<td></td>
+									<td>
+            Details the npm log levels
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a></td>
-									<td></td>
+									<td>
+            Npm Pack aliases
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmPublishAliases">NpmPublishAliases</a></td>
-									<td></td>
+									<td>
+            Npm publish aliases.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmRebuildAliases">NpmRebuildAliases</a></td>
-									<td></td>
+									<td>
+            Npm Rebuild aliases
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmRunScriptAliases">NpmRunScriptAliases</a></td>
-									<td></td>
+									<td>
+            Npm RunScript aliases
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></td>
-									<td></td>
+									<td>
+            Npm tool settings.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmSettingsExtensions">Npm<wbr>Settings<wbr>Extensions</a></td>
-									<td></td>
+									<td>
+            Extensions for <code class="cs"><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></code>.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></td>
-									<td></td>
+									<td>
+            Base class for all npm tools.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -1080,16 +1115,26 @@
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></td>
+								<td><a href="/api/Cake.Npm.Ci">Cake<wbr>.Npm<wbr>.Ci</a></td>
 									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></td>
+									<td>
+            This namespace contain types used for installing npm packages.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></td>
-									<td></td>
+									<td>
+            This namespace contain types used for creating npm packages.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Publish">Cake<wbr>.Npm<wbr>.Publish</a></td>
-									<td></td>
+									<td>
+            This namespace contain types used for publishing npm packages.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Rebuild">Cake<wbr>.Npm<wbr>.Rebuild</a></td>
@@ -1097,7 +1142,9 @@
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.RunScript">Cake<wbr>.Npm<wbr>.RunScript</a></td>
-									<td></td>
+									<td>
+            This namespace contain types used for running npm scripts.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

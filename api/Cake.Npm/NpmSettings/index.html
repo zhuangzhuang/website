@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -148,6 +149,7 @@
 		<li><a href="/api/Cake.Npm">Cake<wbr>.Npm</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Npm/NpmCiAliases">NpmCiAliases</a></li>
 				<li><a href="/api/Cake.Npm/NpmInstallAliases">NpmInstallAliases</a></li>
 				<li><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></li>
 				<li><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a></li>
@@ -182,7 +184,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Npm tool settings.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -205,11 +211,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></li>								
-											<li><a href="/api/Cake.Npm.RunScript/NpmRunScriptSettings">NpmRunScriptSettings</a></li>								
-											<li><a href="/api/Cake.Npm.Pack/NpmPackSettings">NpmPackSettings</a></li>								
-											<li><a href="/api/Cake.Npm.Publish/NpmPublishSettings">NpmPublishSettings</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuildSettings">NpmRebuildSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Ci/NpmCiSettings">NpmCiSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Publish/NpmPublishSettings">NpmPublishSettings</a></li>								
+											<li><a href="/api/Cake.Npm.RunScript/NpmRunScriptSettings">NpmRunScriptSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Pack/NpmPackSettings">NpmPackSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -221,16 +228,18 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["NpmSettings"]
 class Type type-node
-	Type--&gt;Derived0["NpmInstallSettings"]
-	click Derived0 "/api/Cake.Npm.Install/NpmInstallSettings"
-	Type--&gt;Derived1["NpmRunScriptSettings"]
-	click Derived1 "/api/Cake.Npm.RunScript/NpmRunScriptSettings"
-	Type--&gt;Derived2["NpmPackSettings"]
-	click Derived2 "/api/Cake.Npm.Pack/NpmPackSettings"
-	Type--&gt;Derived3["NpmPublishSettings"]
-	click Derived3 "/api/Cake.Npm.Publish/NpmPublishSettings"
-	Type--&gt;Derived4["NpmRebuildSettings"]
-	click Derived4 "/api/Cake.Npm.Rebuild/NpmRebuildSettings"
+	Type--&gt;Derived0["NpmRebuildSettings"]
+	click Derived0 "/api/Cake.Npm.Rebuild/NpmRebuildSettings"
+	Type--&gt;Derived1["NpmCiSettings"]
+	click Derived1 "/api/Cake.Npm.Ci/NpmCiSettings"
+	Type--&gt;Derived2["NpmPublishSettings"]
+	click Derived2 "/api/Cake.Npm.Publish/NpmPublishSettings"
+	Type--&gt;Derived3["NpmRunScriptSettings"]
+	click Derived3 "/api/Cake.Npm.RunScript/NpmRunScriptSettings"
+	Type--&gt;Derived4["NpmInstallSettings"]
+	click Derived4 "/api/Cake.Npm.Install/NpmInstallSettings"
+	Type--&gt;Derived5["NpmPackSettings"]
+	click Derived5 "/api/Cake.Npm.Pack/NpmPackSettings"
 
 						</div>
 					</div>
@@ -258,7 +267,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Npm/NpmSettings/2B983D10">NpmSettings<wbr>(string)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -282,14 +293,36 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettings/DA523FB4">Command</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the command which should be run.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmSettings/C6A5E2F0">LogLevel</a></td>
 								<td><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the log level which should be used to run the npm command.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm/NpmSettings/5E04C505">Redirect<wbr>Standard<wbr>Error</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Gets or sets the process option to redirect standard error
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm/NpmSettings/7F315767">Redirect<wbr>Standard<wbr>Output</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Gets or sets the process option to redirect standard output
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -312,7 +345,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettings/EB17973E">EvaluateCore<wbr>(<wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Evaluates the settings and writes them to <span name="args" class="paramref">args</span>.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -347,7 +382,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettingsExtensions/1A865DD3">FromPath<wbr>(DirectoryPath)<wbr></a></td>
 								<td><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the working directory which should be used to run the npm command.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm/NpmSettingsExtensions">Npm<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -411,7 +448,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettingsExtensions/55EDAAF3">WithLogLevel<wbr>(NpmLogLevel)<wbr></a></td>
 								<td><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the log level which should be used to run the npm command.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm/NpmSettingsExtensions">Npm<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>

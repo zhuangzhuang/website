@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -179,7 +181,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Runs a npm script with the specified settings.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -199,6 +205,17 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void NpmRunScript(this ICakeContext context, NpmRunScriptSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <p>Use specific log level</p>
+            <pre><code class="cs">var settings = 
+        new NpmRunScriptSettings 
+        {
+            ScriptName = "hello"
+            LogLevel = NpmLogLevel.Verbose
+        };
+    NpmRunScript(settings);</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -238,12 +255,12 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Npm.RunScript/NpmRunScriptSettings">NpmRunScriptSettings</a></td>
-						<td></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>
