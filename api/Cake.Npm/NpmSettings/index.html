@@ -211,11 +211,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Npm.Ci/NpmCiSettings">NpmCiSettings</a></li>								
-											<li><a href="/api/Cake.Npm.RunScript/NpmRunScriptSettings">NpmRunScriptSettings</a></li>								
-											<li><a href="/api/Cake.Npm.Publish/NpmPublishSettings">NpmPublishSettings</a></li>								
-											<li><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></li>								
 											<li><a href="/api/Cake.Npm.Pack/NpmPackSettings">NpmPackSettings</a></li>								
+											<li><a href="/api/Cake.Npm.RunScript/NpmRunScriptSettings">NpmRunScriptSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Publish/NpmPublishSettings">NpmPublishSettings</a></li>								
+											<li><a href="/api/Cake.Npm.Ci/NpmCiSettings">NpmCiSettings</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuildSettings">NpmRebuildSettings</a></li>								
 									</ul>
 								</dd>			
@@ -228,16 +228,16 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["NpmSettings"]
 class Type type-node
-	Type--&gt;Derived0["NpmCiSettings"]
-	click Derived0 "/api/Cake.Npm.Ci/NpmCiSettings"
+	Type--&gt;Derived0["NpmPackSettings"]
+	click Derived0 "/api/Cake.Npm.Pack/NpmPackSettings"
 	Type--&gt;Derived1["NpmRunScriptSettings"]
 	click Derived1 "/api/Cake.Npm.RunScript/NpmRunScriptSettings"
-	Type--&gt;Derived2["NpmPublishSettings"]
-	click Derived2 "/api/Cake.Npm.Publish/NpmPublishSettings"
-	Type--&gt;Derived3["NpmInstallSettings"]
-	click Derived3 "/api/Cake.Npm.Install/NpmInstallSettings"
-	Type--&gt;Derived4["NpmPackSettings"]
-	click Derived4 "/api/Cake.Npm.Pack/NpmPackSettings"
+	Type--&gt;Derived2["NpmInstallSettings"]
+	click Derived2 "/api/Cake.Npm.Install/NpmInstallSettings"
+	Type--&gt;Derived3["NpmPublishSettings"]
+	click Derived3 "/api/Cake.Npm.Publish/NpmPublishSettings"
+	Type--&gt;Derived4["NpmCiSettings"]
+	click Derived4 "/api/Cake.Npm.Ci/NpmCiSettings"
 	Type--&gt;Derived5["NpmRebuildSettings"]
 	click Derived5 "/api/Cake.Npm.Rebuild/NpmRebuildSettings"
 
@@ -401,17 +401,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;NpmSettings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;NpmSettings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -420,6 +409,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;NpmSettings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
