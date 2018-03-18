@@ -155,6 +155,7 @@
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AppPoolConfigProvider">App<wbr>Pool<wbr>Config<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AppPoolEnable32BitProvider">App<wbr>Pool<wbr>Enable32<wbr>Bit<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AppPoolNetFxProvider">AppPoolNetFxProvider</a></li>
+				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AppPoolPipelineMode">AppPoolPipelineMode</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AppPoolPipelineProvider">App<wbr>Pool<wbr>Pipeline<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/ArchiveDirProvider">ArchiveDirProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AutoProvider">AutoProvider</a></li>
@@ -169,6 +170,7 @@
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/ContentPathLibProvider">Content<wbr>Path<wbr>Lib<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/ContentPathProvider">ContentPathProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/CreateAppProvider">CreateAppProvider</a></li>
+				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DacpacAction">DacpacAction</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbDacFxProvider">DbDacFxProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbFullSqlProvider">DbFullSqlProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbMySqlProvider">DbMySqlProvider</a></li>
@@ -184,20 +186,17 @@
 				<li class="selected"><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/MetaKeyProvider">MetaKeyProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/PackageProvider">PackageProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RecycleAppProvider">RecycleAppProvider</a></li>
+				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RecycleMode">RecycleMode</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RegKeyProvider">RegKeyProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RegValueProvider">RegValueProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RootWebConfig32Provider">Root<wbr>Web<wbr>Config32<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RootWebConfig64Provider">Root<wbr>Web<wbr>Config64<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RunCommandProvider">RunCommandProvider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/SetAclProvider">SetAclProvider</a></li>
+				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/SetAclResourceType">SetAclResourceType</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/UrlScanConfigProvider">Url<wbr>Scan<wbr>Config<wbr>Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/WebServer60Provider">WebServer60Provider</a></li>
 				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/WebServerProvider">WebServerProvider</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/AppPoolPipelineMode">AppPoolPipelineMode</a></li>
-				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DacpacAction">DacpacAction</a></li>
-				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RecycleMode">RecycleMode</a></li>
-				<li><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/SetAclResourceType">SetAclResourceType</a></li>
 
 
                     </ul>
@@ -250,7 +249,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 											<li><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider">MsDeployProvider</a></li>								
 									</ul>
 								</dd>				
@@ -263,7 +262,7 @@
 							graph TD
 	Base0["MsDeployProvider"]--&gt;Type
 	click Base0 "/api/Cake.MsDeploy.Providers/MsDeployProvider"
-	Base1["object"]--&gt;Base0
+	Base1["Object"]--&gt;Base0
 	Interface0["IMsDeployProvider"]-.-&gt;Type
 	click Interface0 "/api/Cake.MsDeploy.Providers/IMsDeployProvider"
 	Interface1["IMsDeployArgument"]-.-&gt;Type
@@ -329,7 +328,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/C052A8D5">AuthenticationType</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
              Authentication scheme to use. NTLM is the default setting. If the wmsvc option is specified, then Basic is the default setting.
@@ -359,7 +358,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/6B03608B">IncludeAcls</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             If true, include ACLs in the operation (applies to the file system, registry, and  metabase).
@@ -369,7 +368,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/MetaKeyProvider/412B488A">MetadataGetInherited</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             A true or false value for the 'MetadataGetInherited' setting.
@@ -418,7 +417,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/2182E996">TempAgent</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             
@@ -435,7 +434,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/MetaKeyProvider/587C28A1">UseRealAbo</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             A true or false value for the 'UseRealAbo' setting.

@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -176,7 +177,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by <code class="cs"><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></code>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -235,7 +240,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/FC9E4A36">NpmInstallSettings<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -259,7 +266,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettings/DA523FB4">Command</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the command which should be run.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -267,21 +276,28 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/7B839D79">Force</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets a value indicating whether npm should fetch remote resources even if a local copy
+            exists on disk.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/CD7E891A">Global</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets a value indicating whether the package should be installed globally rather than locally.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmSettings/C6A5E2F0">LogLevel</a></td>
 								<td><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the log level which should be used to run the npm command.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -289,35 +305,66 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/E9E495A2">NoOptional</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets a value indicating whether npm should prevent optional dependencies from being installed
+            (the --no-optional argument)
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/33569838">Packages</a></td>
 								<td>IList<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the list of packages which should be installed.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/C73CD4FB">PreferOffline</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether or not to utilise the prefer offline flag, avoiding going to the internet for packages if possible.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/A26BACDF">Production</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets a value indicating whether npm should ignore modules listed in <pre><code class="cs">devDependencies</code></pre>.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm/NpmSettings/5E04C505">Redirect<wbr>Standard<wbr>Error</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Gets or sets the process option to redirect standard error
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm/NpmSettings/7F315767">Redirect<wbr>Standard<wbr>Output</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Gets or sets the process option to redirect standard output
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/9E8B856E">Registry</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating which registry we should point to. Defaulted to whatever the NPM configuration is.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -340,7 +387,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/F4879EC9">EvaluateCore<wbr>(<wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Evaluates the settings and writes them to <span name="args" class="paramref">args</span>.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -364,7 +413,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/6A7E2529">AddPackage<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Install a package by name, version/tag.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -373,7 +424,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/71F848E1">AddPackage<wbr>(string, <wbr>string)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Install a package by name and version/tag.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -382,7 +435,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/E9A5DA65">AddPackage<wbr>(string, <wbr>string, <wbr>string)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Install a package by name, version/tag and scope.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -391,7 +446,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/7C7E7903">AddPackage<wbr>(Uri)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Install a package from a specific url.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -400,7 +457,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/F174DE2F">AddScopedPackage<wbr>(string, <wbr>string)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Install a scoped package by name, version/tag.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -420,7 +479,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/4C3CC712">ForProduction<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that npm should ignore modules listed in <code class="cs">devDependencies</code>.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -429,7 +490,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettingsExtensions/1A865DD3">FromPath<wbr>(DirectoryPath)<wbr></a></td>
 								<td><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the working directory which should be used to run the npm command.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm/NpmSettingsExtensions">Npm<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -438,7 +501,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/0E1D919D">InstallGlobally<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that the package should be installed globally.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -447,7 +512,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/237047C4">InstallLocally<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that the package should be installed locally.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -511,7 +578,10 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/23DAC1C5">WithForce<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that npm should fetch remote resources even if a local copy
+            exists on disk.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -520,7 +590,10 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/F3940AB1">WithForce<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines whether npm should fetch remote resources even if a local copy
+            exists on disk.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -529,7 +602,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmSettingsExtensions/55EDAAF3">WithLogLevel<wbr>(NpmLogLevel)<wbr></a></td>
 								<td><a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the log level which should be used to run the npm command.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm/NpmSettingsExtensions">Npm<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -538,7 +613,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/3CF180C6">WithNoOptional<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines whether npm should prevent optional dependencies from being installed
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -547,7 +624,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/30B8D669">With<wbr>Optional<wbr>Dependencies<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that npm should install optional dependencies
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -556,7 +635,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/133306A1">WithoutForce<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that npm should not fetch remote resources if a local copy exists on disk.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
@@ -565,7 +646,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/F963494F">Without<wbr>Optional<wbr>Dependencies<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Defines that npm should prevent optional dependencies from being installed
+            </div>
 										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>

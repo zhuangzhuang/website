@@ -79,7 +79,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -179,7 +181,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Installs packages using the specified settings.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -199,6 +205,45 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void NpmInstall(this ICakeContext context, NpmInstallSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <p>Install packages in a specific working directory ('npm install')</p>
+            <pre><code class="cs">var settings = 
+        new NpmInstallSettings 
+        {
+            WorkingDirectory = "c:\myproject"
+        };
+    NpmInstall(settings);</code></pre>
+            <p>Force fetching of remote resources ('npm install --force')</p>
+            <pre><code class="cs">var settings = 
+        new NpmInstallSettings 
+        {
+            Force = true
+        };
+    NpmInstall(settings);</code></pre>
+            <p>Install gulp globally ('npm install gulp -g')</p>
+            <pre><code class="cs">var settings = 
+        new NpmInstallSettings 
+        {
+            Global = true
+        };
+    settings.AddPackage("gulp");
+    NpmInstall(settings);</code></pre>
+            <p>Ignore devDependencies while installaling packages of the project in the current directory ('npm install --production')</p>
+            <pre><code class="cs">var settings = 
+        new NpmInstallSettings 
+        {
+            Production = true
+        };
+    NpmInstall(settings);</code></pre>
+            <p>Use specific log level ('npm install')</p>
+            <pre><code class="cs">var settings = 
+        new NpmInstallSettings 
+        {
+            LogLevel = NpmLogLevel.Verbose
+        };
+    NpmInstall(settings);</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -238,12 +283,12 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>settings</td>
 						<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
-						<td></td>
+						<td>The settings.</td>
 					</tr>
 			</tbody></table>
 		</div>

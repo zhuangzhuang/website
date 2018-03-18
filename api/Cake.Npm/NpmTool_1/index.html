@@ -79,7 +79,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
@@ -149,6 +150,7 @@
 		<li><a href="/api/Cake.Npm">Cake<wbr>.Npm</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Npm/NpmCiAliases">NpmCiAliases</a></li>
 				<li><a href="/api/Cake.Npm/NpmInstallAliases">NpmInstallAliases</a></li>
 				<li><a href="/api/Cake.Npm/NpmLogLevel">NpmLogLevel</a></li>
 				<li><a href="/api/Cake.Npm/NpmPackAliases">NpmPackAliases</a></li>
@@ -183,7 +185,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Base class for all npm tools.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -206,10 +212,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
-											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
-											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
+											<li><a href="/api/Cake.Npm.Ci/NpmCiTool">NpmCiTool</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
+											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
+											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
+											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
 											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
 									</ul>
 								</dd>			
@@ -222,16 +229,18 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["NpmTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["NpmScriptRunner"]
-	click Derived0 "/api/Cake.Npm.RunScript/NpmScriptRunner"
-	Type--&gt;Derived1["NpmPacker"]
-	click Derived1 "/api/Cake.Npm.Pack/NpmPacker"
-	Type--&gt;Derived2["NpmPublisher"]
-	click Derived2 "/api/Cake.Npm.Publish/NpmPublisher"
-	Type--&gt;Derived3["NpmRebuilder"]
-	click Derived3 "/api/Cake.Npm.Rebuild/NpmRebuilder"
-	Type--&gt;Derived4["NpmInstaller"]
-	click Derived4 "/api/Cake.Npm.Install/NpmInstaller"
+	Type--&gt;Derived0["NpmCiTool"]
+	click Derived0 "/api/Cake.Npm.Ci/NpmCiTool"
+	Type--&gt;Derived1["NpmRebuilder"]
+	click Derived1 "/api/Cake.Npm.Rebuild/NpmRebuilder"
+	Type--&gt;Derived2["NpmScriptRunner"]
+	click Derived2 "/api/Cake.Npm.RunScript/NpmScriptRunner"
+	Type--&gt;Derived3["NpmPublisher"]
+	click Derived3 "/api/Cake.Npm.Publish/NpmPublisher"
+	Type--&gt;Derived4["NpmPacker"]
+	click Derived4 "/api/Cake.Npm.Pack/NpmPacker"
+	Type--&gt;Derived5["NpmInstaller"]
+	click Derived5 "/api/Cake.Npm.Install/NpmInstaller"
 
 						</div>
 					</div>
@@ -257,7 +266,7 @@ class Type type-node
 				</thead>
 					<tbody><tr id="typeparam-TSettings">
 						<td>TSettings</td>
-						<td></td>
+						<td>The settings type.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -276,7 +285,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Npm/NpmTool_1/288D58F8">NpmTool<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>ICakeLog)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Npm/NpmTool_1">NpmTool&lt;TSettings&gt;</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -300,7 +311,9 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmTool_1/73A86D9C">CakeLog</a></td>
 								<td>ICakeLog</td>
 								<td>
-									<div></div>
+									<div>
+            Cake log instance.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -323,35 +336,45 @@ class Type type-node
 								<td><a href="/api/Cake.Npm/NpmTool_1/5C41958F">GetArguments<wbr>(TSettings)<wbr></a></td>
 								<td>Process<wbr>Argument<wbr>Builder</td>
 								<td>
-									<div></div>
+									<div>
+            Builds the arguments for npm.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmTool_1/8D13141B">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the possible names of the tool executable.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmTool_1/8142AE0D">GetToolName<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the name of the tool.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmTool_1/43C49967">RunCore<wbr>(TSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Runs npm.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm/NpmTool_1/C4670B0D">RunCore<wbr>(TSettings, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Runs npm.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
