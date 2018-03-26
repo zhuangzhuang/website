@@ -213,10 +213,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
-											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
-											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
 											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
+											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
+											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
+											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -226,14 +226,14 @@
 							graph TD
 	Type["IFileSystemInfo"]
 class Type type-node
-	Type-.-&gt;Implementing0["IDirectory"]
-	click Implementing0 "/api/Cake.Core.IO/IDirectory"
-	Type-.-&gt;Implementing1["IFile"]
-	click Implementing1 "/api/Cake.Core.IO/IFile"
-	Type-.-&gt;Implementing2["FakeDirectory"]
-	click Implementing2 "/api/Cake.Testing/FakeDirectory"
-	Type-.-&gt;Implementing3["FakeFile"]
-	click Implementing3 "/api/Cake.Testing/FakeFile"
+	Type-.-&gt;Implementing0["FakeFile"]
+	click Implementing0 "/api/Cake.Testing/FakeFile"
+	Type-.-&gt;Implementing1["FakeDirectory"]
+	click Implementing1 "/api/Cake.Testing/FakeDirectory"
+	Type-.-&gt;Implementing2["IFile"]
+	click Implementing2 "/api/Cake.Core.IO/IFile"
+	Type-.-&gt;Implementing3["IDirectory"]
+	click Implementing3 "/api/Cake.Core.IO/IDirectory"
 
 						</div>
 					</div>
@@ -331,17 +331,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -350,6 +339,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

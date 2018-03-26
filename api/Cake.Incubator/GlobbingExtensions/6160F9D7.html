@@ -206,7 +206,7 @@
 	<h1 id="Examples">Examples</h1>
 	<div>
              Locates files with the same name in the same directory, but different extensions.
-             The .pdb to your .dll as it were.
+             The .pdb to your .dll as it were. If found, returns the original file as well.
              <pre><code class="cs"> // /output/file.dll
  // /output/file.xml
  // /output/file.pdb
@@ -215,7 +215,8 @@
  IEnumerable&lt;FilePath&gt; matchingFiles = GetMatchingFiles(new FilePath("/output/file.dll"));
 
  matchingFiles[0]; // /output/file.xml
- matchingFiles[1]; // /output/file.pdb</code></pre>
+ matchingFiles[1]; // /output/file.pdb
+ matchingFiles[2]; // /output/file.dll</code></pre>
              </div>
 
 
