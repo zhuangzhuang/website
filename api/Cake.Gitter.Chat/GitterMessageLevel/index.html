@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - GitterMessageLevel Enum</title>
+        <title>Cake - API - GitterMessageLevel Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -150,7 +149,6 @@
 				<li><a href="/api/Cake.Gitter.Chat/GitterChatMessageResult">Gitter<wbr>Chat<wbr>Message<wbr>Result</a></li>
 				<li><a href="/api/Cake.Gitter.Chat/GitterChatMessageSettings">Gitter<wbr>Chat<wbr>Message<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Gitter.Chat/GitterChatProvider">GitterChatProvider</a></li>
-			<li class="header">Enum Types</li>
 				<li class="selected"><a href="/api/Cake.Gitter.Chat/GitterMessageLevel">GitterMessageLevel</a></li>
 
 
@@ -166,7 +164,7 @@
 
 
 <section class="content-header">
-	<h1>GitterMessageLevel <small>Enum</small></h1>
+	<h1>GitterMessageLevel <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -177,11 +175,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Provides known values for Gitter Message Level
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -193,20 +187,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Gitter.Chat">Cake<wbr>.Gitter<wbr>.Chat</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -218,11 +202,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["GitterMessageLevel"]
 class Type type-node
 
@@ -233,7 +212,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum GitterMessageLevel</code></pre>
+	<pre><code>public sealed class GitterMessageLevel : Enum</code></pre>
 
 
 
@@ -257,9 +236,7 @@ class Type type-node
 								<td><a href="/api/Cake.Gitter.Chat/GitterMessageLevel/37AD6E2D">Error</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            Error Message Level
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -267,10 +244,15 @@ class Type type-node
 								<td><a href="/api/Cake.Gitter.Chat/GitterMessageLevel/52F86C12">Info</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            Information Message Level
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Gitter.Chat/GitterMessageLevel/19A99A5A">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -312,6 +294,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Gitter<wbr>Message<wbr>Level&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Gitter<wbr>Message<wbr>Level&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

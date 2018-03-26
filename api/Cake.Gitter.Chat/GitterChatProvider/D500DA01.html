@@ -79,9 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -180,11 +178,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Post message to Gitter Room
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -204,30 +198,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public GitterChatMessageResult PostMessage(string message, GitterChatMessageSettings messageSettings)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <p>Post directly into a specified Gitter Room, using the RoomId and authorization Token.</p>
-            <p>Cake task:</p>
-            <pre><code class="cs">Gitter.Chat.PostMessage(message:"Hello from Cake.Gitter API, messageSettings:new GitterChatMessageSettings {
-    Token              = "123456",
-    RoomId             = "123456"
-});</code></pre>
-            
-
-            <p>Post to the Activity Feed within a Gitter Room using a custom Web Hook Url.</p>
-            <p>Cake task:</p>
-            <pre><code class="cs">Gitter.Chat.PostMessage(message:"Hello from Cake.Gitter Web Hook, messageSettings:new GitterChatMessageSettings {
-    IncomingWebHookUrl = "http://yourwebhookurl.net"
-});</code></pre>
-            
-
-            <p>Post to the Activity Feed within a Gitter Room using a custom Web Hook Url, specifying that there has been an error.</p>
-            <p>Cake task:</p>
-            <pre><code class="cs">Gitter.Chat.PostMessage(message:"Hello from Cake.Gitter Web Hook, messageSettings:new GitterChatMessageSettings {
-    IncomingWebHookUrl = "http://yourwebhookurl.net",
-    MessageLevel = GitterMessageLevel.Error
-});</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -263,12 +233,12 @@
 					<tbody><tr>
 						<td>message</td>
 						<td>string</td>
-						<td>The message to send.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>messageSettings</td>
 						<td><a href="/api/Cake.Gitter.Chat/GitterChatMessageSettings">Gitter<wbr>Chat<wbr>Message<wbr>Settings</a></td>
-						<td>Lets you override default settings like UserName, IconUrl or if it should ThrowOnFail</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -286,7 +256,7 @@
 				</thead>
 				<tbody><tr>
 					<td><a href="/api/Cake.Gitter.Chat/GitterChatMessageResult">Gitter<wbr>Chat<wbr>Message<wbr>Result</a></td>
-					<td>Returns success/error/timestamp <code class="cs"><a href="/api/Cake.Gitter.Chat/GitterChatMessageResult">GitterChatMessageResult</a></code></td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
