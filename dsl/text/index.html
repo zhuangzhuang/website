@@ -256,6 +256,7 @@
     <li><a href="/dsl/ssrs">SSRS</a></li>        
     <li><a href="/dsl/storyteller">Storyteller</a></li>        
     <li><a href="/dsl/strong-naming">Strong Naming</a></li>        
+    <li><a href="/dsl/stylecop">Stylecop</a></li>        
     <li><a href="/dsl/svn">Svn</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
     <li><a href="/dsl/synver">SynVer</a></li>        
@@ -304,7 +305,12 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    </p><pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    <p></p>
     </div>
 
 
