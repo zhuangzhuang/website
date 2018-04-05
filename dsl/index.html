@@ -362,8 +362,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
@@ -391,18 +391,13 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
+            Several extension methods when using Environment Variables.
             </td>
                 </tr>
                 <tr>
@@ -541,8 +536,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
-    </td>
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mspec">MSpec</a></td>
@@ -664,10 +659,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -811,7 +806,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-            Cake build aliases for Android ADB Activity Manager commands
+            Cake build aliases for Android ADB commands
             </td>
                 </tr>
                 <tr>
@@ -848,7 +843,16 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/appveyor">AppVeyor</a></td>
-                    <td></td>
+                    <td>
+            <p>AppVeyor API related cake aliases.</p>
+            <p>
+             In order to use aliases from this addin, you will need to also reference Refit and Newtonsoft.Json as an addin.
+             Here is what including Cake.AppVeyor in your script should look like:
+            <pre><code class="cs">#addin package:?Cake.AppVeyor
+#addin package:?Refit&amp;version=3.0.0
+#addin package:?Newtonsoft.Json&amp;version=9.0.1</code></pre>
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/argument">Argument</a></td>
@@ -877,7 +881,7 @@
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running Azure login commands.
+            Contains Cake aliases for running commands managing Azure resource groups.
             </td>
                 </tr>
                 <tr>
@@ -977,8 +981,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -1034,12 +1038,7 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            <p>
-            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
-            <p>
-            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
-            </p>    
-            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
+            Contains functionality for working with mobile-center commands.
             </td>
                 </tr>
                 <tr>
@@ -1057,7 +1056,8 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to extracting API metadata using
+            <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1081,13 +1081,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></td>
@@ -1096,12 +1091,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            The result of EmailProvider
             </td>
                 </tr>
                 <tr>
@@ -1130,7 +1120,7 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
+            Several extension methods when using Environment Variables.
             </td>
                 </tr>
                 <tr>
@@ -1314,8 +1304,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
-    </td>
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msbuildtask">MSBuildTask</a></td>
@@ -1347,7 +1337,7 @@
                 <tr>
                     <td><a href="/dsl/npm">Npm</a></td>
                     <td>
-            Npm RunScript aliases
+            Npm Ci aliases
             </td>
                 </tr>
                 <tr>
@@ -1525,15 +1515,7 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
+            Contains functionality to restore SQL Server backup files *.bak
             </td>
                 </tr>
                 <tr>

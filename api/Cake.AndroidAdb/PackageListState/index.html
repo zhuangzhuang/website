@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - PackageListState Enum</title>
+        <title>Cake - API - PackageListState Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -150,19 +150,18 @@
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases">Activity<wbr>Manager<wbr>Aliases</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases">AdbAliases</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbDeviceInfo">AdbDeviceInfo</a></li>
+				<li><a href="/api/Cake.AndroidAdb/AdbInstallLocation">AdbInstallLocation</a></li>
+				<li><a href="/api/Cake.AndroidAdb/AdbLogcatBufferType">AdbLogcatBufferType</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbLogcatOptions">AdbLogcatOptions</a></li>
+				<li><a href="/api/Cake.AndroidAdb/AdbLogcatOutputVerbosity">Adb<wbr>Logcat<wbr>Output<wbr>Verbosity</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbPackageListInfo">AdbPackageListInfo</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbPermissionGroupInfo">Adb<wbr>Permission<wbr>Group<wbr>Info</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbPermissionInfo">AdbPermissionInfo</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbToolSettings">AdbToolSettings</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AmInstrumentOptions">AmInstrumentOptions</a></li>
 				<li><a href="/api/Cake.AndroidAdb/AmStartOptions">AmStartOptions</a></li>
-				<li><a href="/api/Cake.AndroidAdb/PackageManagerAliases">Package<wbr>Manager<wbr>Aliases</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.AndroidAdb/AdbInstallLocation">AdbInstallLocation</a></li>
-				<li><a href="/api/Cake.AndroidAdb/AdbLogcatBufferType">AdbLogcatBufferType</a></li>
-				<li><a href="/api/Cake.AndroidAdb/AdbLogcatOutputVerbosity">Adb<wbr>Logcat<wbr>Output<wbr>Verbosity</a></li>
 				<li class="selected"><a href="/api/Cake.AndroidAdb/PackageListState">PackageListState</a></li>
+				<li><a href="/api/Cake.AndroidAdb/PackageManagerAliases">Package<wbr>Manager<wbr>Aliases</a></li>
 				<li><a href="/api/Cake.AndroidAdb/PackageSourceType">PackageSourceType</a></li>
 
 
@@ -178,7 +177,7 @@
 
 
 <section class="content-header">
-	<h1>PackageListState <small>Enum</small></h1>
+	<h1>PackageListState <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -205,20 +204,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.AndroidAdb">Cake<wbr>.AndroidAdb</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -230,11 +219,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["PackageListState"]
 class Type type-node
 
@@ -245,7 +229,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum PackageListState</code></pre>
+	<pre><code>public sealed class PackageListState : Enum</code></pre>
 
 
 
@@ -295,6 +279,13 @@ class Type type-node
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
+							<tr>
+								<td><a href="/api/Cake.AndroidAdb/PackageListState/0D6EE24C">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
 					</tbody></table>
 				</div>
 			</div>
@@ -334,6 +325,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Package<wbr>List<wbr>State&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Package<wbr>List<wbr>State&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

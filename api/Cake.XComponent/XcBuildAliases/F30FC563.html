@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - MDToolSettings.Target Property</title>
+        <title>Cake - API - XcBuildAliases.XcBuildExportInterface(ICakeContext, string, string, string, string, bool, string, Platform) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,7 +81,9 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Value">Value</a></p>
+<p><a href="#Attributes">Attributes</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -141,18 +143,18 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Xamarin.dll">Cake<wbr>.Xamarin<wbr>.dll</a></li>
+		<li><a href="/api/Cake.XComponent.dll">Cake<wbr>.XComponent<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Xamarin">Cake<wbr>.Xamarin</a></li>
+		<li><a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Xamarin/MDToolSettings">MDToolSettings</a></li>
+		<li><a href="/api/Cake.XComponent/XcBuildAliases">XcBuildAliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Xamarin/MDToolSettings/8E23AFDB">MDToolSettings<wbr>()<wbr></a></li>
-			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Xamarin/MDToolSettings/34CE434C">Configuration</a></li>
-				<li><a href="/api/Cake.Xamarin/MDToolSettings/E43D7664">IncreaseVerbosity</a></li>
-				<li class="selected"><a href="/api/Cake.Xamarin/MDToolSettings/37E06CF1">Target</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/E692C99E">XcBuildBuild<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>Platform)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/057A7AAC">Xc<wbr>Build<wbr>Build<wbr>Component<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>Platform)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/8B954ACF">Xc<wbr>Build<wbr>Execute<wbr>Command<wbr>(ICakeContext, <wbr>string, <wbr>Platform)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.XComponent/XcBuildAliases/F30FC563">Xc<wbr>Build<wbr>Export<wbr>Interface<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>bool, <wbr>string, <wbr>Platform)<wbr></a></li>
+				<li><a href="/api/Cake.XComponent/XcBuildAliases/B95ACAFF">Xc<wbr>Build<wbr>Export<wbr>Runtimes<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>bool, <wbr>string, <wbr>Platform)<wbr></a></li>
 
 
                     </ul>
@@ -167,47 +169,119 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Xamarin/MDToolSettings">MDToolSettings</a>.</h3>
-	<h1>Target <small>Property</small></h1>
+			<h3><a href="/api/Cake.XComponent/XcBuildAliases">XcBuildAliases</a>.</h3>
+	<h1>Xc<wbr>Build<wbr>Export<wbr>Interface<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>bool, <wbr>string, <wbr>Platform)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/Redth/Cake.Xamarin" class="alert-link">https://github.com/Redth/Cake.Xamarin</a>.
+                        <a href="https://github.com/xcomponent/Cake.XComponent" class="alert-link">https://github.com/xcomponent/Cake.XComponent</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Gets or sets the target to build.
+            This method exports interface for an XComponent project.
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
+  			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Xamarin.dll">Cake<wbr>.Xamarin<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.XComponent.dll">Cake<wbr>.XComponent<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Xamarin">Cake<wbr>.Xamarin</a></dd>
+						<dd><a href="/api/Cake.XComponent">Cake<wbr>.XComponent</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Xamarin/MDToolSettings">MDToolSettings</a></dd>		
+						<dd><a href="/api/Cake.XComponent/XcBuildAliases">XcBuildAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public string Target { get; set; }</code></pre>
+	<pre><code>public static void XcBuildExportInterface(this ICakeContext context, string project, string output, string compiltationMode = "Debug", string environment = "Dev", bool keepFolderContent = false, string additionalArguments = "", Platform platform = X64)</code></pre>
 
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
-	<h1 id="Value">Value</h1>
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td>The Cake Context</td>
+					</tr>
+					<tr>
+						<td>project</td>
+						<td>string</td>
+						<td>The project to export interface for</td>
+					</tr>
+					<tr>
+						<td>output</td>
+						<td>string</td>
+						<td>The folder where to export interface</td>
+					</tr>
+					<tr>
+						<td>compiltationMode</td>
+						<td>string</td>
+						<td>The compilation mode (Debug/Release)</td>
+					</tr>
+					<tr>
+						<td>environment</td>
+						<td>string</td>
+						<td>The XComponent environment (Dev/Prod/...)</td>
+					</tr>
+					<tr>
+						<td>keepFolderContent</td>
+						<td>bool</td>
+						<td>A flag to control whether to ovewrite folder content or not</td>
+					</tr>
+					<tr>
+						<td>additionalArguments</td>
+						<td>string</td>
+						<td>Additional arguments to pass to XComponent Build</td>
+					</tr>
+					<tr>
+						<td>platform</td>
+						<td><a href="/api/Cake.XComponent/Platform">Platform</a></td>
+						<td>The platform used to launch the application</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -218,8 +292,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>string</td>
-					<td>The target.</td>
+					<td>void</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

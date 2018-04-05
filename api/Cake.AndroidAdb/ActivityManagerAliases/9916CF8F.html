@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ActivityManagerAliases.AmMonitor(ICakeContext, int?, AdbToolSettings) Method</title>
+        <title>Cake - API - ActivityManagerAliases.AmMonitor(ICakeContext, Nullable&lt;int&gt;, AdbToolSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -161,7 +161,7 @@
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/478AAC10">AmIntentToURI<wbr>(ICakeContext, <wbr>string, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/0E3B3E20">AmKill<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9F600A44">AmKillAll<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9916CF8F">AmMonitor<wbr>(ICakeContext, <wbr>int?, <wbr>AdbToolSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9916CF8F">AmMonitor<wbr>(ICakeContext, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/9FA3467F">AmResetDisplaySize<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/934ACB02">AmScreenCompat<wbr>(ICakeContext, <wbr>bool, <wbr>string, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/ActivityManagerAliases/2178E560">AmSetDebugApp<wbr>(ICakeContext, <wbr>string, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></li>
@@ -184,7 +184,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.AndroidAdb/ActivityManagerAliases">Activity<wbr>Manager<wbr>Aliases</a>.</h3>
-	<h1>AmMonitor<wbr>(ICakeContext, <wbr>int?, <wbr>AdbToolSettings)<wbr> <small>Method</small></h1>
+	<h1>AmMonitor<wbr>(ICakeContext, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>AdbToolSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -217,7 +217,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static List&lt;string&gt; AmMonitor(this ICakeContext context, int? gdbPort = null, AdbToolSettings settings = null)</code></pre>
+	<pre><code>public static List&lt;string&gt; AmMonitor(this ICakeContext context, Nullable&lt;int&gt; gdbPort = null, AdbToolSettings settings = null)</code></pre>
 
 
 
@@ -258,7 +258,7 @@
 					</tr>
 					<tr>
 						<td>gdbPort</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
 						<td>Gdb port to start gdbserv on when crash/ANR occurs.</td>
 					</tr>
 					<tr>
@@ -281,7 +281,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>List<wbr>&lt;T&gt;<wbr></td>
+					<td>List<wbr>&lt;&gt;<wbr></td>
 					<td>The monitor.</td>
 				</tr>
 			</tbody></table>

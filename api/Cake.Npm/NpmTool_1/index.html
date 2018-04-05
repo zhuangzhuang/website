@@ -212,12 +212,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
-											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
-											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
+											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
 											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
 											<li><a href="/api/Cake.Npm.Ci/NpmCiTool">NpmCiTool</a></li>								
+											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
+											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -229,18 +229,18 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["NpmTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["NpmPacker"]
-	click Derived0 "/api/Cake.Npm.Pack/NpmPacker"
+	Type--&gt;Derived0["NpmRebuilder"]
+	click Derived0 "/api/Cake.Npm.Rebuild/NpmRebuilder"
 	Type--&gt;Derived1["NpmInstaller"]
 	click Derived1 "/api/Cake.Npm.Install/NpmInstaller"
-	Type--&gt;Derived2["NpmRebuilder"]
-	click Derived2 "/api/Cake.Npm.Rebuild/NpmRebuilder"
-	Type--&gt;Derived3["NpmScriptRunner"]
-	click Derived3 "/api/Cake.Npm.RunScript/NpmScriptRunner"
-	Type--&gt;Derived4["NpmPublisher"]
-	click Derived4 "/api/Cake.Npm.Publish/NpmPublisher"
-	Type--&gt;Derived5["NpmCiTool"]
-	click Derived5 "/api/Cake.Npm.Ci/NpmCiTool"
+	Type--&gt;Derived2["NpmPublisher"]
+	click Derived2 "/api/Cake.Npm.Publish/NpmPublisher"
+	Type--&gt;Derived3["NpmCiTool"]
+	click Derived3 "/api/Cake.Npm.Ci/NpmCiTool"
+	Type--&gt;Derived4["NpmPacker"]
+	click Derived4 "/api/Cake.Npm.Pack/NpmPacker"
+	Type--&gt;Derived5["NpmScriptRunner"]
+	click Derived5 "/api/Cake.Npm.RunScript/NpmScriptRunner"
 
 						</div>
 					</div>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - AdbAliases.AdbScreenRecord(ICakeContext, FilePath, CancellationToken?, TimeSpan?, int?, int?, int?, bool, bool, AdbToolSettings) Method</title>
+        <title>Cake - API - AdbAliases.AdbScreenRecord(ICakeContext, FilePath, Nullable&lt;CancellationToken&gt;, Nullable&lt;TimeSpan&gt;, Nullable&lt;int&gt;, Nullable&lt;int&gt;, Nullable&lt;int&gt;, bool, bool, AdbToolSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -167,7 +167,7 @@
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases/0EE88717">AdbPush<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases/0688376D">AdbPush<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>DirectoryPath, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases/5474152D">AdbScreenCapture<wbr>(ICakeContext, <wbr>FilePath, <wbr>AdbToolSettings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.AndroidAdb/AdbAliases/E1790894">AdbScreenRecord<wbr>(ICakeContext, <wbr>FilePath, <wbr>CancellationToken?, <wbr>TimeSpan?, <wbr>int?, <wbr>int?, <wbr>int?, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.AndroidAdb/AdbAliases/E1790894">AdbScreenRecord<wbr>(ICakeContext, <wbr>FilePath, <wbr>Nullable<wbr>&lt;<wbr>Cancellation<wbr>Token&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases/841BAB0B">AdbShell<wbr>(ICakeContext, <wbr>string, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases/846B14ED">AdbStartServer<wbr>(ICakeContext, <wbr>AdbToolSettings)<wbr></a></li>
 				<li><a href="/api/Cake.AndroidAdb/AdbAliases/A19756B6">AdbUninstall<wbr>(ICakeContext, <wbr>string, <wbr>bool, <wbr>AdbToolSettings)<wbr></a></li>
@@ -188,7 +188,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.AndroidAdb/AdbAliases">AdbAliases</a>.</h3>
-	<h1>AdbScreenRecord<wbr>(ICakeContext, <wbr>FilePath, <wbr>CancellationToken?, <wbr>TimeSpan?, <wbr>int?, <wbr>int?, <wbr>int?, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr> <small>Method</small></h1>
+	<h1>AdbScreenRecord<wbr>(ICakeContext, <wbr>FilePath, <wbr>Nullable<wbr>&lt;<wbr>Cancellation<wbr>Token&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>bool, <wbr>bool, <wbr>AdbToolSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -221,7 +221,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void AdbScreenRecord(this ICakeContext context, FilePath saveToLocalFile, CancellationToken? recordingCancelToken = null, TimeSpan? timeLimit = null, int? bitrateMbps = null, int? width = null, int? height = null, bool rotate = false, bool logVerbose = false, AdbToolSettings settings = null)</code></pre>
+	<pre><code>public static void AdbScreenRecord(this ICakeContext context, FilePath saveToLocalFile, Nullable&lt;CancellationToken&gt; recordingCancelToken = null, Nullable&lt;TimeSpan&gt; timeLimit = null, Nullable&lt;int&gt; bitrateMbps = null, Nullable&lt;int&gt; width = null, Nullable&lt;int&gt; height = null, bool rotate = false, bool logVerbose = false, AdbToolSettings settings = null)</code></pre>
 
 
 
@@ -267,27 +267,27 @@
 					</tr>
 					<tr>
 						<td>recordingCancelToken</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
 						<td>Recording cancel token.  If specified, the cancel token must be cancelled to stop the recording.</td>
 					</tr>
 					<tr>
 						<td>timeLimit</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
 						<td>Time limit.  If specified, recording will stop after the specified time.</td>
 					</tr>
 					<tr>
 						<td>bitrateMbps</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
 						<td>Bitrate quality in megabits per second.  Default is 4mbps.</td>
 					</tr>
 					<tr>
 						<td>width</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
 						<td>Recording width.</td>
 					</tr>
 					<tr>
 						<td>height</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
 						<td>Recording height.</td>
 					</tr>
 					<tr>
