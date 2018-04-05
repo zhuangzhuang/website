@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - XamarinAliases.MDToolArchive(ICakeContext, FilePath, string, Action&lt;MDToolSettings&gt;) Method</title>
+        <title>Cake - API - XamarinAliases.BuildAndroidApk(ICakeContext, FilePath, bool, string, Action&lt;MSBuildSettings&gt;) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -150,10 +150,8 @@
 		<li><a href="/api/Cake.Xamarin/XamarinAliases">XamarinAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Xamarin/XamarinAliases/32D90E29">AndroidPackage<wbr>(ICakeContext, <wbr>FilePath, <wbr>bool, <wbr>Action<wbr>&lt;<wbr>Dot<wbr>Net<wbr>Build<wbr>Settings&gt;<wbr>)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Xamarin/XamarinAliases/9BB414B2">MDToolArchive<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>Action<wbr>&lt;<wbr>M<wbr>D<wbr>Tool<wbr>Settings&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Xamarin/XamarinAliases/C513C0C5">MDToolBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>Action<wbr>&lt;<wbr>M<wbr>D<wbr>Tool<wbr>Settings&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Xamarin/XamarinAliases/B349DCE6">MDToolSetup<wbr>(ICakeContext)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Xamarin/XamarinAliases/C3254773">BuildAndroidApk<wbr>(ICakeContext, <wbr>FilePath, <wbr>bool, <wbr>string, <wbr>Action<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Xamarin/XamarinAliases/C7A90475">BuildiOSIpa<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>string, <wbr>Action<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Settings&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinAliases/325FE282">PackageComponent<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>Xamarin<wbr>Component<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinAliases/C1FDC246">RestoreComponents<wbr>(ICakeContext, <wbr>FilePath, <wbr>Xamarin<wbr>Component<wbr>Restore<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Xamarin/XamarinAliases/1BA003FF">SubmitComponent<wbr>(ICakeContext, <wbr>FilePath, <wbr>Xamarin<wbr>Component<wbr>Submit<wbr>Settings)<wbr></a></li>
@@ -178,7 +176,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Xamarin/XamarinAliases">XamarinAliases</a>.</h3>
-	<h1>MDToolArchive<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>Action<wbr>&lt;<wbr>M<wbr>D<wbr>Tool<wbr>Settings&gt;<wbr>)<wbr> <small>Method</small></h1>
+	<h1>BuildAndroidApk<wbr>(ICakeContext, <wbr>FilePath, <wbr>bool, <wbr>string, <wbr>Action<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Settings&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -191,9 +189,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            DEPRECATED: Creates an archive of an app with MDTool
-            Change your project settings to output an IPA file, and use the MSBuild to build.
-            See documentation for more info: https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/app_distribution/ipa_support/#Building_via_the_Command_Line_On_Mac
+            Creates an android .APK package file using the MSBuild target `SignAndroidPackage`
+            See documentation for more info: https://developer.xamarin.com/guides/android/under_the_hood/build_process/#Build_Targets
             </div>
 
 		<div class="panel panel-default">
@@ -213,7 +210,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void MDToolArchive(this ICakeContext context, FilePath solutionFile, string projectName, Action&lt;MDToolSettings&gt; settings = null)</code></pre>
+	<pre><code>public static FilePath BuildAndroidApk(this ICakeContext context, FilePath projectFile, bool sign = false, string configuration = "Release", Action&lt;MSBuildSettings&gt; configurator = null)</code></pre>
 
 
 
@@ -229,10 +226,6 @@
 				</thead>
 					<tbody><tr>
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>ObsoleteAttribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -257,19 +250,24 @@
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>solutionFile</td>
+						<td>projectFile</td>
 						<td>FilePath</td>
-						<td>The solution file.</td>
+						<td>The .CSPROJ file to build from.</td>
 					</tr>
 					<tr>
-						<td>projectName</td>
+						<td>sign</td>
+						<td>bool</td>
+						<td>Will create a signed .APK file if set to <code class="cs">true</code> based on the signing settings in the .CSPROJ, otherwise the .APK will be unsigned.</td>
+					</tr>
+					<tr>
+						<td>configuration</td>
 						<td>string</td>
-						<td>The name of the project within the solution to archive.</td>
+						<td>The MSBuild /p:Configuration to use (default is Release).</td>
 					</tr>
 					<tr>
-						<td>settings</td>
+						<td>configurator</td>
 						<td>Action<wbr>&lt;&gt;<wbr></td>
-						<td>The mdtool settings.</td>
+						<td>The settings configurator.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -286,8 +284,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>FilePath</td>
+					<td>The file path of the .APK which was created (all subfolders of the project file specified are searched for .apk files and the newest one found is returned).</td>
 				</tr>
 			</tbody></table>
 		</div>
