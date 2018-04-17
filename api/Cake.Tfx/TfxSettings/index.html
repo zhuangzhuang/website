@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -152,12 +151,11 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></li>
 				<li><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></li>
+				<li><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></li>
+				<li><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></li>
 				<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></li>
 				<li><a href="/api/Cake.Tfx/TfxTool_1">TfxTool<wbr>&lt;TSettings&gt;<wbr></a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></li>
-				<li><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></li>
 
 
                     </ul>
@@ -183,11 +181,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Contains the common settings used by all commands in Tfx.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -210,8 +204,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings">Tfx<wbr>Extension<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -223,10 +217,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TfxSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxServerSettings"]
-	click Derived0 "/api/Cake.Tfx/TfxServerSettings"
-	Type--&gt;Derived1["TfxExtensionCreateSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived0["TfxExtensionCreateSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings"
+	Type--&gt;Derived1["TfxServerSettings"]
+	click Derived1 "/api/Cake.Tfx/TfxServerSettings"
 
 						</div>
 					</div>
@@ -278,45 +272,35 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxSettings/30C821B5">ExtensionId</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets a value to use as the extension ID instead of what is specified in the manifest.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/38813167">NoPrompt</a></td>
 								<td>bool</td>
 								<td>
-									<div>
-            Gets or sets a value indicating whether to not prompt the user for input (instead, raise an error).
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/44497BD4">Output</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div>
-            Gets or sets a value indicating the output type to be used for commands
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/C6115FB5">Publisher</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets a value to use as the publisher ID instead of what is specified in the manifest.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/87BD22F8">Save</a></td>
 								<td>bool</td>
 								<td>
-									<div>
-            Gets or sets a value indicating whether to save arguments for the next time a command in this command group is run.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -360,17 +344,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TfxSettings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TfxSettings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -379,6 +352,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TfxSettings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

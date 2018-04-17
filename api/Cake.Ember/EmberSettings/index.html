@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -177,11 +176,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Contains the common settings used by all commands in Ember.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -204,8 +199,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Ember.Build/EmberBuildSettings">EmberBuildSettings</a></li>								
 											<li><a href="/api/Cake.Ember.Serve/EmberServeSettings">EmberServeSettings</a></li>								
+											<li><a href="/api/Cake.Ember.Build/EmberBuildSettings">EmberBuildSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -217,10 +212,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["EmberSettings"]
 class Type type-node
-	Type--&gt;Derived0["EmberBuildSettings"]
-	click Derived0 "/api/Cake.Ember.Build/EmberBuildSettings"
-	Type--&gt;Derived1["EmberServeSettings"]
-	click Derived1 "/api/Cake.Ember.Serve/EmberServeSettings"
+	Type--&gt;Derived0["EmberServeSettings"]
+	click Derived0 "/api/Cake.Ember.Serve/EmberServeSettings"
+	Type--&gt;Derived1["EmberBuildSettings"]
+	click Derived1 "/api/Cake.Ember.Build/EmberBuildSettings"
 
 						</div>
 					</div>
@@ -272,27 +267,21 @@ class Type type-node
 								<td><a href="/api/Cake.Ember/EmberSettings/44EE7607">Environment</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets the name of the environment to generate the output for.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember/EmberSettings/ABD9F534">OutputPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div>
-            Gets or sets the location where all generated files will be output to.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember/EmberSettings/849555BE">Watcher</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets a value for the Watcher.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -336,17 +325,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Ember<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Ember<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -355,6 +333,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Ember<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

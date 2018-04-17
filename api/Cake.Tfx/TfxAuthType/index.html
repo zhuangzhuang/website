@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - TfxAuthType Enum</title>
+        <title>Cake - API - TfxAuthType Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -151,12 +150,11 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></li>
 				<li><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></li>
+				<li class="selected"><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></li>
+				<li><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></li>
 				<li><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>
 				<li><a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></li>
 				<li><a href="/api/Cake.Tfx/TfxTool_1">TfxTool<wbr>&lt;TSettings&gt;<wbr></a></li>
-			<li class="header">Enum Types</li>
-				<li class="selected"><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></li>
-				<li><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></li>
 
 
                     </ul>
@@ -171,7 +169,7 @@
 
 
 <section class="content-header">
-	<h1>TfxAuthType <small>Enum</small></h1>
+	<h1>TfxAuthType <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -182,11 +180,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            The authentication type to use for Tfx commands
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -198,20 +192,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Tfx">Cake<wbr>.Tfx</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -223,11 +207,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["TfxAuthType"]
 class Type type-node
 
@@ -238,7 +217,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum TfxAuthType</code></pre>
+	<pre><code>public sealed class TfxAuthType : Enum</code></pre>
 
 
 
@@ -262,9 +241,7 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxAuthType/FBB86B2C">Basic</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            Basic Authentication
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -272,10 +249,15 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxAuthType/02755E7F">Pat</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            PAT Authentication
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfx/TfxAuthType/25250215">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -317,6 +299,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TfxAuthType&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TfxAuthType&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

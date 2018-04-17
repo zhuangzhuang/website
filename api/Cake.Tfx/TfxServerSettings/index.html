@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -152,12 +151,11 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></li>
 				<li><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></li>
+				<li><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></li>
+				<li><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></li>
 				<li class="selected"><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></li>
 				<li><a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></li>
 				<li><a href="/api/Cake.Tfx/TfxTool_1">TfxTool<wbr>&lt;TSettings&gt;<wbr></a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></li>
-				<li><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></li>
 
 
                     </ul>
@@ -183,11 +181,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Contains the common server settings used by some commands in Tfx.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -211,8 +205,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings">Tfx<wbr>Extension<wbr>Share<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings">Tfx<wbr>Extension<wbr>Publish<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings">Tfx<wbr>Extension<wbr>Install<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -227,10 +221,10 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["TfxServerSettings"]
 class Type type-node
-	Type--&gt;Derived0["TfxExtensionPublishSettings"]
-	click Derived0 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
-	Type--&gt;Derived1["TfxExtensionShareSettings"]
-	click Derived1 "/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings"
+	Type--&gt;Derived0["TfxExtensionShareSettings"]
+	click Derived0 "/api/Cake.Tfx.Extension.Share/TfxExtensionShareSettings"
+	Type--&gt;Derived1["TfxExtensionPublishSettings"]
+	click Derived1 "/api/Cake.Tfx.Extension.Publish/TfxExtensionPublishSettings"
 	Type--&gt;Derived2["TfxExtensionInstallSettings"]
 	click Derived2 "/api/Cake.Tfx.Extension.Install/TfxExtensionInstallSettings"
 
@@ -284,18 +278,14 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxServerSettings/CB65A1D2">AuthType</a></td>
 								<td><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></td>
 								<td>
-									<div>
-            Gets or sets the method of authentication.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/30C821B5">ExtensionId</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets a value to use as the extension ID instead of what is specified in the manifest.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -303,19 +293,15 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxSettings/38813167">NoPrompt</a></td>
 								<td>bool</td>
 								<td>
-									<div>
-            Gets or sets a value indicating whether to not prompt the user for input (instead, raise an error).
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/44497BD4">Output</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div>
-            Gets or sets a value indicating the output type to be used for commands
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -323,27 +309,21 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxServerSettings/8EF70914">Password</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets the Password to use for basic authentication.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxServerSettings/820281FF">Proxy</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets the proxy server for HTTP traffic
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/C6115FB5">Publisher</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets a value to use as the publisher ID instead of what is specified in the manifest.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -351,9 +331,7 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxSettings/87BD22F8">Save</a></td>
 								<td>bool</td>
 								<td>
-									<div>
-            Gets or sets a value indicating whether to save arguments for the next time a command in this command group is run.
-            </div>
+									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -361,27 +339,21 @@ class Type type-node
 								<td><a href="/api/Cake.Tfx/TfxServerSettings/D6490FA2">ServiceUrl</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets the URL to the VSS Marketplace
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxServerSettings/076AC4D3">Token</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets the Personal Access Token.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxServerSettings/1218A779">UserName</a></td>
 								<td>string</td>
 								<td>
-									<div>
-            Gets or sets the Username to use for basic authentication.
-            </div>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -425,17 +397,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfx<wbr>Server<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Tfx<wbr>Server<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -444,6 +405,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfx<wbr>Server<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
