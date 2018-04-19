@@ -274,6 +274,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings/9F388589">Force</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to force all dependencies to be resolved even if the last restore was successful. This is equivalent to deleting project.assets.json.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings/09B907C5">Framework</a></td>
 								<td>string</td>
 								<td>
@@ -325,6 +334,24 @@ class Type type-node
 								<td>
 									<div>
     Gets or sets the target runtime.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings/041749E2">SelfContained</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether Publish the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine. Defaults to 'true' if a runtime identifier is specified.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublishSettings/64296A25">Sources</a></td>
+								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets or sets the specified NuGet package sources to use during the restore.
     </div>
 								</td>
 							</tr>

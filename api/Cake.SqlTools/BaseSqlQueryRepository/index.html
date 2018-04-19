@@ -207,16 +207,16 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></li>								
-											<li><a href="/api/Cake.SqlTools/NpgsqlQueryRepository">Npgsql<wbr>Query<wbr>Repository</a></li>								
 											<li><a href="/api/Cake.SqlTools/MySqlQueryRepository">MySqlQueryRepository</a></li>								
+											<li><a href="/api/Cake.SqlTools/NpgsqlQueryRepository">Npgsql<wbr>Query<wbr>Repository</a></li>								
+											<li><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></li>								
 									</ul>
 								</dd>			
 							
@@ -225,17 +225,17 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Interface0["ISqlQueryRepository"]-.-&gt;Type
 	click Interface0 "/api/Cake.SqlTools/ISqlQueryRepository"
 	Type["BaseSqlQueryRepository"]
 class Type type-node
-	Type--&gt;Derived0["MsSqlQueryRepository"]
-	click Derived0 "/api/Cake.SqlTools/MsSqlQueryRepository"
+	Type--&gt;Derived0["MySqlQueryRepository"]
+	click Derived0 "/api/Cake.SqlTools/MySqlQueryRepository"
 	Type--&gt;Derived1["NpgsqlQueryRepository"]
 	click Derived1 "/api/Cake.SqlTools/NpgsqlQueryRepository"
-	Type--&gt;Derived2["MySqlQueryRepository"]
-	click Derived2 "/api/Cake.SqlTools/MySqlQueryRepository"
+	Type--&gt;Derived2["MsSqlQueryRepository"]
+	click Derived2 "/api/Cake.SqlTools/MsSqlQueryRepository"
 
 						</div>
 					</div>

@@ -145,13 +145,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.MSBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.MSBuild</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVersion">MSBuildVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/PlatformTarget">PlatformTarget</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildAliases">MSBuildAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogSettings">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Settings</a></li>
@@ -161,6 +154,13 @@
 				<li class="selected"><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVerbosityExtensions">M<wbr>S<wbr>Build<wbr>Verbosity<wbr>Extensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVersion">MSBuildVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/PlatformTarget">PlatformTarget</a></li>
 
 
                     </ul>
@@ -294,6 +294,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/AEAE73A0">Console<wbr>Logger<wbr>Parameters</a></td>
+								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>
+									<div>
+    Gets the console logger parameters.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/EB592A07">DetailedSummary</a></td>
 								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
@@ -391,6 +400,17 @@ class Type type-node
 								<td>
 									<div>
     Gets the properties.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings/F54FEEE4">Restore</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the Restore target should be run before any other targets.
+    This setting will pass the /restore option down to MSBuild.
+    Use this setting when working with the new csproj format.
     </div>
 								</td>
 							</tr>
@@ -682,6 +702,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/9FEA3C6B">With<wbr>Console<wbr>Logger<wbr>Parameter<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Adds a console logger parameter.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/8BF5F178">WithLogger<wbr>(string, <wbr>string, <wbr>string)<wbr></a></td>
 								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
 								<td>
@@ -697,6 +727,16 @@ class Type type-node
 								<td>
 									<div>
     Adds a property to the configuration.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/67600825">WithRestore<wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Invoke the Restore target before any other target.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
