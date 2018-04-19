@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - BitriseProvider.BitriseProvider(ICakeEnvironment) Constructor</title>
+        <title>Cake - API - OctopusDeployment.Environment Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -81,8 +81,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -142,15 +141,19 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Common.Build.Bitrise">Cake<wbr>.Common<wbr>.Build<wbr>.Bitrise</a></li>
+		<li><a href="/api/Cake.Common.Tools.OctopusDeploy">Cake<wbr>.Common<wbr>.Tools<wbr>.OctopusDeploy</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider">BitriseProvider</a></li>
+		<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment">OctopusDeployment</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li class="selected"><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider/59163C9A">BitriseProvider<wbr>(ICakeEnvironment)<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider/2784496A">Environment</a></li>
-				<li><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider/2A2AC887">IsRunningOnBitrise</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/9D72956C">Assembled</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/8B47C4F5">Channel</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/747E00E5">Created</a></li>
+				<li class="selected"><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/BAAE247B">Environment</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/FD29E25D">PackageVersions</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/B962031C">ProjectName</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/B9C81408">ReleaseNotesHtml</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment/0F1A21E8">Version</a></li>
 
 
                     </ul>
@@ -165,59 +168,39 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider">BitriseProvider</a>.</h3>
-	<h1>BitriseProvider<wbr>(ICakeEnvironment)<wbr> <small>Constructor</small></h1>
+			<h3><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment">OctopusDeployment</a>.</h3>
+	<h1>Environment <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Initializes a new instance of the <code class="cs"><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider">BitriseProvider</a></code> class.
+    gets or sets the Environment the project was deployed to
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Common.Build.Bitrise">Cake<wbr>.Common<wbr>.Build<wbr>.Bitrise</a></dd>
+						<dd><a href="/api/Cake.Common.Tools.OctopusDeploy">Cake<wbr>.Common<wbr>.Tools<wbr>.OctopusDeploy</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Common.Build.Bitrise/BitriseProvider">BitriseProvider</a></dd>		
+						<dd><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment">OctopusDeployment</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public BitriseProvider(ICakeEnvironment environment)</code></pre>
+	<pre><code>public string Environment { get; set; }</code></pre>
 
 
 
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>environment</td>
-						<td><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></td>
-						<td>The environment.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -228,7 +211,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>string</td>
 					<td></td>
 				</tr>
 			</tbody></table>

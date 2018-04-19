@@ -4,7 +4,97 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2018</rights>
-	<updated>2018-04-18T09:55:07Z</updated>
+	<updated>2018-04-19T21:27:41Z</updated>
+	<entry>
+		<author>
+			<name>mholo65</name>
+		</author>
+		<link href="https://cakebuild.net/blog/2018/04/cake-v0.27.0-released" />
+		<id>https://cakebuild.net/blog/2018/04/cake-v0.27.0-released</id>
+		<title>Cake v0.27.0 released</title>
+		<updated>2018-04-19T00:00:00Z</updated>
+		<content>&lt;p&gt;Version 0.27.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;The third release of 2018 is here! It contains mostly improvements and bug fixes. While this release doesn't contain any known breaking changes, we would like to take this opportunity to inform you that the next release will. The next release will introduce typed contexts to Cake, this will really improve the flexibility of Cake scripts, read more about this &lt;a href="https://github.com/cake-build/cake/issues/2008"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The most notable bug fixes in 0.27.0 were made around addin installation. We updated the internals of Cake to use v4.6.0 of the NuGet Client libraries, which comes with performance improvements. Cake now also supports &amp;quot;offline&amp;quot; builds when using in-process NuGet, this was kind of a regression since it used to work with the old &lt;code&gt;nuget.exe&lt;/code&gt; based installer. Another enhancement is that we've added a runtime assembly resolver for assembly versions that can't be found. This tackles most of the issues experienced around addin loading and dependency resolution. Last but not least, in-process NuGet now also supports specifying multiple NuGet sources through config. This can be achieved by separating sources using semicolon (&lt;code&gt;;&lt;/code&gt;) when setting the &lt;a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#nuget-download-url."&gt;NuGet Download Url&lt;/a&gt; configuration value. Below is an example using &lt;code&gt;cake.config&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Nuget]
+Source=https://api.nuget.org/v3/index.json;https://www.myget.org/F/cake/api/v3/index.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Last but not least, a friendly reminder that if you haven't pinned to a specific version of Cake, you should do it now :-) More information about pinning to a specific version can be found &lt;a href="https://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jnm2"&gt;jnm2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/nikhilagrawaldotnet"&gt;nikhilagrawaldotnet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Insire"&gt;Insire&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eugen Richter&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/sanderaernouts"&gt;sanderaernouts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kcamp"&gt;kcamp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/alexandear"&gt;alexandear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/stefandevo"&gt;stefandevo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/wozzo"&gt;wozzo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Jericho"&gt;Jericho&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/dustinchilson"&gt;dustinchilson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gabrielweyer"&gt;gabrielweyer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Marusyk"&gt;Marusyk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/CRuppert"&gt;CRuppert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NEXOGEN\kemenya&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ChrisMaddock"&gt;ChrisMaddock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/thomaslevesque"&gt;thomaslevesque&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/daveaglick"&gt;daveaglick&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=46&amp;amp;state=closed"&gt;26 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2078"&gt;&lt;strong&gt;#2078&lt;/strong&gt;&lt;/a&gt; Support expand environment variables in script pre-processor directives&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2047"&gt;&lt;strong&gt;#2047&lt;/strong&gt;&lt;/a&gt; Specify version during Nuget Updating&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2005"&gt;&lt;strong&gt;#2005&lt;/strong&gt;&lt;/a&gt; Add entries for Setup/Teardown in report&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1908"&gt;&lt;strong&gt;#1908&lt;/strong&gt;&lt;/a&gt; Octopus Deploy tool does not support list-deployments call for octo.exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bugs&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2116"&gt;&lt;strong&gt;#2116&lt;/strong&gt;&lt;/a&gt; Loading Newtonsoft.Json in Cake.CoreCLR throws during assembly loading&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2084"&gt;&lt;strong&gt;#2084&lt;/strong&gt;&lt;/a&gt; Cake does not load dependencies in correct order&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2082"&gt;&lt;strong&gt;#2082&lt;/strong&gt;&lt;/a&gt; Investigate NuGet local V3 cache&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2081"&gt;&lt;strong&gt;#2081&lt;/strong&gt;&lt;/a&gt; Possibility to override default nuget sources&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2079"&gt;&lt;strong&gt;#2079&lt;/strong&gt;&lt;/a&gt; Default sources not loaded if nuget_source is empty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2119"&gt;&lt;strong&gt;#2119&lt;/strong&gt;&lt;/a&gt; DotNetCore Publish misses Force / Self contained / Sources settings&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2113"&gt;&lt;strong&gt;#2113&lt;/strong&gt;&lt;/a&gt; Error when loading tools without internet connection&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2106"&gt;&lt;strong&gt;#2106&lt;/strong&gt;&lt;/a&gt; Remove NUnit3Settings.ErrorOutputFile property&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2092"&gt;&lt;strong&gt;#2092&lt;/strong&gt;&lt;/a&gt; Unable to set 'no-build' and 'no-restore' when executing DotNetCoreRun&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2051"&gt;&lt;strong&gt;#2051&lt;/strong&gt;&lt;/a&gt; Add support for msbuild.exe /restore option&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2039"&gt;&lt;strong&gt;#2039&lt;/strong&gt;&lt;/a&gt; XUnit2Runner doesn't respect &lt;code&gt;ParallelismOption.None&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2036"&gt;&lt;strong&gt;#2036&lt;/strong&gt;&lt;/a&gt; Don't output usage when an error occured.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2031"&gt;&lt;strong&gt;#2031&lt;/strong&gt;&lt;/a&gt; Simplify setting FileVersion and InformationalVersion&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2029"&gt;&lt;strong&gt;#2029&lt;/strong&gt;&lt;/a&gt; Investigate in-process NuGet dependency resolution&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2014"&gt;&lt;strong&gt;#2014&lt;/strong&gt;&lt;/a&gt; In-process NuGet don’t support multiple feeds through config&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2003"&gt;&lt;strong&gt;#2003&lt;/strong&gt;&lt;/a&gt; Add possibility for AssemblyMetadata collection in CreateAssemblyInfo&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1887"&gt;&lt;strong&gt;#1887&lt;/strong&gt;&lt;/a&gt; DotNetCoreRestoreSettings: support option --force&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1557"&gt;&lt;strong&gt;#1557&lt;/strong&gt;&lt;/a&gt; Add support for MSBuild /consoleloggerparameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/2062"&gt;&lt;strong&gt;#2062&lt;/strong&gt;&lt;/a&gt; Fixed typo 'need to'&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/2035"&gt;&lt;strong&gt;#2035&lt;/strong&gt;&lt;/a&gt; Fix typo in README&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1213"&gt;&lt;strong&gt;#1213&lt;/strong&gt;&lt;/a&gt; NuGetPushSettings.Source: incorrect documentation&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Version 0.27.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;The third release of 2018 is here! It contains mostly improvements and bug fixes. While this release doesn't contain any known breaking changes, we would like to take this opportunity to inform you that the next release will. The next release will introduce typed contexts to Cake, this will really improve the flexibility of Cake scripts, read more about this &lt;a href="https://github.com/cake-build/cake/issues/2008"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The most notable bug fixes in 0.27.0 were made around addin installation. We updated the internals of Cake to use v4.6.0 of the NuGet Client libraries, which comes with performance improvements. Cake now also supports "offline" builds when using in-process NuGet, this was kind of a regression since it used to work with the old &lt;code&gt;nuget.exe&lt;/code&gt; based installer. Another enhancement is that we've added a runtime assembly resolver for assembly versions that can't be found. This tackles most of the issues experienced around addin loading and dependency resolution. Last but not least, in-process NuGet now also supports specifying multiple NuGet sources through config. This can be achieved by separating sources using semicolon (&lt;code&gt;;&lt;/code&gt;) when setting the &lt;a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#nuget-download-url."&gt;NuGet Download Url&lt;/a&gt; configuration value. Below is an example using &lt;code&gt;cake.config&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Last but not least, a friendly reminder that if you haven't pinned to a specific version of Cake, you should do it now :-) More information about pinning to a specific version can be found &lt;a href="https://cakebuild.net/docs/tutorials/pinning-cake-version"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<author>
 			<name>gep13</name>
@@ -1033,34 +1123,6 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Version 0.19.4 of Cake has been released.&lt;/p&gt;
 &lt;p&gt;This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<author>
-			<name>devlead</name>
-		</author>
-		<link href="https://cakebuild.net/blog/2017/04/cake-v0.19.3-released" />
-		<id>https://cakebuild.net/blog/2017/04/cake-v0.19.3-released</id>
-		<title>Cake v0.19.3 released</title>
-		<updated>2017-04-04T00:00:00Z</updated>
-		<content>&lt;p&gt;Version 0.19.3 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This is a minor hotfix release for 0.19.2, which fixes so SignTool path is resolved by default also with the Windows 10 SDK.&lt;/p&gt;
-&lt;p&gt;Contributions were included from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/Thealexbarney"&gt;Thealexbarney&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
-&lt;!--excerpt--&gt;
-&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/issues?milestone=37&amp;amp;state=closed"&gt;1 issue&lt;/a&gt; closed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Bug&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1544"&gt;&lt;strong&gt;#1544&lt;/strong&gt;&lt;/a&gt; Windows 10 SDK path is not being resolved&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;Version 0.19.3 of Cake has been released.&lt;/p&gt;
-&lt;p&gt;This is a minor hotfix release for 0.19.2, which fixes so SignTool path is resolved by default also with the Windows 10 SDK.&lt;/p&gt;
 &lt;p&gt;Contributions were included from:&lt;/p&gt;
 
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</summary>

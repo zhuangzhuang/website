@@ -145,20 +145,9 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
-				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
-				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
-				<li class="selected"><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
-				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
-				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
-				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
-				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
-				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
-				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
-				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core/ActionTask">ActionTask</a></li>
 				<li><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></li>
@@ -182,6 +171,7 @@
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
+				<li><a href="/api/Cake.Core/ICakeEnvironmentExtensions">I<wbr>Cake<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/MethodInfoExtensions">MethodInfoExtensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessRunnerExtensions">Process<wbr>Runner<wbr>Extensions</a></li>
@@ -196,9 +186,20 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
+				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
+				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
+				<li class="selected"><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
+				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
+				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
+				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
+				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
+				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 
 
                     </ul>
@@ -238,8 +239,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
 											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
+											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -249,10 +250,10 @@
 							graph TD
 	Type["ICakeEnvironment"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeEnvironment"]
-	click Implementing0 "/api/Cake.Testing/FakeEnvironment"
-	Type-.-&gt;Implementing1["CakeEnvironment"]
-	click Implementing1 "/api/Cake.Core/CakeEnvironment"
+	Type-.-&gt;Implementing0["CakeEnvironment"]
+	click Implementing0 "/api/Cake.Core/CakeEnvironment"
+	Type-.-&gt;Implementing1["FakeEnvironment"]
+	click Implementing1 "/api/Cake.Testing/FakeEnvironment"
 
 						</div>
 					</div>
@@ -414,6 +415,16 @@ class Type type-node
              </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeEnvironmentExtensions/DAF3695D">Expand<wbr>Environment<wbr>Variables<wbr>(string)<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Expands the environment variables in the text. Variables shoud be quoted with %.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/ICakeEnvironmentExtensions">I<wbr>Cake<wbr>Environment<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
