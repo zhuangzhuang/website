@@ -80,8 +80,8 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#EnumTypes">Enum Types</a></p>
 <p><a href="#ClassTypes">Class Types</a></p>
+<p><a href="#EnumTypes">Enum Types</a></p>
 <p><a href="#DelegateTypes">Delegate Types</a></p>
 <p><a href="#InterfaceTypes">Interface Types</a></p>
 <hr class="infobar-hidden">
@@ -499,6 +499,7 @@
 </ul></li>			<li><a href="/api/Cake.Coveralls">Cake<wbr>.Coveralls</a></li>
 			<li><a href="/api/Cake.CsvHelper">Cake<wbr>.CsvHelper</a></li>
 			<li><a href="/api/Cake.Curl">Cake<wbr>.Curl</a></li>
+			<li><a href="/api/Cake.DependenciesAnalyser">Cake<wbr>.<wbr>Dependencies<wbr>Analyser</a></li>
 			<li><a href="/api/Cake.DependencyCheck">Cake<wbr>.DependencyCheck</a></li>
 			<li><a href="/api/Cake.DevicesXunitTestReceiver">Cake<wbr>.<wbr>Devices<wbr>Xunit<wbr>Test<wbr>Receiver</a></li>
 			<li><a href="/api/Cake.Diagnostics">Cake<wbr>.Diagnostics</a></li>
@@ -834,6 +835,20 @@
 			<li><a href="/api/Cake.Yeoman">Cake<wbr>.Yeoman</a></li>
 </ul></li>
 				<li class="treeview">
+				<a href="/api/DependencyChecker">DependencyChecker</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview">
+				<a href="/api/DependencyChecker.NuGet">DependencyChecker<wbr>.NuGet</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/DependencyChecker.NuGet.Adapter">DependencyChecker<wbr>.NuGet<wbr>.Adapter</a></li>
+</ul></li></ul></li>
+				<li class="treeview">
+				<a href="/api/DotnetProjectDependenciesAnalyser">Dotnet<wbr>Project<wbr>Dependencies<wbr>Analyser</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/DotnetProjectDependenciesAnalyser.Domain">Dotnet<wbr>Project<wbr>Dependencies<wbr>Analyser<wbr>.Domain</a></li>
+</ul></li>
+				<li class="treeview">
 				<a href="/api/FxResources">FxResources</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/FxResources.Microsoft">FxResources<wbr>.Microsoft</a></li>
@@ -1041,32 +1056,6 @@
     </div>
 
 
-			<h1 id="EnumTypes">Enum Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Enum</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></td>
-									<td>
-    Represents a log level.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></td>
-									<td>
-    Represents verbosity.
-    </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -1093,6 +1082,32 @@
 								<td><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></td>
 									<td>
     A log that discards messages written to it.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+			<h1 id="EnumTypes">Enum Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Enum</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></td>
+									<td>
+    Represents a log level.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></td>
+									<td>
+    Represents verbosity.
     </td>
 							</tr>
 					</tbody></table>
