@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - gep13 (Page 6)</title>
+        <title>Cake - Cake v0.27.1 released</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -81,6 +81,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
+        <div><p><a href="https://github.com/cake-build/website/blob/develop/input/blog/2018-04-21-cake-v0.28.1-released.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -138,7 +139,7 @@
         <li><a href="/blog/author/agc93">agc93</a></li>
         <li><a href="/blog/author/daveaglick">daveaglick</a></li>
         <li><a href="/blog/author/devlead">devlead</a></li>
-        <li class="selected"><a href="/blog/author/gep13">gep13</a></li>
+        <li><a href="/blog/author/gep13">gep13</a></li>
         <li><a href="/blog/author/jericho">jericho</a></li>
         <li><a href="/blog/author/Larz-White">Larz White</a></li>
         <li><a href="/blog/author/mholo65">mholo65</a></li>
@@ -158,52 +159,47 @@
 
 
 	<section class="content-header">
-		<h1>gep13 (Page 6)</h1>
+		<h1>Cake v0.27.1 released</h1>
 	</section>
 	<section class="content">
 		
 
-        <h2><a href="/blog/2015/11/cake-extensions">Cake Extensions for VS Code and Visual Studio Team Services</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Thursday, November 19, 2015</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/News">News</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>As you might have heard at the Microsoft <a href="connect2015.visualstudio.com/">Connect()</a> event yesterday, both VS Code and Visual Studio Team Services (formerly Visual Studio Online) now both support Extensions.</p>
-<p>Here are some links to more information about those announcements:</p>
 
-<p>The Cake Team are very proud to announce that on day one of release, there are Cake extensions available for both VS Code and Visual Studio Team Services.</p>
-                <a href="/blog/2015/11/cake-extensions">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2015/11/cake-v0.6.0-released">Cake v0.6.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Wednesday, November 4, 2015</dd>
+    <dd>Saturday, April 21, 2018</dd>
         <dt><i class="fa fa-bookmark"></i> Category</dt>
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>Version 0.6.0 of Cake has been released.</p>
-<p>In this latest version of Cake, 0.6.0, a number of new aliases have been added, including Chocolatey, OpenCover, GitReleaseManager, and many others.  There were enough new features added into this release to warrant bumping the minor release number.</p>
-<p>Please let us know if you run into any issues with this latest release.</p>
-                <a href="/blog/2015/11/cake-v0.6.0-released">Read more...</a>
-            </div>
-        <hr />
-    <nav>
-        <ul class="pager">
-            <li class="previous">                
-                    <a href="/blog/author/gep13/page5"><span aria-hidden="true">&larr;</span> Newer</a>
-            </li>
-            <li class="next">
-            </li>
-        </ul>
-    </nav>
+</dl>
 
+<p>Version 0.27.1 of Cake has been released.</p>
+<p>This is a hotfix release of Cake.  Following the release of Cake 0.27.0 it was noted that there was an issue with loading some dependencies, which would result in a Stack Overflow exception.  This was first noted <a href="https://gitter.im/cake-build/cake?at=5ada054962316e0505e0371c">here</a>, and also <a href="https://github.com/SharpeRAD/Cake.Powershell/issues/55">here</a>.</p>
+<p>As a result of these issues being raised, a bug was identified in the ScriptAssemblyResolver.cs where it could end up in an endless loop.  This bug has now been addressed.</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/daveaglick">daveaglick</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=50&amp;state=closed">1 issue</a> closed.</p>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2132"><strong>#2132</strong></a> Problems with loading certain assemblies (0.27.0)</li>
+</ul>
+
+
+<hr />
+
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released&t=Cake%20v0.27.1%20released" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released&text=Cake%20v0.27.1%20released:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released&via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released&title=Cake%20v0.27.1%20released" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released&title=Cake%20v0.27.1%20released&summary=&source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="mailto:?subject=Cake%20v0.27.1%20released&body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F04%2Fcake-v0.28.1-released" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
 
 	</section>
                 

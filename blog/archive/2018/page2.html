@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - gep13 (Page 6)</title>
+        <title>Cake - 2018 (Page 2)</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -138,7 +138,7 @@
         <li><a href="/blog/author/agc93">agc93</a></li>
         <li><a href="/blog/author/daveaglick">daveaglick</a></li>
         <li><a href="/blog/author/devlead">devlead</a></li>
-        <li class="selected"><a href="/blog/author/gep13">gep13</a></li>
+        <li><a href="/blog/author/gep13">gep13</a></li>
         <li><a href="/blog/author/jericho">jericho</a></li>
         <li><a href="/blog/author/Larz-White">Larz White</a></li>
         <li><a href="/blog/author/mholo65">mholo65</a></li>
@@ -158,46 +158,42 @@
 
 
 	<section class="content-header">
-		<h1>gep13 (Page 6)</h1>
+		<h1>2018 (Page 2)</h1>
 	</section>
 	<section class="content">
 		
 
-        <h2><a href="/blog/2015/11/cake-extensions">Cake Extensions for VS Code and Visual Studio Team Services</a></h2>
+        <h2><a href="/blog/2018/01/cake-v0.25.0-released">Cake v0.25.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Thursday, November 19, 2015</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/News">News</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>As you might have heard at the Microsoft <a href="connect2015.visualstudio.com/">Connect()</a> event yesterday, both VS Code and Visual Studio Team Services (formerly Visual Studio Online) now both support Extensions.</p>
-<p>Here are some links to more information about those announcements:</p>
-
-<p>The Cake Team are very proud to announce that on day one of release, there are Cake extensions available for both VS Code and Visual Studio Team Services.</p>
-                <a href="/blog/2015/11/cake-extensions">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2015/11/cake-v0.6.0-released">Cake v0.6.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Wednesday, November 4, 2015</dd>
+    <dd>Wednesday, January 17, 2018</dd>
         <dt><i class="fa fa-bookmark"></i> Category</dt>
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
 </dl>            <div>
-                <p>Version 0.6.0 of Cake has been released.</p>
-<p>In this latest version of Cake, 0.6.0, a number of new aliases have been added, including Chocolatey, OpenCover, GitReleaseManager, and many others.  There were enough new features added into this release to warrant bumping the minor release number.</p>
-<p>Please let us know if you run into any issues with this latest release.</p>
-                <a href="/blog/2015/11/cake-v0.6.0-released">Read more...</a>
+                <p>Version 0.25.0 of Cake has been released.</p>
+<p>The first release of 2018 is here! It contains mostly improvements and bug fixes, but it also has one potential breaking change.</p>
+<p>The most notable change in this release is that we no longer use the NuGet.exe CLI tool when installing <code>addins</code>, <code>tools</code>, <code>modules</code> and <code>scripts</code> from NuGet sources in our <a href="/docs/fundamentals/preprocessor-directives">preprocessor directives</a>.
+Now we instead default to the in-process NuGet client introduced in Cake <a href="/blog/2017/09/cake-v0.22.0-released">v0.22.0</a>. This will not only fix many previous issues people have seen with Cake's preprocessor NuGet handling, but also enable us to simplify boostrappers and pave the way to properly solve addin dependencies. It will also make pure .NET Core environments work out of the box with <code>Cake.CoreCLR</code>.</p>
+<p>Also notable is that this release will likely be the last one before we migrate <code>Cake.CoreCLR</code> to .NET Core 2.x, we know this is much awaited! The migration work has been going on for some time now and most blockers have been sorted. So our preliminary plan is to have this migration done by the next release.</p>
+<p>The new NuGet client shouldn't break any existing scripts, addins or tools, but you might need to clear your tools/addins folder as it has a slightly different folder structure. You can opt-out if you're having issues, by using Cake <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values">configuration</a> environment variable, file or argument.</p>
+<p><strong>Environment Variable Name</strong></p>
+
+<p><strong>Config File Contents</strong></p>
+
+<p><strong>Direct Argument</strong></p>
+
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2018/01/cake-v0.25.0-released">Read more...</a>
             </div>
         <hr />
     <nav>
         <ul class="pager">
             <li class="previous">                
-                    <a href="/blog/author/gep13/page5"><span aria-hidden="true">&larr;</span> Newer</a>
+                    <a href="/blog/archive/2018"><span aria-hidden="true">&larr;</span> Newer</a>
             </li>
             <li class="next">
             </li>
