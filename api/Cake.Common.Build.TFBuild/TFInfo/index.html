@@ -196,12 +196,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo">T<wbr>F<wbr>Build<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo">TFBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -213,18 +213,18 @@
 	Base0["object"]--&gt;Type
 	Type["TFInfo"]
 class Type type-node
-	Type--&gt;Derived0["TFBuildEnvironmentInfo"]
-	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
-	Type--&gt;Derived1["TFBuildInfo"]
-	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
-	Type--&gt;Derived2["TFBuildTeamProjectInfo"]
-	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
+	Type--&gt;Derived0["TFBuildDefinitionInfo"]
+	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
+	Type--&gt;Derived1["TFBuildEnvironmentInfo"]
+	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Type--&gt;Derived2["TFBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
 	Type--&gt;Derived3["TFBuildRepositoryInfo"]
 	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo"
-	Type--&gt;Derived4["TFBuildAgentInfo"]
-	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
-	Type--&gt;Derived5["TFBuildDefinitionInfo"]
-	click Derived5 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
+	Type--&gt;Derived4["TFBuildTeamProjectInfo"]
+	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
+	Type--&gt;Derived5["TFBuildAgentInfo"]
+	click Derived5 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
 
 						</div>
 					</div>
@@ -360,17 +360,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -379,6 +368,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
