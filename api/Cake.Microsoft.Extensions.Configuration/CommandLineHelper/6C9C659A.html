@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - VsceTool&lt;TSettings&gt;.GetAlternativeToolPaths(TSettings) Method</title>
+        <title>Cake - API - CommandLineHelper.ParseCommandLineArgs(ICollection&lt;string&gt;) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -79,8 +79,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -142,18 +141,18 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.VsCode.dll">Cake<wbr>.VsCode<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Microsoft.Extensions.Configuration.dll">Cake<wbr>.Microsoft<wbr>.Extensions<wbr>.Configuration<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.VsCode">Cake<wbr>.VsCode</a></li>
+		<li><a href="/api/Cake.Microsoft.Extensions.Configuration">Cake<wbr>.Microsoft<wbr>.Extensions<wbr>.Configuration</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.VsCode/VsceTool_1">VsceTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+		<li><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper">CommandLineHelper</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.VsCode/VsceTool_1/C0DE9037">VsceTool<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>IVsceToolResolver)<wbr></a></li>
+			<li class="header">Field Members</li>
+				<li><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper/AA9E2EEA">Known<wbr>Cake<wbr>Command<wbr>Line<wbr>Arguments</a></li>
+				<li><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper/19232EED">Known<wbr>Cake<wbr>Command<wbr>Line<wbr>Short<wbr>Name<wbr>Arguments</a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.VsCode/VsceTool_1/BDEAAFAA">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></li>
-				<li><a href="/api/Cake.VsCode/VsceTool_1/F1262C15">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
-				<li><a href="/api/Cake.VsCode/VsceTool_1/A4A8D264">GetToolName<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper/A35FC34A">GetArgumentInfo<wbr>(Match, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper/6C9C659A">ParseCommandLineArgs<wbr>(ICollection<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -168,41 +167,37 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.VsCode/VsceTool_1">VsceTool<wbr>&lt;TSettings&gt;<wbr></a>.</h3>
-	<h1>Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper">CommandLineHelper</a>.</h3>
+	<h1>ParseCommandLineArgs<wbr>(ICollection<wbr>&lt;string&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.VsCode" class="alert-link">https://github.com/cake-contrib/Cake.VsCode</a>.
+                        <a href="https://github.com/JonCubed/cake-microsoft-extensions-configuration" class="alert-link">https://github.com/JonCubed/cake-microsoft-extensions-configuration</a>.
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Gets alternative file paths which the tool may exist in
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.VsCode.dll">Cake<wbr>.VsCode<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Microsoft.Extensions.Configuration.dll">Cake<wbr>.Microsoft<wbr>.Extensions<wbr>.Configuration<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.VsCode">Cake<wbr>.VsCode</a></dd>
+						<dd><a href="/api/Cake.Microsoft.Extensions.Configuration">Cake<wbr>.Microsoft<wbr>.Extensions<wbr>.Configuration</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.VsCode/VsceTool_1">VsceTool<wbr>&lt;TSettings&gt;<wbr></a></dd>		
+						<dd><a href="/api/Cake.Microsoft.Extensions.Configuration/CommandLineHelper">CommandLineHelper</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>protected override sealed IEnumerable&lt;FilePath&gt; GetAlternativeToolPaths(TSettings settings)</code></pre>
+	<pre><code>public static  ParseCommandLineArgs(ICollection&lt;string&gt; args)</code></pre>
 
 
 
@@ -220,9 +215,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.VsCode/VsceTool_1#typeparam-TSettings">TSettings</a></td>
-						<td>The settings.</td>
+						<td>args</td>
+						<td>ICollection<wbr>&lt;&gt;<wbr></td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -239,8 +234,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-					<td>The default tool path.</td>
+					<td></td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
