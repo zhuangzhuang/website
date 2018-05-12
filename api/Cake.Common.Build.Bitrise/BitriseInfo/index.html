@@ -27,7 +27,7 @@
         <script src="/assets/js/respond.min.js"></script>
         <![endif]-->  
 
-        
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
     </head>
     <body class="hold-transition wyam layout-boxed  ">    
         <div class="top-banner"></div>
@@ -65,6 +65,7 @@
         <li><a href="/dsl">Reference</a></li>
         <li><a href="/addins">Addins</a></li>
         <li class="active"><a href="/api">API</a></li>
+        <li><a href="/faq">FAQ</a></li>
         <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source</a></li>
  
                         </ul>       
@@ -194,13 +195,13 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo">BitriseWorkflowInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo">Bitrise<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo">Bitrise<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo">BitriseDirectoryInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseApplicationInfo">Bitrise<wbr>Application<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseBuildInfo">BitriseBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo">BitriseWorkflowInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo">Bitrise<wbr>Provisioning<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo">Bitrise<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo">Bitrise<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseApplicationInfo">Bitrise<wbr>Application<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo">BitriseDirectoryInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -212,20 +213,20 @@
 	Base0["object"]--&gt;Type
 	Type["BitriseInfo"]
 class Type type-node
-	Type--&gt;Derived0["BitriseWorkflowInfo"]
-	click Derived0 "/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo"
-	Type--&gt;Derived1["BitriseEnvironmentInfo"]
-	click Derived1 "/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo"
-	Type--&gt;Derived2["BitriseRepositoryInfo"]
-	click Derived2 "/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo"
-	Type--&gt;Derived3["BitriseDirectoryInfo"]
-	click Derived3 "/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo"
-	Type--&gt;Derived4["BitriseApplicationInfo"]
-	click Derived4 "/api/Cake.Common.Build.Bitrise.Data/BitriseApplicationInfo"
-	Type--&gt;Derived5["BitriseBuildInfo"]
-	click Derived5 "/api/Cake.Common.Build.Bitrise.Data/BitriseBuildInfo"
-	Type--&gt;Derived6["BitriseProvisioningInfo"]
-	click Derived6 "/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo"
+	Type--&gt;Derived0["BitriseBuildInfo"]
+	click Derived0 "/api/Cake.Common.Build.Bitrise.Data/BitriseBuildInfo"
+	Type--&gt;Derived1["BitriseWorkflowInfo"]
+	click Derived1 "/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo"
+	Type--&gt;Derived2["BitriseProvisioningInfo"]
+	click Derived2 "/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo"
+	Type--&gt;Derived3["BitriseRepositoryInfo"]
+	click Derived3 "/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo"
+	Type--&gt;Derived4["BitriseEnvironmentInfo"]
+	click Derived4 "/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo"
+	Type--&gt;Derived5["BitriseApplicationInfo"]
+	click Derived5 "/api/Cake.Common.Build.Bitrise.Data/BitriseApplicationInfo"
+	Type--&gt;Derived6["BitriseDirectoryInfo"]
+	click Derived6 "/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo"
 
 						</div>
 					</div>
@@ -334,17 +335,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BitriseInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;BitriseInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -353,6 +343,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BitriseInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -403,6 +404,10 @@ class Type type-node
     <br>
     Generated by <a href="http://wyam.io">Wyam</a>
 </p>
+
+<script>
+    anchors.add();
+</script>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
