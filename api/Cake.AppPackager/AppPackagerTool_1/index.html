@@ -203,11 +203,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
 											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
-											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
 									</ul>
 								</dd>			
@@ -220,16 +220,16 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["AppPackagerTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["AppPacker"]
-	click Derived0 "/api/Cake.AppPackager.Pack/AppPacker"
-	Type--&gt;Derived1["AppDecrypter"]
-	click Derived1 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
-	Type--&gt;Derived2["AppUnbundler"]
-	click Derived2 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
-	Type--&gt;Derived3["AppUnpacker"]
-	click Derived3 "/api/Cake.AppPackager.Unpack/AppUnpacker"
-	Type--&gt;Derived4["AppBundler"]
-	click Derived4 "/api/Cake.AppPackager.Bundle/AppBundler"
+	Type--&gt;Derived0["AppDecrypter"]
+	click Derived0 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
+	Type--&gt;Derived1["AppUnbundler"]
+	click Derived1 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
+	Type--&gt;Derived2["AppBundler"]
+	click Derived2 "/api/Cake.AppPackager.Bundle/AppBundler"
+	Type--&gt;Derived3["AppPacker"]
+	click Derived3 "/api/Cake.AppPackager.Pack/AppPacker"
+	Type--&gt;Derived4["AppUnpacker"]
+	click Derived4 "/api/Cake.AppPackager.Unpack/AppUnpacker"
 	Type--&gt;Derived5["AppEncrypter"]
 	click Derived5 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
 
