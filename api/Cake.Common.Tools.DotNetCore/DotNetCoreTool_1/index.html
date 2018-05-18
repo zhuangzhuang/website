@@ -27,7 +27,7 @@
         <script src="/assets/js/respond.min.js"></script>
         <![endif]-->  
 
-        
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
     </head>
     <body class="hold-transition wyam layout-boxed  ">    
         <div class="top-banner"></div>
@@ -65,6 +65,7 @@
         <li><a href="/dsl">Reference</a></li>
         <li><a href="/addins">Addins</a></li>
         <li class="active"><a href="/api">API</a></li>
+        <li><a href="/faq">FAQ</a></li>
         <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source</a></li>
  
                         </ul>       
@@ -146,12 +147,12 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.DotNetCore">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreVerbosity">DotNetCoreVerbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreSettings">DotNetCoreSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1">DotNetCoreTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreVerbosity">DotNetCoreVerbosity</a></li>
 
 
                     </ul>
@@ -197,19 +198,19 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer">DotNetCoreRestorer</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Deleter</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester">DotNetCoreTester</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher">DotNetCorePublisher</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner">DotNetCoreToolRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder">DotNetCoreBuilder</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor">DotNetCoreExecutor</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner">DotNetCoreCleaner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester">DotNetCoreVSTester</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Builder</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner">DotNetCoreRunner</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Pusher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner">DotNetCoreRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner">DotNetCoreCleaner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer">DotNetCoreRestorer</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder">DotNetCoreBuilder</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester">DotNetCoreTester</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester">DotNetCoreVSTester</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor">DotNetCoreExecutor</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner">DotNetCoreToolRunner</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker">DotNetCorePacker</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Builder</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Deleter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher">DotNetCorePublisher</a></li>								
 									</ul>
 								</dd>			
 							
@@ -223,32 +224,32 @@
 	Base1["object"]--&gt;Base0
 	Type["DotNetCoreTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["DotNetCoreRestorer"]
-	click Derived0 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer"
-	Type--&gt;Derived1["DotNetCoreNuGetDeleter"]
-	click Derived1 "/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter"
-	Type--&gt;Derived2["DotNetCoreTester"]
-	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester"
-	Type--&gt;Derived3["DotNetCorePublisher"]
-	click Derived3 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher"
-	Type--&gt;Derived4["DotNetCoreToolRunner"]
-	click Derived4 "/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner"
-	Type--&gt;Derived5["DotNetCoreBuilder"]
-	click Derived5 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder"
-	Type--&gt;Derived6["DotNetCoreExecutor"]
-	click Derived6 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor"
-	Type--&gt;Derived7["DotNetCoreCleaner"]
-	click Derived7 "/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner"
-	Type--&gt;Derived8["DotNetCoreVSTester"]
-	click Derived8 "/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester"
-	Type--&gt;Derived9["DotNetCoreMSBuildBuilder"]
-	click Derived9 "/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder"
-	Type--&gt;Derived10["DotNetCoreRunner"]
-	click Derived10 "/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner"
-	Type--&gt;Derived11["DotNetCoreNuGetPusher"]
-	click Derived11 "/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher"
-	Type--&gt;Derived12["DotNetCorePacker"]
-	click Derived12 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker"
+	Type--&gt;Derived0["DotNetCoreNuGetPusher"]
+	click Derived0 "/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher"
+	Type--&gt;Derived1["DotNetCoreRunner"]
+	click Derived1 "/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner"
+	Type--&gt;Derived2["DotNetCoreCleaner"]
+	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner"
+	Type--&gt;Derived3["DotNetCoreRestorer"]
+	click Derived3 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer"
+	Type--&gt;Derived4["DotNetCoreBuilder"]
+	click Derived4 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder"
+	Type--&gt;Derived5["DotNetCoreTester"]
+	click Derived5 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester"
+	Type--&gt;Derived6["DotNetCoreVSTester"]
+	click Derived6 "/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester"
+	Type--&gt;Derived7["DotNetCoreExecutor"]
+	click Derived7 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor"
+	Type--&gt;Derived8["DotNetCoreToolRunner"]
+	click Derived8 "/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner"
+	Type--&gt;Derived9["DotNetCorePacker"]
+	click Derived9 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker"
+	Type--&gt;Derived10["DotNetCoreMSBuildBuilder"]
+	click Derived10 "/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder"
+	Type--&gt;Derived11["DotNetCoreNuGetDeleter"]
+	click Derived11 "/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter"
+	Type--&gt;Derived12["DotNetCorePublisher"]
+	click Derived12 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher"
 
 						</div>
 					</div>
@@ -563,6 +564,10 @@ class Type type-node
     <br>
     Generated by <a href="http://wyam.io">Wyam</a>
 </p>
+
+<script>
+    anchors.add();
+</script>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>

@@ -29,7 +29,7 @@
         <script src="/assets/js/respond.min.js"></script>
         <![endif]-->  
 
-        
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
     </head>
     <body class="hold-transition wyam layout-boxed  ">    
         <div class="top-banner"></div>
@@ -67,6 +67,7 @@
         <li><a href="/dsl">Reference</a></li>
         <li><a href="/addins">Addins</a></li>
         <li><a href="/api">API</a></li>
+        <li><a href="/faq">FAQ</a></li>
         <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source</a></li>
  
                         </ul>       
@@ -100,6 +101,7 @@
         <li class="selected"><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/05">May, 2018</a></li>
         <li><a href="/blog/archive/2018/04">April, 2018</a></li>
         <li><a href="/blog/archive/2018/03">March, 2018</a></li>
         <li><a href="/blog/archive/2018/02">February, 2018</a></li>
@@ -163,6 +165,23 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/04/cake-v0.19.4-released">Cake v0.19.4 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, April 19, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <p>Version 0.19.4 of Cake has been released.</p>
+<p>This is a minor hotfix release for 0.19.3, which fixes code generation of aliases with generic constraints and has one breaking change to correct the type used for TeamCity build numbers.</p>
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2017/04/cake-v0.19.4-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2017/04/cake-v0.19.3-released">Cake v0.19.3 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -240,33 +259,6 @@
                 <a href="/blog/2017/03/cake-v0.19.0-released">Read more...</a>
             </div>
         <hr />
-        <h2><a href="/blog/2017/03/cake-v0.18.0-released">Cake v0.18.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Tuesday, March 7, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
-                <p>Version 0.18.0 of Cake has been released.</p>
-<p>This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there's a couple of breaking changes.</p>
-<p>The minor breaking changes involve the old obsoleted DNU alias have been removed and WiXHeat had an incorrect signature which have been corrected.</p>
-<p>The bigger breaking change is that with this release addins must target at least Cake.Core version 0.16.2 or later, addins targeting older versions will abort script execution.
-Many addins have already been updated and the many of those who have not yet upgraded, have pull requests ready for them. If any of the addins you use should be affected by this, please raise an issue in that addins repository. We've tried to reach out to all authors, but with hundreds of addins we've surely missed one or two.
-We do recommend you pin your builds to the version of Cake you using, that way you reduce the risk of builds failing because breaking changes. Instead you can do a controlled upgrade and take your time to sort any issues.</p>
-<p>Amongst the more notable new features is MSBuild / Visual Studio 2017 support and support for loading scripts from NuGet.</p>
-<p>We're also pleased to announce that from this release and forward all official Cake binaries will be signed with a .NET Foundation certificate, this isn't strong naming, so it won't affect addins in any way, just ensure the authenticity of the binaries.
-<img src="https://cloud.githubusercontent.com/assets/1647294/23683657/8172ad14-039a-11e7-9d95-a4701bfd7f61.png" class="img-fluid" alt="image"></p>
-<p>Worth noting in a near future release we will update to and unify around latest stable version Roslyn scripting - this means Mono scripting engine will be removed, we will still run on Mono, but we will require a newer version of Mono than we do today. This will bring a lot of benefit for Cake as we will be able to support the latest C# features and reduce the maintenance burden and error process of maintaining multiple scripting engines.</p>
-<p>Please let us know if you run into any issues with this latest release.</p>
-<p>Once again, the Cake Team have been overwhelmed by the number of contributions from our Community Members.  Simply put... THANK YOU!</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/03/cake-v0.18.0-released">Read more...</a>
-            </div>
-        <hr />
     <nav>
         <ul class="pager">
             <li class="previous">                
@@ -299,6 +291,10 @@ We do recommend you pin your builds to the version of Cake you using, that way y
     <br/>
     Generated by <a href="http://wyam.io">Wyam</a>
 </p>
+
+<script>
+    anchors.add();
+</script>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
