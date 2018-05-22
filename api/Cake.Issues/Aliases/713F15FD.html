@@ -211,7 +211,7 @@
              <p>Read issues reported as MsBuild warnings and issues reported by JetBrains inspect code
              with comments formatted as Markdown:</p>
              <pre><code class="cs"> var settings =
-         new ReadIssuesSettings(new DirectoryPath("c:\repo"))
+         new ReadIssuesSettings(@"c:\repo")
          {
              Format = IssueCommentFormat.Markdown
          };
@@ -271,7 +271,7 @@
 					</tr>
 					<tr>
 						<td>issueProviders</td>
-						<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+						<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 						<td>The list of provider for issues.</td>
 					</tr>
 					<tr>
@@ -294,7 +294,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 					<td>Issues reported by all issue providers.</td>
 				</tr>
 			</tbody></table>
