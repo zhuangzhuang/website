@@ -210,7 +210,7 @@
 	<div>
              <p>Read issues reported as MsBuild warnings and format comments in Markdown:</p>
              <pre><code class="cs"> var settings =
-         new ReadIssuesSettings(new DirectoryPath("c:\repo"))
+         new ReadIssuesSettings(@"c:\repo")
          {
              Format = IssueCommentFormat.Markdown
          };
@@ -287,7 +287,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 					<td>Issues reported by issue provider.</td>
 				</tr>
 			</tbody></table>
