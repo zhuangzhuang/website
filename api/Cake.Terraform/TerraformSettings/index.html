@@ -217,15 +217,15 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Terraform/TerraformEnvListSettings">Terraform<wbr>Env<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformPlanSettings">Terraform<wbr>Plan<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformDestroySettings">Terraform<wbr>Destroy<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformEnvDeleteSettings">Terraform<wbr>Env<wbr>Delete<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Terraform/TerraformApplySettings">Terraform<wbr>Apply<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformEnvSelectSettings">Terraform<wbr>Env<wbr>Select<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformInitSettings">Terraform<wbr>Init<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Terraform/TerraformPlanSettings">Terraform<wbr>Plan<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformEnvListSettings">Terraform<wbr>Env<wbr>List<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformEnvNewSettings">Terraform<wbr>Env<wbr>New<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Terraform/TerraformShowSettings">Terraform<wbr>Show<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Terraform/TerraformApplySettings">Terraform<wbr>Apply<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -237,24 +237,24 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["TerraformSettings"]
 class Type type-node
-	Type--&gt;Derived0["TerraformEnvListSettings"]
-	click Derived0 "/api/Cake.Terraform/TerraformEnvListSettings"
+	Type--&gt;Derived0["TerraformPlanSettings"]
+	click Derived0 "/api/Cake.Terraform/TerraformPlanSettings"
 	Type--&gt;Derived1["TerraformDestroySettings"]
 	click Derived1 "/api/Cake.Terraform/TerraformDestroySettings"
 	Type--&gt;Derived2["TerraformEnvDeleteSettings"]
 	click Derived2 "/api/Cake.Terraform/TerraformEnvDeleteSettings"
-	Type--&gt;Derived3["TerraformApplySettings"]
-	click Derived3 "/api/Cake.Terraform/TerraformApplySettings"
-	Type--&gt;Derived4["TerraformEnvSelectSettings"]
-	click Derived4 "/api/Cake.Terraform/TerraformEnvSelectSettings"
-	Type--&gt;Derived5["TerraformInitSettings"]
-	click Derived5 "/api/Cake.Terraform/TerraformInitSettings"
-	Type--&gt;Derived6["TerraformPlanSettings"]
-	click Derived6 "/api/Cake.Terraform/TerraformPlanSettings"
-	Type--&gt;Derived7["TerraformEnvNewSettings"]
-	click Derived7 "/api/Cake.Terraform/TerraformEnvNewSettings"
-	Type--&gt;Derived8["TerraformShowSettings"]
-	click Derived8 "/api/Cake.Terraform/TerraformShowSettings"
+	Type--&gt;Derived3["TerraformEnvSelectSettings"]
+	click Derived3 "/api/Cake.Terraform/TerraformEnvSelectSettings"
+	Type--&gt;Derived4["TerraformInitSettings"]
+	click Derived4 "/api/Cake.Terraform/TerraformInitSettings"
+	Type--&gt;Derived5["TerraformEnvListSettings"]
+	click Derived5 "/api/Cake.Terraform/TerraformEnvListSettings"
+	Type--&gt;Derived6["TerraformEnvNewSettings"]
+	click Derived6 "/api/Cake.Terraform/TerraformEnvNewSettings"
+	Type--&gt;Derived7["TerraformShowSettings"]
+	click Derived7 "/api/Cake.Terraform/TerraformShowSettings"
+	Type--&gt;Derived8["TerraformApplySettings"]
+	click Derived8 "/api/Cake.Terraform/TerraformApplySettings"
 
 						</div>
 					</div>
@@ -328,17 +328,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Terraform<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Terraform<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -347,6 +336,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Terraform<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

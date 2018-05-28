@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - MarkdownlintIssuesSettings.FromContent(string) Method</title>
+        <title>Cake - API - MarkdownlintNodeJsRunnerSettings.ConfigFile Property</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -82,8 +82,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Value">Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -143,20 +142,22 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Issues.Markdownlint.dll">Cake<wbr>.Issues<wbr>.Markdownlint<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Markdownlint.dll">Cake<wbr>.Markdownlint<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Issues.Markdownlint">Cake<wbr>.Issues<wbr>.Markdownlint</a></li>
+		<li><a href="/api/Cake.Markdownlint.NodeJs">Cake<wbr>.Markdownlint<wbr>.NodeJs</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></li>
+		<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings">Markdownlint<wbr>Node<wbr>Js<wbr>Runner<wbr>Settings</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings/E2E8EE1E">Markdownlint<wbr>Issues<wbr>Settings<wbr>(FilePath)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings/013EE3F2">Markdownlint<wbr>Issues<wbr>Settings<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/2ACB7590">Markdownlint<wbr>Node<wbr>Js<wbr>Runner<wbr>Settings<wbr>(FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/BC4DA647">Markdownlint<wbr>Node<wbr>Js<wbr>Runner<wbr>Settings<wbr>(DirectoryPath)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings/59024C7B">FromContent<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings/EE6CF60E">FromFilePath<wbr>(FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/B6C4DBB0">ForDirectory<wbr>(DirectoryPath)<wbr></a></li>
+				<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/65E3972C">ForFile<wbr>(FilePath)<wbr></a></li>
 			<li class="header">Property Members</li>
-				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings/82CADC39">LogFileContent</a></li>
+				<li class="selected"><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/9D0FDEF4">ConfigFile</a></li>
+				<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/598C2D6D">OutputFile</a></li>
+				<li><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings/F8B51F15">ThrowOnIssue</a></li>
 
 
                     </ul>
@@ -171,68 +172,47 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a>.</h3>
-	<h1>FromContent<wbr>(string)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings">Markdownlint<wbr>Node<wbr>Js<wbr>Runner<wbr>Settings</a>.</h3>
+	<h1>ConfigFile <small>Property</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Issues.Markdownlint" class="alert-link">https://github.com/cake-contrib/Cake.Issues.Markdownlint</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Markdownlint" class="alert-link">https://github.com/cake-contrib/Cake.Markdownlint</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Returns a new instance of the <code class="cs"><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">MarkdownlintIssuesSettings</a></code> class from the content
-            of a Markdownlint log file.
+            Gets or sets the path to the config file.
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
+  			<div class="panel-body">
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Issues.Markdownlint.dll">Cake<wbr>.Issues<wbr>.Markdownlint<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Markdownlint.dll">Cake<wbr>.Markdownlint<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Issues.Markdownlint">Cake<wbr>.Issues<wbr>.Markdownlint</a></dd>
+						<dd><a href="/api/Cake.Markdownlint.NodeJs">Cake<wbr>.Markdownlint<wbr>.NodeJs</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></dd>		
+						<dd><a href="/api/Cake.Markdownlint.NodeJs/MarkdownlintNodeJsRunnerSettings">Markdownlint<wbr>Node<wbr>Js<wbr>Runner<wbr>Settings</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static MarkdownlintIssuesSettings FromContent(string logFileContent)</code></pre>
+	<pre><code>public FilePath ConfigFile { get; set; }</code></pre>
 
 
 
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>logFileContent</td>
-						<td>string</td>
-						<td>Content of the Markdownlint log file.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
+	<h1 id="Value">Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -243,8 +223,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></td>
-					<td>Instance of the <code class="cs"><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">MarkdownlintIssuesSettings</a></code> class.</td>
+					<td>FilePath</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
