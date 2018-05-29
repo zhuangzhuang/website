@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - MarkdownlintIssuesAliases.MarkdownlintIssues(ICakeContext, MarkdownlintIssuesSettings) Method</title>
+        <title>Cake - API - MarkdownlintIssuesAliases.MarkdownlintCliIssuesFromContent(ICakeContext, string) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -152,7 +152,11 @@
 		<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases">Markdownlint<wbr>Issues<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/B2623512">MarkdownlintIssues<wbr>(ICakeContext, <wbr>Markdownlint<wbr>Issues<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/1B693566">Markdownlint<wbr>Cli<wbr>Issues<wbr>(ICakeContext, <wbr>Markdownlint<wbr>Cli<wbr>Issues<wbr>Settings)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/445BDAF7">Markdownlint<wbr>Cli<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/56F1673C">Markdownlint<wbr>Cli<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/B28C5DA2">Markdownlint<wbr>Cli<wbr>Issues<wbr>Provider<wbr>Type<wbr>Name<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/49E6601E">MarkdownlintIssues<wbr>(ICakeContext, <wbr>Markdownlint<wbr>Issues<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/6A93524A">Markdownlint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/DB50BAC2">Markdownlint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/B60857C6">Markdownlint<wbr>Issues<wbr>Provider<wbr>Type<wbr>Name<wbr>(ICakeContext)<wbr></a></li>
@@ -171,7 +175,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases">Markdownlint<wbr>Issues<wbr>Aliases</a>.</h3>
-	<h1>MarkdownlintIssues<wbr>(ICakeContext, <wbr>Markdownlint<wbr>Issues<wbr>Settings)<wbr> <small>Method</small></h1>
+	<h1>Markdownlint<wbr>Cli<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -184,8 +188,9 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-             Gets an instance of a provider for issues reported by Markdownlint using specified settings.
-             </div>
+            Gets an instance of a provider for issues reported by markdownlint-cli or Cake.Markdownlint
+            using log file content.
+            </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -204,19 +209,16 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static IIssueProvider MarkdownlintIssues(this ICakeContext context, MarkdownlintIssuesSettings settings)</code></pre>
+	<pre><code>public static IIssueProvider MarkdownlintCliIssuesFromContent(this ICakeContext context, string logFileContent)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-             <p>Read issues reported by Markdownlint:</p>
-             <pre><code class="cs"> var settings =
-         new MarkdownlintIssuesSettings("C:\build\Markdownlint.log");
-
-     var issues =
-         ReadIssues(
-             MarkdownlintIssuesFromFilePath(settings),
-             @"c:\repo");</code></pre>
-             </div>
+            <p>Read issues reported by markdownlint-cli or Cake.Markdownlint:</p>
+            <pre><code class="cs">var issues =
+        ReadIssues(
+            MarkdownlintCliIssuesFromContent(logFileContent),
+            @"c:\repo");</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -230,11 +232,15 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
 						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td>Cake<wbr>Namespace<wbr>Import<wbr>Attribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -259,9 +265,9 @@
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></td>
-						<td>Settings for reading the Markdownlint log.</td>
+						<td>logFileContent</td>
+						<td>string</td>
+						<td>Content of the the markdownlint-cli log file.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -279,7 +285,7 @@
 				</thead>
 				<tbody><tr>
 					<td><a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a></td>
-					<td>Instance of a provider for issues reported by Markdownlint.</td>
+					<td>Instance of a provider for issues reported by markdownlint-cli.</td>
 				</tr>
 			</tbody></table>
 		</div>
