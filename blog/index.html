@@ -165,6 +165,162 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/05/cake-v0.28.0-released">Cake v0.28.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Thursday, May 31, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <html><head></head><body><p>Version 0.28.0 of Cake has been released.</p>
+<p>We're really excited by this release which has some splendid features and improvements!</p>
+<p>In this blog post we'll highlight:</p>
+<ul>
+<li>Typed context</li>
+<li>Setup context</li>
+<li>Criteria messages</li>
+<li>"Potentially breaking"</li>
+<li>Issues &amp; workarounds</li>
+</ul>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/daveaglick">daveaglick</a></li>
+<li><a href="https://github.com/devlead">devlead</a></li>
+</ul>
+<!--excerpt-->
+<h3 id="typed-context">Typed context</h3>
+<p>In previous versions of Cake you've had to rely on global variables or static members to share variables/state between tasks; this leads to unnecessary complexity and hard to maintain code.</p>
+<p>In this release we have introduced the concept of typed context, where in the <code>Setup</code> method you can create and return a class; this object is then available to be used in <code>Teardown</code> method, Task actions and criteria.</p>
+<p>The class can be any C# class, as it's just standard C# you can provide <code>get</code> &amp; <code>set</code> for properties you want to be mutable, and only get for read only properties.</p>
+<pre><code class="language-csharp">public class MyBuildData
+{
+	public string Configuration { get; }
+	public bool SignAssemblies { get; }
+	public bool AssmbliesSigned { get; set; }
+
+	public MyBuildData(
+		string configuration,
+		bool signAssemblies)
+	{
+		Configuration = configuration;
+		SignAssemblies = signAssemblies;
+	}
+}
+</code></pre>
+<p>Providing your script with a typed context is done by returning an instance of a class from your script <code>Setup</code> method.</p>
+<pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
+{
+	return new MyBuildData(
+		configuration: Argument("configuration", "Release"),
+		signAssemblies: BuildSystem.IsRunningOnAppVeyor);
+});
+</code></pre>
+<p>Accessing your data in your task action and criteria, is then done by supplying a type parameter to your task <code>Does</code> / <code>DoesForEach</code> / <code>WithCriteria</code> methods.</p>
+<pre><code class="language-csharp">Task("Sign")
+    .WithCriteria&lt;MyBuildData&gt;((context, data) =&gt; data.SignAssemblies)
+    .Does&lt;MyBuildData&gt;(data =&gt;
+{
+      data.AssmbliesSigned = true;
+});
+</code></pre>
+<p>And it's then done in a similar way with your script <code>Teardown</code> method.</p>
+<pre><code class="language-csharp">Teardown&lt;MyBuildData&gt;((teardownContext, data) =&gt;
+{
+    if (data.AssmbliesSigned)
+    {
+        Information("Assemblies were signed");
+    }
+    else
+    {
+        Information("Assemblies were NOT signed");
+    }
+});
+</code></pre>
+<h3 id="setup-context">Setup context</h3>
+<p>This release changed the script Setup context from a <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> to <code><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></code>. In addition to everything that <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> offers, there is now some additional information provided:</p>
+<pre><code class="language-csharp"><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a> TargetTask { get; }
+IReadOnlyCollection&lt;ICakeTaskInfo&gt; TasksToExecute { get; }
+</code></pre>
+<p><code>TargetTask</code> is the task that initiated the script and <code>TasksToExecute</code> are the tasks that will be executed based on the dependency graph of the target task. Access to which tasks actually will be executed has been a greatly sought after feature, combined with the typed context makes it fairly straightforward to enable some advanced scenarios.</p>
+<pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
+{
+	var signAssemblies = <a href="/api/Cake.Common.Build/BuildSystem/4E36DFD5">BuildSystem.IsRunningOnAppVeyor</a>
+							|| StringComparer.OrdinalIgnoreCase.Equals("Sign", setupContext.TargetTask.Name);
+
+	var isPublishBuild = setupContext
+                          .TasksToExecute
+                          .Where(task =&gt; StringComparer.OrdinalIgnoreCase.Equals("Publish", task.Name))
+                          .Any();
+
+    return new MyBuildData (
+    	configuration: Argument("configuration", "Release"),
+    	signAssemblies: signAssemblies,
+        isPublishBuild: isPublishBuild);
+});
+</code></pre>
+<p>In the above code we choose to sign assemblies if either running on AppVeyor or the script initiating target is <code>Sign</code>. And we'll treat build as a "publish" build if any of the depending tasks is named <code>Publish</code>.</p>
+<h3 id="criteria-messages">Criteria messages</h3>
+<p>Task <code>WithCriteria</code> can now have a message that's outputted when a task is skipped, this will make it clearer in the log why a specific task wasn't executed.</p>
+<p>This means by doing</p>
+<pre><code class="language-csharp">Task("Sign")
+    .WithCriteria&lt;MyBuildData&gt;(
+        (context, data) =&gt; data.SignAssemblies,
+        "Sign skipped because SignAssemblies is set to false."
+        );
+</code></pre>
+<p>the verbose output goes from</p>
+<pre><code>========================================
+Sign
+========================================
+Skipping task: Sign
+</code></pre>
+<p>to</p>
+<pre><code>========================================
+Sign
+========================================
+Skipping task: Sign skipped because SignAssemblies is set to false.
+</code></pre>
+<h3 id="potentially-breaking">Potentially breaking</h3>
+<p>When we have to ship a breaking change in Cake, one piece of feedback that we have often heard is that it can be very frustrating to have a build suddenly fail, due to a new dependency on a higher version of <code>Cake.Core</code>. We have always advocated that all builds should be pinned to a specific version of Cake, so that a new breaking change does not affect your builds, however, we also understand that some people want to run their builds this way.</p>
+<p>In this release we've introduced the notion of a "Potentially breaking change", which is when we've refactored code we will not break the build, but issue a warning but not break the build.</p>
+<p><img src="https://user-images.githubusercontent.com/1647294/40666343-be1311e8-635f-11e8-8748-8ea49c02b927.png" class="img-fluid" alt="image"></p>
+<p>In the case that we find that a change will break addins, then we'll issue a hotfix and then set the minimal required version of <code>Cake.Core</code> and break the build.</p>
+<p>This means even though we made some substantial changes, version <code>0.28.0</code> will still have <code>0.26.0</code> as the minimal required version for Cake addins to target.</p>
+<p>We believe this compromise will minimize end user frustration - while still keeping the risk of runtime errors low.</p>
+<h3 id="issues-workarounds">Issues &amp; workarounds</h3>
+<p>In this release we've refactored some internals of Cake, while most scripts with just continue to work without issue, there are some that will need to be tweaked.</p>
+<ul>
+<li><code>CakeTaskBuilder&lt;ActionTask&gt;</code> has been refactored to <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>, this means scripts that use and store <code>CakeTaskBuilder&lt;ActionTask&gt;</code> like i.e. <a href="https://github.com/cake-contrib/Cake.Recipe">Cake.Recipe</a> will need to replace all instances of <code>CakeTaskBuilder&lt;ActionTask&gt;</code> to  <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>.</li>
+<li><code>ActionTask</code> is removed in favor of just using <code><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>, this to reduce complexity and simplify future features.</li>
+<li><code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> interface now has a <code><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></code> <code>Data</code> property that needs to be implemented.</li>
+<li>Setup as gone from <code>Action&lt;ICakeContext&gt;</code> to <code>Action&lt;ISetupContext&gt;</code>.</li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/48?closed=1">6 issues</a> closed.</p>
+<p><strong>Feature</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2008"><strong>#2008</strong></a> Allow defining a typed context to be used throughout a Cake script.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1772"><strong>#1772</strong></a> Provide access to the run target and ordered list of tasks.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1594"><strong>#1594</strong></a> Add overload to WithCriteria which prints a message.</li>
+</ul>
+<p><strong>Improvment</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2163"><strong>#2163</strong></a> Update to Roslyn 2.8.x packages, adding support for C# 7.3.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2171"><strong>#2171</strong></a> Add potential breaking change warning.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2174"><strong>#2174</strong></a> Support multiple Support / Teardown.</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/website/issues/520"><strong>website#520</strong></a> Formatting issues with examples in XmlPoke documentation</li>
+</ul>
+</body></html>
+            </div>
+        <hr />
         <h2><a href="/blog/2018/05/cake-v0.27.2-released">Cake v0.27.2 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -177,18 +333,9 @@
                 <p>Version 0.27.2 of Cake has been released.</p>
 <p>This is a hotfix release of Cake.  Following the release of Cake 0.27.1 we discovered additional problems with assembly and dependency loading. Luckily, <a href="https://github.com/daveaglick">Dave Glick</a> was kind enough to step up and (hopefully) squash these bugs once and for all.</p>
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/daveaglick">daveaglick</a></li>
-</ul>
-<p>Full details of everything that was included in this release can be seen below.</p>
-<!--excerpt-->
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=51&amp;state=closed">2 issues</a> closed.</p>
-<p><strong>Bugs</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2137"><strong>#2137</strong></a> Dependency loading errors with Cake 0.27.1 and Cake.Powershell 0.4.5</li>
-<li><a href="https://github.com/cake-build/cake/issues/2134"><strong>#2134</strong></a> Assembly conflicts during compilation</li>
-</ul>
 
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2018/05/cake-v0.27.2-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2018/04/cake-v0.27.1-released">Cake v0.27.1 released</a></h2>
@@ -244,25 +391,6 @@
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2018/03/cake-v0.26.1-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/02/cake-v0.26.0-released">Cake v0.26.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Tuesday, February 27, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
-</dl>            <div>
-                <p>Version 0.26.0 of Cake has been released.</p>
-<p>The second release of 2018 is here! This release brings you the long awaited .NET Core 2 support. A special thanks goes to <a href="https://github.com/adamhathcock">Adam Hathcock</a> for all the hard work with the contribution.</p>
-<p>One of the benefits in moving to .NET Core 2 is that addin authors should no longer need to target both <code>net46</code> and <code>netstandard1.6</code> in order to support <code>Cake</code> and <code>Cake.CoreCLR</code>. Instead addins should now be able to target <code>netstandard2.0</code> only and still be compatible with both <code>Cake</code> and <code>Cake.CoreCLR</code>. At the time of writing, we are experiencing an <a href="https://github.com/cake-build/cake/issues/2063">issue</a> with loading <code>netstandard2.0</code> assemblies when running <code>Cake</code> on <code>mono</code>. We are currently investigating this and will provide a hotfix once the issue is resolved.</p>
-<p>While working on this release, we introduced a <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-55631c5d6cc133447feb92b62eb77118">breaking change</a> in one of the interfaces in <code>Cake.Core</code>. Because of that, we bumped the <a href="https://github.com/cake-build/cake/commit/02632b675a5f50d19231dfc33e5f003e8eb9498c#diff-85a96088153087f031e3c4fd629acc4d">latest breaking change</a> version number to 0.26.0. In practice this means that <code>Cake</code> will not load addins targeting a lower version than 0.26.0 of <code>Cake.Core</code>. This is by design and for your protection. Even though the breaking change should be compatible with the majority of the addins out there. one can never be sure. However, if you really need to use an incompatible addin and have verified that the breaking change introduced doesn't concern the addin directly, we'll allow you to temporarily opt-out of the assembly verification until addin author has released a version of the assembly targeting the minimum required version of <code>Cake.Core</code>. See the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#skip-verification">skip verification</a> configuration value for more details.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2018/02/cake-v0.26.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

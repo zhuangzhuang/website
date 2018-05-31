@@ -152,15 +152,15 @@
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptHost/6352A0FA">RunTarget<wbr>(string)<wbr></a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptHost/0B17A629">RunTargetAsync<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptHost/A9D4FEBA">Setup<wbr>(Action)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptHost/9CF7C412">Setup<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptHost/3D99453C">Setup<wbr>(Action<wbr>&lt;<wbr>I<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptHost/95C7A66C">Setup<wbr>&lt;TData&gt;<wbr><wbr>(Func<wbr>&lt;ISetupContext, <wbr>TData&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptHost/1F9730FF">Task<wbr>(string)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptHost/2E90AFFA">TaskSetup<wbr>(Action<wbr>&lt;ICakeContext, <wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptHost/BAFADA5D">TaskSetup<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptHost/C1B336F1">TaskTeardown<wbr>(Action<wbr>&lt;ICakeContext, <wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptHost/3D959D53">TaskSetup<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Setup<wbr>Context, <wbr>TData&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptHost/3BE7A7EB">TaskTeardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptHost/C6C53F03">Teardown<wbr>(Action)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptHost/A341D523">TaskTeardown<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context, <wbr>TData&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptHost/E94DA692">Teardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptHost/71D4F61A">Teardown<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context, <wbr>TData&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -201,7 +201,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>IReadOnlyList&lt;CakeTask&gt; Tasks { get; }</code></pre>
+	<pre><code>IReadOnlyList&lt;ICakeTaskInfo&gt; Tasks { get; }</code></pre>
 
 
 

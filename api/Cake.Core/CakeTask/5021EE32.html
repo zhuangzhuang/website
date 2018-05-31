@@ -149,7 +149,10 @@
 			<li class="header">Constructors</li>
 				<li><a href="/api/Cake.Core/CakeTask/4F5D52AB">CakeTask<wbr>(string)<wbr></a></li>
 			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Core/CakeTask/33F68E58">Actions</a></li>
 				<li class="selected"><a href="/api/Cake.Core/CakeTask/5021EE32">Criterias</a></li>
+				<li><a href="/api/Cake.Core/CakeTask/42ECC4B8">DeferExceptions</a></li>
+				<li><a href="/api/Cake.Core/CakeTask/B138D0DA">DelayedActions</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/BA79E975">Dependees</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/8713EAA1">Dependencies</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/030D538C">Description</a></li>
@@ -158,13 +161,7 @@
 				<li><a href="/api/Cake.Core/CakeTask/57E77A51">FinallyHandler</a></li>
 				<li><a href="/api/Cake.Core/CakeTask/F305953D">Name</a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Core/CakeTask/F2CE61C5">AddCriteria<wbr>(Func<wbr>&lt;ICakeContext, <wbr>bool&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core/CakeTask/18AF1AD8">AddDependency<wbr>(string, <wbr>bool)<wbr></a></li>
-				<li><a href="/api/Cake.Core/CakeTask/258F8BFC">AddReverseDependency<wbr>(string, <wbr>bool)<wbr></a></li>
 				<li><a href="/api/Cake.Core/CakeTask/15E6A024">Execute<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/api/Cake.Core/CakeTask/84FD043B">SetErrorHandler<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core/CakeTask/20901A36">SetErrorReporter<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Core/CakeTask/B4DA5954">SetFinallyHandler<wbr>(Action)<wbr></a></li>
 
 
                     </ul>
@@ -205,7 +202,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public IReadOnlyList&lt;Func&lt;ICakeContext, bool&gt;&gt; Criterias { get; }</code></pre>
+	<pre><code>public List&lt;CakeTaskCriteria&gt; Criterias { get; }</code></pre>
 
 
 
@@ -222,7 +219,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+					<td>List<wbr>&lt;T&gt;<wbr></td>
 					<td>The task's criterias.</td>
 				</tr>
 			</tbody></table>
