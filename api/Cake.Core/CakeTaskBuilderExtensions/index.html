@@ -145,7 +145,6 @@
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
-				<li><a href="/api/Cake.Core/ActionTask">ActionTask</a></li>
 				<li><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
 				<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>
@@ -160,10 +159,10 @@
 				<li><a href="/api/Cake.Core/CakeReportPrinter">CakeReportPrinter</a></li>
 				<li><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></li>
 				<li><a href="/api/Cake.Core/CakeTask">CakeTask</a></li>
-				<li><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></li>
 				<li class="selected"><a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskCriteria">CakeTaskCriteria</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a></li>
-				<li><a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></li>
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
@@ -172,6 +171,7 @@
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessRunnerExtensions">Process<wbr>Runner<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessSettingsExtensions">Process<wbr>Settings<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>
 				<li><a href="/api/Cake.Core/SetupEventArgs">SetupEventArgs</a></li>
 				<li><a href="/api/Cake.Core/StringExtensions">StringExtensions</a></li>
 				<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>
@@ -182,9 +182,15 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
 				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
 				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
 				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
@@ -193,12 +199,10 @@
 				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
 				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
 				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -220,7 +224,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Contains extension methods for <code class="cs"><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder&lt;T&gt;</a></code>.
+    Contains extension methods for <code class="cs"><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>.
     </div>
 
 		<div class="panel panel-default">
@@ -280,8 +284,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/A34D2796">ContinueOnError<wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/9FD2D43A">ContinueOnError<wbr>(CakeTaskBuilder)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an indication to the task that a thrown exception will not halt the script execution.
@@ -290,8 +294,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/EA17B706">DeferOnError<wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/1E1DD339">DeferOnError<wbr>(CakeTaskBuilder)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Defers all exceptions until after all actions for this task have completed
@@ -300,8 +304,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/EA1DCA7A">Description<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>string)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/9B62A6F6">Description<wbr>(CakeTaskBuilder, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds a description to the task.
@@ -310,8 +314,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/340C46B7">Does<wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>Action)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/F498D341">Does<wbr>(CakeTaskBuilder, <wbr>Action)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed when the task is invoked.
@@ -320,8 +324,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/2965BA6A">Does<wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/A761B54A">Does<wbr>(CakeTaskBuilder, <wbr>Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed when the task is invoked.
@@ -330,8 +334,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/C594E8A7">Does<wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>Func<wbr>&lt;ICakeContext, <wbr>Task&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/65E19785">Does<wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;ICakeContext, <wbr>Task&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed when the task is invoked.
@@ -340,8 +344,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/06EAC266">Does<wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>Func<wbr>&lt;Task&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/3904BA79">Does<wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;Task&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed when the task is invoked.
@@ -350,8 +354,48 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/3A782C94">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/2C3F09EC">Does<wbr>&lt;TData&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Action<wbr>&lt;ICakeContext, <wbr>TData&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed when the task is invoked.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/CE4B9FB1">Does<wbr>&lt;TData&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Action<wbr>&lt;TData&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed when the task is invoked.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/8C5DDB10">Does<wbr>&lt;TData&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;ICakeContext, <wbr>TData, <wbr>Task&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed when the task is invoked.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/EA424948">Does<wbr>&lt;TData&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;TData, <wbr>Task&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed when the task is invoked.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E7B32185">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed foreach item returned by the items function.
@@ -361,8 +405,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/C727EC89">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TItem&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/9C1BB95C">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed foreach item returned by the items function.
@@ -372,8 +416,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/42B03CE1">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>, <wbr>Action<wbr>&lt;TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/503985B5">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed foreach item in the list.
@@ -382,8 +426,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/FB0254BF">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;ActionTask&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>, <wbr>Action<wbr>&lt;TItem&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/182F1CAE">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an action to be executed foreach item in the list.
@@ -392,8 +436,50 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/A65B0548">Finally<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>Action)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/F57453AA">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/AE931077">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E84EC345">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>, <wbr>Action<wbr>&lt;TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item in the list.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/23680A42">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>, <wbr>Action<wbr>&lt;TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item in the list.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/5DED3B49">Finally<wbr>(CakeTaskBuilder, <wbr>Action)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds a finally handler to be executed after the task have finished executing.
@@ -402,8 +488,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/7C606876">IsDependeeOf<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>string)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/F858FF07">IsDependeeOf<wbr>(CakeTaskBuilder, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Makes the task a dependency of another task.
@@ -412,8 +498,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/31737B3E">IsDependentOn<wbr>&lt;T, <wbr>TOther&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>CakeTaskBuilder<wbr>&lt;TOther&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/91B9F319">IsDependentOn<wbr>(CakeTaskBuilder, <wbr>CakeTaskBuilder)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Creates a dependency between two tasks.
@@ -422,8 +508,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/D9D8523A">IsDependentOn<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>string)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/298CB907">IsDependentOn<wbr>(CakeTaskBuilder, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Creates a dependency between two tasks.
@@ -432,8 +518,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/7C5AF83A">OnError<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>Action)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/30CC17F1">OnError<wbr>(CakeTaskBuilder, <wbr>Action)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an error handler to be executed if an exception occurs in the task.
@@ -442,8 +528,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/6CEA58A4">OnError<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/EA2C1BB9">OnError<wbr>(CakeTaskBuilder, <wbr>Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an error handler to be executed if an exception occurs in the task.
@@ -452,8 +538,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E780EB32">ReportError<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/A1996589">ReportError<wbr>(CakeTaskBuilder, <wbr>Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds an error reporter for the task to be executed when an exception is thrown from the task.
@@ -463,8 +549,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E37F5259">WithCriteria<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>bool)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/6443486B">WithCriteria<wbr>(CakeTaskBuilder, <wbr>bool)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds a criteria that has to be fulfilled for the task to run.
@@ -473,8 +559,18 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/04372212">WithCriteria<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>Func<wbr>&lt;bool&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/68ED5F52">WithCriteria<wbr>(CakeTaskBuilder, <wbr>bool, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds a criteria that has to be fulfilled for the task to run.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/84A147FE">WithCriteria<wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;bool&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds a criteria that has to be fulfilled for the task to run.
@@ -484,8 +580,52 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/D5315011">WithCriteria<wbr>&lt;T&gt;<wbr><wbr>(CakeTaskBuilder<wbr>&lt;T&gt;<wbr>, <wbr>Func<wbr>&lt;ICakeContext, <wbr>bool&gt;<wbr>)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/C605E049">WithCriteria<wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds a criteria that has to be fulfilled for the task to run.
+    The criteria is evaluated when traversal of the graph occurs.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/6D30E6F7">WithCriteria<wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;ICakeContext, <wbr>bool&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds a criteria that has to be fulfilled for the task to run.
+    The criteria is evaluated when traversal of the graph occurs.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/F706FDB9">WithCriteria<wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;ICakeContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds a criteria that has to be fulfilled for the task to run.
+    The criteria is evaluated when traversal of the graph occurs.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E05AC26A">WithCriteria<wbr>&lt;TData&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;ICakeContext, <wbr>TData, <wbr>bool&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds a criteria that has to be fulfilled for the task to run.
+    The criteria is evaluated when traversal of the graph occurs.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E2796CB0">WithCriteria<wbr>&lt;TData&gt;<wbr><wbr>(CakeTaskBuilder, <wbr>Func<wbr>&lt;ICakeContext, <wbr>TData, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Adds a criteria that has to be fulfilled for the task to run.

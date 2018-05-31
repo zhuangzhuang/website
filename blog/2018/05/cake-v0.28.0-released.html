@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="description" />
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Cake - Cake v0.28.0 released</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
+        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet" />
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li class="active"><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li><a href="/dsl">Reference</a></li>
+        <li><a href="/addins">Addins</a></li>
+        <li><a href="/api">API</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/cake-build/website/blob/develop/input/blog/2018-05-31-cake-v0.28.0-released.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"></div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+        <li><a href="/blog/Addins">Addins</a></li>
+        <li><a href="/blog/Announcement">Announcement</a></li>
+        <li><a href="/blog/How-Tos">How To&#x27;s</a></li>
+        <li><a href="/blog/Infrastructure">Infrastructure</a></li>
+        <li><a href="/blog/News">News</a></li>
+        <li><a href="/blog/Release-Notes">Release Notes</a></li>
+    
+    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/05">May, 2018</a></li>
+        <li><a href="/blog/archive/2018/04">April, 2018</a></li>
+        <li><a href="/blog/archive/2018/03">March, 2018</a></li>
+        <li><a href="/blog/archive/2018/02">February, 2018</a></li>
+        <li><a href="/blog/archive/2018/01">January, 2018</a></li>
+        <li><a href="/blog/archive/2017/12">December, 2017</a></li>
+        <li><a href="/blog/archive/2017/11">November, 2017</a></li>
+        <li><a href="/blog/archive/2017/10">October, 2017</a></li>
+        <li><a href="/blog/archive/2017/09">September, 2017</a></li>
+        <li><a href="/blog/archive/2017/08">August, 2017</a></li>
+        <li><a href="/blog/archive/2017/07">July, 2017</a></li>
+        <li><a href="/blog/archive/2017/06">June, 2017</a></li>
+        <li><a href="/blog/archive/2017/05">May, 2017</a></li>
+        <li><a href="/blog/archive/2017/04">April, 2017</a></li>
+        <li><a href="/blog/archive/2017/03">March, 2017</a></li>
+        <li><a href="/blog/archive/2017/01">January, 2017</a></li>
+        <li><a href="/blog/archive/2016/12">December, 2016</a></li>
+        <li><a href="/blog/archive/2016/11">November, 2016</a></li>
+        <li><a href="/blog/archive/2016/10">October, 2016</a></li>
+        <li><a href="/blog/archive/2016/09">September, 2016</a></li>
+        <li><a href="/blog/archive/2016/08">August, 2016</a></li>
+        <li><a href="/blog/archive/2016/07">July, 2016</a></li>
+        <li><a href="/blog/archive/2016/06">June, 2016</a></li>
+        <li><a href="/blog/archive/2016/05">May, 2016</a></li>
+        <li><a href="/blog/archive/2016/04">April, 2016</a></li>
+        <li><a href="/blog/archive/2016/03">March, 2016</a></li>
+        <li><a href="/blog/archive/2016/02">February, 2016</a></li>
+        <li><a href="/blog/archive/2016/01">January, 2016</a></li>
+        <li><a href="/blog/archive/2015/12">December, 2015</a></li>
+        <li><a href="/blog/archive/2015/11">November, 2015</a></li>
+        <li><a href="/blog/archive/2015/10">October, 2015</a></li>
+        <li><a href="/blog/archive/2015/09">September, 2015</a></li>
+        <li><a href="/blog/archive/2015/08">August, 2015</a></li>
+        <li><a href="/blog/archive/2015/07">July, 2015</a></li>
+    
+    <li class="header"><i class="fa fa-user"></i> Authors</li>    
+        <li><a href="/blog/author/agc93">agc93</a></li>
+        <li><a href="/blog/author/daveaglick">daveaglick</a></li>
+        <li><a href="/blog/author/devlead">devlead</a></li>
+        <li><a href="/blog/author/gep13">gep13</a></li>
+        <li><a href="/blog/author/jericho">jericho</a></li>
+        <li><a href="/blog/author/Larz-White">Larz White</a></li>
+        <li><a href="/blog/author/mholo65">mholo65</a></li>
+        <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
+        <li><a href="/blog/author/phillipsj">phillipsj</a></li>
+        <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+	<section class="content-header">
+		<h1>Cake v0.28.0 released</h1>
+	</section>
+	<section class="content">
+		
+
+
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Thursday, May 31, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>
+
+<html><head></head><body><p>Version 0.28.0 of Cake has been released.</p>
+<p>We're really excited by this release which has some splendid features and improvements!</p>
+<p>In this blog post we'll highlight:</p>
+<ul>
+<li>Typed context</li>
+<li>Setup context</li>
+<li>Criteria messages</li>
+<li>"Potentially breaking"</li>
+<li>Issues &amp; workarounds</li>
+</ul>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/daveaglick">daveaglick</a></li>
+<li><a href="https://github.com/devlead">devlead</a></li>
+</ul>
+<!--excerpt-->
+<h3 id="typed-context">Typed context</h3>
+<p>In previous versions of Cake you've had to rely on global variables or static members to share variables/state between tasks; this leads to unnecessary complexity and hard to maintain code.</p>
+<p>In this release we have introduced the concept of typed context, where in the <code>Setup</code> method you can create and return a class; this object is then available to be used in <code>Teardown</code> method, Task actions and criteria.</p>
+<p>The class can be any C# class, as it's just standard C# you can provide <code>get</code> &amp; <code>set</code> for properties you want to be mutable, and only get for read only properties.</p>
+<pre><code class="language-csharp">public class MyBuildData
+{
+	public string Configuration { get; }
+	public bool SignAssemblies { get; }
+	public bool AssmbliesSigned { get; set; }
+
+	public MyBuildData(
+		string configuration,
+		bool signAssemblies)
+	{
+		Configuration = configuration;
+		SignAssemblies = signAssemblies;
+	}
+}
+</code></pre>
+<p>Providing your script with a typed context is done by returning an instance of a class from your script <code>Setup</code> method.</p>
+<pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
+{
+	return new MyBuildData(
+		configuration: Argument("configuration", "Release"),
+		signAssemblies: BuildSystem.IsRunningOnAppVeyor);
+});
+</code></pre>
+<p>Accessing your data in your task action and criteria, is then done by supplying a type parameter to your task <code>Does</code> / <code>DoesForEach</code> / <code>WithCriteria</code> methods.</p>
+<pre><code class="language-csharp">Task("Sign")
+    .WithCriteria&lt;MyBuildData&gt;((context, data) =&gt; data.SignAssemblies)
+    .Does&lt;MyBuildData&gt;(data =&gt;
+{
+      data.AssmbliesSigned = true;
+});
+</code></pre>
+<p>And it's then done in a similar way with your script <code>Teardown</code> method.</p>
+<pre><code class="language-csharp">Teardown&lt;MyBuildData&gt;((teardownContext, data) =&gt;
+{
+    if (data.AssmbliesSigned)
+    {
+        Information("Assemblies were signed");
+    }
+    else
+    {
+        Information("Assemblies were NOT signed");
+    }
+});
+</code></pre>
+<h3 id="setup-context">Setup context</h3>
+<p>This release changed the script Setup context from a <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> to <code><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></code>. In addition to everything that <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> offers, there is now some additional information provided:</p>
+<pre><code class="language-csharp"><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a> TargetTask { get; }
+IReadOnlyCollection&lt;ICakeTaskInfo&gt; TasksToExecute { get; }
+</code></pre>
+<p><code>TargetTask</code> is the task that initiated the script and <code>TasksToExecute</code> are the tasks that will be executed based on the dependency graph of the target task. Access to which tasks actually will be executed has been a greatly sought after feature, combined with the typed context makes it fairly straightforward to enable some advanced scenarios.</p>
+<pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
+{
+	var signAssemblies = <a href="/api/Cake.Common.Build/BuildSystem/4E36DFD5">BuildSystem.IsRunningOnAppVeyor</a>
+							|| StringComparer.OrdinalIgnoreCase.Equals("Sign", setupContext.TargetTask.Name);
+
+	var isPublishBuild = setupContext
+                          .TasksToExecute
+                          .Where(task =&gt; StringComparer.OrdinalIgnoreCase.Equals("Publish", task.Name))
+                          .Any();
+
+    return new MyBuildData (
+    	configuration: Argument("configuration", "Release"),
+    	signAssemblies: signAssemblies,
+        isPublishBuild: isPublishBuild);
+});
+</code></pre>
+<p>In the above code we choose to sign assemblies if either running on AppVeyor or the script initiating target is <code>Sign</code>. And we'll treat build as a "publish" build if any of the depending tasks is named <code>Publish</code>.</p>
+<h3 id="criteria-messages">Criteria messages</h3>
+<p>Task <code>WithCriteria</code> can now have a message that's outputted when a task is skipped, this will make it clearer in the log why a specific task wasn't executed.</p>
+<p>This means by doing</p>
+<pre><code class="language-csharp">Task("Sign")
+    .WithCriteria&lt;MyBuildData&gt;(
+        (context, data) =&gt; data.SignAssemblies,
+        "Sign skipped because SignAssemblies is set to false."
+        );
+</code></pre>
+<p>the verbose output goes from</p>
+<pre><code>========================================
+Sign
+========================================
+Skipping task: Sign
+</code></pre>
+<p>to</p>
+<pre><code>========================================
+Sign
+========================================
+Skipping task: Sign skipped because SignAssemblies is set to false.
+</code></pre>
+<h3 id="potentially-breaking">Potentially breaking</h3>
+<p>When we have to ship a breaking change in Cake, one piece of feedback that we have often heard is that it can be very frustrating to have a build suddenly fail, due to a new dependency on a higher version of <code>Cake.Core</code>. We have always advocated that all builds should be pinned to a specific version of Cake, so that a new breaking change does not affect your builds, however, we also understand that some people want to run their builds this way.</p>
+<p>In this release we've introduced the notion of a "Potentially breaking change", which is when we've refactored code we will not break the build, but issue a warning but not break the build.</p>
+<p><img src="https://user-images.githubusercontent.com/1647294/40666343-be1311e8-635f-11e8-8748-8ea49c02b927.png" class="img-fluid" alt="image"></p>
+<p>In the case that we find that a change will break addins, then we'll issue a hotfix and then set the minimal required version of <code>Cake.Core</code> and break the build.</p>
+<p>This means even though we made some substantial changes, version <code>0.28.0</code> will still have <code>0.26.0</code> as the minimal required version for Cake addins to target.</p>
+<p>We believe this compromise will minimize end user frustration - while still keeping the risk of runtime errors low.</p>
+<h3 id="issues-workarounds">Issues &amp; workarounds</h3>
+<p>In this release we've refactored some internals of Cake, while most scripts with just continue to work without issue, there are some that will need to be tweaked.</p>
+<ul>
+<li><code>CakeTaskBuilder&lt;ActionTask&gt;</code> has been refactored to <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>, this means scripts that use and store <code>CakeTaskBuilder&lt;ActionTask&gt;</code> like i.e. <a href="https://github.com/cake-contrib/Cake.Recipe">Cake.Recipe</a> will need to replace all instances of <code>CakeTaskBuilder&lt;ActionTask&gt;</code> to  <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>.</li>
+<li><code>ActionTask</code> is removed in favor of just using <code><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>, this to reduce complexity and simplify future features.</li>
+<li><code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> interface now has a <code><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></code> <code>Data</code> property that needs to be implemented.</li>
+<li>Setup as gone from <code>Action&lt;ICakeContext&gt;</code> to <code>Action&lt;ISetupContext&gt;</code>.</li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/48?closed=1">6 issues</a> closed.</p>
+<p><strong>Feature</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2008"><strong>#2008</strong></a> Allow defining a typed context to be used throughout a Cake script.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1772"><strong>#1772</strong></a> Provide access to the run target and ordered list of tasks.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1594"><strong>#1594</strong></a> Add overload to WithCriteria which prints a message.</li>
+</ul>
+<p><strong>Improvment</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2163"><strong>#2163</strong></a> Update to Roslyn 2.8.x packages, adding support for C# 7.3.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2171"><strong>#2171</strong></a> Add potential breaking change warning.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2174"><strong>#2174</strong></a> Support multiple Support / Teardown.</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/website/issues/520"><strong>website#520</strong></a> Formatting issues with examples in XmlPoke documentation</li>
+</ul>
+</body></html>
+
+<hr />
+
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released&t=Cake%20v0.28.0%20released" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released&text=Cake%20v0.28.0%20released:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released&via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released&title=Cake%20v0.28.0%20released" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released&title=Cake%20v0.28.0%20released&summary=&source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="mailto:?subject=Cake%20v0.28.0%20released&body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2018%2F05%2Fcake-v0.28.0-released" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    <a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> GitHub</a> |
+    <a href="https://twitter.com/cakebuildnet"><i class="fa fa-twitter"></i> Twitter</a> |
+    <a href="https://gitter.im/cake-build/cake"><i class="fa fa-comment"></i> Gitter</a>
+    <br/>
+    Copyright &copy; <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
+    <br/>
+    Generated by <a href="http://wyam.io">Wyam</a>
+</p>
+
+<script>
+    anchors.add();
+</script>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Gitter -->
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'cake-build/cake'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60516413-1', 'auto');
+    ga('send', 'pageview');
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    </body>
+</html>

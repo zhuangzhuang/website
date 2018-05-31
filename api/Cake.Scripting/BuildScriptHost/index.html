@@ -327,7 +327,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core.Scripting/ScriptHost/1CB34DD2">Setup<wbr>(Action)<wbr></a></td>
+								<td><a href="/api/Cake.Core.Scripting/ScriptHost/FC3E064B">Setup<wbr>(Action<wbr>&lt;<wbr>I<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -338,7 +338,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core.Scripting/ScriptHost/9DA05356">Setup<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core.Scripting/ScriptHost/EAFBCD7A">Setup<wbr>&lt;TData&gt;<wbr><wbr>(Func<wbr>&lt;ISetupContext, <wbr>TData&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -350,21 +350,10 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting/ScriptHost/CDDAE491">Task<wbr>(string)<wbr></a></td>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
     Registers a new task.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Scripting/ScriptHost/CF9F3617">TaskSetup<wbr>(Action<wbr>&lt;ICakeContext, <wbr>I<wbr>Task<wbr>Setup<wbr>Context&gt;<wbr>)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Allows registration of an action that's executed before each task is run.
-    If the task setup fails, its task will not be executed but the task teardown will be performed.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></em></small></div>
 								</td>
@@ -381,12 +370,12 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core.Scripting/ScriptHost/EA010CCF">TaskTeardown<wbr>(Action<wbr>&lt;ICakeContext, <wbr>I<wbr>Task<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core.Scripting/ScriptHost/F76D5515">TaskSetup<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Setup<wbr>Context, <wbr>TData&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-    Allows registration of an action that's executed after each task has been run.
-    If a task setup action or a task fails with or without recovery, the specified task teardown action will still be executed.
+    Allows registration of an action that's executed before each task is run.
+    If the task setup fails, its task will not be executed but the task teardown will be performed.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></em></small></div>
 								</td>
@@ -403,7 +392,18 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core.Scripting/ScriptHost/03E67EB8">Teardown<wbr>(Action)<wbr></a></td>
+								<td><a href="/api/Cake.Core.Scripting/ScriptHost/76500C2C">TaskTeardown<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;<wbr>I<wbr>Task<wbr>Teardown<wbr>Context, <wbr>TData&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Allows registration of an action that's executed after each task has been run.
+    If a task setup action or a task fails with or without recovery, the specified task teardown action will still be executed.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Scripting/ScriptHost/784A0A52">Teardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -414,7 +414,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core.Scripting/ScriptHost/784A0A52">Teardown<wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core.Scripting/ScriptHost/D005D68D">Teardown<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;<wbr>I<wbr>Teardown<wbr>Context, <wbr>TData&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -464,17 +464,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Build<wbr>Script<wbr>Host&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Build<wbr>Script<wbr>Host&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -483,6 +472,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Build<wbr>Script<wbr>Host&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

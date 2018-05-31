@@ -82,8 +82,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#ClassTypes">Class Types</a></p>
-<p><a href="#InterfaceTypes">Interface Types</a></p>
 <p><a href="#EnumTypes">Enum Types</a></p>
+<p><a href="#InterfaceTypes">Interface Types</a></p>
 <p><a href="#Namespaces">Namespaces</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -1082,12 +1082,6 @@
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Core/ActionTask">ActionTask</a></td>
-									<td>
-    A task that executes a specified delegate.
-    </td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></td>
 									<td>
     Contains extension methods for <code class="cs"><a href="/api/Cake.Core.Configuration/ICakeConfiguration">ICakeConfiguration</a></code>.
@@ -1172,7 +1166,7 @@
     </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder<wbr>&lt;T&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 									<td>
     Allows configuration to be performed for a registered <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>.
     </td>
@@ -1180,19 +1174,19 @@
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></td>
 									<td>
-    Contains extension methods for <code class="cs"><a href="/api/Cake.Core/CakeTaskBuilder_1">CakeTaskBuilder&lt;T&gt;</a></code>.
+    Contains extension methods for <code class="cs"><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskCriteria">CakeTaskCriteria</a></td>
+									<td>
+    Represents a Cake task criteria.
     </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a></td>
 									<td>
     Represents a task dependency.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></td>
-									<td>
-    Contains extension methods for <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>.
     </td>
 							</tr>
 							<tr>
@@ -1222,7 +1216,7 @@
 							<tr>
 								<td><a href="/api/Cake.Core/MethodInfoExtensions">MethodInfoExtensions</a></td>
 									<td>
-    Contains extension methods for <code class="cs">System.Reflection.MethodInfo</code>.
+    Contains extension methods for <code class="cs"><a href="/">MethodInfo</a></code>.
     </td>
 							</tr>
 							<tr>
@@ -1241,6 +1235,12 @@
 								<td><a href="/api/Cake.Core/ProcessSettingsExtensions">Process<wbr>Settings<wbr>Extensions</a></td>
 									<td>
     Contains extension methods for <code class="cs"><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></code>.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/SetupContext">SetupContext</a></td>
+									<td>
+    Acts as a context providing info about the overall build following its completion
     </td>
 							</tr>
 							<tr>
@@ -1307,6 +1307,38 @@
 				</div>
 			</div>
 		
+			<h1 id="EnumTypes">Enum Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Enum</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></td>
+									<td>
+    Represents a Cake report entry category.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></td>
+									<td>
+    The execution status of a <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></td>
+									<td>
+    Represents a platform family.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 			<h1 id="InterfaceTypes">Interface Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -1327,6 +1359,18 @@
 								<td><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></td>
 									<td>
     Represents a context for scripts and script aliases.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></td>
+									<td>
+    Represents a data context resolver.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></td>
+									<td>
+    Represents a data context service.
     </td>
 							</tr>
 							<tr>
@@ -1362,7 +1406,7 @@
 							<tr>
 								<td><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></td>
 									<td>
-    Provides descriptive properties about a cake task
+    Provides descriptive properties about a cake task.
     </td>
 							</tr>
 							<tr>
@@ -1375,6 +1419,12 @@
 								<td><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></td>
 									<td>
     Represents a task execution strategy.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></td>
+									<td>
+    Acts as a context providing info about the overall build before its started.
     </td>
 							</tr>
 							<tr>
@@ -1392,33 +1442,7 @@
 							<tr>
 								<td><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></td>
 									<td>
-    Acts as a context providing info about the overall build following its completion
-    </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-			<h1 id="EnumTypes">Enum Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Enum</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></td>
-									<td>
-    The execution status of a <code class="cs"><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></td>
-									<td>
-    Represents a platform family.
+    Acts as a context providing info about the overall build following its completion.
     </td>
 							</tr>
 					</tbody></table>

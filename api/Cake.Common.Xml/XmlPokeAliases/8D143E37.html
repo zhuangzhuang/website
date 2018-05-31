@@ -235,33 +235,25 @@ public static string XmlPokeString(this ICakeContext context, string sourceXml, 
         }
     });
 });</code></pre>
-    <example>
-      <para>
+    
+
+      <p>
       Remove an app setting from a config file.
-      </para>
-      <para>XML string:</para>
-      <code class="cs">
-        &lt;?xml version="1.0" encoding="utf-8" ?&gt;
-    &lt;configuration&gt;
-        &lt;appSettings&gt;
-            &lt;add key="server" value="testhost.somecompany.com" /&gt;
-            &lt;add key="testing" value="true" /&gt;
-        &lt;/appSettings&gt;
-    &lt;/configuration&gt;
-      </code>
-      <para>Cake Task:</para>
-      <code class="cs">
-        Task("Transform")
-        .Does(() =&gt;
-    {
-        var result = XmlPokeString(xmlString, "/configuration/appSettings/add[@testing]", null);
-    });
-      </code>
-    </example>
-    <p>
-    Credit to NAnt for the original example.
-    http://nant.sourceforge.net/release/latest/help/tasks/xmlpoke.html
-    </p>
+      </p>
+      <p>XML string:</p>
+      <pre><code class="cs">    &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;configuration&gt;
+    &lt;appSettings&gt;
+        &lt;add key="server" value="testhost.somecompany.com" /&gt;
+        &lt;add key="testing" value="true" /&gt;
+    &lt;/appSettings&gt;
+&lt;/configuration&gt;</code></pre>
+      <p>Cake Task:</p>
+      <pre><code class="cs">    Task("Transform")
+    .Does(() =&gt;
+{
+    var result = XmlPokeString(xmlString, "/configuration/appSettings/add[@testing]", null);
+});</code></pre>
     </div>
 
 

@@ -5,8 +5,165 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2018</copyright>
-		<pubDate>Mon, 28 May 2018 07:42:55 GMT</pubDate>
-		<lastBuildDate>Mon, 28 May 2018 07:42:55 GMT</lastBuildDate>
+		<pubDate>Thu, 31 May 2018 21:49:20 GMT</pubDate>
+		<lastBuildDate>Thu, 31 May 2018 21:49:20 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.28.0 released</title>
+			<link>https://cakebuild.net/blog/2018/05/cake-v0.28.0-released</link>
+			<description>&lt;p&gt;Version 0.28.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;We're really excited by this release which has some splendid features and improvements!&lt;/p&gt;
+&lt;p&gt;In this blog post we'll highlight:&lt;/p&gt;
+
+&lt;p&gt;Contributions were included from:&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>https://cakebuild.net/blog/2018/05/cake-v0.28.0-released</guid>
+			<pubDate>Thu, 31 May 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Version 0.28.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;We're really excited by this release which has some splendid features and improvements!&lt;/p&gt;
+&lt;p&gt;In this blog post we'll highlight:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Typed context&lt;/li&gt;
+&lt;li&gt;Setup context&lt;/li&gt;
+&lt;li&gt;Criteria messages&lt;/li&gt;
+&lt;li&gt;"Potentially breaking"&lt;/li&gt;
+&lt;li&gt;Issues &amp;amp; workarounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/daveaglick"&gt;daveaglick&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--excerpt--&gt;
+&lt;h3 id="typed-context"&gt;Typed context&lt;/h3&gt;
+&lt;p&gt;In previous versions of Cake you've had to rely on global variables or static members to share variables/state between tasks; this leads to unnecessary complexity and hard to maintain code.&lt;/p&gt;
+&lt;p&gt;In this release we have introduced the concept of typed context, where in the &lt;code&gt;Setup&lt;/code&gt; method you can create and return a class; this object is then available to be used in &lt;code&gt;Teardown&lt;/code&gt; method, Task actions and criteria.&lt;/p&gt;
+&lt;p&gt;The class can be any C# class, as it's just standard C# you can provide &lt;code&gt;get&lt;/code&gt; &amp;amp; &lt;code&gt;set&lt;/code&gt; for properties you want to be mutable, and only get for read only properties.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;public class MyBuildData
+{
+	public string Configuration { get; }
+	public bool SignAssemblies { get; }
+	public bool AssmbliesSigned { get; set; }
+
+	public MyBuildData(
+		string configuration,
+		bool signAssemblies)
+	{
+		Configuration = configuration;
+		SignAssemblies = signAssemblies;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Providing your script with a typed context is done by returning an instance of a class from your script &lt;code&gt;Setup&lt;/code&gt; method.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;Setup&amp;lt;MyBuildData&amp;gt;(setupContext =&amp;gt;
+{
+	return new MyBuildData(
+		configuration: Argument("configuration", "Release"),
+		signAssemblies: BuildSystem.IsRunningOnAppVeyor);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Accessing your data in your task action and criteria, is then done by supplying a type parameter to your task &lt;code&gt;Does&lt;/code&gt; / &lt;code&gt;DoesForEach&lt;/code&gt; / &lt;code&gt;WithCriteria&lt;/code&gt; methods.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;Task("Sign")
+    .WithCriteria&amp;lt;MyBuildData&amp;gt;((context, data) =&amp;gt; data.SignAssemblies)
+    .Does&amp;lt;MyBuildData&amp;gt;(data =&amp;gt;
+{
+      data.AssmbliesSigned = true;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And it's then done in a similar way with your script &lt;code&gt;Teardown&lt;/code&gt; method.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;Teardown&amp;lt;MyBuildData&amp;gt;((teardownContext, data) =&amp;gt;
+{
+    if (data.AssmbliesSigned)
+    {
+        Information("Assemblies were signed");
+    }
+    else
+    {
+        Information("Assemblies were NOT signed");
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="setup-context"&gt;Setup context&lt;/h3&gt;
+&lt;p&gt;This release changed the script Setup context from a &lt;code&gt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&lt;/code&gt; to &lt;code&gt;&lt;a href="/api/Cake.Core/ISetupContext"&gt;ISetupContext&lt;/a&gt;&lt;/code&gt;. In addition to everything that &lt;code&gt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&lt;/code&gt; offers, there is now some additional information provided:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;&lt;a href="/api/Cake.Core/ICakeTaskInfo"&gt;ICakeTaskInfo&lt;/a&gt; TargetTask { get; }
+IReadOnlyCollection&amp;lt;ICakeTaskInfo&amp;gt; TasksToExecute { get; }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;TargetTask&lt;/code&gt; is the task that initiated the script and &lt;code&gt;TasksToExecute&lt;/code&gt; are the tasks that will be executed based on the dependency graph of the target task. Access to which tasks actually will be executed has been a greatly sought after feature, combined with the typed context makes it fairly straightforward to enable some advanced scenarios.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;Setup&amp;lt;MyBuildData&amp;gt;(setupContext =&amp;gt;
+{
+	var signAssemblies = &lt;a href="/api/Cake.Common.Build/BuildSystem/4E36DFD5"&gt;BuildSystem.IsRunningOnAppVeyor&lt;/a&gt;
+							|| StringComparer.OrdinalIgnoreCase.Equals("Sign", setupContext.TargetTask.Name);
+
+	var isPublishBuild = setupContext
+                          .TasksToExecute
+                          .Where(task =&amp;gt; StringComparer.OrdinalIgnoreCase.Equals("Publish", task.Name))
+                          .Any();
+
+    return new MyBuildData (
+    	configuration: Argument("configuration", "Release"),
+    	signAssemblies: signAssemblies,
+        isPublishBuild: isPublishBuild);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code we choose to sign assemblies if either running on AppVeyor or the script initiating target is &lt;code&gt;Sign&lt;/code&gt;. And we'll treat build as a "publish" build if any of the depending tasks is named &lt;code&gt;Publish&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="criteria-messages"&gt;Criteria messages&lt;/h3&gt;
+&lt;p&gt;Task &lt;code&gt;WithCriteria&lt;/code&gt; can now have a message that's outputted when a task is skipped, this will make it clearer in the log why a specific task wasn't executed.&lt;/p&gt;
+&lt;p&gt;This means by doing&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;Task("Sign")
+    .WithCriteria&amp;lt;MyBuildData&amp;gt;(
+        (context, data) =&amp;gt; data.SignAssemblies,
+        "Sign skipped because SignAssemblies is set to false."
+        );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;the verbose output goes from&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;========================================
+Sign
+========================================
+Skipping task: Sign
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;========================================
+Sign
+========================================
+Skipping task: Sign skipped because SignAssemblies is set to false.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="potentially-breaking"&gt;Potentially breaking&lt;/h3&gt;
+&lt;p&gt;When we have to ship a breaking change in Cake, one piece of feedback that we have often heard is that it can be very frustrating to have a build suddenly fail, due to a new dependency on a higher version of &lt;code&gt;Cake.Core&lt;/code&gt;. We have always advocated that all builds should be pinned to a specific version of Cake, so that a new breaking change does not affect your builds, however, we also understand that some people want to run their builds this way.&lt;/p&gt;
+&lt;p&gt;In this release we've introduced the notion of a "Potentially breaking change", which is when we've refactored code we will not break the build, but issue a warning but not break the build.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://user-images.githubusercontent.com/1647294/40666343-be1311e8-635f-11e8-8748-8ea49c02b927.png" class="img-fluid" alt="image"&gt;&lt;/p&gt;
+&lt;p&gt;In the case that we find that a change will break addins, then we'll issue a hotfix and then set the minimal required version of &lt;code&gt;Cake.Core&lt;/code&gt; and break the build.&lt;/p&gt;
+&lt;p&gt;This means even though we made some substantial changes, version &lt;code&gt;0.28.0&lt;/code&gt; will still have &lt;code&gt;0.26.0&lt;/code&gt; as the minimal required version for Cake addins to target.&lt;/p&gt;
+&lt;p&gt;We believe this compromise will minimize end user frustration - while still keeping the risk of runtime errors low.&lt;/p&gt;
+&lt;h3 id="issues-workarounds"&gt;Issues &amp;amp; workarounds&lt;/h3&gt;
+&lt;p&gt;In this release we've refactored some internals of Cake, while most scripts with just continue to work without issue, there are some that will need to be tweaked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CakeTaskBuilder&amp;lt;ActionTask&amp;gt;&lt;/code&gt; has been refactored to &lt;code&gt;&lt;a href="/api/Cake.Core/CakeTaskBuilder"&gt;CakeTaskBuilder&lt;/a&gt;&lt;/code&gt;, this means scripts that use and store &lt;code&gt;CakeTaskBuilder&amp;lt;ActionTask&amp;gt;&lt;/code&gt; like i.e. &lt;a href="https://github.com/cake-contrib/Cake.Recipe"&gt;Cake.Recipe&lt;/a&gt; will need to replace all instances of &lt;code&gt;CakeTaskBuilder&amp;lt;ActionTask&amp;gt;&lt;/code&gt; to  &lt;code&gt;&lt;a href="/api/Cake.Core/CakeTaskBuilder"&gt;CakeTaskBuilder&lt;/a&gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ActionTask&lt;/code&gt; is removed in favor of just using &lt;code&gt;&lt;a href="/api/Cake.Core/CakeTask"&gt;CakeTask&lt;/a&gt;&lt;/code&gt;, this to reduce complexity and simplify future features.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&lt;/code&gt; interface now has a &lt;code&gt;&lt;a href="/api/Cake.Core/ICakeDataResolver"&gt;ICakeDataResolver&lt;/a&gt;&lt;/code&gt; &lt;code&gt;Data&lt;/code&gt; property that needs to be implemented.&lt;/li&gt;
+&lt;li&gt;Setup as gone from &lt;code&gt;Action&amp;lt;ICakeContext&amp;gt;&lt;/code&gt; to &lt;code&gt;Action&amp;lt;ISetupContext&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/milestone/48?closed=1"&gt;6 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2008"&gt;&lt;strong&gt;#2008&lt;/strong&gt;&lt;/a&gt; Allow defining a typed context to be used throughout a Cake script.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1772"&gt;&lt;strong&gt;#1772&lt;/strong&gt;&lt;/a&gt; Provide access to the run target and ordered list of tasks.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1594"&gt;&lt;strong&gt;#1594&lt;/strong&gt;&lt;/a&gt; Add overload to WithCriteria which prints a message.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvment&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2163"&gt;&lt;strong&gt;#2163&lt;/strong&gt;&lt;/a&gt; Update to Roslyn 2.8.x packages, adding support for C# 7.3.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2171"&gt;&lt;strong&gt;#2171&lt;/strong&gt;&lt;/a&gt; Add potential breaking change warning.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2174"&gt;&lt;strong&gt;#2174&lt;/strong&gt;&lt;/a&gt; Support multiple Support / Teardown.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/website/issues/520"&gt;&lt;strong&gt;website#520&lt;/strong&gt;&lt;/a&gt; Formatting issues with examples in XmlPoke documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;</content:encoded>
+		</item>
 		<item>
 			<title>Cake v0.27.2 released</title>
 			<link>https://cakebuild.net/blog/2018/05/cake-v0.27.2-released</link>
@@ -1061,24 +1218,6 @@ This release also contains a few documentation improvements.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1587"&gt;&lt;strong&gt;#1587&lt;/strong&gt;&lt;/a&gt; Arguments missing for Octopus Deploy tool&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>
-		</item>
-		<item>
-			<title>Intellisense and new Cake team member</title>
-			<link>https://cakebuild.net/blog/2017/05/intellisense-and-intro</link>
-			<description>&lt;p&gt;Hi! My name is Martin Björkström and I'm a .NET Developer and father of two from Finland.  I started using Cake in early 2016 and have been making &lt;a href="https://github.com/cake-build/cake/commits?author=mholo65"&gt;contributions&lt;/a&gt; ever since. So far, the most notable is probably &lt;a href="https://github.com/cake-build/cake/pull/858"&gt;debugging support&lt;/a&gt;.  As of April, I'm also a member of the Cake Team!&lt;/p&gt;</description>
-			<author>mholo65</author>
-			<guid>https://cakebuild.net/blog/2017/05/intellisense-and-intro</guid>
-			<pubDate>Tue, 02 May 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Hi! My name is Martin Björkström and I'm a .NET Developer and father of two from Finland.  I started using Cake in early 2016 and have been making &lt;a href="https://github.com/cake-build/cake/commits?author=mholo65"&gt;contributions&lt;/a&gt; ever since. So far, the most notable is probably &lt;a href="https://github.com/cake-build/cake/pull/858"&gt;debugging support&lt;/a&gt;.  As of April, I'm also a member of the Cake Team!&lt;/p&gt;
-&lt;p&gt;So, why am I a member of the Cake Team?  Well, it all started with a new year's resolution gone wrong.  I somehow &lt;em&gt;promised&lt;/em&gt; that 2017 will be the year when we will get intellisense for &lt;code&gt;*.cake&lt;/code&gt; files.&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/gep13"&gt;&amp;#64;gep13&lt;/a&gt; &lt;a href="https://twitter.com/cakebuildnet"&gt;&amp;#64;cakebuildnet&lt;/a&gt; I hope that 2017 is the year when we will get intellisense through &lt;a href="https://twitter.com/omnisharp"&gt;&amp;#64;omnisharp&lt;/a&gt; ;)&lt;/p&gt;&amp;mdash; Martin Björkström (&amp;#64;mholo65) &lt;a href="https://twitter.com/mholo65/status/815617341568512000"&gt;January 1, 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;With that said, I started looking into &lt;a href="http://www.omnisharp.net/"&gt;OmniSharp&lt;/a&gt; and after a while I got something working.  The Cake Team was &lt;em&gt;impressed?!&lt;/em&gt; and wanted me to continue my work on a more &lt;em&gt;official&lt;/em&gt; level.  As a result, they asked me to join the team.&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/gep13"&gt;&amp;#64;gep13&lt;/a&gt; Do you now know what you are looking at? ;) &lt;a href="https://t.co/XTGtTRx85M"&gt;pic.twitter.com/XTGtTRx85M&lt;/a&gt;&lt;/p&gt;&amp;mdash; Martin Björkström (&amp;#64;mholo65) &lt;a href="https://twitter.com/mholo65/status/847916254740570119"&gt;March 31, 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;Since then, we´ve continued working on the &lt;code&gt;Cake&lt;/code&gt; plugin for &lt;code&gt;OmniSharp&lt;/code&gt;.  We've also opened up a dialogue with the OmniSharp team in order to tackle issues along the way.  My last tweet shows where we are today:&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Intellisense, anyone? Here&amp;#39;s a teaser for you!&lt;br&gt;&lt;br&gt;//cc &lt;a href="https://twitter.com/cakebuildnet"&gt;&amp;#64;cakebuildnet&lt;/a&gt; &lt;a href="https://twitter.com/omnisharp"&gt;&amp;#64;omnisharp&lt;/a&gt; &lt;a href="https://twitter.com/code"&gt;&amp;#64;code&lt;/a&gt; &lt;a href="https://t.co/n5xAeJgmLy"&gt;pic.twitter.com/n5xAeJgmLy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Martin Björkström (&amp;#64;mholo65) &lt;a href="https://twitter.com/mholo65/status/857731193554554881"&gt;April 27, 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;We have it &lt;em&gt;mostly&lt;/em&gt; working and I'm pretty confident when saying &lt;em&gt;Intellisense will happen during 2017&lt;/em&gt;.  We still have lots of work to do, but both we, and the OmniSharp team, are working hard to make this happen.  At this point I would like to thank the Cake Team for letting me in on this journey.  The OmniSharp team (especially &lt;a href="https://github.com/david-driscoll"&gt;David Driscoll&lt;/a&gt; and &lt;a href="https://github.com/DustinCampbell"&gt;Dustin Campbell&lt;/a&gt;) for all the hard work and support.  And lastly, but by no means least, I'd like to thank &lt;a href="https://github.com/RichiCoder1"&gt;Richard Simpson&lt;/a&gt; for his work on &lt;a href="https://github.com/OmniSharp/omnisharp-roslyn/issues/208"&gt;paving the way&lt;/a&gt; for OmniSharp plugins.&lt;/p&gt;
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 </content:encoded>
 		</item>
 	</channel>
