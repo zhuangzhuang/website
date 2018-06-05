@@ -210,8 +210,8 @@
 											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationRemover">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Remover</a></li>								
 											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseDropper">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Dropper</a></li>								
 											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAdder">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Adder</a></li>								
-											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Scripter</a></li>								
 											<li><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Updater</a></li>								
+											<li><a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Scripter</a></li>								
 									</ul>
 								</dd>			
 							
@@ -229,10 +229,10 @@ class Type type-node
 	click Derived1 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseDropper"
 	Type--&gt;Derived2["DotNetCoreEfMigrationAdder"]
 	click Derived2 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAdder"
-	Type--&gt;Derived3["DotNetCoreEfMigrationScripter"]
-	click Derived3 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter"
-	Type--&gt;Derived4["DotNetCoreEfDatabaseUpdater"]
-	click Derived4 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater"
+	Type--&gt;Derived3["DotNetCoreEfDatabaseUpdater"]
+	click Derived3 "/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater"
+	Type--&gt;Derived4["DotNetCoreEfMigrationScripter"]
+	click Derived4 "/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationScripter"
 
 						</div>
 					</div>
