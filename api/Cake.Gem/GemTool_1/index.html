@@ -201,8 +201,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Gem.Push/GemPushRunner">GemPushRunner</a></li>								
 											<li><a href="/api/Cake.Gem.Build/GemBuildRunner">GemBuildRunner</a></li>								
+											<li><a href="/api/Cake.Gem.Push/GemPushRunner">GemPushRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -214,10 +214,10 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["GemTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["GemPushRunner"]
-	click Derived0 "/api/Cake.Gem.Push/GemPushRunner"
-	Type--&gt;Derived1["GemBuildRunner"]
-	click Derived1 "/api/Cake.Gem.Build/GemBuildRunner"
+	Type--&gt;Derived0["GemBuildRunner"]
+	click Derived0 "/api/Cake.Gem.Build/GemBuildRunner"
+	Type--&gt;Derived1["GemPushRunner"]
+	click Derived1 "/api/Cake.Gem.Push/GemPushRunner"
 
 						</div>
 					</div>

@@ -255,10 +255,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -272,14 +272,14 @@
 	click Interface0 "/api/Cake.Core/ICakeContext"
 	Type["CakeContextAdapter"]
 class Type type-node
-	Type--&gt;Derived0["TeardownContext"]
-	click Derived0 "/api/Cake.Core/TeardownContext"
-	Type--&gt;Derived1["TaskSetupContext"]
-	click Derived1 "/api/Cake.Core/TaskSetupContext"
+	Type--&gt;Derived0["TaskSetupContext"]
+	click Derived0 "/api/Cake.Core/TaskSetupContext"
+	Type--&gt;Derived1["SetupContext"]
+	click Derived1 "/api/Cake.Core/SetupContext"
 	Type--&gt;Derived2["TaskTeardownContext"]
 	click Derived2 "/api/Cake.Core/TaskTeardownContext"
-	Type--&gt;Derived3["SetupContext"]
-	click Derived3 "/api/Cake.Core/SetupContext"
+	Type--&gt;Derived3["TeardownContext"]
+	click Derived3 "/api/Cake.Core/TeardownContext"
 
 						</div>
 					</div>
