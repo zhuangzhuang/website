@@ -190,18 +190,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.XComponent.Exception">Cake<wbr>.XComponent<wbr>.Exception</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>ISerializable</li>								
-											<li>_Exception</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
 											<li>Exception</li>								
 									</ul>
 								</dd>				
@@ -213,9 +205,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Exception"]--&gt;Type
-	Base1["object"]--&gt;Base0
-	Interface0["ISerializable"]-.-&gt;Type
-	Interface1["_Exception"]-.-&gt;Type
 	Type["XComponentException"]
 class Type type-node
 
@@ -226,7 +215,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class XComponentException : Exception, ISerializable, _Exception</code></pre>
+	<pre><code>public class XComponentException : Exception</code></pre>
 
 
 

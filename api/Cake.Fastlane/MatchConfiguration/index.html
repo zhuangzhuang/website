@@ -80,10 +80,12 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
+<p><a href="#SeeAlso">See Also</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -182,7 +184,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Fastlane match configuration options.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -265,49 +271,64 @@ class Type type-node
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/C190A489">AppIdentifier</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the bundle identifier(s) of your app (comma-separated).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/2CB0E21F">CertificateType</a></td>
 								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the type of the certificate.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/5C229C45">CloneBranchDirectly</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to clone just the branch specified, instead of the whole repo.
+            This requires that the branch already exists. Otherwise the command will fail.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/73E15D0B">Force</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to renew the provisioning profiles every time you run match.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/AFE79402">ForceForNewDevices</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to renew the provisioning profiles if the device count on the developer portal has changed.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/D582B708">GitBranch</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the specific git branch to use.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/FastlaneConfiguration/0CEA2C50">GitFullName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the full name of the git user.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Fastlane/FastlaneConfiguration">Fastlane<wbr>Configuration</a></em></small></div>
 								</td>
 							</tr>
@@ -315,14 +336,18 @@ class Type type-node
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/F4DB131B">GitUrl</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the URL to the git repo containing all the certificates.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/FastlaneConfiguration/F5CB2FF8">GitUserEmail</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the git users email.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Fastlane/FastlaneConfiguration">Fastlane<wbr>Configuration</a></em></small></div>
 								</td>
 							</tr>
@@ -330,84 +355,108 @@ class Type type-node
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/B0BA0FEC">KeyChainName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the name of the keychain the items should be imported to.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/01D02387">KeyChainPassword</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the key chain password.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/00DCC358">Platform</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the provisioning profile's platform to work with (i.e. ios, tvos)
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/0D68FDFD">ReadOnly</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether [read only].
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/5E04CEBB">ShallowClone</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to make a shallow clone of the repository (truncate the history to 1 revision).
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/EB067DA7">SkipConfirmation</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to disable confirmation prompts during nuke, answering them with yes.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/06B8D5A9">SkipDocs</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to skip generation of a README.md for the created git repository.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/4F327724">TeamId</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the team identifier.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/AD4E7888">TeamName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the name of the team.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/82A5FD39">UserName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets your Apple ID Username.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/800362D8">Verbose</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to print out extra information and all commands.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/MatchConfiguration/2D8A4381">Workspace</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the workspace.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -498,6 +547,10 @@ class Type type-node
 				</div>
 			</div>
 		
+	<h1 id="SeeAlso">See Also</h1>
+	<ul class="list-unstyled">
+			<li><code><a href="/api/Cake.Fastlane/FastlaneConfiguration">FastlaneConfiguration</a></code></li>
+	</ul>
 
 	
 </section>
