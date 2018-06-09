@@ -83,6 +83,7 @@
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Examples">Examples</a></p>
+<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -224,6 +225,10 @@
  Information("Deployed to {0}", deployFilePath);</code></pre>
              </div>
 
+	<h1 id="Remarks">Remarks</h1>
+	<div>
+             You app service needs to have the setting WEBSITE_RUN_FROM_ZIP set to 1 for Kudu to pickup your publish.
+             </div>
 
 
 

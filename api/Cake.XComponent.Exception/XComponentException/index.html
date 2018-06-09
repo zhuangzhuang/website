@@ -190,18 +190,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.XComponent.Exception">Cake<wbr>.XComponent<wbr>.Exception</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>ISerializable</li>								
-											<li>_Exception</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
 											<li>Exception</li>								
 									</ul>
 								</dd>				
@@ -213,9 +205,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Exception"]--&gt;Type
-	Base1["object"]--&gt;Base0
-	Interface0["ISerializable"]-.-&gt;Type
-	Interface1["_Exception"]-.-&gt;Type
 	Type["XComponentException"]
 class Type type-node
 
@@ -226,7 +215,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class XComponentException : Exception, ISerializable, _Exception</code></pre>
+	<pre><code>public class XComponentException : Exception</code></pre>
 
 
 
@@ -293,17 +282,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>X<wbr>Component<wbr>Exception&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>X<wbr>Component<wbr>Exception&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -312,6 +290,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>X<wbr>Component<wbr>Exception&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -80,7 +80,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -155,6 +157,7 @@
 				<li><a href="/api/Cake.Fastlane/FastlaneTool_1/9BA96DE7">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneTool_1/3BF632F3">GetToolName<wbr>()<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Fastlane/FastlaneMatchProvider/91CB35FF">Match<wbr>(MatchConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneMatchProvider/5F51E90D">Match<wbr>(Action<wbr>&lt;<wbr>Match<wbr>Configuration&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -181,7 +184,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+             Executes fastlane match with the specified configuration.
+             </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -201,6 +208,17 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public void Match(MatchConfiguration configuration)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+                 <pre><code class="cs">         var configuration = new MatchConfiguration
+         {
+             CertificateType = CertificateType.Development,
+             AppIdentifier = "com.fastlane.cake",
+             ForceForNewDevices = true
+         };
+
+         Fastlane.Match(configuration);</code></pre>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>

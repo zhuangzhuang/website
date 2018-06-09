@@ -153,7 +153,9 @@
 				<li><a href="/api/Cake.Issues/IIssue/F2A42E89">Line</a></li>
 				<li><a href="/api/Cake.Issues/IIssue/18537A3D">Message</a></li>
 				<li class="selected"><a href="/api/Cake.Issues/IIssue/BFEFFBB1">Priority</a></li>
+				<li><a href="/api/Cake.Issues/IIssue/05A39052">PriorityName</a></li>
 				<li><a href="/api/Cake.Issues/IIssue/89B374A4">Project</a></li>
+				<li><a href="/api/Cake.Issues/IIssue/FA8BB1A0">ProviderName</a></li>
 				<li><a href="/api/Cake.Issues/IIssue/D5A24C72">ProviderType</a></li>
 				<li><a href="/api/Cake.Issues/IIssue/C8BCE21E">Rule</a></li>
 				<li><a href="/api/Cake.Issues/IIssue/48A6F355">RuleUrl</a></li>
@@ -186,6 +188,7 @@
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
             Gets the priority of the message. A higher value indicates a higher priority.
+            <code class="cs">null</code> if no priority was assigned.
             </div>
 
 		<div class="panel panel-default">
@@ -205,7 +208,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>int Priority { get; }</code></pre>
+	<pre><code>Nullable&lt;int&gt; Priority { get; }</code></pre>
 
 
 
@@ -222,7 +225,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>int</td>
+					<td>Nullable<wbr>&lt;&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

@@ -149,6 +149,8 @@
 		<li><a href="/api/Cake.MiniCover.Settings">Cake<wbr>.MiniCover<wbr>.Settings</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.MiniCover.Settings/CoverallsSettings">CoverallsSettings</a></li>
+				<li><a href="/api/Cake.MiniCover.Settings/CoverallsSettingsExtensions">Coveralls<wbr>Settings<wbr>Extensions</a></li>
 				<li class="selected"><a href="/api/Cake.MiniCover.Settings/MiniCoverSettings">MiniCoverSettings</a></li>
 				<li><a href="/api/Cake.MiniCover.Settings/MiniCoverSettingsExtensions">Mini<wbr>Cover<wbr>Settings<wbr>Extensions</a></li>
 
@@ -178,7 +180,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Contains settings used by <code class="cs">MiniCoverRunner</code>.
+            Contains settings used by <code class="cs"><a href="/api/Cake.MiniCover/MiniCoverAliases">MiniCoverAliases</a></code>.
             </div>
 
 		<div class="panel panel-default">
@@ -280,6 +282,15 @@ class Type type-node
 								<td>
 									<div>
             Name of json coverage file
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.MiniCover.Settings/MiniCoverSettings/78848677">Coveralls</a></td>
+								<td><a href="/api/Cake.MiniCover.Settings/CoverallsSettings">CoverallsSettings</a></td>
+								<td>
+									<div>
+            Settings for the <code class="cs"><a href="/api/Cake.MiniCover/ReportType/B3258184">COVERALLS</a></code> report type
             </div>
 								</td>
 							</tr>
@@ -407,17 +418,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Mini<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Mini<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -426,6 +426,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Mini<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -467,6 +478,28 @@ class Type type-node
 								<td>
 									<div>
             Use the provided name for the internal coverage file
+            </div>
+										<div><small><em>From <a href="/api/Cake.MiniCover.Settings/MiniCoverSettingsExtensions">Mini<wbr>Cover<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.MiniCover addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.MiniCover.Settings/MiniCoverSettingsExtensions/923E6173">With<wbr>Coveralls<wbr>Settings<wbr>(Action<wbr>&lt;<wbr>Coveralls<wbr>Settings&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.MiniCover.Settings/MiniCoverSettings">MiniCoverSettings</a></td>
+								<td>
+									<div>
+            Set settings for coveralls report generation
+            </div>
+										<div><small><em>From <a href="/api/Cake.MiniCover.Settings/MiniCoverSettingsExtensions">Mini<wbr>Cover<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.MiniCover addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.MiniCover.Settings/MiniCoverSettingsExtensions/F7157D97">With<wbr>Coveralls<wbr>Settings<wbr>(CoverallsSettings)<wbr></a></td>
+								<td><a href="/api/Cake.MiniCover.Settings/MiniCoverSettings">MiniCoverSettings</a></td>
+								<td>
+									<div>
+            Set settings for coveralls report generation
             </div>
 										<div><small><em>From <a href="/api/Cake.MiniCover.Settings/MiniCoverSettingsExtensions">Mini<wbr>Cover<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.MiniCover addin</em></small></div>
