@@ -101,6 +101,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/06">June, 2018</a></li>
         <li><a href="/blog/archive/2018/05">May, 2018</a></li>
         <li><a href="/blog/archive/2018/04">April, 2018</a></li>
         <li><a href="/blog/archive/2018/03">March, 2018</a></li>
@@ -144,6 +145,7 @@
         <li><a href="/blog/author/jericho">jericho</a></li>
         <li><a href="/blog/author/Larz-White">Larz White</a></li>
         <li><a href="/blog/author/mholo65">mholo65</a></li>
+        <li><a href="/blog/author/Pascal-Berger">Pascal Berger</a></li>
         <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
         <li><a href="/blog/author/phillipsj">phillipsj</a></li>
         <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
@@ -165,6 +167,184 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/06/cake-issues">Cake.Issues - A suite of addins for issue handling in Cake</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Sunday, June 10, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Addins">Addins</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/Pascal-Berger">Pascal Berger</a></dd>
+</dl>            <div>
+                <p>Do you want to break your build on JetBrains InspectCode issues?
+Do you want to create nice reports for StyleCop issues in your code?
+Do you want to have ESLint issues reported as comments to pull requests?
+The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> allows you to do this and much more.
+Read issues from different analyzer or linters, create reports or add them as comments to pull requests.</p>
+<!--excerpt-->
+<h3 id="the-cake.issues-addins">The Cake.Issues addins</h3>
+<p>While some linting tools provide nice reporting capabilities, others don't.
+Some build systems provide tasks to report issues into pull requests.
+But if you're using another build system your out of luck.
+Maybe you found a new nice linting tool which does exactly what you need, but probably it won't integrate well
+with your existing other linting tools.</p>
+<p>The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> tries to solve this,
+by providing a common and extensible infrastructure for issue management in Cake build scripts.</p>
+<p>Unlike other Cake addins, the Cake Issues addin consists of over 10 different addins, working together
+and providing over 50 aliases which can be used in Cake build scripts to work with issues.
+The addins are built in a modular architecture and are providing different extension points which allows
+to easily enhance them for supporting additional analyzers, linters, report formats and code review systems.</p>
+<h3 id="preparation-work">Preparation work</h3>
+<p>In the following examples we assume a Visual Studio solution, containing some Roslyn Analyzers, which we want
+to build and additionally run JetBrains InspectCode on it.</p>
+<p>For creating an XML log from MsBuild we need the <code>XmlFileLogger</code> class from the <a href="http://www.msbuildextensionpack.com/">MSBuild Extension Pack</a>
+and the JetBrains InspectCode tool:</p>
+<pre><code class="language-csharp">#tool &quot;nuget:?package=MSBuild.Extension.Pack&quot;
+#tool &quot;nuget:?package=JetBrains.ReSharper.CommandLineTools&quot;
+</code></pre>
+<p>Now we can use the aliases provided by Cake out of the box to build the solution and run JetBrains InspectCode resulting in two log files containing the issues:</p>
+<pre><code class="language-csharp">var repoRootFolder = MakeAbsolute(Directory(&quot;./&quot;));
+var msBuildLog = repoRootFolder.CombineWithFilePath(&quot;msbuild.log&quot;);
+var inspectCodeLog = repoRootFolder.CombineWithFilePath(&quot;inspectCode.log&quot;);
+
+Task(&quot;Build&quot;)
+    .Does(() =&gt;
+{
+    var settings = new MSBuildSettings()
+    .WithTarget(&quot;Rebuild&quot;)
+    .WithLogger(
+        Context.Tools.Resolve(&quot;MSBuild.ExtensionPack.Loggers.dll&quot;).FullPath,
+        &quot;XmlFileLogger&quot;,
+        string.Format(
+            &quot;logfile=\&quot;{0}\&quot;;verbosity=Detailed;encoding=UTF-8&quot;,
+            msBuildLog)
+    );
+
+    MSBuild(repoRootFolder.Combine(&quot;src&quot;).CombineWithFilePath(&quot;MySolution.sln&quot;), settings);
+});
+
+Task(&quot;Run-InspectCode&quot;)
+    .Does(() =&gt;
+{
+    var settings = new InspectCodeSettings() {
+        OutputFile = inspectCodeLog
+    };
+
+    InspectCode(repoRootFolder.Combine(&quot;src&quot;).CombineWithFilePath(&quot;MySolution.sln&quot;), settings);
+});
+</code></pre>
+<h3 id="reading-issues">Reading issues</h3>
+<p>The <code>Cake.Issues</code> addin now allows you to parse the generated log files and retrieve the issues in a common structure.
+The addin provides aliases for reading issues and can be used to aggregate issues from different sources.
+This can for example be useful to break builds based on the reported issues.</p>
+<p>To read the issues we need to import the following core addin:</p>
+<pre><code class="language-csharp">#addin &quot;Cake.Issues&quot;
+</code></pre>
+<p>We also need to import at least one issue provider.
+Issue provider are separate addins which can provide issues from a specific linter or tool.
+The <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/issue-providers/">issue provider</a> documentation gives an
+overview of available issue providers including samples how to integrate them in a Cake build script.</p>
+<p>In the following example the issue providers for reading warnings from MsBuild log files
+and from JetBrains InspectCode are imported:</p>
+<pre><code class="language-csharp">#addin &quot;Cake.Issues.MsBuild&quot;
+#addin &quot;Cake.Issues.InspectCode&quot;
+</code></pre>
+<p>Finally we  define a task where we call the core addin with the desired issue providers.
+The following example reads the reported issues with comments formatted as Markdown:</p>
+<pre><code class="language-csharp">IEnumerable&lt;IIssue&gt; issues = null;
+
+Task(&quot;Read-Issues&quot;)
+    .IsDependentOn(&quot;Build&quot;)
+    .IsDependentOn(&quot;Run-InspectCode&quot;)
+    .Does(() =&gt;
+{
+    var settings =
+        new ReadIssuesSettings(repoRootFolder)
+        {
+            Format = IssueCommentFormat.Markdown
+        };
+
+    issues = ReadIssues(
+        new List&lt;IIssueProvider&gt;
+        {
+            MsBuildIssuesFromFilePath(
+                msBuildLog,
+                MsBuildXmlFileLoggerFormat),
+            InspectCodeIssuesFromFilePath(
+                inspectCodeLog)
+        },
+        settings);
+
+    Information(&quot;{0} issues are found.&quot;, issues.Count());
+});
+</code></pre>
+<h3 id="creating-reports">Creating reports</h3>
+<p>With the issues from the different tools in a common format it is now possible to create reports out of it.
+The <code>Cake.Issues.Reporting</code> addin provides the required aliases for this.
+The concrete reporting format is defined in separate <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/">report format addins</a>.</p>
+<p>Currently there's one report format available which allows you to render reports using <a href="https://github.com/Antaris/RazorEngine">RazorEngine</a>.</p>
+<p>The following example will create a HTML report of the issues:</p>
+<pre><code class="language-csharp">#addin &quot;Cake.Reporting&quot;
+#addin &quot;Cake.Reporting.Generic&quot;
+
+Task(&quot;Create-Report&quot;)
+    .IsDependentOn(&quot;Read-Issues&quot;)
+    .Does(() =&gt;
+{
+    // Create HTML report using Data Table template.
+    CreateIssueReport(
+        issues,
+        GenericIssueReportFormatFromEmbeddedTemplate(GenericIssueReportTemplate.HtmlDataTable),
+        repoRootFolder,
+        repoRootFolder.CombineWithFilePath(&quot;report.html&quot;));
+});
+</code></pre>
+<p>The result will look like this:</p>
+<p><img src="/assets/img/cake-issues/htmldatatable.png" class="img-fluid" alt="Report" /></p>
+<p>The addin provides some <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/templates/">out of the box templates</a>,
+but you can also pass your own <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/examples#use-custom-template">custom template</a>
+in which you can do whatever RazorEngine is capable of doing.</p>
+<h3 id="reporting-issues-to-pull-requests">Reporting issues to pull requests</h3>
+<p>The last core part of the Cake Issues suite is for reporting issues as comments to pull requests.
+The <code>Cake.Issues.PullRequests</code> addin provides the required aliases and the implementation for the concrete pull request system
+is again implemented in separate <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/pull-request-systems/">pull request system addins</a>.</p>
+<p>The following example will report issues as comments to Team Foundation Server:</p>
+<pre><code class="language-csharp">#addin &quot;Cake.Issues.PullRequests&quot;
+#addin &quot;Cake.Issues.PullRequests.Tfs&quot;
+
+Task(&quot;ReportIssuesToPullRequest&quot;).Does(() =&gt;
+{
+    ReportIssuesToPullRequest(
+        new List&lt;IIssueProvider&gt;
+        {
+            MsBuildIssuesFromFilePath(
+                msBuildLog,
+                MsBuildXmlFileLoggerFormat),
+            InspectCodeIssuesFromFilePath(
+                inspectCodeLog)
+        },
+        TfsPullRequests(
+            new Uri(&quot;http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository&quot;),
+            &quot;refs/heads/feature/myfeature&quot;,
+            TfsAuthenticationNtlm()),
+        repoRootFolder);
+});
+</code></pre>
+<p>The result will look like this in Team Foundation Server:</p>
+<p><img src="/assets/img/cake-issues/pullrequests.png" class="img-fluid" alt="Pull request integration" /></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> provide a common way to integrate different linters and tools into a Cake build script.
+It's fully <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/extending/">extensible</a> for additional issue providers, report formats or pull request systems.</p>
+<p>Documentation is available on its own <a href="https://cake-contrib.github.io/Cake.Issues.Website/">website</a>.</p>
+<p>While the addins already cover a wide range of scenarios we're always looking for people interested in implementing additional issue providers,
+report formats &amp; templates or pull request systems.</p>
+<hr />
+<p>My name is Pascal Berger.
+I'm working as a Software Architect at <a href="http://www.bbtsoftware.ch">BBT Software AG</a>.
+You can find me on <a href="https://twitter.com/hereispascal">Twitter</a> or <a href="https://github.com/pascalberger">GitHub</a>.</p>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2018/05/cake-v0.28.0-released">Cake v0.28.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -174,151 +354,12 @@
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/devlead">devlead</a></dd>
 </dl>            <div>
-                <html><head></head><body><p>Version 0.28.0 of Cake has been released.</p>
+                <p>Version 0.28.0 of Cake has been released.</p>
 <p>We're really excited by this release which has some splendid features and improvements!</p>
 <p>In this blog post we'll highlight:</p>
-<ul>
-<li>Typed context</li>
-<li>Setup context</li>
-<li>Criteria messages</li>
-<li>"Potentially breaking"</li>
-<li>Issues &amp; workarounds</li>
-</ul>
+
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/mholo65">mholo65</a></li>
-<li><a href="https://github.com/gep13">gep13</a></li>
-<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
-<li><a href="https://github.com/daveaglick">daveaglick</a></li>
-<li><a href="https://github.com/devlead">devlead</a></li>
-</ul>
-<!--excerpt-->
-<h3 id="typed-context">Typed context</h3>
-<p>In previous versions of Cake you've had to rely on global variables or static members to share variables/state between tasks; this leads to unnecessary complexity and hard to maintain code.</p>
-<p>In this release we have introduced the concept of typed context, where in the <code>Setup</code> method you can create and return a class; this object is then available to be used in <code>Teardown</code> method, Task actions and criteria.</p>
-<p>The class can be any C# class, as it's just standard C# you can provide <code>get</code> &amp; <code>set</code> for properties you want to be mutable, and only get for read only properties.</p>
-<pre><code class="language-csharp">public class MyBuildData
-{
-	public string Configuration { get; }
-	public bool SignAssemblies { get; }
-	public bool AssmbliesSigned { get; set; }
-
-	public MyBuildData(
-		string configuration,
-		bool signAssemblies)
-	{
-		Configuration = configuration;
-		SignAssemblies = signAssemblies;
-	}
-}
-</code></pre>
-<p>Providing your script with a typed context is done by returning an instance of a class from your script <code>Setup</code> method.</p>
-<pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
-{
-	return new MyBuildData(
-		configuration: Argument("configuration", "Release"),
-		signAssemblies: BuildSystem.IsRunningOnAppVeyor);
-});
-</code></pre>
-<p>Accessing your data in your task action and criteria, is then done by supplying a type parameter to your task <code>Does</code> / <code>DoesForEach</code> / <code>WithCriteria</code> methods.</p>
-<pre><code class="language-csharp">Task("Sign")
-    .WithCriteria&lt;MyBuildData&gt;((context, data) =&gt; data.SignAssemblies)
-    .Does&lt;MyBuildData&gt;(data =&gt;
-{
-      data.AssmbliesSigned = true;
-});
-</code></pre>
-<p>And it's then done in a similar way with your script <code>Teardown</code> method.</p>
-<pre><code class="language-csharp">Teardown&lt;MyBuildData&gt;((teardownContext, data) =&gt;
-{
-    if (data.AssmbliesSigned)
-    {
-        Information("Assemblies were signed");
-    }
-    else
-    {
-        Information("Assemblies were NOT signed");
-    }
-});
-</code></pre>
-<h3 id="setup-context">Setup context</h3>
-<p>This release changed the script Setup context from a <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> to <code><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></code>. In addition to everything that <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> offers, there is now some additional information provided:</p>
-<pre><code class="language-csharp"><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a> TargetTask { get; }
-IReadOnlyCollection&lt;ICakeTaskInfo&gt; TasksToExecute { get; }
-</code></pre>
-<p><code>TargetTask</code> is the task that initiated the script and <code>TasksToExecute</code> are the tasks that will be executed based on the dependency graph of the target task. Access to which tasks actually will be executed has been a greatly sought after feature, combined with the typed context makes it fairly straightforward to enable some advanced scenarios.</p>
-<pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
-{
-	var signAssemblies = <a href="/api/Cake.Common.Build/BuildSystem/4E36DFD5">BuildSystem.IsRunningOnAppVeyor</a>
-							|| StringComparer.OrdinalIgnoreCase.Equals("Sign", setupContext.TargetTask.Name);
-
-	var isPublishBuild = setupContext
-                          .TasksToExecute
-                          .Where(task =&gt; StringComparer.OrdinalIgnoreCase.Equals("Publish", task.Name))
-                          .Any();
-
-    return new MyBuildData (
-    	configuration: Argument("configuration", "Release"),
-    	signAssemblies: signAssemblies,
-        isPublishBuild: isPublishBuild);
-});
-</code></pre>
-<p>In the above code we choose to sign assemblies if either running on AppVeyor or the script initiating target is <code>Sign</code>. And we'll treat build as a "publish" build if any of the depending tasks is named <code>Publish</code>.</p>
-<h3 id="criteria-messages">Criteria messages</h3>
-<p>Task <code>WithCriteria</code> can now have a message that's outputted when a task is skipped, this will make it clearer in the log why a specific task wasn't executed.</p>
-<p>This means by doing</p>
-<pre><code class="language-csharp">Task("Sign")
-    .WithCriteria&lt;MyBuildData&gt;(
-        (context, data) =&gt; data.SignAssemblies,
-        "Sign skipped because SignAssemblies is set to false."
-        );
-</code></pre>
-<p>the verbose output goes from</p>
-<pre><code>========================================
-Sign
-========================================
-Skipping task: Sign
-</code></pre>
-<p>to</p>
-<pre><code>========================================
-Sign
-========================================
-Skipping task: Sign skipped because SignAssemblies is set to false.
-</code></pre>
-<h3 id="potentially-breaking">Potentially breaking</h3>
-<p>When we have to ship a breaking change in Cake, one piece of feedback that we have often heard is that it can be very frustrating to have a build suddenly fail, due to a new dependency on a higher version of <code>Cake.Core</code>. We have always advocated that all builds should be pinned to a specific version of Cake, so that a new breaking change does not affect your builds, however, we also understand that some people want to run their builds this way.</p>
-<p>In this release we've introduced the notion of a "Potentially breaking change", which is when we've refactored code we will not break the build, but issue a warning but not break the build.</p>
-<p><img src="https://user-images.githubusercontent.com/1647294/40666343-be1311e8-635f-11e8-8748-8ea49c02b927.png" class="img-fluid" alt="image"></p>
-<p>In the case that we find that a change will break addins, then we'll issue a hotfix and then set the minimal required version of <code>Cake.Core</code> and break the build.</p>
-<p>This means even though we made some substantial changes, version <code>0.28.0</code> will still have <code>0.26.0</code> as the minimal required version for Cake addins to target.</p>
-<p>We believe this compromise will minimize end user frustration - while still keeping the risk of runtime errors low.</p>
-<h3 id="issues-workarounds">Issues &amp; workarounds</h3>
-<p>In this release we've refactored some internals of Cake, while most scripts with just continue to work without issue, there are some that will need to be tweaked.</p>
-<ul>
-<li><code>CakeTaskBuilder&lt;ActionTask&gt;</code> has been refactored to <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>, this means scripts that use and store <code>CakeTaskBuilder&lt;ActionTask&gt;</code> like i.e. <a href="https://github.com/cake-contrib/Cake.Recipe">Cake.Recipe</a> will need to replace all instances of <code>CakeTaskBuilder&lt;ActionTask&gt;</code> to  <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>.</li>
-<li><code>ActionTask</code> is removed in favor of just using <code><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>, this to reduce complexity and simplify future features.</li>
-<li><code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> interface now has a <code><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></code> <code>Data</code> property that needs to be implemented.</li>
-<li>Setup as gone from <code>Action&lt;ICakeContext&gt;</code> to <code>Action&lt;ISetupContext&gt;</code>.</li>
-</ul>
-<p>Full details of everything that was included in this release can be seen below.</p>
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/48?closed=1">6 issues</a> closed.</p>
-<p><strong>Feature</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2008"><strong>#2008</strong></a> Allow defining a typed context to be used throughout a Cake script.</li>
-<li><a href="https://github.com/cake-build/cake/issues/1772"><strong>#1772</strong></a> Provide access to the run target and ordered list of tasks.</li>
-<li><a href="https://github.com/cake-build/cake/issues/1594"><strong>#1594</strong></a> Add overload to WithCriteria which prints a message.</li>
-</ul>
-<p><strong>Improvment</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2163"><strong>#2163</strong></a> Update to Roslyn 2.8.x packages, adding support for C# 7.3.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2171"><strong>#2171</strong></a> Add potential breaking change warning.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2174"><strong>#2174</strong></a> Support multiple Support / Teardown.</li>
-</ul>
-<p><strong>Documentation</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/website/issues/520"><strong>website#520</strong></a> Formatting issues with examples in XmlPoke documentation</li>
-</ul>
-</body></html>
+                <a href="/blog/2018/05/cake-v0.28.0-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2018/05/cake-v0.27.2-released">Cake v0.27.2 released</a></h2>
@@ -374,23 +415,6 @@ Skipping task: Sign skipped because SignAssemblies is set to false.
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2018/04/cake-v0.27.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/03/cake-v0.26.1-released">Cake v0.26.1 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Saturday, March 3, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>Version 0.26.1 of Cake has been released.</p>
-<p>This is a bug fix release.  After releasing 0.26.0 last week, it was noted that when running Cake on Mono, it wasn't possible to load netstandard 2.0 assemblies.  Since this will impact a number of users, we decided to release a fix for this as soon as possible.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2018/03/cake-v0.26.1-released">Read more...</a>
             </div>
         <hr />
     <nav>
