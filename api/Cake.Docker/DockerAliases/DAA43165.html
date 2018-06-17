@@ -280,7 +280,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void DockerCreate(this ICakeContext context, string image, string command, params string[] args)</code></pre>
+	<pre><code>public static string DockerCreate(this ICakeContext context, string image, string command, params string[] args)</code></pre>
 
 
 
@@ -349,8 +349,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>string</td>
+					<td>container ID</td>
 				</tr>
 			</tbody></table>
 		</div>
