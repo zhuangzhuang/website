@@ -219,8 +219,15 @@
 <pre><code class="language-sh">[Nuget]
 Source=http://myfeed/nuget/
 </code></pre>
+<p>Or with multiple sources:</p>
+<pre><code class="language-sh">[Nuget]
+Source=http://myfeed/nuget/;http://myotherfeed/nuget
+</code></pre>
 <h2 id="direct-argument">Direct Argument</h2>
 <pre><code class="language-sh">cake.exe --nuget_source=http://myfeed/nuget/
+</code></pre>
+<p>Or with multiple sources:</p>
+<pre><code class="language-sh">cake.exe --nuget_source=http://myfeed/nuget/;http://myotherfeed/nuget
 </code></pre>
 <hr>
 <h1 id="tools-path">Tools Path</h1>
