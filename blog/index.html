@@ -167,6 +167,41 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/06/cake-v0.28.1-released">Cake v0.28.1 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Monday, June 18, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
+</dl>            <div>
+                <p>Version 0.28.1 of Cake has been released.</p>
+<p>After releasing version 0.28.0 we detected that tasks with multiple criterias were
+written multiple times to the log and that certain messages from the NuGet integration
+had too high verbosity for certain types of messages.</p>
+<p>In other words nothing serious, but if the task log suddenly irritates you as much as
+it did me, it might be worth bumping your
+<a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">pinned version</a> to 0.28.1.</p>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+</ul>
+<!--excerpt-->
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/issues?milestone=52&amp;state=closed">2 issues</a> closed.</p>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2176"><strong>#2176</strong></a> Skipped tasks show up multiple times in report</li>
+</ul>
+<p><strong>Improvement</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2190"><strong>#2190</strong></a> Suppress NuGet dependency warnings related to Cake.Core</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2018/06/cake-issues">Cake.Issues - A suite of addins for issue handling in Cake</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -181,168 +216,7 @@ Do you want to create nice reports for StyleCop issues in your code?
 Do you want to have ESLint issues reported as comments to pull requests?
 The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> allows you to do this and much more.
 Read issues from different analyzer or linters, create reports or add them as comments to pull requests.</p>
-<!--excerpt-->
-<h3 id="the-cake.issues-addins">The Cake.Issues addins</h3>
-<p>While some linting tools provide nice reporting capabilities, others don't.
-Some build systems provide tasks to report issues into pull requests.
-But if you're using another build system your out of luck.
-Maybe you found a new nice linting tool which does exactly what you need, but probably it won't integrate well
-with your existing other linting tools.</p>
-<p>The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> tries to solve this,
-by providing a common and extensible infrastructure for issue management in Cake build scripts.</p>
-<p>Unlike other Cake addins, the Cake Issues addin consists of over 10 different addins, working together
-and providing over 50 aliases which can be used in Cake build scripts to work with issues.
-The addins are built in a modular architecture and are providing different extension points which allows
-to easily enhance them for supporting additional analyzers, linters, report formats and code review systems.</p>
-<h3 id="preparation-work">Preparation work</h3>
-<p>In the following examples we assume a Visual Studio solution, containing some Roslyn Analyzers, which we want
-to build and additionally run JetBrains InspectCode on it.</p>
-<p>For creating an XML log from MsBuild we need the <code>XmlFileLogger</code> class from the <a href="http://www.msbuildextensionpack.com/">MSBuild Extension Pack</a>
-and the JetBrains InspectCode tool:</p>
-<pre><code class="language-csharp">#tool &quot;nuget:?package=MSBuild.Extension.Pack&quot;
-#tool &quot;nuget:?package=JetBrains.ReSharper.CommandLineTools&quot;
-</code></pre>
-<p>Now we can use the aliases provided by Cake out of the box to build the solution and run JetBrains InspectCode resulting in two log files containing the issues:</p>
-<pre><code class="language-csharp">var repoRootFolder = MakeAbsolute(Directory(&quot;./&quot;));
-var msBuildLog = repoRootFolder.CombineWithFilePath(&quot;msbuild.log&quot;);
-var inspectCodeLog = repoRootFolder.CombineWithFilePath(&quot;inspectCode.log&quot;);
-
-Task(&quot;Build&quot;)
-    .Does(() =&gt;
-{
-    var settings = new MSBuildSettings()
-    .WithTarget(&quot;Rebuild&quot;)
-    .WithLogger(
-        Context.Tools.Resolve(&quot;MSBuild.ExtensionPack.Loggers.dll&quot;).FullPath,
-        &quot;XmlFileLogger&quot;,
-        string.Format(
-            &quot;logfile=\&quot;{0}\&quot;;verbosity=Detailed;encoding=UTF-8&quot;,
-            msBuildLog)
-    );
-
-    MSBuild(repoRootFolder.Combine(&quot;src&quot;).CombineWithFilePath(&quot;MySolution.sln&quot;), settings);
-});
-
-Task(&quot;Run-InspectCode&quot;)
-    .Does(() =&gt;
-{
-    var settings = new InspectCodeSettings() {
-        OutputFile = inspectCodeLog
-    };
-
-    InspectCode(repoRootFolder.Combine(&quot;src&quot;).CombineWithFilePath(&quot;MySolution.sln&quot;), settings);
-});
-</code></pre>
-<h3 id="reading-issues">Reading issues</h3>
-<p>The <code>Cake.Issues</code> addin now allows you to parse the generated log files and retrieve the issues in a common structure.
-The addin provides aliases for reading issues and can be used to aggregate issues from different sources.
-This can for example be useful to break builds based on the reported issues.</p>
-<p>To read the issues we need to import the following core addin:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Issues&quot;
-</code></pre>
-<p>We also need to import at least one issue provider.
-Issue provider are separate addins which can provide issues from a specific linter or tool.
-The <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/issue-providers/">issue provider</a> documentation gives an
-overview of available issue providers including samples how to integrate them in a Cake build script.</p>
-<p>In the following example the issue providers for reading warnings from MsBuild log files
-and from JetBrains InspectCode are imported:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Issues.MsBuild&quot;
-#addin &quot;Cake.Issues.InspectCode&quot;
-</code></pre>
-<p>Finally we  define a task where we call the core addin with the desired issue providers.
-The following example reads the reported issues with comments formatted as Markdown:</p>
-<pre><code class="language-csharp">IEnumerable&lt;IIssue&gt; issues = null;
-
-Task(&quot;Read-Issues&quot;)
-    .IsDependentOn(&quot;Build&quot;)
-    .IsDependentOn(&quot;Run-InspectCode&quot;)
-    .Does(() =&gt;
-{
-    var settings =
-        new ReadIssuesSettings(repoRootFolder)
-        {
-            Format = IssueCommentFormat.Markdown
-        };
-
-    issues = ReadIssues(
-        new List&lt;IIssueProvider&gt;
-        {
-            MsBuildIssuesFromFilePath(
-                msBuildLog,
-                MsBuildXmlFileLoggerFormat),
-            InspectCodeIssuesFromFilePath(
-                inspectCodeLog)
-        },
-        settings);
-
-    Information(&quot;{0} issues are found.&quot;, issues.Count());
-});
-</code></pre>
-<h3 id="creating-reports">Creating reports</h3>
-<p>With the issues from the different tools in a common format it is now possible to create reports out of it.
-The <code>Cake.Issues.Reporting</code> addin provides the required aliases for this.
-The concrete reporting format is defined in separate <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/">report format addins</a>.</p>
-<p>Currently there's one report format available which allows you to render reports using <a href="https://github.com/Antaris/RazorEngine">RazorEngine</a>.</p>
-<p>The following example will create a HTML report of the issues:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Reporting&quot;
-#addin &quot;Cake.Reporting.Generic&quot;
-
-Task(&quot;Create-Report&quot;)
-    .IsDependentOn(&quot;Read-Issues&quot;)
-    .Does(() =&gt;
-{
-    // Create HTML report using Data Table template.
-    CreateIssueReport(
-        issues,
-        GenericIssueReportFormatFromEmbeddedTemplate(GenericIssueReportTemplate.HtmlDataTable),
-        repoRootFolder,
-        repoRootFolder.CombineWithFilePath(&quot;report.html&quot;));
-});
-</code></pre>
-<p>The result will look like this:</p>
-<p><img src="/assets/img/cake-issues/htmldatatable.png" class="img-fluid" alt="Report" /></p>
-<p>The addin provides some <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/templates/">out of the box templates</a>,
-but you can also pass your own <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/examples#use-custom-template">custom template</a>
-in which you can do whatever RazorEngine is capable of doing.</p>
-<h3 id="reporting-issues-to-pull-requests">Reporting issues to pull requests</h3>
-<p>The last core part of the Cake Issues suite is for reporting issues as comments to pull requests.
-The <code>Cake.Issues.PullRequests</code> addin provides the required aliases and the implementation for the concrete pull request system
-is again implemented in separate <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/pull-request-systems/">pull request system addins</a>.</p>
-<p>The following example will report issues as comments to Team Foundation Server:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Issues.PullRequests&quot;
-#addin &quot;Cake.Issues.PullRequests.Tfs&quot;
-
-Task(&quot;ReportIssuesToPullRequest&quot;).Does(() =&gt;
-{
-    ReportIssuesToPullRequest(
-        new List&lt;IIssueProvider&gt;
-        {
-            MsBuildIssuesFromFilePath(
-                msBuildLog,
-                MsBuildXmlFileLoggerFormat),
-            InspectCodeIssuesFromFilePath(
-                inspectCodeLog)
-        },
-        TfsPullRequests(
-            new Uri(&quot;http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository&quot;),
-            &quot;refs/heads/feature/myfeature&quot;,
-            TfsAuthenticationNtlm()),
-        repoRootFolder);
-});
-</code></pre>
-<p>The result will look like this in Team Foundation Server:</p>
-<p><img src="/assets/img/cake-issues/pullrequests.png" class="img-fluid" alt="Pull request integration" /></p>
-<h3 id="conclusion">Conclusion</h3>
-<p>The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> provide a common way to integrate different linters and tools into a Cake build script.
-It's fully <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/extending/">extensible</a> for additional issue providers, report formats or pull request systems.</p>
-<p>Documentation is available on its own <a href="https://cake-contrib.github.io/Cake.Issues.Website/">website</a>.</p>
-<p>While the addins already cover a wide range of scenarios we're always looking for people interested in implementing additional issue providers,
-report formats &amp; templates or pull request systems.</p>
-<hr />
-<p>My name is Pascal Berger.
-I'm working as a Software Architect at <a href="http://www.bbtsoftware.ch">BBT Software AG</a>.
-You can find me on <a href="https://twitter.com/hereispascal">Twitter</a> or <a href="https://github.com/pascalberger">GitHub</a>.</p>
-
+                <a href="/blog/2018/06/cake-issues">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2018/05/cake-v0.28.0-released">Cake v0.28.0 released</a></h2>
@@ -395,26 +269,6 @@ You can find me on <a href="https://twitter.com/hereispascal">Twitter</a> or <a 
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2018/04/cake-v0.27.1-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/04/cake-v0.27.0-released">Cake v0.27.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Thursday, April 19, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
-</dl>            <div>
-                <p>Version 0.27.0 of Cake has been released.</p>
-<p>The third release of 2018 is here! It contains mostly improvements and bug fixes. While this release doesn't contain any known breaking changes, we would like to take this opportunity to inform you that the next release will. The next release will introduce typed contexts to Cake, this will really improve the flexibility of Cake scripts, read more about this <a href="https://github.com/cake-build/cake/issues/2008">here</a>.</p>
-<p>The most notable bug fixes in 0.27.0 were made around addin installation. We updated the internals of Cake to use v4.6.0 of the NuGet Client libraries, which comes with performance improvements. Cake now also supports "offline" builds when using in-process NuGet, this was kind of a regression since it used to work with the old <code>nuget.exe</code> based installer. Another enhancement is that we've added a runtime assembly resolver for assembly versions that can't be found. This tackles most of the issues experienced around addin loading and dependency resolution. Last but not least, in-process NuGet now also supports specifying multiple NuGet sources through config. This can be achieved by separating sources using semicolon (<code>;</code>) when setting the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#nuget-download-url.">NuGet Download Url</a> configuration value. Below is an example using <code>cake.config</code>:</p>
-
-<p>Last but not least, a friendly reminder that if you haven't pinned to a specific version of Cake, you should do it now :-) More information about pinning to a specific version can be found <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2018/04/cake-v0.27.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

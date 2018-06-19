@@ -167,6 +167,30 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/12/cake-v0.24.0-released">Cake v0.24.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Friday, December 29, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>            <div>
+                <p>Version 0.24.0 of Cake has been released.</p>
+<p>As a little holiday gift from the Cake team and contributors, the last version for 2017 just shipped!
+This release shouldn't have any breaking changes, but it does have several improvements, bug fixes, and a couple new features.</p>
+<p>A notable new feature is module bootstrapping built into the Cake script runner, which lets you download and install modules from NuGet with a <code>#module</code> preprocessor directive in your build script, similar to what you've previously already been able to do with <code>#tool</code> and <code>#addin</code>.</p>
+
+<p>The only caveat is that as modules can change and extend the internals of Cake, this bootstrapping needs to be done before Cake executes. This is solved by bootrapping being it's own step by invoking Cake with a <code>--bootstrap</code> argument before you execute the script normally.</p>
+
+<p>Notable amongst the improvements is that we've upgraded to Roslyn 2.6.1 which gives you <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-2">C# 7.2</a> support in your Cake scripts.</p>
+<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2017/12/cake-v0.24.0-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2017/11/intellisense-vscode">Intellisense in Visual Studio Code</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -260,19 +284,6 @@ The difference between the two dependencies above is that Cake will throw an exc
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/09/cake-v0.22.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/08/http-to-https">HTTP to HTTPS</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, August 25, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/News">News</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
-                <p>As some of you may have noticed, the <a href="https://www.cakebuild.net/">Cake Website</a> has changed to use an SSL Certificate.  This is something that has been <a href="https://github.com/cake-build/website/issues/40">on our cards for a while</a>, it is just something that we never got around to.</p>
-                <a href="/blog/2017/08/http-to-https">Read more...</a>
             </div>
         <hr />
     <nav>
