@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#InterfaceTypes">Interface Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#InterfaceTypes">Interface Types</a></p>
 <p><a href="#ClassTypes">Class Types</a></p>
 <p><a href="#Namespaces">Namespaces</a></p>
 <hr class="infobar-hidden">
@@ -1099,7 +1100,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            This namespace contains Tfx aliases.
+            </div>
+
 
 			<h1 id="InterfaceTypes">Interface Types</h1>
 			<div class="box">
@@ -1113,7 +1118,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/ITfxArgumentBuilder">ITfxArgumentBuilder</a></td>
-									<td></td>
+									<td>
+            Interface for TfxArgumentBuilder
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -1131,31 +1138,50 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx/TfxAliases">TfxAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://github.com/Microsoft/tfs-cli#install">TFS Cross Platform Command Line Interface</a>.</p>
+            <p>
+            In order to use the commands for this addin, the tfx-cli utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Tfx</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxArgumentBuilder">TfxArgumentBuilder</a></td>
-									<td></td>
+									<td>
+            The top level argument builder for the Tfx CLI Tool
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxAuthType">TfxAuthType</a></td>
-									<td></td>
+									<td>
+            The authentication type to use for Tfx commands
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxOutputType">TfxOutputType</a></td>
-									<td></td>
+									<td>
+            The output type for the Tfx commands
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxServerSettings">TfxServerSettings</a></td>
-									<td></td>
+									<td>
+            Contains the common server settings used by some commands in Tfx.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings">TfxSettings</a></td>
-									<td></td>
+									<td>
+            Contains the common settings used by all commands in Tfx.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxTool_1">TfxTool<wbr>&lt;TSettings&gt;<wbr></a></td>
-									<td></td>
+									<td>
+            Base class for all Tfx related tools.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -1173,7 +1199,9 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Tfx.Extension">Cake<wbr>.Tfx<wbr>.Extension</a></td>
-									<td></td>
+									<td>
+            This namespace contains members related to Tfx Extension.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

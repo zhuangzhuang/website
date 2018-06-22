@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -175,7 +176,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains settings used by <code class="cs"><a href="/api/Cake.Ember.Serve/EmberServeRunner">EmberServeRunner</a></code>.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -234,7 +239,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/A202D372">EmberServeSettings<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Ember.Serve/EmberServeSettings">EmberServeSettings</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -258,7 +265,9 @@ class Type type-node
 								<td><a href="/api/Cake.Ember/EmberSettings/44EE7607">Environment</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the name of the environment to generate the output for.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Ember/EmberSettings">EmberSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -266,42 +275,54 @@ class Type type-node
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/9341F7A9">Host</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the host on which to listen to.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/68D6D565">LiveReload</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether to use the Live Reload Server.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/0B2A733D">LiveReloadBaseUrl</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Base Url to use for Live Reload Server.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/208E14D9">LiveReloadHost</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the host to be used for Live Reload Server.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/11C0A255">LiveReloadPort</a></td>
 								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value to use for the port for Live Reload Server.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember/EmberSettings/ABD9F534">OutputPath</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the location where all generated files will be output to.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Ember/EmberSettings">EmberSettings</a></em></small></div>
 								</td>
 							</tr>
@@ -309,56 +330,72 @@ class Type type-node
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/A20F4125">Port</a></td>
 								<td>Nullable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value to use for the port to host website on.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/B3551ED9">Proxy</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the proxy that should be used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/316FFFE0">SecureProxy</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether a secure proxy is being used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/87AC893F">Ssl</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether SSL is being used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/ECAB5350">SslCert</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the SSL Certificate.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/122871C0">SslKey</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the Key for the SSL Certificate.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember.Serve/EmberServeSettings/2E890ED7">TransparentProxy</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating whether a transparent proxy is being used.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Ember/EmberSettings/849555BE">Watcher</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value for the Watcher.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Ember/EmberSettings">EmberSettings</a></em></small></div>
 								</td>
 							</tr>
