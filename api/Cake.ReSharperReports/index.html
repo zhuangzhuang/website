@@ -1111,15 +1111,27 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsAliases">Re<wbr>Sharper<wbr>Reports<wbr>Aliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://github.com/gep13/ReSharperReports">ReSharperReports</a> tool.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and reference from NuGet.org:
+            </p><pre><code class="cs">#tool ReSharperReports</code></pre>
+            In addition, you will need to include the following:
+            <pre><code class="cs">#addin Cake.ReSharperReports</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsRunner">Re<wbr>Sharper<wbr>Reports<wbr>Runner</a></td>
-									<td></td>
+									<td>
+            The ReSharperReports runner.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ReSharperReports/ReSharperReportsSettings">Re<wbr>Sharper<wbr>Reports<wbr>Settings</a></td>
-									<td></td>
+									<td>
+            Contains settings used by <code class="cs"><a href="/api/Cake.ReSharperReports/ReSharperReportsRunner">ReSharperReportsRunner</a></code>.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>

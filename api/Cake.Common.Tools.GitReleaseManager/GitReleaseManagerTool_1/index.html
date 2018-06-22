@@ -196,9 +196,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Export/GitReleaseManagerExporter">Git<wbr>Release<wbr>Manager<wbr>Exporter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerMilestoneCloser">Git<wbr>Release<wbr>Manager<wbr>Milestone<wbr>Closer</a></li>								
 											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreator">Git<wbr>Release<wbr>Manager<wbr>Creator</a></li>								
 											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAssetsAdder">Git<wbr>Release<wbr>Manager<wbr>Assets<wbr>Adder</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerMilestoneCloser">Git<wbr>Release<wbr>Manager<wbr>Milestone<wbr>Closer</a></li>								
 											<li><a href="/api/Cake.Common.Tools.GitReleaseManager.Publish/GitReleaseManagerPublisher">Git<wbr>Release<wbr>Manager<wbr>Publisher</a></li>								
 									</ul>
 								</dd>			
@@ -215,12 +215,12 @@
 class Type type-node
 	Type--&gt;Derived0["GitReleaseManagerExporter"]
 	click Derived0 "/api/Cake.Common.Tools.GitReleaseManager.Export/GitReleaseManagerExporter"
-	Type--&gt;Derived1["GitReleaseManagerCreator"]
-	click Derived1 "/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreator"
-	Type--&gt;Derived2["GitReleaseManagerAssetsAdder"]
-	click Derived2 "/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAssetsAdder"
-	Type--&gt;Derived3["GitReleaseManagerMilestoneCloser"]
-	click Derived3 "/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerMilestoneCloser"
+	Type--&gt;Derived1["GitReleaseManagerMilestoneCloser"]
+	click Derived1 "/api/Cake.Common.Tools.GitReleaseManager.Close/GitReleaseManagerMilestoneCloser"
+	Type--&gt;Derived2["GitReleaseManagerCreator"]
+	click Derived2 "/api/Cake.Common.Tools.GitReleaseManager.Create/GitReleaseManagerCreator"
+	Type--&gt;Derived3["GitReleaseManagerAssetsAdder"]
+	click Derived3 "/api/Cake.Common.Tools.GitReleaseManager.AddAssets/GitReleaseManagerAssetsAdder"
 	Type--&gt;Derived4["GitReleaseManagerPublisher"]
 	click Derived4 "/api/Cake.Common.Tools.GitReleaseManager.Publish/GitReleaseManagerPublisher"
 

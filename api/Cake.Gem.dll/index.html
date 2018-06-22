@@ -336,35 +336,56 @@
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Gem/GemAliases">GemAliases</a></td>
-									<td></td>
+									<td>
+            <p>Contains functionality related to the <a href="https://rubygems.org/pages/download">RubyGems Package Manager</a>.</p>
+            <p>
+            In order to use the commands for this addin, the gem utility will need to be installed and available, or you will need to provide a ToolPath to where it can be located, and also you will need to include the following in your build.cake file to download and
+            reference the addin from NuGet.org:
+            </p><pre><code class="cs">#addin Cake.Gem</code></pre>
+            <p></p>
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemArgumentBuilder_1">GemArgumentBuilder<wbr>&lt;T&gt;<wbr></a></td>
-									<td></td>
+									<td>
+            The top level argument builder for the Gem CLI Tool
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Build/GemBuildRunner">GemBuildRunner</a></td>
-									<td></td>
+									<td>
+            The Gem Build Runner used to create gems.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Build/GemBuildSettings">GemBuildSettings</a></td>
-									<td></td>
+									<td>
+            Contains settings used by <code class="cs"><a href="/api/Cake.Gem.Build/GemBuildRunner">GemBuildRunner</a></code>.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Push/GemPushRunner">GemPushRunner</a></td>
-									<td></td>
+									<td>
+            The Gem Push Runner used to push gems.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem.Push/GemPushSettings">GemPushSettings</a></td>
-									<td></td>
+									<td>
+            Contains settings used by <code class="cs"><a href="/api/Cake.Gem.Push/GemPushRunner">GemPushRunner</a></code>.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemSettings">GemSettings</a></td>
-									<td></td>
+									<td>
+            Contains the common settings used by all commands in Gem.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gem/GemTool_1">GemTool<wbr>&lt;TSettings&gt;<wbr></a></td>
-									<td></td>
+									<td>
+            Base class for all gem related tools.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
