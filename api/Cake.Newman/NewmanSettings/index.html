@@ -259,6 +259,15 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Newman/NewmanSettings/624C8DBA">DataFile</a></td>
+								<td>FilePath</td>
+								<td>
+									<div>
+                An environment file path.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettings/6861DB2B">DisableStrictSSL</a></td>
 								<td>bool</td>
 								<td>
@@ -340,6 +349,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Newman/NewmanSettings/A5D726AC">IterationCount</a></td>
+								<td>int</td>
+								<td>
+									<div>
+                Specify iteration count.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettings/4C1C5DD1">Reporters</a></td>
 								<td>Dictionary<wbr>&lt;,&gt;<wbr></td>
 								<td>
@@ -363,6 +381,15 @@ class Type type-node
 								<td>
 									<div>
                 The time (in milliseconds) to wait for requests to return a response.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Newman/NewmanSettings/54F8D2A0">ScriptTimeout</a></td>
+								<td>int</td>
+								<td>
+									<div>
+                The time (in milliseconds) to wait for script to execute.
             </div>
 								</td>
 							</tr>
@@ -508,17 +535,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Newman<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Newman<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -530,11 +546,33 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Newman<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/92A2F632">RunOnlyFolder<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
 								<td>
 									<div>
             Run requests within only the specified folder in a collection.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Newman addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/736F240C">SetIterationCount<wbr>(int)<wbr></a></td>
+								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
+								<td>
+									<div>
+            Sets the iteration count.
             </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Newman addin</em></small></div>
@@ -557,6 +595,17 @@ class Type type-node
 								<td>
 									<div>
             Sets the time to wait for request responses.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Newman addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/121CB12E">SetScriptTimeout<wbr>(int)<wbr></a></td>
+								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
+								<td>
+									<div>
+            Sets the time to wait for script to complete.
             </div>
 										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Newman addin</em></small></div>
@@ -669,6 +718,17 @@ class Type type-node
             Adds the JUnit/XML reporter to this run, exporting results to the specified file.
             </div>
 										<div><small><em>From <a href="/api/Cake.Newman.Reporters/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Newman addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Newman/NewmanSettingsExtensions/390423F4">WithData<wbr>(FilePath)<wbr></a></td>
+								<td><a href="/api/Cake.Newman/NewmanSettings">NewmanSettings</a></td>
+								<td>
+									<div>
+            Specify the file path for an data file to use for the current execution.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Newman/NewmanSettingsExtensions">Newman<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Newman addin</em></small></div>
 								</td>
 							</tr>

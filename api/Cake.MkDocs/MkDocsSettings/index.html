@@ -206,10 +206,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildSettings">MkDocsBuildSettings</a></li>								
-											<li><a href="/api/Cake.MkDocs.New/MkDocsNewSettings">MkDocsNewSettings</a></li>								
 											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeSettings">MkDocsServeSettings</a></li>								
 											<li><a href="/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings">Mk<wbr>Docs<wbr>Gh<wbr>Deploy<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildSettings">MkDocsBuildSettings</a></li>								
+											<li><a href="/api/Cake.MkDocs.New/MkDocsNewSettings">MkDocsNewSettings</a></li>								
 											<li><a href="/api/Cake.MkDocs.Version/MkDocsVersionSettings">Mk<wbr>Docs<wbr>Version<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -222,14 +222,14 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["MkDocsSettings"]
 class Type type-node
-	Type--&gt;Derived0["MkDocsBuildSettings"]
-	click Derived0 "/api/Cake.MkDocs.Build/MkDocsBuildSettings"
-	Type--&gt;Derived1["MkDocsNewSettings"]
-	click Derived1 "/api/Cake.MkDocs.New/MkDocsNewSettings"
-	Type--&gt;Derived2["MkDocsServeSettings"]
-	click Derived2 "/api/Cake.MkDocs.Serve/MkDocsServeSettings"
-	Type--&gt;Derived3["MkDocsGhDeploySettings"]
-	click Derived3 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings"
+	Type--&gt;Derived0["MkDocsServeSettings"]
+	click Derived0 "/api/Cake.MkDocs.Serve/MkDocsServeSettings"
+	Type--&gt;Derived1["MkDocsGhDeploySettings"]
+	click Derived1 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings"
+	Type--&gt;Derived2["MkDocsBuildSettings"]
+	click Derived2 "/api/Cake.MkDocs.Build/MkDocsBuildSettings"
+	Type--&gt;Derived3["MkDocsNewSettings"]
+	click Derived3 "/api/Cake.MkDocs.New/MkDocsNewSettings"
 	Type--&gt;Derived4["MkDocsVersionSettings"]
 	click Derived4 "/api/Cake.MkDocs.Version/MkDocsVersionSettings"
 
@@ -340,17 +340,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -359,6 +348,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
