@@ -152,10 +152,17 @@
 		<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/4D25826B">Generic<wbr>Issue<wbr>Report<wbr>File<wbr>Link<wbr>Settings<wbr>For<wbr>Git<wbr>Hub<wbr>(ICakeContext, <wbr>Uri, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/025FE825">Generic<wbr>Issue<wbr>Report<wbr>File<wbr>Link<wbr>Settings<wbr>For<wbr>Git<wbr>Hub<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/A37061F5">Generic<wbr>Issue<wbr>Report<wbr>File<wbr>Link<wbr>Settings<wbr>For<wbr>Team<wbr>Foundation<wbr>Server<wbr>(ICakeContext, <wbr>Uri, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/61E51241">Generic<wbr>Issue<wbr>Report<wbr>File<wbr>Link<wbr>Settings<wbr>For<wbr>Team<wbr>Foundation<wbr>Server<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>string)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/EEACD1BA">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>(ICakeContext, <wbr>Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Settings)<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/C08CF6D8">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/CB1C34C4">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Settings&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/5E02D4C0">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>From<wbr>Embedded<wbr>Template<wbr>(ICakeContext, <wbr>Generic<wbr>Issue<wbr>Report<wbr>Template)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/A8331ECD">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>From<wbr>Embedded<wbr>Template<wbr>(ICakeContext, <wbr>Generic<wbr>Issue<wbr>Report<wbr>Template, <wbr>Action<wbr>&lt;<wbr>Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Settings&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/1B3BE1F5">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases/3CFF6B42">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>Action<wbr>&lt;<wbr>Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Settings&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -210,7 +217,8 @@
 	<div>
              <p>Create HTML report:</p>
              <pre><code class="cs"> var settings =
-         GenericIssueReportFormatSettings.FromEmbeddedTemplate(GenericIssueReportTemplate.HtmlDiagnostic);
+         GenericIssueReportFormatSettings
+             .FromEmbeddedTemplate(GenericIssueReportTemplate.HtmlDiagnostic);
 
      CreateIssueReport(
          issues,

@@ -5,8 +5,119 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2018</copyright>
-		<pubDate>Fri, 22 Jun 2018 07:42:39 GMT</pubDate>
-		<lastBuildDate>Fri, 22 Jun 2018 07:42:39 GMT</lastBuildDate>
+		<pubDate>Fri, 06 Jul 2018 15:43:08 GMT</pubDate>
+		<lastBuildDate>Fri, 06 Jul 2018 15:43:08 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.29.0 released</title>
+			<link>https://cakebuild.net/blog/2018/07/cake-v0.29.0-released</link>
+			<description>&lt;p&gt;Version 0.29.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;We're really excited by this release which has some splendid features and improvements!&lt;/p&gt;
+&lt;p&gt;In this blog post we'll highlight the new &lt;code&gt;exclusive&lt;/code&gt; parameter which adds support for executing a single task without dependencies.
+You can find a full list of changes at the end of this post.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>https://cakebuild.net/blog/2018/07/cake-v0.29.0-released</guid>
+			<pubDate>Fri, 06 Jul 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Version 0.29.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;We're really excited by this release which has some splendid features and improvements!&lt;/p&gt;
+&lt;p&gt;In this blog post we'll highlight the new &lt;code&gt;exclusive&lt;/code&gt; parameter which adds support for executing a single task without dependencies.
+You can find a full list of changes at the end of this post.&lt;/p&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/patriksvensson"&gt;patriksvensson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/grdylan"&gt;grdylan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/paulomorgado"&gt;paulomorgado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mholo65"&gt;mholo65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Kevin LaBranche&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/rh072005"&gt;rh072005&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/louisfischer"&gt;louisfischer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pavzaj"&gt;pavzaj&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Michael Samorokov&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/daveaglick"&gt;daveaglick&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NEXOGEN\kemenya&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--excerpt--&gt;
+&lt;h3 id="exclusive"&gt;Exclusive&lt;/h3&gt;
+&lt;p&gt;When you've executed a series of tasks and it fails on the last one, wouldn't it be nice if you could execute a single task, without requiring all of its dependencies to execute again? Well you're in luck, this just got added into 0.29.0! Beyond retrying failed operations - this can really speed things up while developing and debugging a script.&lt;/p&gt;
+&lt;p&gt;Below is a simple script with two tasks where &lt;code&gt;Dependent-Task&lt;/code&gt; depends on &lt;code&gt;Dependency-Task&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;var target = Argument(&amp;quot;target&amp;quot;, &amp;quot;Default&amp;quot;);
+
+Task(&amp;quot;Dependency-Task&amp;quot;)
+    .Does(() =&amp;gt;
+{
+    Information(&amp;quot;Executing dependency.&amp;quot;);
+});
+
+
+Task(&amp;quot;Dependent-Task&amp;quot;)
+    .IsDependentOn(&amp;quot;Dependency-Task&amp;quot;)
+    .Does(() =&amp;gt;
+{
+   Information(&amp;quot;Executing task.&amp;quot;);
+});
+
+RunTarget(target);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Normally when executing &lt;code&gt;Cake.exe --target=&amp;quot;Dependent-Task&amp;quot;&lt;/code&gt; we would see something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;========================================
+Dependency-Task
+========================================
+Executing dependency.
+
+========================================
+Dependent-Task
+========================================
+Executing task.
+
+Task                          Duration
+--------------------------------------------------
+Dependency-Task               00:00:00.0061407
+Dependent-Task                00:00:00.0002070
+--------------------------------------------------
+Total:                        00:00:00.0063477
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But when specifying the &lt;code&gt;exclusive&lt;/code&gt; option &lt;code&gt;Cake.exe --target=&amp;quot;Dependent-Task&amp;quot; --exclusive&lt;/code&gt;, then only the specified task will execute.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;========================================
+Dependent-Task
+========================================
+Executing task.
+
+Task                          Duration
+--------------------------------------------------
+Dependent-Task                00:00:00.0059713
+--------------------------------------------------
+Total:                        00:00:00.0059713
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="issues"&gt;Issues&lt;/h3&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/milestone/49?closed=1"&gt;12 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking change&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2140"&gt;&lt;strong&gt;#2140&lt;/strong&gt;&lt;/a&gt; DotNetCorePublish does not respect SelfContained DotNetCorePublishSettings property.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feature&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2203"&gt;&lt;strong&gt;#2203&lt;/strong&gt;&lt;/a&gt; Add Octopus Deploy Promote release support.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2095"&gt;&lt;strong&gt;#2095&lt;/strong&gt;&lt;/a&gt; Add &amp;quot;--skipnontestassemblies&amp;quot; funcionality to CAKE's NUnit3Settings as it exists in original nunit3 test runner.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2094"&gt;&lt;strong&gt;#2094&lt;/strong&gt;&lt;/a&gt; Add support for executing a single task without dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvement&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2196"&gt;&lt;strong&gt;#2196&lt;/strong&gt;&lt;/a&gt; NuGet Repository information not settable in NuGet Pack.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2185"&gt;&lt;strong&gt;#2185&lt;/strong&gt;&lt;/a&gt; Try to find vswhere.exe on the system if the tool is not registered.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2154"&gt;&lt;strong&gt;#2154&lt;/strong&gt;&lt;/a&gt; Problem with loading abolute path scripts with #load preprocessor.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2152"&gt;&lt;strong&gt;#2152&lt;/strong&gt;&lt;/a&gt; try resolve vstest.console.exe before guessing it.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1609"&gt;&lt;strong&gt;#1609&lt;/strong&gt;&lt;/a&gt; Add additional VSTS actions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/2195"&gt;&lt;strong&gt;#2195&lt;/strong&gt;&lt;/a&gt; Updated the WiX tool documentation.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2193"&gt;&lt;strong&gt;#2193&lt;/strong&gt;&lt;/a&gt; Add Pascal and Dave to all required places.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2188"&gt;&lt;strong&gt;#2188&lt;/strong&gt;&lt;/a&gt; The CLA link in readme seems invalid or broken.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>Cake v0.28.1 released</title>
 			<link>https://cakebuild.net/blog/2018/06/cake-v0.28.1-released</link>
@@ -1325,23 +1436,6 @@ The shift to using MSBuild and from &lt;code&gt;project.json&lt;/code&gt; to &lt
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/1673"&gt;&lt;strong&gt;#1673&lt;/strong&gt;&lt;/a&gt; The xunit.runners package was deprecated&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1654"&gt;&lt;strong&gt;#1654&lt;/strong&gt;&lt;/a&gt; Broken Documentation link for ReportUnit&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>
-		</item>
-		<item>
-			<title>New Cake Contrib Icon</title>
-			<link>https://cakebuild.net/blog/2017/06/new-cake-contrib-icon</link>
-			<description>&lt;p&gt;Towards the end of 2016, the Cake Team had an internal discussion about the newly created &lt;a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contrib Organisation&lt;/a&gt;.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.&lt;/p&gt;</description>
-			<author>gep13</author>
-			<guid>https://cakebuild.net/blog/2017/06/new-cake-contrib-icon</guid>
-			<pubDate>Fri, 23 Jun 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Towards the end of 2016, the Cake Team had an internal discussion about the newly created &lt;a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization"&gt;Cake Contrib Organisation&lt;/a&gt;.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.&lt;/p&gt;
-&lt;p&gt;We, the Cake Team, are always startled by our amazing Cake Community.  There is now somewhere in the region of 166 addins/modules for Cake.  152 of those have added the &lt;a href="https://www.nuget.org/profiles/cake-contrib"&gt;cake-contrib NuGet user&lt;/a&gt; as a co-owner of that package on NuGet.org, and 72 of these packages have opted to move the repository into the &lt;a href="https://github.com/cake-contrib"&gt;Cake Contrib Organisation&lt;/a&gt; on GitHub.&lt;/p&gt;
-&lt;p&gt;To date, when things like Community contributed NuGet packages have been created, one of two things happened.  Either that package wasn't given an icon, and would appear with the default icon in the NuGet Gallery, or the package would use the main Cake icon.  While there is nothing necessarily &amp;quot;wrong&amp;quot; with using the main Cake icon for a package, it does give that package an elevated status in the eyes of some.  i.e. someone might think &amp;quot;ooo, that package has the Cake icon, it must be an official package from the Cake Team&amp;quot;.  While this is sometimes true, in the sense that one of the Core Cake Contributors might own a particular package, this is certainly not normally the case, and the Core Cake Team can't offer support for all these packages.&lt;/p&gt;
-&lt;p&gt;To help with this false association, and also as a means to highlight the amazing work that happens by our Cake Community, we are introducing the official Cake Contrib Icon:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png" class="img-fluid" alt="Offical Cake Contrib Icon" title="Official Cake Contrib Icon" /&gt;&lt;/p&gt;
-&lt;p&gt;Going forward, we will be encouraging all Cake Community Maintainers to use this icon whenever they are creating addins, modules, extensions, etc for Cake.  If you want to grab the icon, you can find various formats and sizes in the Cake Contrib &lt;a href="https://github.com/cake-contrib/graphics"&gt;graphics repository&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Please do let us know what you think about the new icon, or if you have any questions.&lt;/p&gt;
-&lt;p&gt;We are very grateful to &lt;a href="https://twitter.com/spoike"&gt;Mikael Brassman&lt;/a&gt; for creating the icon for us.&lt;/p&gt;
 </content:encoded>
 		</item>
 	</channel>
