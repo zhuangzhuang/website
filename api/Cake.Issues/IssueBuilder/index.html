@@ -152,6 +152,7 @@
 				<li><a href="/api/Cake.Issues/BaseIssueComponent_1">BaseIssueComponent<wbr>&lt;T&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Issues/BaseRuleDescription">BaseRuleDescription</a></li>
 				<li><a href="/api/Cake.Issues/BaseRuleUrlResolver_1">BaseRuleUrlResolver<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Issues/ByteArrayExtensions">ByteArrayExtensions</a></li>
 				<li><a href="/api/Cake.Issues/Issue">Issue</a></li>
 				<li class="selected"><a href="/api/Cake.Issues/IssueBuilder">IssueBuilder</a></li>
 				<li><a href="/api/Cake.Issues/IssueCommentFormat">IssueCommentFormat</a></li>
@@ -160,6 +161,8 @@
 				<li><a href="/api/Cake.Issues/IssuesAliasConstants">IssuesAliasConstants</a></li>
 				<li><a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></li>
 				<li><a href="/api/Cake.Issues/IssuesReader">IssuesReader</a></li>
+				<li><a href="/api/Cake.Issues/LogFileFormat_2">LogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Issues/MultiFormatIssueProviderSettings_2">Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Settings<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Issues/ReadIssuesSettings">ReadIssuesSettings</a></li>
 				<li><a href="/api/Cake.Issues/RepositorySettings">RepositorySettings</a></li>
 				<li><a href="/api/Cake.Issues/StringPathExtensions">StringPathExtensions</a></li>
@@ -167,6 +170,7 @@
 				<li><a href="/api/Cake.Issues/IBaseIssueComponent_1">IBaseIssueComponent<wbr>&lt;T&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Issues/IIssue">IIssue</a></li>
 				<li><a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a></li>
+				<li><a href="/api/Cake.Issues/ILogFileFormat_2">ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr></a></li>
 
 
                     </ul>
@@ -283,7 +287,25 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssueBuilder/BB914356">InProject<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/IssueBuilder/D97863FB">InProject<wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/IssueBuilder">IssueBuilder</a></td>
+								<td>
+									<div>
+            Sets the project to which the file affected by the issue belongs.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssueBuilder/BF31C690">InProjectFile<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/IssueBuilder">IssueBuilder</a></td>
+								<td>
+									<div>
+            Sets the path of the project to which the file affected by the issue belongs.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssueBuilder/828579A6">InProjectOfName<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Issues/IssueBuilder">IssueBuilder</a></td>
 								<td>
 									<div>
@@ -387,17 +409,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IssueBuilder&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;IssueBuilder&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -406,6 +417,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IssueBuilder&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -153,11 +153,16 @@
 				<li><a href="/api/Cake.Fastlane/CertificateType">CertificateType</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneAliases">FastlaneAliases</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneConfiguration">Fastlane<wbr>Configuration</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneDeliverConfiguration">Fastlane<wbr>Deliver<wbr>Configuration</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneMatchConfiguration">Fastlane<wbr>Match<wbr>Configuration</a></li>
 				<li class="selected"><a href="/api/Cake.Fastlane/FastlaneMatchProvider">Fastlane<wbr>Match<wbr>Provider</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlanePemConfiguration">Fastlane<wbr>Pem<wbr>Configuration</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlanePilotConfiguration">Fastlane<wbr>Pilot<wbr>Configuration</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneProvider">FastlaneProvider</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneTool_1">FastlaneTool<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/api/Cake.Fastlane/MatchConfiguration">MatchConfiguration</a></li>
 			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Fastlane/IFastlaneDeliverProvider">I<wbr>Fastlane<wbr>Deliver<wbr>Provider</a></li>
 				<li><a href="/api/Cake.Fastlane/IFastlaneProvider">IFastlaneProvider</a></li>
 
 
@@ -235,7 +240,8 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class FastlaneMatchProvider : FastlaneTool&lt;MatchConfiguration&gt;, IFastlaneMatchProvider</code></pre>
+	<pre><code>public class FastlaneMatchProvider : FastlaneTool&lt;FastlaneMatchConfiguration&gt;, 
+    IFastlaneMatchProvider</code></pre>
 
 
 
@@ -298,7 +304,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Fastlane/FastlaneMatchProvider/5F51E90D">Match<wbr>(Action<wbr>&lt;<wbr>Match<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Fastlane/FastlaneMatchProvider/9C592A36">Match<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Match<wbr>Configuration&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -307,12 +313,12 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Fastlane/FastlaneMatchProvider/91CB35FF">Match<wbr>(MatchConfiguration)<wbr></a></td>
+								<td><a href="/api/Cake.Fastlane/FastlaneMatchProvider/ABF7B40D">Match<wbr>(<wbr>Fastlane<wbr>Match<wbr>Configuration)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-             Executes fastlane match with the specified configuration.
-             </div>
+            Executes fastlane match with the specified configuration.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -355,17 +361,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Match<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Match<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -374,6 +369,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Match<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -404,7 +410,7 @@ class Type type-node
 		
 	<h1 id="SeeAlso">See Also</h1>
 	<ul class="list-unstyled">
-			<li><code><a href="/">IFastlaneMatchProvider</a></code></li>
+			<li>Cake.Fastlane.IFastlaneMatchProvider</li>
 	</ul>
 
 	

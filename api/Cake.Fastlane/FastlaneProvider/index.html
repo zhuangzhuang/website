@@ -152,11 +152,16 @@
 				<li><a href="/api/Cake.Fastlane/CertificateType">CertificateType</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneAliases">FastlaneAliases</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneConfiguration">Fastlane<wbr>Configuration</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneDeliverConfiguration">Fastlane<wbr>Deliver<wbr>Configuration</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneMatchConfiguration">Fastlane<wbr>Match<wbr>Configuration</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneMatchProvider">Fastlane<wbr>Match<wbr>Provider</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlanePemConfiguration">Fastlane<wbr>Pem<wbr>Configuration</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlanePilotConfiguration">Fastlane<wbr>Pilot<wbr>Configuration</a></li>
 				<li class="selected"><a href="/api/Cake.Fastlane/FastlaneProvider">FastlaneProvider</a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneTool_1">FastlaneTool<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/api/Cake.Fastlane/MatchConfiguration">MatchConfiguration</a></li>
 			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Fastlane/IFastlaneDeliverProvider">I<wbr>Fastlane<wbr>Deliver<wbr>Provider</a></li>
 				<li><a href="/api/Cake.Fastlane/IFastlaneProvider">IFastlaneProvider</a></li>
 
 
@@ -275,12 +280,105 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Fastlane/FastlaneProvider/71EC2BDB">Match<wbr>(MatchConfiguration)<wbr></a></td>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/F2F6DF1B">Deliver<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Deliver<wbr>Configuration&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Executes fastlane match with the specified configuration.
+            Executes fastlane deliver with the specified configuration action.
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/0FE90CB8">Deliver<wbr>(<wbr>Fastlane<wbr>Deliver<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             Delivers the specified deliver configuration.
+             <example>
+                 <code class="cs">
+                     var configuration = new FastlaneDeliverConfiguration
+                     {
+                         CertificateType = CertificateType.Development,
+                         AppIdentifier = "com.fastlane.cake",
+                         ForceForNewDevices = true
+                     };
+            
+                     Fastlane.Deliver(configuration);
+                 </code>
+             </example>
+             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/D977ED1B">Match<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Match<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Executes fastlane match with the specified configuration action.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/F73FE389">Match<wbr>(<wbr>Fastlane<wbr>Match<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             Executes fastlane match with the specified configuration.
+             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/0B7291A7">Pem<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Pem<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Executes fastlane pem with the specified configuration action.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/022DD575">Pem<wbr>(<wbr>Fastlane<wbr>Pem<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             Executes fastlane pem with the specified configuration.
+             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/2FA3EB3D">Pilot<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Pilot<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Executes fastlane pilot with the specified configuration action.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/EBCBF351">Pilot<wbr>(<wbr>Fastlane<wbr>Pilot<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             Executes fastlane pilot with the specified configuration.
+             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/AEA2B58B">Supply<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Supply<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Executes fastlane supply with the specified configuration action.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/D5E9FEA0">Supply<wbr>(<wbr>Fastlane<wbr>Supply<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             Executes fastlane supply with the specified configuration.
+             </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -323,17 +421,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -342,6 +429,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
