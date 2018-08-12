@@ -202,7 +202,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static IEnumerable&lt;IFile&gt; GetMatchingFiles(this ICakeContext context, IEnumerable&lt;FilePath&gt; files)</code></pre>
+	<pre><code>public static FilePathCollection GetMatchingFiles(this ICakeContext context, IEnumerable&lt;FilePath&gt; files)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
@@ -213,11 +213,11 @@
  // /output/file.pdb
  // /output/another.dll
 
- IEnumerable&lt;FilePath&gt; matchingFiles = GetMatchingFiles(new FilePath("/output/file.dll"));
+ FilePathCollection matchingFiles = GetMatchingFiles(new FilePath("/output/file.dll"));
 
- matchingFiles[0]; // /output/file.xml
- matchingFiles[1]; // /output/file.pdb
- matchingFiles[2]; // /output/file.dll</code></pre>
+ matchingFiles.First(); // /output/file.xml
+ matchingFiles.Skip(1).First(); // /output/file.pdb
+ matchingFiles.Last(); // /output/file.dll</code></pre>
              </div>
 
 
@@ -280,7 +280,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+					<td>FilePathCollection</td>
 					<td>a list of matching files</td>
 				</tr>
 			</tbody></table>
