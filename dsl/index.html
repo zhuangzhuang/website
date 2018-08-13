@@ -377,8 +377,8 @@
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-            Several extension methods when operating on a Directory.
-            </td>
+    Contains extension methods for working with directories.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotcover">DotCover</a></td>
@@ -406,8 +406,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
@@ -490,8 +490,8 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
@@ -551,7 +551,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -590,8 +590,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -890,13 +890,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Elastic Computing instances
+             Contains Cake aliases for configuring Amazon Simple Storage Service
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running commands managing Azure resource groups.
+            Contains Cake aliases for running Azure login commands.
             </td>
                 </tr>
                 <tr>
@@ -938,12 +938,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
-            </p>
+            Class that lets you override default API settings.
             </td>
                 </tr>
                 <tr>
@@ -1086,14 +1081,13 @@
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-            Several extension methods when operating on a Directory.
-            </td>
+    Contains extension methods for working with directories.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to creating new <a href="http://dotnet.github.io/docfx">DocFx</a>
-            projects.
+            Contains functionality related to creating PDF files using <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1156,8 +1150,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fastlane">Fastlane</a></td>
@@ -1238,14 +1232,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of GitterProvider Chat API post
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1379,7 +1373,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -1412,14 +1406,14 @@
                 <tr>
                     <td><a href="/dsl/npm">Npm</a></td>
                     <td>
-            Npm Set aliases
+            Npm Install aliases
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
-    </td>
+            Extended NuGet Aliases
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1546,12 +1540,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://sendgrid.com/">SendGrid</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.SendGrid</code></pre>
-            </p>
+            Contains functionality related to SendGrid API.
             </td>
                 </tr>
                 <tr>
@@ -1606,15 +1595,7 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
+            Contains functionality to backup and restore SQL Server database
             </td>
                 </tr>
                 <tr>
