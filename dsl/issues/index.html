@@ -319,13 +319,14 @@
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Issues.InspectCode" class="alert-link">https://github.com/cake-contrib/Cake.Issues.InspectCode</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Issues.PullRequests.Tfs" class="alert-link">https://github.com/cake-contrib/Cake.Issues.PullRequests.Tfs</a>.
                             </div>
 
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality for reading issues from JetBrains Inspect Code log files.
+            Contains functionality related to writing code analysis issues to Team Foundation Server or
+            Visual Studio Team Services pull requests.
             </div>
 
 
@@ -544,7 +545,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Issues.EsLint/EsLintIssuesAliases/2D80909E">Es<wbr>Lint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Issues.EsLint/EsLintIssuesAliases/33369CB5">Es<wbr>Lint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>Base<wbr>Es<wbr>Lint<wbr>Log<wbr>File<wbr>Format)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for issues reported by ESLint using log file content.
@@ -556,7 +557,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Issues.EsLint/EsLintIssuesAliases/35A69274">Es<wbr>Lint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Issues.EsLint/EsLintIssuesAliases/4694DDBD">Es<wbr>Lint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>Base<wbr>Es<wbr>Lint<wbr>Log<wbr>File<wbr>Format)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for issues reported by ESLint using a log file from disk.
@@ -690,7 +691,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/69C38B59">Markdownlint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/7126D041">Markdownlint<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for issues reported by Markdownlint using log file content.
@@ -702,7 +703,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/0A9AA5CB">Markdownlint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesAliases/F066B252">Markdownlint<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for issues reported by Markdownlint using a log file from disk.
@@ -775,7 +776,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Issues.MsBuild/MsBuildIssuesAliases/7B460097">Ms<wbr>Build<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Issues.MsBuild/MsBuildIssuesAliases/7E085383">Ms<wbr>Build<wbr>Issues<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for issues reported as MsBuild warnings using log content.
@@ -787,7 +788,7 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Issues.MsBuild/MsBuildIssuesAliases/4612F849">Ms<wbr>Build<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat)<wbr></a>                            </td>
+<a href="/api/Cake.Issues.MsBuild/MsBuildIssuesAliases/6B6692E6">Ms<wbr>Build<wbr>Issues<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format)<wbr></a>                            </td>
                             <td>
                                 
             Gets an instance of a provider for issues reported as MsBuild warnings using a log file from disk.
@@ -804,37 +805,6 @@
                                 
             Gets the name of the MsBuild issue provider.
             This name can be used to identify issues based on the <code class="cs"><a href="/api/Cake.Issues/IIssue/D5A24C72">ProviderType</a></code> property.
-            
-
-                                            <br>
-                                            <small><i>Addin from <a href="/api/Cake.Issues.MsBuild.dll">Cake<wbr>.Issues<wbr>.MsBuild<wbr>.dll</a></i></small>
-                                                                    </td>
-                        </tr>
-                        <tr>
-                            <td>
-<a href="/api/Cake.Issues.MsBuild/MsBuildIssuesAliases/051D7B6E">Ms<wbr>Build<wbr>Xml<wbr>File<wbr>Logger<wbr>Format</a>                            </td>
-                            <td>
-                                
-            <p>
-            Gets an instance for the MsBuild log format as written by the <code class="cs">XmlFileLogger</code> class
-            from MSBuild Extension Pack.
-            </p>
-            <p>
-            You can add the logger to the MSBuildSettings like this:
-            </p><pre><code class="cs">var settings = new MSBuildSettings()
-    .WithLogger(
-        Context.Tools.Resolve("MSBuild.ExtensionPack.Loggers.dll").FullPath,
-        "XmlFileLogger",
-        string.Format(
-            "logfile=\"{0}\";verbosity=Detailed;encoding=UTF-8",
-            @"c:\build\msbuild.log")
-    );</code></pre>
-            <p></p>
-            <p>
-            In order to use the above logger, include the following in your build.cake file to download and
-            install from NuGet.org:
-            </p><pre><code class="cs">#tool "nuget:?package=MSBuild.Extension.Pack"</code></pre>
-            <p></p>
             
 
                                             <br>

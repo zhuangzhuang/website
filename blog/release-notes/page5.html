@@ -176,7 +176,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.19.2 of Cake has been released.</p>
 <p>This is a minor hotfix release for 0.19.1, which fixes an issue discovered with MSBuild logger paths not being correctly quoted, causing issues logging to paths containing spaces.</p>
 <p>Contributions were included from:</p>
@@ -193,7 +194,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.19.1 of Cake has been released.</p>
 <p>This is a minor hotfix release for 0.19.0, which fixes an issue discovered in the new VSWhere aliases.</p>
 <p>So what is VSWhere? One issue with Visual Studio 2017 is that it can be installed anywhere, and you can have multiple versions side by side. As a result the registry keys, and standard paths previously used to identify where Visual Studio was installed, no longer apply.</p>
@@ -216,7 +218,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.19.0 of Cake has been released.</p>
 <p>This release of Cake is a smaller release in preparation for upgrading Cake itself to utilize latest RTM .NET SDK and Visual Studio 2017. The goal for v0.20.0 is also to unify around one scripting engine - Roslyn version 2.0 and depreciating the Mono scripting engine, this will likely result in raising the minimum supported version of .NET and Mono. We will before next release document and communicate exact versions.</p>
 <p>We strongly recommend you pin the current version of Cake your using to avoid any unplanned interruption in your builds as the result of any potential future breaking changes. The <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">Pinning Cake Version</a> under the tutorials section of our website describes how to achieve this with the default bootstrappers.</p>
@@ -236,7 +239,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.18.0 of Cake has been released.</p>
 <p>This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there's a couple of breaking changes.</p>
 <p>The minor breaking changes involve the old obsoleted DNU alias have been removed and WiXHeat had an incorrect signature which have been corrected.</p>
@@ -263,7 +267,8 @@ We do recommend you pin your builds to the version of Cake you using, that way y
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.17.0 of Cake has been released.</p>
 <p>This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there was a breaking change.</p>
 <p>This breaking change centred around the <code><a href="/api/Cake.Common.Tools.VSTest/VSTestSettings">VSTestSettings</a></code> class, where the decision was wait to allow custom loggers to be passed into the <code><a href="/api/Cake.Common.Tools.VSTest/VSTestRunner">VSTestRunner</a></code>.  As a result, the previous enumeration named <code>VSTestLogger</code> has been removed, and replaced with a fully customizable string.  If you are using this enumeration in your scripts then you will see errors being generated if you update to the latest version of Cake.  You should be able to make use of the new extension methods called <code>WithVisualStudioLogger</code> and <code>WithAppVeyorLogger</code> on the <code><a href="/api/Cake.Common.Tools.VSTest/VSTestSettings">VSTestSettings</a></code> to replace the enumeration values.</p>

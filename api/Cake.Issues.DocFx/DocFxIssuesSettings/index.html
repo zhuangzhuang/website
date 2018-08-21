@@ -84,7 +84,6 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
-<p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -197,7 +196,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
+											<li><a href="/api/Cake.Issues/IssueProviderSettings">Issue<wbr>Provider<wbr>Settings</a></li>								
 									</ul>
 								</dd>				
 							
@@ -207,7 +207,9 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["IssueProviderSettings"]--&gt;Type
+	click Base0 "/api/Cake.Issues/IssueProviderSettings"
+	Base1["Object"]--&gt;Base0
 	Type["DocFxIssuesSettings"]
 class Type type-node
 
@@ -218,7 +220,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class DocFxIssuesSettings</code></pre>
+	<pre><code>public class DocFxIssuesSettings : IssueProviderSettings</code></pre>
 
 
 
@@ -236,13 +238,13 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/F9946701">DocFxIssuesSettings<wbr>(FilePath, <wbr>DirectoryPath)<wbr></a></td>
+								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/A14D861F">DocFxIssuesSettings<wbr>(byte[], <wbr>DirectoryPath)<wbr></a></td>
 									<td>
             Initializes a new instance of the <code class="cs"><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings">DocFxIssuesSettings</a></code> class.
             </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/AB68ACFE">DocFxIssuesSettings<wbr>(string, <wbr>DirectoryPath)<wbr></a></td>
+								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/F9946701">DocFxIssuesSettings<wbr>(FilePath, <wbr>DirectoryPath)<wbr></a></td>
 									<td>
             Initializes a new instance of the <code class="cs"><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings">DocFxIssuesSettings</a></code> class.
             </td>
@@ -276,12 +278,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/AA3E8F67">LogFileContent</a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.Issues/IssueProviderSettings/7F8C606C">LogFileContent</a></td>
+								<td>byte[]</td>
 								<td>
 									<div>
             Gets the content of the log file.
             </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Issues/IssueProviderSettings">Issue<wbr>Provider<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -289,42 +292,6 @@ class Type type-node
 			</div>
 		
 
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/8EB95CC8">FromContent<wbr>(string, <wbr>DirectoryPath)<wbr></a></td>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings">DocFxIssuesSettings</a></td>
-								<td>
-									<div>
-            Returns a new instance of the <code class="cs"><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings">DocFxIssuesSettings</a></code> class from the content
-            of a DocFx log file.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings/EBBA89A5">FromFilePath<wbr>(FilePath, <wbr>DirectoryPath)<wbr></a></td>
-								<td><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings">DocFxIssuesSettings</a></td>
-								<td>
-									<div>
-            Returns a new instance of the <code class="cs"><a href="/api/Cake.Issues.DocFx/DocFxIssuesSettings">DocFxIssuesSettings</a></code> class from a log file on disk.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 
 			<h1 id="ExtensionMethods">Extension Methods</h1>
@@ -361,17 +328,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Doc<wbr>Fx<wbr>Issues<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Doc<wbr>Fx<wbr>Issues<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -380,6 +336,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Doc<wbr>Fx<wbr>Issues<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

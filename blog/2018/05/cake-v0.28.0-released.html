@@ -179,6 +179,7 @@
         <dd><a href="/blog/author/devlead">devlead</a></dd>
 </dl>
 
+
 <html><head></head><body><p>Version 0.28.0 of Cake has been released.</p>
 <p>We're really excited by this release which has some splendid features and improvements!</p>
 <p>In this blog post we'll highlight:</p>
@@ -249,7 +250,7 @@
 <h3 id="setup-context">Setup context</h3>
 <p>This release changed the script Setup context from a <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> to <code><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></code>. In addition to everything that <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> offers, there is now some additional information provided:</p>
 <pre><code class="language-csharp"><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a> TargetTask { get; }
-IReadOnlyCollection&lt;ICakeTaskInfo&gt; TasksToExecute { get; }
+IReadOnlyCollection&lt;<a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a>&gt; TasksToExecute { get; }
 </code></pre>
 <p><code>TargetTask</code> is the task that initiated the script and <code>TasksToExecute</code> are the tasks that will be executed based on the dependency graph of the target task. Access to which tasks actually will be executed has been a greatly sought after feature, combined with the typed context makes it fairly straightforward to enable some advanced scenarios.</p>
 <pre><code class="language-csharp">Setup&lt;MyBuildData&gt;(setupContext =&gt;
@@ -303,7 +304,7 @@ Skipping task: Sign skipped because SignAssemblies is set to false.
 <li><code>CakeTaskBuilder&lt;ActionTask&gt;</code> has been refactored to <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>, this means scripts that use and store <code>CakeTaskBuilder&lt;ActionTask&gt;</code> like i.e. <a href="https://github.com/cake-contrib/Cake.Recipe">Cake.Recipe</a> will need to replace all instances of <code>CakeTaskBuilder&lt;ActionTask&gt;</code> to  <code><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></code>.</li>
 <li><code>ActionTask</code> is removed in favor of just using <code><a href="/api/Cake.Core/CakeTask">CakeTask</a></code>, this to reduce complexity and simplify future features.</li>
 <li><code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> interface now has a <code><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></code> <code>Data</code> property that needs to be implemented.</li>
-<li>Setup as gone from <code>Action&lt;ICakeContext&gt;</code> to <code>Action&lt;ISetupContext&gt;</code>.</li>
+<li>Setup as gone from <code>Action&lt;<a href="/api/Cake.Core/ICakeContext">ICakeContext</a>&gt;</code> to <code>Action&lt;<a href="/api/Cake.Core/ISetupContext">ISetupContext</a>&gt;</code>.</li>
 </ul>
 <p>Full details of everything that was included in this release can be seen below.</p>
 <p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/48?closed=1">6 issues</a> closed.</p>
