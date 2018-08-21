@@ -150,13 +150,19 @@
 		<li><a href="/api/Cake.Issues.Testing">Cake<wbr>.Issues<wbr>.Testing</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Issues.Testing/BaseConfigurableIssueProviderFixture_2">Base<wbr>Configurable<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1">Base<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Issues.Testing/BaseMultiFormatIssueProviderFixture_3">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;TIssueProvider, <wbr>TSettings, <wbr>TLogFileFormat&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Issues.Testing/ExceptionAssertExtensions">Exception<wbr>Assert<wbr>Extensions</a></li>
+				<li><a href="/api/Cake.Issues.Testing/FakeConfigurableIssueProvider">Fake<wbr>Configurable<wbr>Issue<wbr>Provider</a></li>
 				<li><a href="/api/Cake.Issues.Testing/FakeIssueComponent">FakeIssueComponent</a></li>
 				<li class="selected"><a href="/api/Cake.Issues.Testing/FakeIssueProvider">FakeIssueProvider</a></li>
-				<li><a href="/api/Cake.Issues.Testing/FakeIssueProviderSettings">Fake<wbr>Issue<wbr>Provider<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Issues.Testing/FakeLogFileFormat">FakeLogFileFormat</a></li>
+				<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a></li>
+				<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProviderSettings">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Issues.Testing/FakeRuleDescription">FakeRuleDescription</a></li>
 				<li><a href="/api/Cake.Issues.Testing/FakeRuleUrlResolver">FakeRuleUrlResolver</a></li>
+				<li><a href="/api/Cake.Issues.Testing/ResourceTempFile">ResourceTempFile</a></li>
 
 
                     </ul>
@@ -184,7 +190,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Implementation of a <code class="cs"><a href="/api/Cake.Issues/IssueProvider">IssueProvider</a></code> for use in test cases.
+            Implementation of a <code class="cs"><a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></code> for use in test cases.
             </div>
 
 		<div class="panel panel-default">
@@ -211,7 +217,7 @@
 									<ul class="list-unstyled">										
 											<li>Object</li>								
 											<li><a href="/api/Cake.Issues/BaseIssueComponent_1">BaseIssueComponent<wbr>&lt;T&gt;<wbr></a></li>								
-											<li><a href="/api/Cake.Issues/IssueProvider">IssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></li>								
 									</ul>
 								</dd>				
 							
@@ -221,8 +227,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["IssueProvider"]--&gt;Type
-	click Base0 "/api/Cake.Issues/IssueProvider"
+	Base0["BaseIssueProvider"]--&gt;Type
+	click Base0 "/api/Cake.Issues/BaseIssueProvider"
 	Base1["BaseIssueComponent&lt;T&gt;"]--&gt;Base0
 	click Base1 "/api/Cake.Issues/BaseIssueComponent_1"
 	Base2["Object"]--&gt;Base1
@@ -240,7 +246,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class FakeIssueProvider : IssueProvider, IIssueProvider, 
+	<pre><code>public class FakeIssueProvider : BaseIssueProvider, IIssueProvider, 
     IBaseIssueComponent&lt;RepositorySettings&gt;</code></pre>
 
 
@@ -376,7 +382,7 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Initializes the issue provider.
+            Initializes the component.
             </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Issues/BaseIssueComponent_1">BaseIssueComponent<wbr>&lt;T&gt;<wbr></a></em></small></div>
 								</td>
@@ -387,18 +393,18 @@ class Type type-node
 								<td>
 									<div>
             Gets all issues.
-            Compared to <code class="cs"><a href="/api/Cake.Issues/IssueProvider/15A3CC87">ReadIssues(IssueCommentFormat)</a></code> it is safe to access Settings from this method.
+            Compared to <code class="cs"><a href="/api/Cake.Issues/BaseIssueProvider/DC6CE6AF">ReadIssues(IssueCommentFormat)</a></code> it is safe to access Settings from this method.
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssueProvider/15A3CC87">ReadIssues<wbr>(IssueCommentFormat)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/BaseIssueProvider/DC6CE6AF">ReadIssues<wbr>(IssueCommentFormat)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
             Gets all issues.
             </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Issues/IssueProvider">IssueProvider</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -441,17 +447,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fake<wbr>Issue<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fake<wbr>Issue<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -460,6 +455,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fake<wbr>Issue<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

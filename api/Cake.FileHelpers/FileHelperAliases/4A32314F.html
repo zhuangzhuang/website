@@ -166,6 +166,7 @@
 				<li><a href="/api/Cake.FileHelpers/FileHelperAliases/BCD575D0">Find<wbr>Regex<wbr>Match<wbr>Groups<wbr>In<wbr>File<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>RegexOptions)<wbr></a></li>
 				<li><a href="/api/Cake.FileHelpers/FileHelperAliases/2F001CA6">FindRegexMatchInFile<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>RegexOptions)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.FileHelpers/FileHelperAliases/4A32314F">FindTextInFiles<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Cake.FileHelpers/FileHelperAliases/0E6B4138">FindTextInFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.FileHelpers/FileHelperAliases/1A08369E">ReplaceRegexInFiles<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.FileHelpers/FileHelperAliases/66358A66">ReplaceRegexInFiles<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>RegexOptions)<wbr></a></li>
 				<li><a href="/api/Cake.FileHelpers/FileHelperAliases/6BAF2885">ReplaceTextInFiles<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
@@ -217,7 +218,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static FilePath[] FindTextInFiles(this ICakeContext context, string globberPattern, string findPattern)</code></pre>
+	<pre><code>public static FilePath[] FindTextInFiles(this ICakeContext context, string globberPattern, string substring)</code></pre>
 
 
 
@@ -259,12 +260,12 @@
 					<tr>
 						<td>globberPattern</td>
 						<td>string</td>
-						<td>The globber pattern to match files to replace text in.</td>
+						<td>The globber pattern to match files to find text in.</td>
 					</tr>
 					<tr>
-						<td>findPattern</td>
+						<td>substring</td>
 						<td>string</td>
-						<td>The regular expression to find.</td>
+						<td>The substring to find.</td>
 					</tr>
 			</tbody></table>
 		</div>

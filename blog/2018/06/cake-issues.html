@@ -179,7 +179,8 @@
         <dd><a href="/blog/author/Pascal-Berger">Pascal Berger</a></dd>
 </dl>
 
-<p>Do you want to break your build on JetBrains InspectCode issues?
+
+<html><head></head><body><p>Do you want to break your build on JetBrains InspectCode issues?
 Do you want to create nice reports for StyleCop issues in your code?
 Do you want to have ESLint issues reported as comments to pull requests?
 The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> allows you to do this and much more.
@@ -202,38 +203,38 @@ to easily enhance them for supporting additional analyzers, linters, report form
 to build and additionally run JetBrains InspectCode on it.</p>
 <p>For creating an XML log from MsBuild we need the <code>XmlFileLogger</code> class from the <a href="http://www.msbuildextensionpack.com/">MSBuild Extension Pack</a>
 and the JetBrains InspectCode tool:</p>
-<pre><code class="language-csharp">#tool &quot;nuget:?package=MSBuild.Extension.Pack&quot;
-#tool &quot;nuget:?package=JetBrains.ReSharper.CommandLineTools&quot;
+<pre><code class="language-csharp">#tool "nuget:?package=MSBuild.Extension.Pack"
+#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"
 </code></pre>
 <p>Now we can use the aliases provided by Cake out of the box to build the solution and run JetBrains InspectCode resulting in two log files containing the issues:</p>
-<pre><code class="language-csharp">var repoRootFolder = MakeAbsolute(Directory(&quot;./&quot;));
-var msBuildLog = repoRootFolder.CombineWithFilePath(&quot;msbuild.log&quot;);
-var inspectCodeLog = repoRootFolder.CombineWithFilePath(&quot;inspectCode.log&quot;);
+<pre><code class="language-csharp">var repoRootFolder = MakeAbsolute(Directory("./"));
+var msBuildLog = repoRootFolder.CombineWithFilePath("msbuild.log");
+var inspectCodeLog = repoRootFolder.CombineWithFilePath("inspectCode.log");
 
-Task(&quot;Build&quot;)
+Task("Build")
     .Does(() =&gt;
 {
     var settings = new MSBuildSettings()
-    .WithTarget(&quot;Rebuild&quot;)
+    .WithTarget("Rebuild")
     .WithLogger(
-        Context.Tools.Resolve(&quot;MSBuild.ExtensionPack.Loggers.dll&quot;).FullPath,
-        &quot;XmlFileLogger&quot;,
+        Context.Tools.Resolve("MSBuild.ExtensionPack.Loggers.dll").FullPath,
+        "XmlFileLogger",
         string.Format(
-            &quot;logfile=\&quot;{0}\&quot;;verbosity=Detailed;encoding=UTF-8&quot;,
+            "logfile=\"{0}\";verbosity=Detailed;encoding=UTF-8",
             msBuildLog)
     );
 
-    MSBuild(repoRootFolder.Combine(&quot;src&quot;).CombineWithFilePath(&quot;MySolution.sln&quot;), settings);
+    MSBuild(repoRootFolder.Combine("src").CombineWithFilePath("MySolution.sln"), settings);
 });
 
-Task(&quot;Run-InspectCode&quot;)
+Task("Run-InspectCode")
     .Does(() =&gt;
 {
     var settings = new InspectCodeSettings() {
         OutputFile = inspectCodeLog
     };
 
-    InspectCode(repoRootFolder.Combine(&quot;src&quot;).CombineWithFilePath(&quot;MySolution.sln&quot;), settings);
+    InspectCode(repoRootFolder.Combine("src").CombineWithFilePath("MySolution.sln"), settings);
 });
 </code></pre>
 <h3 id="reading-issues">Reading issues</h3>
@@ -241,7 +242,7 @@ Task(&quot;Run-InspectCode&quot;)
 The addin provides aliases for reading issues and can be used to aggregate issues from different sources.
 This can for example be useful to break builds based on the reported issues.</p>
 <p>To read the issues we need to import the following core addin:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Issues&quot;
+<pre><code class="language-csharp">#addin "Cake.Issues"
 </code></pre>
 <p>We also need to import at least one issue provider.
 Issue provider are separate addins which can provide issues from a specific linter or tool.
@@ -249,16 +250,16 @@ The <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/issue-provi
 overview of available issue providers including samples how to integrate them in a Cake build script.</p>
 <p>In the following example the issue providers for reading warnings from MsBuild log files
 and from JetBrains InspectCode are imported:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Issues.MsBuild&quot;
-#addin &quot;Cake.Issues.InspectCode&quot;
+<pre><code class="language-csharp">#addin "Cake.Issues.MsBuild"
+#addin "Cake.Issues.InspectCode"
 </code></pre>
 <p>Finally we  define a task where we call the core addin with the desired issue providers.
 The following example reads the reported issues with comments formatted as Markdown:</p>
-<pre><code class="language-csharp">IEnumerable&lt;IIssue&gt; issues = null;
+<pre><code class="language-csharp">IEnumerable&lt;<a href="/api/Cake.Issues/IIssue">IIssue</a>&gt; issues = null;
 
-Task(&quot;Read-Issues&quot;)
-    .IsDependentOn(&quot;Build&quot;)
-    .IsDependentOn(&quot;Run-InspectCode&quot;)
+Task("Read-Issues")
+    .IsDependentOn("Build")
+    .IsDependentOn("Run-InspectCode")
     .Does(() =&gt;
 {
     var settings =
@@ -268,7 +269,7 @@ Task(&quot;Read-Issues&quot;)
         };
 
     issues = ReadIssues(
-        new List&lt;IIssueProvider&gt;
+        new List&lt;<a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a>&gt;
         {
             MsBuildIssuesFromFilePath(
                 msBuildLog,
@@ -278,7 +279,7 @@ Task(&quot;Read-Issues&quot;)
         },
         settings);
 
-    Information(&quot;{0} issues are found.&quot;, issues.Count());
+    Information("{0} issues are found.", issues.Count());
 });
 </code></pre>
 <h3 id="creating-reports">Creating reports</h3>
@@ -287,11 +288,11 @@ The <code>Cake.Issues.Reporting</code> addin provides the required aliases for t
 The concrete reporting format is defined in separate <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/">report format addins</a>.</p>
 <p>Currently there's one report format available which allows you to render reports using <a href="https://github.com/Antaris/RazorEngine">RazorEngine</a>.</p>
 <p>The following example will create a HTML report of the issues:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Reporting&quot;
-#addin &quot;Cake.Reporting.Generic&quot;
+<pre><code class="language-csharp">#addin "Cake.Reporting"
+#addin "Cake.Reporting.Generic"
 
-Task(&quot;Create-Report&quot;)
-    .IsDependentOn(&quot;Read-Issues&quot;)
+Task("Create-Report")
+    .IsDependentOn("Read-Issues")
     .Does(() =&gt;
 {
     // Create HTML report using Data Table template.
@@ -299,11 +300,11 @@ Task(&quot;Create-Report&quot;)
         issues,
         GenericIssueReportFormatFromEmbeddedTemplate(GenericIssueReportTemplate.HtmlDataTable),
         repoRootFolder,
-        repoRootFolder.CombineWithFilePath(&quot;report.html&quot;));
+        repoRootFolder.CombineWithFilePath("report.html"));
 });
 </code></pre>
 <p>The result will look like this:</p>
-<p><img src="/assets/img/cake-issues/htmldatatable.png" class="img-fluid" alt="Report" /></p>
+<p><img src="/assets/img/cake-issues/htmldatatable.png" class="img-fluid" alt="Report"></p>
 <p>The addin provides some <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/templates/">out of the box templates</a>,
 but you can also pass your own <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/examples#use-custom-template">custom template</a>
 in which you can do whatever RazorEngine is capable of doing.</p>
@@ -312,13 +313,13 @@ in which you can do whatever RazorEngine is capable of doing.</p>
 The <code>Cake.Issues.PullRequests</code> addin provides the required aliases and the implementation for the concrete pull request system
 is again implemented in separate <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/pull-request-systems/">pull request system addins</a>.</p>
 <p>The following example will report issues as comments to Team Foundation Server:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Issues.PullRequests&quot;
-#addin &quot;Cake.Issues.PullRequests.Tfs&quot;
+<pre><code class="language-csharp">#addin "Cake.Issues.PullRequests"
+#addin "Cake.Issues.PullRequests.Tfs"
 
-Task(&quot;ReportIssuesToPullRequest&quot;).Does(() =&gt;
+Task("ReportIssuesToPullRequest").Does(() =&gt;
 {
     ReportIssuesToPullRequest(
-        new List&lt;IIssueProvider&gt;
+        new List&lt;<a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a>&gt;
         {
             MsBuildIssuesFromFilePath(
                 msBuildLog,
@@ -327,25 +328,25 @@ Task(&quot;ReportIssuesToPullRequest&quot;).Does(() =&gt;
                 inspectCodeLog)
         },
         TfsPullRequests(
-            new Uri(&quot;http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository&quot;),
-            &quot;refs/heads/feature/myfeature&quot;,
+            new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+            "refs/heads/feature/myfeature",
             TfsAuthenticationNtlm()),
         repoRootFolder);
 });
 </code></pre>
 <p>The result will look like this in Team Foundation Server:</p>
-<p><img src="/assets/img/cake-issues/pullrequests.png" class="img-fluid" alt="Pull request integration" /></p>
+<p><img src="/assets/img/cake-issues/pullrequests.png" class="img-fluid" alt="Pull request integration"></p>
 <h3 id="conclusion">Conclusion</h3>
 <p>The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> provide a common way to integrate different linters and tools into a Cake build script.
 It's fully <a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/extending/">extensible</a> for additional issue providers, report formats or pull request systems.</p>
 <p>Documentation is available on its own <a href="https://cake-contrib.github.io/Cake.Issues.Website/">website</a>.</p>
 <p>While the addins already cover a wide range of scenarios we're always looking for people interested in implementing additional issue providers,
 report formats &amp; templates or pull request systems.</p>
-<hr />
+<hr>
 <p>My name is Pascal Berger.
 I'm working as a Software Architect at <a href="http://www.bbtsoftware.ch">BBT Software AG</a>.
 You can find me on <a href="https://twitter.com/hereispascal">Twitter</a> or <a href="https://github.com/pascalberger">GitHub</a>.</p>
-
+</body></html>
 
 <hr />
 

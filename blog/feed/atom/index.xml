@@ -4,7 +4,7 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2018</rights>
-	<updated>2018-08-13T19:12:33Z</updated>
+	<updated>2018-08-21T21:06:32Z</updated>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -167,7 +167,7 @@ it did me, it might be worth bumping your
 		<id>https://cakebuild.net/blog/2018/06/cake-issues</id>
 		<title>Cake.Issues - A suite of addins for issue handling in Cake</title>
 		<updated>2018-06-10T00:00:00Z</updated>
-		<content>&lt;p&gt;Do you want to break your build on JetBrains InspectCode issues?
+		<content>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Do you want to break your build on JetBrains InspectCode issues?
 Do you want to create nice reports for StyleCop issues in your code?
 Do you want to have ESLint issues reported as comments to pull requests?
 The &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/"&gt;Cake.Issues addins&lt;/a&gt; allows you to do this and much more.
@@ -190,38 +190,38 @@ to easily enhance them for supporting additional analyzers, linters, report form
 to build and additionally run JetBrains InspectCode on it.&lt;/p&gt;
 &lt;p&gt;For creating an XML log from MsBuild we need the &lt;code&gt;XmlFileLogger&lt;/code&gt; class from the &lt;a href="http://www.msbuildextensionpack.com/"&gt;MSBuild Extension Pack&lt;/a&gt;
 and the JetBrains InspectCode tool:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool &amp;quot;nuget:?package=MSBuild.Extension.Pack&amp;quot;
-#tool &amp;quot;nuget:?package=JetBrains.ReSharper.CommandLineTools&amp;quot;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;#tool "nuget:?package=MSBuild.Extension.Pack"
+#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can use the aliases provided by Cake out of the box to build the solution and run JetBrains InspectCode resulting in two log files containing the issues:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;var repoRootFolder = MakeAbsolute(Directory(&amp;quot;./&amp;quot;));
-var msBuildLog = repoRootFolder.CombineWithFilePath(&amp;quot;msbuild.log&amp;quot;);
-var inspectCodeLog = repoRootFolder.CombineWithFilePath(&amp;quot;inspectCode.log&amp;quot;);
+&lt;pre&gt;&lt;code class="language-csharp"&gt;var repoRootFolder = MakeAbsolute(Directory("./"));
+var msBuildLog = repoRootFolder.CombineWithFilePath("msbuild.log");
+var inspectCodeLog = repoRootFolder.CombineWithFilePath("inspectCode.log");
 
-Task(&amp;quot;Build&amp;quot;)
+Task("Build")
     .Does(() =&amp;gt;
 {
     var settings = new MSBuildSettings()
-    .WithTarget(&amp;quot;Rebuild&amp;quot;)
+    .WithTarget("Rebuild")
     .WithLogger(
-        Context.Tools.Resolve(&amp;quot;MSBuild.ExtensionPack.Loggers.dll&amp;quot;).FullPath,
-        &amp;quot;XmlFileLogger&amp;quot;,
+        Context.Tools.Resolve("MSBuild.ExtensionPack.Loggers.dll").FullPath,
+        "XmlFileLogger",
         string.Format(
-            &amp;quot;logfile=\&amp;quot;{0}\&amp;quot;;verbosity=Detailed;encoding=UTF-8&amp;quot;,
+            "logfile=\"{0}\";verbosity=Detailed;encoding=UTF-8",
             msBuildLog)
     );
 
-    MSBuild(repoRootFolder.Combine(&amp;quot;src&amp;quot;).CombineWithFilePath(&amp;quot;MySolution.sln&amp;quot;), settings);
+    MSBuild(repoRootFolder.Combine("src").CombineWithFilePath("MySolution.sln"), settings);
 });
 
-Task(&amp;quot;Run-InspectCode&amp;quot;)
+Task("Run-InspectCode")
     .Does(() =&amp;gt;
 {
     var settings = new InspectCodeSettings() {
         OutputFile = inspectCodeLog
     };
 
-    InspectCode(repoRootFolder.Combine(&amp;quot;src&amp;quot;).CombineWithFilePath(&amp;quot;MySolution.sln&amp;quot;), settings);
+    InspectCode(repoRootFolder.Combine("src").CombineWithFilePath("MySolution.sln"), settings);
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id="reading-issues"&gt;Reading issues&lt;/h3&gt;
@@ -229,7 +229,7 @@ Task(&amp;quot;Run-InspectCode&amp;quot;)
 The addin provides aliases for reading issues and can be used to aggregate issues from different sources.
 This can for example be useful to break builds based on the reported issues.&lt;/p&gt;
 &lt;p&gt;To read the issues we need to import the following core addin:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin &amp;quot;Cake.Issues&amp;quot;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin "Cake.Issues"
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We also need to import at least one issue provider.
 Issue provider are separate addins which can provide issues from a specific linter or tool.
@@ -237,16 +237,16 @@ The &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/issue-pr
 overview of available issue providers including samples how to integrate them in a Cake build script.&lt;/p&gt;
 &lt;p&gt;In the following example the issue providers for reading warnings from MsBuild log files
 and from JetBrains InspectCode are imported:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin &amp;quot;Cake.Issues.MsBuild&amp;quot;
-#addin &amp;quot;Cake.Issues.InspectCode&amp;quot;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin "Cake.Issues.MsBuild"
+#addin "Cake.Issues.InspectCode"
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Finally we  define a task where we call the core addin with the desired issue providers.
 The following example reads the reported issues with comments formatted as Markdown:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;IEnumerable&amp;lt;IIssue&amp;gt; issues = null;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;IEnumerable&amp;lt;&lt;a href="/api/Cake.Issues/IIssue"&gt;IIssue&lt;/a&gt;&amp;gt; issues = null;
 
-Task(&amp;quot;Read-Issues&amp;quot;)
-    .IsDependentOn(&amp;quot;Build&amp;quot;)
-    .IsDependentOn(&amp;quot;Run-InspectCode&amp;quot;)
+Task("Read-Issues")
+    .IsDependentOn("Build")
+    .IsDependentOn("Run-InspectCode")
     .Does(() =&amp;gt;
 {
     var settings =
@@ -256,7 +256,7 @@ Task(&amp;quot;Read-Issues&amp;quot;)
         };
 
     issues = ReadIssues(
-        new List&amp;lt;IIssueProvider&amp;gt;
+        new List&amp;lt;&lt;a href="/api/Cake.Issues/IIssueProvider"&gt;IIssueProvider&lt;/a&gt;&amp;gt;
         {
             MsBuildIssuesFromFilePath(
                 msBuildLog,
@@ -266,7 +266,7 @@ Task(&amp;quot;Read-Issues&amp;quot;)
         },
         settings);
 
-    Information(&amp;quot;{0} issues are found.&amp;quot;, issues.Count());
+    Information("{0} issues are found.", issues.Count());
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id="creating-reports"&gt;Creating reports&lt;/h3&gt;
@@ -275,11 +275,11 @@ The &lt;code&gt;Cake.Issues.Reporting&lt;/code&gt; addin provides the required a
 The concrete reporting format is defined in separate &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/"&gt;report format addins&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Currently there's one report format available which allows you to render reports using &lt;a href="https://github.com/Antaris/RazorEngine"&gt;RazorEngine&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The following example will create a HTML report of the issues:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin &amp;quot;Cake.Reporting&amp;quot;
-#addin &amp;quot;Cake.Reporting.Generic&amp;quot;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin "Cake.Reporting"
+#addin "Cake.Reporting.Generic"
 
-Task(&amp;quot;Create-Report&amp;quot;)
-    .IsDependentOn(&amp;quot;Read-Issues&amp;quot;)
+Task("Create-Report")
+    .IsDependentOn("Read-Issues")
     .Does(() =&amp;gt;
 {
     // Create HTML report using Data Table template.
@@ -287,11 +287,11 @@ Task(&amp;quot;Create-Report&amp;quot;)
         issues,
         GenericIssueReportFormatFromEmbeddedTemplate(GenericIssueReportTemplate.HtmlDataTable),
         repoRootFolder,
-        repoRootFolder.CombineWithFilePath(&amp;quot;report.html&amp;quot;));
+        repoRootFolder.CombineWithFilePath("report.html"));
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The result will look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-issues/htmldatatable.png" class="img-fluid" alt="Report" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/img/cake-issues/htmldatatable.png" class="img-fluid" alt="Report"&gt;&lt;/p&gt;
 &lt;p&gt;The addin provides some &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/templates/"&gt;out of the box templates&lt;/a&gt;,
 but you can also pass your own &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/report-formats/generic/examples#use-custom-template"&gt;custom template&lt;/a&gt;
 in which you can do whatever RazorEngine is capable of doing.&lt;/p&gt;
@@ -300,13 +300,13 @@ in which you can do whatever RazorEngine is capable of doing.&lt;/p&gt;
 The &lt;code&gt;Cake.Issues.PullRequests&lt;/code&gt; addin provides the required aliases and the implementation for the concrete pull request system
 is again implemented in separate &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/pull-request-systems/"&gt;pull request system addins&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The following example will report issues as comments to Team Foundation Server:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin &amp;quot;Cake.Issues.PullRequests&amp;quot;
-#addin &amp;quot;Cake.Issues.PullRequests.Tfs&amp;quot;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;#addin "Cake.Issues.PullRequests"
+#addin "Cake.Issues.PullRequests.Tfs"
 
-Task(&amp;quot;ReportIssuesToPullRequest&amp;quot;).Does(() =&amp;gt;
+Task("ReportIssuesToPullRequest").Does(() =&amp;gt;
 {
     ReportIssuesToPullRequest(
-        new List&amp;lt;IIssueProvider&amp;gt;
+        new List&amp;lt;&lt;a href="/api/Cake.Issues/IIssueProvider"&gt;IIssueProvider&lt;/a&gt;&amp;gt;
         {
             MsBuildIssuesFromFilePath(
                 msBuildLog,
@@ -315,25 +315,25 @@ Task(&amp;quot;ReportIssuesToPullRequest&amp;quot;).Does(() =&amp;gt;
                 inspectCodeLog)
         },
         TfsPullRequests(
-            new Uri(&amp;quot;http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository&amp;quot;),
-            &amp;quot;refs/heads/feature/myfeature&amp;quot;,
+            new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+            "refs/heads/feature/myfeature",
             TfsAuthenticationNtlm()),
         repoRootFolder);
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The result will look like this in Team Foundation Server:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/img/cake-issues/pullrequests.png" class="img-fluid" alt="Pull request integration" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/img/cake-issues/pullrequests.png" class="img-fluid" alt="Pull request integration"&gt;&lt;/p&gt;
 &lt;h3 id="conclusion"&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;The &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/"&gt;Cake.Issues addins&lt;/a&gt; provide a common way to integrate different linters and tools into a Cake build script.
 It's fully &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/docs/extending/"&gt;extensible&lt;/a&gt; for additional issue providers, report formats or pull request systems.&lt;/p&gt;
 &lt;p&gt;Documentation is available on its own &lt;a href="https://cake-contrib.github.io/Cake.Issues.Website/"&gt;website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;While the addins already cover a wide range of scenarios we're always looking for people interested in implementing additional issue providers,
 report formats &amp;amp; templates or pull request systems.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;My name is Pascal Berger.
 I'm working as a Software Architect at &lt;a href="http://www.bbtsoftware.ch"&gt;BBT Software AG&lt;/a&gt;.
 You can find me on &lt;a href="https://twitter.com/hereispascal"&gt;Twitter&lt;/a&gt; or &lt;a href="https://github.com/pascalberger"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-</content>
+&lt;/body&gt;&lt;/html&gt;</content>
 		<summary>&lt;p&gt;Do you want to break your build on JetBrains InspectCode issues?
 Do you want to create nice reports for StyleCop issues in your code?
 Do you want to have ESLint issues reported as comments to pull requests?
@@ -418,7 +418,7 @@ Read issues from different analyzer or linters, create reports or add them as co
 &lt;h3 id="setup-context"&gt;Setup context&lt;/h3&gt;
 &lt;p&gt;This release changed the script Setup context from a &lt;code&gt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&lt;/code&gt; to &lt;code&gt;&lt;a href="/api/Cake.Core/ISetupContext"&gt;ISetupContext&lt;/a&gt;&lt;/code&gt;. In addition to everything that &lt;code&gt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&lt;/code&gt; offers, there is now some additional information provided:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;&lt;a href="/api/Cake.Core/ICakeTaskInfo"&gt;ICakeTaskInfo&lt;/a&gt; TargetTask { get; }
-IReadOnlyCollection&amp;lt;ICakeTaskInfo&amp;gt; TasksToExecute { get; }
+IReadOnlyCollection&amp;lt;&lt;a href="/api/Cake.Core/ICakeTaskInfo"&gt;ICakeTaskInfo&lt;/a&gt;&amp;gt; TasksToExecute { get; }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;TargetTask&lt;/code&gt; is the task that initiated the script and &lt;code&gt;TasksToExecute&lt;/code&gt; are the tasks that will be executed based on the dependency graph of the target task. Access to which tasks actually will be executed has been a greatly sought after feature, combined with the typed context makes it fairly straightforward to enable some advanced scenarios.&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;Setup&amp;lt;MyBuildData&amp;gt;(setupContext =&amp;gt;
@@ -472,7 +472,7 @@ Skipping task: Sign skipped because SignAssemblies is set to false.
 &lt;li&gt;&lt;code&gt;CakeTaskBuilder&amp;lt;ActionTask&amp;gt;&lt;/code&gt; has been refactored to &lt;code&gt;&lt;a href="/api/Cake.Core/CakeTaskBuilder"&gt;CakeTaskBuilder&lt;/a&gt;&lt;/code&gt;, this means scripts that use and store &lt;code&gt;CakeTaskBuilder&amp;lt;ActionTask&amp;gt;&lt;/code&gt; like i.e. &lt;a href="https://github.com/cake-contrib/Cake.Recipe"&gt;Cake.Recipe&lt;/a&gt; will need to replace all instances of &lt;code&gt;CakeTaskBuilder&amp;lt;ActionTask&amp;gt;&lt;/code&gt; to  &lt;code&gt;&lt;a href="/api/Cake.Core/CakeTaskBuilder"&gt;CakeTaskBuilder&lt;/a&gt;&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ActionTask&lt;/code&gt; is removed in favor of just using &lt;code&gt;&lt;a href="/api/Cake.Core/CakeTask"&gt;CakeTask&lt;/a&gt;&lt;/code&gt;, this to reduce complexity and simplify future features.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&lt;/code&gt; interface now has a &lt;code&gt;&lt;a href="/api/Cake.Core/ICakeDataResolver"&gt;ICakeDataResolver&lt;/a&gt;&lt;/code&gt; &lt;code&gt;Data&lt;/code&gt; property that needs to be implemented.&lt;/li&gt;
-&lt;li&gt;Setup as gone from &lt;code&gt;Action&amp;lt;ICakeContext&amp;gt;&lt;/code&gt; to &lt;code&gt;Action&amp;lt;ISetupContext&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Setup as gone from &lt;code&gt;Action&amp;lt;&lt;a href="/api/Cake.Core/ICakeContext"&gt;ICakeContext&lt;/a&gt;&amp;gt;&lt;/code&gt; to &lt;code&gt;Action&amp;lt;&lt;a href="/api/Cake.Core/ISetupContext"&gt;ISetupContext&lt;/a&gt;&amp;gt;&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
 &lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/milestone/48?closed=1"&gt;6 issues&lt;/a&gt; closed.&lt;/p&gt;

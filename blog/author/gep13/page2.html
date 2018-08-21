@@ -176,7 +176,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.17.0 of Cake has been released.</p>
 <p>This release of Cake sees a number of new features added, as well as some bug fixes, however, most importantly, there was a breaking change.</p>
 <p>This breaking change centred around the <code><a href="/api/Cake.Common.Tools.VSTest/VSTestSettings">VSTestSettings</a></code> class, where the decision was wait to allow custom loggers to be passed into the <code><a href="/api/Cake.Common.Tools.VSTest/VSTestRunner">VSTestRunner</a></code>.  As a result, the previous enumeration named <code>VSTestLogger</code> has been removed, and replaced with a fully customizable string.  If you are using this enumeration in your scripts then you will see errors being generated if you update to the latest version of Cake.  You should be able to make use of the new extension methods called <code>WithVisualStudioLogger</code> and <code>WithAppVeyorLogger</code> on the <code><a href="/api/Cake.Common.Tools.VSTest/VSTestSettings">VSTestSettings</a></code> to replace the enumeration values.</p>
@@ -196,7 +197,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.16.1 of Cake has been released.</p>
 <p>Following the release of Cake v0.16.0 last week, <a href="https://github.com/mholo65">mholo65</a> identified an issue with debugging in Visual Studio Code.  In addition, we also noticed that we were missing some properties in the generated assemblies.</p>
 <p>As a result, v0.16.1 of Cake is now available.</p>
@@ -213,7 +215,8 @@
         <dd><a href="/blog/News">News</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>As some of you may know, we recently opened an issue on GitHub to discuss the problem of <a href="https://github.com/cake-build/cake/issues/1136">Cake addins becoming stale</a>.  This blog post aims to recap the discussion that was had within that issue, as well as the plan going forward.</p>
 <p>The first thing that I want to re-iterate is that the Cake Team are not attempting to throttle or take over the development of Cake addins/modules in anyway.  We love the fact that there is a thriving Community behind Cake, and we want to encourage that.  However, we do have a responsibility to the wider Cake Community and we want to ensure that any addins and modules that are created, can continue to be maintained, should the original developer no longer be in a position to maintain it.</p>
                 <a href="/blog/2016/08/cake-contribution-organization">Read more...</a>
@@ -227,7 +230,8 @@
         <dd><a href="/blog/Infrastructure">Infrastructure</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>This the first in a series of blog posts which will attempt to explain how Cake uses a number of different online services in order to develop, build, and deploy Cake.</p>
 
 <p><a href="https://www.myget.org">MyGet</a> is a hosted package server that allows hosting of the following package types:</p>
@@ -244,7 +248,8 @@
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
             <dt><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+</dl>
+            <div>
                 <p>Version 0.15.2 of Cake has been released.</p>
 <p>Hot on the heels of the 0.15.1 release, we have just finished another bug fix release.  This time, it was to correct two issues that were identified with the WiX aliases within Cake.</p>
 <p>Both of these issues were identified and corrected by community members, and we would like to thank <a href="https://github.com/galpin">galpin</a> and <a href="https://github.com/RLittlesII">RLittlesII</a> for their help.</p>
