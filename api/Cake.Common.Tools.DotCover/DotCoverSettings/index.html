@@ -151,6 +151,7 @@
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverCoverageSettingsExtensions">Dot<wbr>Cover<wbr>Coverage<wbr>Settings<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverCoverageTool_1">DotCoverCoverageTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettings">DotCoverSettings</a></li>
+				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettingsExtensions">Dot<wbr>Cover<wbr>Settings<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1">DotCoverTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverReportType">DotCoverReportType</a></li>
@@ -200,8 +201,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Tools.DotCover.Merge/DotCoverMergeSettings">Dot<wbr>Cover<wbr>Merge<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotCover.Report/DotCoverReportSettings">Dot<wbr>Cover<wbr>Report<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverCoverageSettings">Dot<wbr>Cover<wbr>Coverage<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotCover.Report/DotCoverReportSettings">Dot<wbr>Cover<wbr>Report<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -217,10 +218,10 @@
 class Type type-node
 	Type--&gt;Derived0["DotCoverMergeSettings"]
 	click Derived0 "/api/Cake.Common.Tools.DotCover.Merge/DotCoverMergeSettings"
-	Type--&gt;Derived1["DotCoverReportSettings"]
-	click Derived1 "/api/Cake.Common.Tools.DotCover.Report/DotCoverReportSettings"
-	Type--&gt;Derived2["DotCoverCoverageSettings"]
-	click Derived2 "/api/Cake.Common.Tools.DotCover/DotCoverCoverageSettings"
+	Type--&gt;Derived1["DotCoverCoverageSettings"]
+	click Derived1 "/api/Cake.Common.Tools.DotCover/DotCoverCoverageSettings"
+	Type--&gt;Derived2["DotCoverReportSettings"]
+	click Derived2 "/api/Cake.Common.Tools.DotCover.Report/DotCoverReportSettings"
 
 						</div>
 					</div>
@@ -263,6 +264,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettings/30BAAAEB">ConfigFile</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets or sets a value that enables DotCover configuration file.
+    A configuration file is a reasonable alternative
+    to specifying all parameters in-line or having them in a batch file.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
 								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
 								<td>
@@ -280,6 +292,17 @@ class Type type-node
     Gets or sets a value that enables logging and specifies log file name
     This represents the <code class="cs">/LogFile</code> option.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/ToolSettings/24A3CC93">NoWorkingDirectory</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether or not to opt out of using
+    an explicit working directory for the process.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -394,6 +417,16 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettingsExtensions/5562163A">WithConfigFile<wbr>&lt;<wbr>Dot<wbr>Cover<wbr>Settings&gt;<wbr><wbr>(FilePath)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+    Adds the scope.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotCover/DotCoverSettingsExtensions">Dot<wbr>Cover<wbr>Settings<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

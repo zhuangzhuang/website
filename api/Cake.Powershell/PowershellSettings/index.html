@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -186,7 +187,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            The settings used when running powershell processes.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -242,7 +247,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/1F550299">PowershellSettings<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -266,98 +273,126 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettings/59FC6062">Arguments</a></td>
 								<td>Process<wbr>Argument<wbr>Builder</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the set of command-line arguments to use when starting the application.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/98D66DB5">Authentication<wbr>Mechanism</a></td>
 								<td>Authentication<wbr>Mechanism</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the authentication mechanism to use when conecting
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/A278D490">ComputerName</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets optional computer name to run the process on
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/14C9CCC9">Exception<wbr>On<wbr>Script<wbr>Error</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            If true script execution which have errors will throw exception, If false it will return result. Default: true
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/49DC6205">FormatOutput</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            If the powershell output should be a formatted string
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/1EDD82F8">LogOutput</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Log the powershell output
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/E4561B64">Modules</a></td>
 								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the modules to load into the initial state
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/ECB3F580">OutputToAppConsole</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            If the host should output to the app's console
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/D68B588A">Password</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the credentials to use when connecting
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/9837E321">Port</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the remote port to connect on
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/A160EDCB">Timeout</a></td>
 								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets optional timeout for process execution
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/B913F350">UseDotSourcing</a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value indicating to use dot sourcing when executing scripts.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/74CBC447">Username</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the credentials to use when connecting
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/PowershellSettings/63E16491">WorkingDirectory</a></td>
 								<td>DirectoryPath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the working directory for the process to be started.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -426,7 +461,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/D6A2AB34">OutputToAppConsole<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets a value indicating whether the output of an application is written to its on-screen console.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -435,7 +472,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/631D41B7">SetFormatOutput<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets a value indicating whether the output of an application should be formatted as text
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -444,7 +483,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/02CE3203">SetLogOutput<wbr>(bool)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets a value indicating whether the output of an application is written to the cake console
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -453,7 +494,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/BE4A137B">SetTimeout<wbr>(int)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the optional timeout for powershell command
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -484,7 +527,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/2D56FD34">Use<wbr>Authentication<wbr>Mechanism<wbr>(<wbr>Authentication<wbr>Mechanism)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the authentication mechanism to use when connecting
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -493,7 +538,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/5B8892E2">UseComputerName<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the computer name to connect to
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -502,7 +549,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/75477D8C">UsePassword<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the credentials to use when connecting
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -511,7 +560,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/917C1A21">UsePort<wbr>(int)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the remote port to connect on.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -520,7 +571,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/5470826E">UseUsername<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the credentials to use when connecting
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -529,7 +582,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/58BB48FE">UseWorkingDirectory<wbr>(DirectoryPath)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the working directory for the process to be started.
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -538,7 +593,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/7CF0E31E">WithArguments<wbr>(Action<wbr>&lt;<wbr>Process<wbr>Argument<wbr>Builder&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Sets the arguments for the powershell command
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -547,7 +604,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/84BF3B61">WithDotSourcing<wbr>()<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Executes scripts using dot sourcing
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>
@@ -556,7 +615,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/PowershellSettingsExtensions/48313DD9">WithModule<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Powershell/PowershellSettings">PowershellSettings</a></td>
 								<td>
-									<div></div>
+									<div>
+            Adds the specified module to load into the initial state
+            </div>
 										<div><small><em>From <a href="/api/Cake.Powershell/PowershellSettingsExtensions">Powershell<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Powershell addin</em></small></div>
 								</td>

@@ -165,6 +165,7 @@
 				<li><a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskCriteria">CakeTaskCriteria</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></li>
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
@@ -256,10 +257,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -273,14 +274,14 @@
 	click Interface0 "/api/Cake.Core/ICakeContext"
 	Type["CakeContextAdapter"]
 class Type type-node
-	Type--&gt;Derived0["SetupContext"]
-	click Derived0 "/api/Cake.Core/SetupContext"
-	Type--&gt;Derived1["TaskSetupContext"]
-	click Derived1 "/api/Cake.Core/TaskSetupContext"
-	Type--&gt;Derived2["TeardownContext"]
-	click Derived2 "/api/Cake.Core/TeardownContext"
-	Type--&gt;Derived3["TaskTeardownContext"]
-	click Derived3 "/api/Cake.Core/TaskTeardownContext"
+	Type--&gt;Derived0["TaskTeardownContext"]
+	click Derived0 "/api/Cake.Core/TaskTeardownContext"
+	Type--&gt;Derived1["TeardownContext"]
+	click Derived1 "/api/Cake.Core/TeardownContext"
+	Type--&gt;Derived2["TaskSetupContext"]
+	click Derived2 "/api/Cake.Core/TaskSetupContext"
+	Type--&gt;Derived3["SetupContext"]
+	click Derived3 "/api/Cake.Core/SetupContext"
 
 						</div>
 					</div>
@@ -2457,6 +2458,16 @@ class Type type-node
     Runs ReSharper's InspectCode using the specified config file.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.InspectCode/InspectCodeAliases">InspectCodeAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common/DryRunAliases/AD92E8CE">IsDryRun<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Determines whether or not the current script execution is a dry run.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common/DryRunAliases">DryRunAliases</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

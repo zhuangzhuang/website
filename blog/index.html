@@ -101,6 +101,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/08">August, 2018</a></li>
         <li><a href="/blog/archive/2018/07">July, 2018</a></li>
         <li><a href="/blog/archive/2018/06">June, 2018</a></li>
         <li><a href="/blog/archive/2018/05">May, 2018</a></li>
@@ -168,6 +169,95 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/08/cake-v0.30.0-released">Cake v0.30.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, August 22, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>
+            <div>
+                <p>Version 0.30.0 of Cake has been released.</p>
+<p>With this release we've got several improvements and bug fixes contributed from the community, so firstly big <em><strong>thanks</strong></em> to all for your continued support!
+In this post we would like to highlight a few of those.</p>
+<h3 id="global-tool">Global Tool</h3>
+<p>Cake is now available as a global .NET CLI tool.
+This means you can easily install Cake and have it globally available in your environment using the <code>dotnet tool</code> command.</p>
+<pre><code>dotnet tool install -g Cake.Tool --version 0.30.0
+</code></pre>
+<p>Once installed, you can launch <code>cake</code> from anywhere using the .NET CLI</p>
+<pre><code>dotnet cake build.cake
+</code></pre>
+<p>Which means you can now easily bootstrap the installation of Cake, if you have .NET Core SDK version 2.1.400 or newer installed.
+Existing boostrappers will still work as we created a new NuGet package for the tool, which means we now have the following packages for Cake:</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/Cake">Cake</a> - compiled for .NET 4.6.1 / Mono</li>
+<li><a href="https://www.nuget.org/packages/Cake.CoreCLR">Cake.CoreCLR</a> - compiled for .NET Core 2.0</li>
+<li><a href="https://www.nuget.org/packages/Cake.Tool">Cake.Tool</a> - .NET tool compiled for .NET Core 2.1</li>
+</ul>
+<h3 id="updated-nuget-client">Updated NuGet client</h3>
+<p>NuGet client assemblies have been updated to latest stable, this resolves issues with signed NuGet packages which could cause Cake to hang while acquiring tools and addins from <a href="https://www.nuget.org/">NuGet.org</a>.</p>
+<h3 id="collection-initializers">Collection initializers</h3>
+<p>Setting classes collection properties have been overhauled and refactored to enable initializer syntax. Might seem small, but it's really convenient, it makes</p>
+<pre><code class="language-csharp">new FooToolSettings
+{
+   EnvironmentVariables = new Dictionary&lt;string, string&gt; { [&quot;FOO&quot;] = &quot;foo&quot; }
+}
+</code></pre>
+<p>become</p>
+<pre><code class="language-csharp">new FooToolSettings
+{
+    EnvironmentVariables = { [&quot;FOO&quot;] = &quot;foo&quot; }
+}
+</code></pre>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/Marusyk">Marusyk</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/SIkebe">SIkebe</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li><a href="https://github.com/jnm2">jnm2</a></li>
+<li><a href="https://github.com/AdaskoTheBeAsT">AdaskoTheBeAsT</a></li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/gitfool">gitfool</a></li>
+<li><a href="https://github.com/pascalberger">pascalberger</a></li>
+</ul>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<h3 id="issues">Issues</h3>
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/53?closed=1">14 issues</a> closed.</p>
+<p><strong>Feature</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2067"><strong>#2067</strong></a> Publish as .NET Core Global Tool.</li>
+</ul>
+<p><strong>Improvement</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2238"><strong>#2238</strong></a> Add repository metadata to NuGet packages.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2234"><strong>#2234</strong></a> Remove mono argument from Argument Parser.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2211"><strong>#2211</strong></a> DotNetCorePublishSettings doesn't contain <code>--no-build</code> flag support introduced in .NET Core SDK 2.1.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2146"><strong>#2146</strong></a> Enabling initializer syntax for all collection properties.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1401"><strong>#1401</strong></a> Support for dotCover configuration file.</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2233"><strong>#2233</strong></a> Add bootstrap argument to Help Command.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2232"><strong>#2232</strong></a> Add exclusive argument to Help Command.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2220"><strong>#2220</strong></a> Incorrect documentation for InnoSetup Alias.</li>
+</ul>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2228"><strong>#2228</strong></a> CakeTaskExtensions are no longer accessible.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2224"><strong>#2224</strong></a> Add option for ProcessSettings to opt out of working directory magic.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2214"><strong>#2214</strong></a> Cake.CoreCLR can't handle whitespace in path.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2208"><strong>#2208</strong></a> WithCriteria<DataObject> does not work with 'DryRun' (WhatIf flag).</li>
+<li><a href="https://github.com/cake-build/cake/issues/2207"><strong>#2207</strong></a> NuGet hang due to bug in NuGet 4.6.0.</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2018/07/cake-v0.29.0-released">Cake v0.29.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -183,100 +273,7 @@
 <p>In this blog post we'll highlight the new <code>exclusive</code> parameter which adds support for executing a single task without dependencies.
 You can find a full list of changes at the end of this post.</p>
 <p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/devlead">devlead</a></li>
-<li><a href="https://github.com/gep13">gep13</a></li>
-<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
-<li><a href="https://github.com/grdylan">grdylan</a></li>
-<li><a href="https://github.com/paulomorgado">paulomorgado</a></li>
-<li><a href="https://github.com/mholo65">mholo65</a></li>
-<li>Kevin LaBranche</li>
-<li><a href="https://github.com/rh072005">rh072005</a></li>
-<li><a href="https://github.com/louisfischer">louisfischer</a></li>
-<li><a href="https://github.com/pavzaj">pavzaj</a></li>
-<li>Michael Samorokov</li>
-<li><a href="https://github.com/daveaglick">daveaglick</a></li>
-<li>NEXOGEN\kemenya</li>
-</ul>
-<!--excerpt-->
-<h3 id="exclusive">Exclusive</h3>
-<p>When you've executed a series of tasks and it fails on the last one, wouldn't it be nice if you could execute a single task, without requiring all of its dependencies to execute again? Well you're in luck, this just got added into 0.29.0! Beyond retrying failed operations - this can really speed things up while developing and debugging a script.</p>
-<p>Below is a simple script with two tasks where <code>Dependent-Task</code> depends on <code>Dependency-Task</code>.</p>
-<pre><code class="language-csharp">var target = Argument(&quot;target&quot;, &quot;Default&quot;);
-
-Task(&quot;Dependency-Task&quot;)
-    .Does(() =&gt;
-{
-    Information(&quot;Executing dependency.&quot;);
-});
-
-
-Task(&quot;Dependent-Task&quot;)
-    .IsDependentOn(&quot;Dependency-Task&quot;)
-    .Does(() =&gt;
-{
-   Information(&quot;Executing task.&quot;);
-});
-
-RunTarget(target);
-</code></pre>
-<p>Normally when executing <code>Cake.exe --target=&quot;Dependent-Task&quot;</code> we would see something like:</p>
-<pre><code>========================================
-Dependency-Task
-========================================
-Executing dependency.
-
-========================================
-Dependent-Task
-========================================
-Executing task.
-
-Task                          Duration
---------------------------------------------------
-Dependency-Task               00:00:00.0061407
-Dependent-Task                00:00:00.0002070
---------------------------------------------------
-Total:                        00:00:00.0063477
-</code></pre>
-<p>But when specifying the <code>exclusive</code> option <code>Cake.exe --target=&quot;Dependent-Task&quot; --exclusive</code>, then only the specified task will execute.</p>
-<pre><code>========================================
-Dependent-Task
-========================================
-Executing task.
-
-Task                          Duration
---------------------------------------------------
-Dependent-Task                00:00:00.0059713
---------------------------------------------------
-Total:                        00:00:00.0059713
-</code></pre>
-<h3 id="issues">Issues</h3>
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/49?closed=1">12 issues</a> closed.</p>
-<p><strong>Breaking change</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2140"><strong>#2140</strong></a> DotNetCorePublish does not respect SelfContained DotNetCorePublishSettings property.</li>
-</ul>
-<p><strong>Feature</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2203"><strong>#2203</strong></a> Add Octopus Deploy Promote release support.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2095"><strong>#2095</strong></a> Add &quot;--skipnontestassemblies&quot; funcionality to CAKE's NUnit3Settings as it exists in original nunit3 test runner.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2094"><strong>#2094</strong></a> Add support for executing a single task without dependencies.</li>
-</ul>
-<p><strong>Improvement</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2196"><strong>#2196</strong></a> NuGet Repository information not settable in NuGet Pack.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2185"><strong>#2185</strong></a> Try to find vswhere.exe on the system if the tool is not registered.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2154"><strong>#2154</strong></a> Problem with loading abolute path scripts with #load preprocessor.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2152"><strong>#2152</strong></a> try resolve vstest.console.exe before guessing it.</li>
-<li><a href="https://github.com/cake-build/cake/issues/1609"><strong>#1609</strong></a> Add additional VSTS actions.</li>
-</ul>
-<p><strong>Documentation</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/pull/2195"><strong>#2195</strong></a> Updated the WiX tool documentation.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2193"><strong>#2193</strong></a> Add Pascal and Dave to all required places.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2188"><strong>#2188</strong></a> The CLA link in readme seems invalid or broken.</li>
-</ul>
-
+                <a href="/blog/2018/07/cake-v0.29.0-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2018/06/cake-v0.28.1-released">Cake v0.28.1 released</a></h2>
@@ -334,24 +331,6 @@ Read issues from different analyzer or linters, create reports or add them as co
 
 <p>Contributions were included from:</p>
                 <a href="/blog/2018/05/cake-v0.28.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/05/cake-v0.27.2-released">Cake v0.27.2 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, May 18, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
-</dl>
-            <div>
-                <p>Version 0.27.2 of Cake has been released.</p>
-<p>This is a hotfix release of Cake.  Following the release of Cake 0.27.1 we discovered additional problems with assembly and dependency loading. Luckily, <a href="https://github.com/daveaglick">Dave Glick</a> was kind enough to step up and (hopefully) squash these bugs once and for all.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2018/05/cake-v0.27.2-released">Read more...</a>
             </div>
         <hr />
     <nav>

@@ -194,8 +194,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.SpecFlow.StepDefinitionReport/SpecFlowStepDefinitionReportSettings">Spec<wbr>Flow<wbr>Step<wbr>Definition<wbr>Report<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.SpecFlow.TestExecutionReport/SpecFlowTestExecutionReportSettings">Spec<wbr>Flow<wbr>Test<wbr>Execution<wbr>Report<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.SpecFlow.StepDefinitionReport/SpecFlowStepDefinitionReportSettings">Spec<wbr>Flow<wbr>Step<wbr>Definition<wbr>Report<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -209,10 +209,10 @@
 	Base1["object"]--&gt;Base0
 	Type["SpecFlowSettings"]
 class Type type-node
-	Type--&gt;Derived0["SpecFlowStepDefinitionReportSettings"]
-	click Derived0 "/api/Cake.Common.Tools.SpecFlow.StepDefinitionReport/SpecFlowStepDefinitionReportSettings"
-	Type--&gt;Derived1["SpecFlowTestExecutionReportSettings"]
-	click Derived1 "/api/Cake.Common.Tools.SpecFlow.TestExecutionReport/SpecFlowTestExecutionReportSettings"
+	Type--&gt;Derived0["SpecFlowTestExecutionReportSettings"]
+	click Derived0 "/api/Cake.Common.Tools.SpecFlow.TestExecutionReport/SpecFlowTestExecutionReportSettings"
+	Type--&gt;Derived1["SpecFlowStepDefinitionReportSettings"]
+	click Derived1 "/api/Cake.Common.Tools.SpecFlow.StepDefinitionReport/SpecFlowStepDefinitionReportSettings"
 
 						</div>
 					</div>
@@ -260,6 +260,17 @@ class Type type-node
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/ToolSettings/24A3CC93">NoWorkingDirectory</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether or not to opt out of using
+    an explicit working directory for the process.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></em></small></div>
 								</td>
