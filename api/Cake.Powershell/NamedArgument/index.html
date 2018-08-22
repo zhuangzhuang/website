@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
@@ -187,7 +188,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Represents a named argument and its value.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -250,11 +255,15 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Powershell/NamedArgument/B4B849E9">NamedArgument<wbr>(string, <wbr>IProcessArgument)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Powershell/NamedArgument">NamedArgument</a></code> class.
+            </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/NamedArgument/16EF58BF">NamedArgument<wbr>(string, <wbr>IProcessArgument, <wbr>string)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Powershell/NamedArgument">NamedArgument</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -278,7 +287,9 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/NamedArgument/922F8780">Format</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the format of the argument
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -301,21 +312,28 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/NamedArgument/75CD8A1E">Render<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Render the arguments as a <code class="cs"><a href="/">string</a></code>.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/NamedArgument/AE9F6341">RenderSafe<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Renders the argument as a <code class="cs"><a href="/">string</a></code>.
+            Sensitive information will be redacted.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/NamedArgument/967B4AB9">ToString<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Returns a <code class="cs"><a href="/">string</a></code> that represents this instance.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>

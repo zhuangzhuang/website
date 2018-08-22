@@ -145,13 +145,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.Chocolatey">Cake<wbr>.Common<wbr>.Tools<wbr>.Chocolatey</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Common.Tools.Chocolatey/IChocolateyToolResolver">I<wbr>Chocolatey<wbr>Tool<wbr>Resolver</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyAliases">ChocolateyAliases</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateySettings">ChocolateySettings</a></li>
 				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1">ChocolateyTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyToolResolver">Chocolatey<wbr>Tool<wbr>Resolver</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Common.Tools.Chocolatey/IChocolateyToolResolver">I<wbr>Chocolatey<wbr>Tool<wbr>Resolver</a></li>
 
 
                     </ul>
@@ -197,11 +197,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings">Chocolatey<wbr>Install<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings">Chocolatey<wbr>Upgrade<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings">Chocolatey<wbr>Download<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Uninstall/ChocolateyUninstallSettings">Chocolatey<wbr>Uninstall<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings">Chocolatey<wbr>Install<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.New/ChocolateyNewSettings">Chocolatey<wbr>New<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings">Chocolatey<wbr>Upgrade<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -215,16 +215,16 @@
 	Base1["object"]--&gt;Base0
 	Type["ChocolateySettings"]
 class Type type-node
-	Type--&gt;Derived0["ChocolateyInstallSettings"]
-	click Derived0 "/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings"
+	Type--&gt;Derived0["ChocolateyUpgradeSettings"]
+	click Derived0 "/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings"
 	Type--&gt;Derived1["ChocolateyDownloadSettings"]
 	click Derived1 "/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloadSettings"
 	Type--&gt;Derived2["ChocolateyUninstallSettings"]
 	click Derived2 "/api/Cake.Common.Tools.Chocolatey.Uninstall/ChocolateyUninstallSettings"
-	Type--&gt;Derived3["ChocolateyNewSettings"]
-	click Derived3 "/api/Cake.Common.Tools.Chocolatey.New/ChocolateyNewSettings"
-	Type--&gt;Derived4["ChocolateyUpgradeSettings"]
-	click Derived4 "/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgradeSettings"
+	Type--&gt;Derived3["ChocolateyInstallSettings"]
+	click Derived3 "/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstallSettings"
+	Type--&gt;Derived4["ChocolateyNewSettings"]
+	click Derived4 "/api/Cake.Common.Tools.Chocolatey.New/ChocolateyNewSettings"
 
 						</div>
 					</div>
@@ -355,6 +355,17 @@ class Type type-node
 									<div>
     Gets or sets a value indicating whether or not to install silently.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Tooling/ToolSettings/24A3CC93">NoWorkingDirectory</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether or not to opt out of using
+    an explicit working directory for the process.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -186,7 +187,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Represents a hashtable argument.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -249,7 +254,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Powershell/HashTableArgument/4BFF1B1C">HashTableArgument<wbr>(IEnumerable<wbr>&lt;<wbr>Key<wbr>Value<wbr>Argument&gt;<wbr>)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Powershell/HashTableArgument">HashTableArgument</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -274,14 +281,20 @@ class Type type-node
 								<td><a href="/api/Cake.Powershell/HashTableArgument/29FE1E65">Render<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Render the arguments as a <code class="cs"><a href="/">string</a></code>.
+            Sensitive information will be included.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Powershell/HashTableArgument/D7936F34">RenderSafe<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Renders the argument as a <code class="cs"><a href="/">string</a></code>.
+            Sensitive information will be redacted.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>

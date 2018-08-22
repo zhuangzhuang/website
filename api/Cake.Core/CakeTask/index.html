@@ -147,23 +147,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
-				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
-				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
-				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
-				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
-				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
-				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
-				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
-				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
-				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
-				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
-				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
-				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
@@ -183,6 +166,7 @@
 				<li><a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskCriteria">CakeTaskCriteria</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></li>
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
@@ -203,6 +187,23 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
+				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
+				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
+				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
+				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
+				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
+				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
+				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
+				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
@@ -456,6 +457,56 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/5EFEB90A">AddAction<wbr>(Func<wbr>&lt;ICakeContext, <wbr>Task&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds the action to the task's actions.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/0DE28846">AddCriteria<wbr>(Func<wbr>&lt;ICakeContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds the criteria to the task's criterias.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/D5690487">AddDelayedAction<wbr>(Action)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds the action to the task's delayed actions.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/619B7A05">AddDependee<wbr>(string, <wbr>bool)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds the dependee to the task's dependees.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/1BD88802">AddDependency<wbr>(string, <wbr>bool)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds the dependency to the task's dependencies.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;CakeTask&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
@@ -497,6 +548,46 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/17D77D2A">SetDeferExceptions<wbr>(bool)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Sets the task's defer exceptions state.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/666BCC5D">SetErrorHandler<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Sets the task's error handler.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/12AE3B6C">SetErrorReporter<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Sets the task's error reporter.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/EBC79237">SetFinallyHandler<wbr>(Action)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Sets the task's finally handler.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskExtensions">CakeTaskExtensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>

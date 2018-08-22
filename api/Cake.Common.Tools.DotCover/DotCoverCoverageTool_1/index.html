@@ -153,6 +153,7 @@
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverCoverageSettingsExtensions">Dot<wbr>Cover<wbr>Coverage<wbr>Settings<wbr>Extensions</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.DotCover/DotCoverCoverageTool_1">DotCoverCoverageTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettings">DotCoverSettings</a></li>
+				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverSettingsExtensions">Dot<wbr>Cover<wbr>Settings<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1">DotCoverTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverReportType">DotCoverReportType</a></li>
@@ -202,8 +203,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer">DotCoverCoverer</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotCover.Analyse/DotCoverAnalyser">DotCoverAnalyser</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer">DotCoverCoverer</a></li>								
 									</ul>
 								</dd>			
 							
@@ -219,10 +220,10 @@
 	Base2["object"]--&gt;Base1
 	Type["DotCoverCoverageTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["DotCoverCoverer"]
-	click Derived0 "/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer"
-	Type--&gt;Derived1["DotCoverAnalyser"]
-	click Derived1 "/api/Cake.Common.Tools.DotCover.Analyse/DotCoverAnalyser"
+	Type--&gt;Derived0["DotCoverAnalyser"]
+	click Derived0 "/api/Cake.Common.Tools.DotCover.Analyse/DotCoverAnalyser"
+	Type--&gt;Derived1["DotCoverCoverer"]
+	click Derived1 "/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer"
 
 						</div>
 					</div>
@@ -307,6 +308,16 @@ class Type type-node
 								<td>
 									<div>
     Get arguments from global settings
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1">DotCoverTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1/44560727">Get<wbr>Configuration<wbr>File<wbr>Argument<wbr>(DotCoverSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a></td>
+								<td>
+									<div>
+    Get configuration full path from coverage settings
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1">DotCoverTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
