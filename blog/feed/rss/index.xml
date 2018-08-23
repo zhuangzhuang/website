@@ -5,8 +5,8 @@
 		<link>https://cakebuild.net/</link>
 		<description />
 		<copyright>2018</copyright>
-		<pubDate>Wed, 22 Aug 2018 09:50:11 GMT</pubDate>
-		<lastBuildDate>Wed, 22 Aug 2018 09:50:11 GMT</lastBuildDate>
+		<pubDate>Thu, 23 Aug 2018 14:14:53 GMT</pubDate>
+		<lastBuildDate>Thu, 23 Aug 2018 14:14:53 GMT</lastBuildDate>
 		<item>
 			<title>Cake v0.30.0 released</title>
 			<link>https://cakebuild.net/blog/2018/08/cake-v0.30.0-released</link>
@@ -591,7 +591,7 @@ Skipping task: Sign skipped because SignAssemblies is set to false.
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2163"&gt;&lt;strong&gt;#2163&lt;/strong&gt;&lt;/a&gt; Update to Roslyn 2.8.x packages, adding support for C# 7.3.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2171"&gt;&lt;strong&gt;#2171&lt;/strong&gt;&lt;/a&gt; Add potential breaking change warning.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2174"&gt;&lt;strong&gt;#2174&lt;/strong&gt;&lt;/a&gt; Support multiple Support / Teardown.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2174"&gt;&lt;strong&gt;#2174&lt;/strong&gt;&lt;/a&gt; Support multiple Setup / Teardown.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
