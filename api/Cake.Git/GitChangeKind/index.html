@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - GitChangeKind Enum</title>
+        <title>Cake - API - GitChangeKind Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -80,8 +80,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -150,17 +149,16 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Git/GitAliases">GitAliases</a></li>
 				<li><a href="/api/Cake.Git/GitBranch">GitBranch</a></li>
+				<li class="selected"><a href="/api/Cake.Git/GitChangeKind">GitChangeKind</a></li>
 				<li><a href="/api/Cake.Git/GitCloneSettings">GitCloneSettings</a></li>
 				<li><a href="/api/Cake.Git/GitCommit">GitCommit</a></li>
+				<li><a href="/api/Cake.Git/GitDescribeStrategy">GitDescribeStrategy</a></li>
 				<li><a href="/api/Cake.Git/GitDiffFile">GitDiffFile</a></li>
 				<li><a href="/api/Cake.Git/GitMergeResult">GitMergeResult</a></li>
-				<li><a href="/api/Cake.Git/GitRemote">GitRemote</a></li>
-				<li><a href="/api/Cake.Git/GitSignature">GitSignature</a></li>
-			<li class="header">Enum Types</li>
-				<li class="selected"><a href="/api/Cake.Git/GitChangeKind">GitChangeKind</a></li>
-				<li><a href="/api/Cake.Git/GitDescribeStrategy">GitDescribeStrategy</a></li>
 				<li><a href="/api/Cake.Git/GitMergeStatus">GitMergeStatus</a></li>
+				<li><a href="/api/Cake.Git/GitRemote">GitRemote</a></li>
 				<li><a href="/api/Cake.Git/GitResetMode">GitResetMode</a></li>
+				<li><a href="/api/Cake.Git/GitSignature">GitSignature</a></li>
 
 
                     </ul>
@@ -175,7 +173,7 @@
 
 
 <section class="content-header">
-	<h1>GitChangeKind <small>Enum</small></h1>
+	<h1>GitChangeKind <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -186,11 +184,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            The kind of changes that a Diff can report.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -202,20 +196,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Git">Cake<wbr>.Git</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -227,11 +211,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["GitChangeKind"]
 class Type type-node
 
@@ -242,7 +221,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum GitChangeKind</code></pre>
+	<pre><code>public sealed class GitChangeKind : Enum</code></pre>
 
 
 
@@ -266,9 +245,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/0AF275F5">Added</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            File is added.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -276,9 +253,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/F5F3CBED">Conflicted</a></td>
 								<td>10</td>
 								<td>
-									<div>
-            File is conflicting.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -286,9 +261,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/D74E9F8D">Copied</a></td>
 								<td>5</td>
 								<td>
-									<div>
-            File is copied.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -296,9 +269,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/20B2E20F">Deleted</a></td>
 								<td>2</td>
 								<td>
-									<div>
-            File is deleted.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -306,9 +277,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/5DBD0D32">Ignored</a></td>
 								<td>6</td>
 								<td>
-									<div>
-            File is ignored.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -316,9 +285,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/8EF431DB">Modified</a></td>
 								<td>3</td>
 								<td>
-									<div>
-            File is modified.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -326,9 +293,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/1C47B9ED">Renamed</a></td>
 								<td>4</td>
 								<td>
-									<div>
-            File is renamed.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -336,9 +301,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/2FA245BF">TypeChanged</a></td>
 								<td>8</td>
 								<td>
-									<div>
-            File type changed.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -346,9 +309,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/55166404">Unmodified</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            File is not modified.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -356,9 +317,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/1963959A">Unreadable</a></td>
 								<td>9</td>
 								<td>
-									<div>
-            File is unreadable.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -366,10 +325,15 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitChangeKind/417B6389">Untracked</a></td>
 								<td>7</td>
 								<td>
-									<div>
-            File is untracked.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Git/GitChangeKind/C8EDD072">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -411,6 +375,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Git<wbr>Change<wbr>Kind&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Git<wbr>Change<wbr>Kind&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

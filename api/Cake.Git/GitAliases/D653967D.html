@@ -80,9 +80,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -167,8 +165,8 @@
 				<li><a href="/api/Cake.Git/GitAliases/574949E8">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/6036705B">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitDescribeStrategy)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/915EEC31">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>GitDescribeStrategy)<wbr></a></li>
-				<li><a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a></li>
-				<li><a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/D5568940">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/6D2E6120">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/CAD727C5">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
@@ -225,11 +223,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Push a tag to a remote unauthenticated.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -249,10 +243,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void GitPushRef(this ICakeContext context, DirectoryPath repositoryDirectoryPath, string remote, string pushRefSpec)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">GitPushRef("c:/temp/cake", "remote", "refSpec");</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -292,22 +282,22 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>repositoryDirectoryPath</td>
 						<td>DirectoryPath</td>
-						<td>Repository path.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>remote</td>
 						<td>string</td>
-						<td>The <code class="cs">LibGit2Sharp.Remote</code> to push to.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>pushRefSpec</td>
 						<td>string</td>
-						<td>The pushRefSpec to push.</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
