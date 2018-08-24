@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - GitAliases.GitDescribe(ICakeContext, DirectoryPath, string, bool, GitDescribeStrategy, int?) Method</title>
+        <title>Cake - API - GitAliases.GitDescribe(ICakeContext, DirectoryPath, string, bool, GitDescribeStrategy, Nullable&lt;int&gt;) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -80,9 +80,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -167,8 +165,8 @@
 				<li><a href="/api/Cake.Git/GitAliases/574949E8">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/6036705B">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitDescribeStrategy)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/915EEC31">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>GitDescribeStrategy)<wbr></a></li>
-				<li><a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a></li>
+				<li><a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/D5568940">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/6D2E6120">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Git/GitAliases/CAD727C5">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a></li>
@@ -214,7 +212,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Git/GitAliases">GitAliases</a>.</h3>
-	<h1>GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr> <small>Method</small></h1>
+	<h1>GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -225,11 +223,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Describe specified commit-ish.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -247,12 +241,8 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static string GitDescribe(this ICakeContext context, DirectoryPath repositoryDirectoryPath, string commitishName, bool renderLongFormat, GitDescribeStrategy strategy, int? minimumCommitIdAbbreviatedSize)</code></pre>
+	<pre><code>public static string GitDescribe(this ICakeContext context, DirectoryPath repositoryDirectoryPath, string commitishName, bool renderLongFormat, GitDescribeStrategy strategy, Nullable&lt;int&gt; minimumCommitIdAbbreviatedSize)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <pre><code class="cs">var result = GitDescribe(".", "master", false, GitDescribeStrategy.Tags, 0);</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -292,38 +282,32 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>repositoryDirectoryPath</td>
 						<td>DirectoryPath</td>
-						<td>Path to repository.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>commitishName</td>
 						<td>string</td>
-						<td>Commit-ish name.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>renderLongFormat</td>
 						<td>bool</td>
-						<td>
-              Always output the long format (the tag, the number of commits and the abbreviated commit name)
-              even when it matches a tag. This is useful when you want to see parts of the commit object name
-              in "describe" output, even when the commit in question happens to be a tagged version.
-              Instead of just emitting the tag name, it will describe such a commit as v1.2-0-gdeadbee
-              (0th commit since tag v1.2 that points at object deadbee...).
-            </td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>strategy</td>
 						<td><a href="/api/Cake.Git/GitDescribeStrategy">GitDescribeStrategy</a></td>
-						<td>Describe strategy.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>minimumCommitIdAbbreviatedSize</td>
-						<td>Nullable<wbr>&lt;T&gt;<wbr></td>
-						<td>Number of minimum hexadecimal digits used to render a uniquely abbreviated commit id.</td>
+						<td>Nullable<wbr>&lt;&gt;<wbr></td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -341,7 +325,7 @@
 				</thead>
 				<tbody><tr>
 					<td>string</td>
-					<td>Described commit using the most recent tag reachable from it.</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

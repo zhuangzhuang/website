@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - GitDescribeStrategy Enum</title>
+        <title>Cake - API - GitDescribeStrategy Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -80,8 +80,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -150,17 +149,16 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Git/GitAliases">GitAliases</a></li>
 				<li><a href="/api/Cake.Git/GitBranch">GitBranch</a></li>
+				<li><a href="/api/Cake.Git/GitChangeKind">GitChangeKind</a></li>
 				<li><a href="/api/Cake.Git/GitCloneSettings">GitCloneSettings</a></li>
 				<li><a href="/api/Cake.Git/GitCommit">GitCommit</a></li>
+				<li class="selected"><a href="/api/Cake.Git/GitDescribeStrategy">GitDescribeStrategy</a></li>
 				<li><a href="/api/Cake.Git/GitDiffFile">GitDiffFile</a></li>
 				<li><a href="/api/Cake.Git/GitMergeResult">GitMergeResult</a></li>
-				<li><a href="/api/Cake.Git/GitRemote">GitRemote</a></li>
-				<li><a href="/api/Cake.Git/GitSignature">GitSignature</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Git/GitChangeKind">GitChangeKind</a></li>
-				<li class="selected"><a href="/api/Cake.Git/GitDescribeStrategy">GitDescribeStrategy</a></li>
 				<li><a href="/api/Cake.Git/GitMergeStatus">GitMergeStatus</a></li>
+				<li><a href="/api/Cake.Git/GitRemote">GitRemote</a></li>
 				<li><a href="/api/Cake.Git/GitResetMode">GitResetMode</a></li>
+				<li><a href="/api/Cake.Git/GitSignature">GitSignature</a></li>
 
 
                     </ul>
@@ -175,7 +173,7 @@
 
 
 <section class="content-header">
-	<h1>GitDescribeStrategy <small>Enum</small></h1>
+	<h1>GitDescribeStrategy <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -186,12 +184,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Specify the kind of committish which will be considered
-            when trying to identify the closest reference to the described commit.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -203,20 +196,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Git">Cake<wbr>.Git</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -228,11 +211,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["GitDescribeStrategy"]
 class Type type-node
 
@@ -243,7 +221,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum GitDescribeStrategy</code></pre>
+	<pre><code>public sealed class GitDescribeStrategy : Enum</code></pre>
 
 
 
@@ -267,11 +245,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitDescribeStrategy/0D2CA71E">All</a></td>
 								<td>2</td>
 								<td>
-									<div>
-            Instead of using only the annotated tags, use any ref found in
-            refs/ namespace. This option enables matching any known branch,
-            remote-tracking branch, or lightweight tag.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -279,9 +253,7 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitDescribeStrategy/95623789">Default</a></td>
 								<td>0</td>
 								<td>
-									<div>
-            Only annotated tags will be considered as reference points
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -289,12 +261,15 @@ class Type type-node
 								<td><a href="/api/Cake.Git/GitDescribeStrategy/AFF94AE9">Tags</a></td>
 								<td>1</td>
 								<td>
-									<div>
-            Instead of using only the annotated tags, use any tag found
-            in refs/tags namespace. This option enables matching
-            a lightweight (non-annotated) tag.
-            </div>
+									<div></div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Git/GitDescribeStrategy/917360FC">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -336,6 +311,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Git<wbr>Describe<wbr>Strategy&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Git<wbr>Describe<wbr>Strategy&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

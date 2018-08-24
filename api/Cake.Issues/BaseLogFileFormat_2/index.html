@@ -235,9 +235,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat">Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format</a></li>								
-											<li><a href="/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat">Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format</a></li>								
 											<li><a href="/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat">Base<wbr>Es<wbr>Lint<wbr>Log<wbr>File<wbr>Format</a></li>								
+											<li><a href="/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat">Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format</a></li>								
+											<li><a href="/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat">Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format</a></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeLogFileFormat">FakeLogFileFormat</a></li>								
 									</ul>
 								</dd>			
@@ -252,12 +252,12 @@
 	click Interface0 "/api/Cake.Issues/ILogFileFormat_2"
 	Type["BaseLogFileFormat&lt;TIssueProvider, TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["BaseMarkdownlintLogFileFormat"]
-	click Derived0 "/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat"
+	Type--&gt;Derived0["BaseEsLintLogFileFormat"]
+	click Derived0 "/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat"
 	Type--&gt;Derived1["BaseMsBuildLogFileFormat"]
 	click Derived1 "/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat"
-	Type--&gt;Derived2["BaseEsLintLogFileFormat"]
-	click Derived2 "/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat"
+	Type--&gt;Derived2["BaseMarkdownlintLogFileFormat"]
+	click Derived2 "/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat"
 	Type--&gt;Derived3["FakeLogFileFormat"]
 	click Derived3 "/api/Cake.Issues.Testing/FakeLogFileFormat"
 
@@ -359,7 +359,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Issues/BaseLogFileFormat_2/D8FA2445">ReadIssues<wbr>(TIssueProvider, <wbr>RepositorySettings, <wbr>TSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/BaseLogFileFormat_2/FC91296D">ReadIssues<wbr>(TIssueProvider, <wbr>IssueCommentFormat, <wbr>RepositorySettings, <wbr>TSettings)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>

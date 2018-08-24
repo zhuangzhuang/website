@@ -204,7 +204,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Base settings for issue providers supporting multiple log formats.
+            Base class for issue providers supporting multiple log formats.
             </div>
 
 		<div class="panel panel-default">
@@ -239,8 +239,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesProvider">EsLintIssuesProvider</a></li>								
 											<li><a href="/api/Cake.Issues.MsBuild/MsBuildIssuesProvider">Ms<wbr>Build<wbr>Issues<wbr>Provider</a></li>								
+											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesProvider">EsLintIssuesProvider</a></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a></li>								
 											<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider">Markdownlint<wbr>Issues<wbr>Provider</a></li>								
 									</ul>
@@ -264,10 +264,10 @@
 	click Interface1 "/api/Cake.Issues/IBaseIssueComponent_1"
 	Type["BaseMultiFormatIssueProvider&lt;TSettings, TIssueProvider&gt;"]
 class Type type-node
-	Type--&gt;Derived0["EsLintIssuesProvider"]
-	click Derived0 "/api/Cake.Issues.EsLint/EsLintIssuesProvider"
-	Type--&gt;Derived1["MsBuildIssuesProvider"]
-	click Derived1 "/api/Cake.Issues.MsBuild/MsBuildIssuesProvider"
+	Type--&gt;Derived0["MsBuildIssuesProvider"]
+	click Derived0 "/api/Cake.Issues.MsBuild/MsBuildIssuesProvider"
+	Type--&gt;Derived1["EsLintIssuesProvider"]
+	click Derived1 "/api/Cake.Issues.EsLint/EsLintIssuesProvider"
 	Type--&gt;Derived2["FakeMultiFormatIssueProvider"]
 	click Derived2 "/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider"
 	Type--&gt;Derived3["MarkdownlintIssuesProvider"]
@@ -404,11 +404,11 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Issues/BaseIssueComponent_1/CCF3A13F">AssertSettings<wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Issues/BaseIssueComponent_1/8DB693A2">AssertInitialized<wbr>()<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-            Asserts that settings are set.
+            Asserts that <code class="cs"><a href="/api/Cake.Issues/IBaseIssueComponent_1/0DA4EF42">Initialize(T)</a></code> was called.
             </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Issues/BaseIssueComponent_1">BaseIssueComponent<wbr>&lt;T&gt;<wbr></a></em></small></div>
 								</td>

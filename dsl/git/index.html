@@ -80,8 +80,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#General">General</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#General">General</a></p>
 <p><a href="#Add">Add</a></p>
 <p><a href="#AllTags">AllTags</a></p>
 <p><a href="#Branch">Branch</a></p>
@@ -292,6 +291,7 @@
     <li><a href="/dsl/talendcommandline">TalendCommandLine</a></li>        
     <li><a href="/dsl/terraform">Terraform</a></li>        
     <li><a href="/dsl/tfs">Tfs</a></li>        
+    <li><a href="/dsl/tfs">TFS</a></li>        
     <li><a href="/dsl/tfsbuildvariables">TfsBuildVariables</a></li>        
     <li><a href="/dsl/tfx">Tfx</a></li>        
     <li><a href="/dsl/topshelf">Topshelf</a></li>        
@@ -337,14 +337,7 @@
                             </div>
 
 
-            <h1 id="Summary">Summary</h1>
-        <div>
-            Class GitAliases.
-            
-
-            Contains functionality for working with GIT using LibGit2 &amp; LibGit2Sharp
-            </div>
-
+    
 
         <h1 id="General">General</h1>  
         <div class="box">
@@ -372,8 +365,6 @@
 <a href="/api/Cake.Git/GitAliases/644F7DB5">GitAdd<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>FilePath[])<wbr></a>                            </td>
                             <td>
                                 
-            Add file to index.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -384,8 +375,6 @@
 <a href="/api/Cake.Git/GitAliases/6FB86901">GitAddAll<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Add all file changes to index.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -403,8 +392,6 @@
 <a href="/api/Cake.Git/GitAliases/0A452041">GitTags<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Gets a list of all tags from the repo
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -422,8 +409,6 @@
 <a href="/api/Cake.Git/GitAliases/7387DA05">GitBranchCurrent<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Gets the current branch.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -441,8 +426,6 @@
 <a href="/api/Cake.Git/GitAliases/288F60A6">GitCheckout<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>FilePath[])<wbr></a>                            </td>
                             <td>
                                 
-            Checkout file.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -453,8 +436,6 @@
 <a href="/api/Cake.Git/GitAliases/AC6DA527">GitCheckout<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>FilePath[])<wbr></a>                            </td>
                             <td>
                                 
-            Checkout file(s) using supplied commit or branch spec.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -472,8 +453,6 @@
 <a href="/api/Cake.Git/GitAliases/1F994DC4">GitClean<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Remove untracked file(s) workspace.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -491,8 +470,6 @@
 <a href="/api/Cake.Git/GitAliases/EA8909A2">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Clone unauthenticated using default options.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -503,8 +480,6 @@
 <a href="/api/Cake.Git/GitAliases/7C88F92C">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath, <wbr>GitCloneSettings)<wbr></a>                            </td>
                             <td>
                                 
-            Clone unauthenticated using specific settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -515,8 +490,6 @@
 <a href="/api/Cake.Git/GitAliases/EA745DF7">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Clone authenticated using default options.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -527,8 +500,6 @@
 <a href="/api/Cake.Git/GitAliases/2ACDDC0F">GitClone<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>GitCloneSettings)<wbr></a>                            </td>
                             <td>
                                 
-            Clone authenticated using specific settings.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -546,8 +517,6 @@
 <a href="/api/Cake.Git/GitAliases/B2287677">GitCommit<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Commit using default options.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -565,8 +534,6 @@
 <a href="/api/Cake.Git/GitAliases/73A4139A">GitCreateBranch<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool)<wbr></a>                            </td>
                             <td>
                                 
-            Creates a local Branch.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -584,8 +551,6 @@
 <a href="/api/Cake.Git/GitAliases/574949E8">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Describe current branch.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -596,8 +561,6 @@
 <a href="/api/Cake.Git/GitAliases/915EEC31">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>GitDescribeStrategy)<wbr></a>                            </td>
                             <td>
                                 
-            Describe current branch.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -605,11 +568,9 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a>                            </td>
+<a href="/api/Cake.Git/GitAliases/0A3C237A">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr></a>                            </td>
                             <td>
                                 
-            Describe current branch.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -620,8 +581,6 @@
 <a href="/api/Cake.Git/GitAliases/6036705B">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitDescribeStrategy)<wbr></a>                            </td>
                             <td>
                                 
-            Describe current branch.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -629,11 +588,9 @@
                         </tr>
                         <tr>
                             <td>
-<a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>int?)<wbr></a>                            </td>
+<a href="/api/Cake.Git/GitAliases/6774883E">GitDescribe<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>bool, <wbr>Git<wbr>Describe<wbr>Strategy, <wbr>Nullable<wbr>&lt;int&gt;<wbr>)<wbr></a>                            </td>
                             <td>
                                 
-            Describe specified commit-ish.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -651,8 +608,6 @@
 <a href="/api/Cake.Git/GitAliases/D5568940">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Get changed files from inital commit id up to current.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -663,8 +618,6 @@
 <a href="/api/Cake.Git/GitAliases/6D2E6120">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Get changed files from certain commit id up to current.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -675,8 +628,6 @@
 <a href="/api/Cake.Git/GitAliases/CAD727C5">GitDiff<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Get changed files from certain commit id up to current.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -694,8 +645,6 @@
 <a href="/api/Cake.Git/GitAliases/C5552E3F">GitInit<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Init using default options.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -713,8 +662,6 @@
 <a href="/api/Cake.Git/GitAliases/469FCAAF">GitLog<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>int)<wbr></a>                            </td>
                             <td>
                                 
-            Get commit log.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -725,8 +672,6 @@
 <a href="/api/Cake.Git/GitAliases/9F14EF4E">GitLog<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Get commit from certain commit id up to current.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -737,8 +682,6 @@
 <a href="/api/Cake.Git/GitAliases/F7011232">GitLogLookup<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Get specific commit.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -749,8 +692,6 @@
 <a href="/api/Cake.Git/GitAliases/4AE932FF">GitLogTip<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Get last commit
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -768,8 +709,6 @@
 <a href="/api/Cake.Git/GitAliases/CC1AE32F">GitPull<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Pull unauthenticated using default options.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -780,8 +719,6 @@
 <a href="/api/Cake.Git/GitAliases/B469C7E0">GitPull<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Pull authenticating using default options.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -799,8 +736,6 @@
 <a href="/api/Cake.Git/GitAliases/CB59141D">GitPush<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Push all branches unauthenticated.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -811,8 +746,6 @@
 <a href="/api/Cake.Git/GitAliases/EF0B0C37">GitPush<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Push all branches authenticated.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -823,8 +756,6 @@
 <a href="/api/Cake.Git/GitAliases/CDB85B38">GitPush<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Push specific branch authenticated.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -835,8 +766,6 @@
 <a href="/api/Cake.Git/GitAliases/D653967D">GitPushRef<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Push a tag to a remote unauthenticated.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -847,8 +776,6 @@
 <a href="/api/Cake.Git/GitAliases/FB8D8875">GitPushRef<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Push a tag to a remote authenticated.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -866,8 +793,6 @@
 <a href="/api/Cake.Git/GitAliases/E1A15CFA">GitRemove<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>bool, <wbr>FilePath[])<wbr></a>                            </td>
                             <td>
                                 
-            Remove file(s) from index.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -885,8 +810,6 @@
 <a href="/api/Cake.Git/GitAliases/374CC460">GitFindRootFromPath<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Finding git root path from subtree.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -897,8 +820,6 @@
 <a href="/api/Cake.Git/GitAliases/2922099A">GitHasStagedChanges<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Checks if a repository contains staged changes.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -909,8 +830,6 @@
 <a href="/api/Cake.Git/GitAliases/8F86A2DE">Git<wbr>Has<wbr>Uncommited<wbr>Changes<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Checks if a repository contains uncommited changes.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -921,8 +840,6 @@
 <a href="/api/Cake.Git/GitAliases/461B7E12">GitHasUntrackedFiles<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Checks if a repository contains untracked files.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -933,8 +850,6 @@
 <a href="/api/Cake.Git/GitAliases/91F00FBE">GitIsValidRepository<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Checks if a specific directory is a valid Git repository.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -952,8 +867,6 @@
 <a href="/api/Cake.Git/GitAliases/FAD060EA">GitReset<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitResetMode)<wbr></a>                            </td>
                             <td>
                                 
-            Resets the current branch head (HEAD) optionally modifying index and working tree to match.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -964,9 +877,6 @@
 <a href="/api/Cake.Git/GitAliases/3CC3F07D">GitReset<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>GitResetMode, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Sets the current branch head (HEAD) to a specified commit, 
-            optionally modifying index and working tree to match.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -984,8 +894,6 @@
 <a href="/api/Cake.Git/GitAliases/7C26C21C">GitTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Applys tagName to repository.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -996,8 +904,6 @@
 <a href="/api/Cake.Git/GitAliases/8E668149">GitTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Applys tagName to repository.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -1008,8 +914,6 @@
 <a href="/api/Cake.Git/GitAliases/6F7D4282">GitTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Applys tagName to repository as annotated tag.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -1020,8 +924,6 @@
 <a href="/api/Cake.Git/GitAliases/5942B756">GitTag<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a>                            </td>
                             <td>
                                 
-            Applys tagName to repository as annotated tag.
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -1039,8 +941,6 @@
 <a href="/api/Cake.Git/GitAliases/92A9EAE1">GitUnstage<wbr>(ICakeContext, <wbr>DirectoryPath, <wbr>FilePath[])<wbr></a>                            </td>
                             <td>
                                 
-            Removes from the staging area all the modifications of a collection of file since the latest commit (addition, updation or removal).
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
@@ -1051,8 +951,6 @@
 <a href="/api/Cake.Git/GitAliases/112629F9">GitUnstageAll<wbr>(ICakeContext, <wbr>DirectoryPath)<wbr></a>                            </td>
                             <td>
                                 
-            Removes from the staging area all the modifications all files the latest commit (addition, updation or removal).
-            
 
                                             <br>
                                             <small><i>Addin from <a href="/api/Cake.Git.dll">Cake<wbr>.Git<wbr>.dll</a></i></small>
