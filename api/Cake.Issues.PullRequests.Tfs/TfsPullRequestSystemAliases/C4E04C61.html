@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - TfsPullRequestSystemAliases.TfsAuthenticationOAuth(ICakeContext, string) Method</title>
+        <title>Cake - API - TfsPullRequestSystemAliases.TfsPullRequests(ICakeContext, TfsPullRequestSystemSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -82,6 +82,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -151,16 +152,9 @@
 		<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/6826C541">Tfs<wbr>Authentication<wbr>Azure<wbr>Active<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/3FA02408">Tfs<wbr>Authentication<wbr>Basic<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/4E73CD70">Tfs<wbr>Authentication<wbr>Ntlm<wbr>(ICakeContext)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/44032AF4">Tfs<wbr>Authentication<wbr>O<wbr>Auth<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/B7AA9CF6">Tfs<wbr>Authentication<wbr>Personal<wbr>Access<wbr>Token<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/250A7ACE">Tfs<wbr>Pull<wbr>Request<wbr>Last<wbr>Source<wbr>Commit<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/262D90D1">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>ITfsCredentials)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/1A67869A">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int, <wbr>ITfsCredentials)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/4166F317">TfsPullRequests<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/A009B4A2">TfsVotePullRequest<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings, <wbr>TfsPullRequestVote)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/8B150084">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>ITfsCredentials)<wbr></a></li>
+				<li><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/BC3F9B2C">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int, <wbr>ITfsCredentials)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/C4E04C61">TfsPullRequests<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -176,7 +170,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a>.</h3>
-	<h1>Tfs<wbr>Authentication<wbr>O<wbr>Auth<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>TfsPullRequests<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -189,9 +183,9 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Returns credentials for OAuth authentication.
-            Can only be used with Visual Studio Team Services.
-            </div>
+             Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+             using the specified settings.
+             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -210,8 +204,24 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static ITfsCredentials TfsAuthenticationOAuth(this ICakeContext context, string accessToken)</code></pre>
+	<pre><code>public static IPullRequestSystem TfsPullRequests(this ICakeContext context, TfsPullRequestSystemSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+             <p>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</p>
+             <pre><code class="cs"> var pullRequestSettings =
+         new TfsPullRequestSettings(
+             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+             "refs/heads/feature/myfeature",
+             TfsAuthenticationNtlm());
+
+     ReportCodeAnalysisIssuesToPullRequest(
+         MsBuildCodeAnalysis(
+             @"c:\build\msbuild.log",
+             MsBuildXmlFileLoggerFormat),
+         TfsPullRequests(pullRequestSettings),
+         @"c:\repo");</code></pre>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -254,9 +264,9 @@
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>accessToken</td>
-						<td>string</td>
-						<td>OAuth access token.</td>
+						<td>settings</td>
+						<td><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings</a></td>
+						<td>Settings for accessing the pull request system.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -273,8 +283,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/api/Cake.Issues.PullRequests.Tfs/ITfsCredentials">ITfsCredentials</a></td>
-					<td>Credentials for OAuth authentication.</td>
+					<td><a href="/api/Cake.Issues.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
+					<td>Object for writing issues to Team Foundation Server or Visual Studio Team Services pull request.</td>
 				</tr>
 			</tbody></table>
 		</div>
