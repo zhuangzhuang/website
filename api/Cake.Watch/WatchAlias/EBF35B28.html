@@ -80,9 +80,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -180,11 +178,7 @@
                             </div>
 
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-             Watch files that is specified by settings.
-             </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -204,16 +198,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void Watch(this ICakeContext context, WatchSettings settings, Action&lt;IEnumerable&lt;FileChange&gt;&gt; fileChanged)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-             <pre><code class="cs">var settings = new WatchSettings { Recursive = true, Path = "src", Pattern = "*.html" };
-Watch(settings , (changes) =&gt; {
-    var list = changes.ToList();
-    list.ForEach(change =&gt; {
-       Console.WriteLine(change.FullName);
-    });
-})</code></pre>
-             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -258,7 +242,7 @@ Watch(settings , (changes) =&gt; {
 					</tr>
 					<tr>
 						<td>fileChanged</td>
-						<td>Action<wbr>&lt;T&gt;<wbr></td>
+						<td>Action<wbr>&lt;&gt;<wbr></td>
 						<td></td>
 					</tr>
 			</tbody></table>

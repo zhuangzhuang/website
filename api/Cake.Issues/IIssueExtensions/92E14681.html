@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - IIssueExtension.FilePath(IIssue) Method</title>
+        <title>Cake - API - IIssueExtensions.ReplaceIssuePattern(string, IIssue) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -143,18 +143,19 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Issues.Reporting.Generic.dll">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Issues.dll">Cake<wbr>.Issues<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Issues.Reporting.Generic">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic</a></li>
+		<li><a href="/api/Cake.Issues">Cake<wbr>.Issues</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension">IIssueExtension</a></li>
+		<li><a href="/api/Cake.Issues/IIssueExtensions">IIssueExtensions</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/E18458C4">FileDirectory<wbr>(IIssue)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/54FD88B8">FileName<wbr>(IIssue)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/556A9E0A">FilePath<wbr>(IIssue)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/F847D03B">GetExpandoObject<wbr>(IIssue, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>FileLinkSettings, <wbr>IDictionary<wbr>&lt;string, <wbr>Func<wbr>&lt;IIssue, <wbr>object&gt;<wbr>&gt;<wbr>)<wbr></a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/D8A4E43C">ProjectPath<wbr>(IIssue)<wbr></a></li>
+				<li><a href="/api/Cake.Issues/IIssueExtensions/9B0FA67A">FileDirectory<wbr>(IIssue)<wbr></a></li>
+				<li><a href="/api/Cake.Issues/IIssueExtensions/32614F78">FileName<wbr>(IIssue)<wbr></a></li>
+				<li><a href="/api/Cake.Issues/IIssueExtensions/33F659CA">FilePath<wbr>(IIssue)<wbr></a></li>
+				<li><a href="/api/Cake.Issues/IIssueExtensions/A766D210">ProjectDirectory<wbr>(IIssue)<wbr></a></li>
+				<li><a href="/api/Cake.Issues/IIssueExtensions/8F814AA8">ProjectPath<wbr>(IIssue)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Issues/IIssueExtensions/92E14681">ReplaceIssuePattern<wbr>(string, <wbr>IIssue)<wbr></a></li>
 
 
                     </ul>
@@ -169,41 +170,41 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension">IIssueExtension</a>.</h3>
-	<h1>FilePath<wbr>(IIssue)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Issues/IIssueExtensions">IIssueExtensions</a>.</h3>
+	<h1>ReplaceIssuePattern<wbr>(string, <wbr>IIssue)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Issues.Reporting.Generic" class="alert-link">https://github.com/cake-contrib/Cake.Issues.Reporting.Generic</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Issues" class="alert-link">https://github.com/cake-contrib/Cake.Issues</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Returns the full path of the <code class="cs"><a href="/api/Cake.Issues/IIssue/BF0CD6F1">AffectedFileRelativePath</a></code>.
+            Returns a string with all patterns replaced by the values of <span name="issue" class="paramref">issue</span>.
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.Issues.Reporting.Generic.dll">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Issues.dll">Cake<wbr>.Issues<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Issues.Reporting.Generic">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic</a></dd>
+						<dd><a href="/api/Cake.Issues">Cake<wbr>.Issues</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension">IIssueExtension</a></dd>		
+						<dd><a href="/api/Cake.Issues/IIssueExtensions">IIssueExtensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static string FilePath(this IIssue issue)</code></pre>
+	<pre><code>public static string ReplaceIssuePattern(this string pattern, IIssue issue)</code></pre>
 
 
 
@@ -221,9 +222,78 @@
 					</tr>
 				</thead>
 					<tbody><tr>
+						<td>pattern</td>
+						<td>string</td>
+						<td>Pattern whose values should be replaced.
+            The following patterns are supported:
+            <description>Description</description><description>The value of <see cref="P:Cake.Issues.IIssue.ProviderType">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.ProviderName">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.Priority">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.PriorityName">.</see></description><description>The value of <see cref="M:Cake.Issues.IIssueExtensions.ProjectPath(Cake.Issues.IIssue)">.</see></description><description>The value of <see cref="M:Cake.Issues.IIssueExtensions.ProjectDirectory(Cake.Issues.IIssue)">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.ProjectName">.</see></description><description>The value of <see cref="M:Cake.Issues.IIssueExtensions.FilePath(Cake.Issues.IIssue)">.</see></description><description>The value of <see cref="M:Cake.Issues.IIssueExtensions.FileDirectory(Cake.Issues.IIssue)">.</see></description><description>The value of <see cref="M:Cake.Issues.IIssueExtensions.FileName(Cake.Issues.IIssue)">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.Line">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.Rule">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.RuleUrl">.</see></description><description>The value of <see cref="P:Cake.Issues.IIssue.Message">.</see></description><table class="table">
+                <tbody><tr>
+                    <th>Pattern</th>
+                    
+                </tr>
+                <tr>
+                    <td>{ProviderType}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{ProviderName}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{Priority}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{PriorityName}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{ProjectPath}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{ProjectDirectory}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{ProjectName}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{FilePath}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{FileDirectory}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{FileName}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{Line}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{Rule}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{RuleUrl}</td>
+                    
+                </tr>
+                <tr>
+                    <td>{Message}</td>
+                    
+                </tr>
+            </tbody></table>
+            </td>
+					</tr>
+					<tr>
 						<td>issue</td>
 						<td><a href="/api/Cake.Issues/IIssue">IIssue</a></td>
-						<td>Issue for which the path should be returned.</td>
+						<td>Issue whose values should be used to replace the patterns.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -241,7 +311,7 @@
 				</thead>
 				<tbody><tr>
 					<td>string</td>
-					<td>Full path of the file affected by the issue.</td>
+					<td>Value with all patterns replaced.</td>
 				</tr>
 			</tbody></table>
 		</div>
