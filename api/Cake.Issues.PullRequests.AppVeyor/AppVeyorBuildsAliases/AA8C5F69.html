@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - IIssueExtension Class</title>
+        <title>Cake - API - AppVeyorBuildsAliases.AppVeyorBuilds(ICakeContext, AppVeyorBuildSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -82,7 +82,10 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Methods">Methods</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Attributes">Attributes</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -142,26 +145,15 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.Issues.Reporting.Generic.dll">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Issues.PullRequests.AppVeyor.dll">Cake<wbr>.Issues<wbr>.PullRequests<wbr>.AppVeyor<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Issues.Reporting.Generic">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic</a></li>
+		<li><a href="/api/Cake.Issues.PullRequests.AppVeyor">Cake<wbr>.Issues<wbr>.PullRequests<wbr>.AppVeyor</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorBuildsAliases">App<wbr>Veyor<wbr>Builds<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/ColumnSortOrder">ColumnSortOrder</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/DevExtremeTheme">DevExtremeTheme</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportTemplate">Generic<wbr>Issue<wbr>Report<wbr>Template</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/HtmlDxDataGridOption">HtmlDxDataGridOption</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/ReportColumn">ReportColumn</a></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/ColumnSortOrderExtensions">Column<wbr>Sort<wbr>Order<wbr>Extensions</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/DevExtremeThemeExtensions">Dev<wbr>Extreme<wbr>Theme<wbr>Extensions</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/FileLinkSettings">FileLinkSettings</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatAliases">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Aliases</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatSettings">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Settings</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/GenericIssueReportFormatSettingsExtensions">Generic<wbr>Issue<wbr>Report<wbr>Format<wbr>Settings<wbr>Extensions</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/HtmlDxDataGridColumnDescription">Html<wbr>Dx<wbr>Data<wbr>Grid<wbr>Column<wbr>Description</a></li>
-				<li class="selected"><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension">IIssueExtension</a></li>
-				<li><a href="/api/Cake.Issues.Reporting.Generic/ViewBagHelper">ViewBagHelper</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorBuildsAliases/667D0021">AppVeyorBuilds<wbr>(ICakeContext)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorBuildsAliases/AA8C5F69">AppVeyorBuilds<wbr>(ICakeContext, <wbr>App<wbr>Veyor<wbr>Build<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -176,135 +168,125 @@
 
 
 <section class="content-header">
-	<h1>IIssueExtension <small>Class</small></h1>
+			<h3><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorBuildsAliases">App<wbr>Veyor<wbr>Builds<wbr>Aliases</a>.</h3>
+	<h1>AppVeyorBuilds<wbr>(ICakeContext, <wbr>App<wbr>Veyor<wbr>Build<wbr>Settings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/Cake.Issues.Reporting.Generic" class="alert-link">https://github.com/cake-contrib/Cake.Issues.Reporting.Generic</a>.
+                        <a href="https://github.com/cake-contrib/Cake.Issues.PullRequests.AppVeyor" class="alert-link">https://github.com/cake-contrib/Cake.Issues.PullRequests.AppVeyor</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Extension for <code class="cs"><a href="/api/Cake.Issues/IIssue">IIssue</a></code>.
-            </div>
+             Gets an object for writing issues to AppVeyor builds using the specified settings.
+             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-								<dt>Assembly</dt>
-								<dd><a href="/api/Cake.Issues.Reporting.Generic.dll">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic<wbr>.dll</a></dd>
-
-								<dt>Namespace</dt>
-								<dd><a href="/api/Cake.Issues.Reporting.Generic">Cake<wbr>.Issues<wbr>.Reporting<wbr>.Generic</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
-	Type["IIssueExtension"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Cake.Issues.PullRequests.AppVeyor.dll">Cake<wbr>.Issues<wbr>.PullRequests<wbr>.AppVeyor<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Cake.Issues.PullRequests.AppVeyor">Cake<wbr>.Issues<wbr>.PullRequests<wbr>.AppVeyor</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorBuildsAliases">App<wbr>Veyor<wbr>Builds<wbr>Aliases</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class IIssueExtension</code></pre>
+	<pre><code>public static IPullRequestSystem AppVeyorBuilds(this ICakeContext context, AppVeyorBuildSettings settings)</code></pre>
+
+	<h1 id="Examples">Examples</h1>
+	<div>
+             <p>Report code analysis issues reported as MsBuild warnings to an AppVeyor build:</p>
+             <pre><code class="cs"> var appVeyorSettings =
+         new AppVeyorBuildSettings
+         {
+             MessagePattern = "Project: {ProjectName}, File: {FilePath}, Line: {Line}"
+         };
+
+     ReportCodeAnalysisIssuesToPullRequest(
+         MsBuildCodeAnalysis(
+             @"c:\build\msbuild.log",
+             MsBuildXmlFileLoggerFormat),
+         AppVeyorBuilds(appVeyorSettings),
+         @"c:\repo");</code></pre>
+             </div>
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td>The context.</td>
+					</tr>
+					<tr>
+						<td>settings</td>
+						<td><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorBuildSettings">App<wbr>Veyor<wbr>Build<wbr>Settings</a></td>
+						<td>Settings for accessing AppVeyor.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
-
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/E18458C4">FileDirectory<wbr>(IIssue)<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Returns the directory of the <code class="cs"><a href="/api/Cake.Issues/IIssue/BF0CD6F1">AffectedFileRelativePath</a></code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/54FD88B8">FileName<wbr>(IIssue)<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Returns the name of the file of the <code class="cs"><a href="/api/Cake.Issues/IIssue/BF0CD6F1">AffectedFileRelativePath</a></code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/556A9E0A">FilePath<wbr>(IIssue)<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Returns the full path of the <code class="cs"><a href="/api/Cake.Issues/IIssue/BF0CD6F1">AffectedFileRelativePath</a></code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/F847D03B">GetExpandoObject<wbr>(IIssue, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>bool, <wbr>FileLinkSettings, <wbr>IDictionary<wbr>&lt;string, <wbr>Func<wbr>&lt;IIssue, <wbr>object&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>ExpandoObject</td>
-								<td>
-									<div>
-            Returns an dynamic object containing the properties of an issue.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Reporting.Generic/IIssueExtension/D8A4E43C">ProjectPath<wbr>(IIssue)<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Returns the full path of <code class="cs"><a href="/api/Cake.Issues/IIssue/FDE5E663">ProjectFileRelativePath</a></code> or <code class="cs">null</code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td><a href="/api/Cake.Issues.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
+					<td>Object for writing issues to AppVeyor builds.</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	
