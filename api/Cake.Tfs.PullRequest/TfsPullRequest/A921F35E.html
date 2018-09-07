@@ -158,6 +158,7 @@
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/6D8EBAE1">CollectionUrl</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/8F4A5EA2">HasPullRequestLoaded</a></li>
 				<li class="selected"><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/A921F35E">LastSourceCommitId</a></li>
+				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/AA2044DC">LastTargetCommitId</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/D3360158">ProjectName</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/01D46E47">PullRequestId</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/4CE12CF2">RepositoryId</a></li>
@@ -192,7 +193,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Gets the hash of the latest commit on the source branch.
+            Gets the commit at the head of the source branch at the time of the last pull request merge.
             Returns <code class="cs">System.String.Empty</code> if no pull request could be found and
             <code class="cs"><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings/21F4914A">ThrowExceptionIfPullRequestCouldNotBeFound</a></code> is set to <code class="cs">false</code>.
             </div>

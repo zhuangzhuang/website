@@ -259,7 +259,7 @@ or
 <h3 id="include-and-exclude-options-1">Include and Exclude Options:</h3>
 <pre><code class="language-csharp">#load nuget:?package=utilities.cake&amp;include=/**/NoFoo.cake
 or
-#load nuget:?package=utilities.cake&amp;=exclude/**/Foo.cake
+#load nuget:?package=utilities.cake&amp;exclude=/**/Foo.cake
 </code></pre>
 <h1 id="reference-directive">Reference directive</h1>
 <p>The reference directive is used to reference external assemblies for use in your scripts.</p>
@@ -288,7 +288,7 @@ Specify the <code>include</code> parameter if the executable does not end with .
 <h3 id="include-and-exclude-options-2">Include and Exclude Options:</h3>
 <pre><code class="language-csharp">#tool nuget:?package=Cake.Foo&amp;include=/**/NoFoo.exe
 or
-#tool nuget:?package=Cake.Foo&amp;=exclude/**/Foo.exe
+#tool nuget:?package=Cake.Foo&amp;exclude=/**/Foo.exe
 </code></pre>
 <h1 id="shebang-directive">Shebang directive</h1>
 <p>Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead, passing to it as an argument the path that was initially used when attempting to run the script.</p>
