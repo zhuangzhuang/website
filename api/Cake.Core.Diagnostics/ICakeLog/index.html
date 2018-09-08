@@ -197,9 +197,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
-											<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>								
 											<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>								
+											<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>								
+											<li><a href="/api/Cake.Testing/FakeLog">FakeLog</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -209,12 +209,12 @@
 							graph TD
 	Type["ICakeLog"]
 class Type type-node
-	Type-.-&gt;Implementing0["FakeLog"]
-	click Implementing0 "/api/Cake.Testing/FakeLog"
+	Type-.-&gt;Implementing0["NullLog"]
+	click Implementing0 "/api/Cake.Core.Diagnostics/NullLog"
 	Type-.-&gt;Implementing1["CakeBuildLog"]
 	click Implementing1 "/api/Cake.Core.Diagnostics/CakeBuildLog"
-	Type-.-&gt;Implementing2["NullLog"]
-	click Implementing2 "/api/Cake.Core.Diagnostics/NullLog"
+	Type-.-&gt;Implementing2["FakeLog"]
+	click Implementing2 "/api/Cake.Testing/FakeLog"
 
 						</div>
 					</div>
