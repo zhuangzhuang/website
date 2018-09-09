@@ -227,6 +227,9 @@ RunTarget(target);
 <p>With this Cake script, you can run a specific target by passing the <code>-Target</code> argument to <code>Cake.exe</code>. Thus, we can run the <code>"Publish"</code> target by calling:</p>
 <pre><code class="language-powershell">./build.ps1 -Target Publish
 </code></pre>
+<p>The <code>--exclusive</code> parameter causes <code>RunTarget</code> to run only the specified target and no dependencies. This command runs the Publish target without running the Build target:</p>
+<pre><code class="language-powershell">./build.ps1 --target Publish --exclusive
+</code></pre>
 
 	</section>
                 
