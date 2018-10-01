@@ -154,7 +154,7 @@
     <li><a href="/dsl/apigee">Apigee</a></li>        
     <li><a href="/dsl/appcenter">AppCenter</a></li>        
     <li><a href="/dsl/applesimulator">AppleSimulator</a></li>        
-    <li><a href="/dsl/apppacakager">AppPacakager</a></li>        
+    <li><a href="/dsl/apppackager">AppPackager</a></li>        
     <li><a href="/dsl/apprenda">Apprenda</a></li>        
     <li><a href="/dsl/appveyor">AppVeyor</a></li>        
     <li><a href="/dsl/argument">Argument</a></li>        
@@ -320,8 +320,11 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
-            you can provide the StrongNameToolSettings with ForceVerification set to true.
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
+            strong name or not.
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
             </div>
 
 

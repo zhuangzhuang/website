@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -178,7 +179,15 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>Contains functionality related to create app packages using <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/hh446767(v=vs.85).aspx">MakeAppx.exe</a>.</p>
+            <p>
+            In order to use the commands for this alias, App packager (MakeAppx) will need to be installed on the machine where
+            the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+            </p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -194,7 +203,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
@@ -204,7 +213,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Type["AppPackagerAliases"]
 class Type type-node
 
@@ -258,7 +267,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/2980289E">AppBundle<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application bundle using the specificed output name, content.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -266,7 +277,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/F9CAB74F">AppBundle<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application bundle using the specificed output name, content, and settings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -274,7 +287,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/E6DE05A1">AppBundle<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application bundle using the specificed output name, content, and AppxManifest.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -282,7 +297,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/944DE644">AppBundle<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application bundle using the specificed output name, content, AppxManifest, and settings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -290,7 +307,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/C5742A4E">AppDecrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an decrypted app package from the specified input app package at the specified output package using global test key.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -298,7 +317,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/1EFE9258">AppDecrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an decrypted app package from the specified input app package at the specified output package using global test key.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -306,7 +327,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/AD7D1BCE">AppDecrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an decrypted app package from the specified input app package at the specified output package.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -314,7 +337,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/58EB4D1F">AppDecrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an decrypted app package from the specified input app package at the specified output package.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -322,7 +347,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/AA62406F">AppEncrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an encrypted app package from the specified input app package at the specified output package using global test key.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -330,7 +357,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/8F17F595">AppEncrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an encrypted app package from the specified input app package at the specified output package using global test key.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -338,7 +367,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/AC65FE64">AppEncrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an encrypted app package from the specified input app package at the specified output package.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -346,7 +377,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/BD09BF2B">AppEncrypter<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an encrypted app package from the specified input app package at the specified output package.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -354,7 +387,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/9E16BBCF">AppPack<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application package using the specificed output name, content, and setttings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -362,7 +397,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/1F4D0B74">AppPack<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application package using the specificed output name, content, and setttings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -370,7 +407,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/C591964C">AppPack<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application package using the specificed output name, AppxManifest, and setttings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -378,7 +417,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/7E8AFD71">AppPack<wbr>(ICakeContext, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application package using the specificed output name, AppxManifest, and setttings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -386,7 +427,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/76B7CD63">AppUnbundle<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application bundle using the specificed input name and location to unbundle.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -394,7 +437,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/B94B9F5B">AppUnbundle<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application bundle using the specificed input name, location to unbundle, and settings.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -402,7 +447,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/0FDE3D09">AppUnpack<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            The App Packager unpacker used to unpack applications.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -410,7 +457,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerAliases/66C9CD70">AppUnpack<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            The App Packager unpacker used to unpack applications.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

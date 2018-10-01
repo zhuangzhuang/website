@@ -312,6 +312,16 @@ class Type type-node
 											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmSettings">NpmSettings</a></em></small></div>
 								</td>
 							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm.Ci/NpmCiSettings/4870501C">Registry</a></td>
+								<td>Uri</td>
+								<td>
+									<div>
+            Gets or sets the registry where packages should be restored from.
+            Defaulted to whatever the NPM configuration is.
+            </div>
+								</td>
+							</tr>
 					</tbody></table>
 				</div>
 			</div>
@@ -388,6 +398,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Npm.Ci/NpmCiSettingsExtensions/8B4EC905">FromRegistry<wbr>(Uri)<wbr></a></td>
+								<td><a href="/api/Cake.Npm.Ci/NpmCiSettings">NpmCiSettings</a></td>
+								<td>
+									<div>
+            Instructs npm to look for packages in the given registry.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Npm.Ci/NpmCiSettingsExtensions">Npm<wbr>Ci<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Npm addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>Npm<wbr>Ci<wbr>Settings&gt;<wbr><wbr>(NpmCiSettings[])<wbr></a></td>
 								<td>bool</td>
 								<td>
@@ -399,17 +420,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Npm<wbr>Ci<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Npm<wbr>Ci<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -418,6 +428,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Npm<wbr>Ci<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

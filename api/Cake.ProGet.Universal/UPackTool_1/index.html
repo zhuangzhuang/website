@@ -210,8 +210,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.ProGet.Universal.Push/UniversalPackagePusher">Universal<wbr>Package<wbr>Pusher</a></li>								
-											<li><a href="/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker">Universal<wbr>Package<wbr>Unpacker</a></li>								
 											<li><a href="/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker">Universal<wbr>Package<wbr>Packer</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker">Universal<wbr>Package<wbr>Unpacker</a></li>								
 											<li><a href="/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller">Universal<wbr>Package<wbr>Installer</a></li>								
 									</ul>
 								</dd>			
@@ -226,10 +226,10 @@
 class Type type-node
 	Type--&gt;Derived0["UniversalPackagePusher"]
 	click Derived0 "/api/Cake.ProGet.Universal.Push/UniversalPackagePusher"
-	Type--&gt;Derived1["UniversalPackageUnpacker"]
-	click Derived1 "/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker"
-	Type--&gt;Derived2["UniversalPackagePacker"]
-	click Derived2 "/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker"
+	Type--&gt;Derived1["UniversalPackagePacker"]
+	click Derived1 "/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker"
+	Type--&gt;Derived2["UniversalPackageUnpacker"]
+	click Derived2 "/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker"
 	Type--&gt;Derived3["UniversalPackageInstaller"]
 	click Derived3 "/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller"
 
@@ -395,17 +395,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;UPackTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;UPackTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -414,6 +403,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;UPackTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
