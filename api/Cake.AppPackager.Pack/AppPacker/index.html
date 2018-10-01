@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -174,7 +175,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            The App Packager packer used to pack applications.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -233,7 +238,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AppPackager.Pack/AppPacker/1006CBC2">AppPacker<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>I<wbr>App<wbr>Packager<wbr>Resolver)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -256,17 +263,21 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/A3C8219C">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets alternative file paths which the tool may exist in
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/9273AC42">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the possible names of the tool executable.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
@@ -274,7 +285,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/99B6A64B">GetToolName<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the name of the tool.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
@@ -282,14 +295,18 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager.Pack/AppPacker/CFB66847">Pack<wbr>(FilePath, <wbr>DirectoryPath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application package using the specificed output name, content, and setttings.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppPackager.Pack/AppPacker/A59BEEF1">Pack<wbr>(FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Create an application package using the specificed output name, mapping file, and setttings.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>

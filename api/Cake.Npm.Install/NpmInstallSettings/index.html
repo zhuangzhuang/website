@@ -361,7 +361,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings/9E8B856E">Registry</a></td>
-								<td>string</td>
+								<td>Uri</td>
 								<td>
 									<div>
             Gets or sets a value indicating which registry we should point to. Defaulted to whatever the NPM configuration is.
@@ -495,6 +495,17 @@ class Type type-node
             Sets the working directory which should be used to run the npm command.
             </div>
 										<div><small><em>From <a href="/api/Cake.Npm/NpmSettingsExtensions">Npm<wbr>Settings<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Npm addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions/DC4BDC1B">FromRegistry<wbr>(Uri)<wbr></a></td>
+								<td><a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a></td>
+								<td>
+									<div>
+            Instructs npm to look for packages in the given registry.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Npm.Install/NpmInstallSettingsExtensions">Npm<wbr>Install<wbr>Settings<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Npm addin</em></small></div>
 								</td>
 							</tr>

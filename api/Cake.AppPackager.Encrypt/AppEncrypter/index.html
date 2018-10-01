@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
@@ -174,7 +175,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            The App Packager encrypter used to encrypt packages.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -233,7 +238,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter/7BE59489">AppEncrypter<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator, <wbr>I<wbr>App<wbr>Packager<wbr>Resolver)<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -258,22 +265,28 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter/90B9CFF3">Encrypt<wbr>(FilePath, <wbr>FilePath, <wbr>FilePath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Creates an encrypted app package from the specified input app package at the specified output package.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/A3C8219C">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets alternative file paths which the tool may exist in
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/9273AC42">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the possible names of the tool executable.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
@@ -281,7 +294,9 @@ class Type type-node
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/99B6A64B">GetToolName<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the name of the tool.
+            </div>
 											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
