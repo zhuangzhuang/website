@@ -4,7 +4,7 @@
 	<id>https://cakebuild.net/</id>
 	<title>Cake</title>
 	<rights>2018</rights>
-	<updated>2018-10-02T07:26:55Z</updated>
+	<updated>2018-10-02T08:01:08Z</updated>
 	<entry>
 		<author>
 			<name>devlead</name>
@@ -841,7 +841,7 @@ Source=https://api.nuget.org/v3/index.json;https://www.myget.org/F/cake/api/v3/i
 &lt;pre&gt;&lt;code&gt;nuget.exe install Cake.Bakery -OutputDirectory &amp;lt;global_path&amp;gt; -ExcludeVersion
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol start="2"&gt;
-&lt;li&gt;Create a file called &lt;code&gt;omnisharp.json&lt;/code&gt; in &lt;code&gt;%USERPROFILE%/.omnisharp/&lt;/code&gt; (&lt;code&gt;~/.omnisharp/&lt;/code&gt; if you are on Linux/macOS) with the following content (replace &amp;lt;global_path&amp;gt; with the path you chose in the previous step):&lt;/li&gt;
+&lt;li&gt;Create a file called &lt;code&gt;omnisharp.json&lt;/code&gt; in &lt;code&gt;%USERPROFILE%/.omnisharp/&lt;/code&gt; (&lt;code&gt;~/.omnisharp/&lt;/code&gt; if you are on Linux/macOS, and make sure to use double backslashes (\) on Windows) with the following content (replace &amp;lt;global_path&amp;gt; with the path you chose in the previous step):&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code class="language-json"&gt;{
   &amp;quot;cake&amp;quot;: {
