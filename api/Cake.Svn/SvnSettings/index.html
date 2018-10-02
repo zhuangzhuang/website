@@ -213,8 +213,8 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Svn.Add/SvnAddSettings">SvnAddSettings</a></li>								
-											<li><a href="/api/Cake.Svn/SvnRemoteSettings">SvnRemoteSettings</a></li>								
 											<li><a href="/api/Cake.Svn.Delete/SvnDeleteSettings">SvnDeleteSettings</a></li>								
+											<li><a href="/api/Cake.Svn/SvnRemoteSettings">SvnRemoteSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -228,10 +228,10 @@
 class Type type-node
 	Type--&gt;Derived0["SvnAddSettings"]
 	click Derived0 "/api/Cake.Svn.Add/SvnAddSettings"
-	Type--&gt;Derived1["SvnRemoteSettings"]
-	click Derived1 "/api/Cake.Svn/SvnRemoteSettings"
-	Type--&gt;Derived2["SvnDeleteSettings"]
-	click Derived2 "/api/Cake.Svn.Delete/SvnDeleteSettings"
+	Type--&gt;Derived1["SvnDeleteSettings"]
+	click Derived1 "/api/Cake.Svn.Delete/SvnDeleteSettings"
+	Type--&gt;Derived2["SvnRemoteSettings"]
+	click Derived2 "/api/Cake.Svn/SvnRemoteSettings"
 
 						</div>
 					</div>
@@ -352,17 +352,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;SvnSettings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;SvnSettings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -371,6 +360,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;SvnSettings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
