@@ -89,6 +89,7 @@
 <p><a href="#break-directive">Break directive</a></p>
 <p><a href="#using-static-directive">Using static directive</a></p>
 <p><a href="#module-directive">Module directive</a></p>
+<p><a href="#define-directive">Define directive</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -318,6 +319,18 @@ Information(Round(1.1));
 <p>As modules can change and extend the internals of Cake, this bootstrapping needs to be done before Cake executes. This is solved by bootrapping being it's own step by invoking Cake with a <code>--bootstrap</code> argument before you execute the script normally.</p>
 <pre><code class="language-bash">./cake.exe build.cake --bootstrap
 ./cake.exe build.cake
+</code></pre>
+<h1 id="define-directive">Define directive</h1>
+<p>The define directive - <code>#define</code> creates a symbol, it can be later use to decide, what Cake will execute. You use it like <code>#define</code> in C#.
+To check if symbol is defined, you have to use directives <code>#if</code> ... <code>#else</code> ... <code>#endif</code></p>
+<h2 id="usage-8">Usage</h2>
+<pre><code class="language-csharp">#define FOO
+
+#if (FOO)
+    // code in this branch will execute
+#else
+    // code in this branch will be skipped
+#endif
 </code></pre>
 
 	</section>
