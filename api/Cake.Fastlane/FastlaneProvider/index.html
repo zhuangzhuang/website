@@ -160,10 +160,8 @@
 				<li class="selected"><a href="/api/Cake.Fastlane/FastlaneProvider">FastlaneProvider</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneTool_1">FastlaneTool<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneToolProvider">FastlaneToolProvider</a></li>
 				<li><a href="/api/Cake.Fastlane/PilotCommand">PilotCommand</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Fastlane/IFastlaneDeliverProvider">I<wbr>Fastlane<wbr>Deliver<wbr>Provider</a></li>
-				<li><a href="/api/Cake.Fastlane/IFastlaneProvider">IFastlaneProvider</a></li>
 
 
                     </ul>
@@ -208,7 +206,13 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Fastlane/IFastlaneProvider">IFastlaneProvider</a></li>								
+											<li>IFastlaneProvider</li>								
+											<li>I<wbr>Fastlane<wbr>Tool<wbr>Provider</li>								
+											<li>I<wbr>Fastlane<wbr>Match<wbr>Provider</li>								
+											<li>I<wbr>Fastlane<wbr>Deliver<wbr>Provider</li>								
+											<li>IFastlanePemProvider</li>								
+											<li>I<wbr>Fastlane<wbr>Pilot<wbr>Provider</li>								
+											<li>I<wbr>Fastlane<wbr>Supply<wbr>Provider</li>								
 									</ul>
 								</dd>
 							
@@ -227,7 +231,12 @@
 							graph TD
 	Base0["Object"]--&gt;Type
 	Interface0["IFastlaneProvider"]-.-&gt;Type
-	click Interface0 "/api/Cake.Fastlane/IFastlaneProvider"
+	Interface1["IFastlaneToolProvider"]-.-&gt;Type
+	Interface2["IFastlaneMatchProvider"]-.-&gt;Type
+	Interface3["IFastlaneDeliverProvider"]-.-&gt;Type
+	Interface4["IFastlanePemProvider"]-.-&gt;Type
+	Interface5["IFastlanePilotProvider"]-.-&gt;Type
+	Interface6["IFastlaneSupplyProvider"]-.-&gt;Type
 	Type["FastlaneProvider"]
 class Type type-node
 
@@ -238,7 +247,9 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public sealed class FastlaneProvider : IFastlaneProvider</code></pre>
+	<pre><code>public sealed class FastlaneProvider : IFastlaneProvider, IFastlaneToolProvider, 
+    IFastlaneMatchProvider, IFastlaneDeliverProvider, IFastlanePemProvider, IFastlanePilotProvider, 
+    IFastlaneSupplyProvider</code></pre>
 
 
 
@@ -378,8 +389,17 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-             Executes fastlane supply with the specified configuration.
-             </div>
+              Executes fastlane supply with the specified configuration.
+              </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneProvider/B906FBD1">Update<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Executes fastlane updating to the latest version of fastlane.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -422,17 +442,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -441,6 +450,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -235,10 +235,14 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Twitter/TwitterProvider/E7146BC2">TwitterProvider<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Twitter/TwitterProvider/C054E9C3">TwitterProvider<wbr>(string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
 									<td>
-            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Twitter/TwitterProvider">TwitterProvider</a></code> class.
-            </td>
+             Creates an object for sending tweets to Twitter using Single-user OAuth.
+            
+             Get your access keys by creating an app at apps.twitter.com then visiting the
+             "Keys and Access Tokens" section for your app. They can be found under the
+             "Your Access Token" heading.
+             </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -260,11 +264,11 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Twitter/TwitterProvider/DF609D2F">SendTweet<wbr>(string)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.Twitter/TwitterProvider/E99B69AE">Tweet<wbr>(string)<wbr></a></td>
+								<td>Task<wbr>&lt;&gt;<wbr></td>
 								<td>
 									<div>
-            Send a tweet with the specified message.
+            Sends a tweet with the supplied text and returns the response from the Twitter API.
             </div>
 								</td>
 							</tr>
@@ -308,17 +312,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Twitter<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Twitter<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -327,6 +320,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Twitter<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

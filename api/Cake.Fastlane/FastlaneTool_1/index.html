@@ -84,6 +84,7 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Constructors">Constructors</a></p>
+<p><a href="#fields">Fields</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <p><a href="#SeeAlso">See Also</a></p>
@@ -162,10 +163,8 @@
 				<li><a href="/api/Cake.Fastlane/FastlaneProvider">FastlaneProvider</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>
 				<li class="selected"><a href="/api/Cake.Fastlane/FastlaneTool_1">FastlaneTool<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneToolProvider">FastlaneToolProvider</a></li>
 				<li><a href="/api/Cake.Fastlane/PilotCommand">PilotCommand</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Fastlane/IFastlaneDeliverProvider">I<wbr>Fastlane<wbr>Deliver<wbr>Provider</a></li>
-				<li><a href="/api/Cake.Fastlane/IFastlaneProvider">IFastlaneProvider</a></li>
 
 
                     </ul>
@@ -218,6 +217,7 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Fastlane/FastlaneToolProvider">FastlaneToolProvider</a></li>								
 											<li><a href="/api/Cake.Fastlane/FastlaneMatchProvider">Fastlane<wbr>Match<wbr>Provider</a></li>								
 									</ul>
 								</dd>			
@@ -230,8 +230,10 @@
 	Base0["Tool&lt;&gt;"]--&gt;Type
 	Type["FastlaneTool&lt;T&gt;"]
 class Type type-node
-	Type--&gt;Derived0["FastlaneMatchProvider"]
-	click Derived0 "/api/Cake.Fastlane/FastlaneMatchProvider"
+	Type--&gt;Derived0["FastlaneToolProvider"]
+	click Derived0 "/api/Cake.Fastlane/FastlaneToolProvider"
+	Type--&gt;Derived1["FastlaneMatchProvider"]
+	click Derived1 "/api/Cake.Fastlane/FastlaneMatchProvider"
 
 						</div>
 					</div>
@@ -286,6 +288,39 @@ class Type type-node
 		
 
 
+			<h1 id="fields">Fields</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Constant Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneTool_1/C1E6F2DF">BundleExecution</a></td>
+								<td></td>
+								<td>
+									<div>
+            The bundle execution
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneTool_1/45220C57">ToolName</a></td>
+								<td></td>
+								<td>
+									<div>
+            The tool name
+            </div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 			<h1 id="Methods">Methods</h1>
@@ -357,17 +392,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;FastlaneTool<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;FastlaneTool<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -376,6 +400,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;FastlaneTool<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
