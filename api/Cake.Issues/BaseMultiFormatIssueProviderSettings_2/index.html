@@ -231,9 +231,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProviderSettings">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesSettings">EsLintIssuesSettings</a></li>								
 											<li><a href="/api/Cake.Issues.MsBuild/MsBuildIssuesSettings">Ms<wbr>Build<wbr>Issues<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -249,12 +249,12 @@
 class Type type-node
 	Type--&gt;Derived0["FakeMultiFormatIssueProviderSettings"]
 	click Derived0 "/api/Cake.Issues.Testing/FakeMultiFormatIssueProviderSettings"
-	Type--&gt;Derived1["MarkdownlintIssuesSettings"]
-	click Derived1 "/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings"
-	Type--&gt;Derived2["EsLintIssuesSettings"]
-	click Derived2 "/api/Cake.Issues.EsLint/EsLintIssuesSettings"
-	Type--&gt;Derived3["MsBuildIssuesSettings"]
-	click Derived3 "/api/Cake.Issues.MsBuild/MsBuildIssuesSettings"
+	Type--&gt;Derived1["EsLintIssuesSettings"]
+	click Derived1 "/api/Cake.Issues.EsLint/EsLintIssuesSettings"
+	Type--&gt;Derived2["MsBuildIssuesSettings"]
+	click Derived2 "/api/Cake.Issues.MsBuild/MsBuildIssuesSettings"
+	Type--&gt;Derived3["MarkdownlintIssuesSettings"]
+	click Derived3 "/api/Cake.Issues.Markdownlint/MarkdownlintIssuesSettings"
 
 						</div>
 					</div>
@@ -396,17 +396,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Settings<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Settings<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -415,6 +404,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Settings<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
