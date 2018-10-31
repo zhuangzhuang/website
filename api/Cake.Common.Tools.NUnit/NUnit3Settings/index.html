@@ -145,13 +145,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.NUnit">Cake<wbr>.Common<wbr>.Tools<wbr>.NUnit</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3AppDomainUsage">NUnit3AppDomainUsage</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Labels">NUnit3Labels</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3ProcessOption">NUnit3ProcessOption</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAppDomainUsage">NUnitAppDomainUsage</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevel">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitProcessOption">NUnitProcessOption</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Aliases">NUnit3Aliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Result">NUnit3Result</a></li>
@@ -161,6 +154,13 @@
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevelExtensions">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitRunner">NUnitRunner</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitSettings">NUnitSettings</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3AppDomainUsage">NUnit3AppDomainUsage</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Labels">NUnit3Labels</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3ProcessOption">NUnit3ProcessOption</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAppDomainUsage">NUnitAppDomainUsage</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevel">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitProcessOption">NUnitProcessOption</a></li>
 
 
                     </ul>
@@ -245,7 +245,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/AFC6295B">Agents</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the maximum number of test assembly agents to run at one
@@ -267,7 +267,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
+								<td>Func<wbr>&lt;<a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>, <wbr><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -299,7 +299,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -392,7 +392,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/32637141">Params</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the parameters that should be passed to the runner.
@@ -411,7 +411,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/5FA90E73">Results</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Common.Tools.NUnit/NUnit3Result">NUnit3Result</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the results that should be saved.
@@ -420,7 +420,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/EB514776">Seed</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the random seed used to generate test cases.
@@ -486,7 +486,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/D938EC6D">Timeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the default timeout to be used for test cases in this run.
@@ -506,7 +506,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.
@@ -516,7 +516,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/A9562D30">TraceLevel</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevel">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level?</a></td>
 								<td>
 									<div>
     Gets or sets the level of detail at which the runner should write to its internal trace log.
@@ -555,7 +555,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings/8B308054">Workers</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the number of worker threads to be used

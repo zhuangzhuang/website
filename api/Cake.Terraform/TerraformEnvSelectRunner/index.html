@@ -211,8 +211,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner<wbr>&lt;<wbr>T<wbr>Terraform<wbr>Settings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Terraform/TerraformEnvSelectSettings">Terraform<wbr>Env<wbr>Select<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner</a><wbr>&lt;<a href="/api/Cake.Terraform/TerraformEnvSelectSettings">Terraform<wbr>Env<wbr>Select<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -222,9 +222,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["TerraformRunner&lt;TTerraformSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Terraform/TerraformRunner_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base0["TerraformRunner&lt;TerraformEnvSelectSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;TerraformEnvSelectSettings&gt;"]--&gt;Base0
 	Type["TerraformEnvSelectRunner"]
 class Type type-node
 
@@ -276,22 +275,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Terraform/TerraformRunner_1/746B65D4">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div></div>
-											<div><small><em>Inherited from <a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner<wbr>&lt;<wbr>T<wbr>Terraform<wbr>Settings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Terraform/TerraformRunner_1/AC5039B2">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div></div>
-											<div><small><em>Inherited from <a href="/api/Cake.Terraform/TerraformRunner_1">TerraformRunner<wbr>&lt;<wbr>T<wbr>Terraform<wbr>Settings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Terraform/TerraformEnvSelectRunner/89818626">Run<wbr>(<wbr>Terraform<wbr>Env<wbr>Select<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>

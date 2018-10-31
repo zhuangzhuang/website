@@ -192,7 +192,7 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>object</li>								
-											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -200,17 +200,17 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Uninstall/ChocolateyUninstaller">Chocolatey<wbr>Uninstaller</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstaller">ChocolateyInstaller</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.New/ChocolateyScaffolder">ChocolateyScaffolder</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySetter">Chocolatey<wbr>Api<wbr>Key<wbr>Setter</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureToggler">Chocolatey<wbr>Feature<wbr>Toggler</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloader">ChocolateyDownloader</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPacker">ChocolateyPacker</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgrader">ChocolateyUpgrader</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSetter">Chocolatey<wbr>Config<wbr>Setter</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySources">ChocolateySources</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPusher">ChocolateyPusher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPacker">ChocolateyPacker</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.New/ChocolateyScaffolder">ChocolateyScaffolder</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinner">ChocolateyPinner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPusher">ChocolateyPusher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureToggler">Chocolatey<wbr>Feature<wbr>Toggler</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstaller">ChocolateyInstaller</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloader">ChocolateyDownloader</a></li>								
 									</ul>
 								</dd>			
 							
@@ -220,34 +220,33 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Core.Tooling/Tool_1"
 	Base1["object"]--&gt;Base0
 	Type["ChocolateyTool&lt;TSettings&gt;"]
 class Type type-node
 	Type--&gt;Derived0["ChocolateyUninstaller"]
 	click Derived0 "/api/Cake.Common.Tools.Chocolatey.Uninstall/ChocolateyUninstaller"
-	Type--&gt;Derived1["ChocolateyInstaller"]
-	click Derived1 "/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstaller"
-	Type--&gt;Derived2["ChocolateyScaffolder"]
-	click Derived2 "/api/Cake.Common.Tools.Chocolatey.New/ChocolateyScaffolder"
-	Type--&gt;Derived3["ChocolateyApiKeySetter"]
-	click Derived3 "/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySetter"
-	Type--&gt;Derived4["ChocolateyFeatureToggler"]
-	click Derived4 "/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureToggler"
-	Type--&gt;Derived5["ChocolateyDownloader"]
-	click Derived5 "/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloader"
-	Type--&gt;Derived6["ChocolateyPacker"]
-	click Derived6 "/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPacker"
-	Type--&gt;Derived7["ChocolateyUpgrader"]
-	click Derived7 "/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgrader"
-	Type--&gt;Derived8["ChocolateyConfigSetter"]
-	click Derived8 "/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSetter"
-	Type--&gt;Derived9["ChocolateySources"]
-	click Derived9 "/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySources"
-	Type--&gt;Derived10["ChocolateyPusher"]
-	click Derived10 "/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPusher"
-	Type--&gt;Derived11["ChocolateyPinner"]
-	click Derived11 "/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinner"
+	Type--&gt;Derived1["ChocolateyApiKeySetter"]
+	click Derived1 "/api/Cake.Common.Tools.Chocolatey.ApiKey/ChocolateyApiKeySetter"
+	Type--&gt;Derived2["ChocolateyUpgrader"]
+	click Derived2 "/api/Cake.Common.Tools.Chocolatey.Upgrade/ChocolateyUpgrader"
+	Type--&gt;Derived3["ChocolateyConfigSetter"]
+	click Derived3 "/api/Cake.Common.Tools.Chocolatey.Config/ChocolateyConfigSetter"
+	Type--&gt;Derived4["ChocolateySources"]
+	click Derived4 "/api/Cake.Common.Tools.Chocolatey.Sources/ChocolateySources"
+	Type--&gt;Derived5["ChocolateyPacker"]
+	click Derived5 "/api/Cake.Common.Tools.Chocolatey.Pack/ChocolateyPacker"
+	Type--&gt;Derived6["ChocolateyScaffolder"]
+	click Derived6 "/api/Cake.Common.Tools.Chocolatey.New/ChocolateyScaffolder"
+	Type--&gt;Derived7["ChocolateyPinner"]
+	click Derived7 "/api/Cake.Common.Tools.Chocolatey.Pin/ChocolateyPinner"
+	Type--&gt;Derived8["ChocolateyPusher"]
+	click Derived8 "/api/Cake.Common.Tools.Chocolatey.Push/ChocolateyPusher"
+	Type--&gt;Derived9["ChocolateyFeatureToggler"]
+	click Derived9 "/api/Cake.Common.Tools.Chocolatey.Features/ChocolateyFeatureToggler"
+	Type--&gt;Derived10["ChocolateyInstaller"]
+	click Derived10 "/api/Cake.Common.Tools.Chocolatey.Install/ChocolateyInstaller"
+	Type--&gt;Derived11["ChocolateyDownloader"]
+	click Derived11 "/api/Cake.Common.Tools.Chocolatey.Download/ChocolateyDownloader"
 
 						</div>
 					</div>
@@ -326,7 +325,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1/27F480CE">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/FilePath">FilePath</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets alternative file paths which the tool may exist in
@@ -334,18 +333,8 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/32C94032">Get<wbr>Environment<wbr>Variables<wbr>(TSettings)<wbr></a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
-								<td>
-									<div>
-    Gets the environment variables.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1/DB01D628">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the possible names of the tool executable.
@@ -359,78 +348,6 @@ class Type type-node
 									<div>
     Gets the name of the tool.
     </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/FAB95BAD">GetToolPath<wbr>(TSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
-								<td>
-									<div>
-    Gets the resolved tool path.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/9C92E157">GetWorkingDirectory<wbr>(TSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
-								<td>
-									<div>
-    Gets the working directory.
-    Defaults to the currently set working directory.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/5E8C62B8">ProcessExitCode<wbr>(int)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Customized exit code handling.
-    Standard behavior is to fail when non zero.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/7C97BC0F">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Runs the tool using the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/8253AA41">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Runs the tool using a custom tool path and the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/A736B09F">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
-								<td>
-									<div>
-    Runs the tool using a custom tool path and the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/225385F4">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
-								<td>
-									<div>
-    Runs the tool using a custom tool path and the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

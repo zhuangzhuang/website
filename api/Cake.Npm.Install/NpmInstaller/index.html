@@ -83,7 +83,6 @@
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
-<p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -198,8 +197,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Npm/NpmTool_1">NpmTool</a><wbr>&lt;<a href="/api/Cake.Npm.Install/NpmInstallSettings">NpmInstallSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -209,9 +208,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["NpmTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Npm/NpmTool_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base0["NpmTool&lt;NpmInstallSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;NpmInstallSettings&gt;"]--&gt;Base0
 	Type["NpmInstaller"]
 class Type type-node
 
@@ -252,31 +250,6 @@ class Type type-node
 
 
 
-			<h1 id="Properties">Properties</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Npm/NpmTool_1/73A86D9C">CakeLog</a></td>
-								<td>ICakeLog</td>
-								<td>
-									<div>
-            Cake log instance.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 			<h1 id="Methods">Methods</h1>
 			<div class="box">
@@ -290,62 +263,12 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Npm/NpmTool_1/5C41958F">GetArguments<wbr>(TSettings)<wbr></a></td>
-								<td>Process<wbr>Argument<wbr>Builder</td>
-								<td>
-									<div>
-            Builds the arguments for npm.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Npm/NpmTool_1/8D13141B">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the possible names of the tool executable.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Npm/NpmTool_1/8142AE0D">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the name of the tool.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Npm.Install/NpmInstaller/28DE3687">Install<wbr>(NpmInstallSettings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
             Installs a npm package from the specified settings.
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Npm/NpmTool_1/43C49967">RunCore<wbr>(TSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Runs npm.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Npm/NpmTool_1/C4670B0D">RunCore<wbr>(TSettings, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Runs npm.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Npm/NpmTool_1">NpmTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

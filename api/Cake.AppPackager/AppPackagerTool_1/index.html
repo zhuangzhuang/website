@@ -201,19 +201,19 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.AppPackager/AppPackagerTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
-											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
-											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
-											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
+											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
+											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
 									</ul>
 								</dd>			
 							
@@ -222,21 +222,21 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;&gt;"]--&gt;Type
+	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
 	Type["AppPackagerTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["AppBundler"]
-	click Derived0 "/api/Cake.AppPackager.Bundle/AppBundler"
-	Type--&gt;Derived1["AppDecrypter"]
-	click Derived1 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
-	Type--&gt;Derived2["AppUnbundler"]
-	click Derived2 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
+	Type--&gt;Derived0["AppUnpacker"]
+	click Derived0 "/api/Cake.AppPackager.Unpack/AppUnpacker"
+	Type--&gt;Derived1["AppEncrypter"]
+	click Derived1 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
+	Type--&gt;Derived2["AppBundler"]
+	click Derived2 "/api/Cake.AppPackager.Bundle/AppBundler"
 	Type--&gt;Derived3["AppPacker"]
 	click Derived3 "/api/Cake.AppPackager.Pack/AppPacker"
-	Type--&gt;Derived4["AppUnpacker"]
-	click Derived4 "/api/Cake.AppPackager.Unpack/AppUnpacker"
-	Type--&gt;Derived5["AppEncrypter"]
-	click Derived5 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
+	Type--&gt;Derived4["AppDecrypter"]
+	click Derived4 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
+	Type--&gt;Derived5["AppUnbundler"]
+	click Derived5 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
 
 						</div>
 					</div>
@@ -306,7 +306,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/A3C8219C">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
 									<div>
             Gets alternative file paths which the tool may exist in
@@ -315,7 +315,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/9273AC42">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.

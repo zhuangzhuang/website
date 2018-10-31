@@ -201,7 +201,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.StrongNameTool/StrongNameToolSettings">Strong<wbr>Name<wbr>Tool<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -211,7 +211,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;&gt;"]--&gt;Type
+	Base0["Tool&lt;StrongNameToolSettings&gt;"]--&gt;Type
 	Type["StrongNameToolRunner"]
 class Type type-node
 
@@ -266,7 +266,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameToolRunner/BD6488C3">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(<wbr>Strong<wbr>Name<wbr>Tool<wbr>Settings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
 									<div>
             Gets alternative file paths which the tool may exist in
@@ -275,7 +275,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.StrongNameTool/StrongNameToolRunner/C9EDC9CE">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.

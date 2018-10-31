@@ -199,7 +199,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.VsMetrics/VsMetricsSettings">VsMetricsSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -209,7 +209,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;&gt;"]--&gt;Type
+	Base0["Tool&lt;VsMetricsSettings&gt;"]--&gt;Type
 	Type["VsMetricsRunner"]
 class Type type-node
 
@@ -264,7 +264,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsRunner/FC664023">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(VsMetricsSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
 									<div>
             Gets the alternative tool paths to metrics.exe depending on the tool version.
@@ -273,7 +273,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.VsMetrics/VsMetricsRunner/9A6ED9D4">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets the name of the tool executable.

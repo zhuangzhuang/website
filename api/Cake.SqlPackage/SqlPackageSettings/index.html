@@ -208,13 +208,13 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SqlPackage/SqlPackagePublishSettings">Sql<wbr>Package<wbr>Publish<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageExtractSettings">Sql<wbr>Package<wbr>Extract<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageExportSettings">Sql<wbr>Package<wbr>Export<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageScriptSettings">Sql<wbr>Package<wbr>Script<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportSettings">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageImportSettings">Sql<wbr>Package<wbr>Import<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.SqlPackage/SqlPackageDriftReportSettings">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageImportSettings">Sql<wbr>Package<wbr>Import<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackagePublishSettings">Sql<wbr>Package<wbr>Publish<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageExportSettings">Sql<wbr>Package<wbr>Export<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportSettings">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageScriptSettings">Sql<wbr>Package<wbr>Script<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageExtractSettings">Sql<wbr>Package<wbr>Extract<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -226,20 +226,20 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["SqlPackageSettings"]
 class Type type-node
-	Type--&gt;Derived0["SqlPackagePublishSettings"]
-	click Derived0 "/api/Cake.SqlPackage/SqlPackagePublishSettings"
-	Type--&gt;Derived1["SqlPackageExtractSettings"]
-	click Derived1 "/api/Cake.SqlPackage/SqlPackageExtractSettings"
-	Type--&gt;Derived2["SqlPackageExportSettings"]
-	click Derived2 "/api/Cake.SqlPackage/SqlPackageExportSettings"
-	Type--&gt;Derived3["SqlPackageScriptSettings"]
-	click Derived3 "/api/Cake.SqlPackage/SqlPackageScriptSettings"
+	Type--&gt;Derived0["SqlPackageDriftReportSettings"]
+	click Derived0 "/api/Cake.SqlPackage/SqlPackageDriftReportSettings"
+	Type--&gt;Derived1["SqlPackageImportSettings"]
+	click Derived1 "/api/Cake.SqlPackage/SqlPackageImportSettings"
+	Type--&gt;Derived2["SqlPackagePublishSettings"]
+	click Derived2 "/api/Cake.SqlPackage/SqlPackagePublishSettings"
+	Type--&gt;Derived3["SqlPackageExportSettings"]
+	click Derived3 "/api/Cake.SqlPackage/SqlPackageExportSettings"
 	Type--&gt;Derived4["SqlPackageDeployReportSettings"]
 	click Derived4 "/api/Cake.SqlPackage/SqlPackageDeployReportSettings"
-	Type--&gt;Derived5["SqlPackageImportSettings"]
-	click Derived5 "/api/Cake.SqlPackage/SqlPackageImportSettings"
-	Type--&gt;Derived6["SqlPackageDriftReportSettings"]
-	click Derived6 "/api/Cake.SqlPackage/SqlPackageDriftReportSettings"
+	Type--&gt;Derived5["SqlPackageScriptSettings"]
+	click Derived5 "/api/Cake.SqlPackage/SqlPackageScriptSettings"
+	Type--&gt;Derived6["SqlPackageExtractSettings"]
+	click Derived6 "/api/Cake.SqlPackage/SqlPackageExtractSettings"
 
 						</div>
 					</div>
@@ -332,7 +332,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/2AD7733D">OverwriteFiles</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -346,14 +346,14 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/DD3318F2">Properties</a></td>
-								<td>IDictionary<wbr>&lt;,&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/B091E931">Quiet</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -374,7 +374,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/E059BE93">Source<wbr>Encrypt<wbr>Connection</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -409,7 +409,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/6748E9D3">Source<wbr>Trust<wbr>Server<wbr>Certificate</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -437,7 +437,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/46A133D0">Target<wbr>Encrypt<wbr>Connection</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -472,7 +472,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/0C88E55D">Target<wbr>Trust<wbr>Server<wbr>Certificate</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
@@ -486,14 +486,14 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/462F3176">Universal<wbr>Authentication</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/D3FB6A39">Variables</a></td>
-								<td>IDictionary<wbr>&lt;,&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>

@@ -296,7 +296,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/F1EE99C7">DeleteAll<wbr>(string, <wbr>DateTimeOffset, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;IList<wbr>&lt;string&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
             Removes all objects from the bucket
@@ -323,7 +323,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/9CED2AAA">GetBytes<wbr>(string, <wbr>string, <wbr>DownloadSettings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;byte[]&gt;<wbr></td>
 								<td>
 									<div>
             Get the byte array of the content from Amazon S3
@@ -341,7 +341,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/3DC7C118">GetObject<wbr>(string, <wbr>string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;S3Object&gt;<wbr></td>
 								<td>
 									<div>
             Retrieves object from Amazon S3.
@@ -350,7 +350,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/E394DAB8">GetObjectMetaData<wbr>(string, <wbr>string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;MetadataCollection&gt;<wbr></td>
 								<td>
 									<div>
             Retrieves object Metadata from Amazon S3.
@@ -359,7 +359,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/E93F28FC">GetObjects<wbr>(string, <wbr>S3Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;IList<wbr>&lt;S3Object&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
             Returns all the objects in a S3 bucket.
@@ -377,7 +377,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/2A987091">Open<wbr>(string, <wbr>string, <wbr>DownloadSettings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;Stream&gt;<wbr></td>
 								<td>
 									<div>
             Opens a stream of the content from Amazon S3
@@ -386,7 +386,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/44C7C195">SyncDownload<wbr>(DirectoryPath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;IList<wbr>&lt;string&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -395,7 +395,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/5AC015EB">SyncDownload<wbr>(FilePath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified file from Amazon S3, checking the modified date of the local files with existing S3Objects and downloading them if its changed.
@@ -404,7 +404,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/FC75E8C2">SyncUpload<wbr>(DirectoryPath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;IList<wbr>&lt;string&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified file to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.
@@ -413,7 +413,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.S3/IS3Manager/626F154E">SyncUpload<wbr>(FilePath, <wbr>SyncSettings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Syncs the specified directory to Amazon S3, checking the modified date of the local files with existing S3Objects and uploading them if its changes.

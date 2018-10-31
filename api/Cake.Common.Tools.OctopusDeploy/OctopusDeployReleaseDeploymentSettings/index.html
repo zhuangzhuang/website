@@ -282,7 +282,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
+								<td>Func<wbr>&lt;<a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>, <wbr><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -322,7 +322,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings/23520F30">DeployAt</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>DateTimeOffset?</td>
 								<td>
 									<div>
     Gets or sets time at which deployment should start (scheduled deployment), specified as any valid DateTimeOffset format, and assuming the time zone is the current local time zone.
@@ -331,7 +331,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings/ED6FA6B9">Deployment<wbr>Checks<wbr>Leep<wbr>Cycle</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets how much time should elapse between deployment status checks(default 00:00:10).
@@ -340,7 +340,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings/DD888593">DeploymentTimeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets maximum time (timespan format) that the console session will wait for the deployment to finish (default 00:10:00).
@@ -370,7 +370,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -398,7 +398,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings/FB55F6F1">GuidedFailure</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to use Guided Failure mode. If not specified, will use default setting from environment.
@@ -521,7 +521,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.
@@ -541,7 +541,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings/E0CD1323">Variables</a></td>
-								<td>Dictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>Dictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets values for any prompted variables.

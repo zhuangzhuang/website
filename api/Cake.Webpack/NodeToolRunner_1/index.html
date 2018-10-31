@@ -205,14 +205,14 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Webpack/NodeToolRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Webpack/WebpackRunner_1">WebpackRunner<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Webpack/WebpackRunner_1">WebpackRunner</a><wbr>&lt;<a href="/api/Cake.Webpack/WebpackRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>			
 							
@@ -221,7 +221,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;&gt;"]--&gt;Type
+	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
 	Type["NodeToolRunner&lt;TSettings&gt;"]
 class Type type-node
 	Type--&gt;Derived0["WebpackRunner&lt;TSettings&gt;"]
@@ -295,7 +295,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Webpack/NodeToolRunner_1/DCF67F94">FromPath<wbr>(DirectoryPath)<wbr></a></td>
-								<td><a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner<wbr>&lt;TSettings&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner</a><wbr>&lt;<a href="/api/Cake.Webpack/NodeToolRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></td>
 								<td>
 									<div>
             Sets the working directory for npm commands
@@ -304,7 +304,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Webpack/NodeToolRunner_1/71766878">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.

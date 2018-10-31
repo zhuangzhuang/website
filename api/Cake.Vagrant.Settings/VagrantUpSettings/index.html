@@ -286,7 +286,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantUpSettings/36417FA2">DestroyOnError</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
                 Destroy the newly created machine if a fatal, unexpected error occurs.
@@ -297,7 +297,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantUpSettings/17ACCFF2">InstallProvider</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
                 If the requested provider is not installed, Vagrant will attempt to automatically install it if it can. By default
@@ -307,7 +307,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantUpSettings/98C92399">Parallel</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
                 Bring multiple machines up in parallel if the provider supports it. Please consult the provider documentation to
@@ -326,7 +326,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantUpSettings/D28AA575">Provisioners</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
                 This will only run the given provisioners.
@@ -335,7 +335,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantUpSettings/A0D6CF25">RunProvisioners</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
                 Force the provisioners to run.
@@ -360,7 +360,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Vagrant.Settings/VagrantUpSettings/55CF9D2F">GetToolArguments<wbr>()<wbr></a></td>
-								<td>Action<wbr>&lt;T&gt;<wbr></td>
+								<td>Action<wbr>&lt;Process<wbr>Argument<wbr>Builder&gt;<wbr></td>
 								<td>
 									<div>
                 Gets the command arguments corresponding to the specified <code class="cs"><a href="/">IVagrantCommandSettings</a></code>

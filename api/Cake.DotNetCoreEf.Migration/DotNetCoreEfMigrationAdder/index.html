@@ -200,8 +200,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>DotNetCoreTool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1">DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>DotNetCoreTool<wbr>&lt;<a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAddSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Add<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1">DotNetCoreEfTool</a><wbr>&lt;<a href="/api/Cake.DotNetCoreEf.Migration/DotNetCoreEfMigrationAddSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Migration<wbr>Add<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -211,9 +211,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["DotNetCoreEfTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1"
-	Base1["DotNetCoreTool&lt;&gt;"]--&gt;Base0
+	Base0["DotNetCoreEfTool&lt;DotNetCoreEfMigrationAddSettings&gt;"]--&gt;Type
+	Base1["DotNetCoreTool&lt;DotNetCoreEfMigrationAddSettings&gt;"]--&gt;Base0
 	Type["DotNetCoreEfMigrationAdder"]
 class Type type-node
 
@@ -273,16 +272,6 @@ class Type type-node
 									<div>
             Add a migration for the project using the specified path with arguments and settings.
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1/CD7AA83E">Create<wbr>Argument<wbr>Builder<wbr>(TSettings)<wbr></a></td>
-								<td>Process<wbr>Argument<wbr>Builder</td>
-								<td>
-									<div>
-            Creates a <code class="cs"><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">ProcessArgumentBuilder</a></code> and adds common commandline arguments.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1">DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

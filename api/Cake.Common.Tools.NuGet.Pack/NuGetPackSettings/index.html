@@ -235,7 +235,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
+								<td>Func<wbr>&lt;<a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>, <wbr><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -247,7 +247,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/9F9E8517">Authors</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the package authors.
@@ -274,7 +274,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/A6EE5D60">Dependencies</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet.Pack/NuSpecDependency">NuSpecDependency</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the package dependencies.
@@ -301,7 +301,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -311,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/CC882686">Files</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet.Pack/NuSpecContent">NuSpecContent</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the package files.
@@ -376,7 +376,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/C605FF42">MSBuildVersion</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetMSBuildVersion">NuGetMSBuildVersion?</a></td>
 								<td>
 									<div>
     Gets or sets the version of MSBuild to be used with this command.
@@ -427,7 +427,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/F9E697C2">Owners</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the package owners.
@@ -445,7 +445,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/2CDA3F08">Properties</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the properties.
@@ -454,7 +454,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/AFD75A5A">ReleaseNotes</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the package release notes.
@@ -500,7 +500,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/B3CA1319">Tags</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the package tags.
@@ -528,7 +528,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.
@@ -538,7 +538,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/8A11611D">Verbosity</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetVerbosity">NuGetVerbosity?</a></td>
 								<td>
 									<div>
     Gets or sets the verbosity.

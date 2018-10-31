@@ -247,7 +247,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/DC6D4ECB">DescribeInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;IList<wbr>&lt;InstanceStatus&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
             Describes the status of one or more instances. Instance status includes the following components:
@@ -261,7 +261,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/6F926F1E">DescribeTags<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;IList<wbr>&lt;TagDescription&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
             Describes one or more of the tags for your EC2 resources.
@@ -270,7 +270,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/E40ACCEB">StartInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Starts an Amazon EBS-backed AMI that you've previously stopped. Instances that use Amazon EBS volumes as their root devices can be quickly stopped
@@ -282,7 +282,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/B08B230C">StopInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Stops an Amazon EBS-backed instance. Each time you transition an instance from stopped to started, Amazon EC2 charges a full instance hour, even if transitions
@@ -296,7 +296,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.EC2/IEC2Manager/0B1E9B03">TerminateInstances<wbr>(IList<wbr>&lt;string&gt;<wbr>, <wbr>EC2Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Shuts down one or more instances. This operation is idempotent; if you terminate an instance more than once, each call succeeds.

@@ -201,8 +201,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Gulp/GulpLocalRunnerSettings">Gulp<wbr>Local<wbr>Runner<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner</a><wbr>&lt;<a href="/api/Cake.Gulp/GulpLocalRunnerSettings">Gulp<wbr>Local<wbr>Runner<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -212,9 +212,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["GulpRunner&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Gulp/GulpRunner_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base0["GulpRunner&lt;GulpLocalRunnerSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;GulpLocalRunnerSettings&gt;"]--&gt;Base0
 	Type["GulpLocalRunner"]
 class Type type-node
 
@@ -278,31 +277,11 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gulp/GulpLocalRunner/2D442ACF">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Gulp/GulpRunner_1/FF59F0A7">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the name of the tool.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Gulp/GulpRunner_1/29933265">ValidateSettings<wbr>(TSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Validates settings
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

@@ -272,8 +272,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTool_1">AppCenterTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.AppCenter/GenericRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTool_1">AppCenterTool</a><wbr>&lt;<a href="/api/Cake.AppCenter/GenericRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -284,8 +284,7 @@
 						<div class="mermaid">
 							graph TD
 	Base0["AppCenterTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.AppCenter/AppCenterTool_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base1["Tool&lt;TSettings&gt;"]--&gt;Base0
 	Type["GenericRunner&lt;TSettings&gt;"]
 class Type type-node
 
@@ -357,26 +356,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.AppCenter/AppCenterTool_1/3216E8A3">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the possible names of the tool executable.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.AppCenter/AppCenterTool_1">AppCenterTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.AppCenter/AppCenterTool_1/68170B03">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the name of the tool.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.AppCenter/AppCenterTool_1">AppCenterTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.AppCenter/GenericRunner_1/42B01DEA">Run<wbr>(string, <wbr>TSettings, <wbr>string[])<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -387,7 +366,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AppCenter/GenericRunner_1/B30847DB">RunWithResult<wbr>(string, <wbr>TSettings, <wbr>string[])<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Runs given <span name="command" class="paramref">command</span> using given <span name=" settings" class="paramref"> settings</span> and <span name="additional" class="paramref">additional</span> and returns the exit code and output.

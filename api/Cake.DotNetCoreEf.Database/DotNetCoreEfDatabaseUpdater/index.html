@@ -198,8 +198,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>DotNetCoreTool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1">DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>DotNetCoreTool<wbr>&lt;<a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdateSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Update<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1">DotNetCoreEfTool</a><wbr>&lt;<a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdateSettings">Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Update<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -209,9 +209,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["DotNetCoreEfTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1"
-	Base1["DotNetCoreTool&lt;&gt;"]--&gt;Base0
+	Base0["DotNetCoreEfTool&lt;DotNetCoreEfDatabaseUpdateSettings&gt;"]--&gt;Type
+	Base1["DotNetCoreTool&lt;DotNetCoreEfDatabaseUpdateSettings&gt;"]--&gt;Base0
 	Type["DotNetCoreEfDatabaseUpdater"]
 class Type type-node
 
@@ -265,16 +264,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1/CD7AA83E">Create<wbr>Argument<wbr>Builder<wbr>(TSettings)<wbr></a></td>
-								<td>Process<wbr>Argument<wbr>Builder</td>
-								<td>
-									<div>
-            Creates a <code class="cs"><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">ProcessArgumentBuilder</a></code> and adds common commandline arguments.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.DotNetCoreEf/DotNetCoreEfTool_1">DotNetCoreEfTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.DotNetCoreEf.Database/DotNetCoreEfDatabaseUpdater/AAB7BE13">Update<wbr>(string, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>Dot<wbr>Net<wbr>Core<wbr>Ef<wbr>Database<wbr>Update<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>

@@ -237,7 +237,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
+								<td>Func<wbr>&lt;<a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>, <wbr><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -294,7 +294,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -304,7 +304,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings/45F910D6">Extensions</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the WiX extensions to use.
@@ -359,7 +359,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings/EA841949">Indent</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the indentation multiplier, overrides default of 4.
@@ -406,7 +406,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings/36FCAB54">OutputGroup</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.WiX.Heat/WiXOutputGroupType">WiXOutputGroupType?</a></td>
 								<td>
 									<div>
     Gets or sets the output group of Visual Studio project.
@@ -479,7 +479,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings/8E680C4D">Suppress<wbr>Specific<wbr>Warnings</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the suppress specific warnings.
@@ -507,7 +507,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings/B6BE44A3">Template</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.WiX.Heat/WiXTemplateType">WiXTemplateType?</a></td>
 								<td>
 									<div>
     Gets or sets the template to use when harvesting.
@@ -526,7 +526,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.
@@ -545,7 +545,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.WiX.Heat/HeatSettings/96E8DE18">Treat<wbr>Specific<wbr>Warnings<wbr>As<wbr>Errors</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the treat specific warnings as errors.

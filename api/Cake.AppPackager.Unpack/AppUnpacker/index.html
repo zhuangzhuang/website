@@ -195,8 +195,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.AppPackager/AppPackagerSettings">AppPackagerSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool</a><wbr>&lt;<a href="/api/Cake.AppPackager/AppPackagerSettings">AppPackagerSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -206,9 +206,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["AppPackagerTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.AppPackager/AppPackagerTool_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base0["AppPackagerTool&lt;AppPackagerSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;AppPackagerSettings&gt;"]--&gt;Base0
 	Type["AppUnpacker"]
 class Type type-node
 
@@ -262,36 +261,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/A3C8219C">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div>
-            Gets alternative file paths which the tool may exist in
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/9273AC42">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the possible names of the tool executable.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.AppPackager/AppPackagerTool_1/99B6A64B">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the name of the tool.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.AppPackager/AppPackagerTool_1">AppPackagerTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.AppPackager.Unpack/AppUnpacker/D6270080">Unpack<wbr>(FilePath, <wbr>DirectoryPath, <wbr>AppPackagerSettings)<wbr></a></td>
 								<td>void</td>
 								<td>

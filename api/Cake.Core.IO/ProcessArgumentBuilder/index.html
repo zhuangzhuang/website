@@ -164,9 +164,6 @@
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -178,6 +175,9 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -214,8 +214,8 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li>IReadOnlyCollection<wbr>&lt;T&gt;<wbr></li>								
-											<li>IEnumerable<wbr>&lt;T&gt;<wbr></li>								
+											<li>IReadOnlyCollection<wbr>&lt;<a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a>&gt;<wbr></li>								
+											<li>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a>&gt;<wbr></li>								
 											<li>IEnumerable</li>								
 									</ul>
 								</dd>
@@ -234,8 +234,8 @@
 						<div class="mermaid">
 							graph TD
 	Base0["object"]--&gt;Type
-	Interface0["IReadOnlyCollection&lt;T&gt;"]-.-&gt;Type
-	Interface1["IEnumerable&lt;T&gt;"]-.-&gt;Type
+	Interface0["IReadOnlyCollection&lt;IProcessArgument&gt;"]-.-&gt;Type
+	Interface1["IEnumerable&lt;IProcessArgument&gt;"]-.-&gt;Type
 	Interface2["IEnumerable"]-.-&gt;Type
 	Type["ProcessArgumentBuilder"]
 class Type type-node

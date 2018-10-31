@@ -161,9 +161,6 @@
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li class="selected"><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -175,6 +172,9 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -265,7 +265,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/ProcessSettings/897B45AB">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -311,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/ProcessSettings/F25A26BF">Timeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets optional timeout, in milliseconds, to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer, which represents infinity to the operating system.

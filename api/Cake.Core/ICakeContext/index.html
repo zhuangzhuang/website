@@ -145,6 +145,23 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
+				<li class="selected"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
+				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
+				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
+				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
+				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
+				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
+				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
+				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
@@ -185,23 +202,6 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
-				<li class="selected"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
-				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
-				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
-				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
-				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
-				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
-				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
-				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
-				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
-				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
-				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
-				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
@@ -245,16 +245,16 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
 											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
+											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -264,26 +264,26 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["TaskSetupContext"]
-	click Implementing0 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing1["TeardownContext"]
-	click Implementing1 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing2["ITeardownContext"]
-	click Implementing2 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing3["CakeContext"]
-	click Implementing3 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing4["ITaskTeardownContext"]
-	click Implementing4 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing5["SetupContext"]
-	click Implementing5 "/api/Cake.Core/SetupContext"
-	Type-.-&gt;Implementing6["ITaskSetupContext"]
-	click Implementing6 "/api/Cake.Core/ITaskSetupContext"
-	Type-.-&gt;Implementing7["ISetupContext"]
-	click Implementing7 "/api/Cake.Core/ISetupContext"
-	Type-.-&gt;Implementing8["CakeContextAdapter"]
-	click Implementing8 "/api/Cake.Core/CakeContextAdapter"
-	Type-.-&gt;Implementing9["TaskTeardownContext"]
-	click Implementing9 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing0["TeardownContext"]
+	click Implementing0 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing1["SetupContext"]
+	click Implementing1 "/api/Cake.Core/SetupContext"
+	Type-.-&gt;Implementing2["TaskSetupContext"]
+	click Implementing2 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing3["ITaskTeardownContext"]
+	click Implementing3 "/api/Cake.Core/ITaskTeardownContext"
+	Type-.-&gt;Implementing4["ISetupContext"]
+	click Implementing4 "/api/Cake.Core/ISetupContext"
+	Type-.-&gt;Implementing5["CakeContextAdapter"]
+	click Implementing5 "/api/Cake.Core/CakeContextAdapter"
+	Type-.-&gt;Implementing6["ITeardownContext"]
+	click Implementing6 "/api/Cake.Core/ITeardownContext"
+	Type-.-&gt;Implementing7["ITaskSetupContext"]
+	click Implementing7 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing8["TaskTeardownContext"]
+	click Implementing8 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing9["CakeContext"]
+	click Implementing9 "/api/Cake.Core/CakeContext"
 
 						</div>
 					</div>
@@ -1880,7 +1880,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common/EnvironmentAliases/97336C76">EnvironmentVariables<wbr>()<wbr></a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
      Retrieves all environment variables
@@ -2909,7 +2909,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/CD21260C">NuGetList<wbr>(NuGetListSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet.List/NuGetListItem">NuGetListItem</a>&gt;<wbr></td>
 								<td>
 									<div>
     List packages on available from source using specified settings
@@ -2919,7 +2919,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/20FD7D58">NuGetList<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet.List/NuGetListItem">NuGetListItem</a>&gt;<wbr></td>
 								<td>
 									<div>
     List packages on available from source using specified settings
@@ -2929,7 +2929,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases/4196A558">NuGetList<wbr>(string, <wbr>NuGetListSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet.List/NuGetListItem">NuGetListItem</a>&gt;<wbr></td>
 								<td>
 									<div>
     List packages on available from source using specified settings
@@ -3338,7 +3338,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common/ReleaseNotesAliases/321AAA80">ParseAllReleaseNotes<wbr>(FilePath)<wbr></a></td>
-								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;<a href="/api/Cake.Common/ReleaseNotes">ReleaseNotes</a>&gt;<wbr></td>
 								<td>
 									<div>
     Parses all release notes.
@@ -3388,7 +3388,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Solution.Project.XmlDoc/XmlDocAliases/D5EA4B6B">Parse<wbr>Xml<wbr>Doc<wbr>Example<wbr>Code<wbr>(FilePath)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Common.Solution.Project.XmlDoc/XmlDocExampleCode">XmlDocExampleCode</a>&gt;<wbr></td>
 								<td>
 									<div>
     Parses Xml documentation example code from given path.
@@ -3398,7 +3398,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Solution.Project.XmlDoc/XmlDocAliases/09E48DBB">Parse<wbr>Xml<wbr>Doc<wbr>Files<wbr>Example<wbr>Code<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Common.Solution.Project.XmlDoc/XmlDocExampleCode">XmlDocExampleCode</a>&gt;<wbr></td>
 								<td>
 									<div>
     Parses Xml documentation example code from file(s) using given pattern.
@@ -3760,7 +3760,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/77B6C385">TransformText<wbr>(string)<wbr></a></td>
-								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation</a><wbr>&lt;<a href="/api/Cake.Core.Text/TextTransformationTemplate">Text<wbr>Transformation<wbr>Template</a>&gt;<wbr></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template.
@@ -3770,7 +3770,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/4BDCF966">TransformText<wbr>(string, <wbr>string, <wbr>string)<wbr></a></td>
-								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation</a><wbr>&lt;<a href="/api/Cake.Core.Text/TextTransformationTemplate">Text<wbr>Transformation<wbr>Template</a>&gt;<wbr></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template, using the specified placeholder.
@@ -3780,7 +3780,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/178B8586">TransformTextFile<wbr>(FilePath)<wbr></a></td>
-								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation</a><wbr>&lt;<a href="/api/Cake.Core.Text/TextTransformationTemplate">Text<wbr>Transformation<wbr>Template</a>&gt;<wbr></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template on disc.
@@ -3790,7 +3790,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Text/TextTransformationAliases/1B6F02DC">TransformTextFile<wbr>(FilePath, <wbr>string, <wbr>string)<wbr></a></td>
-								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation<wbr>&lt;TTemplate&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Common.Text/TextTransformation_1">TextTransformation</a><wbr>&lt;<a href="/api/Cake.Core.Text/TextTransformationTemplate">Text<wbr>Transformation<wbr>Template</a>&gt;<wbr></td>
 								<td>
 									<div>
     Creates a text transformation from the provided template on disc, using the specified placeholder.

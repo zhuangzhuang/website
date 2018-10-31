@@ -145,13 +145,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.ReportGenerator">Cake<wbr>.Common<wbr>.Tools<wbr>.ReportGenerator</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorReportType">Report<wbr>Generator<wbr>Report<wbr>Type</a></li>
-				<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorVerbosity">Report<wbr>Generator<wbr>Verbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorAliases">Report<wbr>Generator<wbr>Aliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorRunner">Report<wbr>Generator<wbr>Runner</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings">Report<wbr>Generator<wbr>Settings</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorReportType">Report<wbr>Generator<wbr>Report<wbr>Type</a></li>
+				<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorVerbosity">Report<wbr>Generator<wbr>Verbosity</a></li>
 
 
                     </ul>
@@ -236,7 +236,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/50AAB3A8">Argument<wbr>Customization</a></td>
-								<td>Func<wbr>&lt;T, <wbr>TResult&gt;<wbr></td>
+								<td>Func<wbr>&lt;<a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>, <wbr><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the argument customization.
@@ -248,7 +248,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings/8E3C99B4">AssemblyFilters</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the list of assemblies that should be included or excluded in the report.
@@ -259,7 +259,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings/324B13F0">ClassFilters</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the list of classes that should be included or excluded in the report.
@@ -270,7 +270,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/ACBC8906">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -301,7 +301,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings/90AACDB1">ReportTypes</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorReportType">Report<wbr>Generator<wbr>Report<wbr>Type</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the list of coverage reports that should be parsed.
@@ -310,7 +310,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings/C8B669A5">SourceDirectories</a></td>
-								<td>ICollection<wbr>&lt;T&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the directories which contain the corresponding source code.
@@ -330,7 +330,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Tooling/ToolSettings/B98A10B0">ToolTimeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>TimeSpan?</td>
 								<td>
 									<div>
     Gets or sets optional timeout for tool execution.
@@ -340,7 +340,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorSettings/6B1005B9">Verbosity</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorVerbosity">Report<wbr>Generator<wbr>Verbosity?</a></td>
 								<td>
 									<div>
     Gets or sets the verbosity level of the log messages.

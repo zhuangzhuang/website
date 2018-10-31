@@ -205,19 +205,19 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Apprenda.AMM/MaintenanceModeTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState">GetNodeState</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud">ConnectCloud</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds">ReadRegisteredClouds</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState">SetNodeState</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud">RegisterCloud</a></li>								
 											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud">DisconnectCloud</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud">RegisterCloud</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds">ReadRegisteredClouds</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud">ConnectCloud</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState">SetNodeState</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState">GetNodeState</a></li>								
 									</ul>
 								</dd>			
 							
@@ -226,21 +226,21 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;&gt;"]--&gt;Type
+	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
 	Type["MaintenanceModeTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["GetNodeState"]
-	click Derived0 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState"
-	Type--&gt;Derived1["ConnectCloud"]
-	click Derived1 "/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud"
+	Type--&gt;Derived0["DisconnectCloud"]
+	click Derived0 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud"
+	Type--&gt;Derived1["RegisterCloud"]
+	click Derived1 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud"
 	Type--&gt;Derived2["ReadRegisteredClouds"]
 	click Derived2 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredClouds"
-	Type--&gt;Derived3["SetNodeState"]
-	click Derived3 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState"
-	Type--&gt;Derived4["RegisterCloud"]
-	click Derived4 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloud"
-	Type--&gt;Derived5["DisconnectCloud"]
-	click Derived5 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloud"
+	Type--&gt;Derived3["ConnectCloud"]
+	click Derived3 "/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloud"
+	Type--&gt;Derived4["SetNodeState"]
+	click Derived4 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeState"
+	Type--&gt;Derived5["GetNodeState"]
+	click Derived5 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeState"
 
 						</div>
 					</div>
@@ -311,7 +311,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Apprenda.AMM/MaintenanceModeTool_1/B14B1662">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
 									<div>
             Gets alternative file paths which the tool may exist in
@@ -320,7 +320,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Apprenda.AMM/MaintenanceModeTool_1/6755F63F">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div></div>
 								</td>

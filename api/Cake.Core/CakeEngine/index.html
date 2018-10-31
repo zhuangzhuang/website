@@ -148,6 +148,23 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
+				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
+				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
+				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
+				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
+				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
+				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
+				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
+				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
+				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
+				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
+				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
+				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
+				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
@@ -188,23 +205,6 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
-				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
-				<li><a href="/api/Cake.Core/ICakeDataResolver">ICakeDataResolver</a></li>
-				<li><a href="/api/Cake.Core/ICakeDataService">ICakeDataService</a></li>
-				<li><a href="/api/Cake.Core/ICakeEngine">ICakeEngine</a></li>
-				<li><a href="/api/Cake.Core/ICakeEnvironment">ICakeEnvironment</a></li>
-				<li><a href="/api/Cake.Core/ICakePlatform">ICakePlatform</a></li>
-				<li><a href="/api/Cake.Core/ICakeReportPrinter">ICakeReportPrinter</a></li>
-				<li><a href="/api/Cake.Core/ICakeRuntime">ICakeRuntime</a></li>
-				<li><a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a></li>
-				<li><a href="/api/Cake.Core/IConsole">IConsole</a></li>
-				<li><a href="/api/Cake.Core/IExecutionStrategy">IExecutionStrategy</a></li>
-				<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
-				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
-				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
 				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
@@ -316,7 +316,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core/CakeEngine/062E97F8">Setup</a></td>
-								<td>EventHandler<wbr>&lt;TEventArgs&gt;<wbr></td>
+								<td>EventHandler<wbr>&lt;<a href="/api/Cake.Core/SetupEventArgs">SetupEventArgs</a>&gt;<wbr></td>
 								<td>
 									<div>
     Raised during setup before any tasks are run.
@@ -325,7 +325,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeEngine/69DDE67C">TaskSetup</a></td>
-								<td>EventHandler<wbr>&lt;TEventArgs&gt;<wbr></td>
+								<td>EventHandler<wbr>&lt;<a href="/api/Cake.Core/TaskSetupEventArgs">TaskSetupEventArgs</a>&gt;<wbr></td>
 								<td>
 									<div>
     Raised before each task is run.
@@ -334,7 +334,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeEngine/447CC278">TaskTeardown</a></td>
-								<td>EventHandler<wbr>&lt;TEventArgs&gt;<wbr></td>
+								<td>EventHandler<wbr>&lt;<a href="/api/Cake.Core/TaskTeardownEventArgs">Task<wbr>Teardown<wbr>Event<wbr>Args</a>&gt;<wbr></td>
 								<td>
 									<div>
     Raised after each task has been run.
@@ -343,7 +343,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeEngine/0903DA23">Teardown</a></td>
-								<td>EventHandler<wbr>&lt;TEventArgs&gt;<wbr></td>
+								<td>EventHandler<wbr>&lt;<a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a>&gt;<wbr></td>
 								<td>
 									<div>
     Raised during teardown after all other tasks have been run.
@@ -369,7 +369,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core/CakeEngine/18C5EF91">Tasks</a></td>
-								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;<a href="/api/Cake.Core/ICakeTaskInfo">ICakeTaskInfo</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets all registered tasks.
@@ -483,7 +483,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeEngine/00947B0D">RunTargetAsync<wbr>(ICakeContext, <wbr>IExecutionStrategy, <wbr>ExecutionSettings)<wbr></a></td>
-								<td>Task<wbr>&lt;TResult&gt;<wbr></td>
+								<td>Task<wbr>&lt;<a href="/api/Cake.Core/CakeReport">CakeReport</a>&gt;<wbr></td>
 								<td>
 									<div>
     Runs the specified target.
