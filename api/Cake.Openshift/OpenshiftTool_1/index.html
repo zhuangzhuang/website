@@ -199,16 +199,16 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Openshift/OpenshiftTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarter">Openshift<wbr>Build<wbr>Starter</a></li>								
 											<li><a href="/api/Cake.Openshift.Login/OpenshiftLoginner">OpenshiftLoginner</a></li>								
 											<li><a href="/api/Cake.Openshift.Delete/OpenshiftDeleter">OpenshiftDeleter</a></li>								
+											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarter">Openshift<wbr>Build<wbr>Starter</a></li>								
 									</ul>
 								</dd>			
 							
@@ -217,15 +217,15 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;&gt;"]--&gt;Type
+	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
 	Type["OpenshiftTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["OpenshiftBuildStarter"]
-	click Derived0 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarter"
-	Type--&gt;Derived1["OpenshiftLoginner"]
-	click Derived1 "/api/Cake.Openshift.Login/OpenshiftLoginner"
-	Type--&gt;Derived2["OpenshiftDeleter"]
-	click Derived2 "/api/Cake.Openshift.Delete/OpenshiftDeleter"
+	Type--&gt;Derived0["OpenshiftLoginner"]
+	click Derived0 "/api/Cake.Openshift.Login/OpenshiftLoginner"
+	Type--&gt;Derived1["OpenshiftDeleter"]
+	click Derived1 "/api/Cake.Openshift.Delete/OpenshiftDeleter"
+	Type--&gt;Derived2["OpenshiftBuildStarter"]
+	click Derived2 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarter"
 
 						</div>
 					</div>
@@ -295,7 +295,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Openshift/OpenshiftTool_1/C332FDBD">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets the possible names of the tool executable.
@@ -360,17 +360,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;OpenshiftTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;OpenshiftTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -379,6 +368,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;OpenshiftTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -276,7 +276,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/4EC38650">CompressAssembly</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Enable / Disable compression when the assembly is embedded.
@@ -286,7 +286,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/3CEDC28D">Compress<wbr>Encrypt<wbr>Resources</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Enable / Disable resources compression and encryption
@@ -295,7 +295,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/E06E6872">ControlFlowObfuscate</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
              Sets the level of control flow obfuscation to apply to the assembly:
@@ -311,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/6183FBD0">DynamicProxy</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Enable / Disable the references dynamic proxy
@@ -320,7 +320,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/B73F1D55">Embed</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Disable / Enable dependencies embedding
@@ -331,7 +331,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/4B213589">EncryptAssembly</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Whether you want to encrypt the assembly when it is embedded.
@@ -341,7 +341,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/FDADCEF9">Merge</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Disable / Enable dependencies merging
@@ -351,7 +351,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/A3962650">NameObfuscate</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Enable / Disable types and methods obfuscation and field names obfuscation
@@ -361,7 +361,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/AssemblyOptionSettings/243CFD78">Prune</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>bool?</td>
 								<td>
 									<div>
             Enable / Disable pruning
@@ -420,17 +420,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Assembly<wbr>Option<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Assembly<wbr>Option<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -439,6 +428,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Assembly<wbr>Option<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -162,6 +162,7 @@
         <li><a href="/api/Cake.AWS.ElasticLoadBalancing.dll">Cake<wbr>.AWS<wbr>.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>.dll</a></li>
         <li><a href="/api/Cake.AWS.Route53.dll">Cake<wbr>.AWS<wbr>.Route53<wbr>.dll</a></li>
         <li><a href="/api/Cake.AWS.S3.dll">Cake<wbr>.AWS<wbr>.S3<wbr>.dll</a></li>
+        <li><a href="/api/Cake.AzCopy.dll">Cake<wbr>.AzCopy<wbr>.dll</a></li>
         <li><a href="/api/Cake.Azure.dll">Cake<wbr>.Azure<wbr>.dll</a></li>
         <li><a href="/api/Cake.AzureStorage.dll">Cake<wbr>.AzureStorage<wbr>.dll</a></li>
         <li><a href="/api/Cake.Bumpy.dll">Cake<wbr>.Bumpy<wbr>.dll</a></li>
@@ -199,6 +200,7 @@
         <li><a href="/api/Cake.GitPackager.dll">Cake<wbr>.GitPackager<wbr>.dll</a></li>
         <li><a href="/api/Cake.Gitter.dll">Cake<wbr>.Gitter<wbr>.dll</a></li>
         <li><a href="/api/Cake.Gulp.dll">Cake<wbr>.Gulp<wbr>.dll</a></li>
+        <li><a href="/api/Cake.Handlebars.dll">Cake<wbr>.Handlebars<wbr>.dll</a></li>
         <li><a href="/api/Cake.Hg.dll">Cake<wbr>.Hg<wbr>.dll</a></li>
         <li><a href="/api/Cake.HipChat.dll">Cake<wbr>.HipChat<wbr>.dll</a></li>
         <li><a href="/api/Cake.HockeyApp.dll">Cake<wbr>.HockeyApp<wbr>.dll</a></li>
@@ -348,7 +350,7 @@
 							<tr>
 								<td><a href="/api/Cake.Tfs/TfsAliases">TfsAliases</a></td>
 									<td>
-            Contains functionality related to Team Foundation Server or Visual Studio Team Services.
+            Contains functionality related to Team Foundation Server or Azure DevOps.
             </td>
 							</tr>
 							<tr>
@@ -360,7 +362,7 @@
 							<tr>
 								<td><a href="/api/Cake.Tfs/TfsException">TfsException</a></td>
 									<td>
-            Represents errors that occur during connecting to TFS.
+            Represents errors that occur during connecting to Team Foundation Server or Azure DevOps.
             </td>
 							</tr>
 							<tr>
@@ -378,7 +380,7 @@
 							<tr>
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest">TfsPullRequest</a></td>
 									<td>
-            Class for writing issues to Team Foundation Server or Visual Studio Team Services pull requests.
+            Class for writing issues to Team Foundation Server or Azure DevOps pull requests.
             </td>
 							</tr>
 							<tr>
@@ -391,6 +393,12 @@
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></td>
 									<td>
             Settings for pull request aliases.
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatus">TfsPullRequestStatus</a></td>
+									<td>
+            Description of a pull request status.
             </td>
 							</tr>
 					</tbody></table>
@@ -408,9 +416,15 @@
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatusState">Tfs<wbr>Pull<wbr>Request<wbr>Status<wbr>State</a></td>
+									<td>
+            Possible states for a pull request status.
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestVote">TfsPullRequestVote</a></td>
 									<td>
-            Defines the vote for a Team Foundation Server or Visual Studio Team Services pull request.
+            Defines the vote for a Team Foundation Server or Azure DevOps pull request.
             </td>
 							</tr>
 					</tbody></table>
@@ -428,6 +442,12 @@
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Tfs/IGitClientFactory">IGitClientFactory</a></td>
+									<td>
+            The interface for a Git client factory
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Tfs.Authentication/ITfsCredentials">ITfsCredentials</a></td>
 									<td>
             Interface for different credential types.

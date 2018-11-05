@@ -379,7 +379,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/043A6D1D">Compress</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --compress
@@ -390,7 +390,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/B8486381">CpuPeriod</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;long&gt;<wbr></td>
 								<td>
 									<div>
             --cpu-period
@@ -401,7 +401,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/810A67B3">CpuQuota</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;long&gt;<wbr></td>
 								<td>
 									<div>
             --cpu-quota
@@ -432,7 +432,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/0A2784D4">CpuShares</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;long&gt;<wbr></td>
 								<td>
 									<div>
             --cpu-shares, -c
@@ -443,7 +443,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/53620321">DisableContentTrust</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --disable-content-trust
@@ -464,7 +464,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/62EF0554">ForceRm</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --force-rm
@@ -536,7 +536,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/41D25D7E">NoCache</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --no-cache
@@ -557,7 +557,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/32A14348">Pull</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --pull
@@ -568,7 +568,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/9B189CA7">Quiet</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --quiet, -q
@@ -579,7 +579,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/06112207">Rm</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --rm
@@ -611,7 +611,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/C401DE1C">Squash</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --squash
@@ -622,7 +622,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Docker/DockerImageBuildSettings/8D9A7E46">Stream</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             --stream
@@ -727,17 +727,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Docker<wbr>Image<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Docker<wbr>Image<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -746,6 +735,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Docker<wbr>Image<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -286,7 +286,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.IO/Globber/881CABB6">Match<wbr>(string, <wbr>Func<wbr>&lt;IDirectory, <wbr>bool&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/Path">Path</a>&gt;<wbr></td>
 								<td>
 									<div>
     Returns <code class="cs"><a href="/api/Cake.Core.IO/Path">Path</a></code> instances matching the specified pattern.
@@ -323,7 +323,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/GlobberExtensions/9FDA4898">GetDirectories<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets all directories matching the specified pattern.
@@ -333,7 +333,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/GlobberExtensions/F079AEB5">GetFiles<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/FilePath">FilePath</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets all files matching the specified pattern.
@@ -354,23 +354,12 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/GlobberExtensions/6459613A">Match<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/Path">Path</a>&gt;<wbr></td>
 								<td>
 									<div>
     Returns <code class="cs"><a href="/api/Cake.Core.IO/Path">Path</a></code> instances matching the specified pattern.
     </div>
 										<div><small><em>From <a href="/api/Cake.Core.IO/GlobberExtensions">GlobberExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Globber&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -382,6 +371,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Globber&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

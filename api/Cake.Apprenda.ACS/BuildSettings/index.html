@@ -268,7 +268,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Apprenda.ACS/BuildSettings/5D34AD4F">IgnoreFilters</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the collection of file extensions that should be excluded from the final package. ex) -filters ".sln .obj .foo" - Will exclude files with the extensions .sln, .obj, and .foo
@@ -286,7 +286,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Apprenda.ACS/BuildSettings/A000836D">Stored<wbr>Procedure<wbr>Projects</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the collection of project names that should be treated as CLR stored procedure projects. ex) -StoredProcs "Project1 Project2" - Specifies Project1 and Project 2 as CLR stored procedure projects.
@@ -295,7 +295,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Apprenda.ACS/BuildSettings/65422A7C">User<wbr>Interface<wbr>Projects</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the collection of project names that should be treated as UI projects.  ex) -i "SubApp1 PrimaryApp SubApp2" - Specifies PrimaryApp, SubApp1, and SubApp2 as the UI projects.
@@ -318,7 +318,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Apprenda.ACS/BuildSettings/123721A6">WcfProjects</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the collection of project names that should be treated as WCF service projects. ex) -s "Service1 Service2" - Specifies Service1 and Service2 as the WCF service projects.
@@ -327,7 +327,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Apprenda.ACS/BuildSettings/BF8D6F90">Windows<wbr>Service<wbr>Projects</a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the collection of project names that should be treated as Windows service projects.  ex) -ws "Service1 Service2" - Specifies Service1 and Service2 as the Windows service projects.
@@ -375,17 +375,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -394,6 +383,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Build<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

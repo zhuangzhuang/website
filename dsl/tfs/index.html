@@ -209,6 +209,7 @@
     <li><a href="/dsl/gitter">Gitter</a></li>        
     <li><a href="/dsl/globbing">Globbing</a></li>        
     <li><a href="/dsl/guard">Guard</a></li>        
+    <li><a href="/dsl/handlebars">Handlebars</a></li>        
     <li><a href="/dsl/hg">Hg</a></li>        
     <li><a href="/dsl/hipchat">HipChat</a></li>        
     <li><a href="/dsl/hockeyapp">HockeyApp</a></li>        
@@ -322,7 +323,7 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality related to Team Foundation Server or Visual Studio Team Services.
+            Contains functionality related to Team Foundation Server or Azure DevOps.
             </div>
 
 
@@ -336,6 +337,7 @@
                             <td>
                                 
             Returns credentials for authentication with an Azure Active Directory.
+            Can only be used with Azure DevOps.
             
 
                                             <br>
@@ -375,7 +377,7 @@
                             <td>
                                 
             Returns credentials for OAuth authentication.
-            Can only be used with Visual Studio Team Services.
+            Can only be used with Azure DevOps.
             
 
                                             <br>
@@ -388,7 +390,7 @@
                             <td>
                                 
             Returns credentials for authentication with a personal access token.
-            Can be used for Team Foundation Server and Visual Studio Team Services.
+            Can be used for Team Foundation Server and Azure DevOps.
             
 
                                             <br>
@@ -407,7 +409,34 @@
 <a href="/api/Cake.Tfs/TfsAliases/A120D9CC">TfsPullRequest<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
-             Gets a Team Foundation Server or Visual Studio Team Services pull request using the specified settings.
+             Gets a Team Foundation Server or Azure DevOps pull request using the specified settings.
+             
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Tfs.dll">Cake<wbr>.Tfs<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Tfs/TfsAliases/AD1F43D5">Tfs<wbr>Pull<wbr>Request<wbr>Using<wbr>Tfs<wbr>Build<wbr>O<wbr>Auth<wbr>Token<wbr>(ICakeContext)<wbr></a>                            </td>
+                            <td>
+                                
+            Gets a Team Foundation Server or Azure DevOps pull request using the settings provided by an
+            Azure Pipelines or Team Foundation Server build.
+            Make sure the build has the 'Allow Scripts to access OAuth token' option enabled.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Tfs.dll">Cake<wbr>.Tfs<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Tfs/TfsAliases/74CE9D12">Tfs<wbr>Set<wbr>Pull<wbr>Request<wbr>Status<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Status)<wbr></a>                            </td>
+                            <td>
+                                
+             Sets a status on a Team Foundation Server or Azure DevOps pull request
+             using the specified settings.
              
 
                                             <br>
@@ -419,7 +448,7 @@
 <a href="/api/Cake.Tfs/TfsAliases/9D0311CD">TfsVotePullRequest<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings, <wbr>TfsPullRequestVote)<wbr></a>                            </td>
                             <td>
                                 
-             Votes for the Team Foundation Server or Visual Studio Team Services pull request
+             Votes for the Team Foundation Server or Azure DevOps pull request
              using the specified settings.
              
 

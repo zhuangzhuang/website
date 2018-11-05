@@ -147,6 +147,8 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Tfs">Cake<wbr>.Tfs</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Tfs/IGitClientFactory">IGitClientFactory</a></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Tfs/TfsAliases">TfsAliases</a></li>
 				<li><a href="/api/Cake.Tfs/TfsException">TfsException</a></li>
@@ -177,7 +179,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Contains functionality related to Team Foundation Server or Visual Studio Team Services.
+            Contains functionality related to Team Foundation Server or Azure DevOps.
             </div>
 
 		<div class="panel panel-default">
@@ -231,11 +233,11 @@ class Type type-node
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
+						<td>Cake<wbr>Namespace<wbr>Import<wbr>Attribute</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td>Cake<wbr>Namespace<wbr>Import<wbr>Attribute</td>
+						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
 						<td></td>
 					</tr>
 					<tr>
@@ -269,6 +271,7 @@ class Type type-node
 								<td>
 									<div>
             Returns credentials for authentication with an Azure Active Directory.
+            Can only be used with Azure DevOps.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -302,7 +305,7 @@ class Type type-node
 								<td>
 									<div>
             Returns credentials for OAuth authentication.
-            Can only be used with Visual Studio Team Services.
+            Can only be used with Azure DevOps.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -313,7 +316,7 @@ class Type type-node
 								<td>
 									<div>
             Returns credentials for authentication with a personal access token.
-            Can be used for Team Foundation Server and Visual Studio Team Services.
+            Can be used for Team Foundation Server and Azure DevOps.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -323,7 +326,30 @@ class Type type-node
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest">TfsPullRequest</a></td>
 								<td>
 									<div>
-             Gets a Team Foundation Server or Visual Studio Team Services pull request using the specified settings.
+             Gets a Team Foundation Server or Azure DevOps pull request using the specified settings.
+             </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs/TfsAliases/AD1F43D5">Tfs<wbr>Pull<wbr>Request<wbr>Using<wbr>Tfs<wbr>Build<wbr>O<wbr>Auth<wbr>Token<wbr>(ICakeContext)<wbr></a></td>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest">TfsPullRequest</a></td>
+								<td>
+									<div>
+            Gets a Team Foundation Server or Azure DevOps pull request using the settings provided by an
+            Azure Pipelines or Team Foundation Server build.
+            Make sure the build has the 'Allow Scripts to access OAuth token' option enabled.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs/TfsAliases/74CE9D12">Tfs<wbr>Set<wbr>Pull<wbr>Request<wbr>Status<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Status)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+             Sets a status on a Team Foundation Server or Azure DevOps pull request
+             using the specified settings.
              </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -333,7 +359,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-             Votes for the Team Foundation Server or Visual Studio Team Services pull request
+             Votes for the Team Foundation Server or Azure DevOps pull request
              using the specified settings.
              </div>
 											<div><small><em>static</em></small></div>

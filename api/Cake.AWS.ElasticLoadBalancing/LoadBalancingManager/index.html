@@ -280,7 +280,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.AWS.ElasticLoadBalancing/LoadBalancingManager/C40DB4C9">DeregisterInstances<wbr>(string, <wbr>IList<wbr>&lt;string&gt;<wbr>, <wbr>Load<wbr>Balancing<wbr>Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Removes instances from the load balancer. Once the instance is deregistered, it will stop receiving traffic from the load balancer. 
@@ -289,7 +289,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.ElasticLoadBalancing/LoadBalancingManager/8112F5C8">Disable<wbr>Availability<wbr>Zones<wbr>(string, <wbr>IList<wbr>&lt;string&gt;<wbr>, <wbr>Load<wbr>Balancing<wbr>Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Removes the specified Availability Zones from the set of Availability Zones for the specified load balancer.
@@ -301,7 +301,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.ElasticLoadBalancing/LoadBalancingManager/C0667254">Enable<wbr>Availability<wbr>Zones<wbr>(string, <wbr>IList<wbr>&lt;string&gt;<wbr>, <wbr>Load<wbr>Balancing<wbr>Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
              Adds the specified Availability Zones to the set of Availability Zones for the specified load balancer.
@@ -311,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.AWS.ElasticLoadBalancing/LoadBalancingManager/30AAAEC3">RegisterInstances<wbr>(string, <wbr>IList<wbr>&lt;string&gt;<wbr>, <wbr>Load<wbr>Balancing<wbr>Settings, <wbr>CancellationToken)<wbr></a></td>
-								<td>Task<wbr>&lt;&gt;<wbr></td>
+								<td>Task<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Adds new instances to the load balancer.
@@ -361,17 +361,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Load<wbr>Balancing<wbr>Manager&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Load<wbr>Balancing<wbr>Manager&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -380,6 +369,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Load<wbr>Balancing<wbr>Manager&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

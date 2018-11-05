@@ -210,14 +210,14 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>Object</li>								
-											<li><a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1">Base<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;T&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1">Base<wbr>Issue<wbr>Provider<wbr>Fixture</a><wbr>&lt;<a href="/api/Cake.Issues.Testing/BaseConfigurableIssueProviderFixture_2#typeparam-TIssueProvider">TIssueProvider</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.Testing/BaseMultiFormatIssueProviderFixture_3">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;TIssueProvider, <wbr>TSettings, <wbr>TLogFileFormat&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Issues.Testing/BaseMultiFormatIssueProviderFixture_3">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider<wbr>Fixture</a><wbr>&lt;<a href="/api/Cake.Issues.Testing/BaseMultiFormatIssueProviderFixture_3#typeparam-TIssueProvider">TIssueProvider</a>, <wbr><a href="/api/Cake.Issues.Testing/BaseMultiFormatIssueProviderFixture_3#typeparam-TSettings">TSettings</a>, <wbr><a href="/api/Cake.Issues.Testing/BaseMultiFormatIssueProviderFixture_3#typeparam-TLogFileFormat">TLogFileFormat</a>&gt;<wbr></li>								
 									</ul>
 								</dd>			
 							
@@ -226,8 +226,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["BaseIssueProviderFixture&lt;T&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Issues.Testing/BaseIssueProviderFixture_1"
+	Base0["BaseIssueProviderFixture&lt;TIssueProvider&gt;"]--&gt;Type
 	Base1["Object"]--&gt;Base0
 	Type["BaseConfigurableIssueProviderFixture&lt;TIssueProvider, TSettings&gt;"]
 class Type type-node
@@ -316,32 +315,12 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1/3E9702CC">Log</a></td>
-								<td>FakeLog</td>
-								<td>
-									<div>
-            Gets or sets the Cake logging instance.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1">Base<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;T&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues.Testing/BaseConfigurableIssueProviderFixture_2/C7516BD1">LogFileContent</a></td>
 								<td>byte[]</td>
 								<td>
 									<div>
             Gets or sets the content of the log file.
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1/06919667">RepositorySettings</a></td>
-								<td><a href="/api/Cake.Issues/RepositorySettings">RepositorySettings</a></td>
-								<td>
-									<div>
-            Gets or sets the repository settings.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1">Base<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;T&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -362,7 +341,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Issues.Testing/BaseConfigurableIssueProviderFixture_2/492BC19C">Get<wbr>Create<wbr>Issue<wbr>Provider<wbr>Arguments<wbr>()<wbr></a></td>
-								<td>IList<wbr>&lt;&gt;<wbr></td>
+								<td>IList<wbr>&lt;object&gt;<wbr></td>
 								<td>
 									<div>
             Returns arguments for creating a new instance of an issue provider.
@@ -371,21 +350,11 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Issues.Testing/BaseConfigurableIssueProviderFixture_2/8F02113E">Get<wbr>Create<wbr>Issue<wbr>Provider<wbr>Settings<wbr>Arguments<wbr>()<wbr></a></td>
-								<td>IList<wbr>&lt;&gt;<wbr></td>
+								<td>IList<wbr>&lt;object&gt;<wbr></td>
 								<td>
 									<div>
             Creates a new instance of the issue provider settings.
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1/DDD33E93">ReadIssues<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div>
-            Calls <code class="cs"><a href="/api/Cake.Issues/BaseIssueProvider/DC6CE6AF">ReadIssues(IssueCommentFormat)</a></code>.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Issues.Testing/BaseIssueProviderFixture_1">Base<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;T&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -428,17 +397,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Configurable<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Configurable<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -447,6 +405,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Configurable<wbr>Issue<wbr>Provider<wbr>Fixture<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

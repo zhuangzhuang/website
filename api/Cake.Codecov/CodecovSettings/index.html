@@ -178,7 +178,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Contains settings used by <code class="cs"><a href="/">CodecovRunner</a></code>. See <a href="https://github.com/codecov/codecov-exe/blob/master/Source/Codecov/Program/CommandLineOptions.cs">CommandLineOptions</a>
+            Contains settings used by <code class="cs">Cake.Codecov.CodecovRunner</code>. See <a href="https://github.com/codecov/codecov-exe/blob/master/Source/Codecov/Program/CommandLineOptions.cs">CommandLineOptions</a>
             or run
             <pre><code class="cs">.\codecov.exe --help</code></pre>
             for more details.
@@ -307,7 +307,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Codecov/CodecovSettings/77072328">Envs</a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value specifing the enviornment variables to be included with this build.
@@ -317,7 +317,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Codecov/CodecovSettings/8BD91902">Files</a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets a value specifing the target file(s) to upload. (1) -f 'path/to/file'. Only
@@ -471,17 +471,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Codecov<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Codecov<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -490,6 +479,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Codecov<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

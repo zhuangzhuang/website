@@ -205,16 +205,16 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Webpack/WebpackRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner</a><wbr>&lt;<a href="/api/Cake.Webpack/WebpackRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Webpack/WebpackGlobalRunner">WebpackGlobalRunner</a></li>								
 											<li><a href="/api/Cake.Webpack/WebpackLocalRunner">WebpackLocalRunner</a></li>								
+											<li><a href="/api/Cake.Webpack/WebpackGlobalRunner">WebpackGlobalRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -224,14 +224,13 @@
 						<div class="mermaid">
 							graph TD
 	Base0["NodeToolRunner&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Webpack/NodeToolRunner_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base1["Tool&lt;TSettings&gt;"]--&gt;Base0
 	Type["WebpackRunner&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["WebpackGlobalRunner"]
-	click Derived0 "/api/Cake.Webpack/WebpackGlobalRunner"
-	Type--&gt;Derived1["WebpackLocalRunner"]
-	click Derived1 "/api/Cake.Webpack/WebpackLocalRunner"
+	Type--&gt;Derived0["WebpackLocalRunner"]
+	click Derived0 "/api/Cake.Webpack/WebpackLocalRunner"
+	Type--&gt;Derived1["WebpackGlobalRunner"]
+	click Derived1 "/api/Cake.Webpack/WebpackGlobalRunner"
 
 						</div>
 					</div>
@@ -310,43 +309,12 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Webpack/NodeToolRunner_1/DCF67F94">FromPath<wbr>(DirectoryPath)<wbr></a></td>
-								<td><a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner<wbr>&lt;TSettings&gt;<wbr></a></td>
-								<td>
-									<div>
-            Sets the working directory for npm commands
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Webpack/NodeToolRunner_1/71766878">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the possible names of the tool executable.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Webpack/WebpackRunner_1/129E97E9">GetToolName<wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
             Gets the name of the tool.
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Webpack/NodeToolRunner_1/27507BBA">GetWorkingDirectory<wbr>(TSettings)<wbr></a></td>
-								<td>DirectoryPath</td>
-								<td>
-									<div>
-            Gets the working directory from the NpmRunnerSettings
-                        Defaults to the currently set working directory.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Webpack/NodeToolRunner_1">NodeToolRunner<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -389,17 +357,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;WebpackRunner<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;WebpackRunner<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -408,6 +365,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;WebpackRunner<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

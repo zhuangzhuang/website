@@ -293,7 +293,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/59582911">Files</a></td>
-								<td>ICollection<wbr>&lt;&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Incubator/CustomProjectFile">CustomProjectFile</a>&gt;<wbr></td>
 								<td>
 									<div>Gets the project content files. <code class="cs"><a href="/api/Cake.Incubator/CustomProjectFile">CustomProjectFile</a></code></div>
 								</td>
@@ -371,7 +371,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/CA2937D6">PackageReferences</a></td>
-								<td>ICollection<wbr>&lt;&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;<a href="/api/Cake.Incubator/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
             The project package references. A collection of <code class="cs"><a href="/api/Cake.Incubator/PackageReference">PackageReference</a></code>
@@ -403,7 +403,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/D6A1E56D">ProjectReferences</a></td>
-								<td>ICollection<wbr>&lt;&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;ProjectReference&gt;<wbr></td>
 								<td>
 									<div>Gets the references to other projects. <code class="cs"><a href="/api/Cake.Common.Solution.Project/ProjectReference">ProjectReference</a></code></div>
 								</td>
@@ -417,7 +417,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/6E8C0C1A">References</a></td>
-								<td>ICollection<wbr>&lt;&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;Project<wbr>Assembly<wbr>Reference&gt;<wbr></td>
 								<td>
 									<div>Gets the references. <code class="cs"><a href="/api/Cake.Common.Solution.Project/ProjectAssemblyReference">ProjectAssemblyReference</a></code></div>
 								</td>
@@ -656,17 +656,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -675,6 +664,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

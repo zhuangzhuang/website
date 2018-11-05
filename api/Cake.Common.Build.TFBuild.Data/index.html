@@ -80,8 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
-<p><a href="#EnumTypes">Enum Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#EnumTypes">Enum Types</a></p>
+<p><a href="#ClassTypes">Class Types</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -240,7 +240,8 @@
 			<li><a href="/api/Cake.AWS.ElasticLoadBalancing">Cake<wbr>.AWS<wbr>.<wbr>Elastic<wbr>Load<wbr>Balancing</a></li>
 			<li><a href="/api/Cake.AWS.Route53">Cake<wbr>.AWS<wbr>.Route53</a></li>
 			<li><a href="/api/Cake.AWS.S3">Cake<wbr>.AWS<wbr>.S3</a></li>
-</ul></li>			<li><a href="/api/Cake.Azure">Cake<wbr>.Azure</a></li>
+</ul></li>			<li><a href="/api/Cake.AzCopy">Cake<wbr>.AzCopy</a></li>
+			<li><a href="/api/Cake.Azure">Cake<wbr>.Azure</a></li>
 			<li><a href="/api/Cake.AzureStorage">Cake<wbr>.AzureStorage</a></li>
 			<li><a href="/api/Cake.Bumpy">Cake<wbr>.Bumpy</a></li>
 
@@ -506,8 +507,10 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.DocFx.Build">Cake<wbr>.DocFx<wbr>.Build</a></li>
 			<li><a href="/api/Cake.DocFx.Init">Cake<wbr>.DocFx<wbr>.Init</a></li>
+			<li><a href="/api/Cake.DocFx.Merge">Cake<wbr>.DocFx<wbr>.Merge</a></li>
 			<li><a href="/api/Cake.DocFx.Metadata">Cake<wbr>.DocFx<wbr>.Metadata</a></li>
 			<li><a href="/api/Cake.DocFx.Pdf">Cake<wbr>.DocFx<wbr>.Pdf</a></li>
+			<li><a href="/api/Cake.DocFx.Serve">Cake<wbr>.DocFx<wbr>.Serve</a></li>
 </ul></li>			<li><a href="/api/Cake.Docker">Cake<wbr>.Docker</a></li>
 			<li><a href="/api/Cake.DoInDirectory">Cake<wbr>.DoInDirectory</a></li>
 
@@ -591,6 +594,7 @@
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Gitter.Chat">Cake<wbr>.Gitter<wbr>.Chat</a></li>
 </ul></li>			<li><a href="/api/Cake.Gulp">Cake<wbr>.Gulp</a></li>
+			<li><a href="/api/Cake.Handlebars">Cake<wbr>.Handlebars</a></li>
 			<li><a href="/api/Cake.Hg">Cake<wbr>.Hg</a></li>
 			<li><a href="/api/Cake.HipChat">Cake<wbr>.HipChat</a></li>
 
@@ -726,9 +730,11 @@
 				<li class="treeview">
 				<a href="/api/Cake.Npm">Cake<wbr>.Npm</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Cake.Npm.Ci">Cake<wbr>.Npm<wbr>.Ci</a></li>
+						<li><a href="/api/Cake.Npm.AddUser">Cake<wbr>.Npm<wbr>.AddUser</a></li>
+			<li><a href="/api/Cake.Npm.Ci">Cake<wbr>.Npm<wbr>.Ci</a></li>
 			<li><a href="/api/Cake.Npm.Install">Cake<wbr>.Npm<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Npm.Pack">Cake<wbr>.Npm<wbr>.Pack</a></li>
+			<li><a href="/api/Cake.Npm.Prune">Cake<wbr>.Npm<wbr>.Prune</a></li>
 			<li><a href="/api/Cake.Npm.Publish">Cake<wbr>.Npm<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Npm.Rebuild">Cake<wbr>.Npm<wbr>.Rebuild</a></li>
 			<li><a href="/api/Cake.Npm.RunScript">Cake<wbr>.Npm<wbr>.RunScript</a></li>
@@ -875,8 +881,12 @@
 			<li><a href="/api/Cake.Tfx.Extension.Install">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Install</a></li>
 			<li><a href="/api/Cake.Tfx.Extension.Publish">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Publish</a></li>
 			<li><a href="/api/Cake.Tfx.Extension.Share">Cake<wbr>.Tfx<wbr>.Extension<wbr>.Share</a></li>
-</ul></li></ul></li>			<li><a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a></li>
-			<li><a href="/api/Cake.Transifex">Cake<wbr>.Transifex</a></li>
+</ul></li></ul></li>
+				<li class="treeview">
+				<a href="/api/Cake.Topshelf">Cake<wbr>.Topshelf</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Topshelf.Exceptions">Cake<wbr>.Topshelf<wbr>.Exceptions</a></li>
+</ul></li>			<li><a href="/api/Cake.Transifex">Cake<wbr>.Transifex</a></li>
 			<li><a href="/api/Cake.Twitter">Cake<wbr>.Twitter</a></li>
 
 				<li class="treeview">
@@ -1115,6 +1125,56 @@
 	
 	
 
+			<h1 id="EnumTypes">Enum Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Enum</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></td>
+									<td>
+    Provides the type of a TF Build artifact.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></td>
+									<td>
+    Provides the result of a TF Build task record.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskStatus">TFBuildTaskStatus</a></td>
+									<td>
+    Provides the status of a TF Build task record.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFCodeCoverageToolType">T<wbr>F<wbr>Code<wbr>Coverage<wbr>Tool<wbr>Type</a></td>
+									<td>
+     Provides the known values for the Code Coverage tool formats
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></td>
+									<td>
+    Provides the known values for the TF Build Repository types.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFTestRunnerType">TFTestRunnerType</a></td>
+									<td>
+    Providers known values for the TF Test Runner types
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -1183,56 +1243,6 @@
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></td>
 									<td>
     Provides Team Foundation Team Project information for the current build
-    </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-			<h1 id="EnumTypes">Enum Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Enum</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></td>
-									<td>
-    Provides the type of a TF Build artifact.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></td>
-									<td>
-    Provides the result of a TF Build task record.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskStatus">TFBuildTaskStatus</a></td>
-									<td>
-    Provides the status of a TF Build task record.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFCodeCoverageToolType">T<wbr>F<wbr>Code<wbr>Coverage<wbr>Tool<wbr>Type</a></td>
-									<td>
-     Provides the known values for the Code Coverage tool formats
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType</a></td>
-									<td>
-    Provides the known values for the TF Build Repository types.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFTestRunnerType">TFTestRunnerType</a></td>
-									<td>
-    Providers known values for the TF Test Runner types
     </td>
 							</tr>
 					</tbody></table>

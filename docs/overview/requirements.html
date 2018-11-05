@@ -130,6 +130,7 @@
                 <li><a href="/docs/fundamentals/configuration">Configuration</a></li>
                 <li><a href="/docs/fundamentals/default-configuration-values">Default Configuration Values</a></li>
                 <li><a href="/docs/fundamentals/modules">Modules</a></li>
+                <li><a href="/docs/fundamentals/sharing-build-state">Sharing Build State</a></li>
 
                     </ul>
                 </li>
@@ -160,7 +161,7 @@
                 <li class="treeview">
                     <a href="/docs/build-systems">Build Systems</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
-                                        <li><a href="/docs/build-systems/vso">Visual Studio Team Services</a></li>
+                                        <li><a href="/docs/build-systems/azure-devops">Azure DevOps</a></li>
 
                     </ul>
                 </li>
@@ -196,15 +197,16 @@
 
 
 
-	<section class="content-header">
-		<h1>Requirements</h1>
-	</section>
+		<section class="content-header">
+			<h1>Requirements</h1>
+		</section>
 	<section class="content">
 		<h1 id="net-core">.NET Core</h1>
 <p>You can use the <a href="https://www.nuget.org/packages/Cake.CoreCLR">Cake.CoreCLR</a> NuGet package to run cross-platform on Windows, Mac or Linux using <a href="https://www.microsoft.com/net/core#windows">.NET Core</a>.</p>
 <h1 id="net-framework-4.6.1">.NET Framework 4.6.1</h1>
 <p>The <a href="https://www.nuget.org/packages/Cake">Cake</a> NuGet package can be used on Windows to run using the full <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49981">.NET Framework 4.6.1</a>.</p>
 <p>Alternatively, you can also use <a href="http://www.mono-project.com/">Mono</a> to run on Mac or Linux. The official recommended version of Mono is <code>4.4.2</code>. Older versions might work but are not supported.</p>
+<p><strong>NOTE:</strong> It is suggested to use <a href="https://www.microsoft.com/net/download/dotnet-framework/net472">.NET Framework 4.7.2</a> or newer to run build scripts which are using addins targetting .NET Standard 2.0 only.</p>
 
 	</section>
                 

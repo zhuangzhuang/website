@@ -176,7 +176,7 @@
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/cake-contrib/cake-gulp" class="alert-link">https://github.com/cake-contrib/cake-gulp</a>.
+                        <a href="https://github.com/cake-contrib/cake-grunt" class="alert-link">https://github.com/cake-contrib/cake-grunt</a>.
                             </div>
 
 	
@@ -200,7 +200,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
@@ -210,7 +210,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Type["GulpRunnerFactory"]
 class Type type-node
 
@@ -244,7 +244,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Gulp/GulpRunnerFactory/6B7F3078">Global</a></td>
-								<td><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner</a><wbr>&lt;<a href="/api/Cake.Gulp/GulpRunnerSettings">GulpRunnerSettings</a>&gt;<wbr></td>
 								<td>
 									<div>
             Get a gulp global runner based on a global gulp installation, a global installation is achieved through `npm install gulp -g`
@@ -253,7 +253,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Gulp/GulpRunnerFactory/E7F13F01">Local</a></td>
-								<td><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner<wbr>&lt;TSettings&gt;<wbr></a></td>
+								<td><a href="/api/Cake.Gulp/GulpRunner_1">GulpRunner</a><wbr>&lt;<a href="/api/Cake.Gulp/GulpLocalRunnerSettings">Gulp<wbr>Local<wbr>Runner<wbr>Settings</a>&gt;<wbr></td>
 								<td>
 									<div>
             Get a gulp local runner based on a local gulp installation, a local installation is achieved through `npm install gulp`
@@ -301,17 +301,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Gulp<wbr>Runner<wbr>Factory&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Gulp<wbr>Runner<wbr>Factory&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -320,6 +309,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Gulp<wbr>Runner<wbr>Factory&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -317,7 +317,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core/CakeTask/33F68E58">Actions</a></td>
-								<td>List<wbr>&lt;T&gt;<wbr></td>
+								<td>List<wbr>&lt;Func<wbr>&lt;<a href="/api/Cake.Core/ICakeContext">ICakeContext</a>, <wbr>Task&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the task's actions.
@@ -326,7 +326,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/5021EE32">Criterias</a></td>
-								<td>List<wbr>&lt;T&gt;<wbr></td>
+								<td>List<wbr>&lt;<a href="/api/Cake.Core/CakeTaskCriteria">CakeTaskCriteria</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the task's criterias.
@@ -344,7 +344,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/B138D0DA">DelayedActions</a></td>
-								<td>Queue<wbr>&lt;&gt;<wbr></td>
+								<td>Queue<wbr>&lt;Action&gt;<wbr></td>
 								<td>
 									<div>
     Gets the task's actions that are run at execution time to additionally populate <code class="cs"><a href="/api/Cake.Core/CakeTask/33F68E58">Actions</a></code>.
@@ -353,7 +353,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/BA79E975">Dependees</a></td>
-								<td>List<wbr>&lt;T&gt;<wbr></td>
+								<td>List<wbr>&lt;<a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the tasks that the task want to be a dependency of.
@@ -362,7 +362,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/8713EAA1">Dependencies</a></td>
-								<td>List<wbr>&lt;T&gt;<wbr></td>
+								<td>List<wbr>&lt;<a href="/api/Cake.Core/CakeTaskDependency">CakeTaskDependency</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the task's dependencies.
@@ -380,7 +380,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/5D2BDA78">ErrorHandler</a></td>
-								<td>Action<wbr>&lt;T&gt;<wbr></td>
+								<td>Action<wbr>&lt;Exception&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the error handler.
@@ -389,7 +389,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/883E3286">ErrorReporter</a></td>
-								<td>Action<wbr>&lt;T&gt;<wbr></td>
+								<td>Action<wbr>&lt;Exception&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the error reporter.
@@ -529,17 +529,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;CakeTask&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;CakeTask&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -548,6 +537,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;CakeTask&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

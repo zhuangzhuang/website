@@ -313,7 +313,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/2AD7733D">OverwriteFiles</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -329,7 +329,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/DD3318F2">Properties</a></td>
-								<td>IDictionary<wbr>&lt;,&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -337,7 +337,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/B091E931">Quiet</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -361,7 +361,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/E059BE93">Source<wbr>Encrypt<wbr>Connection</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -401,7 +401,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/6748E9D3">Source<wbr>Trust<wbr>Server<wbr>Certificate</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -433,7 +433,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/46A133D0">Target<wbr>Encrypt<wbr>Connection</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -473,7 +473,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/0C88E55D">Target<wbr>Trust<wbr>Server<wbr>Certificate</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -489,7 +489,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/462F3176">Universal<wbr>Authentication</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -497,7 +497,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SqlPackage/SqlPackageSettings/D3FB6A39">Variables</a></td>
-								<td>IDictionary<wbr>&lt;,&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div></div>
 											<div><small><em>Inherited from <a href="/api/Cake.SqlPackage/SqlPackageSettings">SqlPackageSettings</a></em></small></div>
@@ -544,17 +544,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -563,6 +552,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

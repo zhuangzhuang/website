@@ -84,6 +84,7 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
+<p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -238,6 +239,21 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings/FAA75F98">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings<wbr>()<wbr></a></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings">TfsPullRequestSystemSettings</a></code> class
+            based on the environment variables set by the Azure Pipelines / TFS build
+            using the build authentication token.
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings/712FAAD1">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings<wbr>(ITfsCredentials)<wbr></a></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings">TfsPullRequestSystemSettings</a></code> class
+            based on the environment variables set by the Azure Pipelines / TFS build.
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings/8811F746">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings<wbr>(<wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></td>
 									<td>
             Initializes a new instance of the <code class="cs"><a href="/api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemSettings">TfsPullRequestSystemSettings</a></code> class
@@ -291,7 +307,7 @@ class Type type-node
 								<td>
 									<div>
             Gets the credentials used to authenticate against Team Foundation Server or
-            Visual Studio Team Services.
+            Azure DevOps.
             </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></em></small></div>
 								</td>
@@ -309,7 +325,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings/5E73759A">PullRequestId</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
             Gets the ID of the pull request.
@@ -364,6 +380,32 @@ class Type type-node
 			</div>
 		
 
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings/E529B915">Using<wbr>Tfs<wbr>Build<wbr>O<wbr>Auth<wbr>Token<wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></td>
+								<td>
+									<div>
+            Constructs the settings object using the access token provided by a Azure Pipelines or Team Foundation Server build.
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 			<h1 id="ExtensionMethods">Extension Methods</h1>
@@ -400,17 +442,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -419,6 +450,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

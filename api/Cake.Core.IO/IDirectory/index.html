@@ -309,7 +309,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/IDirectory/2AF24215">GetDirectories<wbr>(string, <wbr>SearchScope)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IDirectory">IDirectory</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets directories matching the specified filter and scope.
@@ -318,7 +318,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/IDirectory/0D24A352">GetFiles<wbr>(string, <wbr>SearchScope)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IFile">IFile</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets files matching the specified filter and scope.
@@ -364,7 +364,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/5DFE4A4C">GetDirectories<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IDirectory">IDirectory</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets directories matching the specified filter and scope, with option to exclude hidden directories.
@@ -374,7 +374,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/DF4D07E6">GetDirectories<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>, <wbr>Action<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IDirectory">IDirectory</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets directories matching the specified filter and scope, with option to exclude hidden directories.
@@ -384,7 +384,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/3BA191FE">GetFiles<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IFile">IFile</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets files matching the specified filter and scope.
@@ -394,7 +394,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/DirectoryExtensions/C6824548">GetFiles<wbr>(string, <wbr>SearchScope, <wbr>Func<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info, <wbr>bool&gt;<wbr>, <wbr>Action<wbr>&lt;<wbr>I<wbr>File<wbr>System<wbr>Info&gt;<wbr>)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Core.IO/IFile">IFile</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets files matching the specified filter and scope.
@@ -414,17 +414,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IDirectory&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;IDirectory&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -433,6 +422,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;IDirectory&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

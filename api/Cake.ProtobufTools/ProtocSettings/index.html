@@ -298,7 +298,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ProtobufTools/ProtocSettings/06F14EC0">DecodeRaw</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Read an arbitrary protocol message from
@@ -371,7 +371,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ProtobufTools/ProtocSettings/25782A4E">IncludeImports</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             When using --descriptor_set_out, also include
@@ -382,7 +382,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ProtobufTools/ProtocSettings/B98C760B">IncludeSourceInfo</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             When using --descriptor_set_out, do not strip
@@ -432,7 +432,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ProtobufTools/ProtocSettings/BBFF39E0">OFile</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Writes a FileDescriptorSet (a protocol buffer, defined in descriptor.proto) containing all of
@@ -442,7 +442,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ProtobufTools/ProtocSettings/96464D40">OSTarget</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td><a href="/api/Cake.ProtobufTools/OSTarget">Nullable<wbr>&lt;OSTarget&gt;<wbr></a></td>
 								<td>
 									<div>
             Specifies what protoc executable will run.
@@ -476,7 +476,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.ProtobufTools/ProtocSettings/9928ED4A">Print<wbr>Free<wbr>Field<wbr>Numbers</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Print the free field numbers of the messages
@@ -558,17 +558,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Protoc<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Protoc<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -577,6 +566,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Protoc<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

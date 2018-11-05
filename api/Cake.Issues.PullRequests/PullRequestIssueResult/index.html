@@ -281,7 +281,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Issues.PullRequests/PullRequestIssueResult/B5039298">PostedIssues</a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Issues/IIssue">IIssue</a>&gt;<wbr></td>
 								<td>
 									<div>
             Gets the issues posted to the pull request.
@@ -290,7 +290,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Issues.PullRequests/PullRequestIssueResult/99A5D08F">ReportedIssues</a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Issues/IIssue">IIssue</a>&gt;<wbr></td>
 								<td>
 									<div>
             Gets all issues reported by the issue providers.
@@ -338,17 +338,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Pull<wbr>Request<wbr>Issue<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Pull<wbr>Request<wbr>Issue<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -357,6 +346,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Pull<wbr>Request<wbr>Issue<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

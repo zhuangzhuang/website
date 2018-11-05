@@ -231,9 +231,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.PullRequests/BaseFilteringByModifiedFilesCapability_1">Base<wbr>Filtering<wbr>By<wbr>Modified<wbr>Files<wbr>Capability<wbr>&lt;T&gt;<wbr></a></li>								
-											<li><a href="/api/Cake.Issues.PullRequests/BaseCheckingCommitIdCapability_1">Base<wbr>Checking<wbr>Commit<wbr>Id<wbr>Capability<wbr>&lt;T&gt;<wbr></a></li>								
-											<li><a href="/api/Cake.Issues.PullRequests/BaseDiscussionThreadsCapability_1">Base<wbr>Discussion<wbr>Threads<wbr>Capability<wbr>&lt;T&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/BaseCheckingCommitIdCapability_1">Base<wbr>Checking<wbr>Commit<wbr>Id<wbr>Capability</a><wbr>&lt;<a href="/api/Cake.Issues.PullRequests/BaseCheckingCommitIdCapability_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/BaseFilteringByModifiedFilesCapability_1">Base<wbr>Filtering<wbr>By<wbr>Modified<wbr>Files<wbr>Capability</a><wbr>&lt;<a href="/api/Cake.Issues.PullRequests/BaseFilteringByModifiedFilesCapability_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/BaseDiscussionThreadsCapability_1">Base<wbr>Discussion<wbr>Threads<wbr>Capability</a><wbr>&lt;<a href="/api/Cake.Issues.PullRequests/BaseDiscussionThreadsCapability_1#typeparam-T">T</a>&gt;<wbr></li>								
 									</ul>
 								</dd>			
 							
@@ -247,10 +247,10 @@
 	click Interface0 "/api/Cake.Issues.PullRequests/IPullRequestSystemCapability"
 	Type["BasePullRequestSystemCapability&lt;T&gt;"]
 class Type type-node
-	Type--&gt;Derived0["BaseFilteringByModifiedFilesCapability&lt;T&gt;"]
-	click Derived0 "/api/Cake.Issues.PullRequests/BaseFilteringByModifiedFilesCapability_1"
-	Type--&gt;Derived1["BaseCheckingCommitIdCapability&lt;T&gt;"]
-	click Derived1 "/api/Cake.Issues.PullRequests/BaseCheckingCommitIdCapability_1"
+	Type--&gt;Derived0["BaseCheckingCommitIdCapability&lt;T&gt;"]
+	click Derived0 "/api/Cake.Issues.PullRequests/BaseCheckingCommitIdCapability_1"
+	Type--&gt;Derived1["BaseFilteringByModifiedFilesCapability&lt;T&gt;"]
+	click Derived1 "/api/Cake.Issues.PullRequests/BaseFilteringByModifiedFilesCapability_1"
 	Type--&gt;Derived2["BaseDiscussionThreadsCapability&lt;T&gt;"]
 	click Derived2 "/api/Cake.Issues.PullRequests/BaseDiscussionThreadsCapability_1"
 
@@ -379,17 +379,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Pull<wbr>Request<wbr>System<wbr>Capability<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Pull<wbr>Request<wbr>System<wbr>Capability<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -398,6 +387,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Pull<wbr>Request<wbr>System<wbr>Capability<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

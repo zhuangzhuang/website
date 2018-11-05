@@ -324,7 +324,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/C052A8D5">AuthenticationType</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td><a href="/api/Cake.MsDeploy.Providers/AuthenticationScheme">Nullable<wbr>&lt;<wbr>Authentication<wbr>Scheme&gt;<wbr></a></td>
 								<td>
 									<div>
              Authentication scheme to use. NTLM is the default setting. If the wmsvc option is specified, then Basic is the default setting.
@@ -343,7 +343,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbSqliteProvider/7453D5F2">CommandTimeout</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             An integer value for the 'commandTimeout' setting.
@@ -381,7 +381,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/6B03608B">IncludeAcls</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             If true, include ACLs in the operation (applies to the file system, registry, and  metabase).
@@ -391,7 +391,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbSqliteProvider/88CFA4F0">IncludeData</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             A true or false value for the 'includeData' setting.
@@ -430,7 +430,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbSqliteProvider/C508A7B2">Remove<wbr>Command<wbr>Delimiter</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             A true or false value for the 'removeCommandDelimiter' setting.
@@ -449,7 +449,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/2182E996">TempAgent</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             
@@ -459,7 +459,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbSqliteProvider/FF124A8F">Transacted</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             A true or false value for the 'transacted' setting.
@@ -485,7 +485,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbSqliteProvider/E13D6EA6">WaitAttempts</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             An integer value for the 'waitAttempts' setting.
@@ -494,7 +494,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/DbSqliteProvider/4E356F00">WaitInterval</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             An integer value for the 'waitInterval' setting.
@@ -594,17 +594,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Db<wbr>Sqlite<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Db<wbr>Sqlite<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -613,6 +602,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Db<wbr>Sqlite<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

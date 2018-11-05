@@ -265,7 +265,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/ProcessSettings/897B45AB">EnvironmentVariables</a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
+								<td>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets search paths for files, directories for temporary files, application-specific options, and other similar information.
@@ -311,7 +311,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.IO/ProcessSettings/F25A26BF">Timeout</a></td>
-								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets optional timeout, in milliseconds, to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer, which represents infinity to the operating system.
@@ -368,17 +368,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Process<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Process<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -387,6 +376,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Process<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

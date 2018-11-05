@@ -255,7 +255,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/88B41741">Addins</a></td>
-								<td>HashSet<wbr>&lt;&gt;<wbr></td>
+								<td>HashSet<wbr>&lt;<a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the addins.
@@ -264,7 +264,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/18C91007">Defines</a></td>
-								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>ISet<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the defines.
@@ -273,7 +273,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/10BDAEA2">Errors</a></td>
-								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;<a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerError">ScriptAnalyzerError</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the list of analyzer errors.
@@ -282,7 +282,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/91227AD4">Lines</a></td>
-								<td>IReadOnlyList<wbr>&lt;T&gt;<wbr></td>
+								<td>IReadOnlyList<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the merged script lines.
@@ -291,7 +291,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/84C09850">Modules</a></td>
-								<td>HashSet<wbr>&lt;&gt;<wbr></td>
+								<td>HashSet<wbr>&lt;<a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the modules.
@@ -300,7 +300,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/E7BCB04C">Namespaces</a></td>
-								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>ISet<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets all the namespaces.
@@ -309,7 +309,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/DA4B9B4A">References</a></td>
-								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>ISet<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets all references.
@@ -336,7 +336,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/70708171">Tools</a></td>
-								<td>HashSet<wbr>&lt;&gt;<wbr></td>
+								<td>HashSet<wbr>&lt;<a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the tools.
@@ -345,7 +345,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/E77CB0CC">UsingAliases</a></td>
-								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>ISet<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the using aliases.
@@ -354,7 +354,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/ScriptAnalyzerResult/CD128B73">Using<wbr>Static<wbr>Directives</a></td>
-								<td>ISet<wbr>&lt;&gt;<wbr></td>
+								<td>ISet<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets all types referenced with the using static directive.
@@ -402,17 +402,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Script<wbr>Analyzer<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Script<wbr>Analyzer<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -421,6 +410,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Script<wbr>Analyzer<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

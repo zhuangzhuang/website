@@ -271,6 +271,13 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/10C383B4">AnalysisMode</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/A3F918FA">Branch</a></td>
 								<td>string</td>
 								<td>
@@ -322,12 +329,68 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/A211EBF2">Git<wbr>Hub<wbr>Delete<wbr>Old<wbr>Comments</a></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/1FE97097">GitHubEndpoint</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/A0938489">GitHubLogin</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/4A8F6487">GitHubOAuth</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/BF65BD5E">GitHubPullRequest</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/11ED0614">GitHubRepository</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/1BEB3A89">Inclusions</a></td>
 								<td>string</td>
 								<td>
 									<div>
             Comma-delimited list of file path patterns to be included in analysis. When set, only files matching the paths set here will be included in analysis.
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/6C2A8ADF">Issues<wbr>Report<wbr>Console<wbr>Enable</a></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/80B3FBFC">Issues<wbr>Report<wbr>Html<wbr>Enable</a></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
@@ -346,6 +409,13 @@ class Type type-node
 									<div>
             Key of the project. Required for Sonar 6.1 and up.
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/CB52AFD2">Language</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
@@ -430,6 +500,66 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/A0B4D81F">PullRequestBase</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets or sets the base branch in which the pull request will be merged in case of a pull request validation
+            See https://docs.sonarqube.org/display/SONAR/Pull+Request+Analysis
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/F28A6EFF">PullRequestBranch</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets or sets the branch name in case of a pull request validation
+            See https://docs.sonarqube.org/display/SONAR/Pull+Request+Analysis
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/8A3E7B40">Pull<wbr>Request<wbr>Github<wbr>Endpoint</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets or sets the github endpoint url.
+            See: https://docs.sonarqube.org/display/SONAR/Pull+Request+Analysis 
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/32038700">Pull<wbr>Request<wbr>Github<wbr>Repository</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets or sets the github repository for which the pull request should be validated. Typical github format CompanyOrUser/RepositoryName
+            See: https://docs.sonarqube.org/display/SONAR/Pull+Request+Analysis
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/05A93586">PullRequestKey</a></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>
+									<div>
+            Gets or sets the pullrequest key in case of a pull request validation
+            See https://docs.sonarqube.org/display/SONAR/Pull+Request+Analysis
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/07191CFE">PullRequestProvider</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets or sets the pull request provider used by sonarcloud. github or vsts.
+            See: https://docs.sonarqube.org/display/SONAR/Pull+Request+Analysis 
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/0A7C2526">ResharperProjectPath</a></td>
 								<td>string</td>
 								<td>
@@ -481,6 +611,23 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/5E38C0EE">TestReportPaths</a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/1BCA9149">TSLintReportPaths</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            This property accepts one or more JSON TSLint reports,
+            paths to report files should be absolute or relative to the project base directory.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Sonar/SonarBeginSettings/36AA065B">Typescript<wbr>Coverage<wbr>Reports<wbr>Path</a></td>
 								<td>string</td>
 								<td>
@@ -496,6 +643,13 @@ class Type type-node
 									<div>
             The url of the used sonar instance. When omitted, http://localhost:9000 is used.
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Sonar/SonarBeginSettings/B34F749C">UseWsCache</a></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
@@ -630,17 +784,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Sonar<wbr>Begin<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Sonar<wbr>Begin<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -649,6 +792,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Sonar<wbr>Begin<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

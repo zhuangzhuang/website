@@ -195,8 +195,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Talend/TalendCommandLineSettings">Talend<wbr>Command<wbr>Line<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool</a><wbr>&lt;<a href="/api/Cake.Talend/TalendCommandLineSettings">Talend<wbr>Command<wbr>Line<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -206,9 +206,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["TalendCommandLineTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Talend/TalendCommandLineTool_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base0["TalendCommandLineTool&lt;TalendCommandLineSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;TalendCommandLineSettings&gt;"]--&gt;Base0
 	Type["Runner"]
 class Type type-node
 
@@ -280,46 +279,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Talend/TalendCommandLineTool_1/1A81D925">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-								<td>
-									<div>
-            Gets alternative file paths which the tool may exist.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Talend/TalendCommandLineTool_1/10BB7B9A">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the possible names of the tool executable.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Talend/TalendCommandLineTool_1/7DAC123D">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the name of the tool.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Talend/TalendCommandLineTool_1/24122C80">GetWorkingDirectory<wbr>(TSettings)<wbr></a></td>
-								<td>DirectoryPath</td>
-								<td>
-									<div>
-            Get the Working Directory.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Talend/TalendCommandLineTool_1">Talend<wbr>Command<wbr>Line<wbr>Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Talend.CommandLine/Runner/7B12DE10">PublishJob<wbr>(string, <wbr>string, <wbr>string, <wbr>bool, <wbr>bool, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>Talend<wbr>Command<wbr>Line<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -377,17 +336,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Runner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;Runner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -396,6 +344,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Runner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -146,6 +146,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.NUnit">Cake<wbr>.Common<wbr>.Tools<wbr>.NUnit</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3AppDomainUsage">NUnit3AppDomainUsage</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Labels">NUnit3Labels</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3ProcessOption">NUnit3ProcessOption</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAppDomainUsage">NUnitAppDomainUsage</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevel">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level</a></li>
+				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitProcessOption">NUnitProcessOption</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Aliases">NUnit3Aliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Result">NUnit3Result</a></li>
@@ -155,13 +162,6 @@
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevelExtensions">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitRunner">NUnitRunner</a></li>
 				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitSettings">NUnitSettings</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3AppDomainUsage">NUnit3AppDomainUsage</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Labels">NUnit3Labels</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3ProcessOption">NUnit3ProcessOption</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitAppDomainUsage">NUnitAppDomainUsage</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitInternalTraceLevel">N<wbr>Unit<wbr>Internal<wbr>Trace<wbr>Level</a></li>
-				<li><a href="/api/Cake.Common.Tools.NUnit/NUnitProcessOption">NUnitProcessOption</a></li>
 
 
                     </ul>
@@ -200,7 +200,7 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>object</li>								
-											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.NUnit/NUnit3Settings">NUnit3Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -210,8 +210,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Core.Tooling/Tool_1"
+	Base0["Tool&lt;NUnit3Settings&gt;"]--&gt;Type
 	Base1["object"]--&gt;Base0
 	Type["NUnit3Runner"]
 class Type type-node
@@ -266,28 +265,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/9B12C97A">Get<wbr>Alternative<wbr>Tool<wbr>Paths<wbr>(TSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-								<td>
-									<div>
-    Gets alternative file paths which the tool may exist in
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/32C94032">Get<wbr>Environment<wbr>Variables<wbr>(TSettings)<wbr></a></td>
-								<td>IDictionary<wbr>&lt;TKey, <wbr>TValue&gt;<wbr></td>
-								<td>
-									<div>
-    Gets the environment variables.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.NUnit/NUnit3Runner/F49D0BEF">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the possible names of the tool executable.
@@ -301,27 +280,6 @@ class Type type-node
 									<div>
     Gets the name of the tool.
     </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/FAB95BAD">GetToolPath<wbr>(TSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
-								<td>
-									<div>
-    Gets the resolved tool path.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/9C92E157">GetWorkingDirectory<wbr>(TSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
-								<td>
-									<div>
-    Gets the working directory.
-    Defaults to the currently set working directory.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -341,46 +299,6 @@ class Type type-node
 									<div>
     Runs the tests in the specified assemblies, using the specified settings.
     </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/7C97BC0F">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Runs the tool using the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/8253AA41">Run<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings, <wbr>Action<wbr>&lt;IProcess&gt;<wbr>)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Runs the tool using a custom tool path and the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/A736B09F">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
-								<td>
-									<div>
-    Runs the tool using a custom tool path and the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Core.Tooling/Tool_1/225385F4">RunProcess<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>ProcessSettings)<wbr></a></td>
-								<td><a href="/api/Cake.Core.IO/IProcess">IProcess</a></td>
-								<td>
-									<div>
-    Runs the tool using a custom tool path and the specified settings.
-    </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/Tool_1">Tool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -423,17 +341,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;NUnit3Runner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;NUnit3Runner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -442,6 +349,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;NUnit3Runner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

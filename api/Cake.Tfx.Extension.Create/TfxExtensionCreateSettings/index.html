@@ -297,7 +297,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx.Extension.Create/TfxExtensionCreateSettings/4A319436">ManifestGlobs</a></td>
-								<td>ICollection<wbr>&lt;&gt;<wbr></td>
+								<td>ICollection<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the List of globs to find manifests.
@@ -316,7 +316,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Tfx/TfxSettings/44497BD4">Output</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td><a href="/api/Cake.Tfx/TfxOutputType">Nullable<wbr>&lt;<wbr>Tfx<wbr>Output<wbr>Type&gt;<wbr></a></td>
 								<td>
 									<div>
             Gets or sets a value indicating the output type to be used for commands
@@ -421,17 +421,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfx<wbr>Extension<wbr>Create<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Tfx<wbr>Extension<wbr>Create<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -440,6 +429,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfx<wbr>Extension<wbr>Create<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

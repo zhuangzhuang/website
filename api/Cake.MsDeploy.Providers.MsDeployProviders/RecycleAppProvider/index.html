@@ -329,7 +329,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/C052A8D5">AuthenticationType</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td><a href="/api/Cake.MsDeploy.Providers/AuthenticationScheme">Nullable<wbr>&lt;<wbr>Authentication<wbr>Scheme&gt;<wbr></a></td>
 								<td>
 									<div>
              Authentication scheme to use. NTLM is the default setting. If the wmsvc option is specified, then Basic is the default setting.
@@ -359,7 +359,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/6B03608B">IncludeAcls</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             If true, include ACLs in the operation (applies to the file system, registry, and  metabase).
@@ -399,7 +399,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RecycleAppProvider/A8CB7848">RecycleMode</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RecycleMode">Nullable<wbr>&lt;RecycleMode&gt;<wbr></a></td>
 								<td>
 									<div>
             One of 4 values to control what action is taken on the application pool: RecycleAppPool, StartAppPool,  StopAppPool, or UnloadAppDomain.  The default is RecycleAppPool.
@@ -418,7 +418,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers/MsDeployProvider/2182E996">TempAgent</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             
@@ -428,7 +428,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.MsDeploy.Providers.MsDeployProviders/RecycleAppProvider/D4C58BAA">Timeout</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             Amount of time, in milliseconds, to wait for an application pool to recycle, start or stop.  To return 
@@ -548,17 +548,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Recycle<wbr>App<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Recycle<wbr>App<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -567,6 +556,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Recycle<wbr>App<wbr>Provider&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

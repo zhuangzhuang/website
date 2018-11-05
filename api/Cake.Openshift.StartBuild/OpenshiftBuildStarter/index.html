@@ -196,8 +196,8 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>Tool<wbr>&lt;&gt;<wbr></li>								
-											<li><a href="/api/Cake.Openshift/OpenshiftTool_1">OpenshiftTool<wbr>&lt;TSettings&gt;<wbr></a></li>								
+											<li>Tool<wbr>&lt;<a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Openshift/OpenshiftTool_1">OpenshiftTool</a><wbr>&lt;<a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -207,9 +207,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["OpenshiftTool&lt;TSettings&gt;"]--&gt;Type
-	click Base0 "/api/Cake.Openshift/OpenshiftTool_1"
-	Base1["Tool&lt;&gt;"]--&gt;Base0
+	Base0["OpenshiftTool&lt;OpenshiftBuildStarterSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;OpenshiftBuildStarterSettings&gt;"]--&gt;Base0
 	Type["OpenshiftBuildStarter"]
 class Type type-node
 
@@ -263,42 +262,12 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Openshift/OpenshiftTool_1/C332FDBD">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
-								<td>
-									<div>
-            Gets the possible names of the tool executable.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Openshift/OpenshiftTool_1">OpenshiftTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Openshift/OpenshiftTool_1/3F554CCD">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the name of the tool.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Openshift/OpenshiftTool_1">OpenshiftTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarter/F7A9B8E7">Run<wbr>(string, <wbr>Openshift<wbr>Build<wbr>Starter<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
             Run the start-build command
             </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Openshift/OpenshiftTool_1/E5EDA875">RunCommand<wbr>(TSettings, <wbr>Process<wbr>Argument<wbr>Builder)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Runs the openshift cli command using the specified settings and arguments.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Openshift/OpenshiftTool_1">OpenshiftTool<wbr>&lt;TSettings&gt;<wbr></a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -341,17 +310,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Openshift<wbr>Build<wbr>Starter&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Openshift<wbr>Build<wbr>Starter&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -360,6 +318,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Openshift<wbr>Build<wbr>Starter&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -161,10 +161,8 @@
 				<li><a href="/api/Cake.Fastlane/FastlaneProvider">FastlaneProvider</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneTool_1">FastlaneTool<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneToolProvider">FastlaneToolProvider</a></li>
 				<li><a href="/api/Cake.Fastlane/PilotCommand">PilotCommand</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Fastlane/IFastlaneDeliverProvider">I<wbr>Fastlane<wbr>Deliver<wbr>Provider</a></li>
-				<li><a href="/api/Cake.Fastlane/IFastlaneProvider">IFastlaneProvider</a></li>
 
 
                     </ul>
@@ -398,7 +396,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/FastlanePilotConfiguration/D4A082F1">Groups</a></td>
-								<td>IEnumerable<wbr>&lt;&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets groups to associate tester to one group or more by group name / group id. E.g. `-g \"Team 1\",\"Team 2\"`
@@ -520,6 +518,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Fastlane/FastlaneConfiguration/5827220C">UseBundleExecution</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Gets or sets a value indicating whether [use bundle execution].
+            </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Fastlane/FastlaneConfiguration">Fastlane<wbr>Configuration</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Fastlane/FastlaneConfiguration/6ABF8AEC">UserName</a></td>
 								<td>string</td>
 								<td>
@@ -541,7 +549,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Fastlane/FastlanePilotConfiguration/44B60E3E">Wait<wbr>Processing<wbr>Interval</a></td>
-								<td>Nullable<wbr>&lt;&gt;<wbr></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             Gets or sets the interval in seconds to wait for App Store Connect processing.
@@ -589,17 +597,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Pilot<wbr>Configuration&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Pilot<wbr>Configuration&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -608,6 +605,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Pilot<wbr>Configuration&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

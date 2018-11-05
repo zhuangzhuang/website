@@ -227,7 +227,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/F635004D">Addins</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;<a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the addins.
@@ -236,7 +236,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/A282A1B0">Defines</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the defines directives defined by the scripts.
@@ -245,7 +245,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/DBFC0BB8">Includes</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;<a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation">IScriptInformation</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the includes.
@@ -254,7 +254,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/3E8B29E7">Modules</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;<a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the modules.
@@ -263,7 +263,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/42D2922B">Namespaces</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets all namespaces referenced by the script.
@@ -281,7 +281,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/7F25B92D">References</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets the referenced script assemblies.
@@ -290,7 +290,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/BB361BD0">Tools</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;<a href="/api/Cake.Core.Packaging/PackageReference">PackageReference</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the tools.
@@ -299,7 +299,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/361FCAB5">UsingAliases</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets all using aliases defined by the scripts.
@@ -308,7 +308,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core.Scripting.Analysis/IScriptInformation/8333A64A">Using<wbr>Static<wbr>Directives</a></td>
-								<td>IList<wbr>&lt;T&gt;<wbr></td>
+								<td>IList<wbr>&lt;string&gt;<wbr></td>
 								<td>
 									<div>
     Gets all types referenced with the using static directive.
@@ -356,17 +356,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Script<wbr>Information&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Script<wbr>Information&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -375,6 +364,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Script<wbr>Information&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -163,6 +163,7 @@
 				<li><a href="/api/Cake.Fastlane/FastlaneProvider/2FA3EB3D">Pilot<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Pilot<wbr>Configuration&gt;<wbr>)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Fastlane/FastlaneProvider/D5E9FEA0">Supply<wbr>(<wbr>Fastlane<wbr>Supply<wbr>Configuration)<wbr></a></li>
 				<li><a href="/api/Cake.Fastlane/FastlaneProvider/AEA2B58B">Supply<wbr>(Action<wbr>&lt;<wbr>Fastlane<wbr>Supply<wbr>Configuration&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Fastlane/FastlaneProvider/B906FBD1">Update<wbr>()<wbr></a></li>
 
 
                     </ul>
@@ -191,8 +192,8 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-             Executes fastlane supply with the specified configuration.
-             </div>
+              Executes fastlane supply with the specified configuration.
+              </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
@@ -215,16 +216,16 @@
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-                  <pre><code class="cs">          var configuration = new FastlaneSupplyConfiguration
-          {
-                ApkFilePath = "./artifacts/android/cake.fastlane.apk",
-                SkipUploadMetadata = true,
-                SkipUploadImages = true,
-                SkipUploadScreenShots = true
-          };
+                   <pre><code class="cs">           var configuration = new FastlaneSupplyConfiguration
+           {
+                 ApkFilePath = "./artifacts/android/cake.fastlane.apk",
+                 SkipUploadMetadata = true,
+                 SkipUploadImages = true,
+                 SkipUploadScreenShots = true
+           };
 
-          Fastlane.Supply(configuration);</code></pre>
-              </div>
+           Fastlane.Supply(configuration);</code></pre>
+               </div>
 
 
 
