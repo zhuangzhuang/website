@@ -213,10 +213,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Svn.Add/SvnAdder">SvnAdder</a></li>								
-											<li><a href="/api/Cake.Svn.Export/SvnExporter">SvnExporter</a></li>								
-											<li><a href="/api/Cake.Svn.Checkout/SvnCheckouter">SvnCheckouter</a></li>								
 											<li><a href="/api/Cake.Svn.Delete/SvnDeleter">SvnDeleter</a></li>								
+											<li><a href="/api/Cake.Svn.Export/SvnExporter">SvnExporter</a></li>								
+											<li><a href="/api/Cake.Svn.Add/SvnAdder">SvnAdder</a></li>								
+											<li><a href="/api/Cake.Svn.Checkout/SvnCheckouter">SvnCheckouter</a></li>								
 											<li><a href="/api/Cake.Svn.Info/SvnInfo">SvnInfo</a></li>								
 									</ul>
 								</dd>			
@@ -229,14 +229,14 @@
 	Base0["object"]--&gt;Type
 	Type["SvnTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["SvnAdder"]
-	click Derived0 "/api/Cake.Svn.Add/SvnAdder"
+	Type--&gt;Derived0["SvnDeleter"]
+	click Derived0 "/api/Cake.Svn.Delete/SvnDeleter"
 	Type--&gt;Derived1["SvnExporter"]
 	click Derived1 "/api/Cake.Svn.Export/SvnExporter"
-	Type--&gt;Derived2["SvnCheckouter"]
-	click Derived2 "/api/Cake.Svn.Checkout/SvnCheckouter"
-	Type--&gt;Derived3["SvnDeleter"]
-	click Derived3 "/api/Cake.Svn.Delete/SvnDeleter"
+	Type--&gt;Derived2["SvnAdder"]
+	click Derived2 "/api/Cake.Svn.Add/SvnAdder"
+	Type--&gt;Derived3["SvnCheckouter"]
+	click Derived3 "/api/Cake.Svn.Checkout/SvnCheckouter"
 	Type--&gt;Derived4["SvnInfo"]
 	click Derived4 "/api/Cake.Svn.Info/SvnInfo"
 
