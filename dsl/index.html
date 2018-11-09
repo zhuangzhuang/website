@@ -374,14 +374,14 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-    Contains extension methods for working with directories.
-    </td>
+            Several extension methods when operating on a Directory.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotcover">DotCover</a></td>
@@ -420,14 +420,20 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Contains functionality for working with PSCP.
+            
+
+            Aliases for Putty.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -561,7 +567,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -734,7 +740,12 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    Contains functionality related to text transformation.
+    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
+    <p>
+    In order to use the commands for this alias, include the following in your build.cake file to download and
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
+    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
+    </p>
     </td>
                 </tr>
                 <tr>
@@ -826,7 +837,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-            Cake build aliases for Android ADB Activity Manager commands
+            Cake build aliases for Android ADB commands
             </td>
                 </tr>
                 <tr>
@@ -907,13 +918,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-             Contains Cake aliases for configuring Amazon Simple Storage Service
+            Contains Cake aliases for configuring Amazon Elastic Computing instances
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running Azure login commands.
+            Contains Cake aliases for running commands managing Azure resource groups.
             </td>
                 </tr>
                 <tr>
@@ -1007,8 +1018,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -1075,7 +1086,12 @@
                 <tr>
                     <td><a href="/dsl/deployment">Deployment</a></td>
                     <td>
-            Contains functionality for working with mobile-center commands.
+            <p>
+            Contains functionality for working with the MsDeploy.exe (Web Deploy) command line interface (cli).</p>
+            <p>
+            MsDeploy v3.6 will already have to be installed on the machine the Cake Script is being executed on.
+            </p>    
+            See also https://www.microsoft.com/en-us/download/details.aspx?id=43717 
             </td>
                 </tr>
                 <tr>
@@ -1087,13 +1103,14 @@
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-    Contains extension methods for working with directories.
-    </td>
+            Several extension methods when operating on a Directory.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to creating PDF files using <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to extracting API metadata using
+            <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1132,7 +1149,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Contains functionality related to emails.
+            Class that lets you override default API settings.
             </td>
                 </tr>
                 <tr>
@@ -1161,8 +1178,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-    Contains functionality related to the environment.
-    </td>
+            Several extension methods when using Environment Variables.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fastlane">Fastlane</a></td>
@@ -1186,8 +1203,14 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-    Contains functionality related to file operations.
-    </td>
+            Contains functionality for working with Plink.
+            
+
+            Contains functionality for working with PSCP.
+            
+
+            Aliases for Putty.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fileset">FileSet</a></td>
@@ -1234,7 +1257,12 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Contains GitterProvider Chat functionality.
+            <p>Contains aliases related to <a href="https://gitter.im">gitter.im</a>.</p>
+            <p>
+            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin Cake.Gitter</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1314,7 +1342,13 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to reporting issues to pull requests.
+            Contains functionality for reading issues from Markdownlint log files.
+            
+
+            Provider for issues reported my markdownlint-cli.
+            
+
+            Provider for issues reported my Markdownlint.
             </td>
                 </tr>
                 <tr>
@@ -1381,7 +1415,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild project files.
+    Contains functionality related to MSBuild solution files.
     </td>
                 </tr>
                 <tr>
@@ -1424,7 +1458,7 @@
                 <tr>
                     <td><a href="/dsl/npm">Npm</a></td>
                     <td>
-            Npm Set aliases
+            Npm Ci aliases
             </td>
                 </tr>
                 <tr>
@@ -1558,7 +1592,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Contains functionality related to SendGrid API.
+            The result of SendGridProvider API post.
             </td>
                 </tr>
                 <tr>
