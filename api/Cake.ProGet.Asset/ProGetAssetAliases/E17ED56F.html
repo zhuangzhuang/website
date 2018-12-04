@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ProGetAssetAliases.DownloadAssetDirectory(ICakeContext, string, FilePath, ProGetConfiguration) Method</title>
+        <title>Cake - API - ProGetAssetAliases.ProGetDownloadAsset(ICakeContext, string, FilePath, ProGetConfiguration) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -151,13 +151,13 @@
 		<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/723AC387">CreateAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/0849A087">DeleteAsset<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/90DA1847">DoesAssetExist<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/6CA06CB9">DownloadAsset<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/D18F8080">Download<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/F01F3398">ListAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/BBCF1386">PushAsset<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/AB94654F">Pro<wbr>Get<wbr>Create<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/19B7D667">ProGetDeleteAsset<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/0D0BA569">ProGetDoesAssetExist<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/E17ED56F">ProGetDownloadAsset<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/A6F98775">Pro<wbr>Get<wbr>Download<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/B4A4EFD6">Pro<wbr>Get<wbr>List<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/03846D7B">ProGetPushAsset<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
 
 
                     </ul>
@@ -173,7 +173,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a>.</h3>
-	<h1>Download<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr> <small>Method</small></h1>
+	<h1>ProGetDownloadAsset<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -186,7 +186,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Download an entire ProGet Asset Directory as a zip file.
+            Download a single asset from a ProGet Asset Directory.
             </div>
 
 		<div class="panel panel-default">
@@ -206,7 +206,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void DownloadAssetDirectory(this ICakeContext context, string assetDirectoryUri, FilePath outputPath, ProGetConfiguration config)</code></pre>
+	<pre><code>public static void ProGetDownloadAsset(this ICakeContext context, string assetUri, FilePath outputPath, ProGetConfiguration config)</code></pre>
 
 
 
@@ -250,9 +250,9 @@
 						<td>The <code class="cs"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> Cake context.</td>
 					</tr>
 					<tr>
-						<td>assetDirectoryUri</td>
+						<td>assetUri</td>
 						<td>string</td>
-						<td>The URI to the ProGet Asset Directory.</td>
+						<td>The URI to the asset in the ProGet Asset Directory.</td>
 					</tr>
 					<tr>
 						<td>outputPath</td>

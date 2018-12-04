@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ProGetAssetAliases.DoesAssetExist(ICakeContext, string, ProGetConfiguration) Method</title>
+        <title>Cake - API - ProGetAssetAliases.ProGetListAssetDirectory(ICakeContext, string, ProGetConfiguration) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -151,13 +151,13 @@
 		<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/723AC387">CreateAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/0849A087">DeleteAsset<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/90DA1847">DoesAssetExist<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/6CA06CB9">DownloadAsset<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/D18F8080">Download<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/F01F3398">ListAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/BBCF1386">PushAsset<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/AB94654F">Pro<wbr>Get<wbr>Create<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/19B7D667">ProGetDeleteAsset<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/0D0BA569">ProGetDoesAssetExist<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/E17ED56F">ProGetDownloadAsset<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/A6F98775">Pro<wbr>Get<wbr>Download<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/B4A4EFD6">Pro<wbr>Get<wbr>List<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/03846D7B">ProGetPushAsset<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
 
 
                     </ul>
@@ -173,7 +173,7 @@
 
 <section class="content-header">
 			<h3><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a>.</h3>
-	<h1>DoesAssetExist<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr> <small>Method</small></h1>
+	<h1>Pro<wbr>Get<wbr>List<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -186,7 +186,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Determines if the asset is published at an existing URI.
+            Lists files in an Asset Directory.
             </div>
 
 		<div class="panel panel-default">
@@ -206,7 +206,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static bool DoesAssetExist(this ICakeContext context, string assetUri, ProGetConfiguration config)</code></pre>
+	<pre><code>public static List&lt;ProGetDirectoryListing&gt; ProGetListAssetDirectory(this ICakeContext context, string assetDirectoryUri, ProGetConfiguration config)</code></pre>
 
 
 
@@ -247,17 +247,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The Cake context.</td>
+						<td>The <code class="cs"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> Cake context.</td>
 					</tr>
 					<tr>
-						<td>assetUri</td>
+						<td>assetDirectoryUri</td>
 						<td>string</td>
-						<td>The URI of the asset.</td>
+						<td>The URI of the ProGet Asset Directory.</td>
 					</tr>
 					<tr>
 						<td>config</td>
 						<td><a href="/api/Cake.ProGet.Asset/ProGetConfiguration">ProGetConfiguration</a></td>
-						<td>An IProGetConfiguration with the username and password.</td>
+						<td>The ProGet Configuration.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -274,8 +274,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
-					<td>True if the asset exists, false otherwise.</td>
+					<td>List<wbr>&lt;<a href="/api/Cake.ProGet.Asset/ProGetDirectoryListing">Pro<wbr>Get<wbr>Directory<wbr>Listing</a>&gt;<wbr></td>
+					<td>A list of <code class="cs"><a href="/api/Cake.ProGet.Asset/ProGetDirectoryListing">ProGetDirectoryListing</a></code> entries.</td>
 				</tr>
 			</tbody></table>
 		</div>

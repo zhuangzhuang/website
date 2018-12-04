@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - UniversalPackageAliases.Unpack(ICakeContext, UniversalPackageUnpackSettings) Method</title>
+        <title>Cake - API - IYarnRunnerCommands.Audit(Action&lt;YarnAuditSettings&gt;) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -82,7 +82,6 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -144,17 +143,19 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Cake.ProGet.dll">Cake<wbr>.ProGet<wbr>.dll</a></li>
+		<li><a href="/api/Cake.Yarn.dll">Cake<wbr>.Yarn<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.ProGet.Universal">Cake<wbr>.ProGet<wbr>.Universal</a></li>
+		<li><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases">Universal<wbr>Package<wbr>Aliases</a></li>
+		<li><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/871BE5D6">Install<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Install<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/1E2ED025">Pack<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Pack<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/A7E53A8B">Push<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Push<wbr>Settings)<wbr></a></li>
-				<li class="selected"><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/05E92F3A">Unpack<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Unpack<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/A5770A47">Add<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Add<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Yarn/IYarnRunnerCommands/426CADA6">Audit<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Audit<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/899D5668">Install<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Install<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/94E45A37">Pack<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Pack<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/7A19F6DC">RunScript<wbr>(string, <wbr>Action<wbr>&lt;<wbr>Yarn<wbr>Run<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Yarn/IYarnRunnerCommands/7B45D7BE">Version<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Version<wbr>Settings&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -169,65 +170,44 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases">Universal<wbr>Package<wbr>Aliases</a>.</h3>
-	<h1>Unpack<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Unpack<wbr>Settings)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a>.</h3>
+	<h1>Audit<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Audit<wbr>Settings&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
-                        <a href="https://github.com/apprenda/Cake.ProGet" class="alert-link">https://github.com/apprenda/Cake.ProGet</a>.
+                        <a href="https://github.com/MilovanovM/cake-yarn" class="alert-link">https://github.com/MilovanovM/cake-yarn</a>.
                             </div>
 
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Unpacks a universal package
+            execute 'yarn audit' with options
             </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Cake.ProGet.dll">Cake<wbr>.ProGet<wbr>.dll</a></dd>
+						<dd><a href="/api/Cake.Yarn.dll">Cake<wbr>.Yarn<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.ProGet.Universal">Cake<wbr>.ProGet<wbr>.Universal</a></dd>
+						<dd><a href="/api/Cake.Yarn">Cake<wbr>.Yarn</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases">Universal<wbr>Package<wbr>Aliases</a></dd>		
+						<dd><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void Unpack(this ICakeContext context, UniversalPackageUnpackSettings settings)</code></pre>
+	<pre><code>IYarnRunnerCommands Audit(Action&lt;YarnAuditSettings&gt; auditSettings = null)</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
 	<h1 id="Parameters">Parameters</h1>
@@ -242,14 +222,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td>The context.</td>
-					</tr>
-					<tr>
-						<td>settings</td>
-						<td><a href="/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpackSettings">Universal<wbr>Package<wbr>Unpack<wbr>Settings</a></td>
-						<td>The settings</td>
+						<td>auditSettings</td>
+						<td>Action<wbr>&lt;<a href="/api/Cake.Yarn/YarnAuditSettings">YarnAuditSettings</a>&gt;<wbr></td>
+						<td>options when running 'yarn audit'</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -266,7 +241,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></td>
 					<td></td>
 				</tr>
 			</tbody></table>

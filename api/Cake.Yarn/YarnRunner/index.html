@@ -153,6 +153,7 @@
 				<li><a href="/api/Cake.Yarn/IYarnRunnerConfiguration">I<wbr>Yarn<wbr>Runner<wbr>Configuration</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Yarn/YarnAddSettings">YarnAddSettings</a></li>
+				<li><a href="/api/Cake.Yarn/YarnAuditSettings">YarnAuditSettings</a></li>
 				<li><a href="/api/Cake.Yarn/YarnCacheSettings">YarnCacheSettings</a></li>
 				<li><a href="/api/Cake.Yarn/YarnInstallSettings">YarnInstallSettings</a></li>
 				<li><a href="/api/Cake.Yarn/YarnPackSettings">YarnPackSettings</a></li>
@@ -291,6 +292,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Yarn/YarnRunner/B6050817">Audit<wbr>(Action<wbr>&lt;<wbr>Yarn<wbr>Audit<wbr>Settings&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></td>
+								<td>
+									<div>
+            execute 'yarn audit' with options
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Yarn/YarnRunner/3BC466FC">Cache<wbr>(string, <wbr>Action<wbr>&lt;<wbr>Yarn<wbr>Cache<wbr>Settings&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Yarn/IYarnRunnerCommands">IYarnRunnerCommands</a></td>
 								<td>
@@ -421,17 +431,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;YarnRunner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;YarnRunner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -440,6 +439,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;YarnRunner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

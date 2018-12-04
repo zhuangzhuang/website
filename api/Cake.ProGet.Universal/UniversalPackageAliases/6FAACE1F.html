@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ProGetAssetAliases.CreateAssetDirectory(ICakeContext, string, ProGetConfiguration) Method</title>
+        <title>Cake - API - UniversalPackageAliases.UPackInstall(ICakeContext, UniversalPackageInstallSettings) Method</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -146,18 +146,15 @@
 			<li class="header">Assembly</li>
 		<li><a href="/api/Cake.ProGet.dll">Cake<wbr>.ProGet<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Cake.ProGet.Asset">Cake<wbr>.ProGet<wbr>.Asset</a></li>
+		<li><a href="/api/Cake.ProGet.Universal">Cake<wbr>.ProGet<wbr>.Universal</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a></li>
+		<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases">Universal<wbr>Package<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/723AC387">CreateAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/0849A087">DeleteAsset<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/90DA1847">DoesAssetExist<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/6CA06CB9">DownloadAsset<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/D18F8080">Download<wbr>Asset<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>FilePath, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/F01F3398">ListAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
-				<li><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases/BBCF1386">PushAsset<wbr>(ICakeContext, <wbr>FilePath, <wbr>string, <wbr>ProGetConfiguration)<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/6FAACE1F">UPackInstall<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Install<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/ECC40C65">UPackPack<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Pack<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/550FE6CB">UPackPush<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Push<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases/8805091C">UPackUnpack<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Unpack<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -172,8 +169,8 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a>.</h3>
-	<h1>CreateAssetDirectory<wbr>(ICakeContext, <wbr>string, <wbr>ProGetConfiguration)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases">Universal<wbr>Package<wbr>Aliases</a>.</h3>
+	<h1>UPackInstall<wbr>(ICakeContext, <wbr>Universal<wbr>Package<wbr>Install<wbr>Settings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -186,7 +183,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Creates a new Asset Directory.
+            Installs a universal package
             </div>
 
 		<div class="panel panel-default">
@@ -196,17 +193,17 @@
 						<dd><a href="/api/Cake.ProGet.dll">Cake<wbr>.ProGet<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.ProGet.Asset">Cake<wbr>.ProGet<wbr>.Asset</a></dd>
+						<dd><a href="/api/Cake.ProGet.Universal">Cake<wbr>.ProGet<wbr>.Universal</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.ProGet.Asset/ProGetAssetAliases">ProGetAssetAliases</a></dd>		
+						<dd><a href="/api/Cake.ProGet.Universal/UniversalPackageAliases">Universal<wbr>Package<wbr>Aliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void CreateAssetDirectory(this ICakeContext context, string assetDirectoryUri, ProGetConfiguration config)</code></pre>
+	<pre><code>public static void UPackInstall(this ICakeContext context, UniversalPackageInstallSettings settings)</code></pre>
 
 
 
@@ -247,17 +244,12 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The <code class="cs"><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code> Cake context.</td>
+						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>assetDirectoryUri</td>
-						<td>string</td>
-						<td>The URI of the ProGet Asset Directory.</td>
-					</tr>
-					<tr>
-						<td>config</td>
-						<td><a href="/api/Cake.ProGet.Asset/ProGetConfiguration">ProGetConfiguration</a></td>
-						<td>The ProGetConfiguration.</td>
+						<td>settings</td>
+						<td><a href="/api/Cake.ProGet.Universal.Install/UniversalPackageInstallSettings">Universal<wbr>Package<wbr>Install<wbr>Settings</a></td>
+						<td>The settings</td>
 					</tr>
 			</tbody></table>
 		</div>
