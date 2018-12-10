@@ -146,11 +146,11 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Build.Jenkins">Cake<wbr>.Common<wbr>.Build<wbr>.Jenkins</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Common.Build.Jenkins/IJenkinsProvider">IJenkinsProvider</a></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Common.Build.Jenkins/JenkinsInfo">JenkinsInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.Jenkins/JenkinsProvider">JenkinsProvider</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Common.Build.Jenkins/IJenkinsProvider">IJenkinsProvider</a></li>
 
 
                     </ul>
@@ -195,12 +195,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -212,18 +212,18 @@
 	Base0["object"]--&gt;Type
 	Type["JenkinsInfo"]
 class Type type-node
-	Type--&gt;Derived0["JenkinsNodeInfo"]
-	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
-	Type--&gt;Derived1["JenkinsBuildInfo"]
-	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
-	Type--&gt;Derived2["JenkinsRepositoryInfo"]
-	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
-	Type--&gt;Derived3["JenkinsJobInfo"]
-	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
-	Type--&gt;Derived4["JenkinsChangeInfo"]
-	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo"
-	Type--&gt;Derived5["JenkinsEnvironmentInfo"]
-	click Derived5 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived0["JenkinsJobInfo"]
+	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
+	Type--&gt;Derived1["JenkinsNodeInfo"]
+	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Type--&gt;Derived2["JenkinsBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
+	Type--&gt;Derived3["JenkinsEnvironmentInfo"]
+	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
+	Type--&gt;Derived4["JenkinsRepositoryInfo"]
+	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
+	Type--&gt;Derived5["JenkinsChangeInfo"]
+	click Derived5 "/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo"
 
 						</div>
 					</div>
@@ -341,17 +341,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -360,6 +349,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

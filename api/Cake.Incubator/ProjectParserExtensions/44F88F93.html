@@ -227,7 +227,7 @@
 	<h1 id="Examples">Examples</h1>
 	<div>
             The Solution's <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code> and the build configuration will return the 
-            output files (dll or exe) for the projects and return as an <code class="cs">System.Collections.Generic.IEnumerable`1</code>
+            output files (dll or exe) for the projects and return as an <code class="cs"><a href="/">IEnumerable&lt;T&gt;</a></code>
             The alias expects a valid `.sln` file.
             <pre><code class="cs">// Solution project's output dll/exe's for the 'Release' configuration
 IEnumerable&lt;FilePath&gt; filePaths = GetOutputAssemblies(new FilePath("test.sln"), "Release");</code></pre>
