@@ -215,11 +215,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>								
-											<li><a href="/api/Cake.Fastlane/FastlaneDeliverConfiguration">Fastlane<wbr>Deliver<wbr>Configuration</a></li>								
-											<li><a href="/api/Cake.Fastlane/FastlanePemConfiguration">Fastlane<wbr>Pem<wbr>Configuration</a></li>								
-											<li><a href="/api/Cake.Fastlane/FastlanePilotConfiguration">Fastlane<wbr>Pilot<wbr>Configuration</a></li>								
 											<li><a href="/api/Cake.Fastlane/FastlaneMatchConfiguration">Fastlane<wbr>Match<wbr>Configuration</a></li>								
+											<li><a href="/api/Cake.Fastlane/FastlaneSupplyConfiguration">Fastlane<wbr>Supply<wbr>Configuration</a></li>								
+											<li><a href="/api/Cake.Fastlane/FastlanePemConfiguration">Fastlane<wbr>Pem<wbr>Configuration</a></li>								
+											<li><a href="/api/Cake.Fastlane/FastlaneDeliverConfiguration">Fastlane<wbr>Deliver<wbr>Configuration</a></li>								
+											<li><a href="/api/Cake.Fastlane/FastlanePilotConfiguration">Fastlane<wbr>Pilot<wbr>Configuration</a></li>								
 									</ul>
 								</dd>			
 							
@@ -231,16 +231,16 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["FastlaneConfiguration"]
 class Type type-node
-	Type--&gt;Derived0["FastlaneSupplyConfiguration"]
-	click Derived0 "/api/Cake.Fastlane/FastlaneSupplyConfiguration"
-	Type--&gt;Derived1["FastlaneDeliverConfiguration"]
-	click Derived1 "/api/Cake.Fastlane/FastlaneDeliverConfiguration"
+	Type--&gt;Derived0["FastlaneMatchConfiguration"]
+	click Derived0 "/api/Cake.Fastlane/FastlaneMatchConfiguration"
+	Type--&gt;Derived1["FastlaneSupplyConfiguration"]
+	click Derived1 "/api/Cake.Fastlane/FastlaneSupplyConfiguration"
 	Type--&gt;Derived2["FastlanePemConfiguration"]
 	click Derived2 "/api/Cake.Fastlane/FastlanePemConfiguration"
-	Type--&gt;Derived3["FastlanePilotConfiguration"]
-	click Derived3 "/api/Cake.Fastlane/FastlanePilotConfiguration"
-	Type--&gt;Derived4["FastlaneMatchConfiguration"]
-	click Derived4 "/api/Cake.Fastlane/FastlaneMatchConfiguration"
+	Type--&gt;Derived3["FastlaneDeliverConfiguration"]
+	click Derived3 "/api/Cake.Fastlane/FastlaneDeliverConfiguration"
+	Type--&gt;Derived4["FastlanePilotConfiguration"]
+	click Derived4 "/api/Cake.Fastlane/FastlanePilotConfiguration"
 
 						</div>
 					</div>
@@ -410,17 +410,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Configuration&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Configuration&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -429,6 +418,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Fastlane<wbr>Configuration&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
