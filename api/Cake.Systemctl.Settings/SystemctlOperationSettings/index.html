@@ -201,8 +201,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Systemctl.Settings.Unit/UnitSettings">UnitSettings</a></li>								
 											<li><a href="/api/Cake.Systemctl.Settings/ListUnitFilesSettings">List<wbr>Unit<wbr>Files<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Systemctl.Settings.Unit/UnitSettings">UnitSettings</a></li>								
 											<li><a href="/api/Cake.Systemctl.Settings/ListUnitsSettings">ListUnitsSettings</a></li>								
 									</ul>
 								</dd>			
@@ -215,10 +215,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["SystemctlOperationSettings"]
 class Type type-node
-	Type--&gt;Derived0["UnitSettings"]
-	click Derived0 "/api/Cake.Systemctl.Settings.Unit/UnitSettings"
-	Type--&gt;Derived1["ListUnitFilesSettings"]
-	click Derived1 "/api/Cake.Systemctl.Settings/ListUnitFilesSettings"
+	Type--&gt;Derived0["ListUnitFilesSettings"]
+	click Derived0 "/api/Cake.Systemctl.Settings/ListUnitFilesSettings"
+	Type--&gt;Derived1["UnitSettings"]
+	click Derived1 "/api/Cake.Systemctl.Settings.Unit/UnitSettings"
 	Type--&gt;Derived2["ListUnitsSettings"]
 	click Derived2 "/api/Cake.Systemctl.Settings/ListUnitsSettings"
 
