@@ -217,11 +217,13 @@
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
     <li><a href="/dsl/iso">ISO</a></li>        
     <li><a href="/dsl/issues">Issues</a></li>        
+    <li><a href="/dsl/jira">Jira</a></li>        
     <li><a href="/dsl/jmeter">JMeter</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
     <li><a href="/dsl/keepass">KeePass</a></li>        
     <li><a href="/dsl/kudu">Kudu</a></li>        
     <li><a href="/dsl/liquibase">Liquibase</a></li>        
+    <li><a href="/dsl/mage">Mage</a></li>        
     <li><a href="/dsl/markdownlint">Markdownlint</a></li>        
     <li><a href="/dsl/microsoft-teams">Microsoft Teams</a></li>        
     <li><a href="/dsl/microsoft.extensions.configuration">Microsoft.Extensions.Configuration</a></li>        
@@ -270,6 +272,7 @@
     <li><a href="/dsl/svn">Svn</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
     <li><a href="/dsl/synver">SynVer</a></li>        
+    <li><a href="/dsl/systemctl">Systemctl</a></li>        
     <li><a href="/dsl/talendadminapi">TalendAdminApi</a></li>        
     <li><a href="/dsl/talendcommandline">TalendCommandLine</a></li>        
     <li><a href="/dsl/terraform">Terraform</a></li>        
@@ -465,6 +468,30 @@
                         <tr>
                             <td>
 <a href="/api/Cake.Docker/DockerAliases/DCD77886">DockerComposeKill<wbr>(ICakeContext, <wbr>Docker<wbr>Compose<wbr>Kill<wbr>Settings)<wbr></a>                            </td>
+                            <td>
+                                
+            Runs docker-compose kill given <span name="settings" class="paramref">settings</span>.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Docker.dll">Cake<wbr>.Docker<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Docker/DockerAliases/A9B50CE4">DockerComposeLogs<wbr>(ICakeContext)<wbr></a>                            </td>
+                            <td>
+                                
+            Runs docker-compose kill with default settings.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Docker.dll">Cake<wbr>.Docker<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Docker/DockerAliases/2E776110">DockerComposeLogs<wbr>(ICakeContext, <wbr>Docker<wbr>Compose<wbr>Logs<wbr>Settings)<wbr></a>                            </td>
                             <td>
                                 
             Runs docker-compose kill given <span name="settings" class="paramref">settings</span>.
@@ -1132,6 +1159,34 @@
                             <td>
                                 
             Creates a new container using default settings.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Docker.dll">Cake<wbr>.Docker<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Docker/DockerAliases/49C759A6">Docker<wbr>Run<wbr>Without<wbr>Result<wbr>(ICakeContext, <wbr>Docker<wbr>Container<wbr>Run<wbr>Settings, <wbr>string, <wbr>string, <wbr>string[])<wbr></a>                            </td>
+                            <td>
+                                
+            Creates a new container given <span name="settings" class="paramref">settings</span> and doesn't return the output like 
+            <code class="cs">Cake.Docker.DockerAliases.DockerRun(Cake.Core.ICakeContext,Cake.Docker.DockerContainerRunSettings,System.String,System.String,System.String[])</code> does.
+            This way one can capture stdout.
+            
+
+                                            <br>
+                                            <small><i>Addin from <a href="/api/Cake.Docker.dll">Cake<wbr>.Docker<wbr>.dll</a></i></small>
+                                                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+<a href="/api/Cake.Docker/DockerAliases/116CC06C">Docker<wbr>Run<wbr>Without<wbr>Result<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string[])<wbr></a>                            </td>
+                            <td>
+                                
+            Creates a new container using default settings. and doesn't return the output like 
+            <code class="cs">Cake.Docker.DockerAliases.DockerRun(Cake.Core.ICakeContext,System.String,System.String,System.String[])</code> does.
+            This way one can capture stdout.
             
 
                                             <br>

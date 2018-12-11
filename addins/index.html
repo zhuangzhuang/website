@@ -100,6 +100,7 @@
     <li><a href="/addins/appveyor">AppVeyor</a></li>    
     <li><a href="/addins/argument">Argument</a></li>    
     <li><a href="/addins/assembly-info">Assembly Info</a></li>    
+    <li><a href="/addins/atlassian-jira">Atlassian Jira</a></li>    
     <li><a href="/addins/aws">AWS</a></li>    
     <li><a href="/addins/azure">Azure</a></li>    
     <li><a href="/addins/build">Build</a></li>    
@@ -146,10 +147,13 @@
     <li><a href="/addins/infrastructure-as-code">Infrastructure as Code</a></li>    
     <li><a href="/addins/inspectcode">InspectCode</a></li>    
     <li><a href="/addins/io">IO</a></li>    
+    <li><a href="/addins/issue-tracking">Issue Tracking</a></li>    
     <li><a href="/addins/issues">Issues</a></li>    
     <li><a href="/addins/keepass">KeePass</a></li>    
     <li><a href="/addins/kudu">Kudu</a></li>    
+    <li><a href="/addins/linux">Linux</a></li>    
     <li><a href="/addins/localization">Localization</a></li>    
+    <li><a href="/addins/mage">Mage</a></li>    
     <li><a href="/addins/markdown">Markdown</a></li>    
     <li><a href="/addins/mercurial">Mercurial</a></li>    
     <li><a href="/addins/metrics">Metrics</a></li>    
@@ -179,6 +183,7 @@
     <li><a href="/addins/security">Security</a></li>    
     <li><a href="/addins/semver2.0.0">SemVer2.0.0</a></li>    
     <li><a href="/addins/serialization">Serialization</a></li>    
+    <li><a href="/addins/service-management">Service Management</a></li>    
     <li><a href="/addins/signing">Signing</a></li>    
     <li><a href="/addins/sitecore">Sitecore</a></li>    
     <li><a href="/addins/smartassembly">SmartAssembly</a></li>    
@@ -1590,6 +1595,22 @@
     </div>
 <div class="panel panel-default">
         <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.Jira</h3>
+        </div>
+        <div class="panel-body">
+                <p>A Cake addin for integrating with Jira issue tracker.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>Hugo Tavares</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.Jira">Cake.Jira</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/Ninglin/Cake.Jira">https://github.com/Ninglin/Cake.Jira</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.JMeter</h3>
         </div>
         <div class="panel-body">
@@ -1681,6 +1702,22 @@
                     <dd><a href="https://www.nuget.org/packages/Cake.Liquibase">Cake.Liquibase</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/papauorg/Cake.Liquibase">https://github.com/papauorg/Cake.Liquibase</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.Mage</h3>
+        </div>
+        <div class="panel-body">
+                <p>A Cake addin to provide support for Mage.exe.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>Phil Scott</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.Mage">Cake.Mage</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/cake-contrib/Cake.Mage">https://github.com/cake-contrib/Cake.Mage</a></dd>
             </dl>
         </div>
     </div>
@@ -2033,6 +2070,22 @@
                     <dd><a href="https://www.nuget.org/packages/Cake.Path">Cake.Path</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/CleanKludge/Cake.Path">https://github.com/CleanKludge/Cake.Path</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.PinNuGetDependency</h3>
+        </div>
+        <div class="panel-body">
+                <p>Cake Build addin used to lock dependency versions within NuGet packages.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>Geoffrey Huntley</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.PinNuGetDependency">Cake.PinNuGetDependency</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/cake-contrib/Cake.PinNuGetDependency">https://github.com/cake-contrib/Cake.PinNuGetDependency</a></dd>
             </dl>
         </div>
     </div>
@@ -2502,6 +2555,22 @@
     </div>
 <div class="panel panel-default">
         <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.Systemctl</h3>
+        </div>
+        <div class="panel-body">
+                <p>An addin for the Cake Build System to manage services via systemctl service manager.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>Vadim Hatsura</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.Systemctl">Cake.Systemctl</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/vhatsura/Cake.Systemctl">https://github.com/vhatsura/Cake.Systemctl</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.Talend</h3>
         </div>
         <div class="panel-body">
@@ -2641,6 +2710,22 @@
                     <dd><a href="https://www.nuget.org/packages/Cake.Twitter">Cake.Twitter</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/cake-contrib/Cake.Twitter">https://github.com/cake-contrib/Cake.Twitter</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Cake.Unicorn</h3>
+        </div>
+        <div class="panel-body">
+                <p>An add-in for the Cake Build system to execute an Unicorn sync for Sitecore.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>George Chang</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Cake.Unicorn">Cake.Unicorn</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/georgechang/Cake.Unicorn">https://github.com/georgechang/Cake.Unicorn</a></dd>
             </dl>
         </div>
     </div>

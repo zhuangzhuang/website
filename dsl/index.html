@@ -224,11 +224,13 @@
     <li><a href="/dsl/http-operations">HTTP Operations</a></li>        
     <li><a href="/dsl/iso">ISO</a></li>        
     <li><a href="/dsl/issues">Issues</a></li>        
+    <li><a href="/dsl/jira">Jira</a></li>        
     <li><a href="/dsl/jmeter">JMeter</a></li>        
     <li><a href="/dsl/json">Json</a></li>        
     <li><a href="/dsl/keepass">KeePass</a></li>        
     <li><a href="/dsl/kudu">Kudu</a></li>        
     <li><a href="/dsl/liquibase">Liquibase</a></li>        
+    <li><a href="/dsl/mage">Mage</a></li>        
     <li><a href="/dsl/markdownlint">Markdownlint</a></li>        
     <li><a href="/dsl/microsoft-teams">Microsoft Teams</a></li>        
     <li><a href="/dsl/microsoft.extensions.configuration">Microsoft.Extensions.Configuration</a></li>        
@@ -277,6 +279,7 @@
     <li><a href="/dsl/svn">Svn</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
     <li><a href="/dsl/synver">SynVer</a></li>        
+    <li><a href="/dsl/systemctl">Systemctl</a></li>        
     <li><a href="/dsl/talendadminapi">TalendAdminApi</a></li>        
     <li><a href="/dsl/talendcommandline">TalendCommandLine</a></li>        
     <li><a href="/dsl/terraform">Terraform</a></li>        
@@ -374,14 +377,14 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-            Several extension methods when operating on a Directory.
-            </td>
+    Contains extension methods for working with directories.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotcover">DotCover</a></td>
@@ -415,20 +418,14 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Contains functionality for working with PSCP.
-            
-
-            Aliases for Putty.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -560,7 +557,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -683,10 +680,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -782,7 +779,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -911,13 +908,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Amazon Route53 aliases
+             Contains Cake aliases for configuring Amazon Simple Storage Service
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running commands managing Azure resource groups.
+            Contains Cake aliases for running Azure login commands.
             </td>
                 </tr>
                 <tr>
@@ -1011,8 +1008,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-            Contains functionality related to compress files.
-            </td>
+    Contains functionality related to compress files to Zip.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -1091,14 +1088,13 @@
                 <tr>
                     <td><a href="/dsl/directory-operations">Directory Operations</a></td>
                     <td>
-            Several extension methods when operating on a Directory.
-            </td>
+    Contains extension methods for working with directories.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to merging base API files using 
-            <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1166,8 +1162,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Several extension methods when using Environment Variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fastlane">Fastlane</a></td>
@@ -1191,14 +1187,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Contains functionality for working with PSCP.
-            
-
-            Aliases for Putty.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fileset">FileSet</a></td>
@@ -1245,7 +1235,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Class that lets you override default API settings
+            The result of GitterProvider Chat API post
             </td>
                 </tr>
                 <tr>
@@ -1323,8 +1313,12 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to read warnings from DocFx log files.
+            Contains functionality related to reporting issues to pull requests.
             </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/jira">Jira</a></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/jmeter">JMeter</a></td>
@@ -1349,6 +1343,12 @@
                 <tr>
                     <td><a href="/dsl/liquibase">Liquibase</a></td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/mage">Mage</a></td>
+                    <td>
+             <p>Contains functionality related to the creation and editing of application and deployment manifests.  using <a href="https://msdn.microsoft.com/en-us/library/acz3y3te(v=vs.110).aspx">Mage (Manifest Generation and Editing Tool)</a>.</p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/markdownlint">Markdownlint</a></td>
@@ -1390,7 +1390,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild project files.
     </td>
                 </tr>
                 <tr>
@@ -1567,7 +1567,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post.
+            Contains functionality related to SendGrid API.
             </td>
                 </tr>
                 <tr>
@@ -1623,7 +1623,15 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            Contains functionality to backup and restore SQL Server database
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            </p>
             </td>
                 </tr>
                 <tr>
@@ -1653,8 +1661,11 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
-            you can provide the StrongNameToolSettings with ForceVerification set to true.
+            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
+            The resign alias uses the sn.exe containers to resign the specified assemblies.
+            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
+            strong name or not.
+            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
             </td>
                 </tr>
                 <tr>
@@ -1685,6 +1696,10 @@
             <pre><code class="cs">#addin Cake.SynVer</code></pre>
             </p>
             </td>
+                </tr>
+                <tr>
+                    <td><a href="/dsl/systemctl">Systemctl</a></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/talendadminapi">TalendAdminApi</a></td>
