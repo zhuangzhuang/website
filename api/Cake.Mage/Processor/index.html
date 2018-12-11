@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - Processor Enum</title>
+        <title>Cake - API - Processor Class</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -148,19 +148,18 @@
 		<li><a href="/api/Cake.Mage">Cake<wbr>.Mage</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Mage/Algorithm">Algorithm</a></li>
 				<li><a href="/api/Cake.Mage/BaseNewAndUpdateApplicationSettings">Base<wbr>New<wbr>And<wbr>Update<wbr>Application<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Mage/BaseNewAndUpdateDeploymentSettings">Base<wbr>New<wbr>And<wbr>Update<wbr>Deployment<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Mage/BaseNewAndUpdateMageSettings">Base<wbr>New<wbr>And<wbr>Update<wbr>Mage<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Mage/MageAliases">MageAliases</a></li>
 				<li><a href="/api/Cake.Mage/NewApplicationSettings">New<wbr>Application<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Mage/NewDeploymentSettings">New<wbr>Deployment<wbr>Settings</a></li>
+				<li class="selected"><a href="/api/Cake.Mage/Processor">Processor</a></li>
 				<li><a href="/api/Cake.Mage/SignSettings">SignSettings</a></li>
+				<li><a href="/api/Cake.Mage/TrustLevel">TrustLevel</a></li>
 				<li><a href="/api/Cake.Mage/UpdateApplicationSettings">Update<wbr>Application<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Mage/UpdateDeploymentSettings">Update<wbr>Deployment<wbr>Settings</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Mage/Algorithm">Algorithm</a></li>
-				<li class="selected"><a href="/api/Cake.Mage/Processor">Processor</a></li>
-				<li><a href="/api/Cake.Mage/TrustLevel">TrustLevel</a></li>
 
 
                     </ul>
@@ -175,7 +174,7 @@
 
 
 <section class="content-header">
-	<h1>Processor <small>Enum</small></h1>
+	<h1>Processor <small>Class</small></h1>
 </section>
 <section class="content">
 	        <div class="alert alert-info" role="alert">
@@ -202,20 +201,10 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Cake.Mage">Cake<wbr>.Mage</a></dd>
 											
-								<dt>Interfaces</dt>
-								<dd>
-									<ul class="list-unstyled">
-											<li>IComparable</li>								
-											<li>IFormattable</li>								
-											<li>IConvertible</li>								
-									</ul>
-								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
-											<li>ValueType</li>								
 											<li>Enum</li>								
 									</ul>
 								</dd>				
@@ -227,11 +216,6 @@
 						<div class="mermaid">
 							graph TD
 	Base0["Enum"]--&gt;Type
-	Base1["ValueType"]--&gt;Base0
-	Base2["object"]--&gt;Base1
-	Interface0["IComparable"]-.-&gt;Type
-	Interface1["IFormattable"]-.-&gt;Type
-	Interface2["IConvertible"]-.-&gt;Type
 	Type["Processor"]
 class Type type-node
 
@@ -242,7 +226,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public enum Processor</code></pre>
+	<pre><code>public sealed class Processor : Enum</code></pre>
 
 
 
@@ -290,6 +274,13 @@ class Type type-node
             Neutral with respect to processor and bits-per-word.
             </div>
 											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Mage/Processor/9D070BA1">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 							<tr>
@@ -341,6 +332,28 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;Processor&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;Processor&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
