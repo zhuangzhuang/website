@@ -161,6 +161,7 @@
 				<li><a href="/api/Cake.Common.IO/FileAliases/9E01B1BD">DeleteFile<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/FileAliases/CA96070B">DeleteFiles<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/FileAliases/7BDBB165">DeleteFiles<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.IO/FileAliases/FE92A080">Expand<wbr>Environment<wbr>Variables<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/FileAliases/E00B28C4">File<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/FileAliases/747870D2">FileExists<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/FileAliases/E35F243B">FileSize<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
@@ -211,7 +212,7 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeMethodAlias]
 [CakeAliasCategory("Path")]
-public static FilePath MakeAbsolute(this ICakeContext context, FilePath path)</code></pre>
+public static FilePath MakeAbsolute(this ICakeContext context, FilePath filePath)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
@@ -263,7 +264,7 @@ public static FilePath MakeAbsolute(this ICakeContext context, FilePath path)</c
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>path</td>
+						<td>filePath</td>
 						<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
 						<td>The path.</td>
 					</tr>

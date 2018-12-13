@@ -82,6 +82,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -151,6 +152,7 @@
 				<li><a href="/api/Cake.Core.IO/Globber/F6FCF5DB">Globber<wbr>(IFileSystem, <wbr>ICakeEnvironment)<wbr></a></li>
 			<li class="header">Method Members</li>
 				<li class="selected"><a href="/api/Cake.Core.IO/Globber/881CABB6">Match<wbr>(string, <wbr>Func<wbr>&lt;IDirectory, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/Globber/1692ED9B">Match<wbr>(string, <wbr>GlobberSettings)<wbr></a></li>
 
 
                     </ul>
@@ -191,10 +193,28 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public IEnumerable&lt;Path&gt; Match(string pattern, Func&lt;IDirectory, bool&gt; predicate)</code></pre>
+	<pre><code>[Obsolete("Please use the Match overload that accept globber settings instead.", false)]
+public IEnumerable&lt;Path&gt; Match(string pattern, Func&lt;IDirectory, bool&gt; predicate)</code></pre>
 
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>ObsoleteAttribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	<h1 id="Parameters">Parameters</h1>

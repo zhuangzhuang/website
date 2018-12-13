@@ -150,6 +150,7 @@
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/CreateReleaseSettings">Create<wbr>Release<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/DeploymentQueryResultParser">Deployment<wbr>Query<wbr>Result<wbr>Parser</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployAliases">OctopusDeployAliases</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier">Octopus<wbr>Deploy<wbr>Deployment<wbr>Querier</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment">OctopusDeployment</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploymentQuerySettings">Octopus<wbr>Deployment<wbr>Query<wbr>Settings</a></li>
@@ -160,7 +161,8 @@
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeployer">Octopus<wbr>Deploy<wbr>Release<wbr>Deployer</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings">Octopus<wbr>Deploy<wbr>Release<wbr>Deployment<wbr>Settings</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter">Octopus<wbr>Deploy<wbr>Release<wbr>Promoter</a></li>
-				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployToolSettings">Octopus<wbr>Deploy<wbr>Tool<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings">OctopusPackSettings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPushSettings">OctopusPushSettings</a></li>
 			<li class="header">Enum Types</li>
@@ -204,6 +206,7 @@
 									<ul class="list-unstyled">										
 											<li>object</li>								
 											<li><a href="/api/Cake.Core.Tooling/Tool_1">Tool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPromoteReleaseSettings">Octopus<wbr>Deploy<wbr>Promote<wbr>Release<wbr>Settings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPromoteReleaseSettings">Octopus<wbr>Deploy<wbr>Promote<wbr>Release<wbr>Settings</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -213,8 +216,9 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["Tool&lt;OctopusDeployPromoteReleaseSettings&gt;"]--&gt;Type
-	Base1["object"]--&gt;Base0
+	Base0["OctopusDeployTool&lt;OctopusDeployPromoteReleaseSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;OctopusDeployPromoteReleaseSettings&gt;"]--&gt;Base0
+	Base2["object"]--&gt;Base1
 	Type["OctopusDeployReleasePromoter"]
 class Type type-node
 
@@ -225,7 +229,8 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public sealed class OctopusDeployReleasePromoter : Tool&lt;OctopusDeployPromoteReleaseSettings&gt;</code></pre>
+	<pre><code>public sealed class OctopusDeployReleasePromoter : 
+    OctopusDeployTool&lt;OctopusDeployPromoteReleaseSettings&gt;</code></pre>
 
 
 
@@ -268,24 +273,6 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter/5252890E">Get<wbr>Tool<wbr>Executable<wbr>Names<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;string&gt;<wbr></td>
-								<td>
-									<div>
-    Gets the possible names of the tool executable.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter/CD569560">GetToolName<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Gets the name of the tool.
-    </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter/6D7A74B1">PromoteRelease<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>Octopus<wbr>Deploy<wbr>Promote<wbr>Release<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>

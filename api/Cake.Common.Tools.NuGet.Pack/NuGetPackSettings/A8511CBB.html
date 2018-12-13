@@ -173,6 +173,7 @@
 				<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/AFD75A5A">ReleaseNotes</a></li>
 				<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/26BC02D3">Repository</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/A8511CBB">Require<wbr>License<wbr>Acceptance</a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/DDF35535">Suffix</a></li>
 				<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/ADD2A157">Summary</a></li>
 				<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/4BF90A46">Symbols</a></li>
 				<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPackSettings/B3CA1319">Tags</a></li>
@@ -222,7 +223,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool RequireLicenseAcceptance { get; set; }</code></pre>
+	<pre><code>public bool? RequireLicenseAcceptance { get; set; }</code></pre>
 
 
 
@@ -239,7 +240,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>bool?</td>
 					<td>
     <code class="cs">true</code> if users has to accept the package license; otherwise, <code class="cs">false</code>.
     </td>

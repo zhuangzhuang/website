@@ -373,6 +373,7 @@
 				<a href="/api/Cake.Common.Tools.DotNetCore">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Common.Tools.DotNetCore.Build">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.Build</a></li>
+			<li><a href="/api/Cake.Common.Tools.DotNetCore.BuildServer">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.BuildServer</a></li>
 			<li><a href="/api/Cake.Common.Tools.DotNetCore.Clean">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.Clean</a></li>
 			<li><a href="/api/Cake.Common.Tools.DotNetCore.Execute">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.Execute</a></li>
 			<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.DotNetCore<wbr>.MSBuild</a></li>
@@ -475,8 +476,12 @@
 				<a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
 						<li><a href="/api/Cake.Core.IO.Arguments">Cake<wbr>.Core<wbr>.IO<wbr>.Arguments</a></li>
-			<li><a href="/api/Cake.Core.IO.Globbing">Cake<wbr>.Core<wbr>.IO<wbr>.Globbing</a></li>
-			<li><a href="/api/Cake.Core.IO.NuGet">Cake<wbr>.Core<wbr>.IO<wbr>.NuGet</a></li>
+
+				<li class="treeview">
+				<a href="/api/Cake.Core.IO.Globbing">Cake<wbr>.Core<wbr>.IO<wbr>.Globbing</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Cake.Core.IO.Globbing.Nodes">Cake<wbr>.Core<wbr>.IO<wbr>.Globbing<wbr>.Nodes</a></li>
+</ul></li>			<li><a href="/api/Cake.Core.IO.NuGet">Cake<wbr>.Core<wbr>.IO<wbr>.NuGet</a></li>
 </ul></li>			<li><a href="/api/Cake.Core.Modules">Cake<wbr>.Core<wbr>.Modules</a></li>
 			<li><a href="/api/Cake.Core.Packaging">Cake<wbr>.Core<wbr>.Packaging</a></li>
 			<li><a href="/api/Cake.Core.Polyfill">Cake<wbr>.Core<wbr>.Polyfill</a></li>
@@ -1191,6 +1196,12 @@
     </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></td>
+									<td>
+    Contains the common settings used by all commands in <code class="cs"><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool&lt;TSettings&gt;</a></code>.
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier">Octopus<wbr>Deploy<wbr>Deployment<wbr>Querier</a></td>
 									<td>
     Allows you to query your Octopus Deploy server deployment history
@@ -1251,9 +1262,15 @@
     </td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></td>
 									<td>
-    Contains the common settings used by all commands in <code class="cs"><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseCreator">OctopusDeployReleaseCreator</a></code>.
+    Base class for all octopus deploy related tools.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployToolSettings">Octopus<wbr>Deploy<wbr>Tool<wbr>Settings</a></td>
+									<td>
+    Base class for tool settings used by all commands in <code class="cs"><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool&lt;TSettings&gt;</a></code>.
     </td>
 							</tr>
 							<tr>

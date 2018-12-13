@@ -157,8 +157,10 @@
 				<li><a href="/api/Cake.Core.IO/FileSystemExtensions">FileSystemExtensions</a></li>
 				<li><a href="/api/Cake.Core.IO/Globber">Globber</a></li>
 				<li><a href="/api/Cake.Core.IO/GlobberExtensions">GlobberExtensions</a></li>
+				<li><a href="/api/Cake.Core.IO/GlobberSettings">GlobberSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Core.IO/Path">Path</a></li>
 				<li><a href="/api/Cake.Core.IO/PathComparer">PathComparer</a></li>
+				<li><a href="/api/Cake.Core.IO/PathExtensions">PathExtensions</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
@@ -302,7 +304,16 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-    Gets a value indicating whether this path is relative.
+    Gets a value indicating whether or not this path is relative.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.IO/Path/2A4A2BD3">IsUNC</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether or not this path is an UNC path.
     </div>
 								</td>
 							</tr>
@@ -312,6 +323,15 @@ class Type type-node
 								<td>
 									<div>
     Gets the segments making up the path.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.IO/Path/68116402">Separator</a></td>
+								<td>char</td>
+								<td>
+									<div>
+    Gets the separator this path was normalized with.
     </div>
 								</td>
 							</tr>

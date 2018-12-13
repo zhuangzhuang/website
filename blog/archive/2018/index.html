@@ -101,6 +101,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2018/12">December, 2018</a></li>
         <li><a href="/blog/archive/2018/08">August, 2018</a></li>
         <li><a href="/blog/archive/2018/07">July, 2018</a></li>
         <li><a href="/blog/archive/2018/06">June, 2018</a></li>
@@ -169,6 +170,38 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/12/cake-v0.31.0-released">Cake v0.31.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Thursday, December 13, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>
+            <div>
+                <p>Version 0.31.0 of Cake has been released.</p>
+<p>In this version we've got quite a few new features, improvements and fixes.  A full list of changes is at end of this post, but first there's a few we would like to highlight.</p>
+
+<p>Cake's built-in globber has gone through a major overhaul, with several improvements.  A few notable ones are:</p>
+
+<p><strong>Example usage:</strong></p>
+
+
+<p>Full .NET Framework tools will usually execute fine on Windows even if running under .NET Core, but they'll fail on Unix systems.  They don't know what to do with .NET Framework executables. With this release, Cake will inspect if tools with <code>.exe</code> extension have a proper .NET Framework PE header and then try to execute it with Mono if available.</p>
+<p>This means that you'll be able to use .NET Framework tools even if you're using <a href="https://www.nuget.org/packages/Cake.CoreCLR">Cake.CoreCLR</a> or <a href="https://www.nuget.org/packages/Cake.Tool">Cake.Tool</a> running under .NET Core, if you have Mono installed.</p>
+
+<p>The <code>--version</code> argument has changed to only output the Semantic Version of Cake i.e. <code>0.31.0</code>, or <code>0.31.0-alpha0095</code>, for a pre release.
+This will make it easier to check and verify available Cake version in scripts and bootstrappers.</p>
+<p>You can still get the previous output by using the <code>--info</code> argument.</p>
+
+<p>Cake has been updated to use version 4.9.2 of the NuGet client libraries, which has several fixes, especially around performance and signed packages.</p>
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2018/12/cake-v0.31.0-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2018/08/cake-v0.30.0-released">Cake v0.30.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -259,24 +292,6 @@ Do you want to have ESLint issues reported as comments to pull requests?
 The <a href="https://cake-contrib.github.io/Cake.Issues.Website/">Cake.Issues addins</a> allows you to do this and much more.
 Read issues from different analyzer or linters, create reports or add them as comments to pull requests.</p>
                 <a href="/blog/2018/06/cake-issues">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/05/cake-v0.28.0-released">Cake v0.28.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Thursday, May 31, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>
-            <div>
-                <p>Version 0.28.0 of Cake has been released.</p>
-<p>We're really excited by this release which has some splendid features and improvements!</p>
-<p>In this blog post we'll highlight:</p>
-
-<p>Contributions were included from:</p>
-                <a href="/blog/2018/05/cake-v0.28.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

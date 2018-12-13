@@ -153,6 +153,7 @@
 				<li class="selected"><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>
 				<li><a href="/api/Cake.Core/CakeEngine">CakeEngine</a></li>
 				<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>
+				<li><a href="/api/Cake.Core/CakeEnvironmentExtensions">Cake<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeException">CakeException</a></li>
 				<li><a href="/api/Cake.Core/CakePlatform">CakePlatform</a></li>
 				<li><a href="/api/Cake.Core/CakePlatformExtensions">Cake<wbr>Platform<wbr>Extensions</a></li>
@@ -170,7 +171,6 @@
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
 				<li><a href="/api/Cake.Core/ExecutionSettings">ExecutionSettings</a></li>
-				<li><a href="/api/Cake.Core/ICakeEnvironmentExtensions">I<wbr>Cake<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/MethodInfoExtensions">MethodInfoExtensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessRunnerExtensions">Process<wbr>Runner<wbr>Extensions</a></li>
@@ -258,9 +258,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -276,12 +276,12 @@
 class Type type-node
 	Type--&gt;Derived0["TeardownContext"]
 	click Derived0 "/api/Cake.Core/TeardownContext"
-	Type--&gt;Derived1["TaskTeardownContext"]
-	click Derived1 "/api/Cake.Core/TaskTeardownContext"
-	Type--&gt;Derived2["SetupContext"]
-	click Derived2 "/api/Cake.Core/SetupContext"
-	Type--&gt;Derived3["TaskSetupContext"]
-	click Derived3 "/api/Cake.Core/TaskSetupContext"
+	Type--&gt;Derived1["TaskSetupContext"]
+	click Derived1 "/api/Cake.Core/TaskSetupContext"
+	Type--&gt;Derived2["TaskTeardownContext"]
+	click Derived2 "/api/Cake.Core/TaskTeardownContext"
+	Type--&gt;Derived3["SetupContext"]
+	click Derived3 "/api/Cake.Core/SetupContext"
 
 						</div>
 					</div>
@@ -1341,6 +1341,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/AE02CC23">Dot<wbr>Net<wbr>Core<wbr>Build<wbr>Server<wbr>Shutdown<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Shuts down build servers that are started from dotnet.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/A422CCD0">Dot<wbr>Net<wbr>Core<wbr>Build<wbr>Server<wbr>Shutdown<wbr>(<wbr>Dot<wbr>Net<wbr>Core<wbr>Build<wbr>Server<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Shuts down build servers that are started from dotnet.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/75949DF3">DotNetCoreClean<wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -1665,7 +1685,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-    /// Execute an .NET Core Extensibility Tool.
+    Execute an .NET Core Extensibility Tool.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
 								</td>
@@ -1682,6 +1702,26 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/F55DA2CB">DotNetCoreTool<wbr>(FilePath, <wbr>string, <wbr>Process<wbr>Argument<wbr>Builder, <wbr>Dot<wbr>Net<wbr>Core<wbr>Tool<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Execute an .NET Core Extensibility Tool.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/91BB4DE3">DotNetCoreTool<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Execute an .NET Core Extensibility Tool.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases/4BBBC0C6">DotNetCoreTool<wbr>(string, <wbr>Dot<wbr>Net<wbr>Core<wbr>Tool<wbr>Settings)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -1948,6 +1988,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.IO/DirectoryAliases/8DD9393B">Expand<wbr>Environment<wbr>Variables<wbr>(DirectoryPath)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Expands all environment variables in the provided <code class="cs"><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></code>.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/DirectoryAliases">DirectoryAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.IO/FileAliases/FE92A080">Expand<wbr>Environment<wbr>Variables<wbr>(FilePath)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Expands all environment variables in the provided <code class="cs"><a href="/api/Cake.Core.IO/FilePath">FilePath</a></code>.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/FileAliases">FileAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.IO/FileAliases/E00B28C4">File<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Common.IO.Paths/ConvertableFilePath">ConvertableFilePath</a></td>
 								<td>
@@ -2041,6 +2101,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/ScriptCallerAliases/D464584F">GetCallerInfo<wbr>(string, <wbr>string, <wbr>int)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Diagnostics/ScriptCallerInfo">ScriptCallerInfo</a></td>
+								<td>
+									<div>
+    Performs script caller information.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/ScriptCallerAliases">ScriptCallerAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.IO/GlobbingAliases/623BF4F2">GetDirectories<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></td>
 								<td>
@@ -2061,6 +2131,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.IO/GlobbingAliases/7554FFF3">GetDirectories<wbr>(string, <wbr>GlobberSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></td>
+								<td>
+									<div>
+     Gets all directory matching the specified pattern.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.IO/GlobbingAliases/91154142">GetFiles<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Core.IO/FilePathCollection">FilePathCollection</a></td>
 								<td>
@@ -2072,6 +2152,16 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.IO/GlobbingAliases/2CDC8B98">GetFiles<wbr>(string, <wbr>Func<wbr>&lt;IDirectory, <wbr>bool&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/FilePathCollection">FilePathCollection</a></td>
+								<td>
+									<div>
+     Gets all files matching the specified pattern.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.IO/GlobbingAliases/765684A7">GetFiles<wbr>(string, <wbr>GlobberSettings)<wbr></a></td>
 								<td><a href="/api/Cake.Core.IO/FilePathCollection">FilePathCollection</a></td>
 								<td>
 									<div>
@@ -2960,7 +3050,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-     Creates a NuGet package using the specified Nuspec or project file.
+     Creates a NuGet package using the specified nuspec or project file.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
 								</td>
@@ -2970,7 +3060,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-     Creates NuGet packages using the specified Nuspec or project files.
+     Creates NuGet packages using the specified nuspec or project files.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></em></small></div>
 								</td>
