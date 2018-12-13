@@ -224,8 +224,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.PullRequests/BasePullRequestSystem">Base<wbr>Pull<wbr>Request<wbr>System</a></li>								
 											<li><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>System</a></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/BasePullRequestSystem">Base<wbr>Pull<wbr>Request<wbr>System</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -236,10 +236,10 @@
 	Interface0["IBaseIssueComponent&lt;ReportIssuesToPullRequestSettings&gt;"]-.-&gt;Type
 	Type["IPullRequestSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["BasePullRequestSystem"]
-	click Implementing0 "/api/Cake.Issues.PullRequests/BasePullRequestSystem"
-	Type-.-&gt;Implementing1["AppVeyorPullRequestSystem"]
-	click Implementing1 "/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem"
+	Type-.-&gt;Implementing0["AppVeyorPullRequestSystem"]
+	click Implementing0 "/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem"
+	Type-.-&gt;Implementing1["BasePullRequestSystem"]
+	click Implementing1 "/api/Cake.Issues.PullRequests/BasePullRequestSystem"
 
 						</div>
 					</div>
@@ -355,17 +355,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Pull<wbr>Request<wbr>System&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Pull<wbr>Request<wbr>System&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -374,6 +363,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Pull<wbr>Request<wbr>System&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
