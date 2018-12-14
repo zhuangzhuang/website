@@ -158,15 +158,14 @@
 				<li><a href="/api/Cake.Core.IO/FileSystemExtensions">FileSystemExtensions</a></li>
 				<li><a href="/api/Cake.Core.IO/Globber">Globber</a></li>
 				<li><a href="/api/Cake.Core.IO/GlobberExtensions">GlobberExtensions</a></li>
+				<li><a href="/api/Cake.Core.IO/GlobberSettings">GlobberSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/Path">Path</a></li>
 				<li><a href="/api/Cake.Core.IO/PathComparer">PathComparer</a></li>
+				<li><a href="/api/Cake.Core.IO/PathExtensions">PathExtensions</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessArgumentBuilder">Process<wbr>Argument<wbr>Builder</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -178,6 +177,9 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -295,7 +297,17 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-    Gets a value indicating whether this path is relative.
+    Gets a value indicating whether or not this path is relative.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.IO/Path">Path</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.IO/Path/2A4A2BD3">IsUNC</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether or not this path is an UNC path.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core.IO/Path">Path</a></em></small></div>
 								</td>
@@ -306,6 +318,16 @@ class Type type-node
 								<td>
 									<div>
     Gets the segments making up the path.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core.IO/Path">Path</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.IO/Path/68116402">Separator</a></td>
+								<td>char</td>
+								<td>
+									<div>
+    Gets the separator this path was normalized with.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core.IO/Path">Path</a></em></small></div>
 								</td>
@@ -480,6 +502,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.IO/PathExtensions/D3F285C8">Expand<wbr>Environment<wbr>Variables<wbr>(ICakeEnvironment)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Expands all environment variables in the provided <code class="cs"><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></code>.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.IO/PathExtensions">PathExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr><wbr>(DirectoryPath[])<wbr></a></td>
 								<td>bool</td>
 								<td>
@@ -491,17 +523,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -510,6 +531,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Directory<wbr>Path&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

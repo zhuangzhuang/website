@@ -152,8 +152,10 @@
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Common.IO/GlobbingAliases/623BF4F2">GetDirectories<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Common.IO/GlobbingAliases/AB3DCC2D">GetDirectories<wbr>(ICakeContext, <wbr>string, <wbr>Func<wbr>&lt;IDirectory, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.IO/GlobbingAliases/7554FFF3">GetDirectories<wbr>(ICakeContext, <wbr>string, <wbr>GlobberSettings)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/GlobbingAliases/91154142">GetFiles<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
 				<li><a href="/api/Cake.Common.IO/GlobbingAliases/2CDC8B98">GetFiles<wbr>(ICakeContext, <wbr>string, <wbr>Func<wbr>&lt;IDirectory, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Common.IO/GlobbingAliases/765684A7">GetFiles<wbr>(ICakeContext, <wbr>string, <wbr>GlobberSettings)<wbr></a></li>
 
 
                     </ul>
@@ -196,6 +198,7 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeMethodAlias]
 [CakeAliasCategory("Directories")]
+[Obsolete("Please use the GetDirectories overload that accept globber settings instead.", false)]
 public static DirectoryPathCollection GetDirectories(this ICakeContext context, string pattern, Func&lt;IDirectory, bool&gt; predicate)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
@@ -233,6 +236,10 @@ public static DirectoryPathCollection GetDirectories(this ICakeContext context, 
 						<td>
     An attribute used for documentation of alias methods/properties.
     </td>
+					</tr>
+					<tr>
+						<td>ObsoleteAttribute</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>

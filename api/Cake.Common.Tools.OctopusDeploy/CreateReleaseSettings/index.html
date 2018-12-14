@@ -150,6 +150,7 @@
 				<li class="selected"><a href="/api/Cake.Common.Tools.OctopusDeploy/CreateReleaseSettings">Create<wbr>Release<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/DeploymentQueryResultParser">Deployment<wbr>Query<wbr>Result<wbr>Parser</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployAliases">OctopusDeployAliases</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier">Octopus<wbr>Deploy<wbr>Deployment<wbr>Querier</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployment">OctopusDeployment</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploymentQuerySettings">Octopus<wbr>Deployment<wbr>Query<wbr>Settings</a></li>
@@ -160,7 +161,8 @@
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeployer">Octopus<wbr>Deploy<wbr>Release<wbr>Deployer</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeploymentSettings">Octopus<wbr>Deploy<wbr>Release<wbr>Deployment<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter">Octopus<wbr>Deploy<wbr>Release<wbr>Promoter</a></li>
-				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployToolSettings">Octopus<wbr>Deploy<wbr>Tool<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings">OctopusPackSettings</a></li>
 				<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPushSettings">OctopusPushSettings</a></li>
 			<li class="header">Enum Types</li>
@@ -205,7 +207,8 @@
 									<ul class="list-unstyled">										
 											<li>object</li>								
 											<li><a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></li>								
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployToolSettings">Octopus<wbr>Deploy<wbr>Tool<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></li>								
 									</ul>
 								</dd>				
 							
@@ -215,11 +218,13 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["OctopusDeploySettings"]--&gt;Type
-	click Base0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings"
-	Base1["ToolSettings"]--&gt;Base0
-	click Base1 "/api/Cake.Core.Tooling/ToolSettings"
-	Base2["object"]--&gt;Base1
+	Base0["OctopusDeployCommonToolSettings"]--&gt;Type
+	click Base0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings"
+	Base1["OctopusDeployToolSettings"]--&gt;Base0
+	click Base1 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployToolSettings"
+	Base2["ToolSettings"]--&gt;Base1
+	click Base2 "/api/Cake.Core.Tooling/ToolSettings"
+	Base3["object"]--&gt;Base2
 	Type["CreateReleaseSettings"]
 class Type type-node
 
@@ -230,7 +235,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public sealed class CreateReleaseSettings : OctopusDeploySettings</code></pre>
+	<pre><code>public sealed class CreateReleaseSettings : OctopusDeployCommonToolSettings</code></pre>
 
 
 
@@ -272,13 +277,13 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/3FE8D85A">ApiKey</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/30E4BC27">ApiKey</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the user's API key.
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -312,13 +317,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/419C486F">ConfigurationFile</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/E0DC56D0">ConfigurationFile</a></td>
 								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
 								<td>
 									<div>
     Gets or sets the text file of default values
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -377,23 +382,23 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/07001C44">EnableDebugLogging</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/398D72E5">EnableDebugLogging</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether the enable debug logging flag is set
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/42AE9AF7">Enable<wbr>Service<wbr>Messages</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/20CC48FD">Enable<wbr>Service<wbr>Messages</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether the enable service messages flag is set
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -452,13 +457,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/C97549CD">IgnoreSslErrors</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/BED91A8D">IgnoreSslErrors</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether the ignore SSL errors flag is set
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -500,13 +505,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/C7821F40">Password</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/47AF31CE">Password</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the password to use when authenticating with the server
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -546,13 +551,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/882CBF80">Server</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/8720DBFD">Server</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the octopus server url.
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -621,13 +626,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings/65C2838D">Username</a></td>
+								<td><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings/E5EFAD03">Username</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets or sets the username to use when authenticating with the server
     </div>
-											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeploySettings">Octopus<wbr>Deploy<wbr>Settings</a></em></small></div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -699,17 +704,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Create<wbr>Release<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Create<wbr>Release<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -718,6 +712,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Create<wbr>Release<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

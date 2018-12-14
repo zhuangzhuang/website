@@ -220,14 +220,14 @@
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Npm.Update/NpmUpdateTool">NpmUpdateTool</a></li>								
 											<li><a href="/api/Cake.Npm.Ci/NpmCiTool">NpmCiTool</a></li>								
-											<li><a href="/api/Cake.Npm.Prune/NpmPruneRunner">NpmPruneRunner</a></li>								
-											<li><a href="/api/Cake.Npm.Version/NpmVersionTool">NpmVersionTool</a></li>								
 											<li><a href="/api/Cake.Npm.Set/NpmSetTool">NpmSetTool</a></li>								
-											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
-											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
-											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
 											<li><a href="/api/Cake.Npm.AddUser/NpmAddUser">NpmAddUser</a></li>								
+											<li><a href="/api/Cake.Npm.Prune/NpmPruneRunner">NpmPruneRunner</a></li>								
+											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
+											<li><a href="/api/Cake.Npm.Version/NpmVersionTool">NpmVersionTool</a></li>								
 											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
+											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
+											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
 									</ul>
 								</dd>			
@@ -244,22 +244,22 @@ class Type type-node
 	click Derived0 "/api/Cake.Npm.Update/NpmUpdateTool"
 	Type--&gt;Derived1["NpmCiTool"]
 	click Derived1 "/api/Cake.Npm.Ci/NpmCiTool"
-	Type--&gt;Derived2["NpmPruneRunner"]
-	click Derived2 "/api/Cake.Npm.Prune/NpmPruneRunner"
-	Type--&gt;Derived3["NpmVersionTool"]
-	click Derived3 "/api/Cake.Npm.Version/NpmVersionTool"
-	Type--&gt;Derived4["NpmSetTool"]
-	click Derived4 "/api/Cake.Npm.Set/NpmSetTool"
-	Type--&gt;Derived5["NpmPacker"]
-	click Derived5 "/api/Cake.Npm.Pack/NpmPacker"
-	Type--&gt;Derived6["NpmInstaller"]
-	click Derived6 "/api/Cake.Npm.Install/NpmInstaller"
-	Type--&gt;Derived7["NpmPublisher"]
-	click Derived7 "/api/Cake.Npm.Publish/NpmPublisher"
-	Type--&gt;Derived8["NpmAddUser"]
-	click Derived8 "/api/Cake.Npm.AddUser/NpmAddUser"
-	Type--&gt;Derived9["NpmScriptRunner"]
-	click Derived9 "/api/Cake.Npm.RunScript/NpmScriptRunner"
+	Type--&gt;Derived2["NpmSetTool"]
+	click Derived2 "/api/Cake.Npm.Set/NpmSetTool"
+	Type--&gt;Derived3["NpmAddUser"]
+	click Derived3 "/api/Cake.Npm.AddUser/NpmAddUser"
+	Type--&gt;Derived4["NpmPruneRunner"]
+	click Derived4 "/api/Cake.Npm.Prune/NpmPruneRunner"
+	Type--&gt;Derived5["NpmPublisher"]
+	click Derived5 "/api/Cake.Npm.Publish/NpmPublisher"
+	Type--&gt;Derived6["NpmVersionTool"]
+	click Derived6 "/api/Cake.Npm.Version/NpmVersionTool"
+	Type--&gt;Derived7["NpmScriptRunner"]
+	click Derived7 "/api/Cake.Npm.RunScript/NpmScriptRunner"
+	Type--&gt;Derived8["NpmInstaller"]
+	click Derived8 "/api/Cake.Npm.Install/NpmInstaller"
+	Type--&gt;Derived9["NpmPacker"]
+	click Derived9 "/api/Cake.Npm.Pack/NpmPacker"
 	Type--&gt;Derived10["NpmRebuilder"]
 	click Derived10 "/api/Cake.Npm.Rebuild/NpmRebuilder"
 
@@ -438,17 +438,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;NpmTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;NpmTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -457,6 +446,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;NpmTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
