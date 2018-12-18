@@ -203,11 +203,11 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
-											<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
+											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
+											<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -217,16 +217,16 @@
 							graph TD
 	Type["IScriptHost"]
 class Type type-node
-	Type-.-&gt;Implementing0["TaskTreeScriptHost"]
-	click Implementing0 "/api/Cake.Scripting/TaskTreeScriptHost"
-	Type-.-&gt;Implementing1["DryRunScriptHost"]
-	click Implementing1 "/api/Cake.Scripting/DryRunScriptHost"
-	Type-.-&gt;Implementing2["BuildScriptHost"]
-	click Implementing2 "/api/Cake.Scripting/BuildScriptHost"
+	Type-.-&gt;Implementing0["DescriptionScriptHost"]
+	click Implementing0 "/api/Cake.Scripting/DescriptionScriptHost"
+	Type-.-&gt;Implementing1["BuildScriptHost"]
+	click Implementing1 "/api/Cake.Scripting/BuildScriptHost"
+	Type-.-&gt;Implementing2["DryRunScriptHost"]
+	click Implementing2 "/api/Cake.Scripting/DryRunScriptHost"
 	Type-.-&gt;Implementing3["ScriptHost"]
 	click Implementing3 "/api/Cake.Core.Scripting/ScriptHost"
-	Type-.-&gt;Implementing4["DescriptionScriptHost"]
-	click Implementing4 "/api/Cake.Scripting/DescriptionScriptHost"
+	Type-.-&gt;Implementing4["TaskTreeScriptHost"]
+	click Implementing4 "/api/Cake.Scripting/TaskTreeScriptHost"
 
 						</div>
 					</div>
