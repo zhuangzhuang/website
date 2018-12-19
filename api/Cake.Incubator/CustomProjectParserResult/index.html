@@ -416,6 +416,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/DDE587FC">ProjectXml</a></td>
+								<td>XDocument</td>
+								<td>
+									<div>
+            The project file xml source
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/CustomProjectParserResult/6E8C0C1A">References</a></td>
 								<td>ICollection<wbr>&lt;Project<wbr>Assembly<wbr>Reference&gt;<wbr></td>
 								<td>
@@ -535,6 +544,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/9FB5A71D">GetProjectProperty<wbr>(string)<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets any project property by name. Useful for getting non-standard properties in the CustomProjectParserResult type
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/26F8283F">GetReference<wbr>(string)<wbr></a></td>
 								<td>Project<wbr>Assembly<wbr>Reference</td>
 								<td>
@@ -561,7 +581,7 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Checks for a project package refernce by name and optional TargetFramework
+            Checks for a project package reference by name and optional TargetFramework
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
@@ -572,7 +592,7 @@ class Type type-node
 								<td>bool</td>
 								<td>
 									<div>
-            Checks for a project assembly refernce by name or alias
+            Checks for a project assembly reference by name or alias
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
@@ -590,11 +610,44 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/719A011B">IsExpectoTestProject<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is an Expecto test compatible project
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/B2E460E8">IsFixieTestProject<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is an fixie test compatible project
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/9F5CC15B">Is<wbr>Framework<wbr>Test<wbr>Project<wbr>()<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the project is a pre `dotnet test` compatible project
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/4936FD52">IsGlobalTool<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is for a global tool
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
@@ -617,6 +670,28 @@ class Type type-node
 								<td>
 									<div>
             Checks if the project is a library
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/2A5DDDEF">IsMSTestProject<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is an MSTest compatible project
+            </div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/4F49F3D2">IsNUnitTestProject<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+            Checks if the project is an NUnit test compatible project
             </div>
 										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
@@ -656,14 +731,14 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.Incubator/ProjectParserExtensions/D28246C0">IsXUnitTestProject<wbr>()<wbr></a></td>
+								<td>bool</td>
 								<td>
 									<div>
-            Throws an exception if the specified parameter's value is null.
+            Checks if the project is an xunit test compatible project
             </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator/ProjectParserExtensions">Project<wbr>Parser<wbr>Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -675,6 +750,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Custom<wbr>Project<wbr>Parser<wbr>Result&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
