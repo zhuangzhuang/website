@@ -179,6 +179,7 @@
     <li><a href="/dsl/coveralls">Coveralls</a></li>        
     <li><a href="/dsl/csvhelper">CsvHelper</a></li>        
     <li><a href="/dsl/curl">Curl</a></li>        
+    <li><a href="/dsl/dart">Dart</a></li>        
     <li><a href="/dsl/database">Database</a></li>        
     <li><a href="/dsl/dependenciesanalyser">DependenciesAnalyser</a></li>        
     <li><a href="/dsl/dependencycheck">DependencyCheck</a></li>        
@@ -327,8 +328,15 @@
 
             <h1 id="Summary">Summary</h1>
         <div>
-            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
-            create and restore DACPAC files
+            <p>
+            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
+            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
+            </p>
+            <p>
+            In order to use the commands for this addin, include the following in your build.cake file to download and
+            reference from NuGet.org:
+            </p><pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
+            <p></p>
             </div>
 
 
