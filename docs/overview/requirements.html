@@ -81,7 +81,7 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
         <div><p><a href="https://github.com/cake-build/website/blob/develop/input/docs/overview/requirements.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#net-core">.NET Core</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#net-core-2.1">.NET Core 2.1</a></p>
 <p><a href="#net-framework-4.6.1">.NET Framework 4.6.1</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -201,12 +201,14 @@
 			<h1>Requirements</h1>
 		</section>
 	<section class="content">
-		<h1 id="net-core">.NET Core</h1>
-<p>You can use the <a href="https://www.nuget.org/packages/Cake.CoreCLR">Cake.CoreCLR</a> NuGet package to run cross-platform on Windows, Mac or Linux using <a href="https://www.microsoft.com/net/core#windows">.NET Core</a>.</p>
+		<h1 id="net-core-2.1">.NET Core 2.1</h1>
+<p>Cake provides two options for running on <a href="https://dotnet.microsoft.com/download/dotnet-core/2.1">.NET Core</a>, cross-platform on Windows, Mac or Linux.</p>
+<p>The <a href="https://www.nuget.org/packages/Cake.CoreCLR">Cake.CoreCLR</a> NuGet package, targeting <code>netcoreapp2.0</code>.</p>
+<p>The <a href="https://www.nuget.org/packages/Cake.Tool">Cake.Tool</a> NuGet package, a .NET Core global tool targeting <code>netcoreapp2.1</code>.</p>
 <h1 id="net-framework-4.6.1">.NET Framework 4.6.1</h1>
-<p>The <a href="https://www.nuget.org/packages/Cake">Cake</a> NuGet package can be used on Windows to run using the full <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49981">.NET Framework 4.6.1</a>.</p>
-<p>Alternatively, you can also use <a href="http://www.mono-project.com/">Mono</a> to run on Mac or Linux. The official recommended version of Mono is <code>4.4.2</code>. Older versions might work but are not supported.</p>
-<p><strong>NOTE:</strong> It is suggested to use <a href="https://www.microsoft.com/net/download/dotnet-framework/net472">.NET Framework 4.7.2</a> or newer to run build scripts which are using addins targetting .NET Standard 2.0 only.</p>
+<p>The <a href="https://www.nuget.org/packages/Cake">Cake</a> NuGet package can be used on Windows to run using the full <a href="https://dotnet.microsoft.com/download/dotnet-framework/net461">.NET Framework 4.6.1</a> or newer.</p>
+<p>Alternatively, you can also use <a href="http://www.mono-project.com/">Mono</a> to run on Mac or Linux. The official minimum recommended version of Mono is <code>5.12.0</code>.</p>
+<p><strong>NOTE:</strong> It is suggested to use <a href="https://www.microsoft.com/net/download/dotnet-framework/net472">.NET Framework 4.7.2</a> or newer to run build scripts which are using addins targeting .NET Standard 2.0 only.</p>
 
 	</section>
                 
