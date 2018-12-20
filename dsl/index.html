@@ -210,6 +210,7 @@
     <li><a href="/dsl/file-operations">File Operations</a></li>        
     <li><a href="/dsl/fileset">FileSet</a></li>        
     <li><a href="/dsl/fluentmigrator">FluentMigrator</a></li>        
+    <li><a href="/dsl/flutter">Flutter</a></li>        
     <li><a href="/dsl/ftp">FTP</a></li>        
     <li><a href="/dsl/gem">Gem</a></li>        
     <li><a href="/dsl/genymotion">Genymotion</a></li>        
@@ -510,8 +511,8 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
@@ -571,8 +572,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
-    </td>
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mspec">MSpec</a></td>
@@ -694,10 +695,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
+    install from NuGet.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -841,7 +842,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-            Cake build aliases for Android ADB commands
+            Cake build aliases for Android ADB Activity Manager commands
             </td>
                 </tr>
                 <tr>
@@ -922,7 +923,7 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-             Contains Cake aliases for configuring Amazon Simple Storage Service
+            Contains Cake aliases for configuring Amazon Cloud Front distributions
             </td>
                 </tr>
                 <tr>
@@ -1158,7 +1159,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Class that lets you override default API settings.
+            The result of EmailProvider.
             </td>
                 </tr>
                 <tr>
@@ -1233,6 +1234,12 @@
             </td>
                 </tr>
                 <tr>
+                    <td><a href="/dsl/flutter">Flutter</a></td>
+                    <td>
+            Contains functionality for working with flutter commands.
+            </td>
+                </tr>
+                <tr>
                     <td><a href="/dsl/ftp">FTP</a></td>
                     <td>
             Contains functionality for working with FTP
@@ -1260,14 +1267,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            The result of GitterProvider Chat API post
+            Contains GitterProvider Chat functionality.
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1338,7 +1345,7 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to creating issue reports.
+            Contains functionality related to read warnings from DocFx log files.
             </td>
                 </tr>
                 <tr>
@@ -1415,8 +1422,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild XML document files.
-    </td>
+            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msbuildtask">MSBuildTask</a></td>
@@ -1458,7 +1465,7 @@
                 <tr>
                     <td><a href="/dsl/npm">Npm</a></td>
                     <td>
-            Npm Install aliases
+            Npm Version aliases
             </td>
                 </tr>
                 <tr>
@@ -1592,7 +1599,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            Contains functionality related to SendGrid API.
+            The result of SendGridProvider API post.
             </td>
                 </tr>
                 <tr>
@@ -1648,15 +1655,8 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            <p>
-            Contains functionality to deal with SQL Server: DropDatabase, CreateDatabase, execute SQL, execute SQL from files, etc.
-            Provides functionality to manage LocalDb instances: Create, Start, Stop, Delete instances; 
-            </p>
-            <p>
-            In order to use the commands for this addin, include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin "nuget:?package=Cake.SqlServer"</code></pre>
-            </p>
+            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
+            create and restore DACPAC files
             </td>
                 </tr>
                 <tr>
@@ -1686,11 +1686,8 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
-            strong name or not.
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </td>
                 </tr>
                 <tr>
