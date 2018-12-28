@@ -200,10 +200,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfs.Authentication/TfsBasicCredentials">TfsBasicCredentials</a></li>								
-											<li><a href="/api/Cake.Tfs.Authentication/TfsAadCredentials">TfsAadCredentials</a></li>								
 											<li><a href="/api/Cake.Tfs.Authentication/TfsNtlmCredentials">TfsNtlmCredentials</a></li>								
 											<li><a href="/api/Cake.Tfs.Authentication/TfsOAuthCredentials">TfsOAuthCredentials</a></li>								
+											<li><a href="/api/Cake.Tfs.Authentication/TfsBasicCredentials">TfsBasicCredentials</a></li>								
+											<li><a href="/api/Cake.Tfs.Authentication/TfsAadCredentials">TfsAadCredentials</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -213,14 +213,14 @@
 							graph TD
 	Type["ITfsCredentials"]
 class Type type-node
-	Type-.-&gt;Implementing0["TfsBasicCredentials"]
-	click Implementing0 "/api/Cake.Tfs.Authentication/TfsBasicCredentials"
-	Type-.-&gt;Implementing1["TfsAadCredentials"]
-	click Implementing1 "/api/Cake.Tfs.Authentication/TfsAadCredentials"
-	Type-.-&gt;Implementing2["TfsNtlmCredentials"]
-	click Implementing2 "/api/Cake.Tfs.Authentication/TfsNtlmCredentials"
-	Type-.-&gt;Implementing3["TfsOAuthCredentials"]
-	click Implementing3 "/api/Cake.Tfs.Authentication/TfsOAuthCredentials"
+	Type-.-&gt;Implementing0["TfsNtlmCredentials"]
+	click Implementing0 "/api/Cake.Tfs.Authentication/TfsNtlmCredentials"
+	Type-.-&gt;Implementing1["TfsOAuthCredentials"]
+	click Implementing1 "/api/Cake.Tfs.Authentication/TfsOAuthCredentials"
+	Type-.-&gt;Implementing2["TfsBasicCredentials"]
+	click Implementing2 "/api/Cake.Tfs.Authentication/TfsBasicCredentials"
+	Type-.-&gt;Implementing3["TfsAadCredentials"]
+	click Implementing3 "/api/Cake.Tfs.Authentication/TfsAadCredentials"
 
 						</div>
 					</div>
@@ -276,17 +276,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Tfs<wbr>Credentials&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Tfs<wbr>Credentials&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -295,6 +284,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Tfs<wbr>Credentials&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

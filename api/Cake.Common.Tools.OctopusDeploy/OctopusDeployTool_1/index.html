@@ -214,12 +214,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier">Octopus<wbr>Deploy<wbr>Deployment<wbr>Querier</a></li>								
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPusher">OctopusDeployPusher</a></li>								
 											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPacker">OctopusDeployPacker</a></li>								
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeployer">Octopus<wbr>Deploy<wbr>Release<wbr>Deployer</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPusher">OctopusDeployPusher</a></li>								
 											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter">Octopus<wbr>Deploy<wbr>Release<wbr>Promoter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeployer">Octopus<wbr>Deploy<wbr>Release<wbr>Deployer</a></li>								
 											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseCreator">Octopus<wbr>Deploy<wbr>Release<wbr>Creator</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier">Octopus<wbr>Deploy<wbr>Deployment<wbr>Querier</a></li>								
 									</ul>
 								</dd>			
 							
@@ -232,18 +232,18 @@
 	Base1["object"]--&gt;Base0
 	Type["OctopusDeployTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["OctopusDeployDeploymentQuerier"]
-	click Derived0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier"
+	Type--&gt;Derived0["OctopusDeployPacker"]
+	click Derived0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPacker"
 	Type--&gt;Derived1["OctopusDeployPusher"]
 	click Derived1 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPusher"
-	Type--&gt;Derived2["OctopusDeployPacker"]
-	click Derived2 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployPacker"
+	Type--&gt;Derived2["OctopusDeployReleasePromoter"]
+	click Derived2 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter"
 	Type--&gt;Derived3["OctopusDeployReleaseDeployer"]
 	click Derived3 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseDeployer"
-	Type--&gt;Derived4["OctopusDeployReleasePromoter"]
-	click Derived4 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleasePromoter"
-	Type--&gt;Derived5["OctopusDeployReleaseCreator"]
-	click Derived5 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseCreator"
+	Type--&gt;Derived4["OctopusDeployReleaseCreator"]
+	click Derived4 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployReleaseCreator"
+	Type--&gt;Derived5["OctopusDeployDeploymentQuerier"]
+	click Derived5 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployDeploymentQuerier"
 
 						</div>
 					</div>
@@ -394,17 +394,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Octopus<wbr>Deploy<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Octopus<wbr>Deploy<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -413,6 +402,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Octopus<wbr>Deploy<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
