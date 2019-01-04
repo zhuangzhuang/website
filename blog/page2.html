@@ -171,6 +171,27 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/06/cake-v0.28.1-released">Cake v0.28.1 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Monday, June 18, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
+</dl>
+            <div>
+                <p>Version 0.28.1 of Cake has been released.</p>
+<p>After releasing version 0.28.0 we detected that tasks with multiple criterias were
+written multiple times to the log and that certain messages from the NuGet integration
+had too high verbosity for certain types of messages.</p>
+<p>In other words nothing serious, but if the task log suddenly irritates you as much as
+it did me, it might be worth bumping your
+<a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">pinned version</a> to 0.28.1.</p>
+<p>Contributions were included from:</p>
+                <a href="/blog/2018/06/cake-v0.28.1-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2018/06/cake-issues">Cake.Issues - A suite of addins for issue handling in Cake</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -242,27 +263,6 @@ Read issues from different analyzer or linters, create reports or add them as co
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2018/04/cake-v0.27.1-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/04/cake-v0.27.0-released">Cake v0.27.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Thursday, April 19, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
-</dl>
-            <div>
-                <p>Version 0.27.0 of Cake has been released.</p>
-<p>The third release of 2018 is here! It contains mostly improvements and bug fixes. While this release doesn't contain any known breaking changes, we would like to take this opportunity to inform you that the next release will. The next release will introduce typed contexts to Cake, this will really improve the flexibility of Cake scripts, read more about this <a href="https://github.com/cake-build/cake/issues/2008">here</a>.</p>
-<p>The most notable bug fixes in 0.27.0 were made around addin installation. We updated the internals of Cake to use v4.6.0 of the NuGet Client libraries, which comes with performance improvements. Cake now also supports "offline" builds when using in-process NuGet, this was kind of a regression since it used to work with the old <code>nuget.exe</code> based installer. Another enhancement is that we've added a runtime assembly resolver for assembly versions that can't be found. This tackles most of the issues experienced around addin loading and dependency resolution. Last but not least, in-process NuGet now also supports specifying multiple NuGet sources through config. This can be achieved by separating sources using semicolon (<code>;</code>) when setting the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#nuget-download-url.">NuGet Download Url</a> configuration value. Below is an example using <code>cake.config</code>:</p>
-
-<p>Last but not least, a friendly reminder that if you haven't pinned to a specific version of Cake, you should do it now :-) More information about pinning to a specific version can be found <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2018/04/cake-v0.27.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

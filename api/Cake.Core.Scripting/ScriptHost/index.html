@@ -155,6 +155,8 @@
 				<li class="selected"><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptProcessor">ScriptProcessor</a></li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptRunner">ScriptRunner</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Scripting/ScriptAliasType">ScriptAliasType</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptAliasFinder">IScriptAliasFinder</a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptConventions">IScriptConventions</a></li>
@@ -163,8 +165,6 @@
 				<li><a href="/api/Cake.Core.Scripting/IScriptProcessor">IScriptProcessor</a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptRunner">IScriptRunner</a></li>
 				<li><a href="/api/Cake.Core.Scripting/IScriptSession">IScriptSession</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Scripting/ScriptAliasType">ScriptAliasType</a></li>
 
 
                     </ul>
@@ -215,9 +215,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
+											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
 									</ul>
 								</dd>			
@@ -232,12 +232,12 @@
 	click Interface0 "/api/Cake.Core.Scripting/IScriptHost"
 	Type["ScriptHost"]
 class Type type-node
-	Type--&gt;Derived0["BuildScriptHost"]
-	click Derived0 "/api/Cake.Scripting/BuildScriptHost"
+	Type--&gt;Derived0["DescriptionScriptHost"]
+	click Derived0 "/api/Cake.Scripting/DescriptionScriptHost"
 	Type--&gt;Derived1["TaskTreeScriptHost"]
 	click Derived1 "/api/Cake.Scripting/TaskTreeScriptHost"
-	Type--&gt;Derived2["DescriptionScriptHost"]
-	click Derived2 "/api/Cake.Scripting/DescriptionScriptHost"
+	Type--&gt;Derived2["BuildScriptHost"]
+	click Derived2 "/api/Cake.Scripting/BuildScriptHost"
 	Type--&gt;Derived3["DryRunScriptHost"]
 	click Derived3 "/api/Cake.Scripting/DryRunScriptHost"
 
@@ -488,17 +488,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -507,6 +496,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
