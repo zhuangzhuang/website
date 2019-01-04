@@ -147,6 +147,7 @@
 		<li><a href="/api/Cake.Core">Cake<wbr>.Core</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Core/ByteArrayExtensions">ByteArrayExtensions</a></li>
 				<li><a href="/api/Cake.Core/CakeConfigurationExtensions">Cake<wbr>Configuration<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Core/CakeConsole">CakeConsole</a></li>
 				<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>
@@ -257,10 +258,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -274,14 +275,14 @@
 	click Interface0 "/api/Cake.Core/ICakeContext"
 	Type["CakeContextAdapter"]
 class Type type-node
-	Type--&gt;Derived0["TaskTeardownContext"]
-	click Derived0 "/api/Cake.Core/TaskTeardownContext"
-	Type--&gt;Derived1["TeardownContext"]
-	click Derived1 "/api/Cake.Core/TeardownContext"
+	Type--&gt;Derived0["TeardownContext"]
+	click Derived0 "/api/Cake.Core/TeardownContext"
+	Type--&gt;Derived1["TaskSetupContext"]
+	click Derived1 "/api/Cake.Core/TaskSetupContext"
 	Type--&gt;Derived2["SetupContext"]
 	click Derived2 "/api/Cake.Core/SetupContext"
-	Type--&gt;Derived3["TaskSetupContext"]
-	click Derived3 "/api/Cake.Core/TaskSetupContext"
+	Type--&gt;Derived3["TaskTeardownContext"]
+	click Derived3 "/api/Cake.Core/TaskTeardownContext"
 
 						</div>
 					</div>
@@ -2115,7 +2116,7 @@ class Type type-node
 								<td><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></td>
 								<td>
 									<div>
-    Gets all directory matching the specified pattern.
+    Gets all directories matching the specified pattern.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
 								</td>
@@ -2125,7 +2126,7 @@ class Type type-node
 								<td><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></td>
 								<td>
 									<div>
-     Gets all directory matching the specified pattern.
+     Gets all directories matching the specified pattern.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
 								</td>
@@ -2135,7 +2136,7 @@ class Type type-node
 								<td><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></td>
 								<td>
 									<div>
-     Gets all directory matching the specified pattern.
+     Gets all directories matching the specified pattern.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
 								</td>
@@ -2166,6 +2167,26 @@ class Type type-node
 								<td>
 									<div>
      Gets all files matching the specified pattern.
+     </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.IO/GlobbingAliases/389FE5DA">GetPaths<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/PathCollection">PathCollection</a></td>
+								<td>
+									<div>
+    Gets all paths matching the specified pattern.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.IO/GlobbingAliases/0064C76B">GetPaths<wbr>(string, <wbr>GlobberSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Core.IO/PathCollection">PathCollection</a></td>
+								<td>
+									<div>
+     Gets all paths matching the specified pattern.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.IO/GlobbingAliases">GlobbingAliases</a></em></small></div>
 								</td>
@@ -2258,6 +2279,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/642834F9">Git<wbr>Release<wbr>Manager<wbr>Add<wbr>Assets<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Add Assets to an existing release.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/03451F5F">Git<wbr>Release<wbr>Manager<wbr>Add<wbr>Assets<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>Git<wbr>Release<wbr>Manager<wbr>Add<wbr>Assets<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Add Assets to an existing release using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/750C5E1B">Git<wbr>Release<wbr>Manager<wbr>Add<wbr>Assets<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2273,6 +2314,26 @@ class Type type-node
 								<td>
 									<div>
     Add Assets to an existing release using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/A71BA5C6">Git<wbr>Release<wbr>Manager<wbr>Close<wbr>(string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Closes the milestone associated with a release.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/EF6A500D">Git<wbr>Release<wbr>Manager<wbr>Close<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>Git<wbr>Release<wbr>Manager<wbr>Close<wbr>Milestone<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Closes the milestone associated with a release using the specified settings.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
 								</td>
@@ -2298,6 +2359,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/E437C001">Git<wbr>Release<wbr>Manager<wbr>Create<wbr>(string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Creates a Package Release.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/75058474">Git<wbr>Release<wbr>Manager<wbr>Create<wbr>(string, <wbr>string, <wbr>string, <wbr>Git<wbr>Release<wbr>Manager<wbr>Create<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Creates a Package Release using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/3AC3D17F">Git<wbr>Release<wbr>Manager<wbr>Create<wbr>(string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2318,6 +2399,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/D329E264">Git<wbr>Release<wbr>Manager<wbr>Export<wbr>(string, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Exports the release notes.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/3B458447">Git<wbr>Release<wbr>Manager<wbr>Export<wbr>(string, <wbr>string, <wbr>string, <wbr>FilePath, <wbr>Git<wbr>Release<wbr>Manager<wbr>Export<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Exports the release notes using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/B5CE4A24">Git<wbr>Release<wbr>Manager<wbr>Export<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>FilePath)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2333,6 +2434,66 @@ class Type type-node
 								<td>
 									<div>
     Exports the release notes using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/73A2F5B9">Git<wbr>Release<wbr>Manager<wbr>Label<wbr>(string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes and creates labels.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/13EF5F80">Git<wbr>Release<wbr>Manager<wbr>Label<wbr>(string, <wbr>string, <wbr>string, <wbr>Git<wbr>Release<wbr>Manager<wbr>Label<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes and creates labels using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/78545D9F">Git<wbr>Release<wbr>Manager<wbr>Label<wbr>(string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes and creates labels.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/C2C61879">Git<wbr>Release<wbr>Manager<wbr>Label<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>Git<wbr>Release<wbr>Manager<wbr>Label<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Deletes and creates labels using the specified settings.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/DF07B628">Git<wbr>Release<wbr>Manager<wbr>Publish<wbr>(string, <wbr>string, <wbr>string, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Publishes the release.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases/3B4E6E39">Git<wbr>Release<wbr>Manager<wbr>Publish<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>Git<wbr>Release<wbr>Manager<wbr>Publish<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Publishes the release using the specified settings.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerAliases">Git<wbr>Release<wbr>Manager<wbr>Aliases</a></em></small></div>
 								</td>
@@ -2834,17 +2995,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -2853,6 +3003,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Cake<wbr>Context<wbr>Adapter&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

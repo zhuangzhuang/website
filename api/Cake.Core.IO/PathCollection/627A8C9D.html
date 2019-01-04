@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake - API - ReflectionExtensions.ImplementsInterfaceDefinition(Type, Type) Method</title>
+        <title>Cake - API - PathCollection.PathCollection(PathComparer) Constructor</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -143,12 +143,23 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/api/Cake.Testing.Extensions">Cake<wbr>.Testing<wbr>.Extensions</a></li>
+		<li><a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Cake.Testing.Extensions/ReflectionExtensions">ReflectionExtensions</a></li>
+		<li><a href="/api/Cake.Core.IO/PathCollection">PathCollection</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/FD57E689">PathCollection<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Cake.Core.IO/PathCollection/627A8C9D">PathCollection<wbr>(PathComparer)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/8E9F54A0">PathCollection<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/91C14739">PathCollection<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>, <wbr>PathComparer)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/6FC00369">Count</a></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Cake.Testing.Extensions/ReflectionExtensions/6C809B22">Implements<wbr>Interface<wbr>Definition<wbr>(Type, <wbr>Type)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/E0B7F392">Add<wbr>(Path)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/1446A799">Add<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/E6BCDFF1">GetEnumerator<wbr>()<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/233B1BFF">Remove<wbr>(Path)<wbr></a></li>
+				<li><a href="/api/Cake.Core.IO/PathCollection/4986C316">Remove<wbr>(IEnumerable<wbr>&lt;Path&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -163,16 +174,15 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Cake.Testing.Extensions/ReflectionExtensions">ReflectionExtensions</a>.</h3>
-	<h1>Implements<wbr>Interface<wbr>Definition<wbr>(Type, <wbr>Type)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Cake.Core.IO/PathCollection">PathCollection</a>.</h3>
+	<h1>PathCollection<wbr>(PathComparer)<wbr> <small>Constructor</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Indicates whether the specified type implements the specified interface definition.
-    If <span name="interfaceTypeDefinition" class="paramref">interfaceTypeDefinition</span> is generic, it must not be a generic type instantiation.
+    Initializes a new instance of the <code class="cs"><a href="/api/Cake.Core.IO/PathCollection">PathCollection</a></code> class.
     </div>
 
 		<div class="panel panel-default">
@@ -180,17 +190,17 @@
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Cake.Testing.Extensions">Cake<wbr>.Testing<wbr>.Extensions</a></dd>
+						<dd><a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Cake.Testing.Extensions/ReflectionExtensions">ReflectionExtensions</a></dd>		
+						<dd><a href="/api/Cake.Core.IO/PathCollection">PathCollection</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static bool ImplementsInterfaceDefinition(this Type type, Type interfaceTypeDefinition)</code></pre>
+	<pre><code>public PathCollection(PathComparer comparer)</code></pre>
 
 
 
@@ -208,17 +218,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>type</td>
-						<td>Type</td>
-						<td>The type to examine.</td>
-					</tr>
-					<tr>
-						<td>interfaceTypeDefinition</td>
-						<td>Type</td>
-						<td>
-    The interface definition to find.
-    If <span name="interfaceTypeDefinition" class="paramref">interfaceTypeDefinition</span> is generic, it must not be a generic type instantiation.
-    </td>
+						<td>comparer</td>
+						<td><a href="/api/Cake.Core.IO/PathComparer">PathComparer</a></td>
+						<td>The comparer.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -235,10 +237,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
-					<td>
-    <code class="cs"></code> if  the specified type implements the specified interface definition; otherwise, <code class="cs"></code>.
-    </td>
+					<td>void</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

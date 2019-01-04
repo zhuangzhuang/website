@@ -242,22 +242,22 @@ public static void DotNetCoreVSTest(this ICakeContext context, string testFile, 
 	<h1 id="Examples">Examples</h1>
 	<div>
      <p>Specify the path to the .csproj file in the test project</p>
-     <pre><code class="cs">     var settings = new DotNetCoreTestSettings
+     <pre><code class="cs">     var settings = new DotNetCoreVSTestSettings
      {
          Framework = "FrameworkCore10",
          Platform = "x64"
      };
 
-     DotNetCoreTest("./test/Project.Tests/Project.Tests.csproj", settings);</code></pre>
+     DotNetCoreTest("./test/Project.Tests/bin/Release/netcoreapp2.1/Project.Tests.dll", settings);</code></pre>
      <p>You could also specify a glob pattern to run multiple test projects.</p>
-     <pre><code class="cs">     var settings = new DotNetCoreTestSettings
+     <pre><code class="cs">     var settings = new DotNetCoreVSTestSettings
      {
          Framework = "FrameworkCore10",
          Platform = "x64",
          Parallel = true
      };
 
-     DotNetCoreTest("./**/*.Tests.csproj", settings);</code></pre>
+     DotNetCoreVSTest("./**/bin/Release/netcoreapp2.1/*.Tests.dll", settings);</code></pre>
      </div>
 
 

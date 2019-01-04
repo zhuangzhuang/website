@@ -244,7 +244,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishCodeCoverageData/654F7F6C">Additional<wbr>Code<wbr>Coverage<wbr>Files</a></td>
-								<td>string[]</td>
+								<td>FilePath[]</td>
 								<td>
 									<div>
     Gets or Sets the file paths for any additional code coverage files to be published as artifacts of the build.
@@ -262,7 +262,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishCodeCoverageData/1E86F4D6">ReportDirectory</a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
 								<td>
 									<div>
     Gets or Sets the Path of the code coverage HTML report directory. The report directory is published for later viewing as an artifact of the build.
@@ -271,7 +271,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishCodeCoverageData/E7D7A7B0">SummaryFileLocation</a></td>
-								<td>string</td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
 								<td>
 									<div>
     Gets or Sets the path ath of the summary file containing code coverage statistics, such as line, method, and class coverage.
@@ -319,17 +319,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>T<wbr>F<wbr>Build<wbr>Publish<wbr>Code<wbr>Coverage<wbr>Data&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>T<wbr>F<wbr>Build<wbr>Publish<wbr>Code<wbr>Coverage<wbr>Data&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -338,6 +327,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>T<wbr>F<wbr>Build<wbr>Publish<wbr>Code<wbr>Coverage<wbr>Data&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
