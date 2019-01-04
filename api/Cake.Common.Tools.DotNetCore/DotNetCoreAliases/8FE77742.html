@@ -241,28 +241,28 @@ public static void DotNetCoreVSTest(this ICakeContext context, IEnumerable&lt;Fi
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-     <pre><code class="cs">     var settings = new DotNetCoreTestSettings
+     <pre><code class="cs">     var settings = new DotNetCoreVSTestSettings
      {
          Framework = "FrameworkCore10",
          Platform = "x64"
      };
 
-     DotNetCoreTest(new[] { (FilePath)"./Test/Cake.Common.Tests.csproj" }, settings);</code></pre>
+     DotNetCoreVSTest(new[] { (FilePath)"./test/Project.Tests/bin/Release/netcoreapp2.1/Project.Tests.dll" }, settings);</code></pre>
      <p>You could also specify a task that runs multiple test projects.</p>
      <p>Cake task:</p>
      <pre><code class="cs"> Task("Test")
      .Does(() =&gt;
  {
-     var settings = new DotNetCoreTestSettings
+     var settings = new DotNetCoreVSTestSettings
      {
          Framework = "FrameworkCore10",
          Platform = "x64",
          Parallel = true
      };
 
-     var projectFiles = GetFiles("./test/**/*.csproj");
+     var testFiles = GetFiles("./test/**/bin/Release/netcoreapp2.1/*.Test.dll");
 
-     DotNetCoreTest(projectFiles, settings);
+     DotNetCoreVSTest(testFiles, settings);
  });</code></pre>
      </div>
 

@@ -4,9 +4,89 @@
 		<title>Cake</title>
 		<link>https://cakebuild.net/</link>
 		<description />
-		<copyright>2018</copyright>
-		<pubDate>Sat, 22 Dec 2018 22:39:17 GMT</pubDate>
-		<lastBuildDate>Sat, 22 Dec 2018 22:39:17 GMT</lastBuildDate>
+		<copyright>2019</copyright>
+		<pubDate>Fri, 04 Jan 2019 14:45:59 GMT</pubDate>
+		<lastBuildDate>Fri, 04 Jan 2019 14:45:59 GMT</lastBuildDate>
+		<item>
+			<title>Cake v0.32.0 released</title>
+			<link>https://cakebuild.net/blog/2019/01/cake-v0.32.0-released</link>
+			<description>&lt;p&gt;Version 0.32.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is the first release for 2019, but before we focus on the new, a short retrospect of 2018.
+In 2018 we had 11 releases of Cake, hundreds of PRs from over fifty individual contributors, hundreds of issues raised and closed, and millions of downloads.
+All in all, it sums up to an active and healthy community – which we’re very grateful for, thank you!&lt;/p&gt;
+&lt;p&gt;A trend we saw in 2018 was that more and more tools start to come as .NET Global tools (including Cake itself) and most of these have been added to Cake tool resolution, allowing you with minimal changes run in a pure .NET Core environment.&lt;/p&gt;
+&lt;p&gt;This release has several improvements and fixes, to note a few, Cake’s Zip archive functionality has been greatly improved, initial support for VS2019 / MSBuild 16 has been added, a complete list of changes can be found below.&lt;/p&gt;
+&lt;p&gt;Happy New Year!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Known issue&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;</description>
+			<author>devlead</author>
+			<guid>https://cakebuild.net/blog/2019/01/cake-v0.32.0-released</guid>
+			<pubDate>Fri, 04 Jan 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Version 0.32.0 of Cake has been released.&lt;/p&gt;
+&lt;p&gt;This is the first release for 2019, but before we focus on the new, a short retrospect of 2018.
+In 2018 we had 11 releases of Cake, hundreds of PRs from over fifty individual contributors, hundreds of issues raised and closed, and millions of downloads.
+All in all, it sums up to an active and healthy community – which we’re very grateful for, thank you!&lt;/p&gt;
+&lt;p&gt;A trend we saw in 2018 was that more and more tools start to come as .NET Global tools (including Cake itself) and most of these have been added to Cake tool resolution, allowing you with minimal changes run in a pure .NET Core environment.&lt;/p&gt;
+&lt;p&gt;This release has several improvements and fixes, to note a few, Cake’s Zip archive functionality has been greatly improved, initial support for VS2019 / MSBuild 16 has been added, a complete list of changes can be found below.&lt;/p&gt;
+&lt;p&gt;Happy New Year!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Known issue&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chocolatey pack has a regression in this release, we'll try to release a hotfix 0.32.1 as soon as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contributions were included from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/devlead"&gt;devlead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/grumar"&gt;grumar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/flcdrg"&gt;flcdrg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jnm2"&gt;jnm2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/tpluscode"&gt;tpluscode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/paulomorgado"&gt;paulomorgado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gitfool"&gt;gitfool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/RLittlesII"&gt;RLittlesII&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/MihaMarkic"&gt;MihaMarkic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/FroggieFrog"&gt;FroggieFrog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/vlesierse"&gt;vlesierse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/azchohfi"&gt;azchohfi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full details of everything that was included in this release can be seen below.&lt;/p&gt;
+&lt;!--excerpt--&gt;
+&lt;h3 id="issues"&gt;Issues&lt;/h3&gt;
+&lt;p&gt;As part of this release we had &lt;a href="https://github.com/cake-build/cake/milestone/56?closed=1"&gt;17 issues&lt;/a&gt; closed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2420"&gt;&lt;strong&gt;#2420&lt;/strong&gt;&lt;/a&gt; Add new label alias for GitReleaseManager.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2419"&gt;&lt;strong&gt;#2419&lt;/strong&gt;&lt;/a&gt; Extend GitReleaseManager aliases to use token parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Improvement&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2424"&gt;&lt;strong&gt;#2424&lt;/strong&gt;&lt;/a&gt; Support computer cert store with SignTool.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2417"&gt;&lt;strong&gt;#2417&lt;/strong&gt;&lt;/a&gt; Extend GetToolExecutableNames for GitReleaseManager.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2412"&gt;&lt;strong&gt;#2412&lt;/strong&gt;&lt;/a&gt; TFBuildCommand PublishCodeCoverage API Changes.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2410"&gt;&lt;strong&gt;#2410&lt;/strong&gt;&lt;/a&gt; Add Global Tool and new arguments support in TextTemplatingAliases.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2398"&gt;&lt;strong&gt;#2398&lt;/strong&gt;&lt;/a&gt; Support MsBuild version (16).&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2381"&gt;&lt;strong&gt;#2381&lt;/strong&gt;&lt;/a&gt; Zip should behave by default like standard Zip utilities.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2379"&gt;&lt;strong&gt;#2379&lt;/strong&gt;&lt;/a&gt; Add an Encoding parameter to TextTransformation.Save.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2327"&gt;&lt;strong&gt;#2327&lt;/strong&gt;&lt;/a&gt; Missing report types for ReportGenerator.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2294"&gt;&lt;strong&gt;#2294&lt;/strong&gt;&lt;/a&gt; Add fluent API to enable MSBuild binary logger.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2249"&gt;&lt;strong&gt;#2249&lt;/strong&gt;&lt;/a&gt; Unhelpful error when #loading a missing nuget package.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2243"&gt;&lt;strong&gt;#2243&lt;/strong&gt;&lt;/a&gt; Missing ResultsDirectory when using DotNetCoreVSTest.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/1973"&gt;&lt;strong&gt;#1973&lt;/strong&gt;&lt;/a&gt; Add Products prop to VSWhereSettings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/pull/2397"&gt;&lt;strong&gt;#2397&lt;/strong&gt;&lt;/a&gt; Fix missing parenthesis and missing setting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Build&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2403"&gt;&lt;strong&gt;#2403&lt;/strong&gt;&lt;/a&gt; Update Travis CI to supported version of Mono.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-build/cake/issues/2394"&gt;&lt;strong&gt;#2394&lt;/strong&gt;&lt;/a&gt; License file missing in Chocolatey package.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>Cake v0.31.0 released</title>
 			<link>https://cakebuild.net/blog/2018/12/cake-v0.31.0-released</link>
@@ -1528,47 +1608,6 @@ The difference between the two dependencies above is that Cake will throw an exc
 &lt;p&gt;If you have already committed both the bootstrapper and the packages.config file into your repository, then &lt;em&gt;technically&lt;/em&gt; there is nothing that you need to do.  Since both artifacts exist in your repository, no additional downloads happen from the Cake Website, so you don't need to do anything immediately.  In the longer term, we would recommend that you pull the latest default bootstrapper(s) and commit them into your source control repository.&lt;/p&gt;
 &lt;p&gt;If you don't, for whatever reason, have the packages.config committed into your source control repository, then there is one thing that you need to do, and that is to refresh the bootstrapper(s).  This can be easily done fetching the latest bootstrapper(s) using the instructions &lt;a href="https://www.cakebuild.net/docs/tutorials/setting-up-a-new-project"&gt;here&lt;/a&gt;.  With this change made, simply commit the changes back into your source control repository, and you are good to go.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you have customised your bootstrapper(s), and you don't simply want to override it with the new default one(s), you can see the changes that were made to the default bootstrapper(s) in this &lt;a href="https://github.com/cake-build/resources/commit/2ed021f5cfef2d1106b0caf6c801633bbfb58cc0"&gt;commit&lt;/a&gt;.&lt;/p&gt;
-</content:encoded>
-		</item>
-		<item>
-			<title>How to debug a Cake addin</title>
-			<link>https://cakebuild.net/blog/2017/07/debug-cake-addin</link>
-			<description>&lt;p&gt;It's no secret, I like Cake.  When I have to write a script to build my source code, I use Cake.  On my most recent expedition writing a Cake script to publish a UWP application, I noticed Hockey App publish failed, &lt;a href="https://github.com/cake-contrib/Cake.HockeyApp"&gt;Cake.HockeyApp&lt;/a&gt; was throwing an exception.&lt;/p&gt;</description>
-			<author>RLittlesII</author>
-			<guid>https://cakebuild.net/blog/2017/07/debug-cake-addin</guid>
-			<pubDate>Mon, 31 Jul 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;It's no secret, I like Cake.  When I have to write a script to build my source code, I use Cake.  On my most recent expedition writing a Cake script to publish a UWP application, I noticed Hockey App publish failed, &lt;a href="https://github.com/cake-contrib/Cake.HockeyApp"&gt;Cake.HockeyApp&lt;/a&gt; was throwing an exception.&lt;/p&gt;
-&lt;p&gt;When I realized it wasn't the way my script interacted with Cake, but an issue with the addin itself, I immediately hit the Cake Gitter channel. I was in search of some documentation that allowed me to debug a Cake addin so I could address the issue that I was having Friday afternoon at half past quitting time.&lt;/p&gt;
-&lt;p&gt;One of the members of the project team suggested the following:&lt;/p&gt;
-&lt;blockquote class="blockquote"&gt;
-&lt;p&gt;build your addin in debug, reference it from Cake script and attach to process from VS.
-Start Cake.exe with &lt;code&gt;--debug&lt;/code&gt; flag so you have time to attach to process&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Now that I know where to start I created myself a task list:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Change build.ps1 to run with --debug flag&lt;/li&gt;
-&lt;li&gt;Build addin source&lt;/li&gt;
-&lt;li&gt;Load addin from source in build.cake&lt;/li&gt;
-&lt;li&gt;Find the error and fix it!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For the purposes of this post, I will cover steps 1 and 3.  Step 2 is no more than building the addin source code in Visual Studio.&lt;/p&gt;
-&lt;h1 id="changing-the-bootstrapper"&gt;Changing the bootstrapper&lt;/h1&gt;
-&lt;p&gt;This is the easiest part.  I modified the &lt;code&gt;Invoke-Expression&lt;/code&gt; line of the bootstrapper to resemble the following.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: We should revert this before we commit.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-powershell"&gt;Invoke-Expression &amp;quot;&amp;amp; `&amp;quot;$CAKE_EXE`&amp;quot; `&amp;quot;$Script`&amp;quot; -target=`&amp;quot;$Target`&amp;quot; -configuration=`&amp;quot;$Configuration`&amp;quot; -verbosity=`&amp;quot;$Verbosity`&amp;quot; $UseMono $UseDryRun $UseExperimental $ScriptArgs --debug&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And on the next execution of &lt;code&gt;.\build.ps1&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-powershell"&gt;Preparing to run build script...
-Running build script...
-Attach debugger to process 80276 to continue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id="loading-the-addin-from-source"&gt;Loading the addin from source&lt;/h1&gt;
-&lt;p&gt;In the build.cake file I add the following &lt;a href="https://cakebuild.net/docs/fundamentals/preprocessor-directives"&gt;preprocessor directive&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;#r &amp;quot;./Cake.HockeyApp/src/Cake.HockeyApp/bin/Debug/net45/Cake.HockeyApp.dll&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I navigate back to Visual Studio Debug -&amp;gt; Attach to Process (or Ctrl + Alt + P), pick the Cake execution with the corresponding process id and I hit break points!!!&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/RLittlesII/rodneylittlesii/master/src/images/Attach-To-Process.jpg" class="img-fluid" alt="Attach To Process" /&gt;&lt;/p&gt;
-&lt;p&gt;Now I can debug the issue I am seeing, determine if it is user error or the addin, and resolve it either way!&lt;/p&gt;
 </content:encoded>
 		</item>
 	</channel>

@@ -144,6 +144,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.MSBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.MSBuild</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVersion">MSBuildVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/PlatformTarget">PlatformTarget</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildAliases">MSBuildAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogSettings">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Settings</a></li>
@@ -153,13 +160,6 @@
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVerbosityExtensions">M<wbr>S<wbr>Build<wbr>Verbosity<wbr>Extensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVersion">MSBuildVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/PlatformTarget">PlatformTarget</a></li>
 
 
                     </ul>
@@ -262,6 +262,46 @@ class Type type-node
     Each file logger will be declared in the order added.
     The first file logger will match up to the /fl parameter.
     The next nine (max) file loggers will match up to the /fl1 through /fl9 respectively.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/3DF49AA9">EnableBinaryLogger<wbr>(MSBuildSettings)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Enables the binary logger with all the default settings.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/7F02A47E">EnableBinaryLogger<wbr>(MSBuildSettings, <wbr>M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Enables the binary logger with the specified imports and default file name.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/17292048">EnableBinaryLogger<wbr>(MSBuildSettings, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Enables the binary logger with the specified log file name and no imports.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions/716363A3">EnableBinaryLogger<wbr>(MSBuildSettings, <wbr>string, <wbr>M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports)<wbr></a></td>
+								<td><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></td>
+								<td>
+									<div>
+    Enables the binary logger with the specified log file name and imports.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>

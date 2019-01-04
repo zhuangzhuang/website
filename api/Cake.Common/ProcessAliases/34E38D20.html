@@ -209,7 +209,8 @@ public static int StartProcess(this ICakeContext context, FilePath fileName, Pro
          "ping",
          new ProcessSettings {
              Arguments = "localhost",
-             RedirectStandardOutput = true
+             RedirectStandardOutput = true,
+             RedirectStandardError = true
          },
          out redirectedStandardOutput,
          out redirectedErrorOutput
@@ -224,7 +225,7 @@ public static int StartProcess(this ICakeContext context, FilePath fileName, Pro
      throw new Exception(
          string.Format(
              "Errors occurred: {0}",
-             string.Join(", ", redirectedErrorOutput));
+             string.Join(", ", redirectedErrorOutput)));
  }
 
  // This should output 0 as valid arguments supplied
