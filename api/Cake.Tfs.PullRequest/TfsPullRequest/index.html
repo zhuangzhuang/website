@@ -151,6 +151,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest">TfsPullRequest</a></li>
+				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestIterationChange">Tfs<wbr>Pull<wbr>Request<wbr>Iteration<wbr>Change</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException">Tfs<wbr>Pull<wbr>Request<wbr>Not<wbr>Found<wbr>Exception</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatus">TfsPullRequestStatus</a></li>
@@ -417,11 +418,65 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/5EF5DB15">Activate<wbr>Comment<wbr>Thread<wbr>(int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Sets the pull request comment thread to <code class="cs">Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus.Active</code>.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/FAD299A1">CreateCommentThread<wbr>(<wbr>Tfs<wbr>Pull<wbr>Request<wbr>Comment<wbr>Thread)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Creates a new comment thread in the pull request.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/32379EC1">GetCommentThreads<wbr>()<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Tfs.PullRequest.CommentThread/TfsPullRequestCommentThread">Tfs<wbr>Pull<wbr>Request<wbr>Comment<wbr>Thread</a>&gt;<wbr></td>
+								<td>
+									<div>
+            Gets the pull request comment threads.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/21EFF93C">GetIterationChanges<wbr>(int)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;<a href="/api/Cake.Tfs.PullRequest/TfsPullRequestIterationChange">Tfs<wbr>Pull<wbr>Request<wbr>Iteration<wbr>Change</a>&gt;<wbr></td>
+								<td>
+									<div>
+            Gets all the pull request changes of the given iteration.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/BE17507B">GetLatestIterationId<wbr>()<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div>
+            Gets the Id of the latest pull request iteration.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/98E41C9F">GetModifiedFiles<wbr>()<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
 									<div>
             Gets the files modified by the pull request.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/305B9F1F">ResolveCommentThread<wbr>(int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Sets the pull request comment thread status to <code class="cs">Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus.Fixed</code>.
             </div>
 								</td>
 							</tr>
