@@ -203,10 +203,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></li>								
+											<li><a href="/api/Cake.SqlTools/MySqlQueryRepository">MySqlQueryRepository</a></li>								
 											<li><a href="/api/Cake.SqlTools/NpgsqlQueryRepository">Npgsql<wbr>Query<wbr>Repository</a></li>								
 											<li><a href="/api/Cake.SqlTools/BaseSqlQueryRepository">Base<wbr>Sql<wbr>Query<wbr>Repository</a></li>								
-											<li><a href="/api/Cake.SqlTools/MySqlQueryRepository">MySqlQueryRepository</a></li>								
-											<li><a href="/api/Cake.SqlTools/MsSqlQueryRepository">MsSqlQueryRepository</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -216,14 +216,14 @@
 							graph TD
 	Type["ISqlQueryRepository"]
 class Type type-node
-	Type-.-&gt;Implementing0["NpgsqlQueryRepository"]
-	click Implementing0 "/api/Cake.SqlTools/NpgsqlQueryRepository"
-	Type-.-&gt;Implementing1["BaseSqlQueryRepository"]
-	click Implementing1 "/api/Cake.SqlTools/BaseSqlQueryRepository"
-	Type-.-&gt;Implementing2["MySqlQueryRepository"]
-	click Implementing2 "/api/Cake.SqlTools/MySqlQueryRepository"
-	Type-.-&gt;Implementing3["MsSqlQueryRepository"]
-	click Implementing3 "/api/Cake.SqlTools/MsSqlQueryRepository"
+	Type-.-&gt;Implementing0["MsSqlQueryRepository"]
+	click Implementing0 "/api/Cake.SqlTools/MsSqlQueryRepository"
+	Type-.-&gt;Implementing1["MySqlQueryRepository"]
+	click Implementing1 "/api/Cake.SqlTools/MySqlQueryRepository"
+	Type-.-&gt;Implementing2["NpgsqlQueryRepository"]
+	click Implementing2 "/api/Cake.SqlTools/NpgsqlQueryRepository"
+	Type-.-&gt;Implementing3["BaseSqlQueryRepository"]
+	click Implementing3 "/api/Cake.SqlTools/BaseSqlQueryRepository"
 
 						</div>
 					</div>
@@ -281,36 +281,25 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(<wbr>I<wbr>Sql<wbr>Query<wbr>Repository[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(<wbr>I<wbr>Sql<wbr>Query<wbr>Repository[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -325,24 +314,35 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;<wbr>I<wbr>Sql<wbr>Query<wbr>Repository&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

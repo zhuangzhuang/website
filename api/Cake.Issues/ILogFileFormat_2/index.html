@@ -223,11 +223,11 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat">Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format</a></li>								
+											<li><a href="/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat">Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format</a></li>								
 											<li><a href="/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat">Base<wbr>Es<wbr>Lint<wbr>Log<wbr>File<wbr>Format</a></li>								
+											<li><a href="/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat">Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format</a></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeLogFileFormat">FakeLogFileFormat</a></li>								
 											<li><a href="/api/Cake.Issues/BaseLogFileFormat_2">BaseLogFileFormat</a><wbr>&lt;<a href="/api/Cake.Issues/BaseLogFileFormat_2#typeparam-TIssueProvider">TIssueProvider</a>, <wbr><a href="/api/Cake.Issues/BaseLogFileFormat_2#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat">Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -237,16 +237,16 @@
 							graph TD
 	Type["ILogFileFormat&lt;TIssueProvider, TSettings&gt;"]
 class Type type-node
-	Type-.-&gt;Implementing0["BaseMsBuildLogFileFormat"]
-	click Implementing0 "/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat"
+	Type-.-&gt;Implementing0["BaseMarkdownlintLogFileFormat"]
+	click Implementing0 "/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat"
 	Type-.-&gt;Implementing1["BaseEsLintLogFileFormat"]
 	click Implementing1 "/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat"
-	Type-.-&gt;Implementing2["FakeLogFileFormat"]
-	click Implementing2 "/api/Cake.Issues.Testing/FakeLogFileFormat"
-	Type-.-&gt;Implementing3["BaseLogFileFormat&lt;TIssueProvider, TSettings&gt;"]
-	click Implementing3 "/api/Cake.Issues/BaseLogFileFormat_2"
-	Type-.-&gt;Implementing4["BaseMarkdownlintLogFileFormat"]
-	click Implementing4 "/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat"
+	Type-.-&gt;Implementing2["BaseMsBuildLogFileFormat"]
+	click Implementing2 "/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat"
+	Type-.-&gt;Implementing3["FakeLogFileFormat"]
+	click Implementing3 "/api/Cake.Issues.Testing/FakeLogFileFormat"
+	Type-.-&gt;Implementing4["BaseLogFileFormat&lt;TIssueProvider, TSettings&gt;"]
+	click Implementing4 "/api/Cake.Issues/BaseLogFileFormat_2"
 
 						</div>
 					</div>
@@ -326,36 +326,25 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -370,24 +359,35 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;ILogFileFormat<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

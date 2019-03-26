@@ -195,7 +195,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
@@ -205,7 +205,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Base0["object"]--&gt;Type
+	Base0["Object"]--&gt;Type
 	Type["JMeterAliases"]
 class Type type-node
 
@@ -281,6 +281,47 @@ class Type type-node
 								<td>
 									<div>
             Runs JMeter with the -t parameter with the test file
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.JMeter/JMeterAliases/F033614C">JMeterInstallForJmx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Installs all plugins that are needed to run the given jmx file.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.JMeter/JMeterAliases/B5271093">JMeterInstallPlugin<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Installs the given plugin to the JMeter package.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.JMeter/JMeterAliases/2BF20AA9">J<wbr>Meter<wbr>Run<wbr>Plugin<wbr>Manager<wbr>Command<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Allows to run any command with the JMeter Plugin Manager Command Line.
+            See https://jmeter-plugins.org/wiki/PluginsManagerAutomated/ for details.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.JMeter/JMeterAliases/C30A5B55">J<wbr>Meter<wbr>Uninstall<wbr>Plugin<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Uninstalls the given plugin from the JMeter package.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
