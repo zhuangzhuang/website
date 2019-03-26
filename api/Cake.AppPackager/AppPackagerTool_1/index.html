@@ -208,12 +208,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
-											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
-											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
 											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
 											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
 									</ul>
 								</dd>			
 							
@@ -225,18 +225,18 @@
 	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
 	Type["AppPackagerTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["AppUnbundler"]
-	click Derived0 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
-	Type--&gt;Derived1["AppEncrypter"]
-	click Derived1 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
-	Type--&gt;Derived2["AppDecrypter"]
-	click Derived2 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
-	Type--&gt;Derived3["AppUnpacker"]
-	click Derived3 "/api/Cake.AppPackager.Unpack/AppUnpacker"
-	Type--&gt;Derived4["AppPacker"]
-	click Derived4 "/api/Cake.AppPackager.Pack/AppPacker"
-	Type--&gt;Derived5["AppBundler"]
-	click Derived5 "/api/Cake.AppPackager.Bundle/AppBundler"
+	Type--&gt;Derived0["AppUnpacker"]
+	click Derived0 "/api/Cake.AppPackager.Unpack/AppUnpacker"
+	Type--&gt;Derived1["AppPacker"]
+	click Derived1 "/api/Cake.AppPackager.Pack/AppPacker"
+	Type--&gt;Derived2["AppUnbundler"]
+	click Derived2 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
+	Type--&gt;Derived3["AppDecrypter"]
+	click Derived3 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
+	Type--&gt;Derived4["AppBundler"]
+	click Derived4 "/api/Cake.AppPackager.Bundle/AppBundler"
+	Type--&gt;Derived5["AppEncrypter"]
+	click Derived5 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
 
 						</div>
 					</div>
@@ -349,24 +349,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -393,24 +393,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;AppPackagerTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

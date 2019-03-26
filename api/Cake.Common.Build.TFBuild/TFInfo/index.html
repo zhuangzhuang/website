@@ -197,10 +197,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo">T<wbr>F<wbr>Build<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo">TFBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>								
 									</ul>
@@ -214,14 +214,14 @@
 	Base0["object"]--&gt;Type
 	Type["TFInfo"]
 class Type type-node
-	Type--&gt;Derived0["TFBuildDefinitionInfo"]
-	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
-	Type--&gt;Derived1["TFBuildAgentInfo"]
-	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
-	Type--&gt;Derived2["TFBuildEnvironmentInfo"]
-	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
-	Type--&gt;Derived3["TFBuildRepositoryInfo"]
-	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo"
+	Type--&gt;Derived0["TFBuildAgentInfo"]
+	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
+	Type--&gt;Derived1["TFBuildEnvironmentInfo"]
+	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Type--&gt;Derived2["TFBuildRepositoryInfo"]
+	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo"
+	Type--&gt;Derived3["TFBuildDefinitionInfo"]
+	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
 	Type--&gt;Derived4["TFBuildInfo"]
 	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
 	Type--&gt;Derived5["TFBuildTeamProjectInfo"]
@@ -339,24 +339,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;TFInfo&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;TFInfo&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;TFInfo&gt;<wbr><wbr>(TFInfo[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;TFInfo&gt;<wbr><wbr>(TFInfo[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -383,24 +383,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

@@ -82,6 +82,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -193,18 +194,6 @@
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
              Delivers the specified deliver configuration.
-             <example>
-                 <code class="cs">
-                     var configuration = new FastlaneDeliverConfiguration
-                     {
-                         CertificateType = CertificateType.Development,
-                         AppIdentifier = "com.fastlane.cake",
-                         ForceForNewDevices = true
-                     };
-            
-                     Fastlane.Deliver(configuration);
-                 </code>
-             </example>
              </div>
 
 		<div class="panel panel-default">
@@ -226,6 +215,17 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public void Deliver(FastlaneDeliverConfiguration deliverConfiguration = null)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+                 <pre><code class="cs">         var configuration = new FastlaneDeliverConfiguration
+         {
+             CertificateType = CertificateType.Development,
+             AppIdentifier = "com.fastlane.cake",
+             ForceForNewDevices = true
+         };
+
+         Fastlane.Deliver(configuration);</code></pre>
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>

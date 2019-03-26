@@ -206,11 +206,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings">Mk<wbr>Docs<wbr>Gh<wbr>Deploy<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.MkDocs.New/MkDocsNewSettings">MkDocsNewSettings</a></li>								
 											<li><a href="/api/Cake.MkDocs.Version/MkDocsVersionSettings">Mk<wbr>Docs<wbr>Version<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeSettings">MkDocsServeSettings</a></li>								
+											<li><a href="/api/Cake.MkDocs.New/MkDocsNewSettings">MkDocsNewSettings</a></li>								
 											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildSettings">MkDocsBuildSettings</a></li>								
+											<li><a href="/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings">Mk<wbr>Docs<wbr>Gh<wbr>Deploy<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeSettings">MkDocsServeSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -222,16 +222,16 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["MkDocsSettings"]
 class Type type-node
-	Type--&gt;Derived0["MkDocsGhDeploySettings"]
-	click Derived0 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings"
+	Type--&gt;Derived0["MkDocsVersionSettings"]
+	click Derived0 "/api/Cake.MkDocs.Version/MkDocsVersionSettings"
 	Type--&gt;Derived1["MkDocsNewSettings"]
 	click Derived1 "/api/Cake.MkDocs.New/MkDocsNewSettings"
-	Type--&gt;Derived2["MkDocsVersionSettings"]
-	click Derived2 "/api/Cake.MkDocs.Version/MkDocsVersionSettings"
-	Type--&gt;Derived3["MkDocsServeSettings"]
-	click Derived3 "/api/Cake.MkDocs.Serve/MkDocsServeSettings"
-	Type--&gt;Derived4["MkDocsBuildSettings"]
-	click Derived4 "/api/Cake.MkDocs.Build/MkDocsBuildSettings"
+	Type--&gt;Derived2["MkDocsBuildSettings"]
+	click Derived2 "/api/Cake.MkDocs.Build/MkDocsBuildSettings"
+	Type--&gt;Derived3["MkDocsGhDeploySettings"]
+	click Derived3 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeploySettings"
+	Type--&gt;Derived4["MkDocsServeSettings"]
+	click Derived4 "/api/Cake.MkDocs.Serve/MkDocsServeSettings"
 
 						</div>
 					</div>
@@ -318,24 +318,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(MkDocsSettings[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(MkDocsSettings[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -362,24 +362,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;<wbr>Mk<wbr>Docs<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

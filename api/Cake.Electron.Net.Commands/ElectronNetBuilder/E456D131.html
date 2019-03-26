@@ -151,10 +151,10 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
 				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/ABF22DA5">ElectronNetBuild<wbr>(ICakeContext, <wbr>Electron<wbr>Net<wbr>Build<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/8D1EFE02">ElectronNetBuild<wbr>(ICakeContext, <wbr>string, <wbr>ElectronTarget, <wbr>DotNetConfig, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/D98EF8F8">ElectronNetBuild<wbr>(ICakeContext, <wbr>string, <wbr>ElectronTarget, <wbr>Nullable<wbr>&lt;DotNetConfig&gt;<wbr>, <wbr>string[])<wbr></a></li>
 				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/D35BE442">ElectronNetBuild<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string[])<wbr></a></li>
 				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/B08A3F01">Electron<wbr>Net<wbr>Build<wbr>Custom<wbr>(ICakeContext, <wbr>Electron<wbr>Net<wbr>Custom<wbr>Build<wbr>Settings)<wbr></a></li>
-				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/E28C5D05">Electron<wbr>Net<wbr>Build<wbr>Custom<wbr>(ICakeContext, <wbr>string, <wbr>Electron<wbr>Target<wbr>Custom, <wbr>string, <wbr>DotNetConfig, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/971217C2">Electron<wbr>Net<wbr>Build<wbr>Custom<wbr>(ICakeContext, <wbr>string, <wbr>Electron<wbr>Target<wbr>Custom, <wbr>string, <wbr>Nullable<wbr>&lt;DotNetConfig&gt;<wbr>, <wbr>string[])<wbr></a></li>
 				<li class="selected"><a href="/api/Cake.Electron.Net.Commands/ElectronNetBuilder/E456D131">Electron<wbr>Net<wbr>Build<wbr>Custom<wbr>(ICakeContext, <wbr>string, <wbr>string, <wbr>string, <wbr>string, <wbr>string[])<wbr></a></li>
 
 
@@ -200,7 +200,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static int ElectronNetBuildCustom(this ICakeContext context, string workingDirectory, string electronTarget, string electronArch, string dotNetConfig = "Release", params string[] electronParams)</code></pre>
+	<pre><code>public static int ElectronNetBuildCustom(this ICakeContext context, string workingDirectory, string electronTarget, string electronArch = null, string dotNetConfig = null, params string[] electronParams)</code></pre>
 
 
 

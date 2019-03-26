@@ -195,12 +195,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo">BambooPlanInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -212,18 +212,18 @@
 	Base0["object"]--&gt;Type
 	Type["BambooInfo"]
 class Type type-node
-	Type--&gt;Derived0["BambooCommitInfo"]
-	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
-	Type--&gt;Derived1["BambooBuildInfo"]
-	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
-	Type--&gt;Derived2["BambooEnvironmentInfo"]
-	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
-	Type--&gt;Derived3["BambooRepositoryInfo"]
-	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
-	Type--&gt;Derived4["BambooPlanInfo"]
-	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
-	Type--&gt;Derived5["BambooCustomBuildInfo"]
-	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Type--&gt;Derived0["BambooBuildInfo"]
+	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
+	Type--&gt;Derived1["BambooPlanInfo"]
+	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
+	Type--&gt;Derived2["BambooCustomBuildInfo"]
+	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Type--&gt;Derived3["BambooCommitInfo"]
+	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
+	Type--&gt;Derived4["BambooRepositoryInfo"]
+	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
+	Type--&gt;Derived5["BambooEnvironmentInfo"]
+	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
 
 						</div>
 					</div>
@@ -319,24 +319,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;BambooInfo&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;BambooInfo&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;BambooInfo&gt;<wbr><wbr>(BambooInfo[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;BambooInfo&gt;<wbr><wbr>(BambooInfo[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -363,24 +363,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

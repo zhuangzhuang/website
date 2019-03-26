@@ -178,6 +178,7 @@
 				<li><a href="/api/Cake.Docker/DockerContainerCreateSettings">Docker<wbr>Container<wbr>Create<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerContainerExecSettings">Docker<wbr>Container<wbr>Exec<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerContainerLogsSettings">Docker<wbr>Container<wbr>Logs<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Docker/DockerContainerPsSettings">Docker<wbr>Container<wbr>Ps<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerContainerRmSettings">Docker<wbr>Container<wbr>Rm<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerContainerRunSettings">Docker<wbr>Container<wbr>Run<wbr>Settings</a></li>
 				<li><a href="/api/Cake.Docker/DockerContainerStartSettings">Docker<wbr>Container<wbr>Start<wbr>Settings</a></li>
@@ -257,18 +258,18 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeLogsSettings">Docker<wbr>Compose<wbr>Logs<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeDownSettings">Docker<wbr>Compose<wbr>Down<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeExecSettings">Docker<wbr>Compose<wbr>Exec<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeStopSettings">Docker<wbr>Compose<wbr>Stop<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeLogsSettings">Docker<wbr>Compose<wbr>Logs<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -282,30 +283,30 @@
 	Base1["ToolSettings"]--&gt;Base0
 	Type["DockerComposeSettings"]
 class Type type-node
-	Type--&gt;Derived0["DockerComposePullSettings"]
-	click Derived0 "/api/Cake.Docker/DockerComposePullSettings"
-	Type--&gt;Derived1["DockerComposeCreateSettings"]
-	click Derived1 "/api/Cake.Docker/DockerComposeCreateSettings"
-	Type--&gt;Derived2["DockerComposeRmSettings"]
-	click Derived2 "/api/Cake.Docker/DockerComposeRmSettings"
-	Type--&gt;Derived3["DockerComposeKillSettings"]
-	click Derived3 "/api/Cake.Docker/DockerComposeKillSettings"
-	Type--&gt;Derived4["DockerComposeRestartSettings"]
-	click Derived4 "/api/Cake.Docker/DockerComposeRestartSettings"
-	Type--&gt;Derived5["DockerComposeLogsSettings"]
-	click Derived5 "/api/Cake.Docker/DockerComposeLogsSettings"
-	Type--&gt;Derived6["DockerComposeDownSettings"]
-	click Derived6 "/api/Cake.Docker/DockerComposeDownSettings"
-	Type--&gt;Derived7["DockerComposeUpSettings"]
-	click Derived7 "/api/Cake.Docker/DockerComposeUpSettings"
-	Type--&gt;Derived8["DockerComposeBuildSettings"]
-	click Derived8 "/api/Cake.Docker/DockerComposeBuildSettings"
-	Type--&gt;Derived9["DockerComposeExecSettings"]
-	click Derived9 "/api/Cake.Docker/DockerComposeExecSettings"
-	Type--&gt;Derived10["DockerComposeRunSettings"]
-	click Derived10 "/api/Cake.Docker/DockerComposeRunSettings"
-	Type--&gt;Derived11["DockerComposeStopSettings"]
-	click Derived11 "/api/Cake.Docker/DockerComposeStopSettings"
+	Type--&gt;Derived0["DockerComposeDownSettings"]
+	click Derived0 "/api/Cake.Docker/DockerComposeDownSettings"
+	Type--&gt;Derived1["DockerComposeUpSettings"]
+	click Derived1 "/api/Cake.Docker/DockerComposeUpSettings"
+	Type--&gt;Derived2["DockerComposeCreateSettings"]
+	click Derived2 "/api/Cake.Docker/DockerComposeCreateSettings"
+	Type--&gt;Derived3["DockerComposeExecSettings"]
+	click Derived3 "/api/Cake.Docker/DockerComposeExecSettings"
+	Type--&gt;Derived4["DockerComposeStopSettings"]
+	click Derived4 "/api/Cake.Docker/DockerComposeStopSettings"
+	Type--&gt;Derived5["DockerComposePullSettings"]
+	click Derived5 "/api/Cake.Docker/DockerComposePullSettings"
+	Type--&gt;Derived6["DockerComposeKillSettings"]
+	click Derived6 "/api/Cake.Docker/DockerComposeKillSettings"
+	Type--&gt;Derived7["DockerComposeBuildSettings"]
+	click Derived7 "/api/Cake.Docker/DockerComposeBuildSettings"
+	Type--&gt;Derived8["DockerComposeLogsSettings"]
+	click Derived8 "/api/Cake.Docker/DockerComposeLogsSettings"
+	Type--&gt;Derived9["DockerComposeRunSettings"]
+	click Derived9 "/api/Cake.Docker/DockerComposeRunSettings"
+	Type--&gt;Derived10["DockerComposeRmSettings"]
+	click Derived10 "/api/Cake.Docker/DockerComposeRmSettings"
+	Type--&gt;Derived11["DockerComposeRestartSettings"]
+	click Derived11 "/api/Cake.Docker/DockerComposeRestartSettings"
 
 						</div>
 					</div>
@@ -533,24 +534,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(<wbr>Docker<wbr>Compose<wbr>Settings[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(<wbr>Docker<wbr>Compose<wbr>Settings[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -577,24 +578,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

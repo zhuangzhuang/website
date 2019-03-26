@@ -205,8 +205,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Openshift.Delete/OpenshiftDeleterSettings">Openshift<wbr>Deleter<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Openshift.Login/OpenshiftLoginSettings">Openshift<wbr>Login<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -219,10 +219,10 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["OpenshiftSettings"]
 class Type type-node
-	Type--&gt;Derived0["OpenshiftBuildStarterSettings"]
-	click Derived0 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings"
-	Type--&gt;Derived1["OpenshiftDeleterSettings"]
-	click Derived1 "/api/Cake.Openshift.Delete/OpenshiftDeleterSettings"
+	Type--&gt;Derived0["OpenshiftDeleterSettings"]
+	click Derived0 "/api/Cake.Openshift.Delete/OpenshiftDeleterSettings"
+	Type--&gt;Derived1["OpenshiftBuildStarterSettings"]
+	click Derived1 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings"
 	Type--&gt;Derived2["OpenshiftLoginSettings"]
 	click Derived2 "/api/Cake.Openshift.Login/OpenshiftLoginSettings"
 
@@ -300,24 +300,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(<wbr>Openshift<wbr>Settings[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(<wbr>Openshift<wbr>Settings[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -344,24 +344,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

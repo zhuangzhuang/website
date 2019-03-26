@@ -220,14 +220,14 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apigee/DeleteKeyValueMapSettings">Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/ImportProxySettings">ImportProxySettings</a></li>								
 											<li><a href="/api/Cake.Apigee/DeleteApiProxyRevisionSettings">Delete<wbr>Api<wbr>Proxy<wbr>Revision<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/DeployProxySettings">DeployProxySettings</a></li>								
-											<li><a href="/api/Cake.Apigee/ImportProxySettings">ImportProxySettings</a></li>								
-											<li><a href="/api/Cake.Apigee/InstallNodePackagedModulesSettings">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apigee/ListKeyValueMapsSettings">List<wbr>Key<wbr>Value<wbr>Maps<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apigee/GetApiProxySettings">GetApiProxySettings</a></li>								
 											<li><a href="/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings">Delete<wbr>All<wbr>Undeployed<wbr>Api<wbr>Proxy<wbr>Revisions<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/DeleteKeyValueMapSettings">Delete<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/InstallNodePackagedModulesSettings">Install<wbr>Node<wbr>Packaged<wbr>Modules<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apigee/GetApiProxySettings">GetApiProxySettings</a></li>								
 											<li><a href="/api/Cake.Apigee/CreateKeyValueMapSettings">Create<wbr>Key<wbr>Value<wbr>Map<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -242,22 +242,22 @@
 	click Interface0 "/api/Cake.Apigee/ICredentialSettings"
 	Type["BaseSettings"]
 class Type type-node
-	Type--&gt;Derived0["DeleteKeyValueMapSettings"]
-	click Derived0 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
+	Type--&gt;Derived0["ImportProxySettings"]
+	click Derived0 "/api/Cake.Apigee/ImportProxySettings"
 	Type--&gt;Derived1["DeleteApiProxyRevisionSettings"]
 	click Derived1 "/api/Cake.Apigee/DeleteApiProxyRevisionSettings"
 	Type--&gt;Derived2["DeployProxySettings"]
 	click Derived2 "/api/Cake.Apigee/DeployProxySettings"
-	Type--&gt;Derived3["ImportProxySettings"]
-	click Derived3 "/api/Cake.Apigee/ImportProxySettings"
-	Type--&gt;Derived4["InstallNodePackagedModulesSettings"]
-	click Derived4 "/api/Cake.Apigee/InstallNodePackagedModulesSettings"
-	Type--&gt;Derived5["ListKeyValueMapsSettings"]
-	click Derived5 "/api/Cake.Apigee/ListKeyValueMapsSettings"
-	Type--&gt;Derived6["GetApiProxySettings"]
-	click Derived6 "/api/Cake.Apigee/GetApiProxySettings"
-	Type--&gt;Derived7["DeleteAllUndeployedApiProxyRevisionsSettings"]
-	click Derived7 "/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings"
+	Type--&gt;Derived3["ListKeyValueMapsSettings"]
+	click Derived3 "/api/Cake.Apigee/ListKeyValueMapsSettings"
+	Type--&gt;Derived4["DeleteAllUndeployedApiProxyRevisionsSettings"]
+	click Derived4 "/api/Cake.Apigee/DeleteAllUndeployedApiProxyRevisionsSettings"
+	Type--&gt;Derived5["DeleteKeyValueMapSettings"]
+	click Derived5 "/api/Cake.Apigee/DeleteKeyValueMapSettings"
+	Type--&gt;Derived6["InstallNodePackagedModulesSettings"]
+	click Derived6 "/api/Cake.Apigee/InstallNodePackagedModulesSettings"
+	Type--&gt;Derived7["GetApiProxySettings"]
+	click Derived7 "/api/Cake.Apigee/GetApiProxySettings"
 	Type--&gt;Derived8["CreateKeyValueMapSettings"]
 	click Derived8 "/api/Cake.Apigee/CreateKeyValueMapSettings"
 
@@ -340,24 +340,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;BaseSettings&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;BaseSettings&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;BaseSettings&gt;<wbr><wbr>(BaseSettings[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;BaseSettings&gt;<wbr><wbr>(BaseSettings[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -384,24 +384,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;BaseSettings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;BaseSettings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;BaseSettings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;BaseSettings&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>

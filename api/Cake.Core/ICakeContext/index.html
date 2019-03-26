@@ -246,16 +246,16 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
-											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
-											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -265,26 +265,26 @@
 							graph TD
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["TaskTeardownContext"]
-	click Implementing0 "/api/Cake.Core/TaskTeardownContext"
-	Type-.-&gt;Implementing1["CakeContext"]
-	click Implementing1 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing2["SetupContext"]
-	click Implementing2 "/api/Cake.Core/SetupContext"
-	Type-.-&gt;Implementing3["ITeardownContext"]
-	click Implementing3 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing4["ITaskTeardownContext"]
-	click Implementing4 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing5["TaskSetupContext"]
-	click Implementing5 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing6["ITaskSetupContext"]
-	click Implementing6 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing0["TaskSetupContext"]
+	click Implementing0 "/api/Cake.Core/TaskSetupContext"
+	Type-.-&gt;Implementing1["TaskTeardownContext"]
+	click Implementing1 "/api/Cake.Core/TaskTeardownContext"
+	Type-.-&gt;Implementing2["TeardownContext"]
+	click Implementing2 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing3["CakeContext"]
+	click Implementing3 "/api/Cake.Core/CakeContext"
+	Type-.-&gt;Implementing4["ISetupContext"]
+	click Implementing4 "/api/Cake.Core/ISetupContext"
+	Type-.-&gt;Implementing5["ITaskSetupContext"]
+	click Implementing5 "/api/Cake.Core/ITaskSetupContext"
+	Type-.-&gt;Implementing6["SetupContext"]
+	click Implementing6 "/api/Cake.Core/SetupContext"
 	Type-.-&gt;Implementing7["CakeContextAdapter"]
 	click Implementing7 "/api/Cake.Core/CakeContextAdapter"
-	Type-.-&gt;Implementing8["ISetupContext"]
-	click Implementing8 "/api/Cake.Core/ISetupContext"
-	Type-.-&gt;Implementing9["TeardownContext"]
-	click Implementing9 "/api/Cake.Core/TeardownContext"
+	Type-.-&gt;Implementing8["ITaskTeardownContext"]
+	click Implementing8 "/api/Cake.Core/ITaskTeardownContext"
+	Type-.-&gt;Implementing9["ITeardownContext"]
+	click Implementing9 "/api/Cake.Core/ITeardownContext"
 
 						</div>
 					</div>
@@ -1814,13 +1814,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/LoggingExtensions/D2217BAF">Dump<wbr>&lt;ICakeContext&gt;<wbr><wbr>()<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;ICakeContext&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>
              Get a basic string representation of specified object.
              </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/LoggingExtensions">LoggingExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions">LoggingExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -2704,13 +2704,13 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/EnumerableExtensions/7EF3F1C2">IsIn<wbr>&lt;ICakeContext&gt;<wbr><wbr>(ICakeContext[])<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions/0B258B50">IsIn<wbr>&lt;ICakeContext&gt;<wbr><wbr>(ICakeContext[])<wbr></a></td>
 								<td>bool</td>
 								<td>
 									<div>
             Checks if the source is contained in a list
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.EnumerableExtensions/EnumerableExtensions">EnumerableExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
@@ -3968,24 +3968,24 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/1A01586C">ThrowIfNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/EEA227A1">ThrowIfNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Incubator/AssertExtensions/32D7598B">ThrowIfNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions/5079D469">ThrowIfNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string, <wbr>string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Throws a <code class="cs">System.ArgumentNullException</code> with a specific message if the value is null, otherwise returns the value
             </div>
-										<div><small><em>From <a href="/api/Cake.Incubator/AssertExtensions">AssertExtensions</a></em></small></div>
+										<div><small><em>From <a href="/api/Cake.Incubator.AssertExtensions/AssertExtensions">AssertExtensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Incubator addin</em></small></div>
 								</td>
 							</tr>
