@@ -212,8 +212,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException">Tfs<wbr>Pull<wbr>Request<wbr>Not<wbr>Found<wbr>Exception</a></li>								
 											<li><a href="/api/Cake.Tfs.PullRequest/TfsBranchNotFoundException">Tfs<wbr>Branch<wbr>Not<wbr>Found<wbr>Exception</a></li>								
+											<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException">Tfs<wbr>Pull<wbr>Request<wbr>Not<wbr>Found<wbr>Exception</a></li>								
 									</ul>
 								</dd>			
 							
@@ -228,10 +228,10 @@
 	Interface1["_Exception"]-.-&gt;Type
 	Type["TfsException"]
 class Type type-node
-	Type--&gt;Derived0["TfsPullRequestNotFoundException"]
-	click Derived0 "/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException"
-	Type--&gt;Derived1["TfsBranchNotFoundException"]
-	click Derived1 "/api/Cake.Tfs.PullRequest/TfsBranchNotFoundException"
+	Type--&gt;Derived0["TfsBranchNotFoundException"]
+	click Derived0 "/api/Cake.Tfs.PullRequest/TfsBranchNotFoundException"
+	Type--&gt;Derived1["TfsPullRequestNotFoundException"]
+	click Derived1 "/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException"
 
 						</div>
 					</div>
@@ -326,17 +326,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TfsException&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TfsException&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -345,6 +334,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TfsException&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

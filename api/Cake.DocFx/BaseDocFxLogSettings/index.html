@@ -212,10 +212,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.DocFx.Merge/DocFxMergeSettings">DocFxMergeSettings</a></li>								
-											<li><a href="/api/Cake.DocFx.Build/DocFxBuildSettings">DocFxBuildSettings</a></li>								
-											<li><a href="/api/Cake.DocFx.Metadata/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.DocFx.Pdf/DocFxPdfSettings">DocFxPdfSettings</a></li>								
+											<li><a href="/api/Cake.DocFx.Metadata/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.DocFx.Build/DocFxBuildSettings">DocFxBuildSettings</a></li>								
+											<li><a href="/api/Cake.DocFx.Merge/DocFxMergeSettings">DocFxMergeSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -227,14 +227,14 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["BaseDocFxLogSettings"]
 class Type type-node
-	Type--&gt;Derived0["DocFxMergeSettings"]
-	click Derived0 "/api/Cake.DocFx.Merge/DocFxMergeSettings"
-	Type--&gt;Derived1["DocFxBuildSettings"]
-	click Derived1 "/api/Cake.DocFx.Build/DocFxBuildSettings"
-	Type--&gt;Derived2["DocFxMetadataSettings"]
-	click Derived2 "/api/Cake.DocFx.Metadata/DocFxMetadataSettings"
-	Type--&gt;Derived3["DocFxPdfSettings"]
-	click Derived3 "/api/Cake.DocFx.Pdf/DocFxPdfSettings"
+	Type--&gt;Derived0["DocFxPdfSettings"]
+	click Derived0 "/api/Cake.DocFx.Pdf/DocFxPdfSettings"
+	Type--&gt;Derived1["DocFxMetadataSettings"]
+	click Derived1 "/api/Cake.DocFx.Metadata/DocFxMetadataSettings"
+	Type--&gt;Derived2["DocFxBuildSettings"]
+	click Derived2 "/api/Cake.DocFx.Build/DocFxBuildSettings"
+	Type--&gt;Derived3["DocFxMergeSettings"]
+	click Derived3 "/api/Cake.DocFx.Merge/DocFxMergeSettings"
 
 						</div>
 					</div>
@@ -368,17 +368,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Doc<wbr>Fx<wbr>Log<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Doc<wbr>Fx<wbr>Log<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -387,6 +376,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Doc<wbr>Fx<wbr>Log<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
