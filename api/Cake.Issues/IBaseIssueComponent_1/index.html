@@ -223,23 +223,23 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></li>								
-											<li><a href="/api/Cake.Issues.MsBuild/MsBuildIssuesProvider">Ms<wbr>Build<wbr>Issues<wbr>Provider</a></li>								
-											<li><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TSettings">TSettings</a>, <wbr><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TIssueProvider">TIssueProvider</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>System</a></li>								
 											<li><a href="/api/Cake.Issues.Reporting/IIssueReportFormat">IIssueReportFormat</a></li>								
-											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesProvider">EsLintIssuesProvider</a></li>								
-											<li><a href="/api/Cake.Issues.PullRequests/IPullRequestSystem">IPullRequestSystem</a></li>								
-											<li><a href="/api/Cake.Issues.Testing/FakeIssueProvider">FakeIssueProvider</a></li>								
-											<li><a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1">Base<wbr>Configurable<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Issues.MsBuild/MsBuildIssuesProvider">Ms<wbr>Build<wbr>Issues<wbr>Provider</a></li>								
 											<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider">Markdownlint<wbr>Issues<wbr>Provider</a></li>								
-											<li><a href="/api/Cake.Issues.PullRequests/BasePullRequestSystem">Base<wbr>Pull<wbr>Request<wbr>System</a></li>								
+											<li><a href="/api/Cake.Issues.Testing/FakeIssueComponent">FakeIssueComponent</a></li>								
+											<li><a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1">Base<wbr>Configurable<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1#typeparam-T">T</a>&gt;<wbr></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeConfigurableIssueProvider">Fake<wbr>Configurable<wbr>Issue<wbr>Provider</a></li>								
+											<li><a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/BasePullRequestSystem">Base<wbr>Pull<wbr>Request<wbr>System</a></li>								
 											<li><a href="/api/Cake.Issues/IIssueProvider">IIssueProvider</a></li>								
-											<li><a href="/api/Cake.Issues.Testing/FakeIssueComponent">FakeIssueComponent</a></li>								
+											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesProvider">EsLintIssuesProvider</a></li>								
+											<li><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TSettings">TSettings</a>, <wbr><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TIssueProvider">TIssueProvider</a>&gt;<wbr></li>								
 											<li><a href="/api/Cake.Issues.Reporting/IssueReportFormat">IssueReportFormat</a></li>								
+											<li><a href="/api/Cake.Issues.PullRequests/IPullRequestSystem">IPullRequestSystem</a></li>								
 											<li><a href="/api/Cake.Issues/BaseIssueComponent_1">BaseIssueComponent</a><wbr>&lt;<a href="/api/Cake.Issues/BaseIssueComponent_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem">App<wbr>Veyor<wbr>Pull<wbr>Request<wbr>System</a></li>								
+											<li><a href="/api/Cake.Issues.Testing/FakeIssueProvider">FakeIssueProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -249,40 +249,40 @@
 							graph TD
 	Type["IBaseIssueComponent&lt;T&gt;"]
 class Type type-node
-	Type-.-&gt;Implementing0["BaseIssueProvider"]
-	click Implementing0 "/api/Cake.Issues/BaseIssueProvider"
+	Type-.-&gt;Implementing0["IIssueReportFormat"]
+	click Implementing0 "/api/Cake.Issues.Reporting/IIssueReportFormat"
 	Type-.-&gt;Implementing1["MsBuildIssuesProvider"]
 	click Implementing1 "/api/Cake.Issues.MsBuild/MsBuildIssuesProvider"
-	Type-.-&gt;Implementing2["BaseMultiFormatIssueProvider&lt;TSettings, TIssueProvider&gt;"]
-	click Implementing2 "/api/Cake.Issues/BaseMultiFormatIssueProvider_2"
-	Type-.-&gt;Implementing3["AppVeyorPullRequestSystem"]
-	click Implementing3 "/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem"
-	Type-.-&gt;Implementing4["IIssueReportFormat"]
-	click Implementing4 "/api/Cake.Issues.Reporting/IIssueReportFormat"
-	Type-.-&gt;Implementing5["EsLintIssuesProvider"]
-	click Implementing5 "/api/Cake.Issues.EsLint/EsLintIssuesProvider"
-	Type-.-&gt;Implementing6["IPullRequestSystem"]
-	click Implementing6 "/api/Cake.Issues.PullRequests/IPullRequestSystem"
-	Type-.-&gt;Implementing7["FakeIssueProvider"]
-	click Implementing7 "/api/Cake.Issues.Testing/FakeIssueProvider"
-	Type-.-&gt;Implementing8["BaseConfigurableIssueProvider&lt;T&gt;"]
-	click Implementing8 "/api/Cake.Issues/BaseConfigurableIssueProvider_1"
-	Type-.-&gt;Implementing9["MarkdownlintIssuesProvider"]
-	click Implementing9 "/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider"
-	Type-.-&gt;Implementing10["BasePullRequestSystem"]
-	click Implementing10 "/api/Cake.Issues.PullRequests/BasePullRequestSystem"
-	Type-.-&gt;Implementing11["FakeMultiFormatIssueProvider"]
-	click Implementing11 "/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider"
-	Type-.-&gt;Implementing12["FakeConfigurableIssueProvider"]
-	click Implementing12 "/api/Cake.Issues.Testing/FakeConfigurableIssueProvider"
-	Type-.-&gt;Implementing13["IIssueProvider"]
-	click Implementing13 "/api/Cake.Issues/IIssueProvider"
-	Type-.-&gt;Implementing14["FakeIssueComponent"]
-	click Implementing14 "/api/Cake.Issues.Testing/FakeIssueComponent"
-	Type-.-&gt;Implementing15["IssueReportFormat"]
-	click Implementing15 "/api/Cake.Issues.Reporting/IssueReportFormat"
-	Type-.-&gt;Implementing16["BaseIssueComponent&lt;T&gt;"]
-	click Implementing16 "/api/Cake.Issues/BaseIssueComponent_1"
+	Type-.-&gt;Implementing2["MarkdownlintIssuesProvider"]
+	click Implementing2 "/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider"
+	Type-.-&gt;Implementing3["FakeIssueComponent"]
+	click Implementing3 "/api/Cake.Issues.Testing/FakeIssueComponent"
+	Type-.-&gt;Implementing4["BaseConfigurableIssueProvider&lt;T&gt;"]
+	click Implementing4 "/api/Cake.Issues/BaseConfigurableIssueProvider_1"
+	Type-.-&gt;Implementing5["FakeMultiFormatIssueProvider"]
+	click Implementing5 "/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider"
+	Type-.-&gt;Implementing6["FakeConfigurableIssueProvider"]
+	click Implementing6 "/api/Cake.Issues.Testing/FakeConfigurableIssueProvider"
+	Type-.-&gt;Implementing7["BaseIssueProvider"]
+	click Implementing7 "/api/Cake.Issues/BaseIssueProvider"
+	Type-.-&gt;Implementing8["BasePullRequestSystem"]
+	click Implementing8 "/api/Cake.Issues.PullRequests/BasePullRequestSystem"
+	Type-.-&gt;Implementing9["IIssueProvider"]
+	click Implementing9 "/api/Cake.Issues/IIssueProvider"
+	Type-.-&gt;Implementing10["EsLintIssuesProvider"]
+	click Implementing10 "/api/Cake.Issues.EsLint/EsLintIssuesProvider"
+	Type-.-&gt;Implementing11["BaseMultiFormatIssueProvider&lt;TSettings, TIssueProvider&gt;"]
+	click Implementing11 "/api/Cake.Issues/BaseMultiFormatIssueProvider_2"
+	Type-.-&gt;Implementing12["IssueReportFormat"]
+	click Implementing12 "/api/Cake.Issues.Reporting/IssueReportFormat"
+	Type-.-&gt;Implementing13["IPullRequestSystem"]
+	click Implementing13 "/api/Cake.Issues.PullRequests/IPullRequestSystem"
+	Type-.-&gt;Implementing14["BaseIssueComponent&lt;T&gt;"]
+	click Implementing14 "/api/Cake.Issues/BaseIssueComponent_1"
+	Type-.-&gt;Implementing15["AppVeyorPullRequestSystem"]
+	click Implementing15 "/api/Cake.Issues.PullRequests.AppVeyor/AppVeyorPullRequestSystem"
+	Type-.-&gt;Implementing16["FakeIssueProvider"]
+	click Implementing16 "/api/Cake.Issues.Testing/FakeIssueProvider"
 
 						</div>
 					</div>
@@ -388,17 +388,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -407,6 +396,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Base<wbr>Issue<wbr>Component<wbr>&lt;T&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

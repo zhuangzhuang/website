@@ -282,6 +282,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings/7311EBDC">MSBuildPath</a></td>
+								<td><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></td>
+								<td>
+									<div>
+    Gets or sets the path of MSBuild to use.
+    This setting takes precedence over <code class="cs">-MSBuildVersion</code> and requires NuGet V4 or later.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings/AD8E8732">MSBuildVersion</a></td>
 								<td><a href="/api/Cake.Common.Tools.NuGet/NuGetMSBuildVersion">NuGetMSBuildVersion?</a></td>
 								<td>
@@ -298,6 +308,15 @@ class Type type-node
 								<td>
 									<div>
     Gets or sets a value indicating whether or not to use the machine cache as the first package source.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.NuGet.Restore/NuGetRestoreSettings/0CE2E6B9">NonInteractive</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether or not NuGet suppresses prompts for user input or confirmations.
     </div>
 								</td>
 							</tr>
@@ -419,17 +438,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Nu<wbr>Get<wbr>Restore<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Nu<wbr>Get<wbr>Restore<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -438,6 +446,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Nu<wbr>Get<wbr>Restore<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

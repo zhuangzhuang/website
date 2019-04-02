@@ -407,6 +407,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/32C4D48E">DiagnosticVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to diagnostic and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Incubator.LoggingExtensions/LoggingExtensions/026DA497">Dump<wbr>&lt;FakeLog&gt;<wbr><wbr>()<wbr></a></td>
 								<td>string</td>
 								<td>
@@ -553,14 +563,23 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;FakeLog&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/B822B8F9">MinimalVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
 								<td>
 									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+    Sets the log verbosity to minimal and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/64224BEE">NormalVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to normal and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -572,6 +591,27 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;FakeLog&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/2AD6B986">QuietVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to quiet and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -659,6 +699,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/0CAA9261">VerboseVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to verbose and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/9CAF49C8">Warning<wbr>(LogAction)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -716,6 +766,16 @@ class Type type-node
 								<td>
 									<div>
     Writes a warning message to the log using the specified verbosity and format information.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core.Diagnostics/LogExtensions/1DA8CDE8">WithVerbosity<wbr>(Verbosity)<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity as specified and returns a disposable that restores the log verbosity on dispose.
     </div>
 										<div><small><em>From <a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></em></small></div>
 								</td>

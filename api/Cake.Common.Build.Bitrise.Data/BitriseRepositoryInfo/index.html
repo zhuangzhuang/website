@@ -153,6 +153,7 @@
 				<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo">BitriseDirectoryInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo">Bitrise<wbr>Environment<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo">Bitrise<wbr>Provisioning<wbr>Info</a></li>
+				<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitrisePullRequestInfo">Bitrise<wbr>Pull<wbr>Request<wbr>Info</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo">Bitrise<wbr>Repository<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo">BitriseWorkflowInfo</a></li>
 
@@ -262,7 +263,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the git branch.
+    Gets the Git branch.
     </div>
 								</td>
 							</tr>
@@ -271,7 +272,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the git commit.
+    Gets the Git commit.
     </div>
 								</td>
 							</tr>
@@ -280,7 +281,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the git repository URL.
+    Gets the Git repository URL.
     </div>
 								</td>
 							</tr>
@@ -289,7 +290,7 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
-    Gets the git tag.
+    Gets the Git tag.
     </div>
 								</td>
 							</tr>
@@ -324,6 +325,16 @@ class Type type-node
 								<td>
 									<div>
     Gets an environment variable as a <code class="cs"><a href="/">bool</a></code>.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Common.Build.Bitrise/BitriseInfo">BitriseInfo</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.Bitrise/BitriseInfo/53C4EF27">Get<wbr>Environment<wbr>Integer<wbr>(string)<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div>
+    Gets an environment variable as a <code class="cs"><a href="/">int</a></code>.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Common.Build.Bitrise/BitriseInfo">BitriseInfo</a></em></small></div>
 								</td>
@@ -378,17 +389,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Bitrise<wbr>Repository<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Bitrise<wbr>Repository<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -397,6 +397,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Bitrise<wbr>Repository<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

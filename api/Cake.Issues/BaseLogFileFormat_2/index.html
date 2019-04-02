@@ -236,10 +236,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat">Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format</a></li>								
-											<li><a href="/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat">Base<wbr>Es<wbr>Lint<wbr>Log<wbr>File<wbr>Format</a></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeLogFileFormat">FakeLogFileFormat</a></li>								
 											<li><a href="/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat">Base<wbr>Markdownlint<wbr>Log<wbr>File<wbr>Format</a></li>								
+											<li><a href="/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat">Base<wbr>Es<wbr>Lint<wbr>Log<wbr>File<wbr>Format</a></li>								
+											<li><a href="/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat">Base<wbr>Ms<wbr>Build<wbr>Log<wbr>File<wbr>Format</a></li>								
 									</ul>
 								</dd>			
 							
@@ -252,14 +252,14 @@
 	Interface0["ILogFileFormat&lt;TIssueProvider, TSettings&gt;"]-.-&gt;Type
 	Type["BaseLogFileFormat&lt;TIssueProvider, TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["BaseMsBuildLogFileFormat"]
-	click Derived0 "/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat"
-	Type--&gt;Derived1["BaseEsLintLogFileFormat"]
-	click Derived1 "/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat"
-	Type--&gt;Derived2["FakeLogFileFormat"]
-	click Derived2 "/api/Cake.Issues.Testing/FakeLogFileFormat"
-	Type--&gt;Derived3["BaseMarkdownlintLogFileFormat"]
-	click Derived3 "/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat"
+	Type--&gt;Derived0["FakeLogFileFormat"]
+	click Derived0 "/api/Cake.Issues.Testing/FakeLogFileFormat"
+	Type--&gt;Derived1["BaseMarkdownlintLogFileFormat"]
+	click Derived1 "/api/Cake.Issues.Markdownlint/BaseMarkdownlintLogFileFormat"
+	Type--&gt;Derived2["BaseEsLintLogFileFormat"]
+	click Derived2 "/api/Cake.Issues.EsLint/BaseEsLintLogFileFormat"
+	Type--&gt;Derived3["BaseMsBuildLogFileFormat"]
+	click Derived3 "/api/Cake.Issues.MsBuild/BaseMsBuildLogFileFormat"
 
 						</div>
 					</div>
@@ -407,17 +407,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Log<wbr>File<wbr>Format<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Log<wbr>File<wbr>Format<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -426,6 +415,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Log<wbr>File<wbr>Format<wbr>&lt;TIssueProvider, <wbr>TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

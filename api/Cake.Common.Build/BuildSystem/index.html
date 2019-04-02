@@ -149,6 +149,8 @@
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Cake.Common.Build/BuildSystem">BuildSystem</a></li>
 				<li><a href="/api/Cake.Common.Build/BuildSystemAliases">BuildSystemAliases</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Build/BuildProvider">BuildProvider</a></li>
 
 
                     </ul>
@@ -322,11 +324,38 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Build/BuildSystem/FFD8B955">IsPullRequest</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether the current build was started by a pull request.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build/BuildSystem/4E36DFD5">IsRunningOnAppVeyor</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets a value indicating whether the current build is running on AppVeyor.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build/BuildSystem/DAFD8565">Is<wbr>Running<wbr>On<wbr>Azure<wbr>Pipelines</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether this instance is running on Azure Pipelines.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build/BuildSystem/04D816A6">Is<wbr>Running<wbr>On<wbr>Azure<wbr>Pipelines<wbr>Hosted</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether this instance is running on hosted Azure Pipelines.
     </div>
 								</td>
 							</tr>
@@ -457,6 +486,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Build/BuildSystem/C9B2B78C">Provider</a></td>
+								<td><a href="/api/Cake.Common.Build/BuildProvider">BuildProvider</a></td>
+								<td>
+									<div>
+    Gets the current build provider.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build/BuildSystem/01FFE284">TeamCity</a></td>
 								<td><a href="/api/Cake.Common.Build.TeamCity/ITeamCityProvider">ITeamCityProvider</a></td>
 								<td>
@@ -524,17 +562,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;BuildSystem&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BuildSystem&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -543,6 +570,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;BuildSystem&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

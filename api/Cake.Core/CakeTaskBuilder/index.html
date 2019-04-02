@@ -170,6 +170,7 @@
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
+				<li><a href="/api/Cake.Core/Disposable">Disposable</a></li>
 				<li><a href="/api/Cake.Core/ExecutionSettings">ExecutionSettings</a></li>
 				<li><a href="/api/Cake.Core/MethodInfoExtensions">MethodInfoExtensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
@@ -186,6 +187,10 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -203,10 +208,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -424,6 +425,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/751AF584">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(Func<wbr>&lt;ICakeContext, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/E7B32185">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
@@ -436,6 +448,28 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/9C1BB95C">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(Func<wbr>&lt;IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/12A1C803">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(Func<wbr>&lt;TData, <wbr>ICakeContext, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/A3745A40">DoesForEach<wbr>&lt;TData, <wbr>TItem&gt;<wbr><wbr>(Func<wbr>&lt;TData, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TData, <wbr>TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>
@@ -461,6 +495,28 @@ class Type type-node
 								<td>
 									<div>
     Adds an action to be executed foreach item in the list.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/6D0F9D03">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(Func<wbr>&lt;ICakeContext, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TItem, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/75A9481B">DoesForEach<wbr>&lt;TItem&gt;<wbr><wbr>(Func<wbr>&lt;ICakeContext, <wbr>IEnumerable<wbr>&lt;TItem&gt;<wbr>&gt;<wbr>, <wbr>Action<wbr>&lt;TItem&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an action to be executed foreach item returned by the items function.
+    This method will be executed the first time the task is executed.
     </div>
 										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
 								</td>
@@ -570,17 +626,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cake<wbr>Task<wbr>Builder&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Cake<wbr>Task<wbr>Builder&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -589,6 +634,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cake<wbr>Task<wbr>Builder&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -602,7 +658,47 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/936DC704">OnError<wbr>(Action<wbr>&lt;Exception, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an error handler to be executed if an exception occurs in the task.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/EA2C1BB9">OnError<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an error handler to be executed if an exception occurs in the task.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/313E54A8">OnError<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;Exception, <wbr>ICakeContext, <wbr>TData&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an error handler to be executed if an exception occurs in the task.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/BEA6013E">OnError<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;Exception, <wbr>TData&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
+								<td>
+									<div>
+    Adds an error handler to be executed if an exception occurs in the task.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Core/CakeTaskBuilderExtensions">Cake<wbr>Task<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeTaskBuilderExtensions/119B5702">OnError<wbr>&lt;TData&gt;<wbr><wbr>(Action<wbr>&lt;TData&gt;<wbr>)<wbr></a></td>
 								<td><a href="/api/Cake.Core/CakeTaskBuilder">CakeTaskBuilder</a></td>
 								<td>
 									<div>

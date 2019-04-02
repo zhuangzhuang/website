@@ -151,6 +151,7 @@
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo">GitLabCIBuildInfo</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIEnvironmentInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIProjectInfo">GitLabCIProjectInfo</a></li>
+				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Pull<wbr>Request<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIRunnerInfo">GitLabCIRunnerInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIServerInfo">GitLabCIServerInfo</a></li>
 
@@ -270,6 +271,15 @@ class Type type-node
 								<td>
 									<div>
     Gets the GitLab CI project information.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIEnvironmentInfo/F0324EA6">PullRequest</a></td>
+								<td><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Pull<wbr>Request<wbr>Info</a></td>
+								<td>
+									<div>
+    Gets GitLab CI pull request information.
     </div>
 								</td>
 							</tr>
@@ -407,17 +417,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Git<wbr>Lab<wbr>C<wbr>I<wbr>Environment<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Git<wbr>Lab<wbr>C<wbr>I<wbr>Environment<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -426,6 +425,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Git<wbr>Lab<wbr>C<wbr>I<wbr>Environment<wbr>Info&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

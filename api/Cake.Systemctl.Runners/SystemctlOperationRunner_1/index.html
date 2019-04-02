@@ -203,8 +203,8 @@
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Systemctl.Runners/DaemonReloadRunner">DaemonReloadRunner</a></li>								
 											<li><a href="/api/Cake.Systemctl.Runners.Unit/UnitRunner_1">UnitRunner</a><wbr>&lt;<a href="/api/Cake.Systemctl.Runners.Unit/UnitRunner_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Systemctl.Runners/ListUnitFilesRunner">ListUnitFilesRunner</a></li>								
 											<li><a href="/api/Cake.Systemctl.Runners/ListUnitsRunner">ListUnitsRunner</a></li>								
+											<li><a href="/api/Cake.Systemctl.Runners/ListUnitFilesRunner">ListUnitFilesRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -220,10 +220,10 @@ class Type type-node
 	click Derived0 "/api/Cake.Systemctl.Runners/DaemonReloadRunner"
 	Type--&gt;Derived1["UnitRunner&lt;TSettings&gt;"]
 	click Derived1 "/api/Cake.Systemctl.Runners.Unit/UnitRunner_1"
-	Type--&gt;Derived2["ListUnitFilesRunner"]
-	click Derived2 "/api/Cake.Systemctl.Runners/ListUnitFilesRunner"
-	Type--&gt;Derived3["ListUnitsRunner"]
-	click Derived3 "/api/Cake.Systemctl.Runners/ListUnitsRunner"
+	Type--&gt;Derived2["ListUnitsRunner"]
+	click Derived2 "/api/Cake.Systemctl.Runners/ListUnitsRunner"
+	Type--&gt;Derived3["ListUnitFilesRunner"]
+	click Derived3 "/api/Cake.Systemctl.Runners/ListUnitFilesRunner"
 
 						</div>
 					</div>
@@ -365,17 +365,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Systemctl<wbr>Operation<wbr>Runner<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Systemctl<wbr>Operation<wbr>Runner<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -384,6 +373,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Systemctl<wbr>Operation<wbr>Runner<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

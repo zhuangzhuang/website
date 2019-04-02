@@ -205,9 +205,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Openshift.Login/OpenshiftLoginSettings">Openshift<wbr>Login<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Openshift.Delete/OpenshiftDeleterSettings">Openshift<wbr>Deleter<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings">Openshift<wbr>Build<wbr>Starter<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Openshift.Login/OpenshiftLoginSettings">Openshift<wbr>Login<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -219,12 +219,12 @@
 	Base0["ToolSettings"]--&gt;Type
 	Type["OpenshiftSettings"]
 class Type type-node
-	Type--&gt;Derived0["OpenshiftDeleterSettings"]
-	click Derived0 "/api/Cake.Openshift.Delete/OpenshiftDeleterSettings"
-	Type--&gt;Derived1["OpenshiftBuildStarterSettings"]
-	click Derived1 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings"
-	Type--&gt;Derived2["OpenshiftLoginSettings"]
-	click Derived2 "/api/Cake.Openshift.Login/OpenshiftLoginSettings"
+	Type--&gt;Derived0["OpenshiftLoginSettings"]
+	click Derived0 "/api/Cake.Openshift.Login/OpenshiftLoginSettings"
+	Type--&gt;Derived1["OpenshiftDeleterSettings"]
+	click Derived1 "/api/Cake.Openshift.Delete/OpenshiftDeleterSettings"
+	Type--&gt;Derived2["OpenshiftBuildStarterSettings"]
+	click Derived2 "/api/Cake.Openshift.StartBuild/OpenshiftBuildStarterSettings"
 
 						</div>
 					</div>
@@ -322,17 +322,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -341,6 +330,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Openshift<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
