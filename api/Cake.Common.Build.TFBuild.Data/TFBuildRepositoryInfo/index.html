@@ -155,9 +155,11 @@
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildMessageData">TFBuildMessageData</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishCodeCoverageData">T<wbr>F<wbr>Build<wbr>Publish<wbr>Code<wbr>Coverage<wbr>Data</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishTestResultsData">T<wbr>F<wbr>Build<wbr>Publish<wbr>Test<wbr>Results<wbr>Data</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPullRequestInfo">T<wbr>F<wbr>Build<wbr>Pull<wbr>Request<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData">TFBuildRecordData</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy">TFBuildTriggeredBy</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></li>
@@ -277,6 +279,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo/DD392B1A">GitSubmoduleCheckout</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets the value you've selected for Checkout submodules on the repository tab
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo/AC048770">Provider</a></td>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFRepositoryType">TFRepositoryType?</a></td>
 								<td>
@@ -304,11 +315,29 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo/6C30DF9B">SourceBranch</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets the branch the build was queued for
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo/6EAA3076">SourceVersion</a></td>
 								<td>string</td>
 								<td>
 									<div>
     Gets the latest version control change that is included in this build.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo/154B7BF5">SourceVersionMessage</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets the comment of the commit or changeset.
     </div>
 								</td>
 							</tr>

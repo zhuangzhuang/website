@@ -101,6 +101,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2019/04">April, 2019</a></li>
         <li><a href="/blog/archive/2019/01">January, 2019</a></li>
         <li><a href="/blog/archive/2018/12">December, 2018</a></li>
         <li><a href="/blog/archive/2018/08">August, 2018</a></li>
@@ -171,6 +172,124 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2019/04/cake-v0.33.0-released">Cake v0.33.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Monday, April 1, 2019</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/gep13">gep13</a></dd>
+</dl>
+            <div>
+                <p>Version 0.33.0 of Cake has been released.</p>
+<p>In this version we had contributions from 21 contributors outside of the core Cake Team members!  This is an amazing number, and we thank everyone for their contributions!</p>
+<p>During this release, all the Cake Team Members were in the same place at the same time (at the Microsoft MVP Summit), and we were able to <a href="https://twitter.com/firstdrafthell/status/1108578708527316992">sit together around the same table</a> and discuss a number of the outstanding PR's that we had on the repository.  We were able to get down from 26 open PR's to just 5 (which has now increased again to 7).  It was great to meet all the team members (some for the first time), and discuss the future of Cake.  We have lots of plans for the future, and are all looking forward to continuing to contribute to the project.</p>
+<p>This release see a number of long waited features being added, including the ability to use a globbing pattern within the #load directive.  As well as this, a number of improvements were included, and a number of bugs squashed.  All of these are detailed below in the release notes section.</p>
+<p>If you have ever been interested in peeking behind the scenes at &quot;how&quot; we do a Cake Release, I actually did a live stream of the Cake 0.33.0 version.  This is now published to my YouTube Channel, and you can watch it back <a href="https://t.co/jlSwcK3se7">here</a>, if you are interested.  We are aware that there are some steps in our release process that can be further automated, and this is one of the areas that you are likely to see some change in 2019.  Watch this space!</p>
+<p>If you mind any problems with this latest release, then please feel free to reach out via the normal channels, <a href="https://gitter.im/cake-build/cake">Gitter</a>, <a href="https://github.com/cake-build/cake">GitHub</a>, <a href="https://stackoverflow.com/questions/tagged/cakebuild">Stack Overflow</a>, and <a href="https://twitter.com/cakebuildnet">Twitter</a>.</p>
+<p><strong>Known Issue</strong></p>
+<ul>
+<li>If you are using GitVersion 3.x.x you may run into issues as a result of the changes that were made in this <a href="https://github.com/cake-build/cake/issues/2141">issue</a>.  Version 4 of GitVersion introduced changes to the verbosity setting that it uses, and Cake has been updated to use this setting, in line with the current verbosity that Cake is executing with.  As a result of this change, users of GitVersion 3.x.x will see an error when it attempts to parse the verbosity setting.  The current recommendation is to update to version 4.x.x of GitVersion.</li>
+</ul>
+<p>Contributions were included from:</p>
+<ul>
+<li><a href="https://github.com/devlead">devlead</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/fseegraeber">fseegraeber</a></li>
+<li><a href="https://github.com/gitfool">gitfool</a></li>
+<li><a href="https://github.com/Marusyk">Marusyk</a></li>
+<li><a href="https://github.com/jhromadik">jhromadik</a></li>
+<li><a href="https://github.com/GeertvanHorrik">GeertvanHorrik</a></li>
+<li><a href="https://github.com/Myoxocephalus">Myoxocephalus</a></li>
+<li>Yan Sklyarenko</li>
+<li><a href="https://github.com/flcdrg">flcdrg</a></li>
+<li><a href="https://github.com/mholo65">mholo65</a></li>
+<li>Joseph Vaughan</li>
+<li><a href="https://github.com/patriksvensson">patriksvensson</a></li>
+<li><a href="https://github.com/kcamp">kcamp</a></li>
+<li><a href="https://github.com/jnm2">jnm2</a></li>
+<li><a href="https://github.com/daveMueller">daveMueller</a></li>
+<li><a href="https://github.com/Roemer">Roemer</a></li>
+<li>Timothée Lecomte</li>
+<li><a href="https://github.com/homelchenko">homelchenko</a></li>
+<li><a href="https://github.com/sean-rose">sean-rose</a></li>
+<li>Michael Aldworth</li>
+<li><a href="https://github.com/WhiteWaterCoder">WhiteWaterCoder</a></li>
+<li>Joe Harrison</li>
+<li><a href="https://github.com/farodin91">farodin91</a></li>
+<li><a href="https://github.com/Roadrunner67">Roadrunner67</a></li>
+</ul>
+<p><strong>NOTE:</strong> When a GitHub Profile hasn't been configured properly, the automated tool we use to generate the above list isn't able to find a GitHub profile to link to, that is why they appear as text only.</p>
+<p>Full details of everything that was included in this release can be seen below.</p>
+<!--excerpt-->
+<h3 id="issues">Issues</h3>
+<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/57?closed=1">44 issues</a> closed.</p>
+<p><strong>Breaking change</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2514"><strong>#2514</strong></a> Add additional report types for ReportGenerator.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2130"><strong>#2130</strong></a> Add exceptions thrown to TaskTeardownContext.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2141"><strong>#2141</strong></a> Add Verbosity property to GitVersionSettings.</li>
+</ul>
+<p><strong>Feature</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2456"><strong>#2456</strong></a> Add logging aliases to override the log verbosity.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2453"><strong>#2453</strong></a> Unify pull request status across providers.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2440"><strong>#2440</strong></a> Add EnvironmentVariable<T> alias.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2400"><strong>#2400</strong></a> Add globber pattern support to the #load directive.</li>
+</ul>
+<p><strong>Improvement</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2507"><strong>#2507</strong></a> Cake.CoreCLR can't handle whitespace in path.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2491"><strong>#2491</strong></a> Add additional Azure DevOps (TFBuild) properties.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2484"><strong>#2484</strong></a> Octopus Deploy 2019.1 and Spaces feature.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2478"><strong>#2478</strong></a> Lock file arguments for NuGet and dotnet restore.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2474"><strong>#2474</strong></a> TeamCityProvider.BuildProblem method should conform to TeamCity API .</li>
+<li><a href="https://github.com/cake-build/cake/issues/2472"><strong>#2472</strong></a> Expose ICakeConfiguration (or specific values like tools path) on context.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2465"><strong>#2465</strong></a> Roundhouse dotnet tool does not run.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2463"><strong>#2463</strong></a> DoesForEach don't support data context for items functions.</li>
+<li><a href="https://github.com/cake-build/cake/pull/2462"><strong>#2462</strong></a> Added unit tests for Cake.Core.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2459"><strong>#2459</strong></a> Add MSBuildPath to NuGetRestoreSettings.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2449"><strong>#2449</strong></a> ARM64 missing from MSBuild target platform.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2445"><strong>#2445</strong></a> Add OnError<TData>.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2433"><strong>#2433</strong></a> NugetRestore still using msbuild 15.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2429"><strong>#2429</strong></a> Add provider name to BuildSystem.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2415"><strong>#2415</strong></a> Add support for MSBuild options to enable RestoreLockedMode.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2393"><strong>#2393</strong></a> MethodAliasGenerator doesn't generate parameter attributes.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2345"><strong>#2345</strong></a> Allow NuGetRestoreSettings to opt out of setting -NonInteractive.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2270"><strong>#2270</strong></a> Allow to listen and modify redirected standard output of a process.</li>
+<li><a href="https://github.com/cake-build/cake/pull/2124"><strong>#2124</strong></a> Add Support for IEnumerable tokens on TextTransformationExtensions.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2087"><strong>#2087</strong></a> Include more detailed exception information when Exception is AggregateException.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2026"><strong>#2026</strong></a> Support for additional SignTool flags.</li>
+<li><a href="https://github.com/cake-build/cake/pull/2019"><strong>#2019</strong></a> Clean up some parser tests.</li>
+<li><a href="https://github.com/cake-build/cake/issues/1384"><strong>#1384</strong></a> Enhancement: Add support for filtering files in Globbing alias.</li>
+<li><a href="https://github.com/cake-build/cake/issues/820"><strong>#820</strong></a> Log tools command-line at higher log level (preferably default).</li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2512"><strong>#2512</strong></a> TFBuildPublishCodeCoverageData xml comments minor typo.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2025"><strong>#2025</strong></a> The tool path for MSpec needs to be changed in the documentation .</li>
+</ul>
+<p><strong>Bug</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2504"><strong>#2504</strong></a> Update .NET Core SDK 2.1.505.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2487"><strong>#2487</strong></a> Warn and skip code gen for duplicate aliases.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2481"><strong>#2481</strong></a> FilePath and DirectoryPath implicit conversions should return null when passed null.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2473"><strong>#2473</strong></a> ParseAssemblyInfo does not support .NET Core generated assembly info .</li>
+<li><a href="https://github.com/cake-build/cake/issues/2468"><strong>#2468</strong></a> DotNet commands do not respect the verbosity.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2439"><strong>#2439</strong></a> HtmlInline_AzurePipelines and MHtml shares the same numeric value.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2432"><strong>#2432</strong></a> Azure Pipelines build system not recognized with non-Windows jobs.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2088"><strong>#2088</strong></a> VSWhere -requires and -products argument values are quoted but VSWhere doesn't support multiple values in quotes.</li>
+</ul>
+<p><strong>Build</strong></p>
+<ul>
+<li><a href="https://github.com/cake-build/cake/issues/2503"><strong>#2503</strong></a> Fix T4 integration test.</li>
+<li><a href="https://github.com/cake-build/cake/issues/2501"><strong>#2501</strong></a> Don't explicitly exclude GitVersion from executing on non-windows systems.</li>
+<li><a href="https://github.com/cake-build/cake/pull/2423"><strong>#2423</strong></a> (build) Switch to GitReleaseManager Global Tool.</li>
+</ul>
+
+            </div>
+        <hr />
         <h2><a href="/blog/2019/01/cake-v0.32.0-released">Cake v0.32.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -189,59 +308,11 @@ All in all, it sums up to an active and healthy community – which we’re very
 <p>This release has several improvements and fixes, to note a few, Cake’s Zip archive functionality has been greatly improved, initial support for VS2019 / MSBuild 16 has been added, a complete list of changes can be found below.</p>
 <p>Happy New Year!</p>
 <p><strong>Known issue</strong></p>
-<ul>
-<li>Chocolatey pack has a regression in this release, we'll try to release a hotfix 0.32.1 as soon as possible.</li>
-</ul>
-<p>Contributions were included from:</p>
-<ul>
-<li><a href="https://github.com/devlead">devlead</a></li>
-<li><a href="https://github.com/grumar">grumar</a></li>
-<li><a href="https://github.com/gep13">gep13</a></li>
-<li><a href="https://github.com/flcdrg">flcdrg</a></li>
-<li><a href="https://github.com/jnm2">jnm2</a></li>
-<li><a href="https://github.com/tpluscode">tpluscode</a></li>
-<li><a href="https://github.com/paulomorgado">paulomorgado</a></li>
-<li><a href="https://github.com/gitfool">gitfool</a></li>
-<li><a href="https://github.com/RLittlesII">RLittlesII</a></li>
-<li><a href="https://github.com/MihaMarkic">MihaMarkic</a></li>
-<li><a href="https://github.com/FroggieFrog">FroggieFrog</a></li>
-<li><a href="https://github.com/vlesierse">vlesierse</a></li>
-<li><a href="https://github.com/azchohfi">azchohfi</a></li>
-</ul>
-<p>Full details of everything that was included in this release can be seen below.</p>
-<!--excerpt-->
-<h3 id="issues">Issues</h3>
-<p>As part of this release we had <a href="https://github.com/cake-build/cake/milestone/56?closed=1">17 issues</a> closed.</p>
-<p><strong>Feature</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2420"><strong>#2420</strong></a> Add new label alias for GitReleaseManager.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2419"><strong>#2419</strong></a> Extend GitReleaseManager aliases to use token parameter.</li>
-</ul>
-<p><strong>Improvement</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2424"><strong>#2424</strong></a> Support computer cert store with SignTool.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2417"><strong>#2417</strong></a> Extend GetToolExecutableNames for GitReleaseManager.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2412"><strong>#2412</strong></a> TFBuildCommand PublishCodeCoverage API Changes.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2410"><strong>#2410</strong></a> Add Global Tool and new arguments support in TextTemplatingAliases.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2398"><strong>#2398</strong></a> Support MsBuild version (16).</li>
-<li><a href="https://github.com/cake-build/cake/issues/2381"><strong>#2381</strong></a> Zip should behave by default like standard Zip utilities.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2379"><strong>#2379</strong></a> Add an Encoding parameter to TextTransformation.Save.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2327"><strong>#2327</strong></a> Missing report types for ReportGenerator.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2294"><strong>#2294</strong></a> Add fluent API to enable MSBuild binary logger.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2249"><strong>#2249</strong></a> Unhelpful error when #loading a missing nuget package.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2243"><strong>#2243</strong></a> Missing ResultsDirectory when using DotNetCoreVSTest.</li>
-<li><a href="https://github.com/cake-build/cake/issues/1973"><strong>#1973</strong></a> Add Products prop to VSWhereSettings.</li>
-</ul>
-<p><strong>Documentation</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/pull/2397"><strong>#2397</strong></a> Fix missing parenthesis and missing setting.</li>
-</ul>
-<p><strong>Build</strong></p>
-<ul>
-<li><a href="https://github.com/cake-build/cake/issues/2403"><strong>#2403</strong></a> Update Travis CI to supported version of Mono.</li>
-<li><a href="https://github.com/cake-build/cake/issues/2394"><strong>#2394</strong></a> License file missing in Chocolatey package.</li>
-</ul>
 
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2019/01/cake-v0.32.0-released">Read more...</a>
             </div>
         <hr />
         <h2><a href="/blog/2019/01/cake-v0.32.1-released">Cake v0.32.1 released</a></h2>
@@ -327,24 +398,6 @@ Existing boostrappers will still work as we created a new NuGet package for the 
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2018/08/cake-v0.30.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2018/07/cake-v0.29.0-released">Cake v0.29.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, July 6, 2018</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/devlead">devlead</a></dd>
-</dl>
-            <div>
-                <p>Version 0.29.0 of Cake has been released.</p>
-<p>We're really excited by this release which has some splendid features and improvements!</p>
-<p>In this blog post we'll highlight the new <code>exclusive</code> parameter which adds support for executing a single task without dependencies.
-You can find a full list of changes at the end of this post.</p>
-<p>Contributions were included from:</p>
-                <a href="/blog/2018/07/cake-v0.29.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

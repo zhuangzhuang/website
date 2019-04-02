@@ -202,7 +202,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public Action&lt;Exception&gt; ErrorHandler { get; set; }</code></pre>
+	<pre><code>public Action&lt;Exception, ICakeContext&gt; ErrorHandler { get; set; }</code></pre>
 
 
 
@@ -219,7 +219,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>Action<wbr>&lt;Exception&gt;<wbr></td>
+					<td>Action<wbr>&lt;Exception, <wbr><a href="/api/Cake.Core/ICakeContext">ICakeContext</a>&gt;<wbr></td>
 					<td>The error handler.</td>
 				</tr>
 			</tbody></table>

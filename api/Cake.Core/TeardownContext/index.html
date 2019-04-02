@@ -171,6 +171,7 @@
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
+				<li><a href="/api/Cake.Core/Disposable">Disposable</a></li>
 				<li><a href="/api/Cake.Core/ExecutionSettings">ExecutionSettings</a></li>
 				<li><a href="/api/Cake.Core/MethodInfoExtensions">MethodInfoExtensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
@@ -327,6 +328,16 @@ class Type type-node
 								<td>
 									<div>
     Gets the arguments.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Core/CakeContextAdapter/4DA94EC2">Configuration</a></td>
+								<td><a href="/api/Cake.Core.Configuration/ICakeConfiguration">ICakeConfiguration</a></td>
+								<td>
+									<div>
+    Gets the cake configuration.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></em></small></div>
 								</td>
@@ -1243,6 +1254,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/4535C1A6">DiagnosticVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to diagnostic and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.IO/DirectoryAliases/7E77A941">Directory<wbr>(string)<wbr></a></td>
 								<td><a href="/api/Cake.Common.IO.Paths/ConvertableDirectoryPath">Convertable<wbr>Directory<wbr>Path</a></td>
 								<td>
@@ -1492,7 +1513,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-    Deletes a package from the NuGet.org.
+    Deletes a package from nuget.org.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
 								</td>
@@ -1512,7 +1533,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-    Deletes a specific version of a package from the NuGet.org.
+    Deletes a specific version of a package from nuget.org.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreAliases">DotNetCoreAliases</a></em></small></div>
 								</td>
@@ -1949,6 +1970,16 @@ class Type type-node
 								<td>
 									<div>
     Retrieves the value of the environment variable or <code class="cs">null</code> if the environment variable does not exist.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common/EnvironmentAliases">EnvironmentAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common/EnvironmentAliases/1FDAF01D">EnvironmentVariable<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>T)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+    Retrieves the value of the environment variable or <span name="defaultValue" class="paramref">defaultValue</span> if the environment variable does not exist.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common/EnvironmentAliases">EnvironmentAliases</a></em></small></div>
 								</td>
@@ -2701,7 +2732,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-    Analyses the specified solution with Resharper's InspectCode.
+    Analyses the specified solution with ReSharper's InspectCode.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.InspectCode/InspectCodeAliases">InspectCodeAliases</a></em></small></div>
 								</td>
@@ -2711,7 +2742,7 @@ class Type type-node
 								<td>void</td>
 								<td>
 									<div>
-     Analyses the specified solution with Resharper's InspectCode,
+     Analyses the specified solution with ReSharper's InspectCode,
      using the specified settings.
      </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.InspectCode/InspectCodeAliases">InspectCodeAliases</a></em></small></div>
@@ -2817,6 +2848,16 @@ class Type type-node
     Compiles the given NSIS script using the given <span name="settings" class="paramref">settings</span>.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Tools.NSIS/NSISAliases">NSISAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/20E700DF">MinimalVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to minimal and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -3008,6 +3049,16 @@ class Type type-node
     be used to manipulate the MyGet environment.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Build/BuildSystemAliases">BuildSystemAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/E50F190D">NormalVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to normal and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -3692,6 +3743,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/0A94686E">QuietVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to quiet and returns a disposable that restores the log verbosity on dispose.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorAliases/341B337D">ReportGenerator<wbr>(FilePath, <wbr>DirectoryPath)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -4181,6 +4242,16 @@ class Type type-node
 								<td>
 									<div>
     Writes a verbose message to the log using the specified format information.
+    </div>
+										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Diagnostics/LoggingAliases/5FD0C47D">VerboseVerbosity<wbr>()<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+    Sets the log verbosity to verbose and returns a disposable that restores the log verbosity on dispose.
     </div>
 										<div><small><em>From <a href="/api/Cake.Common.Diagnostics/LoggingAliases">LoggingAliases</a></em></small></div>
 								</td>

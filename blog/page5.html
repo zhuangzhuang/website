@@ -101,6 +101,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2019/04">April, 2019</a></li>
         <li><a href="/blog/archive/2019/01">January, 2019</a></li>
         <li><a href="/blog/archive/2018/12">December, 2018</a></li>
         <li><a href="/blog/archive/2018/08">August, 2018</a></li>
@@ -171,6 +172,37 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2017/09/cake-v0.22.0-released">Cake v0.22.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, September 13, 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>
+            <div>
+                <p>Version 0.22.0 of Cake has been released.</p>
+<p>So, let's be clear, this release will break things - but it is all intentional!</p>
+<p>This release was initially about updating Roslyn, unifying scripting engines, and targeting .NET 4.6. But one thing led to another which resulted in better support for tool and addin versioning when using preprocessor directives, and an optional in-process NuGet client.</p>
+<p>Updating Roslyn and unifying scripting engines has been a long-awaited improvement for many of you. This brings you C# 7 features (without need for <code>--experimental</code> switch), debugging with Mono (as we completely removed the old Mono scripting engine), and much, much more. It also allows us to ship Roslyn with Cake, so there's no need for Cake to actually download Roslyn anymore. In order for us to update Roslyn, we also needed to change target framework to .NET 4.6.</p>
+<p>Tool and addin versioning when using preprocessor directives has been an issue, which has caused many questions. E.g. you may have noted that when changing version for a tool or addin, the old version was still used. Prior to this release, the only solution was to delete the tool/addin from the <code>tools</code> folder. This is now fixed as Cake supports side-by-side downloading of different versions of tools and addins.</p>
+<p>Due to unpredictable results when downloading packages using <code>nuget.exe</code>, tool/addin versioning was solved by adding a intermediate directory containing the version number. This intermediate directory can however cause <code>MAX_PATH</code> issues when downloading some specific packages. To address this issue, we implemented functionality in <code>Cake.NuGet</code> to allow Cake to download tools and addins without the need for <code>nuget.exe</code>. This functionality is currently optional through <a href="/docs/fundamentals/configuration">configuration</a>, and is the first step towards removing need for <code>nuget.exe</code> in Cake. Example usage to opt-in for the in-process NuGet client:</p>
+
+<p>The in-process NuGet client also gives the possibility to load assemblies from NuGet dependencies. This behaviour can be enabled either via <a href="/docs/fundamentals/configuration">configuration</a> or directive. Example usage for loading dependencies:</p>
+
+<p>or</p>
+
+<p>As 0.22.0 has several breaking changes, it will require addins to reference Cake.Core 0.22.0 or newer to be loaded, there's a "you're on your own anything can happen" setting to skip verification but we recommend to start targeting the newer version as soon as possible. Example usage to skip verification:</p>
+
+<p>We have said it before, but here it comes again. Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version <a href="/docs/tutorials/pinning-cake-version">here</a>. We always try to avoid breaking changes, but we think these new features and improvements justify the friction, and we hope you will too!</p>
+<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2017/09/cake-v0.22.0-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2017/08/http-to-https">HTTP to HTTPS</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -240,20 +272,6 @@ The shift to using MSBuild and from <code>project.json</code> to <code>csproj</c
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/07/cake-v0.21.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/06/new-cake-contrib-icon">New Cake Contrib Icon</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, June 23, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Announcement">Announcement</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>
-            <div>
-                <p>Towards the end of 2016, the Cake Team had an internal discussion about the newly created <a href="https://cakebuild.net/blog/2016/08/cake-contribution-organization">Cake Contrib Organisation</a>.  The topic of this conversation was, how could we distinguish between packages (mainly NuGet ones) that were part of the Core Cake system (for example, Cake, Cake.Core, Cake.NuGet, etc), and packages which have been created by our amazing Cake Community, in the form of addins, and modules.</p>
-                <a href="/blog/2017/06/new-cake-contrib-icon">Read more...</a>
             </div>
         <hr />
     <nav>

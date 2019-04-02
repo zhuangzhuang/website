@@ -172,6 +172,7 @@
 				<li><a href="/api/Cake.Core/ConsoleExtensions">ConsoleExtensions</a></li>
 				<li><a href="/api/Cake.Core/DefaultExecutionStrategy">Default<wbr>Execution<wbr>Strategy</a></li>
 				<li><a href="/api/Cake.Core/DirectoryExtensions">DirectoryExtensions</a></li>
+				<li><a href="/api/Cake.Core/Disposable">Disposable</a></li>
 				<li><a href="/api/Cake.Core/ExecutionSettings">ExecutionSettings</a></li>
 				<li><a href="/api/Cake.Core/MethodInfoExtensions">MethodInfoExtensions</a></li>
 				<li><a href="/api/Cake.Core/ProcessArgumentListExtensions">Process<wbr>Argument<wbr>List<wbr>Extensions</a></li>
@@ -345,7 +346,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/B138D0DA">DelayedActions</a></td>
-								<td>Queue<wbr>&lt;Action&gt;<wbr></td>
+								<td>Queue<wbr>&lt;Action<wbr>&lt;<a href="/api/Cake.Core/ICakeContext">ICakeContext</a>&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
     Gets the task's actions that are run at execution time to additionally populate <code class="cs"><a href="/api/Cake.Core/CakeTask/33F68E58">Actions</a></code>.
@@ -381,7 +382,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Core/CakeTask/5D2BDA78">ErrorHandler</a></td>
-								<td>Action<wbr>&lt;Exception&gt;<wbr></td>
+								<td>Action<wbr>&lt;Exception, <wbr><a href="/api/Cake.Core/ICakeContext">ICakeContext</a>&gt;<wbr></td>
 								<td>
 									<div>
     Gets or sets the error handler.
@@ -478,7 +479,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskExtensions/D5690487">AddDelayedAction<wbr>(Action)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/37721EDA">AddDelayedAction<wbr>(Action<wbr>&lt;ICakeContext&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -562,7 +563,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Core/CakeTaskExtensions/666BCC5D">SetErrorHandler<wbr>(Action<wbr>&lt;Exception&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/Cake.Core/CakeTaskExtensions/4FBF684E">SetErrorHandler<wbr>(Action<wbr>&lt;Exception, <wbr>ICakeContext&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>

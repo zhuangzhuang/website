@@ -236,6 +236,15 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Common.Tools.SignTool/SignToolSignSettings/C12151FB">AdditionalCertPath</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets or sets the path to an additional certificate that is to be added to the signature block.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.SignTool/SignToolSignSettings/4760D4A8">AppendSignature</a></td>
 								<td>bool</td>
 								<td>
@@ -341,6 +350,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.SignTool/SignToolSignSettings/4C4929C8">StoreName</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets or sets the store to open when searching for the certificate.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.SignTool/SignToolSignSettings/86E38810">Time<wbr>Stamp<wbr>Digest<wbr>Algorithm</a></td>
 								<td><a href="/api/Cake.Common.Tools.SignTool/SignToolDigestAlgorithm">Sign<wbr>Tool<wbr>Digest<wbr>Algorithm</a></td>
 								<td>
@@ -354,7 +372,7 @@ class Type type-node
 								<td>Uri</td>
 								<td>
 									<div>
-    Gets or sets the timestamp server's URL.
+    Gets or sets the timestamp server's URL. Timestamp will only be added if <code class="cs">TimeStampUri</code> is set.
     </div>
 								</td>
 							</tr>

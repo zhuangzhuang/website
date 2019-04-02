@@ -101,6 +101,7 @@
         <li class="selected"><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2019/04">April, 2019</a></li>
         <li><a href="/blog/archive/2019/01">January, 2019</a></li>
         <li><a href="/blog/archive/2018/12">December, 2018</a></li>
         <li><a href="/blog/archive/2018/08">August, 2018</a></li>
@@ -171,6 +172,27 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/04/cake-v0.27.0-released">Cake v0.27.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Thursday, April 19, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
+</dl>
+            <div>
+                <p>Version 0.27.0 of Cake has been released.</p>
+<p>The third release of 2018 is here! It contains mostly improvements and bug fixes. While this release doesn't contain any known breaking changes, we would like to take this opportunity to inform you that the next release will. The next release will introduce typed contexts to Cake, this will really improve the flexibility of Cake scripts, read more about this <a href="https://github.com/cake-build/cake/issues/2008">here</a>.</p>
+<p>The most notable bug fixes in 0.27.0 were made around addin installation. We updated the internals of Cake to use v4.6.0 of the NuGet Client libraries, which comes with performance improvements. Cake now also supports "offline" builds when using in-process NuGet, this was kind of a regression since it used to work with the old <code>nuget.exe</code> based installer. Another enhancement is that we've added a runtime assembly resolver for assembly versions that can't be found. This tackles most of the issues experienced around addin loading and dependency resolution. Last but not least, in-process NuGet now also supports specifying multiple NuGet sources through config. This can be achieved by separating sources using semicolon (<code>;</code>) when setting the <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values#nuget-download-url.">NuGet Download Url</a> configuration value. Below is an example using <code>cake.config</code>:</p>
+
+<p>Last but not least, a friendly reminder that if you haven't pinned to a specific version of Cake, you should do it now :-) More information about pinning to a specific version can be found <a href="https://cakebuild.net/docs/tutorials/pinning-cake-version">here</a>.</p>
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2018/04/cake-v0.27.0-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2018/03/cake-v0.26.1-released">Cake v0.26.1 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -260,39 +282,6 @@ This release shouldn't have any breaking changes, but it does have several impro
 
 <p>Full details of everything that was included in this release can be seen below.</p>
                 <a href="/blog/2017/12/cake-v0.24.0-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/10/cake-v0.23.0-released">Cake v0.23.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Sunday, October 15, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
-</dl>
-            <div>
-                <p>Version 0.23.0 has been released!</p>
-<p>This release contains three new features specially worth highlighting and a lot of bugfixes and improvements.</p>
-
-<p>Cake now supports asynchronous tasks. This will let you use the <code>async</code> and <code>await</code> C# features within a task.</p>
-<p>Tasks will still execute single threaded and in order as before, but this really simplifies asynchronous programming and utilizing asynchronous APIs within your Cake scripts.</p>
-
-
-<p>Ever wished you could define your task as a dependency of another task - i.e. a reversed dependency relationship? The good news is that you now can.</p>
-
-<p>Since task <code>A</code> is configured to be a dependee of <code>B</code> the task definition will be identical to the following:</p>
-
-
-<p>You can now explicitly specify whether or not a dependency (or dependee) is optional or required.
-This is useful if you want to create "extension points" in your build script.</p>
-
-<p>In the above example, <code>Bar</code> is dependent on <code>Foo</code> while <code>Baz</code> is dependent on <code>Qux</code>.
-The difference between the two dependencies above is that Cake will throw an exception if no task called <code>Foo</code> was found.</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in these releases can be seen below.</p>
-                <a href="/blog/2017/10/cake-v0.23.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

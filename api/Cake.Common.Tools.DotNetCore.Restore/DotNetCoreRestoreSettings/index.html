@@ -296,11 +296,47 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/C654C82C">ForceEvaluate</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to force restore to reevaluate all dependencies even if a lock file already exists
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/FDD52C8F">IgnoreFailedSources</a></td>
 								<td>bool</td>
 								<td>
 									<div>
     Gets or sets a value indicating whether to only warning failed sources if there are packages meeting version requirement.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/3B05E2BC">Interactive</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to stop and wait for user input or action (for example to complete authentication)
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/C6DB42EB">LockedMode</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to not allow updating project lock file
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/DCDA6C2D">LockFilePath</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets or sets a value indicating output location where project lock file is written.
     </div>
 								</td>
 							</tr>
@@ -387,6 +423,15 @@ class Type type-node
     Gets or sets optional timeout for tool execution.
     </div>
 											<div><small><em>Inherited from <a href="/api/Cake.Core.Tooling/ToolSettings">ToolSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestoreSettings/15AB6206">UseLockFile</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether to enable project lock file to be generated and used with restore
+    </div>
 								</td>
 							</tr>
 							<tr>

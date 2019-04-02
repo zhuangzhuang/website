@@ -101,6 +101,7 @@
         <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2019/04">April, 2019</a></li>
         <li><a href="/blog/archive/2019/01">January, 2019</a></li>
         <li><a href="/blog/archive/2018/12">December, 2018</a></li>
         <li><a href="/blog/archive/2018/08">August, 2018</a></li>
@@ -171,6 +172,34 @@
 	<section class="content">
 		
 
+        <h2><a href="/blog/2018/01/cake-v0.25.0-released">Cake v0.25.0 released</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>Wednesday, January 17, 2018</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/devlead">devlead</a></dd>
+</dl>
+            <div>
+                <p>Version 0.25.0 of Cake has been released.</p>
+<p>The first release of 2018 is here! It contains mostly improvements and bug fixes, but it also has one potential breaking change.</p>
+<p>The most notable change in this release is that we no longer use the NuGet.exe CLI tool when installing <code>addins</code>, <code>tools</code>, <code>modules</code> and <code>scripts</code> from NuGet sources in our <a href="/docs/fundamentals/preprocessor-directives">preprocessor directives</a>.
+Now we instead default to the in-process NuGet client introduced in Cake <a href="/blog/2017/09/cake-v0.22.0-released">v0.22.0</a>. This will not only fix many previous issues people have seen with Cake's preprocessor NuGet handling, but also enable us to simplify boostrappers and pave the way to properly solve addin dependencies. It will also make pure .NET Core environments work out of the box with <code>Cake.CoreCLR</code>.</p>
+<p>Also notable is that this release will likely be the last one before we migrate <code>Cake.CoreCLR</code> to .NET Core 2.x, we know this is much awaited! The migration work has been going on for some time now and most blockers have been sorted. So our preliminary plan is to have this migration done by the next release.</p>
+<p>The new NuGet client shouldn't break any existing scripts, addins or tools, but you might need to clear your tools/addins folder as it has a slightly different folder structure. You can opt-out if you're having issues, by using Cake <a href="https://cakebuild.net/docs/fundamentals/default-configuration-values">configuration</a> environment variable, file or argument.</p>
+<p><strong>Environment Variable Name</strong></p>
+
+<p><strong>Config File Contents</strong></p>
+
+<p><strong>Direct Argument</strong></p>
+
+<p>Contributions were included from:</p>
+
+<p>Full details of everything that was included in this release can be seen below.</p>
+                <a href="/blog/2018/01/cake-v0.25.0-released">Read more...</a>
+            </div>
+        <hr />
         <h2><a href="/blog/2017/12/cake-v0.24.0-released">Cake v0.24.0 released</a></h2>
 <dl class="dl-horizontal">
     <dt><i class="fa fa-calendar"></i> Published</dt>
@@ -262,37 +291,6 @@ The difference between the two dependencies above is that Cake will throw an exc
 
 <p>Full details of everything that was included in these releases can be seen below.</p>
                 <a href="/blog/2017/09/cake-v0.22.1-and-v0.22.2-released">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/2017/09/cake-v0.22.0-released">Cake v0.22.0 released</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Wednesday, September 13, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/mholo65">mholo65</a></dd>
-</dl>
-            <div>
-                <p>Version 0.22.0 of Cake has been released.</p>
-<p>So, let's be clear, this release will break things - but it is all intentional!</p>
-<p>This release was initially about updating Roslyn, unifying scripting engines, and targeting .NET 4.6. But one thing led to another which resulted in better support for tool and addin versioning when using preprocessor directives, and an optional in-process NuGet client.</p>
-<p>Updating Roslyn and unifying scripting engines has been a long-awaited improvement for many of you. This brings you C# 7 features (without need for <code>--experimental</code> switch), debugging with Mono (as we completely removed the old Mono scripting engine), and much, much more. It also allows us to ship Roslyn with Cake, so there's no need for Cake to actually download Roslyn anymore. In order for us to update Roslyn, we also needed to change target framework to .NET 4.6.</p>
-<p>Tool and addin versioning when using preprocessor directives has been an issue, which has caused many questions. E.g. you may have noted that when changing version for a tool or addin, the old version was still used. Prior to this release, the only solution was to delete the tool/addin from the <code>tools</code> folder. This is now fixed as Cake supports side-by-side downloading of different versions of tools and addins.</p>
-<p>Due to unpredictable results when downloading packages using <code>nuget.exe</code>, tool/addin versioning was solved by adding a intermediate directory containing the version number. This intermediate directory can however cause <code>MAX_PATH</code> issues when downloading some specific packages. To address this issue, we implemented functionality in <code>Cake.NuGet</code> to allow Cake to download tools and addins without the need for <code>nuget.exe</code>. This functionality is currently optional through <a href="/docs/fundamentals/configuration">configuration</a>, and is the first step towards removing need for <code>nuget.exe</code> in Cake. Example usage to opt-in for the in-process NuGet client:</p>
-
-<p>The in-process NuGet client also gives the possibility to load assemblies from NuGet dependencies. This behaviour can be enabled either via <a href="/docs/fundamentals/configuration">configuration</a> or directive. Example usage for loading dependencies:</p>
-
-<p>or</p>
-
-<p>As 0.22.0 has several breaking changes, it will require addins to reference Cake.Core 0.22.0 or newer to be loaded, there's a "you're on your own anything can happen" setting to skip verification but we recommend to start targeting the newer version as soon as possible. Example usage to skip verification:</p>
-
-<p>We have said it before, but here it comes again. Regardless of intentional or unintentional breaking changes, the possibility of new releases breaking something is why we always recommend you pin the version of Cake you're running, thus avoiding any unplanned broken builds. You can read more about pinning Cake version <a href="/docs/tutorials/pinning-cake-version">here</a>. We always try to avoid breaking changes, but we think these new features and improvements justify the friction, and we hope you will too!</p>
-<p>And as always thanks to all Cake contributors and users, Cake wouldn't have been possible without you!</p>
-<p>Contributions were included from:</p>
-
-<p>Full details of everything that was included in this release can be seen below.</p>
-                <a href="/blog/2017/09/cake-v0.22.0-released">Read more...</a>
             </div>
         <hr />
     <nav>

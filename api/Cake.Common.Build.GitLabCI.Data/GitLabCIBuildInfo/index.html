@@ -151,6 +151,7 @@
 				<li class="selected"><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo">GitLabCIBuildInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIEnvironmentInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIProjectInfo">GitLabCIProjectInfo</a></li>
+				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Pull<wbr>Request<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIRunnerInfo">GitLabCIRunnerInfo</a></li>
 				<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIServerInfo">GitLabCIServerInfo</a></li>
 
@@ -288,6 +289,15 @@ class Type type-node
 								<td>
 									<div>
     Gets the unique id of the current pipeline that GitLab CI uses internally.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo/D748153C">PipelineIId</a></td>
+								<td>int</td>
+								<td>
+									<div>
+    Gets the unique id of the current pipeline scoped to the project.
     </div>
 								</td>
 							</tr>

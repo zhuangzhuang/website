@@ -202,7 +202,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public Queue&lt;Action&gt; DelayedActions { get; }</code></pre>
+	<pre><code>public Queue&lt;Action&lt;ICakeContext&gt;&gt; DelayedActions { get; }</code></pre>
 
 
 
@@ -219,7 +219,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>Queue<wbr>&lt;Action&gt;<wbr></td>
+					<td>Queue<wbr>&lt;Action<wbr>&lt;<a href="/api/Cake.Core/ICakeContext">ICakeContext</a>&gt;<wbr>&gt;<wbr></td>
 					<td>The task's delayed actions actions.</td>
 				</tr>
 			</tbody></table>

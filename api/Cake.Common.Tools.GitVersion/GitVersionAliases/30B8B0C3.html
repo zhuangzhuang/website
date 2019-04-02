@@ -206,7 +206,7 @@ public static GitVersion GitVersion(this ICakeContext context)</code></pre>
         UpdateAssemblyInfo = true
     });
 });</code></pre>
-    <p>Get the git version info for the project using a dynamic repository.</p>
+    <p>Get the Git version info for the project using a dynamic repository.</p>
     <p>Cake task:</p>
     <pre><code class="cs">Task("GetVersionInfo")
     .Does(() =&gt;
@@ -216,9 +216,9 @@ public static GitVersion GitVersion(this ICakeContext context)</code></pre>
         Password = "MyPassword,
         Url = "http://git.myhost.com/myproject.git"
         Branch = "develop"
-        Commit = EnviromentVariable("MY_COMMIT")
+        Commit = EnvironmentVariable("MY_COMMIT")
     });
-    // Use result for building nuget packages, setting build server version, etc...
+    // Use result for building NuGet packages, setting build server version, etc...
 });</code></pre>
     </div>
 
@@ -276,7 +276,7 @@ public static GitVersion GitVersion(this ICakeContext context)</code></pre>
 				</thead>
 				<tbody><tr>
 					<td><a href="/api/Cake.Common.Tools.GitVersion/GitVersion">GitVersion</a></td>
-					<td>The git version info.</td>
+					<td>The Git version info.</td>
 				</tr>
 			</tbody></table>
 		</div>

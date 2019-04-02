@@ -155,9 +155,11 @@
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildMessageData">TFBuildMessageData</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishCodeCoverageData">T<wbr>F<wbr>Build<wbr>Publish<wbr>Code<wbr>Coverage<wbr>Data</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPublishTestResultsData">T<wbr>F<wbr>Build<wbr>Publish<wbr>Test<wbr>Results<wbr>Data</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPullRequestInfo">T<wbr>F<wbr>Build<wbr>Pull<wbr>Request<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRecordData">TFBuildRecordData</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>
+				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy">TFBuildTriggeredBy</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildArtifactType">TFBuildArtifactType</a></li>
 				<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTaskResult">TFBuildTaskResult</a></li>
@@ -268,6 +270,42 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/83BA49A6">AccessToken</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets the a special variable that carries the security token used by the running build
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/1E03A484">Artifact<wbr>Staging<wbr>Directory</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets the local path on the agent where any artifacts are copied to before being pushed to their destination
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/D180085A">BinariesDirectory</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets the local path on the agent you can use as an output folder for compiled binaries
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/FFDB80F6">Debug</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets a value indicating whether more detailed logs to debug pipeline problems is enabled
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/5F77135D">Id</a></td>
 								<td>int</td>
 								<td>
@@ -295,6 +333,15 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/5674925E">Reason</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Gets the event that caused the build to run
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/C37E0D88">RequestedFor</a></td>
 								<td>string</td>
 								<td>
@@ -309,6 +356,42 @@ class Type type-node
 								<td>
 									<div>
     Gets the email of the user the build was requested for.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/3A8DBA96">SourcesDirectory</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets the local path on the agent where your source code files are downloaded
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/825C493D">StagingDirectory</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets the local path on the agent where any artifacts are copied to before being pushed to their destination
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/A3C7FB1A">TestResultsDirectory</a></td>
+								<td><a href="/api/Cake.Core.IO/FilePath">FilePath</a></td>
+								<td>
+									<div>
+    Gets local path on the agent where the test results are created
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo/3BA6E753">TriggeredBy</a></td>
+								<td><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy">TFBuildTriggeredBy</a></td>
+								<td>
+									<div>
+    Gets TF Build TriggeredBy information.
     </div>
 								</td>
 							</tr>
