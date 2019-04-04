@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - NpmTool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -183,7 +183,8 @@
 	<h1>NpmTool<wbr>&lt;TSettings&gt;<wbr> <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -218,17 +219,17 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Cake.Npm.Version/NpmVersionTool">NpmVersionTool</a></li>								
 											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
-											<li><a href="/api/Cake.Npm.Ci/NpmCiTool">NpmCiTool</a></li>								
-											<li><a href="/api/Cake.Npm.Set/NpmSetTool">NpmSetTool</a></li>								
-											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
 											<li><a href="/api/Cake.Npm.Prune/NpmPruneRunner">NpmPruneRunner</a></li>								
-											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
-											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
 											<li><a href="/api/Cake.Npm.AddUser/NpmAddUser">NpmAddUser</a></li>								
 											<li><a href="/api/Cake.Npm.Update/NpmUpdateTool">NpmUpdateTool</a></li>								
+											<li><a href="/api/Cake.Npm.Ci/NpmCiTool">NpmCiTool</a></li>								
+											<li><a href="/api/Cake.Npm.Set/NpmSetTool">NpmSetTool</a></li>								
 											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
-											<li><a href="/api/Cake.Npm.Version/NpmVersionTool">NpmVersionTool</a></li>								
+											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
+											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
+											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
 									</ul>
 								</dd>			
 							
@@ -236,32 +237,32 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
 	Type["NpmTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["NpmInstaller"]
-	click Derived0 "/api/Cake.Npm.Install/NpmInstaller"
-	Type--&gt;Derived1["NpmCiTool"]
-	click Derived1 "/api/Cake.Npm.Ci/NpmCiTool"
-	Type--&gt;Derived2["NpmSetTool"]
-	click Derived2 "/api/Cake.Npm.Set/NpmSetTool"
-	Type--&gt;Derived3["NpmRebuilder"]
-	click Derived3 "/api/Cake.Npm.Rebuild/NpmRebuilder"
-	Type--&gt;Derived4["NpmPruneRunner"]
-	click Derived4 "/api/Cake.Npm.Prune/NpmPruneRunner"
-	Type--&gt;Derived5["NpmScriptRunner"]
-	click Derived5 "/api/Cake.Npm.RunScript/NpmScriptRunner"
-	Type--&gt;Derived6["NpmPublisher"]
-	click Derived6 "/api/Cake.Npm.Publish/NpmPublisher"
-	Type--&gt;Derived7["NpmAddUser"]
-	click Derived7 "/api/Cake.Npm.AddUser/NpmAddUser"
-	Type--&gt;Derived8["NpmUpdateTool"]
-	click Derived8 "/api/Cake.Npm.Update/NpmUpdateTool"
-	Type--&gt;Derived9["NpmPacker"]
-	click Derived9 "/api/Cake.Npm.Pack/NpmPacker"
-	Type--&gt;Derived10["NpmVersionTool"]
-	click Derived10 "/api/Cake.Npm.Version/NpmVersionTool"
+	Derived0["NpmVersionTool"]--&gt;Type
+	click Derived0 "/api/Cake.Npm.Version/NpmVersionTool"
+	Derived1["NpmInstaller"]--&gt;Type
+	click Derived1 "/api/Cake.Npm.Install/NpmInstaller"
+	Derived2["NpmPruneRunner"]--&gt;Type
+	click Derived2 "/api/Cake.Npm.Prune/NpmPruneRunner"
+	Derived3["NpmAddUser"]--&gt;Type
+	click Derived3 "/api/Cake.Npm.AddUser/NpmAddUser"
+	Derived4["NpmUpdateTool"]--&gt;Type
+	click Derived4 "/api/Cake.Npm.Update/NpmUpdateTool"
+	Derived5["NpmCiTool"]--&gt;Type
+	click Derived5 "/api/Cake.Npm.Ci/NpmCiTool"
+	Derived6["NpmSetTool"]--&gt;Type
+	click Derived6 "/api/Cake.Npm.Set/NpmSetTool"
+	Derived7["NpmPacker"]--&gt;Type
+	click Derived7 "/api/Cake.Npm.Pack/NpmPacker"
+	Derived8["NpmRebuilder"]--&gt;Type
+	click Derived8 "/api/Cake.Npm.Rebuild/NpmRebuilder"
+	Derived9["NpmScriptRunner"]--&gt;Type
+	click Derived9 "/api/Cake.Npm.RunScript/NpmScriptRunner"
+	Derived10["NpmPublisher"]--&gt;Type
+	click Derived10 "/api/Cake.Npm.Publish/NpmPublisher"
 
 						</div>
 					</div>
@@ -292,6 +293,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -539,22 +541,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

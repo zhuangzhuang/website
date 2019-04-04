@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - SmartAssemblySettings Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -177,7 +177,8 @@
 	<h1>Smart<wbr>Assembly<wbr>Settings <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -215,10 +216,10 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["AutoToolSettings"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["AutoToolSettings"]
 	click Base0 "/api/Cake.SmartAssembly/AutoToolSettings"
-	Base1["ToolSettings"]--&gt;Base0
+	Base0--&gt;Base1["ToolSettings"]
 	Type["SmartAssemblySettings"]
 class Type type-node
 
@@ -230,6 +231,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class SmartAssemblySettings : AutoToolSettings</code></pre>
+
 
 
 
@@ -270,7 +272,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/B8492956">Error<wbr>Reporting<wbr>Template</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Enabling error reporting
@@ -288,7 +290,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/093B21F1">FieldObfuscation</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             Setting the fields name mangling level
@@ -306,7 +308,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/C22CBE48">MakePdb</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Creating a PDB file
@@ -315,7 +317,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/F507B703">Method<wbr>Parent<wbr>Obfuscation</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Adding method parent obfuscation to the assembly
@@ -324,7 +326,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/C531C7B8">ObfuscatePdbUrls</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Obfuscating URLs in the PDB file
@@ -333,7 +335,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/6D56FB52">PreventILDasm</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Preventing Microsoft IL Disassembler from opening your assembly
@@ -342,7 +344,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/AF54C5CE">ReduceMem</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Reducing the assembly's unused, allocated memory
@@ -378,7 +380,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/72CA62B2">SealClasses</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Sealing classes that are not inherited
@@ -387,7 +389,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/9550EBBE">StringsEncoding</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Setting strings encoding
@@ -410,7 +412,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/7845FF23">TamperProtection</a></td>
-								<td>bool?</td>
+								<td>Nullable<wbr>&lt;bool&gt;<wbr></td>
 								<td>
 									<div>
             Adding tamper protection to the assembly
@@ -419,7 +421,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.SmartAssembly/SmartAssemblySettings/80024A28">Type<wbr>Method<wbr>Obfuscation</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
 								<td>
 									<div>
             Setting the types / methods name mangling level
@@ -573,22 +575,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

@@ -9,7 +9,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - Reference</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -24,6 +23,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -415,13 +415,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dry-run">Dry Run</a></td>
@@ -432,20 +427,14 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Contains functionality for working with PSCP.
-            
-
-            Aliases for Putty.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fixie">Fixie</a></td>
@@ -577,7 +566,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -793,7 +782,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -928,7 +917,7 @@
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running Azure login commands.
+            Contains Cake aliases for running commands managing Azure resource groups.
             </td>
                 </tr>
                 <tr>
@@ -1108,7 +1097,7 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to serving websites using 
+            Contains functionality related to extracting API metadata using
             <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
@@ -1133,13 +1122,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></td>
@@ -1148,7 +1132,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            Contains functionality related to emails.
+            The result of EmailProvider.
             </td>
                 </tr>
                 <tr>
@@ -1177,8 +1161,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fastlane">Fastlane</a></td>
@@ -1202,14 +1186,8 @@
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
                     <td>
-            Contains functionality for working with Plink.
-            
-
-            Contains functionality for working with PSCP.
-            
-
-            Aliases for Putty.
-            </td>
+    Contains functionality related to file operations.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fileset">FileSet</a></td>
@@ -1262,7 +1240,7 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Contains GitterProvider Chat functionality.
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
@@ -1340,7 +1318,7 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to creating issue reports.
+            Contains functionality for creating issue reports in any text based format (HTML, Markdown, ...).
             </td>
                 </tr>
                 <tr>
@@ -1417,7 +1395,7 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-    Contains functionality related to MSBuild solution files.
+    Contains functionality related to MSBuild XML document files.
     </td>
                 </tr>
                 <tr>
@@ -1594,7 +1572,7 @@
                 <tr>
                     <td><a href="/dsl/sendgrid">SendGrid</a></td>
                     <td>
-            The result of SendGridProvider API post.
+            Contains functionality related to SendGrid API.
             </td>
                 </tr>
                 <tr>
@@ -1680,11 +1658,8 @@
                 <tr>
                     <td><a href="/dsl/strong-naming">Strong Naming</a></td>
                     <td>
-            Strong Name (sn.exe) tool aliases. It is possible to resign a delay-signed assembly. 
-            The resign alias uses the sn.exe containers to resign the specified assemblies.
-            the aliases also provide verification functionality. The verify alias will check if an assembly has a 
-            strong name or not.
-            <code class="cs"><a href="/api/Cake.StrongNameTool/StrongNameToolSettings/940C443C">ForceVerification</a></code>  set to true.
+            Strong name verify tool aliases. If one has turned off strong name verification on a machine 
+            you can provide the StrongNameToolSettings with ForceVerification set to true.
             </td>
                 </tr>
                 <tr>
@@ -1961,22 +1936,53 @@
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

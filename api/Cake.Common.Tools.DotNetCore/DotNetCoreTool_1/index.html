@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - DotNetCoreTool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -171,6 +171,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -198,20 +199,20 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker">DotNetCorePacker</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.BuildServer/DotNetCoreBuildServer">Dot<wbr>Net<wbr>Core<wbr>Build<wbr>Server</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher">DotNetCorePublisher</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner">DotNetCoreRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner">DotNetCoreCleaner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder">DotNetCoreBuilder</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Deleter</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer">DotNetCoreRestorer</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Builder</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner">DotNetCoreToolRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester">DotNetCoreTester</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester">DotNetCoreVSTester</a></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Pusher</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor">DotNetCoreExecutor</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner">DotNetCoreToolRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Pusher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester">DotNetCoreTester</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer">DotNetCoreRestorer</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder">DotNetCoreBuilder</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher">DotNetCorePublisher</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner">DotNetCoreCleaner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter">Dot<wbr>Net<wbr>Core<wbr>Nu<wbr>Get<wbr>Deleter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker">DotNetCorePacker</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder">Dot<wbr>Net<wbr>Core<wbr>M<wbr>S<wbr>Build<wbr>Builder</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner">DotNetCoreRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -219,39 +220,39 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
-	Base1["object"]--&gt;Base0
+							graph BT
+	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
+	Base0--&gt;Base1["object"]
 	Type["DotNetCoreTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["DotNetCorePacker"]
-	click Derived0 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker"
-	Type--&gt;Derived1["DotNetCoreBuildServer"]
-	click Derived1 "/api/Cake.Common.Tools.DotNetCore.BuildServer/DotNetCoreBuildServer"
-	Type--&gt;Derived2["DotNetCorePublisher"]
-	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher"
-	Type--&gt;Derived3["DotNetCoreRunner"]
-	click Derived3 "/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner"
-	Type--&gt;Derived4["DotNetCoreCleaner"]
-	click Derived4 "/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner"
-	Type--&gt;Derived5["DotNetCoreBuilder"]
-	click Derived5 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder"
-	Type--&gt;Derived6["DotNetCoreNuGetDeleter"]
-	click Derived6 "/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter"
-	Type--&gt;Derived7["DotNetCoreRestorer"]
-	click Derived7 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer"
-	Type--&gt;Derived8["DotNetCoreMSBuildBuilder"]
-	click Derived8 "/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder"
-	Type--&gt;Derived9["DotNetCoreToolRunner"]
-	click Derived9 "/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner"
-	Type--&gt;Derived10["DotNetCoreTester"]
-	click Derived10 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester"
-	Type--&gt;Derived11["DotNetCoreVSTester"]
-	click Derived11 "/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester"
-	Type--&gt;Derived12["DotNetCoreNuGetPusher"]
-	click Derived12 "/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher"
-	Type--&gt;Derived13["DotNetCoreExecutor"]
-	click Derived13 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor"
+	Derived0["DotNetCoreBuildServer"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Tools.DotNetCore.BuildServer/DotNetCoreBuildServer"
+	Derived1["DotNetCoreVSTester"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Tools.DotNetCore.VSTest/DotNetCoreVSTester"
+	Derived2["DotNetCoreExecutor"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Tools.DotNetCore.Execute/DotNetCoreExecutor"
+	Derived3["DotNetCoreToolRunner"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Tools.DotNetCore.Tool/DotNetCoreToolRunner"
+	Derived4["DotNetCoreNuGetPusher"]--&gt;Type
+	click Derived4 "/api/Cake.Common.Tools.DotNetCore.NuGet.Push/DotNetCoreNuGetPusher"
+	Derived5["DotNetCoreTester"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Tools.DotNetCore.Test/DotNetCoreTester"
+	Derived6["DotNetCoreRestorer"]--&gt;Type
+	click Derived6 "/api/Cake.Common.Tools.DotNetCore.Restore/DotNetCoreRestorer"
+	Derived7["DotNetCoreBuilder"]--&gt;Type
+	click Derived7 "/api/Cake.Common.Tools.DotNetCore.Build/DotNetCoreBuilder"
+	Derived8["DotNetCorePublisher"]--&gt;Type
+	click Derived8 "/api/Cake.Common.Tools.DotNetCore.Publish/DotNetCorePublisher"
+	Derived9["DotNetCoreCleaner"]--&gt;Type
+	click Derived9 "/api/Cake.Common.Tools.DotNetCore.Clean/DotNetCoreCleaner"
+	Derived10["DotNetCoreNuGetDeleter"]--&gt;Type
+	click Derived10 "/api/Cake.Common.Tools.DotNetCore.NuGet.Delete/DotNetCoreNuGetDeleter"
+	Derived11["DotNetCorePacker"]--&gt;Type
+	click Derived11 "/api/Cake.Common.Tools.DotNetCore.Pack/DotNetCorePacker"
+	Derived12["DotNetCoreMSBuildBuilder"]--&gt;Type
+	click Derived12 "/api/Cake.Common.Tools.DotNetCore.MSBuild/DotNetCoreMSBuildBuilder"
+	Derived13["DotNetCoreRunner"]--&gt;Type
+	click Derived13 "/api/Cake.Common.Tools.DotNetCore.Run/DotNetCoreRunner"
 
 						</div>
 					</div>
@@ -283,6 +284,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -506,22 +508,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

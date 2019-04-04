@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - Tool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -175,6 +175,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -201,44 +202,44 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.GitLink/GitLinkRunner">GitLinkRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildRunner">MSBuildRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.WiX/CandleRunner">CandleRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitLink/GitLink3Runner">GitLink3Runner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.ILMerge/ILMergeRunner">ILMergeRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.SignTool/SignToolSignRunner">SignToolSignRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.TextTransform/TextTransformRunner">TextTransformRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.MSTest/MSTestRunner">MSTestRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Roundhouse/RoundhouseRunner">RoundhouseRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.VSTest/VSTestRunner">VSTestRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner">InnoSetupRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1">NuGetTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesRunner">Git<wbr>Release<wbr>Notes<wbr>Runner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerTool_1">Git<wbr>Release<wbr>Manager<wbr>Tool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.XUnit/XUnitRunner">XUnitRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverRunner">OpenCoverRunner</a></li>								
 											<li><a href="/api/Cake.Common.Tools.Cake/CakeRunner">CakeRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSTest/VSTestRunner">VSTestRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildRunner">MSBuildRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.VSWhere/VSWhereTool_1">VSWhereTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.VSWhere/VSWhereTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.SpecFlow/SpecFlowTool_1">SpecFlowTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.SpecFlow/SpecFlowTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1">ChocolateyTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.XUnit/XUnit2Runner">XUnit2Runner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner">InnoSetupRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerTool_1">Git<wbr>Release<wbr>Manager<wbr>Tool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.SignTool/SignToolSignRunner">SignToolSignRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1">NuGetTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorRunner">Report<wbr>Generator<wbr>Runner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitLink/GitLinkRunner">GitLinkRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.MSpec/MSpecRunner">MSpecRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1">DotNetCoreTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1">DotCoverTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Common.Tools.NSIS/MakeNSISRunner">MakeNSISRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.WiX.Heat/HeatRunner">HeatRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Runner">NUnit3Runner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitLink/GitLink3Runner">GitLink3Runner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Roundhouse/RoundhouseRunner">RoundhouseRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.WiX/LightRunner">LightRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.ILMerge/ILMergeRunner">ILMergeRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.WiX/CandleRunner">CandleRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.XUnit/XUnitRunner">XUnitRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesRunner">Git<wbr>Release<wbr>Notes<wbr>Runner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.Fixie/FixieRunner">FixieRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.ILRepack/ILRepackRunner">ILRepackRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.TextTransform/TextTransformRunner">TextTransformRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.ReportUnit/ReportUnitRunner">ReportUnitRunner</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DupFinder/DupFinderRunner">DupFinderRunner</a></li>								
 											<li><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeRunner">InspectCodeRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1">OctopusDeployTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1">DotNetCoreTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.OpenCover/OpenCoverRunner">OpenCoverRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.XUnit/XUnit2Runner">XUnit2Runner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.VSWhere/VSWhereTool_1">VSWhereTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.VSWhere/VSWhereTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.ReportUnit/ReportUnitRunner">ReportUnitRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.WiX/LightRunner">LightRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.MSpec/MSpecRunner">MSpecRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.SpecFlow/SpecFlowTool_1">SpecFlowTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.SpecFlow/SpecFlowTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.GitVersion/GitVersionRunner">GitVersionRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.ILRepack/ILRepackRunner">ILRepackRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NUnit/NUnit3Runner">NUnit3Runner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1">ChocolateyTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1">DotCoverTool</a><wbr>&lt;<a href="/api/Cake.Common.Tools.DotCover/DotCoverTool_1#typeparam-TSettings">TSettings</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Common.Tools.NUnit/NUnitRunner">NUnitRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.Fixie/FixieRunner">FixieRunner</a></li>								
 											<li><a href="/api/Cake.Common.Tools.XBuild/XBuildRunner">XBuildRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NSIS/MakeNSISRunner">MakeNSISRunner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorRunner">Report<wbr>Generator<wbr>Runner</a></li>								
-											<li><a href="/api/Cake.Common.Tools.WiX.Heat/HeatRunner">HeatRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.MSTest/MSTestRunner">MSTestRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.GitVersion/GitVersionRunner">GitVersionRunner</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NUnit/NUnitRunner">NUnitRunner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -246,86 +247,86 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["object"]
 	Type["Tool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["GitLinkRunner"]
-	click Derived0 "/api/Cake.Common.Tools.GitLink/GitLinkRunner"
-	Type--&gt;Derived1["MSBuildRunner"]
-	click Derived1 "/api/Cake.Common.Tools.MSBuild/MSBuildRunner"
-	Type--&gt;Derived2["CandleRunner"]
-	click Derived2 "/api/Cake.Common.Tools.WiX/CandleRunner"
-	Type--&gt;Derived3["GitLink3Runner"]
-	click Derived3 "/api/Cake.Common.Tools.GitLink/GitLink3Runner"
-	Type--&gt;Derived4["ILMergeRunner"]
-	click Derived4 "/api/Cake.Common.Tools.ILMerge/ILMergeRunner"
-	Type--&gt;Derived5["SignToolSignRunner"]
-	click Derived5 "/api/Cake.Common.Tools.SignTool/SignToolSignRunner"
-	Type--&gt;Derived6["TextTransformRunner"]
-	click Derived6 "/api/Cake.Common.Tools.TextTransform/TextTransformRunner"
-	Type--&gt;Derived7["MSTestRunner"]
-	click Derived7 "/api/Cake.Common.Tools.MSTest/MSTestRunner"
-	Type--&gt;Derived8["RoundhouseRunner"]
-	click Derived8 "/api/Cake.Common.Tools.Roundhouse/RoundhouseRunner"
-	Type--&gt;Derived9["VSTestRunner"]
-	click Derived9 "/api/Cake.Common.Tools.VSTest/VSTestRunner"
-	Type--&gt;Derived10["InnoSetupRunner"]
-	click Derived10 "/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner"
-	Type--&gt;Derived11["NuGetTool&lt;TSettings&gt;"]
-	click Derived11 "/api/Cake.Common.Tools.NuGet/NuGetTool_1"
-	Type--&gt;Derived12["GitReleaseNotesRunner"]
-	click Derived12 "/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesRunner"
-	Type--&gt;Derived13["GitReleaseManagerTool&lt;TSettings&gt;"]
-	click Derived13 "/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerTool_1"
-	Type--&gt;Derived14["XUnitRunner"]
-	click Derived14 "/api/Cake.Common.Tools.XUnit/XUnitRunner"
-	Type--&gt;Derived15["CakeRunner"]
-	click Derived15 "/api/Cake.Common.Tools.Cake/CakeRunner"
-	Type--&gt;Derived16["DupFinderRunner"]
-	click Derived16 "/api/Cake.Common.Tools.DupFinder/DupFinderRunner"
-	Type--&gt;Derived17["InspectCodeRunner"]
-	click Derived17 "/api/Cake.Common.Tools.InspectCode/InspectCodeRunner"
-	Type--&gt;Derived18["OctopusDeployTool&lt;TSettings&gt;"]
-	click Derived18 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1"
-	Type--&gt;Derived19["DotNetCoreTool&lt;TSettings&gt;"]
-	click Derived19 "/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1"
-	Type--&gt;Derived20["OpenCoverRunner"]
-	click Derived20 "/api/Cake.Common.Tools.OpenCover/OpenCoverRunner"
-	Type--&gt;Derived21["XUnit2Runner"]
-	click Derived21 "/api/Cake.Common.Tools.XUnit/XUnit2Runner"
-	Type--&gt;Derived22["VSWhereTool&lt;TSettings&gt;"]
-	click Derived22 "/api/Cake.Common.Tools.VSWhere/VSWhereTool_1"
-	Type--&gt;Derived23["ReportUnitRunner"]
-	click Derived23 "/api/Cake.Common.Tools.ReportUnit/ReportUnitRunner"
-	Type--&gt;Derived24["LightRunner"]
-	click Derived24 "/api/Cake.Common.Tools.WiX/LightRunner"
-	Type--&gt;Derived25["MSpecRunner"]
-	click Derived25 "/api/Cake.Common.Tools.MSpec/MSpecRunner"
-	Type--&gt;Derived26["SpecFlowTool&lt;TSettings&gt;"]
-	click Derived26 "/api/Cake.Common.Tools.SpecFlow/SpecFlowTool_1"
-	Type--&gt;Derived27["GitVersionRunner"]
-	click Derived27 "/api/Cake.Common.Tools.GitVersion/GitVersionRunner"
-	Type--&gt;Derived28["ILRepackRunner"]
-	click Derived28 "/api/Cake.Common.Tools.ILRepack/ILRepackRunner"
-	Type--&gt;Derived29["NUnit3Runner"]
-	click Derived29 "/api/Cake.Common.Tools.NUnit/NUnit3Runner"
-	Type--&gt;Derived30["ChocolateyTool&lt;TSettings&gt;"]
-	click Derived30 "/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1"
-	Type--&gt;Derived31["DotCoverTool&lt;TSettings&gt;"]
-	click Derived31 "/api/Cake.Common.Tools.DotCover/DotCoverTool_1"
-	Type--&gt;Derived32["NUnitRunner"]
-	click Derived32 "/api/Cake.Common.Tools.NUnit/NUnitRunner"
-	Type--&gt;Derived33["FixieRunner"]
-	click Derived33 "/api/Cake.Common.Tools.Fixie/FixieRunner"
-	Type--&gt;Derived34["XBuildRunner"]
+	Derived0["OctopusDeployTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployTool_1"
+	Derived1["OpenCoverRunner"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Tools.OpenCover/OpenCoverRunner"
+	Derived2["CakeRunner"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Tools.Cake/CakeRunner"
+	Derived3["VSTestRunner"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Tools.VSTest/VSTestRunner"
+	Derived4["MSBuildRunner"]--&gt;Type
+	click Derived4 "/api/Cake.Common.Tools.MSBuild/MSBuildRunner"
+	Derived5["VSWhereTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Tools.VSWhere/VSWhereTool_1"
+	Derived6["SpecFlowTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived6 "/api/Cake.Common.Tools.SpecFlow/SpecFlowTool_1"
+	Derived7["ChocolateyTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived7 "/api/Cake.Common.Tools.Chocolatey/ChocolateyTool_1"
+	Derived8["XUnit2Runner"]--&gt;Type
+	click Derived8 "/api/Cake.Common.Tools.XUnit/XUnit2Runner"
+	Derived9["InnoSetupRunner"]--&gt;Type
+	click Derived9 "/api/Cake.Common.Tools.InnoSetup/InnoSetupRunner"
+	Derived10["GitReleaseManagerTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived10 "/api/Cake.Common.Tools.GitReleaseManager/GitReleaseManagerTool_1"
+	Derived11["SignToolSignRunner"]--&gt;Type
+	click Derived11 "/api/Cake.Common.Tools.SignTool/SignToolSignRunner"
+	Derived12["NuGetTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived12 "/api/Cake.Common.Tools.NuGet/NuGetTool_1"
+	Derived13["ReportGeneratorRunner"]--&gt;Type
+	click Derived13 "/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorRunner"
+	Derived14["GitLinkRunner"]--&gt;Type
+	click Derived14 "/api/Cake.Common.Tools.GitLink/GitLinkRunner"
+	Derived15["MSpecRunner"]--&gt;Type
+	click Derived15 "/api/Cake.Common.Tools.MSpec/MSpecRunner"
+	Derived16["DotNetCoreTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived16 "/api/Cake.Common.Tools.DotNetCore/DotNetCoreTool_1"
+	Derived17["DotCoverTool&lt;TSettings&gt;"]--&gt;Type
+	click Derived17 "/api/Cake.Common.Tools.DotCover/DotCoverTool_1"
+	Derived18["MakeNSISRunner"]--&gt;Type
+	click Derived18 "/api/Cake.Common.Tools.NSIS/MakeNSISRunner"
+	Derived19["HeatRunner"]--&gt;Type
+	click Derived19 "/api/Cake.Common.Tools.WiX.Heat/HeatRunner"
+	Derived20["NUnit3Runner"]--&gt;Type
+	click Derived20 "/api/Cake.Common.Tools.NUnit/NUnit3Runner"
+	Derived21["GitLink3Runner"]--&gt;Type
+	click Derived21 "/api/Cake.Common.Tools.GitLink/GitLink3Runner"
+	Derived22["RoundhouseRunner"]--&gt;Type
+	click Derived22 "/api/Cake.Common.Tools.Roundhouse/RoundhouseRunner"
+	Derived23["LightRunner"]--&gt;Type
+	click Derived23 "/api/Cake.Common.Tools.WiX/LightRunner"
+	Derived24["ILMergeRunner"]--&gt;Type
+	click Derived24 "/api/Cake.Common.Tools.ILMerge/ILMergeRunner"
+	Derived25["CandleRunner"]--&gt;Type
+	click Derived25 "/api/Cake.Common.Tools.WiX/CandleRunner"
+	Derived26["XUnitRunner"]--&gt;Type
+	click Derived26 "/api/Cake.Common.Tools.XUnit/XUnitRunner"
+	Derived27["GitReleaseNotesRunner"]--&gt;Type
+	click Derived27 "/api/Cake.Common.Tools.GitReleaseNotes/GitReleaseNotesRunner"
+	Derived28["FixieRunner"]--&gt;Type
+	click Derived28 "/api/Cake.Common.Tools.Fixie/FixieRunner"
+	Derived29["ILRepackRunner"]--&gt;Type
+	click Derived29 "/api/Cake.Common.Tools.ILRepack/ILRepackRunner"
+	Derived30["TextTransformRunner"]--&gt;Type
+	click Derived30 "/api/Cake.Common.Tools.TextTransform/TextTransformRunner"
+	Derived31["ReportUnitRunner"]--&gt;Type
+	click Derived31 "/api/Cake.Common.Tools.ReportUnit/ReportUnitRunner"
+	Derived32["DupFinderRunner"]--&gt;Type
+	click Derived32 "/api/Cake.Common.Tools.DupFinder/DupFinderRunner"
+	Derived33["InspectCodeRunner"]--&gt;Type
+	click Derived33 "/api/Cake.Common.Tools.InspectCode/InspectCodeRunner"
+	Derived34["XBuildRunner"]--&gt;Type
 	click Derived34 "/api/Cake.Common.Tools.XBuild/XBuildRunner"
-	Type--&gt;Derived35["MakeNSISRunner"]
-	click Derived35 "/api/Cake.Common.Tools.NSIS/MakeNSISRunner"
-	Type--&gt;Derived36["ReportGeneratorRunner"]
-	click Derived36 "/api/Cake.Common.Tools.ReportGenerator/ReportGeneratorRunner"
-	Type--&gt;Derived37["HeatRunner"]
-	click Derived37 "/api/Cake.Common.Tools.WiX.Heat/HeatRunner"
+	Derived35["MSTestRunner"]--&gt;Type
+	click Derived35 "/api/Cake.Common.Tools.MSTest/MSTestRunner"
+	Derived36["GitVersionRunner"]--&gt;Type
+	click Derived36 "/api/Cake.Common.Tools.GitVersion/GitVersionRunner"
+	Derived37["NUnitRunner"]--&gt;Type
+	click Derived37 "/api/Cake.Common.Tools.NUnit/NUnitRunner"
 
 						</div>
 					</div>
@@ -356,6 +357,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -641,22 +643,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

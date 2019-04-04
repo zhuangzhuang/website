@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - ICakeContext Interface</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -226,6 +226,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -247,45 +248,45 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
-											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
-											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
+											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
+							graph BT
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["TeardownContext"]
-	click Implementing0 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing1["ITaskTeardownContext"]
+	Implementing0["ITaskSetupContext"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core/ITaskSetupContext"
+	Implementing1["ITaskTeardownContext"]-.-&gt;Type
 	click Implementing1 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing2["ITeardownContext"]
+	Implementing2["ITeardownContext"]-.-&gt;Type
 	click Implementing2 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing3["ITaskSetupContext"]
-	click Implementing3 "/api/Cake.Core/ITaskSetupContext"
-	Type-.-&gt;Implementing4["SetupContext"]
-	click Implementing4 "/api/Cake.Core/SetupContext"
-	Type-.-&gt;Implementing5["TaskSetupContext"]
+	Implementing3["TaskTeardownContext"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Core/TaskTeardownContext"
+	Implementing4["CakeContext"]-.-&gt;Type
+	click Implementing4 "/api/Cake.Core/CakeContext"
+	Implementing5["TaskSetupContext"]-.-&gt;Type
 	click Implementing5 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing6["CakeContextAdapter"]
-	click Implementing6 "/api/Cake.Core/CakeContextAdapter"
-	Type-.-&gt;Implementing7["CakeContext"]
-	click Implementing7 "/api/Cake.Core/CakeContext"
-	Type-.-&gt;Implementing8["ISetupContext"]
-	click Implementing8 "/api/Cake.Core/ISetupContext"
-	Type-.-&gt;Implementing9["TaskTeardownContext"]
-	click Implementing9 "/api/Cake.Core/TaskTeardownContext"
+	Implementing6["TeardownContext"]-.-&gt;Type
+	click Implementing6 "/api/Cake.Core/TeardownContext"
+	Implementing7["SetupContext"]-.-&gt;Type
+	click Implementing7 "/api/Cake.Core/SetupContext"
+	Implementing8["CakeContextAdapter"]-.-&gt;Type
+	click Implementing8 "/api/Cake.Core/CakeContextAdapter"
+	Implementing9["ISetupContext"]-.-&gt;Type
+	click Implementing9 "/api/Cake.Core/ISetupContext"
 
 						</div>
 					</div>
@@ -295,6 +296,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public interface ICakeContext</code></pre>
+
 
 
 
@@ -4830,22 +4832,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

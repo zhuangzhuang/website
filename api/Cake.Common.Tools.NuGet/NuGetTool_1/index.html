@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - NuGetTool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -147,13 +147,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.NuGet">Cake<wbr>.Common<wbr>.Tools<wbr>.NuGet</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetMSBuildVersion">NuGetMSBuildVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetVerbosity">NuGetVerbosity</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetAliases">NuGetAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetMSBuildVersionExtensions">Nu<wbr>Get<wbr>M<wbr>S<wbr>Build<wbr>Version<wbr>Extensions</a></li>
 				<li class="selected"><a href="/api/Cake.Common.Tools.NuGet/NuGetTool_1">NuGetTool<wbr>&lt;TSettings&gt;<wbr></a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetMSBuildVersion">NuGetMSBuildVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.NuGet/NuGetVerbosity">NuGetVerbosity</a></li>
 
 
                     </ul>
@@ -172,6 +172,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -199,17 +200,17 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.NuGet.Add/NuGetAdder">NuGetAdder</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.List/NuGetList">NuGetList</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKey">NuGetSetApiKey</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPacker">NuGetPacker</a></li>								
 											<li><a href="/api/Cake.Common.Tools.NuGet.Update/NuGetUpdater">NuGetUpdater</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Sources/NuGetSources">NuGetSources</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxy">NuGetSetProxy</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Init/NuGetIniter">NuGetIniter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Add/NuGetAdder">NuGetAdder</a></li>								
 											<li><a href="/api/Cake.Common.Tools.NuGet.Install/NuGetInstaller">NuGetInstaller</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.List/NuGetList">NuGetList</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Init/NuGetIniter">NuGetIniter</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKey">NuGetSetApiKey</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxy">NuGetSetProxy</a></li>								
 											<li><a href="/api/Cake.Common.Tools.NuGet.Restore/NuGetRestorer">NuGetRestorer</a></li>								
 											<li><a href="/api/Cake.Common.Tools.NuGet.Push/NuGetPusher">NuGetPusher</a></li>								
-											<li><a href="/api/Cake.Common.Tools.NuGet.Pack/NuGetPacker">NuGetPacker</a></li>								
+											<li><a href="/api/Cake.Common.Tools.NuGet.Sources/NuGetSources">NuGetSources</a></li>								
 									</ul>
 								</dd>			
 							
@@ -217,33 +218,33 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
-	Base1["object"]--&gt;Base0
+							graph BT
+	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
+	Base0--&gt;Base1["object"]
 	Type["NuGetTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["NuGetAdder"]
-	click Derived0 "/api/Cake.Common.Tools.NuGet.Add/NuGetAdder"
-	Type--&gt;Derived1["NuGetList"]
-	click Derived1 "/api/Cake.Common.Tools.NuGet.List/NuGetList"
-	Type--&gt;Derived2["NuGetSetApiKey"]
-	click Derived2 "/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKey"
-	Type--&gt;Derived3["NuGetUpdater"]
-	click Derived3 "/api/Cake.Common.Tools.NuGet.Update/NuGetUpdater"
-	Type--&gt;Derived4["NuGetSources"]
-	click Derived4 "/api/Cake.Common.Tools.NuGet.Sources/NuGetSources"
-	Type--&gt;Derived5["NuGetSetProxy"]
-	click Derived5 "/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxy"
-	Type--&gt;Derived6["NuGetIniter"]
-	click Derived6 "/api/Cake.Common.Tools.NuGet.Init/NuGetIniter"
-	Type--&gt;Derived7["NuGetInstaller"]
-	click Derived7 "/api/Cake.Common.Tools.NuGet.Install/NuGetInstaller"
-	Type--&gt;Derived8["NuGetRestorer"]
+	Derived0["NuGetPacker"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Tools.NuGet.Pack/NuGetPacker"
+	Derived1["NuGetUpdater"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Tools.NuGet.Update/NuGetUpdater"
+	Derived2["NuGetAdder"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Tools.NuGet.Add/NuGetAdder"
+	Derived3["NuGetInstaller"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Tools.NuGet.Install/NuGetInstaller"
+	Derived4["NuGetList"]--&gt;Type
+	click Derived4 "/api/Cake.Common.Tools.NuGet.List/NuGetList"
+	Derived5["NuGetIniter"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Tools.NuGet.Init/NuGetIniter"
+	Derived6["NuGetSetApiKey"]--&gt;Type
+	click Derived6 "/api/Cake.Common.Tools.NuGet.SetApiKey/NuGetSetApiKey"
+	Derived7["NuGetSetProxy"]--&gt;Type
+	click Derived7 "/api/Cake.Common.Tools.NuGet.SetProxy/NuGetSetProxy"
+	Derived8["NuGetRestorer"]--&gt;Type
 	click Derived8 "/api/Cake.Common.Tools.NuGet.Restore/NuGetRestorer"
-	Type--&gt;Derived9["NuGetPusher"]
+	Derived9["NuGetPusher"]--&gt;Type
 	click Derived9 "/api/Cake.Common.Tools.NuGet.Push/NuGetPusher"
-	Type--&gt;Derived10["NuGetPacker"]
-	click Derived10 "/api/Cake.Common.Tools.NuGet.Pack/NuGetPacker"
+	Derived10["NuGetSources"]--&gt;Type
+	click Derived10 "/api/Cake.Common.Tools.NuGet.Sources/NuGetSources"
 
 						</div>
 					</div>
@@ -274,6 +275,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -479,22 +481,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

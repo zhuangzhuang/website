@@ -1,22 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - VSWhere and Visual Studio 2017 Support</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
-        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/override.css" rel="stylesheet" />
+        <link href="/assets/css/override.css" rel="stylesheet">
         <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
@@ -24,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -93,13 +91,13 @@
                     <ul class="sidebar-menu">
                         
 
-    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-        <li><a href="/blog/Addins">Addins</a></li>
-        <li><a href="/blog/Announcement">Announcement</a></li>
-        <li><a href="/blog/How-Tos">How To&#x27;s</a></li>
-        <li><a href="/blog/Infrastructure">Infrastructure</a></li>
-        <li><a href="/blog/News">News</a></li>
-        <li><a href="/blog/Release-Notes">Release Notes</a></li>
+        <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+            <li><a href="/blog/Addins">Addins</a></li>
+            <li><a href="/blog/Announcement">Announcement</a></li>
+            <li><a href="/blog/How-Tos">How To's</a></li>
+            <li><a href="/blog/Infrastructure">Infrastructure</a></li>
+            <li><a href="/blog/News">News</a></li>
+            <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
         <li><a href="/blog/archive/2019/04">April, 2019</a></li>
@@ -143,18 +141,18 @@
         <li><a href="/blog/archive/2015/08">August, 2015</a></li>
         <li><a href="/blog/archive/2015/07">July, 2015</a></li>
     
-    <li class="header"><i class="fa fa-user"></i> Authors</li>    
-        <li><a href="/blog/author/agc93">agc93</a></li>
-        <li><a href="/blog/author/daveaglick">daveaglick</a></li>
-        <li><a href="/blog/author/devlead">devlead</a></li>
-        <li><a href="/blog/author/gep13">gep13</a></li>
-        <li><a href="/blog/author/jericho">jericho</a></li>
-        <li><a href="/blog/author/Larz-White">Larz White</a></li>
-        <li><a href="/blog/author/mholo65">mholo65</a></li>
-        <li><a href="/blog/author/Pascal-Berger">Pascal Berger</a></li>
-        <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
-        <li><a href="/blog/author/phillipsj">phillipsj</a></li>
-        <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
+        <li class="header"><i class="fa fa-user"></i> Authors</li>    
+            <li><a href="/blog/author/agc93">agc93</a></li>
+            <li><a href="/blog/author/daveaglick">daveaglick</a></li>
+            <li><a href="/blog/author/devlead">devlead</a></li>
+            <li><a href="/blog/author/gep13">gep13</a></li>
+            <li><a href="/blog/author/jericho">jericho</a></li>
+            <li><a href="/blog/author/Larz-White">Larz White</a></li>
+            <li><a href="/blog/author/mholo65">mholo65</a></li>
+            <li><a href="/blog/author/Pascal-Berger">Pascal Berger</a></li>
+            <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
+            <li><a href="/blog/author/phillipsj">phillipsj</a></li>
+            <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
 
                     </ul>
                             
@@ -174,17 +172,18 @@
 		
 
 
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
+
+<dl class="dl-horizontal" style="margin-bottom: 12px;">
+    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
     <dd>Monday, March 27, 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/How-Tos">How To&#x27;s</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
+        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/How-Tos">How To's</a></dd>
+            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/phillipsj">phillipsj</a></dd>
 </dl>
 
 
-<html><head></head><body><p>Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the <a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/">Microsoft.VisualStudio.Setup.Configuration.Interop</a> package that was created by Microsoft to help locate Visual Studio 2017 installations.</p>
+<p>Since version 0.18.0 of Cake, there has been support created for Visual Studio 2017. The support was added to the MSBuild tool to search for the default installation locations of the various flavors of MSBuild. The default locations did not require an external dependency on the <a href="https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/">Microsoft.VisualStudio.Setup.Configuration.Interop</a> package that was created by Microsoft to help locate Visual Studio 2017 installations.</p>
 <p>Shortly after the release of version 0.18.0, Microsoft released a tool called <a href="https://github.com/Microsoft/vswhere">vswhere</a> to help locate Visual Studio and other products in the family. This tool was released with Cake version 0.19.1 to allow everyone that moved to Visual Studio 2017 to get their builds up and running.</p>
 <p>This post is going to walk through the different pieces of functionality supported by the <a href="https://cakebuild.net/dsl/vswhere/">VSWhere tool</a>.</p>
 <!--excerpt-->
@@ -299,16 +298,16 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
 <a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a> legacyInstallationPath = VSWhereLegacy(new <a href="/api/Cake.Common.Tools.VSWhere.Legacy/VSWhereLegacySettings">VSWhereLegacySettings</a> { Version = "10.0"}).FirstOrDefault();
 
 </code></pre>
-</body></html>
 
-<hr />
+
+<hr>
 
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&t=VSWhere%20and%20Visual%20Studio%202017%20Support" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&text=VSWhere%20and%20Visual%20Studio%202017%20Support:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
-  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&title=VSWhere%20and%20Visual%20Studio%202017%20Support" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
-  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&title=VSWhere%20and%20Visual%20Studio%202017%20Support&summary=&source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
-  <li><a href="mailto:?subject=VSWhere%20and%20Visual%20Studio%202017%20Support&body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&amp;t=VSWhere%20and%20Visual%20Studio%202017%20Support" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&amp;text=VSWhere%20and%20Visual%20Studio%202017%20Support:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&amp;via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&amp;title=VSWhere%20and%20Visual%20Studio%202017%20Support" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support&amp;title=VSWhere%20and%20Visual%20Studio%202017%20Support&amp;summary=&amp;source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="mailto:?subject=VSWhere%20and%20Visual%20Studio%202017%20Support&amp;body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2017%2F03%2Fvswhere-and-visual-studio-2017-support" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
 </ul>
 
 	</section>
@@ -326,9 +325,9 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
     <a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> GitHub</a> |
     <a href="https://twitter.com/cakebuildnet"><i class="fa fa-twitter"></i> Twitter</a> |
     <a href="https://gitter.im/cake-build/cake"><i class="fa fa-comment"></i> Gitter</a>
-    <br/>
-    Copyright &copy; <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
-    <br/>
+    <br>
+    Copyright © <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
+    <br>
     Generated by <a href="http://wyam.io">Wyam</a>
 </p>
 
@@ -344,7 +343,7 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
         room: 'cake-build/cake'
     };
 </script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
 <!-- Google Analytics -->
 <script>
@@ -363,22 +362,53 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top
@@ -395,5 +425,5 @@ VSTest("./Tests/*.UnitTests.dll", new VSTestSettings() {
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>

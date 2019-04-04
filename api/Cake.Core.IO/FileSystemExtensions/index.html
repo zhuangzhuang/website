@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - FileSystemExtensions Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -144,17 +144,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.IO">Cake<wbr>.Core<wbr>.IO</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
-				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
-				<li><a href="/api/Cake.Core.IO/IFileSystem">IFileSystem</a></li>
-				<li><a href="/api/Cake.Core.IO/IFileSystemInfo">IFileSystemInfo</a></li>
-				<li><a href="/api/Cake.Core.IO/IGlobber">IGlobber</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcess">IProcess</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a></li>
-				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
-				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
-				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPath">DirectoryPath</a></li>
 				<li><a href="/api/Cake.Core.IO/DirectoryPathCollection">Directory<wbr>Path<wbr>Collection</a></li>
@@ -177,6 +166,17 @@
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
 				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
+				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
+				<li><a href="/api/Cake.Core.IO/IFileSystem">IFileSystem</a></li>
+				<li><a href="/api/Cake.Core.IO/IFileSystemInfo">IFileSystemInfo</a></li>
+				<li><a href="/api/Cake.Core.IO/IGlobber">IGlobber</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcess">IProcess</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcessArgument">IProcessArgument</a></li>
+				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
+				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
+				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
 
 
                     </ul>
@@ -195,6 +195,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -223,8 +224,8 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["object"]
 	Type["FileSystemExtensions"]
 class Type type-node
 
@@ -236,6 +237,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static class FileSystemExtensions</code></pre>
+
 
 
 
@@ -337,22 +339,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

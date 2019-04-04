@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - MkDocsTool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -172,7 +172,8 @@
 	<h1>MkDocsTool<wbr>&lt;TSettings&gt;<wbr> <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -207,11 +208,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildRunner">MkDocsBuildRunner</a></li>								
 											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeRunner">MkDocsServeRunner</a></li>								
-											<li><a href="/api/Cake.MkDocs.New/MkDocsNewRunner">MkDocsNewRunner</a></li>								
-											<li><a href="/api/Cake.MkDocs.Version/MkDocsVersionRunner">MkDocsVersionRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildRunner">MkDocsBuildRunner</a></li>								
 											<li><a href="/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner">MkDocsGhDeployRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.Version/MkDocsVersionRunner">MkDocsVersionRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.New/MkDocsNewRunner">MkDocsNewRunner</a></li>								
 											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeAsyncRunner">Mk<wbr>Docs<wbr>Serve<wbr>Async<wbr>Runner</a></li>								
 									</ul>
 								</dd>			
@@ -220,21 +221,21 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
 	Type["MkDocsTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["MkDocsBuildRunner"]
-	click Derived0 "/api/Cake.MkDocs.Build/MkDocsBuildRunner"
-	Type--&gt;Derived1["MkDocsServeRunner"]
-	click Derived1 "/api/Cake.MkDocs.Serve/MkDocsServeRunner"
-	Type--&gt;Derived2["MkDocsNewRunner"]
-	click Derived2 "/api/Cake.MkDocs.New/MkDocsNewRunner"
-	Type--&gt;Derived3["MkDocsVersionRunner"]
+	Derived0["MkDocsServeRunner"]--&gt;Type
+	click Derived0 "/api/Cake.MkDocs.Serve/MkDocsServeRunner"
+	Derived1["MkDocsBuildRunner"]--&gt;Type
+	click Derived1 "/api/Cake.MkDocs.Build/MkDocsBuildRunner"
+	Derived2["MkDocsGhDeployRunner"]--&gt;Type
+	click Derived2 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner"
+	Derived3["MkDocsVersionRunner"]--&gt;Type
 	click Derived3 "/api/Cake.MkDocs.Version/MkDocsVersionRunner"
-	Type--&gt;Derived4["MkDocsGhDeployRunner"]
-	click Derived4 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner"
-	Type--&gt;Derived5["MkDocsServeAsyncRunner"]
+	Derived4["MkDocsNewRunner"]--&gt;Type
+	click Derived4 "/api/Cake.MkDocs.New/MkDocsNewRunner"
+	Derived5["MkDocsServeAsyncRunner"]--&gt;Type
 	click Derived5 "/api/Cake.MkDocs.Serve/MkDocsServeAsyncRunner"
 
 						</div>
@@ -266,6 +267,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -501,22 +503,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

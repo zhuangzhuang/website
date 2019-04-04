@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - AutoToolSettings Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -204,7 +204,8 @@
 	<h1>AutoToolSettings <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -239,33 +240,33 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Flutter/FlutterUpgradeSettings">Flutter<wbr>Upgrade<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterMakeHostAppEditableSettings">Flutter<wbr>Make<wbr>Host<wbr>App<wbr>Editable<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterDoctorSettings">Flutter<wbr>Doctor<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterAttachSettings">Flutter<wbr>Attach<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterDevicesSettings">Flutter<wbr>Devices<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterStopSettings">FlutterStopSettings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterUpgradeSettings">Flutter<wbr>Upgrade<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterEmulatorsSettings">Flutter<wbr>Emulators<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterAnalyzeSettings">Flutter<wbr>Analyze<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterPrecacheSettings">Flutter<wbr>Precache<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterCreateSettings">Flutter<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterTestSettings">FlutterTestSettings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterFormatSettings">Flutter<wbr>Format<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterDoctorSettings">Flutter<wbr>Doctor<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterMakeHostAppEditableSettings">Flutter<wbr>Make<wbr>Host<wbr>App<wbr>Editable<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterBashCompletionSettings">Flutter<wbr>Bash<wbr>Completion<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterBuildIosSettings">Flutter<wbr>Build<wbr>Ios<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterPrecacheSettings">Flutter<wbr>Precache<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterInstallSettings">Flutter<wbr>Install<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterBuildApkSettings">Flutter<wbr>Build<wbr>Apk<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterTraceSettings">FlutterTraceSettings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterScreenshotSettings">Flutter<wbr>Screenshot<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterRunSettings">FlutterRunSettings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterCleanSettings">FlutterCleanSettings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterBuildBundleSettings">Flutter<wbr>Build<wbr>Bundle<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterBuildFlxSettings">Flutter<wbr>Build<wbr>Flx<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterCreateSettings">Flutter<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterFormatSettings">Flutter<wbr>Format<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterLogsSettings">FlutterLogsSettings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterScreenshotSettings">Flutter<wbr>Screenshot<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterBuildApkSettings">Flutter<wbr>Build<wbr>Apk<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterInstallSettings">Flutter<wbr>Install<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterTestSettings">FlutterTestSettings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterChannelSettings">Flutter<wbr>Channel<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterEmulatorsSettings">Flutter<wbr>Emulators<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterConfigSettings">Flutter<wbr>Config<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterBuildAotSettings">Flutter<wbr>Build<wbr>Aot<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Flutter/FlutterDriveSettings">FlutterDriveSettings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterTraceSettings">FlutterTraceSettings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterAnalyzeSettings">Flutter<wbr>Analyze<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterDevicesSettings">Flutter<wbr>Devices<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Flutter/FlutterStopSettings">FlutterStopSettings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterBuildAotSettings">Flutter<wbr>Build<wbr>Aot<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterChannelSettings">Flutter<wbr>Channel<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterBuildFlxSettings">Flutter<wbr>Build<wbr>Flx<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterLogsSettings">FlutterLogsSettings</a></li>								
+											<li><a href="/api/Cake.Flutter/FlutterConfigSettings">Flutter<wbr>Config<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -273,64 +274,64 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["ToolSettings"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["ToolSettings"]
 	Type["AutoToolSettings"]
 class Type type-node
-	Type--&gt;Derived0["FlutterUpgradeSettings"]
-	click Derived0 "/api/Cake.Flutter/FlutterUpgradeSettings"
-	Type--&gt;Derived1["FlutterMakeHostAppEditableSettings"]
-	click Derived1 "/api/Cake.Flutter/FlutterMakeHostAppEditableSettings"
-	Type--&gt;Derived2["FlutterDoctorSettings"]
-	click Derived2 "/api/Cake.Flutter/FlutterDoctorSettings"
-	Type--&gt;Derived3["FlutterAttachSettings"]
-	click Derived3 "/api/Cake.Flutter/FlutterAttachSettings"
-	Type--&gt;Derived4["FlutterBashCompletionSettings"]
-	click Derived4 "/api/Cake.Flutter/FlutterBashCompletionSettings"
-	Type--&gt;Derived5["FlutterBuildIosSettings"]
-	click Derived5 "/api/Cake.Flutter/FlutterBuildIosSettings"
-	Type--&gt;Derived6["FlutterPrecacheSettings"]
+	Derived0["FlutterAttachSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Flutter/FlutterAttachSettings"
+	Derived1["FlutterDevicesSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Flutter/FlutterDevicesSettings"
+	Derived2["FlutterStopSettings"]--&gt;Type
+	click Derived2 "/api/Cake.Flutter/FlutterStopSettings"
+	Derived3["FlutterUpgradeSettings"]--&gt;Type
+	click Derived3 "/api/Cake.Flutter/FlutterUpgradeSettings"
+	Derived4["FlutterEmulatorsSettings"]--&gt;Type
+	click Derived4 "/api/Cake.Flutter/FlutterEmulatorsSettings"
+	Derived5["FlutterAnalyzeSettings"]--&gt;Type
+	click Derived5 "/api/Cake.Flutter/FlutterAnalyzeSettings"
+	Derived6["FlutterPrecacheSettings"]--&gt;Type
 	click Derived6 "/api/Cake.Flutter/FlutterPrecacheSettings"
-	Type--&gt;Derived7["FlutterRunSettings"]
-	click Derived7 "/api/Cake.Flutter/FlutterRunSettings"
-	Type--&gt;Derived8["FlutterCleanSettings"]
-	click Derived8 "/api/Cake.Flutter/FlutterCleanSettings"
-	Type--&gt;Derived9["FlutterBuildBundleSettings"]
-	click Derived9 "/api/Cake.Flutter/FlutterBuildBundleSettings"
-	Type--&gt;Derived10["FlutterBuildFlxSettings"]
-	click Derived10 "/api/Cake.Flutter/FlutterBuildFlxSettings"
-	Type--&gt;Derived11["FlutterCreateSettings"]
-	click Derived11 "/api/Cake.Flutter/FlutterCreateSettings"
-	Type--&gt;Derived12["FlutterFormatSettings"]
-	click Derived12 "/api/Cake.Flutter/FlutterFormatSettings"
-	Type--&gt;Derived13["FlutterLogsSettings"]
-	click Derived13 "/api/Cake.Flutter/FlutterLogsSettings"
-	Type--&gt;Derived14["FlutterScreenshotSettings"]
-	click Derived14 "/api/Cake.Flutter/FlutterScreenshotSettings"
-	Type--&gt;Derived15["FlutterBuildApkSettings"]
+	Derived7["FlutterCreateSettings"]--&gt;Type
+	click Derived7 "/api/Cake.Flutter/FlutterCreateSettings"
+	Derived8["FlutterTestSettings"]--&gt;Type
+	click Derived8 "/api/Cake.Flutter/FlutterTestSettings"
+	Derived9["FlutterFormatSettings"]--&gt;Type
+	click Derived9 "/api/Cake.Flutter/FlutterFormatSettings"
+	Derived10["FlutterDoctorSettings"]--&gt;Type
+	click Derived10 "/api/Cake.Flutter/FlutterDoctorSettings"
+	Derived11["FlutterMakeHostAppEditableSettings"]--&gt;Type
+	click Derived11 "/api/Cake.Flutter/FlutterMakeHostAppEditableSettings"
+	Derived12["FlutterBashCompletionSettings"]--&gt;Type
+	click Derived12 "/api/Cake.Flutter/FlutterBashCompletionSettings"
+	Derived13["FlutterBuildIosSettings"]--&gt;Type
+	click Derived13 "/api/Cake.Flutter/FlutterBuildIosSettings"
+	Derived14["FlutterInstallSettings"]--&gt;Type
+	click Derived14 "/api/Cake.Flutter/FlutterInstallSettings"
+	Derived15["FlutterBuildApkSettings"]--&gt;Type
 	click Derived15 "/api/Cake.Flutter/FlutterBuildApkSettings"
-	Type--&gt;Derived16["FlutterInstallSettings"]
-	click Derived16 "/api/Cake.Flutter/FlutterInstallSettings"
-	Type--&gt;Derived17["FlutterTestSettings"]
-	click Derived17 "/api/Cake.Flutter/FlutterTestSettings"
-	Type--&gt;Derived18["FlutterChannelSettings"]
-	click Derived18 "/api/Cake.Flutter/FlutterChannelSettings"
-	Type--&gt;Derived19["FlutterEmulatorsSettings"]
-	click Derived19 "/api/Cake.Flutter/FlutterEmulatorsSettings"
-	Type--&gt;Derived20["FlutterConfigSettings"]
-	click Derived20 "/api/Cake.Flutter/FlutterConfigSettings"
-	Type--&gt;Derived21["FlutterBuildAotSettings"]
-	click Derived21 "/api/Cake.Flutter/FlutterBuildAotSettings"
-	Type--&gt;Derived22["FlutterDriveSettings"]
-	click Derived22 "/api/Cake.Flutter/FlutterDriveSettings"
-	Type--&gt;Derived23["FlutterTraceSettings"]
-	click Derived23 "/api/Cake.Flutter/FlutterTraceSettings"
-	Type--&gt;Derived24["FlutterAnalyzeSettings"]
-	click Derived24 "/api/Cake.Flutter/FlutterAnalyzeSettings"
-	Type--&gt;Derived25["FlutterDevicesSettings"]
-	click Derived25 "/api/Cake.Flutter/FlutterDevicesSettings"
-	Type--&gt;Derived26["FlutterStopSettings"]
-	click Derived26 "/api/Cake.Flutter/FlutterStopSettings"
+	Derived16["FlutterTraceSettings"]--&gt;Type
+	click Derived16 "/api/Cake.Flutter/FlutterTraceSettings"
+	Derived17["FlutterScreenshotSettings"]--&gt;Type
+	click Derived17 "/api/Cake.Flutter/FlutterScreenshotSettings"
+	Derived18["FlutterRunSettings"]--&gt;Type
+	click Derived18 "/api/Cake.Flutter/FlutterRunSettings"
+	Derived19["FlutterCleanSettings"]--&gt;Type
+	click Derived19 "/api/Cake.Flutter/FlutterCleanSettings"
+	Derived20["FlutterBuildBundleSettings"]--&gt;Type
+	click Derived20 "/api/Cake.Flutter/FlutterBuildBundleSettings"
+	Derived21["FlutterDriveSettings"]--&gt;Type
+	click Derived21 "/api/Cake.Flutter/FlutterDriveSettings"
+	Derived22["FlutterBuildAotSettings"]--&gt;Type
+	click Derived22 "/api/Cake.Flutter/FlutterBuildAotSettings"
+	Derived23["FlutterChannelSettings"]--&gt;Type
+	click Derived23 "/api/Cake.Flutter/FlutterChannelSettings"
+	Derived24["FlutterBuildFlxSettings"]--&gt;Type
+	click Derived24 "/api/Cake.Flutter/FlutterBuildFlxSettings"
+	Derived25["FlutterLogsSettings"]--&gt;Type
+	click Derived25 "/api/Cake.Flutter/FlutterLogsSettings"
+	Derived26["FlutterConfigSettings"]--&gt;Type
+	click Derived26 "/api/Cake.Flutter/FlutterConfigSettings"
 
 						</div>
 					</div>
@@ -340,6 +341,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public abstract class AutoToolSettings : ToolSettings</code></pre>
+
 
 
 
@@ -548,22 +550,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

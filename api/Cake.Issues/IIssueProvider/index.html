@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - IIssueProvider Interface</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -193,7 +193,8 @@
 	<h1>IIssueProvider <small>Interface</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -229,43 +230,43 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Issues.MsBuild/MsBuildIssuesProvider">Ms<wbr>Build<wbr>Issues<wbr>Provider</a></li>								
-											<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider">Markdownlint<wbr>Issues<wbr>Provider</a></li>								
-											<li><a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1">Base<wbr>Configurable<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1#typeparam-T">T</a>&gt;<wbr></li>								
-											<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a></li>								
-											<li><a href="/api/Cake.Issues.Testing/FakeConfigurableIssueProvider">Fake<wbr>Configurable<wbr>Issue<wbr>Provider</a></li>								
-											<li><a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></li>								
-											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesProvider">EsLintIssuesProvider</a></li>								
-											<li><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TSettings">TSettings</a>, <wbr><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TIssueProvider">TIssueProvider</a>&gt;<wbr></li>								
 											<li><a href="/api/Cake.Issues.Testing/FakeIssueProvider">FakeIssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2">Base<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TSettings">TSettings</a>, <wbr><a href="/api/Cake.Issues/BaseMultiFormatIssueProvider_2#typeparam-TIssueProvider">TIssueProvider</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider">Fake<wbr>Multi<wbr>Format<wbr>Issue<wbr>Provider</a></li>								
+											<li><a href="/api/Cake.Issues.EsLint/EsLintIssuesProvider">EsLintIssuesProvider</a></li>								
+											<li><a href="/api/Cake.Issues.MsBuild/MsBuildIssuesProvider">Ms<wbr>Build<wbr>Issues<wbr>Provider</a></li>								
+											<li><a href="/api/Cake.Issues.Testing/FakeConfigurableIssueProvider">Fake<wbr>Configurable<wbr>Issue<wbr>Provider</a></li>								
+											<li><a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1">Base<wbr>Configurable<wbr>Issue<wbr>Provider</a><wbr>&lt;<a href="/api/Cake.Issues/BaseConfigurableIssueProvider_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Issues/BaseIssueProvider">BaseIssueProvider</a></li>								
+											<li><a href="/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider">Markdownlint<wbr>Issues<wbr>Provider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Interface0["IBaseIssueComponent&lt;RepositorySettings&gt;"]-.-&gt;Type
+							graph BT
+	Type-.-&gt;Interface0["IBaseIssueComponent&lt;RepositorySettings&gt;"]
 	Type["IIssueProvider"]
 class Type type-node
-	Type-.-&gt;Implementing0["MsBuildIssuesProvider"]
-	click Implementing0 "/api/Cake.Issues.MsBuild/MsBuildIssuesProvider"
-	Type-.-&gt;Implementing1["MarkdownlintIssuesProvider"]
-	click Implementing1 "/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider"
-	Type-.-&gt;Implementing2["BaseConfigurableIssueProvider&lt;T&gt;"]
-	click Implementing2 "/api/Cake.Issues/BaseConfigurableIssueProvider_1"
-	Type-.-&gt;Implementing3["FakeMultiFormatIssueProvider"]
-	click Implementing3 "/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider"
-	Type-.-&gt;Implementing4["FakeConfigurableIssueProvider"]
-	click Implementing4 "/api/Cake.Issues.Testing/FakeConfigurableIssueProvider"
-	Type-.-&gt;Implementing5["BaseIssueProvider"]
-	click Implementing5 "/api/Cake.Issues/BaseIssueProvider"
-	Type-.-&gt;Implementing6["EsLintIssuesProvider"]
-	click Implementing6 "/api/Cake.Issues.EsLint/EsLintIssuesProvider"
-	Type-.-&gt;Implementing7["BaseMultiFormatIssueProvider&lt;TSettings, TIssueProvider&gt;"]
-	click Implementing7 "/api/Cake.Issues/BaseMultiFormatIssueProvider_2"
-	Type-.-&gt;Implementing8["FakeIssueProvider"]
-	click Implementing8 "/api/Cake.Issues.Testing/FakeIssueProvider"
+	Implementing0["FakeIssueProvider"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Issues.Testing/FakeIssueProvider"
+	Implementing1["BaseMultiFormatIssueProvider&lt;TSettings, TIssueProvider&gt;"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Issues/BaseMultiFormatIssueProvider_2"
+	Implementing2["FakeMultiFormatIssueProvider"]-.-&gt;Type
+	click Implementing2 "/api/Cake.Issues.Testing/FakeMultiFormatIssueProvider"
+	Implementing3["EsLintIssuesProvider"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Issues.EsLint/EsLintIssuesProvider"
+	Implementing4["MsBuildIssuesProvider"]-.-&gt;Type
+	click Implementing4 "/api/Cake.Issues.MsBuild/MsBuildIssuesProvider"
+	Implementing5["FakeConfigurableIssueProvider"]-.-&gt;Type
+	click Implementing5 "/api/Cake.Issues.Testing/FakeConfigurableIssueProvider"
+	Implementing6["BaseConfigurableIssueProvider&lt;T&gt;"]-.-&gt;Type
+	click Implementing6 "/api/Cake.Issues/BaseConfigurableIssueProvider_1"
+	Implementing7["BaseIssueProvider"]-.-&gt;Type
+	click Implementing7 "/api/Cake.Issues/BaseIssueProvider"
+	Implementing8["MarkdownlintIssuesProvider"]-.-&gt;Type
+	click Implementing8 "/api/Cake.Issues.Markdownlint/MarkdownlintIssuesProvider"
 
 						</div>
 					</div>
@@ -275,6 +276,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public interface IIssueProvider : IBaseIssueComponent&lt;RepositorySettings&gt;</code></pre>
+
 
 
 
@@ -470,22 +472,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

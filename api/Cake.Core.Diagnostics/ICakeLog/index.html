@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - ICakeLog Interface</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -146,18 +146,18 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Diagnostics">Cake<wbr>.Core<wbr>.Diagnostics</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
+				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>
+				<li><a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></li>
+				<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogAction">LogAction</a></li>
 				<li><a href="/api/Cake.Core.Diagnostics/LogActionEntry">LogActionEntry</a></li>
 			<li class="header">Interface Types</li>
 				<li class="selected"><a href="/api/Cake.Core.Diagnostics/ICakeLog">ICakeLog</a></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Cake.Core.Diagnostics/CakeBuildLog">CakeBuildLog</a></li>
-				<li><a href="/api/Cake.Core.Diagnostics/LogExtensions">LogExtensions</a></li>
-				<li><a href="/api/Cake.Core.Diagnostics/NullLog">NullLog</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.Diagnostics/LogLevel">LogLevel</a></li>
-				<li><a href="/api/Cake.Core.Diagnostics/Verbosity">Verbosity</a></li>
 
 
                     </ul>
@@ -176,6 +176,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -206,14 +207,14 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
+							graph BT
 	Type["ICakeLog"]
 class Type type-node
-	Type-.-&gt;Implementing0["CakeBuildLog"]
+	Implementing0["CakeBuildLog"]-.-&gt;Type
 	click Implementing0 "/api/Cake.Core.Diagnostics/CakeBuildLog"
-	Type-.-&gt;Implementing1["NullLog"]
+	Implementing1["NullLog"]-.-&gt;Type
 	click Implementing1 "/api/Cake.Core.Diagnostics/NullLog"
-	Type-.-&gt;Implementing2["FakeLog"]
+	Implementing2["FakeLog"]-.-&gt;Type
 	click Implementing2 "/api/Cake.Testing/FakeLog"
 
 						</div>
@@ -224,6 +225,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public interface ICakeLog</code></pre>
+
 
 
 
@@ -801,22 +803,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

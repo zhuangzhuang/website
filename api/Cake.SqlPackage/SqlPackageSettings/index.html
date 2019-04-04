@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - SqlPackageSettings Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -177,7 +177,8 @@
 	<h1>SqlPackageSettings <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -209,12 +210,12 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.SqlPackage/SqlPackageDeployReportSettings">Sql<wbr>Package<wbr>Deploy<wbr>Report<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackagePublishSettings">Sql<wbr>Package<wbr>Publish<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageScriptSettings">Sql<wbr>Package<wbr>Script<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.SqlPackage/SqlPackageExtractSettings">Sql<wbr>Package<wbr>Extract<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.SqlPackage/SqlPackageImportSettings">Sql<wbr>Package<wbr>Import<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.SqlPackage/SqlPackageDriftReportSettings">Sql<wbr>Package<wbr>Drift<wbr>Report<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.SqlPackage/SqlPackageExportSettings">Sql<wbr>Package<wbr>Export<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageScriptSettings">Sql<wbr>Package<wbr>Script<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackageImportSettings">Sql<wbr>Package<wbr>Import<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.SqlPackage/SqlPackagePublishSettings">Sql<wbr>Package<wbr>Publish<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -222,24 +223,24 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["ToolSettings"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["ToolSettings"]
 	Type["SqlPackageSettings"]
 class Type type-node
-	Type--&gt;Derived0["SqlPackageDeployReportSettings"]
+	Derived0["SqlPackageDeployReportSettings"]--&gt;Type
 	click Derived0 "/api/Cake.SqlPackage/SqlPackageDeployReportSettings"
-	Type--&gt;Derived1["SqlPackagePublishSettings"]
-	click Derived1 "/api/Cake.SqlPackage/SqlPackagePublishSettings"
-	Type--&gt;Derived2["SqlPackageScriptSettings"]
-	click Derived2 "/api/Cake.SqlPackage/SqlPackageScriptSettings"
-	Type--&gt;Derived3["SqlPackageExtractSettings"]
-	click Derived3 "/api/Cake.SqlPackage/SqlPackageExtractSettings"
-	Type--&gt;Derived4["SqlPackageImportSettings"]
-	click Derived4 "/api/Cake.SqlPackage/SqlPackageImportSettings"
-	Type--&gt;Derived5["SqlPackageDriftReportSettings"]
-	click Derived5 "/api/Cake.SqlPackage/SqlPackageDriftReportSettings"
-	Type--&gt;Derived6["SqlPackageExportSettings"]
-	click Derived6 "/api/Cake.SqlPackage/SqlPackageExportSettings"
+	Derived1["SqlPackageExtractSettings"]--&gt;Type
+	click Derived1 "/api/Cake.SqlPackage/SqlPackageExtractSettings"
+	Derived2["SqlPackageDriftReportSettings"]--&gt;Type
+	click Derived2 "/api/Cake.SqlPackage/SqlPackageDriftReportSettings"
+	Derived3["SqlPackageExportSettings"]--&gt;Type
+	click Derived3 "/api/Cake.SqlPackage/SqlPackageExportSettings"
+	Derived4["SqlPackageScriptSettings"]--&gt;Type
+	click Derived4 "/api/Cake.SqlPackage/SqlPackageScriptSettings"
+	Derived5["SqlPackageImportSettings"]--&gt;Type
+	click Derived5 "/api/Cake.SqlPackage/SqlPackageImportSettings"
+	Derived6["SqlPackagePublishSettings"]--&gt;Type
+	click Derived6 "/api/Cake.SqlPackage/SqlPackagePublishSettings"
 
 						</div>
 					</div>
@@ -249,6 +250,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class SqlPackageSettings : ToolSettings</code></pre>
+
 
 
 
@@ -640,22 +642,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

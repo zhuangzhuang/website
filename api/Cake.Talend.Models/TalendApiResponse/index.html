@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - TalendApiResponse Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -180,7 +180,8 @@
 	<h1>TalendApiResponse <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -208,16 +209,16 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>object</li>								
+											<li>Object</li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Talend.Models/TalendApiListResponseRaw_1">Talend<wbr>Api<wbr>List<wbr>Response<wbr>Raw</a><wbr>&lt;<a href="/api/Cake.Talend.Models/TalendApiListResponseRaw_1#typeparam-T">T</a>&gt;<wbr></li>								
 											<li><a href="/api/Cake.Talend.Models/TalendApiResponseTaskId">Talend<wbr>Api<wbr>Response<wbr>Task<wbr>Id</a></li>								
 											<li><a href="/api/Cake.Talend.Models/TalendApiListResponse_1">Talend<wbr>Api<wbr>List<wbr>Response</a><wbr>&lt;<a href="/api/Cake.Talend.Models/TalendApiListResponse_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Talend.Models/TalendApiListResponseRaw_1">Talend<wbr>Api<wbr>List<wbr>Response<wbr>Raw</a><wbr>&lt;<a href="/api/Cake.Talend.Models/TalendApiListResponseRaw_1#typeparam-T">T</a>&gt;<wbr></li>								
 									</ul>
 								</dd>			
 							
@@ -225,16 +226,16 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["Object"]
 	Type["TalendApiResponse"]
 class Type type-node
-	Type--&gt;Derived0["TalendApiListResponseRaw&lt;T&gt;"]
-	click Derived0 "/api/Cake.Talend.Models/TalendApiListResponseRaw_1"
-	Type--&gt;Derived1["TalendApiResponseTaskId"]
-	click Derived1 "/api/Cake.Talend.Models/TalendApiResponseTaskId"
-	Type--&gt;Derived2["TalendApiListResponse&lt;T&gt;"]
-	click Derived2 "/api/Cake.Talend.Models/TalendApiListResponse_1"
+	Derived0["TalendApiResponseTaskId"]--&gt;Type
+	click Derived0 "/api/Cake.Talend.Models/TalendApiResponseTaskId"
+	Derived1["TalendApiListResponse&lt;T&gt;"]--&gt;Type
+	click Derived1 "/api/Cake.Talend.Models/TalendApiListResponse_1"
+	Derived2["TalendApiListResponseRaw&lt;T&gt;"]--&gt;Type
+	click Derived2 "/api/Cake.Talend.Models/TalendApiListResponseRaw_1"
 
 						</div>
 					</div>
@@ -244,6 +245,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class TalendApiResponse</code></pre>
+
 
 
 
@@ -445,22 +447,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

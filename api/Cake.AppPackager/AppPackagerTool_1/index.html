@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - AppPackagerTool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -173,7 +173,8 @@
 	<h1>AppPackagerTool<wbr>&lt;TSettings&gt;<wbr> <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -208,12 +209,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
-											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
-											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
-											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
-											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
 											<li><a href="/api/Cake.AppPackager.Encrypt/AppEncrypter">AppEncrypter</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unbundle/AppUnbundler">AppUnbundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Bundle/AppBundler">AppBundler</a></li>								
+											<li><a href="/api/Cake.AppPackager.Pack/AppPacker">AppPacker</a></li>								
+											<li><a href="/api/Cake.AppPackager.Unpack/AppUnpacker">AppUnpacker</a></li>								
+											<li><a href="/api/Cake.AppPackager.Decrypt/AppDecrypter">AppDecrypter</a></li>								
 									</ul>
 								</dd>			
 							
@@ -221,22 +222,22 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
 	Type["AppPackagerTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["AppBundler"]
-	click Derived0 "/api/Cake.AppPackager.Bundle/AppBundler"
-	Type--&gt;Derived1["AppUnpacker"]
-	click Derived1 "/api/Cake.AppPackager.Unpack/AppUnpacker"
-	Type--&gt;Derived2["AppUnbundler"]
-	click Derived2 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
-	Type--&gt;Derived3["AppDecrypter"]
-	click Derived3 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
-	Type--&gt;Derived4["AppPacker"]
-	click Derived4 "/api/Cake.AppPackager.Pack/AppPacker"
-	Type--&gt;Derived5["AppEncrypter"]
-	click Derived5 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
+	Derived0["AppEncrypter"]--&gt;Type
+	click Derived0 "/api/Cake.AppPackager.Encrypt/AppEncrypter"
+	Derived1["AppUnbundler"]--&gt;Type
+	click Derived1 "/api/Cake.AppPackager.Unbundle/AppUnbundler"
+	Derived2["AppBundler"]--&gt;Type
+	click Derived2 "/api/Cake.AppPackager.Bundle/AppBundler"
+	Derived3["AppPacker"]--&gt;Type
+	click Derived3 "/api/Cake.AppPackager.Pack/AppPacker"
+	Derived4["AppUnpacker"]--&gt;Type
+	click Derived4 "/api/Cake.AppPackager.Unpack/AppUnpacker"
+	Derived5["AppDecrypter"]--&gt;Type
+	click Derived5 "/api/Cake.AppPackager.Decrypt/AppDecrypter"
 
 						</div>
 					</div>
@@ -267,6 +268,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -472,22 +474,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top
