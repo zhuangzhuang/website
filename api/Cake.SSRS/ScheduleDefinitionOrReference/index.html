@@ -275,8 +275,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SSRS/ScheduleReference">ScheduleReference</a></li>								
 											<li><a href="/api/Cake.SSRS/ScheduleDefinition">ScheduleDefinition</a></li>								
+											<li><a href="/api/Cake.SSRS/ScheduleReference">ScheduleReference</a></li>								
 											<li><a href="/api/Cake.SSRS/NoSchedule">NoSchedule</a></li>								
 									</ul>
 								</dd>			
@@ -289,10 +289,10 @@
 	Type--&gt;Base0["Object"]
 	Type["ScheduleDefinitionOrReference"]
 class Type type-node
-	Derived0["ScheduleReference"]--&gt;Type
-	click Derived0 "/api/Cake.SSRS/ScheduleReference"
-	Derived1["ScheduleDefinition"]--&gt;Type
-	click Derived1 "/api/Cake.SSRS/ScheduleDefinition"
+	Derived0["ScheduleDefinition"]--&gt;Type
+	click Derived0 "/api/Cake.SSRS/ScheduleDefinition"
+	Derived1["ScheduleReference"]--&gt;Type
+	click Derived1 "/api/Cake.SSRS/ScheduleReference"
 	Derived2["NoSchedule"]--&gt;Type
 	click Derived2 "/api/Cake.SSRS/NoSchedule"
 
@@ -406,17 +406,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Schedule<wbr>Definition<wbr>Or<wbr>Reference&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Schedule<wbr>Definition<wbr>Or<wbr>Reference&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -425,6 +414,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Schedule<wbr>Definition<wbr>Or<wbr>Reference&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

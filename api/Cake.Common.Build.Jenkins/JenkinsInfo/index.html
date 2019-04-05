@@ -196,12 +196,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo">Jenkins<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo">JenkinsJobInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo">JenkinsChangeInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo">JenkinsBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo">JenkinsNodeInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo">Jenkins<wbr>Environment<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -213,18 +213,18 @@
 	Type--&gt;Base0["object"]
 	Type["JenkinsInfo"]
 class Type type-node
-	Derived0["JenkinsJobInfo"]--&gt;Type
-	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
-	Derived1["JenkinsRepositoryInfo"]--&gt;Type
-	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
-	Derived2["JenkinsEnvironmentInfo"]--&gt;Type
-	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
-	Derived3["JenkinsNodeInfo"]--&gt;Type
-	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
-	Derived4["JenkinsBuildInfo"]--&gt;Type
-	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
-	Derived5["JenkinsChangeInfo"]--&gt;Type
-	click Derived5 "/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo"
+	Derived0["JenkinsRepositoryInfo"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Build.Jenkins.Data/JenkinsRepositoryInfo"
+	Derived1["JenkinsJobInfo"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Build.Jenkins.Data/JenkinsJobInfo"
+	Derived2["JenkinsChangeInfo"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Build.Jenkins.Data/JenkinsChangeInfo"
+	Derived3["JenkinsBuildInfo"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Build.Jenkins.Data/JenkinsBuildInfo"
+	Derived4["JenkinsNodeInfo"]--&gt;Type
+	click Derived4 "/api/Cake.Common.Build.Jenkins.Data/JenkinsNodeInfo"
+	Derived5["JenkinsEnvironmentInfo"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Build.Jenkins.Data/JenkinsEnvironmentInfo"
 
 						</div>
 					</div>
@@ -343,17 +343,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -362,6 +351,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;JenkinsInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

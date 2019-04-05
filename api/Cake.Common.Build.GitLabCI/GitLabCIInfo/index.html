@@ -197,11 +197,11 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIRunnerInfo">GitLabCIRunnerInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIServerInfo">GitLabCIServerInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Pull<wbr>Request<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo">GitLabCIBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIEnvironmentInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIProjectInfo">GitLabCIProjectInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo">GitLabCIBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo">Git<wbr>Lab<wbr>C<wbr>I<wbr>Pull<wbr>Request<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.GitLabCI.Data/GitLabCIServerInfo">GitLabCIServerInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -215,16 +215,16 @@
 class Type type-node
 	Derived0["GitLabCIRunnerInfo"]--&gt;Type
 	click Derived0 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIRunnerInfo"
-	Derived1["GitLabCIServerInfo"]--&gt;Type
-	click Derived1 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIServerInfo"
-	Derived2["GitLabCIPullRequestInfo"]--&gt;Type
-	click Derived2 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo"
-	Derived3["GitLabCIEnvironmentInfo"]--&gt;Type
-	click Derived3 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIEnvironmentInfo"
-	Derived4["GitLabCIProjectInfo"]--&gt;Type
-	click Derived4 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIProjectInfo"
-	Derived5["GitLabCIBuildInfo"]--&gt;Type
-	click Derived5 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo"
+	Derived1["GitLabCIBuildInfo"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIBuildInfo"
+	Derived2["GitLabCIEnvironmentInfo"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIEnvironmentInfo"
+	Derived3["GitLabCIProjectInfo"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIProjectInfo"
+	Derived4["GitLabCIPullRequestInfo"]--&gt;Type
+	click Derived4 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIPullRequestInfo"
+	Derived5["GitLabCIServerInfo"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Build.GitLabCI.Data/GitLabCIServerInfo"
 
 						</div>
 					</div>
@@ -370,17 +370,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;GitLabCIInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;GitLabCIInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -389,6 +378,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;GitLabCIInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

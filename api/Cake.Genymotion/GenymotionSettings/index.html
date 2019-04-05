@@ -201,12 +201,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Genymotion.Device/GenymotionDeviceSettings">Genymotion<wbr>Device<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Genymotion.Admin/GenymotionEditSettings">Genymotion<wbr>Edit<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Genymotion.License/GenymotionLicenseSettings">Genymotion<wbr>License<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Genymotion.Admin/GenymotionCreateSettings">Genymotion<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Genymotion.Version/GenymotionVersionSettings">Genymotion<wbr>Version<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Genymotion/GenymotionAdminSettings">Genymotion<wbr>Admin<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Genymotion.Admin/GenymotionEditSettings">Genymotion<wbr>Edit<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Genymotion.Version/GenymotionVersionSettings">Genymotion<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Genymotion.Device/GenymotionDeviceSettings">Genymotion<wbr>Device<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Genymotion.Config/GenymotionConfigSettings">Genymotion<wbr>Config<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
@@ -219,18 +219,18 @@
 	Type--&gt;Base0["ToolSettings"]
 	Type["GenymotionSettings"]
 class Type type-node
-	Derived0["GenymotionDeviceSettings"]--&gt;Type
-	click Derived0 "/api/Cake.Genymotion.Device/GenymotionDeviceSettings"
-	Derived1["GenymotionEditSettings"]--&gt;Type
-	click Derived1 "/api/Cake.Genymotion.Admin/GenymotionEditSettings"
-	Derived2["GenymotionLicenseSettings"]--&gt;Type
-	click Derived2 "/api/Cake.Genymotion.License/GenymotionLicenseSettings"
-	Derived3["GenymotionCreateSettings"]--&gt;Type
-	click Derived3 "/api/Cake.Genymotion.Admin/GenymotionCreateSettings"
+	Derived0["GenymotionLicenseSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Genymotion.License/GenymotionLicenseSettings"
+	Derived1["GenymotionCreateSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Genymotion.Admin/GenymotionCreateSettings"
+	Derived2["GenymotionAdminSettings"]--&gt;Type
+	click Derived2 "/api/Cake.Genymotion/GenymotionAdminSettings"
+	Derived3["GenymotionEditSettings"]--&gt;Type
+	click Derived3 "/api/Cake.Genymotion.Admin/GenymotionEditSettings"
 	Derived4["GenymotionVersionSettings"]--&gt;Type
 	click Derived4 "/api/Cake.Genymotion.Version/GenymotionVersionSettings"
-	Derived5["GenymotionAdminSettings"]--&gt;Type
-	click Derived5 "/api/Cake.Genymotion/GenymotionAdminSettings"
+	Derived5["GenymotionDeviceSettings"]--&gt;Type
+	click Derived5 "/api/Cake.Genymotion.Device/GenymotionDeviceSettings"
 	Derived6["GenymotionConfigSettings"]--&gt;Type
 	click Derived6 "/api/Cake.Genymotion.Config/GenymotionConfigSettings"
 
@@ -336,17 +336,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Genymotion<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Genymotion<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -355,6 +344,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Genymotion<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

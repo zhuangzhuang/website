@@ -216,9 +216,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
+											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
 									</ul>
 								</dd>			
@@ -233,12 +233,12 @@
 	click Interface0 "/api/Cake.Core.Scripting/IScriptHost"
 	Type["ScriptHost"]
 class Type type-node
-	Derived0["TaskTreeScriptHost"]--&gt;Type
-	click Derived0 "/api/Cake.Scripting/TaskTreeScriptHost"
+	Derived0["DescriptionScriptHost"]--&gt;Type
+	click Derived0 "/api/Cake.Scripting/DescriptionScriptHost"
 	Derived1["DryRunScriptHost"]--&gt;Type
 	click Derived1 "/api/Cake.Scripting/DryRunScriptHost"
-	Derived2["DescriptionScriptHost"]--&gt;Type
-	click Derived2 "/api/Cake.Scripting/DescriptionScriptHost"
+	Derived2["TaskTreeScriptHost"]--&gt;Type
+	click Derived2 "/api/Cake.Scripting/TaskTreeScriptHost"
 	Derived3["BuildScriptHost"]--&gt;Type
 	click Derived3 "/api/Cake.Scripting/BuildScriptHost"
 
@@ -490,17 +490,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -509,6 +498,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ScriptHost&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
