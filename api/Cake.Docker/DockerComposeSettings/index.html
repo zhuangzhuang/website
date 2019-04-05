@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - DockerComposeSettings Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -222,7 +222,8 @@
 	<h1>Docker<wbr>Compose<wbr>Settings <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -258,18 +259,18 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeStopSettings">Docker<wbr>Compose<wbr>Stop<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeDownSettings">Docker<wbr>Compose<wbr>Down<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeLogsSettings">Docker<wbr>Compose<wbr>Logs<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeExecSettings">Docker<wbr>Compose<wbr>Exec<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeDownSettings">Docker<wbr>Compose<wbr>Down<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeStopSettings">Docker<wbr>Compose<wbr>Stop<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeLogsSettings">Docker<wbr>Compose<wbr>Logs<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeExecSettings">Docker<wbr>Compose<wbr>Exec<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -277,36 +278,36 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["AutoToolSettings"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["AutoToolSettings"]
 	click Base0 "/api/Cake.Docker/AutoToolSettings"
-	Base1["ToolSettings"]--&gt;Base0
+	Base0--&gt;Base1["ToolSettings"]
 	Type["DockerComposeSettings"]
 class Type type-node
-	Type--&gt;Derived0["DockerComposeRunSettings"]
-	click Derived0 "/api/Cake.Docker/DockerComposeRunSettings"
-	Type--&gt;Derived1["DockerComposeStopSettings"]
-	click Derived1 "/api/Cake.Docker/DockerComposeStopSettings"
-	Type--&gt;Derived2["DockerComposeDownSettings"]
+	Derived0["DockerComposePullSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Docker/DockerComposePullSettings"
+	Derived1["DockerComposeCreateSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Docker/DockerComposeCreateSettings"
+	Derived2["DockerComposeDownSettings"]--&gt;Type
 	click Derived2 "/api/Cake.Docker/DockerComposeDownSettings"
-	Type--&gt;Derived3["DockerComposeRmSettings"]
-	click Derived3 "/api/Cake.Docker/DockerComposeRmSettings"
-	Type--&gt;Derived4["DockerComposeBuildSettings"]
-	click Derived4 "/api/Cake.Docker/DockerComposeBuildSettings"
-	Type--&gt;Derived5["DockerComposeLogsSettings"]
-	click Derived5 "/api/Cake.Docker/DockerComposeLogsSettings"
-	Type--&gt;Derived6["DockerComposeRestartSettings"]
-	click Derived6 "/api/Cake.Docker/DockerComposeRestartSettings"
-	Type--&gt;Derived7["DockerComposeUpSettings"]
-	click Derived7 "/api/Cake.Docker/DockerComposeUpSettings"
-	Type--&gt;Derived8["DockerComposeCreateSettings"]
-	click Derived8 "/api/Cake.Docker/DockerComposeCreateSettings"
-	Type--&gt;Derived9["DockerComposeExecSettings"]
-	click Derived9 "/api/Cake.Docker/DockerComposeExecSettings"
-	Type--&gt;Derived10["DockerComposePullSettings"]
-	click Derived10 "/api/Cake.Docker/DockerComposePullSettings"
-	Type--&gt;Derived11["DockerComposeKillSettings"]
-	click Derived11 "/api/Cake.Docker/DockerComposeKillSettings"
+	Derived3["DockerComposeStopSettings"]--&gt;Type
+	click Derived3 "/api/Cake.Docker/DockerComposeStopSettings"
+	Derived4["DockerComposeLogsSettings"]--&gt;Type
+	click Derived4 "/api/Cake.Docker/DockerComposeLogsSettings"
+	Derived5["DockerComposeExecSettings"]--&gt;Type
+	click Derived5 "/api/Cake.Docker/DockerComposeExecSettings"
+	Derived6["DockerComposeUpSettings"]--&gt;Type
+	click Derived6 "/api/Cake.Docker/DockerComposeUpSettings"
+	Derived7["DockerComposeKillSettings"]--&gt;Type
+	click Derived7 "/api/Cake.Docker/DockerComposeKillSettings"
+	Derived8["DockerComposeRmSettings"]--&gt;Type
+	click Derived8 "/api/Cake.Docker/DockerComposeRmSettings"
+	Derived9["DockerComposeRunSettings"]--&gt;Type
+	click Derived9 "/api/Cake.Docker/DockerComposeRunSettings"
+	Derived10["DockerComposeRestartSettings"]--&gt;Type
+	click Derived10 "/api/Cake.Docker/DockerComposeRestartSettings"
+	Derived11["DockerComposeBuildSettings"]--&gt;Type
+	click Derived11 "/api/Cake.Docker/DockerComposeBuildSettings"
 
 						</div>
 					</div>
@@ -316,6 +317,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class DockerComposeSettings : AutoToolSettings</code></pre>
+
 
 
 
@@ -556,17 +558,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -575,6 +566,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -657,22 +659,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

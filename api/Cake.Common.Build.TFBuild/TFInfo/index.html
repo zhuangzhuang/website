@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - TFInfo Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -171,6 +171,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -197,14 +198,14 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy">TFBuildTriggeredBy</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo">T<wbr>F<wbr>Build<wbr>Definition<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo">T<wbr>F<wbr>Build<wbr>Team<wbr>Project<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo">TFBuildInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo">T<wbr>F<wbr>Build<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo">T<wbr>F<wbr>Build<wbr>Repository<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy">TFBuildTriggeredBy</a></li>								
 											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildPullRequestInfo">T<wbr>F<wbr>Build<wbr>Pull<wbr>Request<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo">TFBuildAgentInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -212,26 +213,26 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["object"]
 	Type["TFInfo"]
 class Type type-node
-	Type--&gt;Derived0["TFBuildTriggeredBy"]
-	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy"
-	Type--&gt;Derived1["TFBuildDefinitionInfo"]
-	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
-	Type--&gt;Derived2["TFBuildAgentInfo"]
-	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
-	Type--&gt;Derived3["TFBuildTeamProjectInfo"]
-	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
-	Type--&gt;Derived4["TFBuildRepositoryInfo"]
+	Derived0["TFBuildDefinitionInfo"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Build.TFBuild.Data/TFBuildDefinitionInfo"
+	Derived1["TFBuildTeamProjectInfo"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTeamProjectInfo"
+	Derived2["TFBuildInfo"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
+	Derived3["TFBuildEnvironmentInfo"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
+	Derived4["TFBuildRepositoryInfo"]--&gt;Type
 	click Derived4 "/api/Cake.Common.Build.TFBuild.Data/TFBuildRepositoryInfo"
-	Type--&gt;Derived5["TFBuildInfo"]
-	click Derived5 "/api/Cake.Common.Build.TFBuild.Data/TFBuildInfo"
-	Type--&gt;Derived6["TFBuildEnvironmentInfo"]
-	click Derived6 "/api/Cake.Common.Build.TFBuild.Data/TFBuildEnvironmentInfo"
-	Type--&gt;Derived7["TFBuildPullRequestInfo"]
-	click Derived7 "/api/Cake.Common.Build.TFBuild.Data/TFBuildPullRequestInfo"
+	Derived5["TFBuildTriggeredBy"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Build.TFBuild.Data/TFBuildTriggeredBy"
+	Derived6["TFBuildPullRequestInfo"]--&gt;Type
+	click Derived6 "/api/Cake.Common.Build.TFBuild.Data/TFBuildPullRequestInfo"
+	Derived7["TFBuildAgentInfo"]--&gt;Type
+	click Derived7 "/api/Cake.Common.Build.TFBuild.Data/TFBuildAgentInfo"
 
 						</div>
 					</div>
@@ -241,6 +242,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public abstract class TFInfo</code></pre>
+
 
 
 
@@ -367,17 +369,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -386,6 +377,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;TFInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -468,22 +470,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

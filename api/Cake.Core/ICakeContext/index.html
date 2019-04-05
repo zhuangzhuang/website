@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - ICakeContext Interface</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -226,6 +226,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -247,45 +248,45 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
-											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
-											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
 											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/CakeContextAdapter">CakeContextAdapter</a></li>								
+											<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
 											<li><a href="/api/Cake.Core/CakeContext">CakeContext</a></li>								
+											<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/ISetupContext">ISetupContext</a></li>								
+											<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>								
 									</ul>
 								</dd>				
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
+							graph BT
 	Type["ICakeContext"]
 class Type type-node
-	Type-.-&gt;Implementing0["ITeardownContext"]
-	click Implementing0 "/api/Cake.Core/ITeardownContext"
-	Type-.-&gt;Implementing1["TaskTeardownContext"]
-	click Implementing1 "/api/Cake.Core/TaskTeardownContext"
-	Type-.-&gt;Implementing2["ISetupContext"]
-	click Implementing2 "/api/Cake.Core/ISetupContext"
-	Type-.-&gt;Implementing3["SetupContext"]
-	click Implementing3 "/api/Cake.Core/SetupContext"
-	Type-.-&gt;Implementing4["ITaskTeardownContext"]
-	click Implementing4 "/api/Cake.Core/ITaskTeardownContext"
-	Type-.-&gt;Implementing5["TeardownContext"]
-	click Implementing5 "/api/Cake.Core/TeardownContext"
-	Type-.-&gt;Implementing6["TaskSetupContext"]
-	click Implementing6 "/api/Cake.Core/TaskSetupContext"
-	Type-.-&gt;Implementing7["ITaskSetupContext"]
-	click Implementing7 "/api/Cake.Core/ITaskSetupContext"
-	Type-.-&gt;Implementing8["CakeContextAdapter"]
-	click Implementing8 "/api/Cake.Core/CakeContextAdapter"
-	Type-.-&gt;Implementing9["CakeContext"]
-	click Implementing9 "/api/Cake.Core/CakeContext"
+	Implementing0["CakeContextAdapter"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core/CakeContextAdapter"
+	Implementing1["TeardownContext"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Core/TeardownContext"
+	Implementing2["TaskSetupContext"]-.-&gt;Type
+	click Implementing2 "/api/Cake.Core/TaskSetupContext"
+	Implementing3["ITaskTeardownContext"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Core/ITaskTeardownContext"
+	Implementing4["SetupContext"]-.-&gt;Type
+	click Implementing4 "/api/Cake.Core/SetupContext"
+	Implementing5["CakeContext"]-.-&gt;Type
+	click Implementing5 "/api/Cake.Core/CakeContext"
+	Implementing6["ITaskSetupContext"]-.-&gt;Type
+	click Implementing6 "/api/Cake.Core/ITaskSetupContext"
+	Implementing7["TaskTeardownContext"]-.-&gt;Type
+	click Implementing7 "/api/Cake.Core/TaskTeardownContext"
+	Implementing8["ISetupContext"]-.-&gt;Type
+	click Implementing8 "/api/Cake.Core/ISetupContext"
+	Implementing9["ITeardownContext"]-.-&gt;Type
+	click Implementing9 "/api/Cake.Core/ITeardownContext"
 
 						</div>
 					</div>
@@ -295,6 +296,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public interface ICakeContext</code></pre>
+
 
 
 
@@ -3027,17 +3029,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -3046,6 +3037,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;ICakeContext&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -4830,22 +4832,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

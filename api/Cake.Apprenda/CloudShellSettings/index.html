@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - CloudShellSettings Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -150,6 +150,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Apprenda/AddOnInfo">AddOnInfo</a></li>
+				<li><a href="/api/Cake.Apprenda/ApplicationStage">ApplicationStage</a></li>
 				<li><a href="/api/Cake.Apprenda/ApprendaAliases">ApprendaAliases</a></li>
 				<li><a href="/api/Cake.Apprenda/ApprendaToolProvider">ApprendaToolProvider</a></li>
 				<li><a href="/api/Cake.Apprenda/CloudInfo">CloudInfo</a></li>
@@ -160,8 +161,6 @@
 				<li><a href="/api/Cake.Apprenda/DeployedAddOnInfo">DeployedAddOnInfo</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Apprenda/ICloudShellToolResolver">I<wbr>Cloud<wbr>Shell<wbr>Tool<wbr>Resolver</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Apprenda/ApplicationStage">ApplicationStage</a></li>
 
 
                     </ul>
@@ -179,7 +178,8 @@
 	<h1>CloudShellSettings <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -214,38 +214,38 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeStateSettings">SetNodeStateSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.NewApplication/NewApplicationSettings">New<wbr>Application<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.ExportArchive/ExportArchiveSettings">Export<wbr>Archive<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.ConnectCloud/ConnectCloudSettings">ConnectCloudSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.StartInDebugMode/StartInDebugModeSettings">Start<wbr>In<wbr>Debug<wbr>Mode<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeStateSettings">GetNodeStateSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.RegisterCloud/RegisterCloudSettings">Register<wbr>Cloud<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.ProvisionAddOn/ProvisionAddOnSettings">Provision<wbr>Add<wbr>On<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredCloudsSettings">Read<wbr>Registered<wbr>Clouds<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.DemoteVersion/DemoteVersionSettings">Demote<wbr>Version<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.SetInstanceCount/SetInstanceCountSettings">Set<wbr>Instance<wbr>Count<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloudSettings">Disconnect<wbr>Cloud<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.PromoteVersion/PromoteVersionSettings">Promote<wbr>Version<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.StopDebugMode/StopDebugModeSettings">Stop<wbr>Debug<wbr>Mode<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.SetInstanceMinimum/SetInstanceMinimumSettings">Set<wbr>Instance<wbr>Minimum<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apprenda.ACS.CancelVersionPromotion/CancelVersionPromotionSettings">Cancel<wbr>Version<wbr>Promotion<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.StopVersion/StopVersionSettings">StopVersionSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.RemoveVersion/RemoveVersionSettings">Remove<wbr>Version<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.PatchVersion/PatchVersionSettings">PatchVersionSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.DisconnectCloud/DisconnectCloudSettings">Disconnect<wbr>Cloud<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Apprenda.ACS.NewUser/NewUserSettings">NewUserSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.NewVersion/NewVersionSettings">NewVersionSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.DeProvisionAddOn/DeProvisionAddOnSettings">De<wbr>Provision<wbr>Add<wbr>On<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.SetArchive/SetArchiveSettings">SetArchiveSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.GetAddOns/GetAddOnsSettings">GetAddOnsSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.ExportManifest/ExportManifestSettings">Export<wbr>Manifest<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloudSettings">Register<wbr>Cloud<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.NewPackage/NewPackageSettings">NewPackageSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.RemoveApplication/RemoveApplicationSettings">Remove<wbr>Application<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloudSettings">ConnectCloudSettings</a></li>								
-											<li><a href="/api/Cake.Apprenda.ACS.ReadRegisteredClouds/ReadRegisteredCloudsSettings">Read<wbr>Registered<wbr>Clouds<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ProvisionAddOn/ProvisionAddOnSettings">Provision<wbr>Add<wbr>On<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.PatchVersion/PatchVersionSettings">PatchVersionSettings</a></li>								
 											<li><a href="/api/Cake.Apprenda.ACS.GetDeployedAddOns/GetDeployedAddOnsSettings">Get<wbr>Deployed<wbr>Add<wbr>Ons<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.DisconnectCloud/DisconnectCloudSettings">Disconnect<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.RemoveApplication/RemoveApplicationSettings">Remove<wbr>Application<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.RegisterCloud/RegisterCloudSettings">Register<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.GetNodeState/GetNodeStateSettings">GetNodeStateSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ConnectCloud/ConnectCloudSettings">ConnectCloudSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ExportArchive/ExportArchiveSettings">Export<wbr>Archive<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ReadRegisteredClouds/ReadRegisteredCloudsSettings">Read<wbr>Registered<wbr>Clouds<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.SetArchive/SetArchiveSettings">SetArchiveSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.StopVersion/StopVersionSettings">StopVersionSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloudSettings">Register<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloudSettings">Disconnect<wbr>Cloud<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.DeProvisionAddOn/DeProvisionAddOnSettings">De<wbr>Provision<wbr>Add<wbr>On<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.ExportManifest/ExportManifestSettings">Export<wbr>Manifest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.PromoteVersion/PromoteVersionSettings">Promote<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredCloudsSettings">Read<wbr>Registered<wbr>Clouds<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.StartInDebugMode/StartInDebugModeSettings">Start<wbr>In<wbr>Debug<wbr>Mode<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewApplication/NewApplicationSettings">New<wbr>Application<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.SetInstanceCount/SetInstanceCountSettings">Set<wbr>Instance<wbr>Count<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.GetAddOns/GetAddOnsSettings">GetAddOnsSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewVersion/NewVersionSettings">NewVersionSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.DemoteVersion/DemoteVersionSettings">Demote<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.StopDebugMode/StopDebugModeSettings">Stop<wbr>Debug<wbr>Mode<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.SetNodeState/SetNodeStateSettings">SetNodeStateSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.RemoveVersion/RemoveVersionSettings">Remove<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.SetInstanceMinimum/SetInstanceMinimumSettings">Set<wbr>Instance<wbr>Minimum<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Apprenda.ACS.NewPackage/NewPackageSettings">NewPackageSettings</a></li>								
+											<li><a href="/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloudSettings">ConnectCloudSettings</a></li>								
 											<li><a href="/api/Cake.Apprenda.ACS.StartVersion/StartVersionSettings">StartVersionSettings</a></li>								
 									</ul>
 								</dd>			
@@ -254,75 +254,75 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["ToolSettings"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["ToolSettings"]
 	Type["CloudShellSettings"]
 class Type type-node
-	Type--&gt;Derived0["SetNodeStateSettings"]
-	click Derived0 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeStateSettings"
-	Type--&gt;Derived1["NewApplicationSettings"]
-	click Derived1 "/api/Cake.Apprenda.ACS.NewApplication/NewApplicationSettings"
-	Type--&gt;Derived2["ExportArchiveSettings"]
-	click Derived2 "/api/Cake.Apprenda.ACS.ExportArchive/ExportArchiveSettings"
-	Type--&gt;Derived3["ConnectCloudSettings"]
-	click Derived3 "/api/Cake.Apprenda.ACS.ConnectCloud/ConnectCloudSettings"
-	Type--&gt;Derived4["StartInDebugModeSettings"]
-	click Derived4 "/api/Cake.Apprenda.ACS.StartInDebugMode/StartInDebugModeSettings"
-	Type--&gt;Derived5["GetNodeStateSettings"]
-	click Derived5 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeStateSettings"
-	Type--&gt;Derived6["RegisterCloudSettings"]
-	click Derived6 "/api/Cake.Apprenda.ACS.RegisterCloud/RegisterCloudSettings"
-	Type--&gt;Derived7["ProvisionAddOnSettings"]
-	click Derived7 "/api/Cake.Apprenda.ACS.ProvisionAddOn/ProvisionAddOnSettings"
-	Type--&gt;Derived8["ReadRegisteredCloudsSettings"]
-	click Derived8 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredCloudsSettings"
-	Type--&gt;Derived9["DemoteVersionSettings"]
-	click Derived9 "/api/Cake.Apprenda.ACS.DemoteVersion/DemoteVersionSettings"
-	Type--&gt;Derived10["SetInstanceCountSettings"]
-	click Derived10 "/api/Cake.Apprenda.ACS.SetInstanceCount/SetInstanceCountSettings"
-	Type--&gt;Derived11["DisconnectCloudSettings"]
-	click Derived11 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloudSettings"
-	Type--&gt;Derived12["PromoteVersionSettings"]
-	click Derived12 "/api/Cake.Apprenda.ACS.PromoteVersion/PromoteVersionSettings"
-	Type--&gt;Derived13["StopDebugModeSettings"]
-	click Derived13 "/api/Cake.Apprenda.ACS.StopDebugMode/StopDebugModeSettings"
-	Type--&gt;Derived14["SetInstanceMinimumSettings"]
-	click Derived14 "/api/Cake.Apprenda.ACS.SetInstanceMinimum/SetInstanceMinimumSettings"
-	Type--&gt;Derived15["CancelVersionPromotionSettings"]
-	click Derived15 "/api/Cake.Apprenda.ACS.CancelVersionPromotion/CancelVersionPromotionSettings"
-	Type--&gt;Derived16["StopVersionSettings"]
-	click Derived16 "/api/Cake.Apprenda.ACS.StopVersion/StopVersionSettings"
-	Type--&gt;Derived17["RemoveVersionSettings"]
-	click Derived17 "/api/Cake.Apprenda.ACS.RemoveVersion/RemoveVersionSettings"
-	Type--&gt;Derived18["PatchVersionSettings"]
-	click Derived18 "/api/Cake.Apprenda.ACS.PatchVersion/PatchVersionSettings"
-	Type--&gt;Derived19["DisconnectCloudSettings"]
-	click Derived19 "/api/Cake.Apprenda.ACS.DisconnectCloud/DisconnectCloudSettings"
-	Type--&gt;Derived20["NewUserSettings"]
-	click Derived20 "/api/Cake.Apprenda.ACS.NewUser/NewUserSettings"
-	Type--&gt;Derived21["NewVersionSettings"]
-	click Derived21 "/api/Cake.Apprenda.ACS.NewVersion/NewVersionSettings"
-	Type--&gt;Derived22["DeProvisionAddOnSettings"]
-	click Derived22 "/api/Cake.Apprenda.ACS.DeProvisionAddOn/DeProvisionAddOnSettings"
-	Type--&gt;Derived23["SetArchiveSettings"]
-	click Derived23 "/api/Cake.Apprenda.ACS.SetArchive/SetArchiveSettings"
-	Type--&gt;Derived24["GetAddOnsSettings"]
-	click Derived24 "/api/Cake.Apprenda.ACS.GetAddOns/GetAddOnsSettings"
-	Type--&gt;Derived25["ExportManifestSettings"]
-	click Derived25 "/api/Cake.Apprenda.ACS.ExportManifest/ExportManifestSettings"
-	Type--&gt;Derived26["RegisterCloudSettings"]
-	click Derived26 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloudSettings"
-	Type--&gt;Derived27["NewPackageSettings"]
-	click Derived27 "/api/Cake.Apprenda.ACS.NewPackage/NewPackageSettings"
-	Type--&gt;Derived28["RemoveApplicationSettings"]
-	click Derived28 "/api/Cake.Apprenda.ACS.RemoveApplication/RemoveApplicationSettings"
-	Type--&gt;Derived29["ConnectCloudSettings"]
-	click Derived29 "/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloudSettings"
-	Type--&gt;Derived30["ReadRegisteredCloudsSettings"]
-	click Derived30 "/api/Cake.Apprenda.ACS.ReadRegisteredClouds/ReadRegisteredCloudsSettings"
-	Type--&gt;Derived31["GetDeployedAddOnsSettings"]
-	click Derived31 "/api/Cake.Apprenda.ACS.GetDeployedAddOns/GetDeployedAddOnsSettings"
-	Type--&gt;Derived32["StartVersionSettings"]
+	Derived0["CancelVersionPromotionSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Apprenda.ACS.CancelVersionPromotion/CancelVersionPromotionSettings"
+	Derived1["NewUserSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Apprenda.ACS.NewUser/NewUserSettings"
+	Derived2["ProvisionAddOnSettings"]--&gt;Type
+	click Derived2 "/api/Cake.Apprenda.ACS.ProvisionAddOn/ProvisionAddOnSettings"
+	Derived3["PatchVersionSettings"]--&gt;Type
+	click Derived3 "/api/Cake.Apprenda.ACS.PatchVersion/PatchVersionSettings"
+	Derived4["GetDeployedAddOnsSettings"]--&gt;Type
+	click Derived4 "/api/Cake.Apprenda.ACS.GetDeployedAddOns/GetDeployedAddOnsSettings"
+	Derived5["DisconnectCloudSettings"]--&gt;Type
+	click Derived5 "/api/Cake.Apprenda.ACS.DisconnectCloud/DisconnectCloudSettings"
+	Derived6["RemoveApplicationSettings"]--&gt;Type
+	click Derived6 "/api/Cake.Apprenda.ACS.RemoveApplication/RemoveApplicationSettings"
+	Derived7["RegisterCloudSettings"]--&gt;Type
+	click Derived7 "/api/Cake.Apprenda.ACS.RegisterCloud/RegisterCloudSettings"
+	Derived8["GetNodeStateSettings"]--&gt;Type
+	click Derived8 "/api/Cake.Apprenda.AMM.GetNodeState/GetNodeStateSettings"
+	Derived9["ConnectCloudSettings"]--&gt;Type
+	click Derived9 "/api/Cake.Apprenda.ACS.ConnectCloud/ConnectCloudSettings"
+	Derived10["ExportArchiveSettings"]--&gt;Type
+	click Derived10 "/api/Cake.Apprenda.ACS.ExportArchive/ExportArchiveSettings"
+	Derived11["ReadRegisteredCloudsSettings"]--&gt;Type
+	click Derived11 "/api/Cake.Apprenda.ACS.ReadRegisteredClouds/ReadRegisteredCloudsSettings"
+	Derived12["SetArchiveSettings"]--&gt;Type
+	click Derived12 "/api/Cake.Apprenda.ACS.SetArchive/SetArchiveSettings"
+	Derived13["StopVersionSettings"]--&gt;Type
+	click Derived13 "/api/Cake.Apprenda.ACS.StopVersion/StopVersionSettings"
+	Derived14["RegisterCloudSettings"]--&gt;Type
+	click Derived14 "/api/Cake.Apprenda.AMM.RegisterCloud/RegisterCloudSettings"
+	Derived15["DisconnectCloudSettings"]--&gt;Type
+	click Derived15 "/api/Cake.Apprenda.AMM.DisconnectCloud/DisconnectCloudSettings"
+	Derived16["DeProvisionAddOnSettings"]--&gt;Type
+	click Derived16 "/api/Cake.Apprenda.ACS.DeProvisionAddOn/DeProvisionAddOnSettings"
+	Derived17["ExportManifestSettings"]--&gt;Type
+	click Derived17 "/api/Cake.Apprenda.ACS.ExportManifest/ExportManifestSettings"
+	Derived18["PromoteVersionSettings"]--&gt;Type
+	click Derived18 "/api/Cake.Apprenda.ACS.PromoteVersion/PromoteVersionSettings"
+	Derived19["ReadRegisteredCloudsSettings"]--&gt;Type
+	click Derived19 "/api/Cake.Apprenda.AMM.ReadRegisteredClouds/ReadRegisteredCloudsSettings"
+	Derived20["StartInDebugModeSettings"]--&gt;Type
+	click Derived20 "/api/Cake.Apprenda.ACS.StartInDebugMode/StartInDebugModeSettings"
+	Derived21["NewApplicationSettings"]--&gt;Type
+	click Derived21 "/api/Cake.Apprenda.ACS.NewApplication/NewApplicationSettings"
+	Derived22["SetInstanceCountSettings"]--&gt;Type
+	click Derived22 "/api/Cake.Apprenda.ACS.SetInstanceCount/SetInstanceCountSettings"
+	Derived23["GetAddOnsSettings"]--&gt;Type
+	click Derived23 "/api/Cake.Apprenda.ACS.GetAddOns/GetAddOnsSettings"
+	Derived24["NewVersionSettings"]--&gt;Type
+	click Derived24 "/api/Cake.Apprenda.ACS.NewVersion/NewVersionSettings"
+	Derived25["DemoteVersionSettings"]--&gt;Type
+	click Derived25 "/api/Cake.Apprenda.ACS.DemoteVersion/DemoteVersionSettings"
+	Derived26["StopDebugModeSettings"]--&gt;Type
+	click Derived26 "/api/Cake.Apprenda.ACS.StopDebugMode/StopDebugModeSettings"
+	Derived27["SetNodeStateSettings"]--&gt;Type
+	click Derived27 "/api/Cake.Apprenda.AMM.SetNodeState/SetNodeStateSettings"
+	Derived28["RemoveVersionSettings"]--&gt;Type
+	click Derived28 "/api/Cake.Apprenda.ACS.RemoveVersion/RemoveVersionSettings"
+	Derived29["SetInstanceMinimumSettings"]--&gt;Type
+	click Derived29 "/api/Cake.Apprenda.ACS.SetInstanceMinimum/SetInstanceMinimumSettings"
+	Derived30["NewPackageSettings"]--&gt;Type
+	click Derived30 "/api/Cake.Apprenda.ACS.NewPackage/NewPackageSettings"
+	Derived31["ConnectCloudSettings"]--&gt;Type
+	click Derived31 "/api/Cake.Apprenda.AMM.ConnectCloud/ConnectCloudSettings"
+	Derived32["StartVersionSettings"]--&gt;Type
 	click Derived32 "/api/Cake.Apprenda.ACS.StartVersion/StartVersionSettings"
 
 						</div>
@@ -333,6 +333,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class CloudShellSettings : ToolSettings</code></pre>
+
 
 
 
@@ -397,17 +398,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -416,6 +406,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Cloud<wbr>Shell<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -502,22 +503,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

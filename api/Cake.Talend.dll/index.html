@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - Cake.Talend.dll Assembly</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -81,7 +81,6 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
-<p><a href="#EnumTypes">Enum Types</a></p>
 <p><a href="#InterfaceTypes">Interface Types</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -313,6 +312,7 @@
         <li><a href="/api/Cake.Yaml.dll">Cake<wbr>.Yaml<wbr>.dll</a></li>
         <li><a href="/api/Cake.Yarn.dll">Cake<wbr>.Yarn<wbr>.dll</a></li>
         <li><a href="/api/Cake.Yeoman.dll">Cake<wbr>.Yeoman<wbr>.dll</a></li>
+        <li><a href="/api/DependencyChecker.Nuget.Adapter.dll">DependencyChecker<wbr>.Nuget<wbr>.Adapter<wbr>.dll</a></li>
         <li><a href="/api/Domain.dll">Domain<wbr>.dll</a></li>
         <li><a href="/api/MagicChunks.Cake.dll">MagicChunks<wbr>.Cake<wbr>.dll</a></li>
         <li><a href="/api/MagicChunks.dll">MagicChunks<wbr>.dll</a></li>
@@ -337,8 +337,10 @@
 </section>
 <section class="content">
 	
+
 	
 	
+
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -374,6 +376,12 @@
             </td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Talend/EsbTaskStateEnum">EsbTaskStateEnum</a></td>
+									<td>
+            The list of states for ESB Tasks.
+            </td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Talend/EsbTaskStateEnumExtensions">Esb<wbr>Task<wbr>State<wbr>Enum<wbr>Extensions</a></td>
 									<td></td>
 							</tr>
@@ -391,6 +399,12 @@
 								<td><a href="/api/Cake.Talend.Models/PublishRouteSettings">PublishRouteSettings</a></td>
 									<td>
             The necessary settings to publish a route.
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Talend/RepositoryEnum">RepositoryEnum</a></td>
+									<td>
+            The two main repositories.
             </td>
 							</tr>
 							<tr>
@@ -495,32 +509,7 @@
 				</div>
 			</div>
 		
-			<h1 id="EnumTypes">Enum Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Enum</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Cake.Talend/EsbTaskStateEnum">EsbTaskStateEnum</a></td>
-									<td>
-            The list of states for ESB Tasks.
-            </td>
-							</tr>
-							<tr>
-								<td><a href="/api/Cake.Talend/RepositoryEnum">RepositoryEnum</a></td>
-									<td>
-            The two main repositories.
-            </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
+
 			<h1 id="InterfaceTypes">Interface Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -594,22 +583,53 @@
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

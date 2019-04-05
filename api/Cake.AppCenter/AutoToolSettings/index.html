@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - AutoToolSettings Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -247,7 +247,8 @@
 	<h1>AutoToolSettings <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -282,82 +283,82 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.AppCenter/AppCenterTokensCreateSettings">App<wbr>Center<wbr>Tokens<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterProfileUpdateSettings">App<wbr>Center<wbr>Profile<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentHistorySettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>History<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareAppiumSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Appium<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterBuildLogsSettings">App<wbr>Center<wbr>Build<wbr>Logs<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsCollaboratorsListSettings">App<wbr>Center<wbr>Orgs<wbr>Collaborators<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterBuildBranchesListSettings">App<wbr>Center<wbr>Build<wbr>Branches<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsUpdateSettings">App<wbr>Center<wbr>Apps<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsAppVersionsSettings">App<wbr>Center<wbr>Analytics<wbr>App<wbr>Versions<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestStatusSettings">App<wbr>Center<wbr>Test<wbr>Status<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsShowSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTokensListSettings">App<wbr>Center<wbr>Tokens<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTokensDeleteSettings">App<wbr>Center<wbr>Tokens<wbr>Delete<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleasesShowSettings">App<wbr>Center<wbr>Distribute<wbr>Releases<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushRollbackSettings">App<wbr>Center<wbr>Codepush<wbr>Rollback<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsUpdateSettings">App<wbr>Center<wbr>Orgs<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestRunCalabashSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Calabash<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTelemetryOffSettings">App<wbr>Center<wbr>Telemetry<wbr>Off<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCrashesUploadSymbolsSettings">App<wbr>Center<wbr>Crashes<wbr>Upload<wbr>Symbols<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsAudienceSettings">App<wbr>Center<wbr>Analytics<wbr>Audience<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsCreateSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsAppsListSettings">App<wbr>Center<wbr>Orgs<wbr>Apps<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsShowSettings">App<wbr>Center<wbr>Orgs<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsShowSettings">App<wbr>Center<wbr>Apps<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsSessionsSettings">App<wbr>Center<wbr>Analytics<wbr>Sessions<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestRunUitestSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Uitest<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestRunAppiumSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Appium<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsDeleteSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Delete<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestRunManifestSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Manifest<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterSetupAutocompleteSettings">App<wbr>Center<wbr>Setup<wbr>Autocomplete<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsCreateSettings">App<wbr>Center<wbr>Apps<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsDownloadSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Download<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushReleaseReactSettings">App<wbr>Center<wbr>Codepush<wbr>Release<wbr>React<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestDownloadSettings">App<wbr>Center<wbr>Test<wbr>Download<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/EmptySettings">EmptySettings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentAddSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Add<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsListSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleasesDeleteSettings">App<wbr>Center<wbr>Distribute<wbr>Releases<wbr>Delete<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsDeleteSettings">App<wbr>Center<wbr>Apps<wbr>Delete<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushReleaseSettings">App<wbr>Center<wbr>Codepush<wbr>Release<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentRemoveSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Remove<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushPatchSettings">App<wbr>Center<wbr>Codepush<wbr>Patch<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterBuildQueueSettings">App<wbr>Center<wbr>Build<wbr>Queue<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterProfileListSettings">App<wbr>Center<wbr>Profile<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsUpdateSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestRunEspressoSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Espresso<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsListSettings">App<wbr>Center<wbr>Apps<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushPromoteSettings">App<wbr>Center<wbr>Codepush<wbr>Promote<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsCollaboratorsUpdateSettings">App<wbr>Center<wbr>Orgs<wbr>Collaborators<wbr>Update<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestGenerateAppiumSettings">App<wbr>Center<wbr>Test<wbr>Generate<wbr>Appium<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTelemetryOnSettings">App<wbr>Center<wbr>Telemetry<wbr>On<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterBuildDownloadSettings">App<wbr>Center<wbr>Build<wbr>Download<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsEventsShowSettings">App<wbr>Center<wbr>Analytics<wbr>Events<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsGetCurrentSettings">App<wbr>Center<wbr>Apps<wbr>Get<wbr>Current<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentRenameSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Rename<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterAppsSetCurrentSettings">App<wbr>Center<wbr>Apps<wbr>Set<wbr>Current<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleasesListSettings">App<wbr>Center<wbr>Distribute<wbr>Releases<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentListSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>List<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.AppCenter/AppCenterTestGenerateUitestSettings">App<wbr>Center<wbr>Test<wbr>Generate<wbr>Uitest<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareUitestSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Uitest<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestStopSettings">App<wbr>Center<wbr>Test<wbr>Stop<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleaseSettings">App<wbr>Center<wbr>Distribute<wbr>Release<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCrashesUploadMissingSymbolsSettings">App<wbr>Center<wbr>Crashes<wbr>Upload<wbr>Missing<wbr>Symbols<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushReleaseCordovaSettings">App<wbr>Center<wbr>Codepush<wbr>Release<wbr>Cordova<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareCalabashSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Calabash<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsCreateSettings">App<wbr>Center<wbr>Orgs<wbr>Create<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterOrgsListSettings">App<wbr>Center<wbr>Orgs<wbr>List<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentClearSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Clear<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterLoginSettings">App<wbr>Center<wbr>Login<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterLogoutSettings">App<wbr>Center<wbr>Logout<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareXcuitestSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Xcuitest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterSetupAutocompleteSettings">App<wbr>Center<wbr>Setup<wbr>Autocomplete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestRunCalabashSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Calabash<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsLogFlowSettings">App<wbr>Center<wbr>Analytics<wbr>Log<wbr>Flow<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterBuildBranchesShowSettings">App<wbr>Center<wbr>Build<wbr>Branches<wbr>Show<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareEspressoSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Espresso<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterBuildQueueSettings">App<wbr>Center<wbr>Build<wbr>Queue<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentRenameSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Rename<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsShowSettings">App<wbr>Center<wbr>Apps<wbr>Show<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCrashesUploadMissingSymbolsSettings">App<wbr>Center<wbr>Crashes<wbr>Upload<wbr>Missing<wbr>Symbols<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleasesDeleteSettings">App<wbr>Center<wbr>Distribute<wbr>Releases<wbr>Delete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsCreateSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTokensDeleteSettings">App<wbr>Center<wbr>Tokens<wbr>Delete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestRunUitestSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Uitest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestRunManifestSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Manifest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushPatchSettings">App<wbr>Center<wbr>Codepush<wbr>Patch<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/EmptySettings">EmptySettings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsDownloadSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Download<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestGenerateAppiumSettings">App<wbr>Center<wbr>Test<wbr>Generate<wbr>Appium<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterBuildDownloadSettings">App<wbr>Center<wbr>Build<wbr>Download<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsShowSettings">App<wbr>Center<wbr>Orgs<wbr>Show<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTelemetryOffSettings">App<wbr>Center<wbr>Telemetry<wbr>Off<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareCalabashSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Calabash<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentHistorySettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>History<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTokensListSettings">App<wbr>Center<wbr>Tokens<wbr>List<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsEventsDeleteSettings">App<wbr>Center<wbr>Analytics<wbr>Events<wbr>Delete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestRunAppiumSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Appium<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareEspressoSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Espresso<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareXcuitestSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Xcuitest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareUitestSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Uitest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsCollaboratorsListSettings">App<wbr>Center<wbr>Orgs<wbr>Collaborators<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushReleaseSettings">App<wbr>Center<wbr>Codepush<wbr>Release<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsUpdateSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Update<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsSessionsSettings">App<wbr>Center<wbr>Analytics<wbr>Sessions<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentClearSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Clear<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestStatusSettings">App<wbr>Center<wbr>Test<wbr>Status<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestPrepareAppiumSettings">App<wbr>Center<wbr>Test<wbr>Prepare<wbr>Appium<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsCreateSettings">App<wbr>Center<wbr>Apps<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsEventsShowSettings">App<wbr>Center<wbr>Analytics<wbr>Events<wbr>Show<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterProfileListSettings">App<wbr>Center<wbr>Profile<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsShowSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Show<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentAddSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Add<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsDeleteSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>Delete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsUpdateSettings">App<wbr>Center<wbr>Orgs<wbr>Update<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsAudienceSettings">App<wbr>Center<wbr>Analytics<wbr>Audience<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentListSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterBuildBranchesShowSettings">App<wbr>Center<wbr>Build<wbr>Branches<wbr>Show<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTokensCreateSettings">App<wbr>Center<wbr>Tokens<wbr>Create<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.AppCenter/AppCenterTestRunXcuitestSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Xcuitest<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCrashesUploadSymbolsSettings">App<wbr>Center<wbr>Crashes<wbr>Upload<wbr>Symbols<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushReleaseCordovaSettings">App<wbr>Center<wbr>Codepush<wbr>Release<wbr>Cordova<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushPromoteSettings">App<wbr>Center<wbr>Codepush<wbr>Promote<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushReleaseReactSettings">App<wbr>Center<wbr>Codepush<wbr>Release<wbr>React<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterProfileUpdateSettings">App<wbr>Center<wbr>Profile<wbr>Update<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsSetCurrentSettings">App<wbr>Center<wbr>Apps<wbr>Set<wbr>Current<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsListSettings">App<wbr>Center<wbr>Apps<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushRollbackSettings">App<wbr>Center<wbr>Codepush<wbr>Rollback<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTelemetryOnSettings">App<wbr>Center<wbr>Telemetry<wbr>On<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsCreateSettings">App<wbr>Center<wbr>Orgs<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterLogoutSettings">App<wbr>Center<wbr>Logout<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterLoginSettings">App<wbr>Center<wbr>Login<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsGetCurrentSettings">App<wbr>Center<wbr>Apps<wbr>Get<wbr>Current<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsDeleteSettings">App<wbr>Center<wbr>Apps<wbr>Delete<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeGroupsListSettings">App<wbr>Center<wbr>Distribute<wbr>Groups<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestRunEspressoSettings">App<wbr>Center<wbr>Test<wbr>Run<wbr>Espresso<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterBuildBranchesListSettings">App<wbr>Center<wbr>Build<wbr>Branches<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsAppsListSettings">App<wbr>Center<wbr>Orgs<wbr>Apps<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleaseSettings">App<wbr>Center<wbr>Distribute<wbr>Release<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterBuildLogsSettings">App<wbr>Center<wbr>Build<wbr>Logs<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsCollaboratorsUpdateSettings">App<wbr>Center<wbr>Orgs<wbr>Collaborators<wbr>Update<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterDistributeReleasesListSettings">App<wbr>Center<wbr>Distribute<wbr>Releases<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAnalyticsAppVersionsSettings">App<wbr>Center<wbr>Analytics<wbr>App<wbr>Versions<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestDownloadSettings">App<wbr>Center<wbr>Test<wbr>Download<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterTestStopSettings">App<wbr>Center<wbr>Test<wbr>Stop<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterOrgsListSettings">App<wbr>Center<wbr>Orgs<wbr>List<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterAppsUpdateSettings">App<wbr>Center<wbr>Apps<wbr>Update<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.AppCenter/AppCenterCodepushDeploymentRemoveSettings">App<wbr>Center<wbr>Codepush<wbr>Deployment<wbr>Remove<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -365,162 +366,162 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["ToolSettings"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["ToolSettings"]
 	Type["AutoToolSettings"]
 class Type type-node
-	Type--&gt;Derived0["AppCenterTokensCreateSettings"]
-	click Derived0 "/api/Cake.AppCenter/AppCenterTokensCreateSettings"
-	Type--&gt;Derived1["AppCenterProfileUpdateSettings"]
-	click Derived1 "/api/Cake.AppCenter/AppCenterProfileUpdateSettings"
-	Type--&gt;Derived2["AppCenterCodepushDeploymentHistorySettings"]
-	click Derived2 "/api/Cake.AppCenter/AppCenterCodepushDeploymentHistorySettings"
-	Type--&gt;Derived3["AppCenterTestPrepareAppiumSettings"]
-	click Derived3 "/api/Cake.AppCenter/AppCenterTestPrepareAppiumSettings"
-	Type--&gt;Derived4["AppCenterBuildLogsSettings"]
-	click Derived4 "/api/Cake.AppCenter/AppCenterBuildLogsSettings"
-	Type--&gt;Derived5["AppCenterOrgsCollaboratorsListSettings"]
-	click Derived5 "/api/Cake.AppCenter/AppCenterOrgsCollaboratorsListSettings"
-	Type--&gt;Derived6["AppCenterBuildBranchesListSettings"]
-	click Derived6 "/api/Cake.AppCenter/AppCenterBuildBranchesListSettings"
-	Type--&gt;Derived7["AppCenterAppsUpdateSettings"]
-	click Derived7 "/api/Cake.AppCenter/AppCenterAppsUpdateSettings"
-	Type--&gt;Derived8["AppCenterAnalyticsAppVersionsSettings"]
-	click Derived8 "/api/Cake.AppCenter/AppCenterAnalyticsAppVersionsSettings"
-	Type--&gt;Derived9["AppCenterTestStatusSettings"]
-	click Derived9 "/api/Cake.AppCenter/AppCenterTestStatusSettings"
-	Type--&gt;Derived10["AppCenterDistributeGroupsShowSettings"]
-	click Derived10 "/api/Cake.AppCenter/AppCenterDistributeGroupsShowSettings"
-	Type--&gt;Derived11["AppCenterTokensListSettings"]
-	click Derived11 "/api/Cake.AppCenter/AppCenterTokensListSettings"
-	Type--&gt;Derived12["AppCenterTokensDeleteSettings"]
-	click Derived12 "/api/Cake.AppCenter/AppCenterTokensDeleteSettings"
-	Type--&gt;Derived13["AppCenterDistributeReleasesShowSettings"]
-	click Derived13 "/api/Cake.AppCenter/AppCenterDistributeReleasesShowSettings"
-	Type--&gt;Derived14["AppCenterCodepushRollbackSettings"]
-	click Derived14 "/api/Cake.AppCenter/AppCenterCodepushRollbackSettings"
-	Type--&gt;Derived15["AppCenterOrgsUpdateSettings"]
-	click Derived15 "/api/Cake.AppCenter/AppCenterOrgsUpdateSettings"
-	Type--&gt;Derived16["AppCenterTestRunCalabashSettings"]
-	click Derived16 "/api/Cake.AppCenter/AppCenterTestRunCalabashSettings"
-	Type--&gt;Derived17["AppCenterTelemetryOffSettings"]
-	click Derived17 "/api/Cake.AppCenter/AppCenterTelemetryOffSettings"
-	Type--&gt;Derived18["AppCenterCrashesUploadSymbolsSettings"]
-	click Derived18 "/api/Cake.AppCenter/AppCenterCrashesUploadSymbolsSettings"
-	Type--&gt;Derived19["AppCenterAnalyticsAudienceSettings"]
-	click Derived19 "/api/Cake.AppCenter/AppCenterAnalyticsAudienceSettings"
-	Type--&gt;Derived20["AppCenterDistributeGroupsCreateSettings"]
-	click Derived20 "/api/Cake.AppCenter/AppCenterDistributeGroupsCreateSettings"
-	Type--&gt;Derived21["AppCenterOrgsAppsListSettings"]
-	click Derived21 "/api/Cake.AppCenter/AppCenterOrgsAppsListSettings"
-	Type--&gt;Derived22["AppCenterOrgsShowSettings"]
-	click Derived22 "/api/Cake.AppCenter/AppCenterOrgsShowSettings"
-	Type--&gt;Derived23["AppCenterAppsShowSettings"]
-	click Derived23 "/api/Cake.AppCenter/AppCenterAppsShowSettings"
-	Type--&gt;Derived24["AppCenterAnalyticsSessionsSettings"]
-	click Derived24 "/api/Cake.AppCenter/AppCenterAnalyticsSessionsSettings"
-	Type--&gt;Derived25["AppCenterTestRunUitestSettings"]
-	click Derived25 "/api/Cake.AppCenter/AppCenterTestRunUitestSettings"
-	Type--&gt;Derived26["AppCenterTestRunAppiumSettings"]
-	click Derived26 "/api/Cake.AppCenter/AppCenterTestRunAppiumSettings"
-	Type--&gt;Derived27["AppCenterDistributeGroupsDeleteSettings"]
-	click Derived27 "/api/Cake.AppCenter/AppCenterDistributeGroupsDeleteSettings"
-	Type--&gt;Derived28["AppCenterTestRunManifestSettings"]
-	click Derived28 "/api/Cake.AppCenter/AppCenterTestRunManifestSettings"
-	Type--&gt;Derived29["AppCenterSetupAutocompleteSettings"]
-	click Derived29 "/api/Cake.AppCenter/AppCenterSetupAutocompleteSettings"
-	Type--&gt;Derived30["AppCenterAppsCreateSettings"]
-	click Derived30 "/api/Cake.AppCenter/AppCenterAppsCreateSettings"
-	Type--&gt;Derived31["AppCenterDistributeGroupsDownloadSettings"]
-	click Derived31 "/api/Cake.AppCenter/AppCenterDistributeGroupsDownloadSettings"
-	Type--&gt;Derived32["AppCenterCodepushReleaseReactSettings"]
-	click Derived32 "/api/Cake.AppCenter/AppCenterCodepushReleaseReactSettings"
-	Type--&gt;Derived33["AppCenterTestDownloadSettings"]
-	click Derived33 "/api/Cake.AppCenter/AppCenterTestDownloadSettings"
-	Type--&gt;Derived34["EmptySettings"]
-	click Derived34 "/api/Cake.AppCenter/EmptySettings"
-	Type--&gt;Derived35["AppCenterCodepushDeploymentAddSettings"]
-	click Derived35 "/api/Cake.AppCenter/AppCenterCodepushDeploymentAddSettings"
-	Type--&gt;Derived36["AppCenterDistributeGroupsListSettings"]
-	click Derived36 "/api/Cake.AppCenter/AppCenterDistributeGroupsListSettings"
-	Type--&gt;Derived37["AppCenterDistributeReleasesDeleteSettings"]
-	click Derived37 "/api/Cake.AppCenter/AppCenterDistributeReleasesDeleteSettings"
-	Type--&gt;Derived38["AppCenterAppsDeleteSettings"]
-	click Derived38 "/api/Cake.AppCenter/AppCenterAppsDeleteSettings"
-	Type--&gt;Derived39["AppCenterCodepushReleaseSettings"]
-	click Derived39 "/api/Cake.AppCenter/AppCenterCodepushReleaseSettings"
-	Type--&gt;Derived40["AppCenterCodepushDeploymentRemoveSettings"]
-	click Derived40 "/api/Cake.AppCenter/AppCenterCodepushDeploymentRemoveSettings"
-	Type--&gt;Derived41["AppCenterCodepushPatchSettings"]
-	click Derived41 "/api/Cake.AppCenter/AppCenterCodepushPatchSettings"
-	Type--&gt;Derived42["AppCenterBuildQueueSettings"]
-	click Derived42 "/api/Cake.AppCenter/AppCenterBuildQueueSettings"
-	Type--&gt;Derived43["AppCenterProfileListSettings"]
-	click Derived43 "/api/Cake.AppCenter/AppCenterProfileListSettings"
-	Type--&gt;Derived44["AppCenterDistributeGroupsUpdateSettings"]
-	click Derived44 "/api/Cake.AppCenter/AppCenterDistributeGroupsUpdateSettings"
-	Type--&gt;Derived45["AppCenterTestRunEspressoSettings"]
-	click Derived45 "/api/Cake.AppCenter/AppCenterTestRunEspressoSettings"
-	Type--&gt;Derived46["AppCenterAppsListSettings"]
-	click Derived46 "/api/Cake.AppCenter/AppCenterAppsListSettings"
-	Type--&gt;Derived47["AppCenterCodepushPromoteSettings"]
-	click Derived47 "/api/Cake.AppCenter/AppCenterCodepushPromoteSettings"
-	Type--&gt;Derived48["AppCenterOrgsCollaboratorsUpdateSettings"]
-	click Derived48 "/api/Cake.AppCenter/AppCenterOrgsCollaboratorsUpdateSettings"
-	Type--&gt;Derived49["AppCenterTestGenerateAppiumSettings"]
-	click Derived49 "/api/Cake.AppCenter/AppCenterTestGenerateAppiumSettings"
-	Type--&gt;Derived50["AppCenterTelemetryOnSettings"]
-	click Derived50 "/api/Cake.AppCenter/AppCenterTelemetryOnSettings"
-	Type--&gt;Derived51["AppCenterBuildDownloadSettings"]
-	click Derived51 "/api/Cake.AppCenter/AppCenterBuildDownloadSettings"
-	Type--&gt;Derived52["AppCenterAnalyticsEventsShowSettings"]
-	click Derived52 "/api/Cake.AppCenter/AppCenterAnalyticsEventsShowSettings"
-	Type--&gt;Derived53["AppCenterAppsGetCurrentSettings"]
-	click Derived53 "/api/Cake.AppCenter/AppCenterAppsGetCurrentSettings"
-	Type--&gt;Derived54["AppCenterCodepushDeploymentRenameSettings"]
-	click Derived54 "/api/Cake.AppCenter/AppCenterCodepushDeploymentRenameSettings"
-	Type--&gt;Derived55["AppCenterAppsSetCurrentSettings"]
-	click Derived55 "/api/Cake.AppCenter/AppCenterAppsSetCurrentSettings"
-	Type--&gt;Derived56["AppCenterDistributeReleasesListSettings"]
-	click Derived56 "/api/Cake.AppCenter/AppCenterDistributeReleasesListSettings"
-	Type--&gt;Derived57["AppCenterCodepushDeploymentListSettings"]
-	click Derived57 "/api/Cake.AppCenter/AppCenterCodepushDeploymentListSettings"
-	Type--&gt;Derived58["AppCenterTestGenerateUitestSettings"]
-	click Derived58 "/api/Cake.AppCenter/AppCenterTestGenerateUitestSettings"
-	Type--&gt;Derived59["AppCenterTestPrepareUitestSettings"]
-	click Derived59 "/api/Cake.AppCenter/AppCenterTestPrepareUitestSettings"
-	Type--&gt;Derived60["AppCenterTestStopSettings"]
-	click Derived60 "/api/Cake.AppCenter/AppCenterTestStopSettings"
-	Type--&gt;Derived61["AppCenterDistributeReleaseSettings"]
-	click Derived61 "/api/Cake.AppCenter/AppCenterDistributeReleaseSettings"
-	Type--&gt;Derived62["AppCenterCrashesUploadMissingSymbolsSettings"]
-	click Derived62 "/api/Cake.AppCenter/AppCenterCrashesUploadMissingSymbolsSettings"
-	Type--&gt;Derived63["AppCenterCodepushReleaseCordovaSettings"]
-	click Derived63 "/api/Cake.AppCenter/AppCenterCodepushReleaseCordovaSettings"
-	Type--&gt;Derived64["AppCenterTestPrepareCalabashSettings"]
-	click Derived64 "/api/Cake.AppCenter/AppCenterTestPrepareCalabashSettings"
-	Type--&gt;Derived65["AppCenterOrgsCreateSettings"]
-	click Derived65 "/api/Cake.AppCenter/AppCenterOrgsCreateSettings"
-	Type--&gt;Derived66["AppCenterOrgsListSettings"]
-	click Derived66 "/api/Cake.AppCenter/AppCenterOrgsListSettings"
-	Type--&gt;Derived67["AppCenterCodepushDeploymentClearSettings"]
-	click Derived67 "/api/Cake.AppCenter/AppCenterCodepushDeploymentClearSettings"
-	Type--&gt;Derived68["AppCenterLoginSettings"]
-	click Derived68 "/api/Cake.AppCenter/AppCenterLoginSettings"
-	Type--&gt;Derived69["AppCenterLogoutSettings"]
-	click Derived69 "/api/Cake.AppCenter/AppCenterLogoutSettings"
-	Type--&gt;Derived70["AppCenterTestPrepareXcuitestSettings"]
-	click Derived70 "/api/Cake.AppCenter/AppCenterTestPrepareXcuitestSettings"
-	Type--&gt;Derived71["AppCenterAnalyticsLogFlowSettings"]
-	click Derived71 "/api/Cake.AppCenter/AppCenterAnalyticsLogFlowSettings"
-	Type--&gt;Derived72["AppCenterBuildBranchesShowSettings"]
-	click Derived72 "/api/Cake.AppCenter/AppCenterBuildBranchesShowSettings"
-	Type--&gt;Derived73["AppCenterTestPrepareEspressoSettings"]
-	click Derived73 "/api/Cake.AppCenter/AppCenterTestPrepareEspressoSettings"
-	Type--&gt;Derived74["AppCenterAnalyticsEventsDeleteSettings"]
-	click Derived74 "/api/Cake.AppCenter/AppCenterAnalyticsEventsDeleteSettings"
-	Type--&gt;Derived75["AppCenterTestRunXcuitestSettings"]
-	click Derived75 "/api/Cake.AppCenter/AppCenterTestRunXcuitestSettings"
+	Derived0["AppCenterDistributeReleasesShowSettings"]--&gt;Type
+	click Derived0 "/api/Cake.AppCenter/AppCenterDistributeReleasesShowSettings"
+	Derived1["AppCenterTestGenerateUitestSettings"]--&gt;Type
+	click Derived1 "/api/Cake.AppCenter/AppCenterTestGenerateUitestSettings"
+	Derived2["AppCenterSetupAutocompleteSettings"]--&gt;Type
+	click Derived2 "/api/Cake.AppCenter/AppCenterSetupAutocompleteSettings"
+	Derived3["AppCenterTestRunCalabashSettings"]--&gt;Type
+	click Derived3 "/api/Cake.AppCenter/AppCenterTestRunCalabashSettings"
+	Derived4["AppCenterAnalyticsLogFlowSettings"]--&gt;Type
+	click Derived4 "/api/Cake.AppCenter/AppCenterAnalyticsLogFlowSettings"
+	Derived5["AppCenterBuildQueueSettings"]--&gt;Type
+	click Derived5 "/api/Cake.AppCenter/AppCenterBuildQueueSettings"
+	Derived6["AppCenterCodepushDeploymentRenameSettings"]--&gt;Type
+	click Derived6 "/api/Cake.AppCenter/AppCenterCodepushDeploymentRenameSettings"
+	Derived7["AppCenterAppsShowSettings"]--&gt;Type
+	click Derived7 "/api/Cake.AppCenter/AppCenterAppsShowSettings"
+	Derived8["AppCenterCrashesUploadMissingSymbolsSettings"]--&gt;Type
+	click Derived8 "/api/Cake.AppCenter/AppCenterCrashesUploadMissingSymbolsSettings"
+	Derived9["AppCenterDistributeReleasesDeleteSettings"]--&gt;Type
+	click Derived9 "/api/Cake.AppCenter/AppCenterDistributeReleasesDeleteSettings"
+	Derived10["AppCenterDistributeGroupsCreateSettings"]--&gt;Type
+	click Derived10 "/api/Cake.AppCenter/AppCenterDistributeGroupsCreateSettings"
+	Derived11["AppCenterTokensDeleteSettings"]--&gt;Type
+	click Derived11 "/api/Cake.AppCenter/AppCenterTokensDeleteSettings"
+	Derived12["AppCenterTestRunUitestSettings"]--&gt;Type
+	click Derived12 "/api/Cake.AppCenter/AppCenterTestRunUitestSettings"
+	Derived13["AppCenterTestRunManifestSettings"]--&gt;Type
+	click Derived13 "/api/Cake.AppCenter/AppCenterTestRunManifestSettings"
+	Derived14["AppCenterCodepushPatchSettings"]--&gt;Type
+	click Derived14 "/api/Cake.AppCenter/AppCenterCodepushPatchSettings"
+	Derived15["EmptySettings"]--&gt;Type
+	click Derived15 "/api/Cake.AppCenter/EmptySettings"
+	Derived16["AppCenterDistributeGroupsDownloadSettings"]--&gt;Type
+	click Derived16 "/api/Cake.AppCenter/AppCenterDistributeGroupsDownloadSettings"
+	Derived17["AppCenterTestGenerateAppiumSettings"]--&gt;Type
+	click Derived17 "/api/Cake.AppCenter/AppCenterTestGenerateAppiumSettings"
+	Derived18["AppCenterBuildDownloadSettings"]--&gt;Type
+	click Derived18 "/api/Cake.AppCenter/AppCenterBuildDownloadSettings"
+	Derived19["AppCenterOrgsShowSettings"]--&gt;Type
+	click Derived19 "/api/Cake.AppCenter/AppCenterOrgsShowSettings"
+	Derived20["AppCenterTelemetryOffSettings"]--&gt;Type
+	click Derived20 "/api/Cake.AppCenter/AppCenterTelemetryOffSettings"
+	Derived21["AppCenterTestPrepareCalabashSettings"]--&gt;Type
+	click Derived21 "/api/Cake.AppCenter/AppCenterTestPrepareCalabashSettings"
+	Derived22["AppCenterCodepushDeploymentHistorySettings"]--&gt;Type
+	click Derived22 "/api/Cake.AppCenter/AppCenterCodepushDeploymentHistorySettings"
+	Derived23["AppCenterTokensListSettings"]--&gt;Type
+	click Derived23 "/api/Cake.AppCenter/AppCenterTokensListSettings"
+	Derived24["AppCenterAnalyticsEventsDeleteSettings"]--&gt;Type
+	click Derived24 "/api/Cake.AppCenter/AppCenterAnalyticsEventsDeleteSettings"
+	Derived25["AppCenterTestRunAppiumSettings"]--&gt;Type
+	click Derived25 "/api/Cake.AppCenter/AppCenterTestRunAppiumSettings"
+	Derived26["AppCenterTestPrepareEspressoSettings"]--&gt;Type
+	click Derived26 "/api/Cake.AppCenter/AppCenterTestPrepareEspressoSettings"
+	Derived27["AppCenterTestPrepareXcuitestSettings"]--&gt;Type
+	click Derived27 "/api/Cake.AppCenter/AppCenterTestPrepareXcuitestSettings"
+	Derived28["AppCenterTestPrepareUitestSettings"]--&gt;Type
+	click Derived28 "/api/Cake.AppCenter/AppCenterTestPrepareUitestSettings"
+	Derived29["AppCenterOrgsCollaboratorsListSettings"]--&gt;Type
+	click Derived29 "/api/Cake.AppCenter/AppCenterOrgsCollaboratorsListSettings"
+	Derived30["AppCenterCodepushReleaseSettings"]--&gt;Type
+	click Derived30 "/api/Cake.AppCenter/AppCenterCodepushReleaseSettings"
+	Derived31["AppCenterDistributeGroupsUpdateSettings"]--&gt;Type
+	click Derived31 "/api/Cake.AppCenter/AppCenterDistributeGroupsUpdateSettings"
+	Derived32["AppCenterAnalyticsSessionsSettings"]--&gt;Type
+	click Derived32 "/api/Cake.AppCenter/AppCenterAnalyticsSessionsSettings"
+	Derived33["AppCenterCodepushDeploymentClearSettings"]--&gt;Type
+	click Derived33 "/api/Cake.AppCenter/AppCenterCodepushDeploymentClearSettings"
+	Derived34["AppCenterTestStatusSettings"]--&gt;Type
+	click Derived34 "/api/Cake.AppCenter/AppCenterTestStatusSettings"
+	Derived35["AppCenterTestPrepareAppiumSettings"]--&gt;Type
+	click Derived35 "/api/Cake.AppCenter/AppCenterTestPrepareAppiumSettings"
+	Derived36["AppCenterAppsCreateSettings"]--&gt;Type
+	click Derived36 "/api/Cake.AppCenter/AppCenterAppsCreateSettings"
+	Derived37["AppCenterAnalyticsEventsShowSettings"]--&gt;Type
+	click Derived37 "/api/Cake.AppCenter/AppCenterAnalyticsEventsShowSettings"
+	Derived38["AppCenterProfileListSettings"]--&gt;Type
+	click Derived38 "/api/Cake.AppCenter/AppCenterProfileListSettings"
+	Derived39["AppCenterDistributeGroupsShowSettings"]--&gt;Type
+	click Derived39 "/api/Cake.AppCenter/AppCenterDistributeGroupsShowSettings"
+	Derived40["AppCenterCodepushDeploymentAddSettings"]--&gt;Type
+	click Derived40 "/api/Cake.AppCenter/AppCenterCodepushDeploymentAddSettings"
+	Derived41["AppCenterDistributeGroupsDeleteSettings"]--&gt;Type
+	click Derived41 "/api/Cake.AppCenter/AppCenterDistributeGroupsDeleteSettings"
+	Derived42["AppCenterOrgsUpdateSettings"]--&gt;Type
+	click Derived42 "/api/Cake.AppCenter/AppCenterOrgsUpdateSettings"
+	Derived43["AppCenterAnalyticsAudienceSettings"]--&gt;Type
+	click Derived43 "/api/Cake.AppCenter/AppCenterAnalyticsAudienceSettings"
+	Derived44["AppCenterCodepushDeploymentListSettings"]--&gt;Type
+	click Derived44 "/api/Cake.AppCenter/AppCenterCodepushDeploymentListSettings"
+	Derived45["AppCenterBuildBranchesShowSettings"]--&gt;Type
+	click Derived45 "/api/Cake.AppCenter/AppCenterBuildBranchesShowSettings"
+	Derived46["AppCenterTokensCreateSettings"]--&gt;Type
+	click Derived46 "/api/Cake.AppCenter/AppCenterTokensCreateSettings"
+	Derived47["AppCenterTestRunXcuitestSettings"]--&gt;Type
+	click Derived47 "/api/Cake.AppCenter/AppCenterTestRunXcuitestSettings"
+	Derived48["AppCenterCrashesUploadSymbolsSettings"]--&gt;Type
+	click Derived48 "/api/Cake.AppCenter/AppCenterCrashesUploadSymbolsSettings"
+	Derived49["AppCenterCodepushReleaseCordovaSettings"]--&gt;Type
+	click Derived49 "/api/Cake.AppCenter/AppCenterCodepushReleaseCordovaSettings"
+	Derived50["AppCenterCodepushPromoteSettings"]--&gt;Type
+	click Derived50 "/api/Cake.AppCenter/AppCenterCodepushPromoteSettings"
+	Derived51["AppCenterCodepushReleaseReactSettings"]--&gt;Type
+	click Derived51 "/api/Cake.AppCenter/AppCenterCodepushReleaseReactSettings"
+	Derived52["AppCenterProfileUpdateSettings"]--&gt;Type
+	click Derived52 "/api/Cake.AppCenter/AppCenterProfileUpdateSettings"
+	Derived53["AppCenterAppsSetCurrentSettings"]--&gt;Type
+	click Derived53 "/api/Cake.AppCenter/AppCenterAppsSetCurrentSettings"
+	Derived54["AppCenterAppsListSettings"]--&gt;Type
+	click Derived54 "/api/Cake.AppCenter/AppCenterAppsListSettings"
+	Derived55["AppCenterCodepushRollbackSettings"]--&gt;Type
+	click Derived55 "/api/Cake.AppCenter/AppCenterCodepushRollbackSettings"
+	Derived56["AppCenterTelemetryOnSettings"]--&gt;Type
+	click Derived56 "/api/Cake.AppCenter/AppCenterTelemetryOnSettings"
+	Derived57["AppCenterOrgsCreateSettings"]--&gt;Type
+	click Derived57 "/api/Cake.AppCenter/AppCenterOrgsCreateSettings"
+	Derived58["AppCenterLogoutSettings"]--&gt;Type
+	click Derived58 "/api/Cake.AppCenter/AppCenterLogoutSettings"
+	Derived59["AppCenterLoginSettings"]--&gt;Type
+	click Derived59 "/api/Cake.AppCenter/AppCenterLoginSettings"
+	Derived60["AppCenterAppsGetCurrentSettings"]--&gt;Type
+	click Derived60 "/api/Cake.AppCenter/AppCenterAppsGetCurrentSettings"
+	Derived61["AppCenterAppsDeleteSettings"]--&gt;Type
+	click Derived61 "/api/Cake.AppCenter/AppCenterAppsDeleteSettings"
+	Derived62["AppCenterDistributeGroupsListSettings"]--&gt;Type
+	click Derived62 "/api/Cake.AppCenter/AppCenterDistributeGroupsListSettings"
+	Derived63["AppCenterTestRunEspressoSettings"]--&gt;Type
+	click Derived63 "/api/Cake.AppCenter/AppCenterTestRunEspressoSettings"
+	Derived64["AppCenterBuildBranchesListSettings"]--&gt;Type
+	click Derived64 "/api/Cake.AppCenter/AppCenterBuildBranchesListSettings"
+	Derived65["AppCenterOrgsAppsListSettings"]--&gt;Type
+	click Derived65 "/api/Cake.AppCenter/AppCenterOrgsAppsListSettings"
+	Derived66["AppCenterDistributeReleaseSettings"]--&gt;Type
+	click Derived66 "/api/Cake.AppCenter/AppCenterDistributeReleaseSettings"
+	Derived67["AppCenterBuildLogsSettings"]--&gt;Type
+	click Derived67 "/api/Cake.AppCenter/AppCenterBuildLogsSettings"
+	Derived68["AppCenterOrgsCollaboratorsUpdateSettings"]--&gt;Type
+	click Derived68 "/api/Cake.AppCenter/AppCenterOrgsCollaboratorsUpdateSettings"
+	Derived69["AppCenterDistributeReleasesListSettings"]--&gt;Type
+	click Derived69 "/api/Cake.AppCenter/AppCenterDistributeReleasesListSettings"
+	Derived70["AppCenterAnalyticsAppVersionsSettings"]--&gt;Type
+	click Derived70 "/api/Cake.AppCenter/AppCenterAnalyticsAppVersionsSettings"
+	Derived71["AppCenterTestDownloadSettings"]--&gt;Type
+	click Derived71 "/api/Cake.AppCenter/AppCenterTestDownloadSettings"
+	Derived72["AppCenterTestStopSettings"]--&gt;Type
+	click Derived72 "/api/Cake.AppCenter/AppCenterTestStopSettings"
+	Derived73["AppCenterOrgsListSettings"]--&gt;Type
+	click Derived73 "/api/Cake.AppCenter/AppCenterOrgsListSettings"
+	Derived74["AppCenterAppsUpdateSettings"]--&gt;Type
+	click Derived74 "/api/Cake.AppCenter/AppCenterAppsUpdateSettings"
+	Derived75["AppCenterCodepushDeploymentRemoveSettings"]--&gt;Type
+	click Derived75 "/api/Cake.AppCenter/AppCenterCodepushDeploymentRemoveSettings"
 
 						</div>
 					</div>
@@ -530,6 +531,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public abstract class AutoToolSettings : ToolSettings</code></pre>
+
 
 
 
@@ -594,17 +596,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -613,6 +604,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Auto<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -695,22 +697,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

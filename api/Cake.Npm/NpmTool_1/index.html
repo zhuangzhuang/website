@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - NpmTool&lt;TSettings&gt; Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -183,7 +183,8 @@
 	<h1>NpmTool<wbr>&lt;TSettings&gt;<wbr> <small>Class</small></h1>
 </section>
 <section class="content">
-	        <div class="alert alert-info" role="alert">
+	
+        <div class="alert alert-info" role="alert">
             <i class="fa fa-info-circle"></i> This content is part of a third party addin that is not supported by the Cake project.
 
                         For more information about this project, please visit 
@@ -218,15 +219,15 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
 											<li><a href="/api/Cake.Npm.Install/NpmInstaller">NpmInstaller</a></li>								
-											<li><a href="/api/Cake.Npm.AddUser/NpmAddUser">NpmAddUser</a></li>								
-											<li><a href="/api/Cake.Npm.Prune/NpmPruneRunner">NpmPruneRunner</a></li>								
-											<li><a href="/api/Cake.Npm.Version/NpmVersionTool">NpmVersionTool</a></li>								
 											<li><a href="/api/Cake.Npm.Pack/NpmPacker">NpmPacker</a></li>								
 											<li><a href="/api/Cake.Npm.Ci/NpmCiTool">NpmCiTool</a></li>								
 											<li><a href="/api/Cake.Npm.Rebuild/NpmRebuilder">NpmRebuilder</a></li>								
+											<li><a href="/api/Cake.Npm.Version/NpmVersionTool">NpmVersionTool</a></li>								
+											<li><a href="/api/Cake.Npm.AddUser/NpmAddUser">NpmAddUser</a></li>								
 											<li><a href="/api/Cake.Npm.Set/NpmSetTool">NpmSetTool</a></li>								
+											<li><a href="/api/Cake.Npm.Prune/NpmPruneRunner">NpmPruneRunner</a></li>								
+											<li><a href="/api/Cake.Npm.RunScript/NpmScriptRunner">NpmScriptRunner</a></li>								
 											<li><a href="/api/Cake.Npm.Update/NpmUpdateTool">NpmUpdateTool</a></li>								
 											<li><a href="/api/Cake.Npm.Publish/NpmPublisher">NpmPublisher</a></li>								
 									</ul>
@@ -236,31 +237,31 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;TSettings&gt;"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
 	Type["NpmTool&lt;TSettings&gt;"]
 class Type type-node
-	Type--&gt;Derived0["NpmScriptRunner"]
-	click Derived0 "/api/Cake.Npm.RunScript/NpmScriptRunner"
-	Type--&gt;Derived1["NpmInstaller"]
-	click Derived1 "/api/Cake.Npm.Install/NpmInstaller"
-	Type--&gt;Derived2["NpmAddUser"]
-	click Derived2 "/api/Cake.Npm.AddUser/NpmAddUser"
-	Type--&gt;Derived3["NpmPruneRunner"]
-	click Derived3 "/api/Cake.Npm.Prune/NpmPruneRunner"
-	Type--&gt;Derived4["NpmVersionTool"]
+	Derived0["NpmInstaller"]--&gt;Type
+	click Derived0 "/api/Cake.Npm.Install/NpmInstaller"
+	Derived1["NpmPacker"]--&gt;Type
+	click Derived1 "/api/Cake.Npm.Pack/NpmPacker"
+	Derived2["NpmCiTool"]--&gt;Type
+	click Derived2 "/api/Cake.Npm.Ci/NpmCiTool"
+	Derived3["NpmRebuilder"]--&gt;Type
+	click Derived3 "/api/Cake.Npm.Rebuild/NpmRebuilder"
+	Derived4["NpmVersionTool"]--&gt;Type
 	click Derived4 "/api/Cake.Npm.Version/NpmVersionTool"
-	Type--&gt;Derived5["NpmPacker"]
-	click Derived5 "/api/Cake.Npm.Pack/NpmPacker"
-	Type--&gt;Derived6["NpmCiTool"]
-	click Derived6 "/api/Cake.Npm.Ci/NpmCiTool"
-	Type--&gt;Derived7["NpmRebuilder"]
-	click Derived7 "/api/Cake.Npm.Rebuild/NpmRebuilder"
-	Type--&gt;Derived8["NpmSetTool"]
-	click Derived8 "/api/Cake.Npm.Set/NpmSetTool"
-	Type--&gt;Derived9["NpmUpdateTool"]
+	Derived5["NpmAddUser"]--&gt;Type
+	click Derived5 "/api/Cake.Npm.AddUser/NpmAddUser"
+	Derived6["NpmSetTool"]--&gt;Type
+	click Derived6 "/api/Cake.Npm.Set/NpmSetTool"
+	Derived7["NpmPruneRunner"]--&gt;Type
+	click Derived7 "/api/Cake.Npm.Prune/NpmPruneRunner"
+	Derived8["NpmScriptRunner"]--&gt;Type
+	click Derived8 "/api/Cake.Npm.RunScript/NpmScriptRunner"
+	Derived9["NpmUpdateTool"]--&gt;Type
 	click Derived9 "/api/Cake.Npm.Update/NpmUpdateTool"
-	Type--&gt;Derived10["NpmPublisher"]
+	Derived10["NpmPublisher"]--&gt;Type
 	click Derived10 "/api/Cake.Npm.Publish/NpmPublisher"
 
 						</div>
@@ -292,6 +293,7 @@ class Type type-node
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 			<h1 id="Constructors">Constructors</h1>
@@ -438,17 +440,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;NpmTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;NpmTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -457,6 +448,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;NpmTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -539,22 +541,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - API - MSBuildRunner Class</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -146,13 +146,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Common.Tools.MSBuild">Cake<wbr>.Common<wbr>.Tools<wbr>.MSBuild</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVersion">MSBuildVersion</a></li>
-				<li><a href="/api/Cake.Common.Tools.MSBuild/PlatformTarget">PlatformTarget</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildAliases">MSBuildAliases</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogSettings">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Settings</a></li>
@@ -162,6 +155,13 @@
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettings">MSBuildSettings</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildSettingsExtensions">M<wbr>S<wbr>Build<wbr>Settings<wbr>Extensions</a></li>
 				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVerbosityExtensions">M<wbr>S<wbr>Build<wbr>Verbosity<wbr>Extensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildFileLoggerOutput">M<wbr>S<wbr>Build<wbr>File<wbr>Logger<wbr>Output</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildPlatform">MSBuildPlatform</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildToolVersion">MSBuildToolVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/MSBuildVersion">MSBuildVersion</a></li>
+				<li><a href="/api/Cake.Common.Tools.MSBuild/PlatformTarget">PlatformTarget</a></li>
 
 
                     </ul>
@@ -180,6 +180,7 @@
 </section>
 <section class="content">
 	
+
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
@@ -209,9 +210,9 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["Tool&lt;MSBuildSettings&gt;"]--&gt;Type
-	Base1["object"]--&gt;Base0
+							graph BT
+	Type--&gt;Base0["Tool&lt;MSBuildSettings&gt;"]
+	Base0--&gt;Base1["object"]
 	Type["MSBuildRunner"]
 class Type type-node
 
@@ -223,6 +224,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public sealed class MSBuildRunner : Tool&lt;MSBuildSettings&gt;</code></pre>
+
 
 
 
@@ -340,17 +342,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -359,6 +350,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>M<wbr>S<wbr>Build<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
@@ -441,22 +443,53 @@ class Type type-node
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

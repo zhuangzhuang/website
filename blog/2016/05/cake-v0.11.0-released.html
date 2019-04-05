@@ -1,22 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake - Cake v0.11.0 released</title>
-        <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
-        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/override.css" rel="stylesheet" />
+        <link href="/assets/css/override.css" rel="stylesheet">
         <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
@@ -24,6 +21,7 @@
         <script src="/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.min.js"></script>
         <script src="/assets/js/respond.min.js"></script>
@@ -93,13 +91,13 @@
                     <ul class="sidebar-menu">
                         
 
-    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-        <li><a href="/blog/Addins">Addins</a></li>
-        <li><a href="/blog/Announcement">Announcement</a></li>
-        <li><a href="/blog/How-Tos">How To&#x27;s</a></li>
-        <li><a href="/blog/Infrastructure">Infrastructure</a></li>
-        <li><a href="/blog/News">News</a></li>
-        <li><a href="/blog/Release-Notes">Release Notes</a></li>
+        <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+            <li><a href="/blog/Addins">Addins</a></li>
+            <li><a href="/blog/Announcement">Announcement</a></li>
+            <li><a href="/blog/How-Tos">How To's</a></li>
+            <li><a href="/blog/Infrastructure">Infrastructure</a></li>
+            <li><a href="/blog/News">News</a></li>
+            <li><a href="/blog/Release-Notes">Release Notes</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
         <li><a href="/blog/archive/2019/04">April, 2019</a></li>
@@ -143,18 +141,18 @@
         <li><a href="/blog/archive/2015/08">August, 2015</a></li>
         <li><a href="/blog/archive/2015/07">July, 2015</a></li>
     
-    <li class="header"><i class="fa fa-user"></i> Authors</li>    
-        <li><a href="/blog/author/agc93">agc93</a></li>
-        <li><a href="/blog/author/daveaglick">daveaglick</a></li>
-        <li><a href="/blog/author/devlead">devlead</a></li>
-        <li><a href="/blog/author/gep13">gep13</a></li>
-        <li><a href="/blog/author/jericho">jericho</a></li>
-        <li><a href="/blog/author/Larz-White">Larz White</a></li>
-        <li><a href="/blog/author/mholo65">mholo65</a></li>
-        <li><a href="/blog/author/Pascal-Berger">Pascal Berger</a></li>
-        <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
-        <li><a href="/blog/author/phillipsj">phillipsj</a></li>
-        <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
+        <li class="header"><i class="fa fa-user"></i> Authors</li>    
+            <li><a href="/blog/author/agc93">agc93</a></li>
+            <li><a href="/blog/author/daveaglick">daveaglick</a></li>
+            <li><a href="/blog/author/devlead">devlead</a></li>
+            <li><a href="/blog/author/gep13">gep13</a></li>
+            <li><a href="/blog/author/jericho">jericho</a></li>
+            <li><a href="/blog/author/Larz-White">Larz White</a></li>
+            <li><a href="/blog/author/mholo65">mholo65</a></li>
+            <li><a href="/blog/author/Pascal-Berger">Pascal Berger</a></li>
+            <li><a href="/blog/author/patriksvensson">patriksvensson</a></li>
+            <li><a href="/blog/author/phillipsj">phillipsj</a></li>
+            <li><a href="/blog/author/RLittlesII">RLittlesII</a></li>
 
                     </ul>
                             
@@ -174,17 +172,18 @@
 		
 
 
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
+
+<dl class="dl-horizontal" style="margin-bottom: 12px;">
+    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
     <dd>Sunday, May 1, 2016</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
         <dd><a href="/blog/Release-Notes">Release Notes</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
+            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/patriksvensson">patriksvensson</a></dd>
 </dl>
 
 
-<html><head></head><body><p>Version 0.11.0 of Cake has been released.</p>
+<p>Version 0.11.0 of Cake has been released.</p>
 <p>There has been a lot of improvements and bug fixes in this release, but other than that we've been mostly focused on getting proper integration tests in place to better find regressions in future versions of Cake.</p>
 <p>We've also (finally) added overloads for the Setup/Teardown methods that provides an <code><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></code>. The old methods will now output an obsoletion warning, so you may want to think about updating the usage of those in your build scripts sooner rather than later.</p>
 <p>Contributions were included from:</p>
@@ -238,16 +237,16 @@
 <li><a href="https://github.com/cake-build/cake/pull/806"><strong>#806</strong></a> Added note about ReSharper License</li>
 <li><a href="https://github.com/cake-build/cake/pull/772"><strong>#772</strong></a> Added Chocolatey Package Badge</li>
 </ul>
-</body></html>
 
-<hr />
+
+<hr>
 
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&t=Cake%20v0.11.0%20released" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&text=Cake%20v0.11.0%20released:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
-  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&title=Cake%20v0.11.0%20released" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
-  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&title=Cake%20v0.11.0%20released&summary=&source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
-  <li><a href="mailto:?subject=Cake%20v0.11.0%20released&body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&amp;t=Cake%20v0.11.0%20released" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/assets/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&amp;text=Cake%20v0.11.0%20released:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&amp;via=cakebuildnet" target="_blank" title="Tweet"><img alt="Tweet" src="/assets/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&amp;title=Cake%20v0.11.0%20released" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/assets/img/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released&amp;title=Cake%20v0.11.0%20released&amp;summary=&amp;source=http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/assets/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="mailto:?subject=Cake%20v0.11.0%20released&amp;body=:%20http%3A%2F%2Fcakebuild.net%2Fblog%2F2016%2F05%2Fcake-v0.11.0-released" target="_blank" title="Send email"><img alt="Send email" src="/assets/img/social_flat_rounded_rects_svg/Email.svg"></a></li>
 </ul>
 
 	</section>
@@ -265,9 +264,9 @@
     <a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> GitHub</a> |
     <a href="https://twitter.com/cakebuildnet"><i class="fa fa-twitter"></i> Twitter</a> |
     <a href="https://gitter.im/cake-build/cake"><i class="fa fa-comment"></i> Gitter</a>
-    <br/>
-    Copyright &copy; <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
-    <br/>
+    <br>
+    Copyright © <a href="http://dotnetfoundation.org">.NET Foundation</a> and contributors.
+    <br>
     Generated by <a href="http://wyam.io">Wyam</a>
 </p>
 
@@ -283,7 +282,7 @@
         room: 'cake-build/cake'
     };
 </script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
 
 <!-- Google Analytics -->
 <script>
@@ -302,22 +301,53 @@
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top
@@ -334,5 +364,5 @@
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>
