@@ -204,8 +204,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer">DotCoverCoverer</a></li>								
 											<li><a href="/api/Cake.Common.Tools.DotCover.Analyse/DotCoverAnalyser">DotCoverAnalyser</a></li>								
+											<li><a href="/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer">DotCoverCoverer</a></li>								
 									</ul>
 								</dd>			
 							
@@ -219,10 +219,10 @@
 	Base1--&gt;Base2["object"]
 	Type["DotCoverCoverageTool&lt;TSettings&gt;"]
 class Type type-node
-	Derived0["DotCoverCoverer"]--&gt;Type
-	click Derived0 "/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer"
-	Derived1["DotCoverAnalyser"]--&gt;Type
-	click Derived1 "/api/Cake.Common.Tools.DotCover.Analyse/DotCoverAnalyser"
+	Derived0["DotCoverAnalyser"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Tools.DotCover.Analyse/DotCoverAnalyser"
+	Derived1["DotCoverCoverer"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Tools.DotCover.Cover/DotCoverCoverer"
 
 						</div>
 					</div>
@@ -350,17 +350,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Cover<wbr>Coverage<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Dot<wbr>Cover<wbr>Coverage<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -369,6 +358,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Dot<wbr>Cover<wbr>Coverage<wbr>Tool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

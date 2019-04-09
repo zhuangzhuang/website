@@ -213,11 +213,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Svn.Info/SvnInfo">SvnInfo</a></li>								
-											<li><a href="/api/Cake.Svn.Checkout/SvnCheckouter">SvnCheckouter</a></li>								
-											<li><a href="/api/Cake.Svn.Add/SvnAdder">SvnAdder</a></li>								
-											<li><a href="/api/Cake.Svn.Delete/SvnDeleter">SvnDeleter</a></li>								
 											<li><a href="/api/Cake.Svn.Export/SvnExporter">SvnExporter</a></li>								
+											<li><a href="/api/Cake.Svn.Checkout/SvnCheckouter">SvnCheckouter</a></li>								
+											<li><a href="/api/Cake.Svn.Delete/SvnDeleter">SvnDeleter</a></li>								
+											<li><a href="/api/Cake.Svn.Info/SvnInfo">SvnInfo</a></li>								
+											<li><a href="/api/Cake.Svn.Add/SvnAdder">SvnAdder</a></li>								
 									</ul>
 								</dd>			
 							
@@ -229,16 +229,16 @@
 	Type--&gt;Base0["Object"]
 	Type["SvnTool&lt;TSettings&gt;"]
 class Type type-node
-	Derived0["SvnInfo"]--&gt;Type
-	click Derived0 "/api/Cake.Svn.Info/SvnInfo"
+	Derived0["SvnExporter"]--&gt;Type
+	click Derived0 "/api/Cake.Svn.Export/SvnExporter"
 	Derived1["SvnCheckouter"]--&gt;Type
 	click Derived1 "/api/Cake.Svn.Checkout/SvnCheckouter"
-	Derived2["SvnAdder"]--&gt;Type
-	click Derived2 "/api/Cake.Svn.Add/SvnAdder"
-	Derived3["SvnDeleter"]--&gt;Type
-	click Derived3 "/api/Cake.Svn.Delete/SvnDeleter"
-	Derived4["SvnExporter"]--&gt;Type
-	click Derived4 "/api/Cake.Svn.Export/SvnExporter"
+	Derived2["SvnDeleter"]--&gt;Type
+	click Derived2 "/api/Cake.Svn.Delete/SvnDeleter"
+	Derived3["SvnInfo"]--&gt;Type
+	click Derived3 "/api/Cake.Svn.Info/SvnInfo"
+	Derived4["SvnAdder"]--&gt;Type
+	click Derived4 "/api/Cake.Svn.Add/SvnAdder"
 
 						</div>
 					</div>
@@ -356,17 +356,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;SvnTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;SvnTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -375,6 +364,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;SvnTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -218,8 +218,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>								
 											<li><a href="/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1">Tool<wbr>Fixture<wbr>Process<wbr>Runner</a><wbr>&lt;<a href="/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1#typeparam-TFixtureResult">TFixtureResult</a>&gt;<wbr></li>								
+											<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -229,10 +229,10 @@
 							graph BT
 	Type["IProcessRunner"]
 class Type type-node
-	Implementing0["ProcessRunner"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Core.IO/ProcessRunner"
-	Implementing1["ToolFixtureProcessRunner&lt;TFixtureResult&gt;"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1"
+	Implementing0["ToolFixtureProcessRunner&lt;TFixtureResult&gt;"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Testing.Fixtures/ToolFixtureProcessRunner_1"
+	Implementing1["ProcessRunner"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Core.IO/ProcessRunner"
 
 						</div>
 					</div>
@@ -313,17 +313,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -332,6 +321,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
                                             <div><small><em>Requires the Cake.Issues addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Runner&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Ftp addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
