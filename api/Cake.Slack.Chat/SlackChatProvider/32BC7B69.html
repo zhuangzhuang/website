@@ -80,7 +80,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -183,7 +185,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Post message to Slack Channel
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -203,6 +209,26 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public SlackChatMessageResult PostMessage(string token, string channel, string text, ICollection&lt;SlackChatMessageAttachment&gt; messageAttachments)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <pre><code class="cs">Information("Sending message to Slack...");
+
+var postMessageResult = Slack.Chat.PostMessage(
+    "token", 
+    "Cake", 
+    "It's not a party without Cake!",
+    new new [] { new SlackChatMessageAttachment() }
+    );
+
+if(postMessageResult.Ok)
+{
+    Information("Message {0} succesfully sent.", postMessageResult.TimeStamp);
+}
+else
+{
+    Error("Failed to send message: {0}.", postMessageResult.Error);
+}</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -238,22 +264,22 @@
 					<tbody><tr>
 						<td>token</td>
 						<td>string</td>
-						<td></td>
+						<td>SlackProvider auth token</td>
 					</tr>
 					<tr>
 						<td>channel</td>
 						<td>string</td>
-						<td></td>
+						<td>Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name.</td>
 					</tr>
 					<tr>
 						<td>text</td>
 						<td>string</td>
-						<td></td>
+						<td>Text of the message to send. For message formatting see <a href="https://api.slack.com/docs/formatting">Formatting | Slack</a></td>
 					</tr>
 					<tr>
 						<td>messageAttachments</td>
 						<td>ICollection<wbr>&lt;<a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment">Slack<wbr>Chat<wbr>Message<wbr>Attachment</a>&gt;<wbr></td>
-						<td></td>
+						<td>Lets you send a message attachment see <a href="https://api.slack.com/docs/attachments">Attachments | Slack</a></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -271,7 +297,7 @@
 				</thead>
 				<tbody><tr>
 					<td><a href="/api/Cake.Slack.Chat/SlackChatMessageResult">Slack<wbr>Chat<wbr>Message<wbr>Result</a></td>
-					<td></td>
+					<td>Returns success/error/timestamp <code class="cs"><a href="/api/Cake.Slack.Chat/SlackChatMessageResult">SlackChatMessageResult</a></code></td>
 				</tr>
 			</tbody></table>
 		</div>

@@ -275,11 +275,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SSRS/DailyRecurrence">DailyRecurrence</a></li>								
-											<li><a href="/api/Cake.SSRS/WeeklyRecurrence">WeeklyRecurrence</a></li>								
-											<li><a href="/api/Cake.SSRS/MonthlyRecurrence">MonthlyRecurrence</a></li>								
-											<li><a href="/api/Cake.SSRS/MinuteRecurrence">MinuteRecurrence</a></li>								
 											<li><a href="/api/Cake.SSRS/MonthlyDOWRecurrence">MonthlyDOWRecurrence</a></li>								
+											<li><a href="/api/Cake.SSRS/MinuteRecurrence">MinuteRecurrence</a></li>								
+											<li><a href="/api/Cake.SSRS/MonthlyRecurrence">MonthlyRecurrence</a></li>								
+											<li><a href="/api/Cake.SSRS/WeeklyRecurrence">WeeklyRecurrence</a></li>								
+											<li><a href="/api/Cake.SSRS/DailyRecurrence">DailyRecurrence</a></li>								
 									</ul>
 								</dd>			
 							
@@ -291,16 +291,16 @@
 	Type--&gt;Base0["Object"]
 	Type["RecurrencePattern"]
 class Type type-node
-	Derived0["DailyRecurrence"]--&gt;Type
-	click Derived0 "/api/Cake.SSRS/DailyRecurrence"
-	Derived1["WeeklyRecurrence"]--&gt;Type
-	click Derived1 "/api/Cake.SSRS/WeeklyRecurrence"
+	Derived0["MonthlyDOWRecurrence"]--&gt;Type
+	click Derived0 "/api/Cake.SSRS/MonthlyDOWRecurrence"
+	Derived1["MinuteRecurrence"]--&gt;Type
+	click Derived1 "/api/Cake.SSRS/MinuteRecurrence"
 	Derived2["MonthlyRecurrence"]--&gt;Type
 	click Derived2 "/api/Cake.SSRS/MonthlyRecurrence"
-	Derived3["MinuteRecurrence"]--&gt;Type
-	click Derived3 "/api/Cake.SSRS/MinuteRecurrence"
-	Derived4["MonthlyDOWRecurrence"]--&gt;Type
-	click Derived4 "/api/Cake.SSRS/MonthlyDOWRecurrence"
+	Derived3["WeeklyRecurrence"]--&gt;Type
+	click Derived3 "/api/Cake.SSRS/WeeklyRecurrence"
+	Derived4["DailyRecurrence"]--&gt;Type
+	click Derived4 "/api/Cake.SSRS/DailyRecurrence"
 
 						</div>
 					</div>
@@ -420,17 +420,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Recurrence<wbr>Pattern&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Recurrence<wbr>Pattern&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -439,6 +428,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Recurrence<wbr>Pattern&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

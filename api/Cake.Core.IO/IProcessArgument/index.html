@@ -164,6 +164,9 @@
 				<li><a href="/api/Cake.Core.IO/ProcessRunner">ProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/ProcessSettings">ProcessSettings</a></li>
 				<li><a href="/api/Cake.Core.IO/WindowsRegistry">WindowsRegistry</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
+				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>
 				<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>
@@ -175,9 +178,6 @@
 				<li><a href="/api/Cake.Core.IO/IProcessRunner">IProcessRunner</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistry">IRegistry</a></li>
 				<li><a href="/api/Cake.Core.IO/IRegistryKey">IRegistryKey</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core.IO/SearchScope">SearchScope</a></li>
-				<li><a href="/api/Cake.Core.IO/SpecialPath">SpecialPath</a></li>
 
 
                     </ul>
@@ -218,10 +218,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -231,14 +231,14 @@
 							graph BT
 	Type["IProcessArgument"]
 class Type type-node
-	Implementing0["SwitchArgument"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Core.IO.Arguments/SwitchArgument"
-	Implementing1["SecretArgument"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Core.IO.Arguments/SecretArgument"
+	Implementing0["TextArgument"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core.IO.Arguments/TextArgument"
+	Implementing1["SwitchArgument"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Core.IO.Arguments/SwitchArgument"
 	Implementing2["QuotedArgument"]-.-&gt;Type
 	click Implementing2 "/api/Cake.Core.IO.Arguments/QuotedArgument"
-	Implementing3["TextArgument"]-.-&gt;Type
-	click Implementing3 "/api/Cake.Core.IO.Arguments/TextArgument"
+	Implementing3["SecretArgument"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Core.IO.Arguments/SecretArgument"
 
 						</div>
 					</div>
@@ -330,17 +330,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Argument&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Argument&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -349,6 +338,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>I<wbr>Process<wbr>Argument&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

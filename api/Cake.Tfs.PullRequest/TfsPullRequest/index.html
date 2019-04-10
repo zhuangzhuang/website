@@ -157,6 +157,7 @@
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestIterationChange">Tfs<wbr>Pull<wbr>Request<wbr>Iteration<wbr>Change</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException">Tfs<wbr>Pull<wbr>Request<wbr>Not<wbr>Found<wbr>Exception</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestState">TfsPullRequestState</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatus">TfsPullRequestStatus</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatusState">Tfs<wbr>Pull<wbr>Request<wbr>Status<wbr>State</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestVote">TfsPullRequestVote</a></li>
@@ -357,6 +358,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/2FFC3589">PullRequestStatus</a></td>
+								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestState">TfsPullRequestState</a></td>
+								<td>
+									<div>
+            Gets the status of the pull request.
+            Returns <code class="cs"><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestState/DB9E1E12">NotSet</a></code> if no pull request could be found and
+            <code class="cs"><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings/21F4914A">ThrowExceptionIfPullRequestCouldNotBeFound</a></code> is set to <code class="cs">false</code>.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Cake.Tfs.PullRequest/TfsPullRequest/4CE12CF2">RepositoryId</a></td>
 								<td>Guid</td>
 								<td>
@@ -552,17 +564,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfs<wbr>Pull<wbr>Request&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Tfs<wbr>Pull<wbr>Request&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -571,6 +572,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Tfs<wbr>Pull<wbr>Request&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

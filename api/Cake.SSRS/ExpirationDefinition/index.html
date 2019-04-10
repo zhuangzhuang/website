@@ -275,8 +275,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SSRS/TimeExpiration">TimeExpiration</a></li>								
 											<li><a href="/api/Cake.SSRS/ScheduleExpiration">ScheduleExpiration</a></li>								
+											<li><a href="/api/Cake.SSRS/TimeExpiration">TimeExpiration</a></li>								
 									</ul>
 								</dd>			
 							
@@ -288,10 +288,10 @@
 	Type--&gt;Base0["Object"]
 	Type["ExpirationDefinition"]
 class Type type-node
-	Derived0["TimeExpiration"]--&gt;Type
-	click Derived0 "/api/Cake.SSRS/TimeExpiration"
-	Derived1["ScheduleExpiration"]--&gt;Type
-	click Derived1 "/api/Cake.SSRS/ScheduleExpiration"
+	Derived0["ScheduleExpiration"]--&gt;Type
+	click Derived0 "/api/Cake.SSRS/ScheduleExpiration"
+	Derived1["TimeExpiration"]--&gt;Type
+	click Derived1 "/api/Cake.SSRS/TimeExpiration"
 
 						</div>
 					</div>
@@ -399,17 +399,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Expiration<wbr>Definition&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Expiration<wbr>Definition&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -418,6 +407,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Expiration<wbr>Definition&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

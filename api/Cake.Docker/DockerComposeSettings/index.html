@@ -259,18 +259,18 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeDownSettings">Docker<wbr>Compose<wbr>Down<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeStopSettings">Docker<wbr>Compose<wbr>Stop<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeLogsSettings">Docker<wbr>Compose<wbr>Logs<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeExecSettings">Docker<wbr>Compose<wbr>Exec<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeKillSettings">Docker<wbr>Compose<wbr>Kill<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
-											<li><a href="/api/Cake.Docker/DockerComposeRunSettings">Docker<wbr>Compose<wbr>Run<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeRestartSettings">Docker<wbr>Compose<wbr>Restart<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeExecSettings">Docker<wbr>Compose<wbr>Exec<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Docker/DockerComposeBuildSettings">Docker<wbr>Compose<wbr>Build<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeLogsSettings">Docker<wbr>Compose<wbr>Logs<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeRmSettings">Docker<wbr>Compose<wbr>Rm<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeCreateSettings">Docker<wbr>Compose<wbr>Create<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposeUpSettings">Docker<wbr>Compose<wbr>Up<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Docker/DockerComposePullSettings">Docker<wbr>Compose<wbr>Pull<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -284,30 +284,30 @@
 	Base0--&gt;Base1["ToolSettings"]
 	Type["DockerComposeSettings"]
 class Type type-node
-	Derived0["DockerComposePullSettings"]--&gt;Type
-	click Derived0 "/api/Cake.Docker/DockerComposePullSettings"
-	Derived1["DockerComposeCreateSettings"]--&gt;Type
-	click Derived1 "/api/Cake.Docker/DockerComposeCreateSettings"
+	Derived0["DockerComposeKillSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Docker/DockerComposeKillSettings"
+	Derived1["DockerComposeRunSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Docker/DockerComposeRunSettings"
 	Derived2["DockerComposeDownSettings"]--&gt;Type
 	click Derived2 "/api/Cake.Docker/DockerComposeDownSettings"
 	Derived3["DockerComposeStopSettings"]--&gt;Type
 	click Derived3 "/api/Cake.Docker/DockerComposeStopSettings"
-	Derived4["DockerComposeLogsSettings"]--&gt;Type
-	click Derived4 "/api/Cake.Docker/DockerComposeLogsSettings"
+	Derived4["DockerComposeRestartSettings"]--&gt;Type
+	click Derived4 "/api/Cake.Docker/DockerComposeRestartSettings"
 	Derived5["DockerComposeExecSettings"]--&gt;Type
 	click Derived5 "/api/Cake.Docker/DockerComposeExecSettings"
-	Derived6["DockerComposeUpSettings"]--&gt;Type
-	click Derived6 "/api/Cake.Docker/DockerComposeUpSettings"
-	Derived7["DockerComposeKillSettings"]--&gt;Type
-	click Derived7 "/api/Cake.Docker/DockerComposeKillSettings"
+	Derived6["DockerComposeBuildSettings"]--&gt;Type
+	click Derived6 "/api/Cake.Docker/DockerComposeBuildSettings"
+	Derived7["DockerComposeLogsSettings"]--&gt;Type
+	click Derived7 "/api/Cake.Docker/DockerComposeLogsSettings"
 	Derived8["DockerComposeRmSettings"]--&gt;Type
 	click Derived8 "/api/Cake.Docker/DockerComposeRmSettings"
-	Derived9["DockerComposeRunSettings"]--&gt;Type
-	click Derived9 "/api/Cake.Docker/DockerComposeRunSettings"
-	Derived10["DockerComposeRestartSettings"]--&gt;Type
-	click Derived10 "/api/Cake.Docker/DockerComposeRestartSettings"
-	Derived11["DockerComposeBuildSettings"]--&gt;Type
-	click Derived11 "/api/Cake.Docker/DockerComposeBuildSettings"
+	Derived9["DockerComposeCreateSettings"]--&gt;Type
+	click Derived9 "/api/Cake.Docker/DockerComposeCreateSettings"
+	Derived10["DockerComposeUpSettings"]--&gt;Type
+	click Derived10 "/api/Cake.Docker/DockerComposeUpSettings"
+	Derived11["DockerComposePullSettings"]--&gt;Type
+	click Derived11 "/api/Cake.Docker/DockerComposePullSettings"
 
 						</div>
 					</div>
@@ -558,17 +558,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -577,6 +566,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Docker<wbr>Compose<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

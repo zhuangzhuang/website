@@ -208,12 +208,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildRunner">MkDocsBuildRunner</a></li>								
-											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeAsyncRunner">Mk<wbr>Docs<wbr>Serve<wbr>Async<wbr>Runner</a></li>								
-											<li><a href="/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner">MkDocsGhDeployRunner</a></li>								
 											<li><a href="/api/Cake.MkDocs.New/MkDocsNewRunner">MkDocsNewRunner</a></li>								
-											<li><a href="/api/Cake.MkDocs.Version/MkDocsVersionRunner">MkDocsVersionRunner</a></li>								
 											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeRunner">MkDocsServeRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.Build/MkDocsBuildRunner">MkDocsBuildRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.Version/MkDocsVersionRunner">MkDocsVersionRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner">MkDocsGhDeployRunner</a></li>								
+											<li><a href="/api/Cake.MkDocs.Serve/MkDocsServeAsyncRunner">Mk<wbr>Docs<wbr>Serve<wbr>Async<wbr>Runner</a></li>								
 									</ul>
 								</dd>			
 							
@@ -225,18 +225,18 @@
 	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
 	Type["MkDocsTool&lt;TSettings&gt;"]
 class Type type-node
-	Derived0["MkDocsBuildRunner"]--&gt;Type
-	click Derived0 "/api/Cake.MkDocs.Build/MkDocsBuildRunner"
-	Derived1["MkDocsServeAsyncRunner"]--&gt;Type
-	click Derived1 "/api/Cake.MkDocs.Serve/MkDocsServeAsyncRunner"
-	Derived2["MkDocsGhDeployRunner"]--&gt;Type
-	click Derived2 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner"
-	Derived3["MkDocsNewRunner"]--&gt;Type
-	click Derived3 "/api/Cake.MkDocs.New/MkDocsNewRunner"
-	Derived4["MkDocsVersionRunner"]--&gt;Type
-	click Derived4 "/api/Cake.MkDocs.Version/MkDocsVersionRunner"
-	Derived5["MkDocsServeRunner"]--&gt;Type
-	click Derived5 "/api/Cake.MkDocs.Serve/MkDocsServeRunner"
+	Derived0["MkDocsNewRunner"]--&gt;Type
+	click Derived0 "/api/Cake.MkDocs.New/MkDocsNewRunner"
+	Derived1["MkDocsServeRunner"]--&gt;Type
+	click Derived1 "/api/Cake.MkDocs.Serve/MkDocsServeRunner"
+	Derived2["MkDocsBuildRunner"]--&gt;Type
+	click Derived2 "/api/Cake.MkDocs.Build/MkDocsBuildRunner"
+	Derived3["MkDocsVersionRunner"]--&gt;Type
+	click Derived3 "/api/Cake.MkDocs.Version/MkDocsVersionRunner"
+	Derived4["MkDocsGhDeployRunner"]--&gt;Type
+	click Derived4 "/api/Cake.MkDocs.GhDeploy/MkDocsGhDeployRunner"
+	Derived5["MkDocsServeAsyncRunner"]--&gt;Type
+	click Derived5 "/api/Cake.MkDocs.Serve/MkDocsServeAsyncRunner"
 
 						</div>
 					</div>
@@ -402,17 +402,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;MkDocsTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;MkDocsTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -421,6 +410,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;MkDocsTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

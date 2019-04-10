@@ -156,6 +156,7 @@
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestIterationChange">Tfs<wbr>Pull<wbr>Request<wbr>Iteration<wbr>Change</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestNotFoundException">Tfs<wbr>Pull<wbr>Request<wbr>Not<wbr>Found<wbr>Exception</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></li>
+				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestState">TfsPullRequestState</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatus">TfsPullRequestStatus</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestStatusState">Tfs<wbr>Pull<wbr>Request<wbr>Status<wbr>State</a></li>
 				<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestVote">TfsPullRequestVote</a></li>
@@ -212,8 +213,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Tfs.PullRequest/TfsCreatePullRequestSettings">Tfs<wbr>Create<wbr>Pull<wbr>Request<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Tfs.PullRequest/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -225,10 +226,10 @@
 	Type--&gt;Base0["Object"]
 	Type["BaseTfsPullRequestSettings"]
 class Type type-node
-	Derived0["TfsPullRequestSettings"]--&gt;Type
-	click Derived0 "/api/Cake.Tfs.PullRequest/TfsPullRequestSettings"
-	Derived1["TfsCreatePullRequestSettings"]--&gt;Type
-	click Derived1 "/api/Cake.Tfs.PullRequest/TfsCreatePullRequestSettings"
+	Derived0["TfsCreatePullRequestSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Tfs.PullRequest/TfsCreatePullRequestSettings"
+	Derived1["TfsPullRequestSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Tfs.PullRequest/TfsPullRequestSettings"
 
 						</div>
 					</div>
@@ -377,17 +378,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Base<wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -396,6 +386,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Base<wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -80,7 +80,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -181,7 +183,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+                 Serializes a plist into spezified file.
+             </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -201,6 +207,17 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void SerializePlist(this ICakeContext context, FilePath path, object value)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+             <pre><code class="cs"> var plist = File("./src/Demo/Info.plist");
+ dynamic data = DeserializePlist(plist);
+
+ data["CFBundleShortVersionString"] = version.AssemblySemVer;
+ data["CFBundleVersion"] = version.FullSemVer;
+
+ SerializePlist(plist, data);</code></pre>
+             Deserialize the plist and simply access properties via indexer. But, it is important to declare data as dynamic.
+             </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -241,12 +258,12 @@
 					<tr>
 						<td>path</td>
 						<td>FilePath</td>
-						<td></td>
+						<td>target file</td>
 					</tr>
 					<tr>
 						<td>value</td>
 						<td>object</td>
-						<td></td>
+						<td>plist data</td>
 					</tr>
 			</tbody></table>
 		</div>
