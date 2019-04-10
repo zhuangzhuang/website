@@ -212,8 +212,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings">OctopusPackSettings</a></li>								
 											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings">Octopus<wbr>Deploy<wbr>Common<wbr>Tool<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings">OctopusPackSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -227,10 +227,10 @@
 	Base0--&gt;Base1["object"]
 	Type["OctopusDeployToolSettings"]
 class Type type-node
-	Derived0["OctopusPackSettings"]--&gt;Type
-	click Derived0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings"
-	Derived1["OctopusDeployCommonToolSettings"]--&gt;Type
-	click Derived1 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings"
+	Derived0["OctopusDeployCommonToolSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Tools.OctopusDeploy/OctopusDeployCommonToolSettings"
+	Derived1["OctopusPackSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Tools.OctopusDeploy/OctopusPackSettings"
 
 						</div>
 					</div>
@@ -365,17 +365,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Octopus<wbr>Deploy<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Octopus<wbr>Deploy<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -384,6 +373,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Octopus<wbr>Deploy<wbr>Tool<wbr>Settings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

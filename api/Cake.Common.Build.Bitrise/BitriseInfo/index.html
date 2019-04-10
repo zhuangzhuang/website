@@ -198,12 +198,12 @@
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo">BitriseWorkflowInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseApplicationInfo">Bitrise<wbr>Application<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo">Bitrise<wbr>Environment<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo">Bitrise<wbr>Repository<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo">BitriseDirectoryInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitrisePullRequestInfo">Bitrise<wbr>Pull<wbr>Request<wbr>Info</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseBuildInfo">BitriseBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo">Bitrise<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo">BitriseDirectoryInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo">Bitrise<wbr>Provisioning<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bitrise.Data/BitrisePullRequestInfo">Bitrise<wbr>Pull<wbr>Request<wbr>Info</a></li>								
 									</ul>
 								</dd>			
 							
@@ -219,18 +219,18 @@ class Type type-node
 	click Derived0 "/api/Cake.Common.Build.Bitrise.Data/BitriseWorkflowInfo"
 	Derived1["BitriseApplicationInfo"]--&gt;Type
 	click Derived1 "/api/Cake.Common.Build.Bitrise.Data/BitriseApplicationInfo"
-	Derived2["BitriseEnvironmentInfo"]--&gt;Type
-	click Derived2 "/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo"
-	Derived3["BitriseRepositoryInfo"]--&gt;Type
-	click Derived3 "/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo"
-	Derived4["BitriseDirectoryInfo"]--&gt;Type
-	click Derived4 "/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo"
-	Derived5["BitrisePullRequestInfo"]--&gt;Type
-	click Derived5 "/api/Cake.Common.Build.Bitrise.Data/BitrisePullRequestInfo"
-	Derived6["BitriseBuildInfo"]--&gt;Type
-	click Derived6 "/api/Cake.Common.Build.Bitrise.Data/BitriseBuildInfo"
-	Derived7["BitriseProvisioningInfo"]--&gt;Type
-	click Derived7 "/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo"
+	Derived2["BitriseRepositoryInfo"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Build.Bitrise.Data/BitriseRepositoryInfo"
+	Derived3["BitriseBuildInfo"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Build.Bitrise.Data/BitriseBuildInfo"
+	Derived4["BitriseEnvironmentInfo"]--&gt;Type
+	click Derived4 "/api/Cake.Common.Build.Bitrise.Data/BitriseEnvironmentInfo"
+	Derived5["BitriseDirectoryInfo"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Build.Bitrise.Data/BitriseDirectoryInfo"
+	Derived6["BitriseProvisioningInfo"]--&gt;Type
+	click Derived6 "/api/Cake.Common.Build.Bitrise.Data/BitriseProvisioningInfo"
+	Derived7["BitrisePullRequestInfo"]--&gt;Type
+	click Derived7 "/api/Cake.Common.Build.Bitrise.Data/BitrisePullRequestInfo"
 
 						</div>
 					</div>
@@ -349,17 +349,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BitriseInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;BitriseInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -368,6 +357,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BitriseInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

@@ -196,12 +196,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
-											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo">BambooPlanInfo</a></li>								
 											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo">BambooBuildInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo">Bamboo<wbr>Custom<wbr>Build<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo">BambooRepositoryInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo">Bamboo<wbr>Environment<wbr>Info</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo">BambooPlanInfo</a></li>								
+											<li><a href="/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo">BambooCommitInfo</a></li>								
 									</ul>
 								</dd>			
 							
@@ -213,18 +213,18 @@
 	Type--&gt;Base0["object"]
 	Type["BambooInfo"]
 class Type type-node
-	Derived0["BambooCustomBuildInfo"]--&gt;Type
-	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
-	Derived1["BambooEnvironmentInfo"]--&gt;Type
-	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
-	Derived2["BambooCommitInfo"]--&gt;Type
-	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
-	Derived3["BambooRepositoryInfo"]--&gt;Type
-	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
+	Derived0["BambooBuildInfo"]--&gt;Type
+	click Derived0 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
+	Derived1["BambooCustomBuildInfo"]--&gt;Type
+	click Derived1 "/api/Cake.Common.Build.Bamboo.Data/BambooCustomBuildInfo"
+	Derived2["BambooRepositoryInfo"]--&gt;Type
+	click Derived2 "/api/Cake.Common.Build.Bamboo.Data/BambooRepositoryInfo"
+	Derived3["BambooEnvironmentInfo"]--&gt;Type
+	click Derived3 "/api/Cake.Common.Build.Bamboo.Data/BambooEnvironmentInfo"
 	Derived4["BambooPlanInfo"]--&gt;Type
 	click Derived4 "/api/Cake.Common.Build.Bamboo.Data/BambooPlanInfo"
-	Derived5["BambooBuildInfo"]--&gt;Type
-	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooBuildInfo"
+	Derived5["BambooCommitInfo"]--&gt;Type
+	click Derived5 "/api/Cake.Common.Build.Bamboo.Data/BambooCommitInfo"
 
 						</div>
 					</div>
@@ -343,17 +343,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -362,6 +351,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;BambooInfo&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

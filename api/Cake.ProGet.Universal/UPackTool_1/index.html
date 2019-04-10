@@ -210,10 +210,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker">Universal<wbr>Package<wbr>Packer</a></li>								
-											<li><a href="/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker">Universal<wbr>Package<wbr>Unpacker</a></li>								
-											<li><a href="/api/Cake.ProGet.Universal.Push/UniversalPackagePusher">Universal<wbr>Package<wbr>Pusher</a></li>								
 											<li><a href="/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller">Universal<wbr>Package<wbr>Installer</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker">Universal<wbr>Package<wbr>Packer</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Push/UniversalPackagePusher">Universal<wbr>Package<wbr>Pusher</a></li>								
+											<li><a href="/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker">Universal<wbr>Package<wbr>Unpacker</a></li>								
 									</ul>
 								</dd>			
 							
@@ -225,14 +225,14 @@
 	Type--&gt;Base0["Tool&lt;TSettings&gt;"]
 	Type["UPackTool&lt;TSettings&gt;"]
 class Type type-node
-	Derived0["UniversalPackagePacker"]--&gt;Type
-	click Derived0 "/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker"
-	Derived1["UniversalPackageUnpacker"]--&gt;Type
-	click Derived1 "/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker"
+	Derived0["UniversalPackageInstaller"]--&gt;Type
+	click Derived0 "/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller"
+	Derived1["UniversalPackagePacker"]--&gt;Type
+	click Derived1 "/api/Cake.ProGet.Universal.Pack/UniversalPackagePacker"
 	Derived2["UniversalPackagePusher"]--&gt;Type
 	click Derived2 "/api/Cake.ProGet.Universal.Push/UniversalPackagePusher"
-	Derived3["UniversalPackageInstaller"]--&gt;Type
-	click Derived3 "/api/Cake.ProGet.Universal.Install/UniversalPackageInstaller"
+	Derived3["UniversalPackageUnpacker"]--&gt;Type
+	click Derived3 "/api/Cake.ProGet.Universal.Unpack/UniversalPackageUnpacker"
 
 						</div>
 					</div>
@@ -397,17 +397,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;UPackTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;UPackTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -416,6 +405,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;UPackTool<wbr>&lt;TSettings&gt;<wbr>&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

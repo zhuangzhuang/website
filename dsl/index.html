@@ -240,7 +240,6 @@
     <li><a href="/dsl/minicover">MiniCover</a></li>        
     <li><a href="/dsl/mkdocs">MkDocs</a></li>        
     <li><a href="/dsl/msbuild-resource">MSBuild Resource</a></li>        
-    <li><a href="/dsl/msbuildtask">MSBuildTask</a></li>        
     <li><a href="/dsl/msdeploy">MsDeploy</a></li>        
     <li><a href="/dsl/ndepend">NDepend</a></li>        
     <li><a href="/dsl/netlify">Netlify</a></li>        
@@ -281,7 +280,6 @@
     <li><a href="/dsl/stylecop">Stylecop</a></li>        
     <li><a href="/dsl/svn">Svn</a></li>        
     <li><a href="/dsl/swagger">Swagger</a></li>        
-    <li><a href="/dsl/synver">SynVer</a></li>        
     <li><a href="/dsl/systemctl">Systemctl</a></li>        
     <li><a href="/dsl/talendadminapi">TalendAdminApi</a></li>        
     <li><a href="/dsl/talendcommandline">TalendCommandLine</a></li>        
@@ -297,7 +295,6 @@
     <li><a href="/dsl/upack">UPack</a></li>        
     <li><a href="/dsl/vagrant">Vagrant</a></li>        
     <li><a href="/dsl/version-reader">Version Reader</a></li>        
-    <li><a href="/dsl/vs-.proj-file-helpers">VS .proj file helpers</a></li>        
     <li><a href="/dsl/vsce">Vsce</a></li>        
     <li><a href="/dsl/vsmetrics">VsMetrics</a></li>        
     <li><a href="/dsl/watch">Watch</a></li>        
@@ -381,8 +378,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/diagnostics">Diagnostics</a></td>
@@ -428,7 +425,7 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
+            Several extension methods when using Environment Variables.
             </td>
                 </tr>
                 <tr>
@@ -506,14 +503,16 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-    Contains functionality related to HTTP operations
-    </td>
+            <p>
+            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/ilmerge">ILMerge</a></td>
@@ -567,8 +566,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
-            </td>
+    Contains functionality related to MSBuild XML document files.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/mspec">MSpec</a></td>
@@ -690,10 +689,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from nuget.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
+    install from nuget.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -719,11 +718,12 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </td>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/specflow">SpecFlow</a></td>
@@ -739,12 +739,7 @@
                 <tr>
                     <td><a href="/dsl/text">Text</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/mono/monodevelop/tree/master/main/src/addins/TextTemplating/TextTransform">TextTransform</a>.</p>
-    <p>
-    In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from nuget.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.TextTransform/TextTransformSettings">TextTransformSettings</a></code> class:
-    <pre><code class="cs">#tool "nuget:?package=Mono.TextTransform"</code></pre>
-    </p>
+    Contains functionality related to text transformation.
     </td>
                 </tr>
                 <tr>
@@ -788,7 +783,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XSL transformation.
+    Contains functionality related to XML XPath queries.
     </td>
                 </tr>
                 <tr>
@@ -836,7 +831,7 @@
                 <tr>
                     <td><a href="/dsl/android">Android</a></td>
                     <td>
-            Cake build aliases for Android ADB Activity Manager commands
+            Cake build aliases for Android ADB commands
             </td>
                 </tr>
                 <tr>
@@ -917,13 +912,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Cloud Front distributions
+            Contains Cake aliases for configuring Amazon Elastic Computing instances
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running Azure login commands.
+            Contains Cake aliases for running commands managing Azure resource groups.
             </td>
                 </tr>
                 <tr>
@@ -1030,8 +1025,8 @@
                 <tr>
                     <td><a href="/dsl/compression">Compression</a></td>
                     <td>
-    Contains functionality related to compress files to Zip.
-    </td>
+            Contains functionality related to compress files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/configuration">Configuration</a></td>
@@ -1116,8 +1111,7 @@
                 <tr>
                     <td><a href="/dsl/docfx">DocFx</a></td>
                     <td>
-            Contains functionality related to building websites using 
-            <a href="http://dotnet.github.io/docfx">DocFx</a>.
+            Contains functionality related to creating PDF files using <a href="http://dotnet.github.io/docfx">DocFx</a>.
             </td>
                 </tr>
                 <tr>
@@ -1151,12 +1145,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            The result of EmailProvider.
             </td>
                 </tr>
                 <tr>
@@ -1185,7 +1174,7 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
+            Several extension methods when using Environment Variables.
             </td>
                 </tr>
                 <tr>
@@ -1270,8 +1259,8 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-    Contains functionality related to file system globbing.
-    </td>
+            Contains functionality related to file system globbing. 
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1332,8 +1321,10 @@
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
                     <td>
-    Contains functionality related to HTTP operations
-    </td>
+            <p>
+            Contains functionality for working with HTTP operations such as GET, PUT, POST, DELETE, PATCH, etc.
+            </p>
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/iso">ISO</a></td>
@@ -1342,7 +1333,13 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to read warnings from DocFx log files.
+            Contains functionality for reading issues from Markdownlint log files.
+            
+
+            Provider for issues reported my markdownlint-cli.
+            
+
+            Provider for issues reported my Markdownlint.
             </td>
                 </tr>
                 <tr>
@@ -1387,7 +1384,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/microsoft-teams">Microsoft Teams</a></td>
-                    <td></td>
+                    <td>
+            Contains functionality related to Microsoft Teams.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/microsoft.extensions.configuration">Microsoft.Extensions.Configuration</a></td>
@@ -1419,14 +1418,8 @@
                 <tr>
                     <td><a href="/dsl/msbuild-resource">MSBuild Resource</a></td>
                     <td>
-            Extension methods for parsing msbuild projects (csproj, vbproj, fsproj)
-            </td>
-                </tr>
-                <tr>
-                    <td><a href="/dsl/msbuildtask">MSBuildTask</a></td>
-                    <td>
-            Contains MSBuildTask Extensions
-            </td>
+    Contains functionality related to MSBuild XML document files.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/msdeploy">MsDeploy</a></td>
@@ -1462,7 +1455,7 @@
                 <tr>
                     <td><a href="/dsl/npm">Npm</a></td>
                     <td>
-            Npm Ci aliases
+            Npm Set aliases
             </td>
                 </tr>
                 <tr>
@@ -1527,7 +1520,9 @@
                 </tr>
                 <tr>
                     <td><a href="/dsl/plist">plist</a></td>
-                    <td></td>
+                    <td>
+                Contains functionality to work with plist files.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/postman">Postman</a></td>
@@ -1613,15 +1608,18 @@
                 <tr>
                     <td><a href="/dsl/signing">Signing</a></td>
                     <td>
-            Contains functionality for working with VsixSignTool.
-            
-
-            Aliases for VsixSignTool.
-            </td>
+    <p>Contains functionality related to signing assemblies with PFX certificates using <a href="https://msdn.microsoft.com/en-gb/library/windows/desktop/aa387764(v=vs.85).aspx">SignTool</a>.</p>
+    <p>
+    In order to use the commands for this alias, SignTool will need to be installed on the machine where
+    the Cake script is being executed.  This is typically achieved by installing the correct Windows SDK.
+    </p>
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/slack">Slack</a></td>
-                    <td></td>
+                    <td>
+            Contains <a href="https://api.slack.com/">Slack API</a> Chat functionality.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/smartassembly">SmartAssembly</a></td>
@@ -1706,17 +1704,6 @@
                     <td><a href="/dsl/swagger">Swagger</a></td>
                     <td>
                 Alias to access the code generation functionality from the NSwag toolchain
-            </td>
-                </tr>
-                <tr>
-                    <td><a href="/dsl/synver">SynVer</a></td>
-                    <td>
-            <p>Contains functionality related to the <a href="https://github.com/fsprojects/SyntacticVersioning">SyntacticVersioning</a>.</p>
-            <p>
-            In order to use the commands for this addin you will need to include the following in your build.cake file to download and
-            reference the addin from NuGet.org:
-            <pre><code class="cs">#addin Cake.SynVer</code></pre>
-            </p>
             </td>
                 </tr>
                 <tr>
@@ -1812,10 +1799,6 @@
                     <td>
             Contains functionality for retrieving version numbers from assemblies
             </td>
-                </tr>
-                <tr>
-                    <td><a href="/dsl/vs-.proj-file-helpers">VS .proj file helpers</a></td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/vsce">Vsce</a></td>

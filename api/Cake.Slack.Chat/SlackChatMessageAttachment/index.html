@@ -80,7 +80,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
@@ -180,7 +181,11 @@
                             </div>
 
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Class to allow for message attachments
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -254,7 +259,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/44ED6BD9">Slack<wbr>Chat<wbr>Message<wbr>Attachment<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment">SlackChatMessageAttachment</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -278,105 +285,135 @@ class Type type-node
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/60EAF628">Author_Icon</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The message author's icon url
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/4A5ACE7B">Author_Link</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Link to the message author
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/BDBD4113">Author_Name</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The message author's name.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/DCCB5E35">Color</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Color displayed with the attachment
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/D01ECC0D">Fallback</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Required Text summary of the attachment that is shown by clients that understand attachments but choose not to show them.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/282F0528">Fields</a></td>
 								<td>IList<wbr>&lt;<a href="/api/Cake.Slack.Chat/SlackChatMessageAttachmentField">Slack<wbr>Chat<wbr>Message<wbr>Attachment<wbr>Field</a>&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Collection of <code class="cs"><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachmentField">SlackChatMessageAttachmentField</a></code>
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/F3C9D1B4">Footer</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Footer text to display in message.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/4449B090">Footer_Icon</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Footer icon to display in message.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/11F4EC8A">Image_Url</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Url to an image to display in message.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/9EFBE3DD">Mrkdwn_In</a></td>
 								<td>IList<wbr>&lt;string&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Collection of fields that use Slack's Markdown-like message formatting. Valid values are "pretext", "text", and "fields".
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/5D6073AA">Pretext</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Optional Text that should appear above the formatted data
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/35A29B80">Text</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Optional Text that should appear within the attachment
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/F818A91F">Thumb_Url</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Url to thumbprint to display in message.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/5EFB3E78">Title</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The message title.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/api/Cake.Slack.Chat/SlackChatMessageAttachment/BC9DECD4">Title_Link</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            The message title link.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -420,17 +457,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Slack<wbr>Chat<wbr>Message<wbr>Attachment&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;<wbr>Slack<wbr>Chat<wbr>Message<wbr>Attachment&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -439,6 +465,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;<wbr>Slack<wbr>Chat<wbr>Message<wbr>Attachment&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>

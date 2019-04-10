@@ -201,9 +201,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Jira.Dtos/MigrateIssuesVersionSettings">Migrate<wbr>Issues<wbr>Version<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.Jira.Dtos/CreateIssueSettings">CreateIssueSettings</a></li>								
 											<li><a href="/api/Cake.Jira.Dtos/CreateOrUpdateJiraVersionSettings">Create<wbr>Or<wbr>Update<wbr>Jira<wbr>Version<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.Jira.Dtos/MigrateIssuesVersionSettings">Migrate<wbr>Issues<wbr>Version<wbr>Settings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -215,12 +215,12 @@
 	Type--&gt;Base0["Object"]
 	Type["JiraSettings"]
 class Type type-node
-	Derived0["MigrateIssuesVersionSettings"]--&gt;Type
-	click Derived0 "/api/Cake.Jira.Dtos/MigrateIssuesVersionSettings"
-	Derived1["CreateIssueSettings"]--&gt;Type
-	click Derived1 "/api/Cake.Jira.Dtos/CreateIssueSettings"
-	Derived2["CreateOrUpdateJiraVersionSettings"]--&gt;Type
-	click Derived2 "/api/Cake.Jira.Dtos/CreateOrUpdateJiraVersionSettings"
+	Derived0["CreateIssueSettings"]--&gt;Type
+	click Derived0 "/api/Cake.Jira.Dtos/CreateIssueSettings"
+	Derived1["CreateOrUpdateJiraVersionSettings"]--&gt;Type
+	click Derived1 "/api/Cake.Jira.Dtos/CreateOrUpdateJiraVersionSettings"
+	Derived2["MigrateIssuesVersionSettings"]--&gt;Type
+	click Derived2 "/api/Cake.Jira.Dtos/MigrateIssuesVersionSettings"
 
 						</div>
 					</div>
@@ -331,17 +331,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;JiraSettings&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-            Throws an exception if the specified parameter's value is null.
-            </div>
-										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
-                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Cake.Ftp/Extensions/09E77671">NotNull<wbr>&lt;JiraSettings&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
@@ -350,6 +339,17 @@ class Type type-node
             </div>
 										<div><small><em>From <a href="/api/Cake.Ftp/Extensions">Extensions</a></em></small></div>
                                             <div><small><em>Requires the Cake.Ftp addin</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Cake.Issues/IssuesArgumentChecks/5D006BAA">NotNull<wbr>&lt;JiraSettings&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
+										<div><small><em>From <a href="/api/Cake.Issues/IssuesArgumentChecks">IssuesArgumentChecks</a></em></small></div>
+                                            <div><small><em>Requires the Cake.Issues addin</em></small></div>
 								</td>
 							</tr>
 							<tr>
