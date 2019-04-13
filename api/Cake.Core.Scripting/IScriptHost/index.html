@@ -204,10 +204,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
 											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
 											<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>								
 									</ul>
 								</dd>				
@@ -218,14 +218,14 @@
 							graph BT
 	Type["IScriptHost"]
 class Type type-node
-	Implementing0["DryRunScriptHost"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Scripting/DryRunScriptHost"
-	Implementing1["DescriptionScriptHost"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Scripting/DescriptionScriptHost"
-	Implementing2["TaskTreeScriptHost"]-.-&gt;Type
-	click Implementing2 "/api/Cake.Scripting/TaskTreeScriptHost"
-	Implementing3["BuildScriptHost"]-.-&gt;Type
-	click Implementing3 "/api/Cake.Scripting/BuildScriptHost"
+	Implementing0["TaskTreeScriptHost"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Scripting/TaskTreeScriptHost"
+	Implementing1["DryRunScriptHost"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Scripting/DryRunScriptHost"
+	Implementing2["BuildScriptHost"]-.-&gt;Type
+	click Implementing2 "/api/Cake.Scripting/BuildScriptHost"
+	Implementing3["DescriptionScriptHost"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Scripting/DescriptionScriptHost"
 	Implementing4["ScriptHost"]-.-&gt;Type
 	click Implementing4 "/api/Cake.Core.Scripting/ScriptHost"
 

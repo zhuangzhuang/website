@@ -187,10 +187,6 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -208,6 +204,10 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -248,8 +248,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakePlatform">FakePlatform</a></li>								
 											<li><a href="/api/Cake.Core/CakePlatform">CakePlatform</a></li>								
+											<li><a href="/api/Cake.Testing/FakePlatform">FakePlatform</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -259,10 +259,10 @@
 							graph BT
 	Type["ICakePlatform"]
 class Type type-node
-	Implementing0["FakePlatform"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Testing/FakePlatform"
-	Implementing1["CakePlatform"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Core/CakePlatform"
+	Implementing0["CakePlatform"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core/CakePlatform"
+	Implementing1["FakePlatform"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Testing/FakePlatform"
 
 						</div>
 					</div>

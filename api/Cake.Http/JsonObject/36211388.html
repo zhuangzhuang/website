@@ -207,7 +207,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Provides the implementation for operations that set member values. Classes derived from the <code class="cs"><a href="/">DynamicObject</a></code> class can override this method to specify dynamic behavior for operations such as setting a value for a property.
+            Provides the implementation for operations that set member values. Classes derived from the <code class="cs">System.Dynamic.DynamicObject</code> class can override this method to specify dynamic behavior for operations such as setting a value for a property.
             </div>
 
 		<div class="panel panel-default">
@@ -247,12 +247,12 @@
 					<tbody><tr>
 						<td>binder</td>
 						<td>SetMemberBinder</td>
-						<td>Provides information about the object that called the dynamic operation. The binder.Name property provides the name of the member to which the value is being assigned. For example, for the statement sampleObject.SampleProperty = "Test", where sampleObject is an instance of the class derived from the <code class="cs"><a href="/">DynamicObject</a></code> class, binder.Name returns "SampleProperty". The binder.IgnoreCase property specifies whether the member name is case-sensitive.</td>
+						<td>Provides information about the object that called the dynamic operation. The binder.Name property provides the name of the member to which the value is being assigned. For example, for the statement sampleObject.SampleProperty = "Test", where sampleObject is an instance of the class derived from the <code class="cs">System.Dynamic.DynamicObject</code> class, binder.Name returns "SampleProperty". The binder.IgnoreCase property specifies whether the member name is case-sensitive.</td>
 					</tr>
 					<tr>
 						<td>value</td>
 						<td>object</td>
-						<td>The value to set to the member. For example, for sampleObject.SampleProperty = "Test", where sampleObject is an instance of the class derived from the <code class="cs"><a href="/">DynamicObject</a></code> class, the <span name="value" class="paramref">value</span> is "Test".</td>
+						<td>The value to set to the member. For example, for sampleObject.SampleProperty = "Test", where sampleObject is an instance of the class derived from the <code class="cs">System.Dynamic.DynamicObject</code> class, the <span name="value" class="paramref">value</span> is "Test".</td>
 					</tr>
 			</tbody></table>
 		</div>

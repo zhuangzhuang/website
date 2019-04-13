@@ -86,6 +86,7 @@
 <p><a href="#video">Video</a></p>
 <p><a href="#pinning-addin-version">Pinning addin version</a></p>
 <p><a href="#pinning-tool-version">Pinning tool version</a></p>
+<p><a href="#pinning-module-version">Pinning module version</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -227,7 +228,7 @@
 <p>Further information on this topic can be seen in the following video:</p>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/xq41JgaGN7k" frameborder="0" allowfullscreen=""></iframe>
 <h1 id="pinning-addin-version">Pinning addin version</h1>
-<p>If addins are referenced through the <em>packages.config</em> file they can be pinned the same way as the Cake version.</p>
+<p>If addins are referenced through the <em>packages.config</em> in the addins folder, file they can be pinned the same way as the Cake version.</p>
 <p>If addins are referenced using the <code>#addin</code> preprocessor directive they can be pinned like this:</p>
 <pre><code>#addin nuget:?package=Cake.Foo&amp;version=1.2.3
 </code></pre>
@@ -236,6 +237,12 @@
 <p>If tools are referenced using the <code>#tool</code> preprocessor directive they can be pinned like this:</p>
 <pre><code>#tool nuget:?package=Tool.Foo&amp;version=1.2.3
 </code></pre>
+<h1 id="pinning-module-version">Pinning module version</h1>
+<p>If modules are referenced through the <em>packages.config</em> file in the modules folder, they can be pinned in the same way as the Cake version.</p>
+<p>If modules are referenced using the <code>#module</code> preprocessor directive they can be pinned like this:</p>
+<pre><code>#module nuget:?package=Cake.DotNetTool.Module&amp;version=0.1.0
+</code></pre>
+<p><strong>NOTE:</strong> Using this technique will require calling Cake once using the <code>--bootstrap</code> option, so that the modules are first downloaded before executing Cake.  This is due to the fact that modules assemblies need to exist prior to Cake executing, otherwise, they can't be included in the current execution.</p>
 
 	</section>
                 

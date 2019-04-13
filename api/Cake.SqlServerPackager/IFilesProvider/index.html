@@ -199,8 +199,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.SqlServerPackager/DiskFilesProvider">DiskFilesProvider</a></li>								
 											<li><a href="/api/Cake.SqlServerPackager/GitFilesProvider">GitFilesProvider</a></li>								
+											<li><a href="/api/Cake.SqlServerPackager/DiskFilesProvider">DiskFilesProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -210,10 +210,10 @@
 							graph BT
 	Type["IFilesProvider"]
 class Type type-node
-	Implementing0["DiskFilesProvider"]-.-&gt;Type
-	click Implementing0 "/api/Cake.SqlServerPackager/DiskFilesProvider"
-	Implementing1["GitFilesProvider"]-.-&gt;Type
-	click Implementing1 "/api/Cake.SqlServerPackager/GitFilesProvider"
+	Implementing0["GitFilesProvider"]-.-&gt;Type
+	click Implementing0 "/api/Cake.SqlServerPackager/GitFilesProvider"
+	Implementing1["DiskFilesProvider"]-.-&gt;Type
+	click Implementing1 "/api/Cake.SqlServerPackager/DiskFilesProvider"
 
 						</div>
 					</div>

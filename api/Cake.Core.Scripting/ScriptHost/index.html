@@ -216,10 +216,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
 											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
 									</ul>
 								</dd>			
 							
@@ -233,14 +233,14 @@
 	click Interface0 "/api/Cake.Core.Scripting/IScriptHost"
 	Type["ScriptHost"]
 class Type type-node
-	Derived0["DryRunScriptHost"]--&gt;Type
-	click Derived0 "/api/Cake.Scripting/DryRunScriptHost"
-	Derived1["DescriptionScriptHost"]--&gt;Type
-	click Derived1 "/api/Cake.Scripting/DescriptionScriptHost"
-	Derived2["TaskTreeScriptHost"]--&gt;Type
-	click Derived2 "/api/Cake.Scripting/TaskTreeScriptHost"
-	Derived3["BuildScriptHost"]--&gt;Type
-	click Derived3 "/api/Cake.Scripting/BuildScriptHost"
+	Derived0["TaskTreeScriptHost"]--&gt;Type
+	click Derived0 "/api/Cake.Scripting/TaskTreeScriptHost"
+	Derived1["DryRunScriptHost"]--&gt;Type
+	click Derived1 "/api/Cake.Scripting/DryRunScriptHost"
+	Derived2["BuildScriptHost"]--&gt;Type
+	click Derived2 "/api/Cake.Scripting/BuildScriptHost"
+	Derived3["DescriptionScriptHost"]--&gt;Type
+	click Derived3 "/api/Cake.Scripting/DescriptionScriptHost"
 
 						</div>
 					</div>
