@@ -248,8 +248,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a></li>								
 											<li><a href="/api/Cake.Core/CakeRuntime">CakeRuntime</a></li>								
+											<li><a href="/api/Cake.Testing/FakeRuntime">FakeRuntime</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -259,10 +259,10 @@
 							graph BT
 	Type["ICakeRuntime"]
 class Type type-node
-	Implementing0["FakeRuntime"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Testing/FakeRuntime"
-	Implementing1["CakeRuntime"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Core/CakeRuntime"
+	Implementing0["CakeRuntime"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core/CakeRuntime"
+	Implementing1["FakeRuntime"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Testing/FakeRuntime"
 
 						</div>
 					</div>

@@ -214,9 +214,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/api/Cake.DocFx.Pdf/DocFxPdfSettings">DocFxPdfSettings</a></li>								
-											<li><a href="/api/Cake.DocFx.Merge/DocFxMergeSettings">DocFxMergeSettings</a></li>								
-											<li><a href="/api/Cake.DocFx.Metadata/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>								
 											<li><a href="/api/Cake.DocFx.Build/DocFxBuildSettings">DocFxBuildSettings</a></li>								
+											<li><a href="/api/Cake.DocFx.Metadata/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>								
+											<li><a href="/api/Cake.DocFx.Merge/DocFxMergeSettings">DocFxMergeSettings</a></li>								
 									</ul>
 								</dd>			
 							
@@ -230,12 +230,12 @@
 class Type type-node
 	Derived0["DocFxPdfSettings"]--&gt;Type
 	click Derived0 "/api/Cake.DocFx.Pdf/DocFxPdfSettings"
-	Derived1["DocFxMergeSettings"]--&gt;Type
-	click Derived1 "/api/Cake.DocFx.Merge/DocFxMergeSettings"
+	Derived1["DocFxBuildSettings"]--&gt;Type
+	click Derived1 "/api/Cake.DocFx.Build/DocFxBuildSettings"
 	Derived2["DocFxMetadataSettings"]--&gt;Type
 	click Derived2 "/api/Cake.DocFx.Metadata/DocFxMetadataSettings"
-	Derived3["DocFxBuildSettings"]--&gt;Type
-	click Derived3 "/api/Cake.DocFx.Build/DocFxBuildSettings"
+	Derived3["DocFxMergeSettings"]--&gt;Type
+	click Derived3 "/api/Cake.DocFx.Merge/DocFxMergeSettings"
 
 						</div>
 					</div>

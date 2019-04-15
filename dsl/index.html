@@ -413,13 +413,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dry-run">Dry Run</a></td>
@@ -430,8 +425,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/file-operations">File Operations</a></td>
@@ -508,8 +503,8 @@
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-            Contains functionality related to file system globbing. 
-            </td>
+    Contains functionality related to file system globbing.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/http-operations">HTTP Operations</a></td>
@@ -608,8 +603,8 @@
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nunit">NUnit</a></td>
@@ -692,10 +687,10 @@
                 <tr>
                     <td><a href="/dsl/resharper">ReSharper</a></td>
                     <td>
-    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/dupFinder.html">dupFinder</a> tool.</p>
+    <p>Contains functionality related to ReSharper's <a href="https://www.jetbrains.com/help/resharper/2016.1/InspectCode.html">InspectCode</a> tool.</p>
     <p>
     In order to use the commands for this alias, include the following in your build.cake file to download and
-    install from nuget.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.DupFinder/DupFinderSettings">DupFinderSettings</a></code> class:
+    install from nuget.org, or specify the ToolPath within the <code class="cs"><a href="/api/Cake.Common.Tools.InspectCode/InspectCodeSettings">InspectCodeSettings</a></code> class:
     <pre><code class="cs">#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"</code></pre>
     </p>
     </td>
@@ -790,7 +785,7 @@
                 <tr>
                     <td><a href="/dsl/xml">XML</a></td>
                     <td>
-    Contains functionality related to XML XPath queries.
+    Contains functionality related to XML XSL transformation.
     </td>
                 </tr>
                 <tr>
@@ -919,13 +914,13 @@
                 <tr>
                     <td><a href="/dsl/aws">AWS</a></td>
                     <td>
-            Contains Cake aliases for configuring Amazon Elastic Computing instances
+            Contains Cake aliases for configuring Amazon Cloud Front distributions
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/azure">Azure</a></td>
                     <td>
-            Contains Cake aliases for running commands managing Azure resource groups.
+            Contains Cake aliases for running Azure login commands.
             </td>
                 </tr>
                 <tr>
@@ -980,12 +975,7 @@
                 <tr>
                     <td><a href="/dsl/cakemail">CakeMail</a></td>
                     <td>
-            <p>Contains aliases related to <a href="https://cakemail.com/">CakeMail</a>.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.CakeMail</code></pre>
-            </p>
+            Contains functionality related to CakeMail API.
             </td>
                 </tr>
                 <tr>
@@ -1148,13 +1138,8 @@
                 <tr>
                     <td><a href="/dsl/dotnetcore">DotNetCore</a></td>
                     <td>
-    <p>Contains functionality related to <a href="https://github.com/dotnet/cli">.NET Core CLI</a>.</p>
-    <p>
-    In order to use the commands for this alias, the .Net Core CLI tools will need to be installed on the machine where
-    the Cake script is being executed.  See this <a href="https://www.microsoft.com/net/core">page</a> for information
-    on how to install.
-    </p>
-    </td>
+            Several extension methods when using DotNetCoreTest.
+            </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/dotnetcoreef">DotNetCoreEf</a></td>
@@ -1163,12 +1148,7 @@
                 <tr>
                     <td><a href="/dsl/email">Email</a></td>
                     <td>
-            <p>Contains aliases related to emails.</p>
-            <p>
-            In order to use the commands for this addin, you will need to include the following in your build.cake file to download and
-            reference from NuGet.org:
-            <pre><code class="cs">#addin Cake.Email</code></pre>
-            </p>
+            Class that lets you override default API settings.
             </td>
                 </tr>
                 <tr>
@@ -1197,8 +1177,8 @@
                 <tr>
                     <td><a href="/dsl/environment">Environment</a></td>
                     <td>
-            Contains Aliases for helping work with combinations of Argument and Environment variables.
-            </td>
+    Contains functionality related to the environment.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/fastlane">Fastlane</a></td>
@@ -1276,14 +1256,14 @@
                 <tr>
                     <td><a href="/dsl/gitter">Gitter</a></td>
                     <td>
-            Contains GitterProvider Chat functionality.
+            Class that lets you override default API settings
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/globbing">Globbing</a></td>
                     <td>
-            Contains functionality related to file system globbing. 
-            </td>
+    Contains functionality related to file system globbing.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/guard">Guard</a></td>
@@ -1354,7 +1334,13 @@
                 <tr>
                     <td><a href="/dsl/issues">Issues</a></td>
                     <td>
-            Contains functionality related to writing code analysis issues to AppVeyor builds.
+            Contains functionality for reading issues from Markdownlint log files.
+            
+
+            Provider for issues reported my markdownlint-cli.
+            
+
+            Provider for issues reported my Markdownlint.
             </td>
                 </tr>
                 <tr>
@@ -1470,14 +1456,14 @@
                 <tr>
                     <td><a href="/dsl/npm">Npm</a></td>
                     <td>
-            Npm Prune aliases
+            Npm Version aliases
             </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/nuget">NuGet</a></td>
                     <td>
-            Extended NuGet Aliases
-            </td>
+    Contains functionality for working with <a href="https://www.nuget.org/">NuGet</a>.
+    </td>
                 </tr>
                 <tr>
                     <td><a href="/dsl/octodeploy">OctoDeploy</a></td>
@@ -1632,7 +1618,7 @@
                 <tr>
                     <td><a href="/dsl/slack">Slack</a></td>
                     <td>
-            The result of SlackProvider Chat API post
+            Field for message attachment
             </td>
                 </tr>
                 <tr>
@@ -1668,8 +1654,7 @@
                 <tr>
                     <td><a href="/dsl/sqlserver">SqlServer</a></td>
                     <td>
-            Contains functionality to deal with DAC functionality from SQL Server: create and restore BACPAC files; 
-            create and restore DACPAC files
+            Contains functionality to backup and restore SQL Server database
             </td>
                 </tr>
                 <tr>

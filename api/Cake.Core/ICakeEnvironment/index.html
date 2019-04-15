@@ -249,8 +249,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
 											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
+											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -260,10 +260,10 @@
 							graph BT
 	Type["ICakeEnvironment"]
 class Type type-node
-	Implementing0["FakeEnvironment"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Testing/FakeEnvironment"
-	Implementing1["CakeEnvironment"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Core/CakeEnvironment"
+	Implementing0["CakeEnvironment"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core/CakeEnvironment"
+	Implementing1["FakeEnvironment"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Testing/FakeEnvironment"
 
 						</div>
 					</div>

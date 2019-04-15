@@ -218,10 +218,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
-											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 											<li><a href="/api/Cake.Core.IO/IDirectory">IDirectory</a></li>								
+											<li><a href="/api/Cake.Core.IO/IFile">IFile</a></li>								
 											<li><a href="/api/Cake.Testing/FakeDirectory">FakeDirectory</a></li>								
+											<li><a href="/api/Cake.Testing/FakeFile">FakeFile</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -231,14 +231,14 @@
 							graph BT
 	Type["IFileSystemInfo"]
 class Type type-node
-	Implementing0["FakeFile"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Testing/FakeFile"
+	Implementing0["IDirectory"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core.IO/IDirectory"
 	Implementing1["IFile"]-.-&gt;Type
 	click Implementing1 "/api/Cake.Core.IO/IFile"
-	Implementing2["IDirectory"]-.-&gt;Type
-	click Implementing2 "/api/Cake.Core.IO/IDirectory"
-	Implementing3["FakeDirectory"]-.-&gt;Type
-	click Implementing3 "/api/Cake.Testing/FakeDirectory"
+	Implementing2["FakeDirectory"]-.-&gt;Type
+	click Implementing2 "/api/Cake.Testing/FakeDirectory"
+	Implementing3["FakeFile"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Testing/FakeFile"
 
 						</div>
 					</div>

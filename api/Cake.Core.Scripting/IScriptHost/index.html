@@ -146,14 +146,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/api/Cake.Core.Scripting">Cake<wbr>.Core<wbr>.Scripting</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptAliasFinder">IScriptAliasFinder</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptConventions">IScriptConventions</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptEngine">IScriptEngine</a></li>
-				<li class="selected"><a href="/api/Cake.Core.Scripting/IScriptHost">IScriptHost</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptProcessor">IScriptProcessor</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptRunner">IScriptRunner</a></li>
-				<li><a href="/api/Cake.Core.Scripting/IScriptSession">IScriptSession</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Cake.Core.Scripting/Script">Script</a></li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptAlias">ScriptAlias</a></li>
@@ -164,6 +156,14 @@
 				<li><a href="/api/Cake.Core.Scripting/ScriptRunner">ScriptRunner</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/api/Cake.Core.Scripting/ScriptAliasType">ScriptAliasType</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptAliasFinder">IScriptAliasFinder</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptConventions">IScriptConventions</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptEngine">IScriptEngine</a></li>
+				<li class="selected"><a href="/api/Cake.Core.Scripting/IScriptHost">IScriptHost</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptProcessor">IScriptProcessor</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptRunner">IScriptRunner</a></li>
+				<li><a href="/api/Cake.Core.Scripting/IScriptSession">IScriptSession</a></li>
 
 
                     </ul>
@@ -204,11 +204,11 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
-											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/TaskTreeScriptHost">TaskTreeScriptHost</a></li>								
 											<li><a href="/api/Cake.Scripting/DescriptionScriptHost">Description<wbr>Script<wbr>Host</a></li>								
+											<li><a href="/api/Cake.Scripting/BuildScriptHost">BuildScriptHost</a></li>								
+											<li><a href="/api/Cake.Scripting/DryRunScriptHost">DryRunScriptHost</a></li>								
+											<li><a href="/api/Cake.Core.Scripting/ScriptHost">ScriptHost</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -218,16 +218,16 @@
 							graph BT
 	Type["IScriptHost"]
 class Type type-node
-	Implementing0["ScriptHost"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Core.Scripting/ScriptHost"
-	Implementing1["DryRunScriptHost"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Scripting/DryRunScriptHost"
+	Implementing0["TaskTreeScriptHost"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Scripting/TaskTreeScriptHost"
+	Implementing1["DescriptionScriptHost"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Scripting/DescriptionScriptHost"
 	Implementing2["BuildScriptHost"]-.-&gt;Type
 	click Implementing2 "/api/Cake.Scripting/BuildScriptHost"
-	Implementing3["TaskTreeScriptHost"]-.-&gt;Type
-	click Implementing3 "/api/Cake.Scripting/TaskTreeScriptHost"
-	Implementing4["DescriptionScriptHost"]-.-&gt;Type
-	click Implementing4 "/api/Cake.Scripting/DescriptionScriptHost"
+	Implementing3["DryRunScriptHost"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Scripting/DryRunScriptHost"
+	Implementing4["ScriptHost"]-.-&gt;Type
+	click Implementing4 "/api/Cake.Core.Scripting/ScriptHost"
 
 						</div>
 					</div>

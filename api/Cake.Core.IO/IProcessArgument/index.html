@@ -218,10 +218,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
-											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/QuotedArgument">QuotedArgument</a></li>								
 											<li><a href="/api/Cake.Core.IO.Arguments/SecretArgument">SecretArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/TextArgument">TextArgument</a></li>								
+											<li><a href="/api/Cake.Core.IO.Arguments/SwitchArgument">SwitchArgument</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -231,14 +231,14 @@
 							graph BT
 	Type["IProcessArgument"]
 class Type type-node
-	Implementing0["SwitchArgument"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Core.IO.Arguments/SwitchArgument"
-	Implementing1["TextArgument"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Core.IO.Arguments/TextArgument"
-	Implementing2["QuotedArgument"]-.-&gt;Type
-	click Implementing2 "/api/Cake.Core.IO.Arguments/QuotedArgument"
-	Implementing3["SecretArgument"]-.-&gt;Type
-	click Implementing3 "/api/Cake.Core.IO.Arguments/SecretArgument"
+	Implementing0["QuotedArgument"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Core.IO.Arguments/QuotedArgument"
+	Implementing1["SecretArgument"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Core.IO.Arguments/SecretArgument"
+	Implementing2["TextArgument"]-.-&gt;Type
+	click Implementing2 "/api/Cake.Core.IO.Arguments/TextArgument"
+	Implementing3["SwitchArgument"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Core.IO.Arguments/SwitchArgument"
 
 						</div>
 					</div>
