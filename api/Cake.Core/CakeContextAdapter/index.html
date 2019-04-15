@@ -188,6 +188,10 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -205,10 +209,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -260,10 +260,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
-											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 											<li><a href="/api/Cake.Core/TaskTeardownContext">TaskTeardownContext</a></li>								
+											<li><a href="/api/Cake.Core/TaskSetupContext">TaskSetupContext</a></li>								
 											<li><a href="/api/Cake.Core/SetupContext">SetupContext</a></li>								
+											<li><a href="/api/Cake.Core/TeardownContext">TeardownContext</a></li>								
 									</ul>
 								</dd>			
 							
@@ -277,14 +277,14 @@
 	click Interface0 "/api/Cake.Core/ICakeContext"
 	Type["CakeContextAdapter"]
 class Type type-node
-	Derived0["TaskSetupContext"]--&gt;Type
-	click Derived0 "/api/Cake.Core/TaskSetupContext"
-	Derived1["TeardownContext"]--&gt;Type
-	click Derived1 "/api/Cake.Core/TeardownContext"
-	Derived2["TaskTeardownContext"]--&gt;Type
-	click Derived2 "/api/Cake.Core/TaskTeardownContext"
-	Derived3["SetupContext"]--&gt;Type
-	click Derived3 "/api/Cake.Core/SetupContext"
+	Derived0["TaskTeardownContext"]--&gt;Type
+	click Derived0 "/api/Cake.Core/TaskTeardownContext"
+	Derived1["TaskSetupContext"]--&gt;Type
+	click Derived1 "/api/Cake.Core/TaskSetupContext"
+	Derived2["SetupContext"]--&gt;Type
+	click Derived2 "/api/Cake.Core/SetupContext"
+	Derived3["TeardownContext"]--&gt;Type
+	click Derived3 "/api/Cake.Core/TeardownContext"
 
 						</div>
 					</div>

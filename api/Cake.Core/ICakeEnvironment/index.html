@@ -188,6 +188,10 @@
 				<li><a href="/api/Cake.Core/TeardownEventArgs">TeardownEventArgs</a></li>
 				<li><a href="/api/Cake.Core/TypeExtensions">TypeExtensions</a></li>
 				<li><a href="/api/Cake.Core/UriExtensions">UriExtensions</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
+				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
+				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Cake.Core/ICakeArguments">ICakeArguments</a></li>
 				<li><a href="/api/Cake.Core/ICakeContext">ICakeContext</a></li>
@@ -205,10 +209,6 @@
 				<li><a href="/api/Cake.Core/ITaskSetupContext">ITaskSetupContext</a></li>
 				<li><a href="/api/Cake.Core/ITaskTeardownContext">ITaskTeardownContext</a></li>
 				<li><a href="/api/Cake.Core/ITeardownContext">ITeardownContext</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/api/Cake.Core/CakeReportEntryCategory">Cake<wbr>Report<wbr>Entry<wbr>Category</a></li>
-				<li><a href="/api/Cake.Core/CakeTaskExecutionStatus">Cake<wbr>Task<wbr>Execution<wbr>Status</a></li>
-				<li><a href="/api/Cake.Core/PlatformFamily">PlatformFamily</a></li>
 
 
                     </ul>
@@ -249,8 +249,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
 											<li><a href="/api/Cake.Testing/FakeEnvironment">FakeEnvironment</a></li>								
+											<li><a href="/api/Cake.Core/CakeEnvironment">CakeEnvironment</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -260,10 +260,10 @@
 							graph BT
 	Type["ICakeEnvironment"]
 class Type type-node
-	Implementing0["CakeEnvironment"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Core/CakeEnvironment"
-	Implementing1["FakeEnvironment"]-.-&gt;Type
-	click Implementing1 "/api/Cake.Testing/FakeEnvironment"
+	Implementing0["FakeEnvironment"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Testing/FakeEnvironment"
+	Implementing1["CakeEnvironment"]-.-&gt;Type
+	click Implementing1 "/api/Cake.Core/CakeEnvironment"
 
 						</div>
 					</div>

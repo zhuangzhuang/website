@@ -201,10 +201,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Cake.Tfs.Authentication/TfsNtlmCredentials">TfsNtlmCredentials</a></li>								
-											<li><a href="/api/Cake.Tfs.Authentication/TfsAadCredentials">TfsAadCredentials</a></li>								
-											<li><a href="/api/Cake.Tfs.Authentication/TfsBasicCredentials">TfsBasicCredentials</a></li>								
 											<li><a href="/api/Cake.Tfs.Authentication/TfsOAuthCredentials">TfsOAuthCredentials</a></li>								
+											<li><a href="/api/Cake.Tfs.Authentication/TfsAadCredentials">TfsAadCredentials</a></li>								
+											<li><a href="/api/Cake.Tfs.Authentication/TfsNtlmCredentials">TfsNtlmCredentials</a></li>								
+											<li><a href="/api/Cake.Tfs.Authentication/TfsBasicCredentials">TfsBasicCredentials</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -214,14 +214,14 @@
 							graph BT
 	Type["ITfsCredentials"]
 class Type type-node
-	Implementing0["TfsNtlmCredentials"]-.-&gt;Type
-	click Implementing0 "/api/Cake.Tfs.Authentication/TfsNtlmCredentials"
+	Implementing0["TfsOAuthCredentials"]-.-&gt;Type
+	click Implementing0 "/api/Cake.Tfs.Authentication/TfsOAuthCredentials"
 	Implementing1["TfsAadCredentials"]-.-&gt;Type
 	click Implementing1 "/api/Cake.Tfs.Authentication/TfsAadCredentials"
-	Implementing2["TfsBasicCredentials"]-.-&gt;Type
-	click Implementing2 "/api/Cake.Tfs.Authentication/TfsBasicCredentials"
-	Implementing3["TfsOAuthCredentials"]-.-&gt;Type
-	click Implementing3 "/api/Cake.Tfs.Authentication/TfsOAuthCredentials"
+	Implementing2["TfsNtlmCredentials"]-.-&gt;Type
+	click Implementing2 "/api/Cake.Tfs.Authentication/TfsNtlmCredentials"
+	Implementing3["TfsBasicCredentials"]-.-&gt;Type
+	click Implementing3 "/api/Cake.Tfs.Authentication/TfsBasicCredentials"
 
 						</div>
 					</div>
