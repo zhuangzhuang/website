@@ -11,7 +11,7 @@ Tasks will still execute single threaded and in order as before, but this really
 Task("Copy-To-Memory-Async")
     .Does(async () => 
     {
-        IFile file = Context.FileSystem.GetFile("./test.txt");
+        IFile testFile = Context.FileSystem.GetFile("./test.txt");
         using(Stream
             inputStream = testFile.OpenRead(),
             outputStream = new MemoryStream())
